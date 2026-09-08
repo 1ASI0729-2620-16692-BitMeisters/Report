@@ -969,8 +969,68 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="25-ubiquitous-language"></a>
 ## 2.5. Ubiquitous Language.
 
-<hr>
+El Ubiquitous Language es el glosario de términos y conceptos del dominio del negocio que todos los miembros del equipo y los interesados emplean sin ambigüedad. Los términos que se presentan a continuación corresponden al dominio del control preventivo y la seguridad de vehículos de transporte de carga, y no a conceptos técnicos de la ingeniería de software.
 
+Cada término se define en inglés, que es el idioma adoptado para la nomenclatura del producto y del modelo de dominio, acompañado de su equivalente en español entre paréntesis. Las definiciones se enfocan en los conceptos propios de FleetSafe y en las actividades relacionadas con la inspección, evaluación, habilitación y seguimiento de las condiciones de los vehículos.
+
+Este glosario busca establecer una terminología común entre los miembros del equipo y los interesados, evitando ambigüedades al referirse a los vehículos, inspecciones, condiciones de seguridad, riesgos, incidencias y acciones correctivas que forman parte del dominio de FleetSafe.
+
+**Términos del control de flota**
+
+| Término                                                | Definición                                                                                                                                                                   |
+|:-------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Fleet** (Flota)                                      | Conjunto de vehículos de transporte de carga administrados por una empresa para realizar sus operaciones.                                                                    |
+| **Vehicle** (Vehículo)                                 | Unidad de transporte de carga que forma parte de una flota y cuya condición de seguridad debe ser controlada antes de iniciar una operación.                                 |
+| **Driver** (Conductor)                                 | Persona responsable de operar un vehículo de transporte de carga y realizar las inspecciones preventivas correspondientes antes de iniciar una operación.                    |
+| **Fleet Supervisor** (Supervisor de flota)             | Persona responsable de revisar el estado de los vehículos, consultar las inspecciones, gestionar incidencias y verificar qué unidades se encuentran habilitadas para operar. |
+| **Operating Condition** (Condición operativa)          | Estado en el que se encuentra un vehículo respecto al cumplimiento de las condiciones necesarias para realizar una operación de transporte de forma segura.                  |
+| **Operational Authorization** (Habilitación operativa) | Determinación de que un vehículo cumple las condiciones establecidas y puede iniciar una operación de transporte.                                                            |
+
+**Términos de inspección preventiva**
+
+| Término                                                    | Definición                                                                                                                                                          |
+|:-----------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Pre-Operational Inspection** (Inspección preoperacional) | Revisión realizada antes de iniciar una operación para verificar las condiciones de seguridad y operación de un vehículo.                                           |
+| **Inspection Item** (Elemento de inspección)               | Componente, elemento de seguridad o aspecto de documentación que debe ser revisado durante una inspección.                                                          |
+| **Safety Component** (Elemento de seguridad)               | Elemento del vehículo cuya condición puede afectar directamente la seguridad de la operación y que debe ser verificado durante la inspección.                       |
+| **Inspection Result** (Resultado de inspección)            | Resultado obtenido para cada elemento revisado durante una inspección, indicando la condición encontrada.                                                           |
+| **Inspection** (Inspección)                                | Registro de la revisión realizada a un vehículo, incluyendo los elementos evaluados, sus resultados, observaciones y evidencias cuando corresponda.                 |
+| **Observation** (Observación)                              | Descripción realizada por el conductor o supervisor sobre una condición detectada durante la inspección que requiere ser considerada en la evaluación del vehículo. |
+| **Evidence** (Evidencia)                                   | Registro que permite respaldar una condición detectada durante una inspección, como una fotografía u otra información asociada al problema identificado.            |
+
+**Términos de evaluación y seguridad**
+
+| Término                                       | Definición                                                                                                                                                          |
+|:----------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Safety Condition** (Condición de seguridad) | Estado de un elemento del vehículo respecto al cumplimiento de las condiciones necesarias para operar de manera segura.                                             |
+| **Risk** (Riesgo)                             | Situación o condición detectada en un vehículo que puede afectar la seguridad de la operación.                                                                      |
+| **Evaluation Rule** (Regla de evaluación)     | Criterio establecido para determinar cómo una condición detectada durante una inspección afecta el estado del vehículo.                                             |
+| **Vehicle Status** (Estado del vehículo)      | Clasificación resultante de la evaluación de una inspección, que determina la condición operativa del vehículo.                                                     |
+| **Enabled** (Habilitado)                      | Estado de un vehículo que cumple las condiciones necesarias para realizar una operación.                                                                            |
+| **Observed** (Observado)                      | Estado de un vehículo que presenta condiciones que requieren atención o seguimiento, pero que no necesariamente impiden su operación según las reglas establecidas. |
+| **Not Enabled** (No habilitado)               | Estado de un vehículo que presenta una condición que impide que sea considerado apto para operar.                                                                   |
+
+**Términos de gestión de incidencias**
+
+| Término                                            | Definición                                                                                                                                    |
+|:---------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| **Incident** (Incidencia)                          | Problema detectado en un vehículo durante una inspección o durante su operación que requiere registro, revisión o seguimiento.                |
+| **Incident Type** (Tipo de incidencia)             | Clasificación utilizada para identificar la naturaleza de una incidencia detectada en un vehículo.                                            |
+| **Corrective Action** (Acción correctiva)          | Acción realizada para solucionar o reducir el efecto de una condición o problema detectado en un vehículo.                                    |
+| **Repair** (Reparación)                            | Trabajo realizado sobre un vehículo para corregir una condición que afecta su seguridad o capacidad de operación.                             |
+| **Incident Status** (Estado de incidencia)         | Estado que indica la situación actual de una incidencia, desde su registro hasta su resolución.                                               |
+| **Incident Follow-up** (Seguimiento de incidencia) | Proceso mediante el cual el supervisor revisa una incidencia, registra las acciones realizadas y verifica si el problema ha sido solucionado. |
+| **Resolution** (Resolución)                        | Resultado final de la gestión de una incidencia, indicando la acción adoptada para solucionar el problema identificado.                       |
+
+**Términos de documentación vehicular**
+
+| Término                                            | Definición                                                                                                                                |
+|:---------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
+| **Vehicle Document** (Documento vehicular)         | Documento relacionado con un vehículo que debe mantenerse vigente para cumplir las condiciones establecidas para su operación.            |
+| **Document Expiration** (Vencimiento de documento) | Fecha en la que un documento vehicular deja de encontrarse vigente y puede requerir atención antes de permitir la operación del vehículo. |
+| **Document Status** (Estado del documento)         | Condición que indica si un documento vehicular se encuentra vigente, próximo a vencer o vencido.                                          |
+
+<hr>
 
 <a id="capitulo-iii-requirements-specification"></a>
 # Capítulo III: Requirements Specification
