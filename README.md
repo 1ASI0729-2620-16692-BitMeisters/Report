@@ -1472,6 +1472,296 @@ Las relaciones muestran el flujo de dependencias desde los controllers hacia los
 <a id="471-class-diagrams"></a>
 ### 4.7.1. Class Diagrams.
 
+El Class Diagram es una representación de la estructura estática del sistema, mostrando las clases, interfaces, enumeraciones, sus atributos, métodos y las relaciones entre ellos. A continuación se presenta el diagrama de clases consolidado de FleetSafe, que integra las entidades de todos los bounded contexts identificados.
+
+```plantuml
+@startuml
+title Class Diagram - FleetSafe
+
+class Company {
+    - id: UUID
+    - name: String
+    - ruc: String
+    - address: String
+    - phone: String
+    - email: String
+    - createdAt: DateTime
+    + addUser(user: User): void
+    + removeUser(userId: UUID): void
+    + getUsers(): List<User>
+}
+
+class User {
+    - id: UUID
+    - companyId: UUID
+    - email: String
+    - password: String
+    - firstName: String
+    - lastName: String
+    - role: UserRole
+    - isActive: boolean
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + authenticate(password: String): boolean
+    + changeRole(role: UserRole): void
+    + activate(): void
+    + deactivate(): void
+    + getFullName(): String
+}
+
+class Fleet {
+    - id: UUID
+    - name: String
+    - companyId: UUID
+    - createdAt: DateTime
+    + addVehicle(vehicle: Vehicle): void
+    + removeVehicle(vehicleId: UUID): void
+    + getVehicles(): List<Vehicle>
+}
+
+class Vehicle {
+    - id: UUID
+    - plate: String
+    - brand: String
+    - model: String
+    - year: Integer
+    - type: String
+    - capacity: Double
+    - status: VehicleStatus
+    - fleetId: UUID
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + updateInfo(info: VehicleInfo): void
+    + changeStatus(status: VehicleStatus): void
+    + assignToDriver(driverId: UUID): void
+    + unassignDriver(): void
+}
+
+class Inspection {
+    - id: UUID
+    - vehicleId: UUID
+    - driverId: UUID
+    - status: InspectionStatus
+    - startedAt: DateTime
+    - completedAt: DateTime
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + start(): void
+    + complete(): void
+    + addItem(item: InspectionItem): void
+    + removeItem(itemId: UUID): void
+    + getItems(): List<InspectionItem>
+    + isCompleted(): boolean
+}
+
+class InspectionItem {
+    - id: UUID
+    - inspectionId: UUID
+    - itemId: UUID
+    - result: InspectionResult
+    - observation: String
+    - evidenceUrl: String
+    - createdAt: DateTime
+    + registerResult(result: InspectionResult): void
+    + addObservation(observation: String): void
+    + attachEvidence(url: String): void
+}
+
+class InspectionItemCatalog {
+    - id: UUID
+    - name: String
+    - description: String
+    - category: String
+    - isSafetyComponent: boolean
+    - isActive: boolean
+    + activate(): void
+    + deactivate(): void
+}
+
+class Evaluation {
+    - id: UUID
+    - inspectionId: UUID
+    - vehicleId: UUID
+    - status: VehicleStatus
+    - evaluatedAt: DateTime
+    - evaluatedBy: UUID
+    - createdAt: DateTime
+    + evaluate(): VehicleStatus
+    + reevaluate(): VehicleStatus
+    + getDetails(): List<EvaluationDetail>
+}
+
+class EvaluationDetail {
+    - id: UUID
+    - evaluationId: UUID
+    - inspectionItemId: UUID
+    - ruleId: UUID
+    - result: String
+    - impact: String
+}
+
+class EvaluationRule {
+    - id: UUID
+    - name: String
+    - description: String
+    - condition: String
+    - impact: RuleImpact
+    - isActive: boolean
+    + activate(): void
+    + deactivate(): void
+    + evaluate(itemResult: InspectionResult): RuleImpact
+}
+
+class Incident {
+    - id: UUID
+    - vehicleId: UUID
+    - inspectionId: UUID
+    - reportedBy: UUID
+    - type: IncidentType
+    - description: String
+    - status: IncidentStatus
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + updateStatus(status: IncidentStatus): void
+    + addCorrectiveAction(action: CorrectiveAction): void
+    + resolve(): void
+    + isResolved(): boolean
+}
+
+class CorrectiveAction {
+    - id: UUID
+    - incidentId: UUID
+    - description: String
+    - performedBy: UUID
+    - performedAt: DateTime
+    - evidenceUrl: String
+}
+
+class VehicleDocument {
+    - id: UUID
+    - vehicleId: UUID
+    - type: DocumentType
+    - number: String
+    - issueDate: Date
+    - expirationDate: Date
+    - status: DocumentStatus
+    - fileUrl: String
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + updateExpiration(date: Date): void
+    + isExpired(): boolean
+    + isExpiringSoon(days: Integer): boolean
+}
+
+enum UserRole {
+    ADMIN
+    FLEET_SUPERVISOR
+    DRIVER
+}
+
+enum VehicleStatus {
+    ENABLED
+    OBSERVED
+    NOT_ENABLED
+    MAINTENANCE
+}
+
+enum InspectionStatus {
+    IN_PROGRESS
+    COMPLETED
+    CANCELLED
+}
+
+enum InspectionResult {
+    CONFORMING
+    NON_CONFORMING
+    NOT_APPLICABLE
+}
+
+enum RuleImpact {
+    ENABLES
+    OBSERVES
+    DISABLES
+}
+
+enum IncidentType {
+    MECHANICAL
+    ELECTRICAL
+    DOCUMENTATION
+    SAFETY_EQUIPMENT
+    OTHER
+}
+
+enum IncidentStatus {
+    REGISTERED
+    IN_REVIEW
+    RESOLVED
+    CLOSED
+}
+
+enum DocumentType {
+    SOAT
+    TECHNICAL_REVIEW
+    CIRCULATION_PERMIT
+    INSURANCE
+    OTHER
+}
+
+enum DocumentStatus {
+    VALID
+    EXPIRING_SOON
+    EXPIRED
+}
+
+Company *-- User
+Company *-- Fleet
+Fleet *-- Vehicle
+Vehicle *-- Inspection
+Vehicle *-- Incident
+Vehicle *-- VehicleDocument
+User *-- Inspection
+Inspection *-- InspectionItem
+InspectionItem --> InspectionItemCatalog
+Inspection --> Evaluation
+Evaluation *-- EvaluationDetail
+EvaluationDetail --> EvaluationRule
+Incident *-- CorrectiveAction
+
+User --> UserRole
+Vehicle --> VehicleStatus
+Inspection --> InspectionStatus
+InspectionItem --> InspectionResult
+EvaluationRule --> RuleImpact
+Incident --> IncidentType
+Incident --> IncidentStatus
+VehicleDocument --> DocumentType
+VehicleDocument --> DocumentStatus
+
+@enduml
+```
+
+**Explicación del diagrama:**
+
+El diagrama de clases consolidado de FleetSafe integra las entidades de todos los bounded contexts identificados:
+
+- **Company:** representa la empresa de transporte de carga. Contiene usuarios y flotas.
+- **User:** representa a los usuarios de la plataforma (administrador, supervisor de flota y conductor). El enum `UserRole` define los roles posibles.
+- **Fleet:** representa la flota de vehículos de una empresa.
+- **Vehicle:** representa un vehículo de transporte de carga. El enum `VehicleStatus` define sus estados posibles.
+- **Inspection:** representa una inspección preoperacional. Contiene una colección de `InspectionItem`.
+- **InspectionItem:** representa el resultado de un elemento inspeccionado. El enum `InspectionResult` define los resultados posibles.
+- **InspectionItemCatalog:** representa el catálogo de elementos que pueden ser inspeccionados.
+- **Evaluation:** representa la evaluación de una inspección que determina el estado del vehículo.
+- **EvaluationDetail:** representa el detalle de la evaluación por cada elemento de inspección.
+- **EvaluationRule:** representa las reglas de evaluación. El enum `RuleImpact` define el impacto de cada regla.
+- **Incident:** representa una incidencia detectada en un vehículo. Los enums `IncidentType` e `IncidentStatus` definen sus tipos y estados.
+- **CorrectiveAction:** representa las acciones correctivas aplicadas a una incidencia.
+- **VehicleDocument:** representa los documentos asociados a un vehículo. Los enums `DocumentType` y `DocumentStatus` definen sus tipos y estados.
+
+Las relaciones entre las clases reflejan la estructura del dominio de FleetSafe, incluyendo composiciones, asociaciones y multiplicidades.
+
+---
+
 
 <a id="48-database-design"></a>
 ## 4.8. Database Design.
