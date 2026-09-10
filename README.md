@@ -1248,17 +1248,222 @@ A continuación se presenta el Product Backlog consolidado:
 <a id="46-domain-driven-software-architecture"></a>
 ## 4.6. Domain-Driven Software Architecture.
 
+Para el diseño de la arquitectura de software de FleetSafe se ha considerado un enfoque orientado al dominio (Domain-Driven Design), identificando los sub-dominios que conforman el negocio del control preventivo y la habilitación operativa de vehículos de transporte de carga.
+
+A partir del Ubiquitous Language y del proceso de Big Picture EventStorming, se identificaron los siguientes sub-dominios:
+
+| Sub-dominio | Tipo | Descripción |
+|:------------|:-----|:------------|
+| **Inspección Preoperacional** | Core | Gestión del registro de inspecciones realizadas por los conductores sobre los vehículos asignados, incluyendo elementos de inspección, resultados, observaciones y evidencias. |
+| **Evaluación y Habilitación** | Core | Procesamiento de los resultados de inspección mediante reglas de evaluación para determinar la condición operativa del vehículo (habilitado, observado o no habilitado). |
+| **Gestión de Vehículos y Flota** | Soporte | Administración de la información de los vehículos que conforman la flota, incluyendo sus características y estado. |
+| **Gestión de Incidencias** | Soporte | Registro, seguimiento y resolución de incidencias detectadas en los vehículos. |
+| **Documentación Vehicular** | Soporte | Control de la vigencia de documentos asociados a los vehículos. |
+| **Gestión de Usuarios y Roles** | Genérico | Administración de usuarios, roles y autenticación en la plataforma. |
+
 <a id="461-design-level-event-storming"></a>
 ### 4.6.1. Design-level Event Storming.
 
 <a id="462-software-architecture-context-diagram"></a>
 ### 4.6.2. Software Architecture Context Diagram.
 
+El Context Diagram es el primer nivel del modelo C4 y muestra el sistema como un recuadro central, rodeado por sus usuarios y otros sistemas con los que interactúa. Para FleetSafe, este diagrama permite visualizar los actores externos y las relaciones principales con la plataforma.
+
+A continuación se presenta el diagrama de contexto de FleetSafe utilizando PlantUML con la sintaxis de C4:
+
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title Context Diagram - FleetSafe
+
+Person(admin, "Administrator", "User responsible for managing users and roles on the platform.")
+Person(supervisor, "Fleet Supervisor", "User responsible for supervising vehicle status, managing incidents and verifying operational authorization.")
+Person(driver, "Driver", "User who performs pre-operational inspections of assigned vehicles.")
+
+System(fleetsafe, "FleetSafe", "Web platform for vehicle safety and preventive control that allows digital pre-operational inspections, condition evaluation and determination of operational authorization for cargo transport vehicles.")
+
+System_Ext(emailSystem, "Email System", "External service used for sending notifications and communications.")
+System_Ext(storageSystem, "Storage Service", "External service used for storing photographic evidence.")
+
+Rel(admin, fleetsafe, "Manages users and roles", "HTTPS")
+Rel(supervisor, fleetsafe, "Supervises vehicles and manages incidents", "HTTPS")
+Rel(driver, fleetsafe, "Performs pre-operational inspections", "HTTPS")
+Rel(fleetsafe, emailSystem, "Sends notifications", "SMTP")
+Rel(fleetsafe, storageSystem, "Stores photographic evidence", "HTTPS")
+
+@enduml
+```
+
+**Explicación del diagrama:**
+
+El diagrama de contexto de FleetSafe muestra los tres actores principales que interactúan con la plataforma:
+
+- **Administrator:** responsable de la gestión de usuarios y roles dentro de la plataforma.
+- **Fleet Supervisor:** responsable de supervisar el estado de los vehículos, gestionar incidencias y verificar la habilitación operativa de las unidades.
+- **Driver:** responsable de realizar las inspecciones preoperacionales de los vehículos asignados.
+
+El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento para las evidencias fotográficas registradas durante las inspecciones.
+
+---
+
 <a id="463-software-architecture-container-diagrams"></a>
 ### 4.6.3. Software Architecture Container Diagrams.
 
+El Container Diagram es el segundo nivel del modelo C4 y muestra los elementos de alto nivel de la arquitectura de software, cómo se distribuyen las responsabilidades entre ellos y cómo se comunican. Cada container representa una unidad de despliegue independiente.
+
+Para FleetSafe se han identificado los siguientes containers:
+
+| Container | Tecnología | Responsabilidad |
+|:----------|:-----------|:----------------|
+| **Landing Page** | HTML5, CSS3, JavaScript | Sitio web estático de presentación de FleetSafe. |
+| **Web Application** | Angular | Aplicación web que permite a los usuarios interactuar con las funcionalidades de la plataforma según su rol. |
+| **Backend RESTful API** | Spring Boot (Java) | API RESTful que expone la lógica de negocio de FleetSafe. |
+| **Database** | PostgreSQL | Base de datos relacional que almacena la información de la plataforma. |
+| **File Storage** | Servicio de almacenamiento de objetos | Almacenamiento de evidencias fotográficas. |
+
+A continuación se presenta el diagrama de contenedores de FleetSafe:
+
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Container Diagram - FleetSafe
+
+Person(admin, "Administrator", "Manages users and roles.")
+Person(supervisor, "Fleet Supervisor", "Supervises vehicles and manages incidents.")
+Person(driver, "Driver", "Performs pre-operational inspections.")
+
+System_Boundary(fleetsafe, "FleetSafe") {
+    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static presentation website for FleetSafe.")
+    Container(webapp, "Web Application", "Angular", "Web application that allows users to interact with the platform features according to their role.")
+    Container(api, "Backend RESTful API", "Spring Boot (Java)", "RESTful API that exposes the business logic of FleetSafe.")
+    ContainerDb(db, "Database", "PostgreSQL", "Stores information about users, vehicles, inspections, evaluations, incidents and documents.")
+}
+
+System_Ext(storage, "Storage Service", "Stores photographic evidence.")
+System_Ext(email, "Email System", "Sends notifications.")
+
+Rel(admin, webapp, "Uses", "HTTPS")
+Rel(supervisor, webapp, "Uses", "HTTPS")
+Rel(driver, webapp, "Uses", "HTTPS")
+Rel(admin, landing, "Visits", "HTTPS")
+Rel(supervisor, landing, "Visits", "HTTPS")
+Rel(driver, landing, "Visits", "HTTPS")
+Rel(webapp, api, "Consumes services", "JSON/HTTPS")
+Rel(api, db, "Reads and writes", "JDBC")
+Rel(api, storage, "Stores and retrieves evidence", "HTTPS")
+Rel(api, email, "Sends notifications", "SMTP")
+
+@enduml
+```
+
+**Explicación del diagrama:**
+
+El diagrama de contenedores de FleetSafe muestra los siguientes elementos:
+
+- **Landing Page:** sitio web estático desarrollado con HTML5, CSS3 y JavaScript, que presenta la propuesta de valor de FleetSafe a los visitantes.
+- **Web Application:** aplicación desarrollada en Angular que permite a los usuarios (administrator, fleet supervisor y driver) interactuar con las funcionalidades de la plataforma según su rol.
+- **Backend RESTful API:** API desarrollada en Spring Boot que expone la lógica de negocio de FleetSafe, incluyendo la gestión de usuarios, vehículos, inspecciones, evaluaciones, incidencias y documentación.
+- **Database:** base de datos relacional PostgreSQL que almacena la información de la plataforma.
+- **Storage Service:** servicio externo utilizado para almacenar las evidencias fotográficas registradas durante las inspecciones.
+- **Email System:** servicio externo utilizado para el envío de notificaciones.
+
+Las relaciones entre los containers muestran que los usuarios acceden a la Landing Page para conocer la propuesta de valor y a la Web Application para interactuar con las funcionalidades. La Web Application consume los servicios del Backend RESTful API, que a su vez lee y escribe en la Database, almacena evidencias en el Storage Service y envía notificaciones a través del Email System.
+
+---
+
 <a id="464-software-architecture-components-diagrams"></a>
 ### 4.6.4. Software Architecture Components Diagrams.
+
+Los Component Diagrams son el tercer nivel del modelo C4 y muestran la descomposición de cada container en componentes, sus responsabilidades e interacciones. A continuación se presenta el diagrama de componentes para el container Backend RESTful API de FleetSafe.
+
+#### Component Diagram: Backend RESTful API
+
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - Backend RESTful API
+
+Container_Boundary(api, "Backend RESTful API") {
+    Component(authController, "Auth Controller", "Spring REST Controller", "Handles authentication and token issuance requests.")
+    Component(userController, "User Controller", "Spring REST Controller", "Handles requests related to users and roles.")
+    Component(vehicleController, "Vehicle Controller", "Spring REST Controller", "Handles requests related to vehicles.")
+    Component(inspectionController, "Inspection Controller", "Spring REST Controller", "Handles requests related to pre-operational inspections.")
+    Component(evaluationController, "Evaluation Controller", "Spring REST Controller", "Handles requests related to vehicle evaluation and authorization.")
+    Component(incidentController, "Incident Controller", "Spring REST Controller", "Handles requests related to incidents.")
+    Component(documentController, "Document Controller", "Spring REST Controller", "Handles requests related to vehicle documentation.")
+    Component(reportController, "Report Controller", "Spring REST Controller", "Handles requests related to history and reports.")
+
+    Component(authService, "Auth Service", "Spring Service", "Implements authentication and authorization logic.")
+    Component(userService, "User Service", "Spring Service", "Implements user and role management logic.")
+    Component(vehicleService, "Vehicle Service", "Spring Service", "Implements vehicle management logic.")
+    Component(inspectionService, "Inspection Service", "Spring Service", "Implements pre-operational inspection logic.")
+    Component(evaluationService, "Evaluation Service", "Spring Service", "Implements evaluation and vehicle status determination logic.")
+    Component(incidentService, "Incident Service", "Spring Service", "Implements incident management logic.")
+    Component(documentService, "Document Service", "Spring Service", "Implements vehicle documentation logic.")
+    Component(reportService, "Report Service", "Spring Service", "Implements report generation and history logic.")
+
+    Component(authRepository, "Auth Repository", "Spring Data JPA", "Data access for authentication.")
+    Component(userRepository, "User Repository", "Spring Data JPA", "Data access for users.")
+    Component(vehicleRepository, "Vehicle Repository", "Spring Data JPA", "Data access for vehicles.")
+    Component(inspectionRepository, "Inspection Repository", "Spring Data JPA", "Data access for inspections.")
+    Component(evaluationRepository, "Evaluation Repository", "Spring Data JPA", "Data access for evaluations.")
+    Component(incidentRepository, "Incident Repository", "Spring Data JPA", "Data access for incidents.")
+    Component(documentRepository, "Document Repository", "Spring Data JPA", "Data access for documents.")
+
+    Component(storageClient, "Storage Client", "HTTP Client", "Client for the evidence storage service.")
+    Component(emailClient, "Email Client", "SMTP Client", "Client for sending email notifications.")
+}
+
+ContainerDb(db, "Database", "PostgreSQL", "Stores platform information.")
+System_Ext(storage, "Storage Service", "Stores evidence.")
+System_Ext(email, "Email System", "Sends notifications.")
+
+Rel(authController, authService, "Uses")
+Rel(userController, userService, "Uses")
+Rel(vehicleController, vehicleService, "Uses")
+Rel(inspectionController, inspectionService, "Uses")
+Rel(evaluationController, evaluationService, "Uses")
+Rel(incidentController, incidentService, "Uses")
+Rel(documentController, documentService, "Uses")
+Rel(reportController, reportService, "Uses")
+
+Rel(authService, authRepository, "Uses")
+Rel(userService, userRepository, "Uses")
+Rel(vehicleService, vehicleRepository, "Uses")
+Rel(inspectionService, inspectionRepository, "Uses")
+Rel(evaluationService, evaluationRepository, "Uses")
+Rel(incidentService, incidentRepository, "Uses")
+Rel(documentService, documentRepository, "Uses")
+
+Rel(authRepository, db, "Reads and writes", "JDBC")
+Rel(userRepository, db, "Reads and writes", "JDBC")
+Rel(vehicleRepository, db, "Reads and writes", "JDBC")
+Rel(inspectionRepository, db, "Reads and writes", "JDBC")
+Rel(evaluationRepository, db, "Reads and writes", "JDBC")
+Rel(incidentRepository, db, "Reads and writes", "JDBC")
+Rel(documentRepository, db, "Reads and writes", "JDBC")
+
+Rel(inspectionService, storageClient, "Uses")
+Rel(storageClient, storage, "Stores evidence", "HTTPS")
+Rel(incidentService, emailClient, "Uses")
+Rel(emailClient, email, "Sends notifications", "SMTP")
+
+@enduml
+```
+
+**Explicación del diagrama:**
+
+El diagrama de componentes del Backend RESTful API muestra la descomposición del container en los siguientes grupos de componentes:
+
+- **Controllers:** componentes que exponen los endpoints RESTful y gestionan las solicitudes HTTP. Se han identificado controllers para autenticación, usuarios, vehículos, inspecciones, evaluaciones, incidencias, documentación y reportes.
+- **Services:** componentes que implementan la lógica de negocio de cada área funcional.
+- **Repositories:** componentes que gestionan el acceso a datos mediante Spring Data JPA.
+- **Clients:** componentes que gestionan la comunicación con servicios externos, como el almacenamiento de evidencias y el envío de notificaciones por correo.
+
+Las relaciones muestran el flujo de dependencias desde los controllers hacia los services, y desde estos hacia los repositories y clients.
 
 
 <a id="47-software-object-oriented-design"></a>
