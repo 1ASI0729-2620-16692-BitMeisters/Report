@@ -1769,6 +1769,200 @@ Las relaciones entre las clases reflejan la estructura del dominio de FleetSafe,
 <a id="481-database-diagrams"></a>
 ### 4.8.1. Database Diagrams.
 
+El Database Diagram es una representación de la estructura de la base de datos que permitirá la persistencia de la información de FleetSafe. A continuación se presenta el diagrama de base de datos consolidado, que integra las tablas de todos los bounded contexts identificados.
+
+```plantuml
+@startuml
+title Database Diagram - FleetSafe
+
+entity "companies" {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(100)
+    * ruc : VARCHAR(20) <<UNIQUE>>
+    address : VARCHAR(200)
+    phone : VARCHAR(20)
+    email : VARCHAR(100)
+    * created_at : TIMESTAMP
+}
+
+entity "users" {
+    * id : UUID <<PK>>
+    --
+    * company_id : UUID <<FK>>
+    * email : VARCHAR(100) <<UNIQUE>>
+    * password : VARCHAR(255)
+    * first_name : VARCHAR(50)
+    * last_name : VARCHAR(50)
+    * role : VARCHAR(20)
+    * is_active : BOOLEAN
+    * created_at : TIMESTAMP
+    * updated_at : TIMESTAMP
+}
+
+entity "fleets" {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(100)
+    * company_id : UUID <<FK>>
+    * created_at : TIMESTAMP
+}
+
+entity "vehicles" {
+    * id : UUID <<PK>>
+    --
+    * plate : VARCHAR(20) <<UNIQUE>>
+    * brand : VARCHAR(50)
+    * model : VARCHAR(50)
+    * year : INTEGER
+    * type : VARCHAR(50)
+    capacity : DECIMAL(10,2)
+    * status : VARCHAR(20)
+    * fleet_id : UUID <<FK>>
+    * created_at : TIMESTAMP
+    * updated_at : TIMESTAMP
+}
+
+entity "inspections" {
+    * id : UUID <<PK>>
+    --
+    * vehicle_id : UUID <<FK>>
+    * driver_id : UUID <<FK>>
+    * status : VARCHAR(20)
+    * started_at : TIMESTAMP
+    completed_at : TIMESTAMP
+    * created_at : TIMESTAMP
+    * updated_at : TIMESTAMP
+}
+
+entity "inspection_items" {
+    * id : UUID <<PK>>
+    --
+    * inspection_id : UUID <<FK>>
+    * item_id : UUID <<FK>>
+    * result : VARCHAR(20)
+    observation : TEXT
+    evidence_url : VARCHAR(500)
+    * created_at : TIMESTAMP
+}
+
+entity "inspection_item_catalog" {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(100)
+    description : TEXT
+    * category : VARCHAR(50)
+    * is_safety_component : BOOLEAN
+    * is_active : BOOLEAN
+}
+
+entity "evaluations" {
+    * id : UUID <<PK>>
+    --
+    * inspection_id : UUID <<FK>>
+    * vehicle_id : UUID <<FK>>
+    * status : VARCHAR(20)
+    * evaluated_at : TIMESTAMP
+    * evaluated_by : UUID <<FK>>
+    * created_at : TIMESTAMP
+}
+
+entity "evaluation_details" {
+    * id : UUID <<PK>>
+    --
+    * evaluation_id : UUID <<FK>>
+    * inspection_item_id : UUID <<FK>>
+    * rule_id : UUID <<FK>>
+    * result : VARCHAR(50)
+    * impact : VARCHAR(20)
+}
+
+entity "evaluation_rules" {
+    * id : UUID <<PK>>
+    --
+    * name : VARCHAR(100)
+    description : TEXT
+    * condition : TEXT
+    * impact : VARCHAR(20)
+    * is_active : BOOLEAN
+}
+
+entity "incidents" {
+    * id : UUID <<PK>>
+    --
+    * vehicle_id : UUID <<FK>>
+    * inspection_id : UUID <<FK>>
+    * reported_by : UUID <<FK>>
+    * type : VARCHAR(30)
+    * description : TEXT
+    * status : VARCHAR(20)
+    * created_at : TIMESTAMP
+    * updated_at : TIMESTAMP
+}
+
+entity "corrective_actions" {
+    * id : UUID <<PK>>
+    --
+    * incident_id : UUID <<FK>>
+    * description : TEXT
+    * performed_by : UUID <<FK>>
+    * performed_at : TIMESTAMP
+    evidence_url : VARCHAR(500)
+}
+
+entity "vehicle_documents" {
+    * id : UUID <<PK>>
+    --
+    * vehicle_id : UUID <<FK>>
+    * type : VARCHAR(30)
+    * number : VARCHAR(50)
+    * issue_date : DATE
+    * expiration_date : DATE
+    * status : VARCHAR(20)
+    file_url : VARCHAR(500)
+    * created_at : TIMESTAMP
+    * updated_at : TIMESTAMP
+}
+
+companies ||--o{ users
+companies ||--o{ fleets
+fleets ||--o{ vehicles
+vehicles ||--o{ inspections
+vehicles ||--o{ incidents
+vehicles ||--o{ vehicle_documents
+users ||--o{ inspections
+inspections ||--o{ inspection_items
+inspection_items }o--|| inspection_item_catalog
+inspections ||--o| evaluations
+evaluations ||--o{ evaluation_details
+evaluation_details }o--|| evaluation_rules
+incidents ||--o{ corrective_actions
+
+@enduml
+```
+
+**Explicación del diagrama:**
+
+El diagrama de base de datos consolidado de FleetSafe presenta las tablas, columnas, constraints y relaciones que permitirán la persistencia de la información de la plataforma. Se han definido las siguientes tablas:
+
+- **companies:** almacena la información de las empresas de transporte de carga.
+- **users:** almacena los usuarios de la plataforma y su rol asignado.
+- **fleets:** almacena las flotas de vehículos de cada empresa.
+- **vehicles:** almacena los vehículos que conforman las flotas.
+- **inspections:** almacena las inspecciones preoperacionales realizadas.
+- **inspection_items:** almacena los resultados de cada elemento inspeccionado.
+- **inspection_item_catalog:** almacena el catálogo de elementos que pueden ser inspeccionados.
+- **evaluations:** almacena las evaluaciones realizadas sobre las inspecciones.
+- **evaluation_details:** almacena el detalle de cada evaluación por elemento.
+- **evaluation_rules:** almacena las reglas de evaluación configuradas.
+- **incidents:** almacena las incidencias detectadas en los vehículos.
+- **corrective_actions:** almacena las acciones correctivas aplicadas a las incidencias.
+- **vehicle_documents:** almacena los documentos asociados a los vehículos.
+
+Se han definido claves primarias (PK), claves foráneas (FK), restricciones de unicidad (UNIQUE) y relaciones uno a muchos entre las entidades. La base de datos seleccionada es PostgreSQL, que soporta el tipo de datos UUID y las restricciones definidas.
+
+---
+
 <hr>
 
 
