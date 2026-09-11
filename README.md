@@ -594,177 +594,165 @@ La información obtenida permitirá validar o corregir las suposiciones plantead
 <a id="21-competidores"></a>
 ## 2.1. Competidores
 
-Con la finalidad de comprender el entorno competitivo en el cual se desarrollará FleetSafe, se identificaron tres soluciones digitales que ofrecen funcionalidades relacionadas con inspecciones vehiculares, control preventivo, gestión de incidencias, mantenimiento y cumplimiento de condiciones de seguridad.
+Con la finalidad de comprender el entorno competitivo en el cual se desarrollará FleetSafe, se identificaron las soluciones digitales que atienden necesidades relacionadas con la inspección preoperacional de vehículos, el control preventivo, la habilitación operativa y la gestión de incidencias.
 
-Los competidores seleccionados son:
+El análisis del entorno competitivo permitió identificar **tres capas de competencia** con características distintas:
 
-1. **Fleetio**
-2. **Whip Around**
-3. **Verizon Connect**
+| Capa | Quiénes | Relación con FleetSafe |
+|:-----|:--------|:-----------------------|
+| **Competidores directos** | Fleetio, Whip Around, Vehicheck, Verizon Connect | Digitalizan la inspección de vehículos y, en distintos grados, determinan si la unidad puede operar |
+| **Competidores indirectos** | Proveedores de telemática y gestión de flotas en Perú; plataformas genéricas de formularios digitales | Resuelven problemas adyacentes —rastreo, mantenimiento, digitalización de formatos— sin llegar a la habilitación operativa |
+| **Alternativa vigente** | Formatos físicos, hojas de cálculo y formularios genéricos | Es la práctica actual en la mayoría de empresas y, en la práctica, la opción con la que se compara la adopción de FleetSafe |
 
-Estas plataformas constituyen competidores directos o parcialmente directos debido a que atienden necesidades relacionadas con inspecciones de vehículos, identificación de defectos, gestión de incidencias, mantenimiento preventivo y control de la condición de las unidades.
-
-A diferencia de estas soluciones, FleetSafe plantea inicialmente un enfoque específico en el **control preventivo y la habilitación operativa de vehículos de transporte de carga**, donde el resultado de la inspección permite determinar si una unidad se encuentra habilitada, observada o no habilitada para operar.
+Un hallazgo relevante del análisis es que **cada solución existente está construida alrededor del marco normativo de un país determinado**, del cual depende la evidencia que el cliente y el ente fiscalizador exigen. Esta observación resultó determinante para la definición de la ventaja competitiva de FleetSafe y se desarrolla en la sección 2.1.2.
 
 ### Competidor 1: Fleetio
 
-**Fleetio** es una plataforma de gestión de flotas que incluye funcionalidades orientadas a las inspecciones de vehículos, mantenimiento y seguimiento de problemas.
+**Fleetio** es una plataforma estadounidense de gestión de flotas que incluye funcionalidades de inspección de vehículos, mantenimiento y seguimiento de problemas.
 
-Entre sus principales capacidades se encuentran las inspecciones digitales personalizables, formularios de inspección, registro de fotografías y comentarios, alertas ante problemas detectados, historial de inspecciones y generación de reportes.
+Permite realizar inspecciones digitales personalizables, registrar fotografías y comentarios, generar alertas ante problemas detectados, mantener el historial de inspecciones y convertir los elementos fallidos en órdenes de trabajo.
 
-La plataforma también permite convertir elementos fallidos de una inspección en órdenes de trabajo para iniciar procesos de mantenimiento y realizar seguimiento de los problemas identificados.
+Respecto de la habilitación del vehículo, Fleetio permite que un elemento fallido **cambie automáticamente el estado del vehículo a "Out of Service"** mediante la configuración de *workflows*. Es importante precisar que este no es el comportamiento predeterminado —de forma predeterminada únicamente se genera una incidencia— y que los *workflows* se encuentran disponibles en los planes Professional y Premium.
+
+Su modelo de cumplimiento está orientado a la normativa federal estadounidense (DOT). Ofrece traducción al español en su aplicación móvil y en su centro de ayuda, aunque **no ofrece soporte telefónico ni acompañamiento de implementación en español**.
 
 ### Competidor 2: Whip Around
 
-**Whip Around** es una plataforma de gestión de flotas orientada a inspecciones, mantenimiento y cumplimiento.
+**Whip Around** es una plataforma estadounidense especializada en inspecciones de flota, mantenimiento y cumplimiento normativo.
 
-La solución permite realizar inspecciones preoperacionales y postoperacionales mediante dispositivos móviles, utilizar formularios personalizables, registrar defectos, adjuntar fotografías y almacenar el historial de inspecciones.
+Permite realizar inspecciones preoperacionales y postoperacionales desde dispositivos móviles, con formularios personalizables, registro de defectos con indicación de severidad y adjunto de fotografías.
 
-Además, los responsables de la flota pueden recibir notificaciones sobre problemas detectados y realizar seguimiento de los defectos hasta su resolución.
+Respecto de la habilitación del vehículo, cuando se registra un defecto la plataforma genera la orden de trabajo correspondiente y **mantiene la unidad fuera de servicio hasta que la reparación se encuentra documentada**. Para los defectos que afectan la operación segura, el vehículo no puede volver a operar hasta que un mecánico certificado o un representante autorizado del transportista firme la certificación correspondiente, conforme al procedimiento del *Driver Vehicle Inspection Report* (DVIR) estadounidense.
 
-### Competidor 3: Verizon Connect
+Su soporte de idiomas en el panel y la aplicación se realiza **mediante traducción automática**, no mediante una localización propia.
 
-**Verizon Connect** es una plataforma de gestión de flotas que incluye funcionalidades de Driver Vehicle Inspection Reports (DVIR).
+### Competidor 3: Vehicheck
 
-La solución permite que los conductores realicen inspecciones mediante listas de componentes del vehículo desde dispositivos móviles, registren defectos, agreguen comentarios y adjunten fotografías.
+**Vehicheck** es una solución colombiana orientada específicamente a la digitalización de la inspección preoperacional de flotas, y constituye el competidor directo más cercano a la propuesta de FleetSafe.
 
-Las inspecciones quedan almacenadas en el sistema y pueden ser consultadas posteriormente por los responsables de la flota, facilitando el seguimiento de las condiciones de los vehículos y la documentación relacionada con las inspecciones.
+Permite que el conductor realice la inspección desde un dispositivo móvil generando evidencia digital con fotografías, firma y marca de tiempo, e incorpora **bloqueo automático de vehículos con fallas críticas**: cuando un elemento crítico se encuentra en mal estado, la inspección se marca como no aprobada. Incluye además alertas de vencimiento del SOAT y de la revisión técnico-mecánica.
+
+La solución se presenta **alineada de forma exclusiva con el Plan Estratégico de Seguridad Vial (PESV) de Colombia** y se comercializa en ese mercado. No declara presencia en Perú ni en otros países, y no publica información de precios.
+
+La existencia de Vehicheck confirma que el problema que aborda FleetSafe es real y comercialmente viable en el contexto latinoamericano, y evidencia al mismo tiempo que las soluciones de esta categoría se construyen alrededor del marco normativo del país al que se dirigen.
+
+### Competidor 4: Verizon Connect
+
+**Verizon Connect** es una plataforma estadounidense de gestión de flotas y telemática que incluye funcionalidades de *Driver Vehicle Inspection Reports* (DVIR).
+
+Permite que los conductores realicen inspecciones mediante listas de componentes desde dispositivos móviles, registren defectos, agreguen comentarios y adjunten fotografías, manteniendo los registros disponibles para su consulta posterior.
+
+A diferencia de las anteriores, su propuesta **requiere la instalación de equipamiento telemático en cada vehículo**, lo que implica una inversión inicial y un proceso de implementación considerablemente mayores.
+
+### Competidores indirectos
+
+**Proveedores de telemática y gestión de flotas en Perú.** El mercado peruano cuenta con proveedores consolidados orientados al monitoreo por GPS, el mantenimiento y la trazabilidad de la operación, entre los que se encuentran Zonar Systems Perú —certificado por SUTRAN—, MiX Telematics a través de PSTECH Perú, y Prolyam, que ofrece un ERP vehicular con presencia en Lima, Callao, Arequipa, Trujillo y Piura. Estas soluciones no tienen como núcleo la inspección preoperacional ni la determinación de la condición operativa del vehículo, pero atienden al mismo cliente y compiten por el mismo presupuesto.
+
+**Plataformas genéricas de formularios digitales.** Soluciones como DataScope permiten crear y consolidar formularios de inspección de cualquier tipo. Resuelven la digitalización del formato, pero no incorporan reglas de evaluación, habilitación operativa ni seguimiento de incidencias asociado al vehículo.
+
+**La alternativa vigente: el formato físico y la hoja de cálculo.** En la mayoría de empresas de transporte de carga el control preoperacional se realiza mediante formatos impresos que se archivan físicamente. Aunque no constituye un producto, es la opción con la que compite realmente FleetSafe en la decisión de compra: su costo directo es cero y su principal debilidad es que la información no está disponible cuando se requiere demostrarla.
 
 ---
 
 <a id="211-analisis-competitivo"></a>
 ### 2.1.1. Análisis competitivo
 
-El análisis competitivo tiene como objetivo identificar las principales características, fortalezas y limitaciones de soluciones existentes relacionadas con la inspección y control preventivo de vehículos.
-
-La pregunta que orienta este análisis es:
-
-> **¿Cómo puede FleetSafe diferenciarse de las soluciones actuales de gestión de flotas e inspección vehicular para ofrecer una propuesta de valor adecuada a empresas de transporte de carga?**
+El análisis competitivo tiene como objetivo que BitMeisters conozca mejor a sus competidores, contrastando la idea inicial que el equipo tenía sobre ellos con la información verificable disponible en sus canales oficiales y de soporte.
 
 #### Competitive Analysis Landscape
 
-| Criterio                      | **FleetSafe**                                                                                                                                            | **Fleetio**                                                                                                                                          | **Whip Around**                                                                                                                            | **Verizon Connect**                                                                                                                           |
-|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Overview**                  | Plataforma web orientada al control preventivo y habilitación operativa de vehículos de transporte de carga.                                             | Plataforma de gestión de flotas con funcionalidades de inspección, mantenimiento y gestión de problemas.                                             | Plataforma de gestión de flotas enfocada en inspecciones, mantenimiento y cumplimiento.                                                    | Plataforma de gestión de flotas que incluye funcionalidades de inspección vehicular y DVIR.                                                   |
-| **Ventaja competitiva**       | Enfoque específico en la evaluación de las condiciones del vehículo y determinación de su estado como habilitado, observado o no habilitado para operar. | Amplia gestión del ciclo de inspección y mantenimiento, con formularios personalizables y automatización de acciones posteriores a las inspecciones. | Enfoque especializado en digitalizar inspecciones y gestionar defectos de manera rápida, con herramientas para conductores y supervisores. | Integración de las inspecciones vehiculares con una plataforma más amplia de gestión de flotas, telemática y operaciones.                     |
-| **Valor ofrecido al cliente** | Centralización de inspecciones, evaluación de condiciones, identificación de riesgos, habilitación operativa y seguimiento de incidencias.               | Digitalización de inspecciones, identificación de problemas y conexión de los resultados con procesos de mantenimiento.                              | Reducción del uso de formularios físicos, mayor visibilidad sobre defectos y seguimiento de inspecciones.                                  | Facilitar la realización, almacenamiento y consulta de inspecciones y reportes de vehículos dentro de una solución de gestión de flotas.      |
-| **Mercado objetivo**          | Empresas de transporte de carga que necesitan controlar la condición de seguridad de sus vehículos antes de operar.                                      | Empresas que administran vehículos, equipos y diferentes tipos de activos.                                                                           | Empresas que administran flotas y necesitan gestionar inspecciones, mantenimiento y cumplimiento.                                          | Empresas que necesitan gestionar flotas, seguridad, seguimiento de vehículos e inspecciones.                                                  |
-| **Estrategia de marketing**   | Landing Page, demostraciones del producto, contacto directo con empresas de transporte y pruebas piloto.                                                 | Contenido digital, demostraciones, prueba del producto y comunicación enfocada en la gestión de flotas.                                              | Demostraciones, contenido especializado, casos de uso y contacto comercial.                                                                | Demostraciones comerciales, contenido especializado, casos de éxito y contacto empresarial.                                                   |
-| **Productos y servicios**     | Inspecciones preoperacionales, evaluación mediante reglas, identificación de riesgos, habilitación del vehículo, gestión de incidencias e historial.     | Inspecciones digitales, formularios personalizados, gestión de problemas, órdenes de trabajo, mantenimiento e historial.                             | Inspecciones digitales, formularios personalizados, gestión de defectos, mantenimiento, cumplimiento e historial.                          | DVIR, inspecciones mediante checklist, registro de defectos, fotografías, almacenamiento de inspecciones y herramientas de gestión de flotas. |
-| **Precios y costos**          | Modelo de negocio pendiente de validación.                                                                                                               | Modelo comercial basado en planes de servicio y funcionalidades de gestión de flotas.                                                                | Modelo comercial orientado a empresas y gestión de flotas.                                                                                 | Modelo comercial orientado a empresas y soluciones de gestión de flotas.                                                                      |
-| **Canales de distribución**   | Plataforma web.                                                                                                                                          | Plataforma web y aplicación móvil.                                                                                                                   | Plataforma web y aplicación móvil.                                                                                                         | Plataforma web y aplicaciones móviles.                                                                                                        |
+| **¿Por qué llevar a cabo este análisis?** |
+|:---|
+| Conocer cómo las soluciones existentes de inspección y control preventivo vehicular resuelven la habilitación operativa del vehículo, y determinar cómo puede FleetSafe diferenciarse para ofrecer una propuesta de valor adecuada a las empresas de transporte de carga en el Perú. |
 
----
+| | | <img src="img/competitors/fleetsafe.png" alt="Logo de FleetSafe" width="80"><br>**FleetSafe** | <img src="img/competitors/fleetio.png" alt="Logo de Fleetio" width="80"><br>**Fleetio** | <img src="img/competitors/whip-around.png" alt="Logo de Whip Around" width="80"><br>**Whip Around** | <img src="img/competitors/vehicheck.png" alt="Logo de Vehicheck" width="80"><br>**Vehicheck** | <img src="img/competitors/verizon-connect.png" alt="Logo de Verizon Connect" width="80"><br>**Verizon Connect** |
+|:---|:---|:---|:---|:---|:---|:---|
+| **Perfil** | Overview | Control preventivo y habilitación operativa de vehículos de carga, alineado al marco de cumplimiento peruano. | Gestión integral de flotas con inspecciones, mantenimiento y órdenes de trabajo. | Plataforma especializada en inspecciones DVIR, defectos y cumplimiento. | Inspección preoperacional digital alineada al PESV de Colombia. | Gestión de flotas y telemática con módulo DVIR. |
+| | Ventaja competitiva<br>¿Qué valor ofrece a los clientes? | Produce la evidencia que exigen la normativa peruana de SST y las auditorías de homologación, y deja registro de quién autoriza cada excepción. | Amplitud funcional y automatización entre inspección, incidencia y mantenimiento. | Especialización en el ciclo de defectos y en el cumplimiento del DOT. | Cumplimiento del PESV sin papel, con bloqueo automático ante fallas críticas. | Integración de las inspecciones con telemática y rastreo en tiempo real. |
+| **Perfil de Marketing** | Mercado objetivo | Empresas de transporte de carga en Perú, con énfasis en las que prestan servicio a clientes industriales y mineros. | Empresas que administran vehículos y activos, principalmente en Estados Unidos. | Flotas de cualquier tamaño; plan gratuito para un solo activo. | Empresas colombianas obligadas a cumplir el PESV. | Empresas que requieren rastreo, seguridad y gestión integral de flota. |
+| | Estrategias de marketing | Landing Page, demostraciones, pruebas piloto y contacto directo con empresas de transporte. | Contenido digital, precios publicados y prueba gratuita. | Contenido sobre cumplimiento DOT, plan gratuito de entrada y calculadora de retorno de inversión. | Contacto directo por WhatsApp y demostración; producto en lanzamiento. | Fuerza comercial, cotización a medida y casos de éxito. |
+| **Perfil de Producto** | Productos & Servicios | Inspección preoperacional, evaluación por reglas, habilitación operativa con registro de excepciones, gestión de incidencias, documentación vehicular e historial auditable. | Inspecciones, incidencias, órdenes de trabajo, mantenimiento, combustible e informes. | Inspecciones, defectos con severidad, órdenes de trabajo, mantenimiento y cumplimiento. | Inspección preoperacional, evidencia digital, bloqueo automático y alertas de SOAT y RTM. | DVIR, rastreo GPS, telemática, análisis de conducción y gestión de flota. |
+| | Precios & Costos | Suscripción mensual por vehículo activo; estructura pendiente de validación. | Essential USD 4 por vehículo/mes con pago anual (USD 5 mensual); Professional USD 7; Premium USD 10. Mínimo de 5 vehículos. | Basic gratuito para 1 activo; Standard USD 5 por activo/mes; Pro USD 10 con pago anual; plan fijo ilimitado a medida. Sin mínimo de flota. | No publica precios. | No publica precios; cotización a medida. Estimaciones del sector entre USD 20 y USD 40 por vehículo/mes, además del equipamiento. |
+| | Canales de distribución<br>(Web y/o Móvil) | Plataforma web responsive, sin instalación. | Plataforma web y aplicación móvil. | Plataforma web y aplicación móvil. | Plataforma web y aplicación móvil. | Plataforma web, aplicación móvil y equipamiento instalado en el vehículo. |
+| **Análisis SWOT** | Fortalezas | Enfoque exclusivo en control preventivo y habilitación; reglas configurables por la empresa; registro de la autorización de excepciones con responsable y justificación; historial orientado a las exigencias documentales locales; adopción sin hardware ni instalación. | Amplitud funcional y madurez; precios publicados y prueba gratuita; cambio automático del estado del vehículo mediante *workflows*. | Especialización en inspecciones; retiene la unidad fuera de servicio hasta documentar la reparación; plan gratuito y sin mínimo de flota; severidad declarada por el conductor. | Propuesta casi equivalente a la de FleetSafe; bloqueo automático; evidencia con fotografía, firma y marca de tiempo; alineamiento explícito con una normativa nacional. | Plataforma consolidada con telemática, rastreo y DVIR integrados; respaldo corporativo; información en tiempo real. |
+| | Debilidades | Producto nuevo, sin clientes ni posicionamiento; menor amplitud funcional; recursos limitados del equipo; la inspección es autorreportada por el conductor, por lo que el sistema no puede garantizar que la revisión física se haya realizado. | El bloqueo del vehículo no es el comportamiento predeterminado y requiere configuración y un plan superior; cumplimiento orientado a la normativa estadounidense; sin soporte telefónico ni implementación en español. | El retorno a servicio se apoya en la figura del mecánico certificado del modelo DVIR estadounidense, ajena a la práctica peruana; soporte de idiomas mediante traducción automática. | Alcance limitado a Colombia y al PESV; producto en lanzamiento, sin precios publicados ni casos de éxito; canal comercial basado en contacto directo. | Requiere instalación de equipamiento en cada vehículo, con inversión inicial y tiempo de implementación; no publica precios; propuesta más extensa de lo que exige el control preventivo. |
+| | Oportunidades | Ausencia de soluciones construidas sobre el marco de cumplimiento peruano; exigencia creciente de evidencia documentada en los procesos de homologación; predominio aún del formato físico; integración futura con mantenimiento, GPS o IoT. | Expansión hacia mercados hispanohablantes; mayor integración entre inspección y mantenimiento. | Crecimiento de la digitalización de inspecciones; demanda creciente de trazabilidad de defectos. | Expansión hacia otros países de la región con normativas de seguridad vial equivalentes. | Uso de datos telemáticos para anticipar fallas antes de la inspección. |
+| | Amenazas | Entrada al mercado peruano de soluciones regionales ya operativas, como Vehicheck; incorporación de capacidades equivalentes por plataformas consolidadas; proveedores locales de telemática que añadan módulos de inspección; resistencia al cambio de procesos. | Competencia de soluciones especializadas y de menor complejidad; productos locales adaptados a marcos normativos específicos. | Plataformas de gestión de flotas que incorporan inspecciones; soluciones regionales adaptadas a normativas locales. | Aparición de soluciones locales en cada mercado al que pretenda expandirse; plataformas consolidadas que incorporen el bloqueo de forma predeterminada. | Soluciones sin hardware y de adopción inmediata; competidores especializados de menor costo. |
 
-#### Análisis SWOT
-
-##### FleetSafe
-
-|                   |                                                                                                                                                                                                                                                                                                                         |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Enfoque específico en seguridad y control preventivo vehicular; inspecciones preoperacionales digitales; evaluación de condiciones mediante reglas; identificación de vehículos habilitados, observados y no habilitados; registro y seguimiento de incidencias.                                                        |
-| **Debilidades**   | Producto nuevo sin clientes ni posicionamiento inicial; menor cantidad de funcionalidades que plataformas consolidadas de gestión de flotas; recursos limitados del equipo; funcionalidades avanzadas de gestión de flotas e integración con telemática fuera del alcance inicial.                                      |
-| **Oportunidades** | Digitalización de controles preventivos realizados mediante formatos físicos, hojas de cálculo o procesos dispersos; necesidad de centralizar inspecciones y problemas detectados; posibilidad de especializar el proceso de habilitación de vehículos; futura integración con sistemas de mantenimiento, GPS o IoT.    |
-| **Amenazas**      | Existencia de plataformas consolidadas de gestión de flotas e inspecciones; incorporación de funcionalidades similares por parte de competidores; resistencia de algunas empresas a modificar sus procesos actuales; capacidad de competidores establecidos para integrar inspecciones con otras soluciones de gestión. |
-
-##### Fleetio
-
-|                   |                                                                                                                                                                                                                                          |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Inspecciones digitales personalizables; gestión de problemas; fotografías y comentarios; alertas ante fallos; historial de inspecciones; integración con procesos de mantenimiento y órdenes de trabajo.                                 |
-| **Debilidades**   | Su propuesta cubre un conjunto amplio de necesidades de gestión de flotas, por lo que puede resultar más extensa que las necesidades de una empresa que busque principalmente un proceso de control preventivo y habilitación operativa. |
-| **Oportunidades** | Crecimiento de la digitalización de inspecciones; integración entre inspecciones y mantenimiento; necesidad de reducir el uso de formularios físicos y mejorar el control de los activos.                                                |
-| **Amenazas**      | Competencia de otras plataformas especializadas en inspecciones y gestión de flotas; aparición de soluciones locales con procesos más adaptados a mercados específicos.                                                                  |
-
-##### Whip Around
-
-|                   |                                                                                                                                                                                                                                |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Especialización en inspecciones digitales; formularios personalizables; gestión de defectos; fotografías; historial de inspecciones; notificaciones y seguimiento de problemas; aplicaciones para conductores.                 |
-| **Debilidades**   | Su propuesta cubre inspecciones, mantenimiento y cumplimiento de manera amplia, mientras que FleetSafe plantea inicialmente concentrarse en la determinación de la condición preventiva y habilitación operativa del vehículo. |
-| **Oportunidades** | Crecimiento de la sustitución de inspecciones físicas por procesos digitales; necesidad de mejorar la trazabilidad de defectos; incremento de la demanda de herramientas de cumplimiento y seguridad.                          |
-| **Amenazas**      | Competencia de plataformas de gestión de flotas que incorporan inspecciones como parte de soluciones más amplias; aparición de nuevas soluciones especializadas en inspecciones vehiculares.                                   |
-
-##### Verizon Connect
-
-|                   |                                                                                                                                                                                                                                                                        |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Plataforma consolidada de gestión de flotas; inspecciones DVIR digitales; listas de inspección para conductores; registro de fotografías y comentarios; almacenamiento de historial de inspecciones; integración con otras capacidades de gestión vehicular.           |
-| **Debilidades**   | Su propuesta se encuentra integrada dentro de un ecosistema más amplio de gestión de flotas, por lo que puede representar una solución más extensa de lo necesario para organizaciones que busquen únicamente controlar preventivamente la condición de sus vehículos. |
-| **Oportunidades** | Crecimiento de la digitalización de procesos de seguridad; integración de inspecciones con telemática; utilización de información histórica para mejorar la seguridad y mantenimiento de las flotas.                                                                   |
-| **Amenazas**      | Competencia de plataformas especializadas en inspecciones; soluciones de menor complejidad orientadas a empresas pequeñas y medianas; aparición de nuevas tecnologías para automatizar la identificación de defectos.                                                  |
+> **Nota sobre las fuentes.** Los precios y el comportamiento ante fallas de Fleetio y Whip Around corresponden a la información publicada en sus páginas de precios y en sus centros de ayuda; los datos de Vehicheck provienen de su sitio oficial; los rangos de Verizon Connect corresponden a estimaciones del sector, dado que la empresa no publica tarifas. Las referencias completas se encuentran en la sección de Bibliografía.
 
 ---
 
 <a id="212-estrategias-y-tacticas-frente-a-competidores"></a>
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-A partir del análisis competitivo, el equipo plantea estrategias preliminares para posicionar FleetSafe frente a plataformas consolidadas como Fleetio, Whip Around y Verizon Connect.
+El análisis competitivo permitió identificar un patrón determinante: **las soluciones existentes se construyen alrededor del marco normativo del país al que se dirigen**, porque de ese marco depende la evidencia que el cliente y el ente fiscalizador exigen.
 
-#### Estrategia 1: Especialización en control preventivo y habilitación operativa
+| Solución | Marco de cumplimiento sobre el que está construida |
+|:---------|:----------------------------------------------------|
+| Fleetio, Whip Around, Verizon Connect | *Driver Vehicle Inspection Report* y normativa federal de los Estados Unidos |
+| Vehicheck | Plan Estratégico de Seguridad Vial (PESV) de Colombia |
+| Proveedores peruanos de telemática | Rastreo y mantenimiento; no abordan la habilitación operativa |
+| **FleetSafe** | **Normativa peruana de seguridad y salud en el trabajo, normativa de seguridad minera y homologación de proveedores** |
 
-FleetSafe buscará diferenciarse mediante un enfoque específico en determinar si un vehículo cumple las condiciones necesarias para iniciar una operación.
+Sobre esta base, BitMeisters plantea las siguientes estrategias, que corresponden a una **estrategia competitiva de enfoque**: en lugar de competir por amplitud funcional frente a plataformas consolidadas, FleetSafe se especializa en atender de manera completa a un segmento y un marco de cumplimiento determinados.
 
-**Tácticas:**
+#### Estrategia 1: Especialización en el marco de cumplimiento peruano
 
-- Diseñar el flujo principal de la plataforma alrededor de la inspección preoperacional.
-- Evaluar los resultados de la inspección mediante reglas establecidas por la empresa.
-- Identificar automáticamente las condiciones que pueden representar un riesgo.
-- Clasificar los vehículos como **HABILITADO, OBSERVADO o NO HABILITADO**.
-- Permitir que el supervisor conozca rápidamente qué unidades cumplen las condiciones para operar.
-
-#### Estrategia 2: Mantener una experiencia sencilla para el conductor
-
-En lugar de competir inicialmente por la cantidad de funcionalidades, FleetSafe buscará ofrecer una experiencia enfocada en las actividades esenciales que debe realizar el conductor durante una inspección.
+FleetSafe se posicionará como la solución de control preventivo diseñada para las exigencias documentales del mercado peruano, y no como una alternativa funcionalmente equivalente a las plataformas existentes.
 
 **Tácticas:**
 
-- Reducir la cantidad de pasos necesarios para completar una inspección.
-- Diseñar una interfaz web responsive adecuada para dispositivos móviles.
-- Permitir registrar rápidamente el estado de los componentes y elementos de seguridad.
-- Facilitar el registro de observaciones y evidencias.
-- Evitar incorporar funcionalidades que no estén relacionadas con el objetivo principal del control preventivo.
+- Diseñar el historial y los reportes en función de la evidencia que solicitan las auditorías de homologación de clientes industriales y mineros.
+- Estructurar el registro de inspecciones de modo que sirva como evidencia dentro del sistema de gestión de seguridad y salud en el trabajo de la empresa.
+- Incorporar el control de vigencia de la documentación vehicular exigida en el ámbito local.
+- Comunicar la propuesta en términos de cumplimiento y de continuidad operativa, no en términos de cantidad de funcionalidades.
 
-#### Estrategia 3: Centralización de la información de seguridad vehicular
+#### Estrategia 2: Habilitación operativa con trazabilidad de las excepciones
 
-FleetSafe buscará diferenciarse mediante la centralización de la información relacionada con inspecciones, riesgos, documentación e incidencias.
+Las soluciones analizadas plantean dos extremos: o el vehículo queda retenido hasta contar con la certificación de un mecánico, conforme al modelo estadounidense, o el bloqueo se limita al registro del defecto. En la práctica peruana, la excepción se autoriza de manera verbal y no queda constancia de ella.
 
-**Tácticas:**
-
-- Centralizar las inspecciones realizadas.
-- Mantener un registro de los problemas detectados.
-- Identificar las unidades que presentan riesgos.
-- Facilitar la consulta de documentos próximos a vencer.
-- Mantener información sobre las incidencias pendientes.
-- Permitir consultar el historial de las condiciones preventivas de cada vehículo.
-
-#### Estrategia 4: Diferenciación mediante el seguimiento de incidencias
-
-FleetSafe buscará proporcionar especial importancia al registro y seguimiento de problemas detectados durante las inspecciones.
+FleetSafe permitirá la excepción, pero exigirá dejar registro de quién la autoriza y por qué.
 
 **Tácticas:**
 
-- Permitir registrar una incidencia cuando se detecte un problema.
-- Permitir al supervisor revisar la incidencia.
-- Registrar la acción correctiva o mantenimiento realizado.
-- Registrar la solución aplicada.
-- Permitir volver a evaluar el vehículo después de solucionar el problema.
-- Mantener un historial de las incidencias asociadas a cada vehículo.
+- Determinar automáticamente la condición del vehículo como habilitado, observado o no habilitado a partir de las reglas configuradas por la empresa.
+- Permitir que un supervisor levante un bloqueo únicamente registrando responsable y justificación.
+- Incorporar las excepciones autorizadas al historial y a los reportes de auditoría.
+- Presentar al supervisor el indicador de excepciones autorizadas por periodo como información de control.
 
-#### Estrategia 5: Evolución progresiva de las capacidades tecnológicas
+#### Estrategia 3: Adopción sin barreras de entrada
 
-FleetSafe priorizará inicialmente las funcionalidades principales de control preventivo y dejará capacidades tecnológicas de mayor complejidad para etapas posteriores.
+Frente a soluciones que requieren equipamiento telemático o la instalación de una aplicación, FleetSafe se ejecutará íntegramente en el navegador.
 
 **Tácticas:**
 
-- Desarrollar inicialmente la gestión de vehículos y usuarios.
-- Implementar las inspecciones preoperacionales digitales.
-- Implementar la evaluación mediante reglas.
-- Implementar la clasificación de vehículos según su condición.
-- Implementar el registro y seguimiento de incidencias.
-- Evaluar posteriormente la integración con sistemas de mantenimiento.
-- Considerar posteriormente la integración con GPS, IoT o sistemas de telemática cuando las necesidades de los usuarios lo justifiquen.
-- Incorporar funcionalidades avanzadas de análisis de información de manera progresiva.
+- Desarrollar la Web Application con diseño responsive, apta para su uso desde el navegador de un teléfono móvil.
+- No requerir hardware, instalación ni inversión inicial.
+- Diseñar la puesta en marcha de modo que una empresa pueda registrar su flota y comenzar a inspeccionar el mismo día.
+- Ofrecer un periodo de prueba antes de la contratación.
+
+#### Estrategia 4: Experiencia mínima para el conductor
+
+El conductor es el usuario que ejecuta la inspección y, a la vez, el que menos incentivos tiene para adoptarla. Si el proceso digital resulta más lento que el formato físico, el equipo prevé que se producirá un retorno al papel.
+
+**Tácticas:**
+
+- Reducir al mínimo la cantidad de pasos necesarios para completar una inspección.
+- Presentar al conductor únicamente el vehículo que tiene asignado.
+- Solicitar observación y evidencia únicamente cuando el resultado del elemento lo requiera.
+- Validar el tiempo de ejecución con conductores reales durante las entrevistas de validación.
+
+#### Estrategia 5: Localización y acompañamiento local
+
+Las plataformas analizadas ofrecen traducción automática o traducción parcial, y ninguna ofrece acompañamiento de implementación en español.
+
+**Tácticas:**
+
+- Adoptar el español latinoamericano y el inglés como idiomas de la solución, con terminología propia del dominio local.
+- Emplear la terminología del Ubiquitous Language definido en la sección 2.5 en toda la interfaz.
+- Ofrecer acompañamiento en la configuración inicial del catálogo de inspección y de las reglas de evaluación.
+- Incorporar progresivamente capacidades tecnológicas de mayor complejidad, como la integración con mantenimiento, GPS o telemática, cuando las necesidades de los usuarios lo justifiquen.
 
 ---
 <a id="22-entrevistas"></a>
