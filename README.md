@@ -1754,200 +1754,590 @@ Las relaciones entre las clases reflejan la estructura del dominio de FleetSafe,
 <a id="48-database-design"></a>
 ## 4.8. Database Design.
 
+En esta sección se presenta el diseño de la base de datos que permitirá la persistencia de la información de FleetSafe. El diseño se elabora **por cada bounded context** identificado en la sección 4.6, de modo que cada contexto define y es responsable de sus propias tablas.
+
+La base de datos seleccionada es **PostgreSQL**, por su soporte nativo del tipo `UUID`, de las restricciones de integridad referencial y de los tipos temporales utilizados en el modelo. El acceso a datos se realiza mediante **Spring Data JPA**, conforme a la tecnología establecida para los Web Services.
+
+**Convenciones aplicadas al modelo**
+
+| Convención | Descripción |
+|:-----------|:------------|
+| Nomenclatura | Nombres de tablas y columnas en inglés, en minúsculas y con guion bajo. Los nombres de las tablas provienen del Ubiquitous Language definido en la sección 2.5. |
+| Identificadores | Todas las tablas utilizan `UUID` como clave primaria, generado por la aplicación. |
+| Auditoría | Las tablas que representan entidades con ciclo de vida incluyen `created_at` y `updated_at`. |
+| Enumeraciones | Los valores de estado se almacenan como `VARCHAR` y se documentan como enumeraciones, en correspondencia con los `enum` del diagrama de clases de la sección 4.7. |
+| Referencias internas | Las relaciones entre tablas de un mismo bounded context se implementan con **clave foránea (FK)**. |
+| Referencias entre contextos | Las relaciones que cruzan la frontera de un bounded context se implementan como **columna de identificador, sin clave foránea**, y se identifican en los diagramas con la anotación `id-ref`. |
+
+**Sobre las referencias entre bounded contexts**
+
+En Domain-Driven Design, cada bounded context es responsable de la consistencia de su propio modelo. Establecer claves foráneas entre contextos acoplaría sus esquemas e impediría que evolucionen de forma independiente. Por ello, cuando una tabla necesita referirse a un objeto que pertenece a otro contexto —por ejemplo, cuando una inspección se refiere a un vehículo— se almacena únicamente su identificador, y la validación de su existencia es responsabilidad de la capa de aplicación.
+
 <a id="481-database-diagrams"></a>
 ### 4.8.1. Database Diagrams.
 
-El Database Diagram es una representación de la estructura de la base de datos que permitirá la persistencia de la información de FleetSafe. A continuación se presenta el diagrama de base de datos consolidado, que integra las tablas de todos los bounded contexts identificados.
+A continuación se presentan dos vistas complementarias del diseño de la base de datos. En primer lugar, el **modelo consolidado**, que muestra la totalidad del esquema tal como se persiste en la instancia de PostgreSQL. A continuación, un **diagrama por cada uno de los seis bounded contexts** identificados en la sección 4.6, con la explicación de las tablas que lo componen y de las decisiones de diseño adoptadas.
 
-```plantuml
-@startuml
-title Database Diagram - FleetSafe
+| Bounded Context | Tipo | Tablas |
+|:----------------|:-----|:-------|
+| Identity and Access | Genérico | `users` |
+| Fleet Management | Soporte | `companies`, `fleets`, `vehicles`, `drivers`, `vehicle_assignments` |
+| Vehicle Documentation | Soporte | `document_types`, `vehicle_documents` |
+| Pre-Operational Inspection | Core | `inspection_items`, `inspections`, `inspection_results`, `observations`, `evidences` |
+| Evaluation and Authorization | Core | `evaluation_rules`, `evaluations`, `evaluation_details`, `operational_authorizations` |
+| Incident Management | Soporte | `incident_types`, `incidents`, `corrective_actions`, `repairs`, `incident_follow_ups` |
 
-entity "companies" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    * ruc : VARCHAR(20) <<UNIQUE>>
-    address : VARCHAR(200)
-    phone : VARCHAR(20)
-    email : VARCHAR(100)
-    * created_at : TIMESTAMP
-}
+---
 
-entity "users" {
-    * id : UUID <<PK>>
-    --
-    * company_id : UUID <<FK>>
-    * email : VARCHAR(100) <<UNIQUE>>
-    * password : VARCHAR(255)
-    * first_name : VARCHAR(50)
-    * last_name : VARCHAR(50)
-    * role : VARCHAR(20)
-    * is_active : BOOLEAN
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
+#### Database Diagram: modelo consolidado
 
-entity "fleets" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    * company_id : UUID <<FK>>
-    * created_at : TIMESTAMP
-}
+La solución se despliega como una aplicación única que persiste sobre una **sola instancia de PostgreSQL**. Por ello, además de los diagramas por bounded context, se presenta el modelo consolidado con la totalidad de las tablas y de las relaciones que existen efectivamente en el esquema.
 
-entity "vehicles" {
-    * id : UUID <<PK>>
-    --
-    * plate : VARCHAR(20) <<UNIQUE>>
-    * brand : VARCHAR(50)
-    * model : VARCHAR(50)
-    * year : INTEGER
-    * type : VARCHAR(50)
-    capacity : DECIMAL(10,2)
-    * status : VARCHAR(20)
-    * fleet_id : UUID <<FK>>
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
+Ambas vistas son complementarias y responden a preguntas distintas: el modelo consolidado muestra **cómo se persiste la información**; los diagramas por bounded context muestran **qué contexto es responsable de cada tabla** y dónde se encuentran las fronteras del modelo de dominio.
 
-entity "inspections" {
-    * id : UUID <<PK>>
-    --
-    * vehicle_id : UUID <<FK>>
-    * driver_id : UUID <<FK>>
-    * status : VARCHAR(20)
-    * started_at : TIMESTAMP
-    completed_at : TIMESTAMP
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
+En el diagrama, la **línea continua** representa una relación con clave foránea dentro de un mismo bounded context, y la **línea discontinua**, una referencia por identificador que cruza la frontera de un contexto.
 
-entity "inspection_items" {
-    * id : UUID <<PK>>
-    --
-    * inspection_id : UUID <<FK>>
-    * item_id : UUID <<FK>>
-    * result : VARCHAR(20)
-    observation : TEXT
-    evidence_url : VARCHAR(500)
-    * created_at : TIMESTAMP
-}
+```mermaid
+erDiagram
+    companies ||--o{ fleets : ""
+    fleets ||--o{ vehicles : ""
+    vehicles ||--o{ vehicle_assignments : ""
+    drivers ||--o{ vehicle_assignments : ""
+    document_types ||--o{ vehicle_documents : ""
+    inspections ||--o{ inspection_results : ""
+    inspection_items ||--o{ inspection_results : ""
+    inspection_results ||--o{ observations : ""
+    observations ||--o{ evidences : ""
+    evaluations ||--o{ evaluation_details : ""
+    evaluation_rules ||--o{ evaluation_details : ""
+    evaluations ||--|| operational_authorizations : ""
+    incident_types ||--o{ incidents : ""
+    incidents ||--o{ corrective_actions : ""
+    incidents ||--o{ repairs : ""
+    incidents ||--o{ incident_follow_ups : ""
 
-entity "inspection_item_catalog" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    description : TEXT
-    * category : VARCHAR(50)
-    * is_safety_component : BOOLEAN
-    * is_active : BOOLEAN
-}
+    companies ||..o{ users : ""
+    users ||..o| drivers : ""
+    vehicles ||..o{ vehicle_documents : ""
+    vehicles ||..o{ inspections : ""
+    drivers ||..o{ inspections : ""
+    users ||..o{ observations : ""
+    inspection_items ||..o{ evaluation_rules : ""
+    inspections ||..|| evaluations : ""
+    users ||..o{ evaluations : ""
+    inspection_results ||..o{ evaluation_details : ""
+    vehicles ||..o{ operational_authorizations : ""
+    users ||..o{ operational_authorizations : ""
+    vehicles ||..o{ incidents : ""
+    inspections ||..o{ incidents : ""
+    users ||..o{ incidents : ""
+    users ||..o{ corrective_actions : ""
+    users ||..o{ incident_follow_ups : ""
 
-entity "evaluations" {
-    * id : UUID <<PK>>
-    --
-    * inspection_id : UUID <<FK>>
-    * vehicle_id : UUID <<FK>>
-    * status : VARCHAR(20)
-    * evaluated_at : TIMESTAMP
-    * evaluated_by : UUID <<FK>>
-    * created_at : TIMESTAMP
-}
-
-entity "evaluation_details" {
-    * id : UUID <<PK>>
-    --
-    * evaluation_id : UUID <<FK>>
-    * inspection_item_id : UUID <<FK>>
-    * rule_id : UUID <<FK>>
-    * result : VARCHAR(50)
-    * impact : VARCHAR(20)
-}
-
-entity "evaluation_rules" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    description : TEXT
-    * condition : TEXT
-    * impact : VARCHAR(20)
-    * is_active : BOOLEAN
-}
-
-entity "incidents" {
-    * id : UUID <<PK>>
-    --
-    * vehicle_id : UUID <<FK>>
-    * inspection_id : UUID <<FK>>
-    * reported_by : UUID <<FK>>
-    * type : VARCHAR(30)
-    * description : TEXT
-    * status : VARCHAR(20)
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
-
-entity "corrective_actions" {
-    * id : UUID <<PK>>
-    --
-    * incident_id : UUID <<FK>>
-    * description : TEXT
-    * performed_by : UUID <<FK>>
-    * performed_at : TIMESTAMP
-    evidence_url : VARCHAR(500)
-}
-
-entity "vehicle_documents" {
-    * id : UUID <<PK>>
-    --
-    * vehicle_id : UUID <<FK>>
-    * type : VARCHAR(30)
-    * number : VARCHAR(50)
-    * issue_date : DATE
-    * expiration_date : DATE
-    * status : VARCHAR(20)
-    file_url : VARCHAR(500)
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
-
-companies ||--o{ users
-companies ||--o{ fleets
-fleets ||--o{ vehicles
-vehicles ||--o{ inspections
-vehicles ||--o{ incidents
-vehicles ||--o{ vehicle_documents
-users ||--o{ inspections
-inspections ||--o{ inspection_items
-inspection_items }o--|| inspection_item_catalog
-inspections ||--o| evaluations
-evaluations ||--o{ evaluation_details
-evaluation_details }o--|| evaluation_rules
-incidents ||--o{ corrective_actions
-
-@enduml
+    users {
+        uuid id PK
+        uuid company_id
+        varchar role
+    }
+    companies {
+        uuid id PK
+        varchar tax_id UK
+    }
+    fleets {
+        uuid id PK
+        uuid company_id FK
+    }
+    vehicles {
+        uuid id PK
+        uuid fleet_id FK
+        varchar plate UK
+        varchar current_status
+    }
+    drivers {
+        uuid id PK
+        uuid user_id UK
+        varchar license_number UK
+    }
+    vehicle_assignments {
+        uuid id PK
+        uuid vehicle_id FK
+        uuid driver_id FK
+        boolean is_active
+    }
+    document_types {
+        uuid id PK
+        varchar code UK
+        boolean is_required
+    }
+    vehicle_documents {
+        uuid id PK
+        uuid vehicle_id
+        uuid document_type_id FK
+        date expiration_date
+        varchar status
+    }
+    inspection_items {
+        uuid id PK
+        varchar code UK
+        varchar category
+        boolean requires_evidence
+    }
+    inspections {
+        uuid id PK
+        uuid vehicle_id
+        uuid driver_id
+        varchar status
+    }
+    inspection_results {
+        uuid id PK
+        uuid inspection_id FK
+        uuid inspection_item_id FK
+        varchar result
+    }
+    observations {
+        uuid id PK
+        uuid inspection_result_id FK
+        uuid created_by
+    }
+    evidences {
+        uuid id PK
+        uuid observation_id FK
+        varchar file_url
+    }
+    evaluation_rules {
+        uuid id PK
+        uuid inspection_item_id
+        varchar found_result
+        varchar resulting_impact
+    }
+    evaluations {
+        uuid id PK
+        uuid inspection_id UK
+        uuid evaluated_by
+    }
+    evaluation_details {
+        uuid id PK
+        uuid evaluation_id FK
+        uuid inspection_result_id
+        uuid evaluation_rule_id FK
+        varchar applied_impact
+    }
+    operational_authorizations {
+        uuid id PK
+        uuid evaluation_id FK
+        uuid vehicle_id
+        varchar status
+        boolean is_override
+        uuid authorized_by
+    }
+    incident_types {
+        uuid id PK
+        varchar code UK
+    }
+    incidents {
+        uuid id PK
+        uuid vehicle_id
+        uuid incident_type_id FK
+        uuid inspection_id
+        varchar origin
+        varchar status
+        uuid reported_by
+    }
+    corrective_actions {
+        uuid id PK
+        uuid incident_id FK
+        uuid performed_by
+    }
+    repairs {
+        uuid id PK
+        uuid incident_id FK
+        varchar status
+    }
+    incident_follow_ups {
+        uuid id PK
+        uuid incident_id FK
+        uuid created_by
+    }
 ```
 
-**Explicación del diagrama:**
+El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los apartados siguientes.
 
-El diagrama de base de datos consolidado de FleetSafe presenta las tablas, columnas, constraints y relaciones que permitirán la persistencia de la información de la plataforma. Se han definido las siguientes tablas:
+Todas las columnas con el sufijo `_by` —`created_by`, `reported_by`, `performed_by`, `evaluated_by` y `authorized_by`— referencian la tabla `users` del contexto Identity and Access, y registran la trazabilidad de quién realiza cada acción.
 
-- **companies:** almacena la información de las empresas de transporte de carga.
-- **users:** almacena los usuarios de la plataforma y su rol asignado.
-- **fleets:** almacena las flotas de vehículos de cada empresa.
-- **vehicles:** almacena los vehículos que conforman las flotas.
-- **inspections:** almacena las inspecciones preoperacionales realizadas.
-- **inspection_items:** almacena los resultados de cada elemento inspeccionado.
-- **inspection_item_catalog:** almacena el catálogo de elementos que pueden ser inspeccionados.
-- **evaluations:** almacena las evaluaciones realizadas sobre las inspecciones.
-- **evaluation_details:** almacena el detalle de cada evaluación por elemento.
-- **evaluation_rules:** almacena las reglas de evaluación configuradas.
-- **incidents:** almacena las incidencias detectadas en los vehículos.
-- **corrective_actions:** almacena las acciones correctivas aplicadas a las incidencias.
-- **vehicle_documents:** almacena los documentos asociados a los vehículos.
+---
 
-Se han definido claves primarias (PK), claves foráneas (FK), restricciones de unicidad (UNIQUE) y relaciones uno a muchos entre las entidades. La base de datos seleccionada es PostgreSQL, que soporta el tipo de datos UUID y las restricciones definidas.
+#### Database Diagram: Identity and Access
+
+```mermaid
+erDiagram
+    users {
+        uuid id PK
+        uuid company_id "id-ref, Fleet Management"
+        varchar email UK
+        varchar password_hash
+        varchar first_name
+        varchar last_name
+        varchar role "ADMINISTRATOR, FLEET_SUPERVISOR, DRIVER"
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+```
+
+Este contexto es responsable de la identidad de las personas que acceden a la plataforma y del rol con el que lo hacen.
+
+- **users:** almacena las credenciales y los datos de identificación de cada usuario, junto con el rol asignado. El rol se modela como enumeración con tres valores —`ADMINISTRATOR`, `FLEET_SUPERVISOR` y `DRIVER`— en correspondencia con los tres roles descritos en la sección 1.1.1. La contraseña se almacena cifrada en la columna `password_hash`.
+
+La columna `company_id` referencia a la empresa a la que pertenece el usuario, que es un objeto del contexto **Fleet Management**, por lo que se implementa como referencia por identificador.
+
+---
+
+#### Database Diagram: Fleet Management
+
+```mermaid
+erDiagram
+    companies ||--o{ fleets : "organiza"
+    fleets ||--o{ vehicles : "agrupa"
+    vehicles ||--o{ vehicle_assignments : "es asignado en"
+    drivers ||--o{ vehicle_assignments : "recibe"
+
+    companies {
+        uuid id PK
+        varchar name
+        varchar tax_id UK
+        varchar address
+        varchar phone
+        varchar email
+        timestamp created_at
+        timestamp updated_at
+    }
+    fleets {
+        uuid id PK
+        uuid company_id FK
+        varchar name
+        text description
+        timestamp created_at
+        timestamp updated_at
+    }
+    vehicles {
+        uuid id PK
+        uuid fleet_id FK
+        varchar plate UK
+        varchar brand
+        varchar model
+        integer year
+        varchar type
+        decimal capacity
+        varchar current_status "ENABLED, OBSERVED, NOT_ENABLED"
+        timestamp created_at
+        timestamp updated_at
+    }
+    drivers {
+        uuid id PK
+        uuid user_id UK "id-ref, Identity and Access"
+        varchar license_number UK
+        date license_expiration_date
+        timestamp created_at
+        timestamp updated_at
+    }
+    vehicle_assignments {
+        uuid id PK
+        uuid vehicle_id FK
+        uuid driver_id FK
+        date assigned_from
+        date assigned_to
+        boolean is_active
+        timestamp created_at
+    }
+```
+
+Este contexto es responsable de los activos sobre los que opera la plataforma: las empresas, sus flotas, los vehículos que las componen y los conductores que los operan.
+
+- **companies:** almacena la información de las empresas de transporte de carga. La columna `tax_id` registra el identificador tributario de la empresa y es única.
+- **fleets:** almacena las flotas en las que cada empresa organiza sus vehículos.
+- **vehicles:** almacena los vehículos que conforman cada flota, con sus características y su condición operativa actual.
+- **drivers:** almacena los datos propios del conductor que no corresponden a su identidad como usuario, en particular el número y la fecha de vencimiento de su licencia de conducir.
+- **vehicle_assignments:** registra qué vehículo ha sido asignado a qué conductor y durante qué periodo. Esta tabla es la que permite determinar cuál es el vehículo asignado a un conductor en el momento de iniciar una inspección preoperacional.
+
+**Decisión de diseño: `current_status` es un valor derivado.** La columna `vehicles.current_status` refleja la condición operativa vigente del vehículo y existe para permitir consultar el estado de una flota completa sin recorrer su historial. Sin embargo, **no constituye la fuente de verdad**: esta es la última habilitación registrada en la tabla `operational_authorizations` del contexto Evaluation and Authorization. El valor se actualiza únicamente como consecuencia de una evaluación, y nunca mediante edición directa, ya que de lo contrario el control preventivo perdería su validez.
+
+---
+
+#### Database Diagram: Vehicle Documentation
+
+```mermaid
+erDiagram
+    document_types ||--o{ vehicle_documents : "clasifica"
+
+    document_types {
+        uuid id PK
+        varchar code UK
+        varchar name
+        text description
+        boolean is_required
+        boolean is_active
+    }
+    vehicle_documents {
+        uuid id PK
+        uuid vehicle_id "id-ref, Fleet Management"
+        uuid document_type_id FK
+        varchar number
+        date issue_date
+        date expiration_date
+        varchar status "VALID, EXPIRING, EXPIRED"
+        varchar file_url
+        timestamp created_at
+        timestamp updated_at
+    }
+```
+
+Este contexto es responsable de controlar la vigencia de los documentos asociados a cada vehículo.
+
+- **document_types:** catálogo de los tipos de documento que un vehículo puede requerir. La columna `is_required` indica si el documento es obligatorio para que el vehículo pueda operar.
+- **vehicle_documents:** almacena cada documento asociado a un vehículo, con su número, sus fechas de emisión y de vencimiento, y el archivo digitalizado correspondiente.
+
+**Decisión de diseño: el estado del documento se deriva de su fecha de vencimiento.** La columna `status` toma el valor `VALID`, `EXPIRING` o `EXPIRED` a partir de la comparación entre `expiration_date` y la fecha actual, y se recalcula de forma programada. Se almacena en lugar de calcularse en cada consulta porque el listado de documentos próximos a vencer es una de las consultas más frecuentes del supervisor de flota, descrita en la sección 1.2.1.
+
+---
+
+#### Database Diagram: Pre-Operational Inspection
+
+```mermaid
+erDiagram
+    inspections ||--o{ inspection_results : "contiene"
+    inspection_items ||--o{ inspection_results : "es verificado en"
+    inspection_results ||--o{ observations : "puede registrar"
+    observations ||--o{ evidences : "es respaldada por"
+
+    inspection_items {
+        uuid id PK
+        varchar code UK
+        varchar name
+        text description
+        varchar category "COMPONENT, SAFETY_COMPONENT, DOCUMENTATION"
+        boolean is_safety_component
+        boolean requires_evidence
+        integer display_order
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    inspections {
+        uuid id PK
+        uuid vehicle_id "id-ref, Fleet Management"
+        uuid driver_id "id-ref, Fleet Management"
+        varchar status "IN_PROGRESS, COMPLETED"
+        integer odometer
+        timestamp started_at
+        timestamp completed_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    inspection_results {
+        uuid id PK
+        uuid inspection_id FK
+        uuid inspection_item_id FK
+        varchar item_name "copia al momento de inspeccionar"
+        varchar item_category "copia al momento de inspeccionar"
+        varchar result "OK, OBSERVED, FAIL"
+        timestamp created_at
+    }
+    observations {
+        uuid id PK
+        uuid inspection_result_id FK
+        text description
+        uuid created_by "id-ref, Identity and Access"
+        timestamp created_at
+    }
+    evidences {
+        uuid id PK
+        uuid observation_id FK
+        varchar file_url
+        varchar media_type
+        timestamp uploaded_at
+    }
+```
+
+Este es el contexto núcleo de la solución: registra la inspección preoperacional que el conductor realiza sobre el vehículo asignado antes de iniciar una operación.
+
+- **inspection_items:** catálogo de los elementos que deben ser revisados durante una inspección. Corresponde al término *Inspection Item* del Ubiquitous Language. La columna `category` distingue si el elemento es un componente del vehículo, un elemento de seguridad o un aspecto de documentación, y `display_order` determina el orden en que se presentan al conductor.
+- **inspections:** almacena cada inspección realizada, indicando el vehículo inspeccionado, el conductor que la realizó, el odómetro registrado y las marcas de tiempo de inicio y término.
+- **inspection_results:** almacena el resultado obtenido para cada elemento revisado durante una inspección. Corresponde al término *Inspection Result* del Ubiquitous Language.
+- **observations:** almacena las descripciones que el conductor o el supervisor registran sobre una condición detectada. Corresponde al término *Observation*.
+- **evidences:** almacena los registros que respaldan una condición detectada, como una fotografía. Corresponde al término *Evidence*.
+
+**Decisión de diseño: la evidencia depende de la observación.** Una evidencia siempre respalda una condición concreta detectada durante la inspección. Por ello la cadena de dependencia es `inspection_result → observation → evidence`, y no una relación directa entre la inspección y sus archivos. Esta estructura permite además registrar varias observaciones sobre un mismo elemento y varias evidencias sobre una misma observación.
+
+**Decisión de diseño: el resultado conserva una copia del elemento inspeccionado.** Las columnas `item_name` e `item_category` de `inspection_results` almacenan el nombre y la categoría que el elemento del catálogo tenía **en el momento de realizarse la inspección**. Si posteriormente el administrador modifica o desactiva ese elemento, las inspecciones anteriores continúan reflejando fielmente lo que se revisó. Dado que el valor de FleetSafe reside en disponer de un historial verificable de la condición de los vehículos, ese historial no debe poder alterarse de forma retroactiva.
+
+---
+
+#### Database Diagram: Evaluation and Authorization
+
+```mermaid
+erDiagram
+    evaluations ||--o{ evaluation_details : "se descompone en"
+    evaluation_rules ||--o{ evaluation_details : "es aplicada en"
+    evaluations ||--|| operational_authorizations : "produce"
+
+    evaluation_rules {
+        uuid id PK
+        uuid inspection_item_id "id-ref, Pre-Operational Inspection"
+        varchar name
+        varchar found_result "OK, OBSERVED, FAIL"
+        varchar resulting_impact "NONE, OBSERVED, BLOCKING"
+        text description
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    evaluations {
+        uuid id PK
+        uuid inspection_id "id-ref, UNIQUE, Pre-Operational Inspection"
+        timestamp evaluated_at
+        uuid evaluated_by "id-ref, Identity and Access, nullable"
+        timestamp created_at
+    }
+    evaluation_details {
+        uuid id PK
+        uuid evaluation_id FK
+        uuid inspection_result_id "id-ref, Pre-Operational Inspection"
+        uuid evaluation_rule_id FK
+        varchar applied_impact "NONE, OBSERVED, BLOCKING"
+    }
+    operational_authorizations {
+        uuid id PK
+        uuid evaluation_id FK "UNIQUE"
+        uuid vehicle_id "id-ref, Fleet Management"
+        varchar status "ENABLED, OBSERVED, NOT_ENABLED"
+        boolean is_override "levanta un bloqueo previo"
+        text override_reason "obligatorio si is_override"
+        uuid authorized_by "id-ref, Identity and Access, obligatorio si is_override"
+        timestamp authorized_at
+        timestamp valid_until
+        timestamp created_at
+    }
+```
+
+Este es el segundo contexto núcleo: aplica las reglas establecidas por la empresa sobre los resultados de una inspección y determina si el vehículo se encuentra habilitado para operar.
+
+- **evaluation_rules:** almacena las reglas que la empresa establece para determinar cómo una condición detectada afecta al estado del vehículo. Corresponde al término *Evaluation Rule* del Ubiquitous Language.
+- **evaluations:** registra la evaluación realizada sobre una inspección. La columna `evaluated_by` admite valor nulo, porque la evaluación se ejecuta de forma automática al completarse la inspección y solo se registra un usuario cuando media una revisión manual del supervisor.
+- **evaluation_details:** registra qué regla se aplicó a qué resultado de inspección y con qué impacto, dejando constancia del razonamiento seguido por el sistema.
+- **operational_authorizations:** registra la habilitación operativa resultante de la evaluación. Corresponde al término *Operational Authorization* del Ubiquitous Language, y es la fuente de verdad de la condición operativa del vehículo. Registra además si la habilitación corresponde al levantamiento de un bloqueo previo, con su justificación y su responsable.
+
+**Decisión de diseño: la regla se define sobre un elemento del catálogo.** Cada fila de `evaluation_rules` expresa una regla legible de la forma *"si el elemento X presenta el resultado Y, el impacto sobre el vehículo es Z"*. La columna `inspection_item_id` es la que permite al sistema determinar qué reglas aplicar a cada resultado de una inspección. Se ha optado por esta estructura, y no por almacenar la condición como texto libre, porque una condición estructurada puede evaluarse de forma determinista y auditarse posteriormente.
+
+**Decisión de diseño: la excepción se permite, pero deja rastro.** En la operación real siempre se presentan situaciones en las que un vehículo debe salir pese a encontrarse observado o no habilitado. Si el sistema no admitiera esa excepción, los usuarios lo evitarían y regresarían al procedimiento en papel; si la admitiera sin dejar constancia, el historial perdería valor como evidencia. Por ello, el levantamiento de un bloqueo se registra como una nueva habilitación con `is_override` en verdadero, y en ese caso `override_reason` y `authorized_by` son obligatorios. Esta decisión sustenta la Estrategia 2 planteada en la sección 2.1.2 y permite además reportar el número de excepciones autorizadas por periodo y por responsable.
+
+**Decisión de diseño: la evaluación y la habilitación son entidades distintas.** La evaluación es el proceso de aplicar las reglas; la habilitación es la decisión resultante, con su vigencia. Separarlas permite conservar el detalle del razonamiento en `evaluation_details` y, a la vez, consultar de forma directa cuál es la condición vigente de un vehículo. El estado final se determina por el impacto más restrictivo entre los detalles de la evaluación: un solo impacto `BLOCKING` produce el estado `NOT_ENABLED`.
+
+---
+
+#### Database Diagram: Incident Management
+
+```mermaid
+erDiagram
+    incident_types ||--o{ incidents : "clasifica"
+    incidents ||--o{ corrective_actions : "es atendida mediante"
+    incidents ||--o{ repairs : "puede requerir"
+    incidents ||--o{ incident_follow_ups : "es seguida mediante"
+
+    incident_types {
+        uuid id PK
+        varchar code UK
+        varchar name
+        text description
+        boolean is_active
+    }
+    incidents {
+        uuid id PK
+        uuid vehicle_id "id-ref, Fleet Management"
+        uuid incident_type_id FK
+        uuid inspection_id "id-ref, nullable, Pre-Operational Inspection"
+        varchar origin "INSPECTION, OPERATION"
+        text description
+        varchar severity "LOW, MEDIUM, HIGH, CRITICAL"
+        varchar status "OPEN, IN_PROGRESS, RESOLVED, CLOSED"
+        uuid reported_by "id-ref, Identity and Access"
+        timestamp reported_at
+        varchar resolution_type
+        timestamp resolved_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    corrective_actions {
+        uuid id PK
+        uuid incident_id FK
+        text description
+        uuid performed_by "id-ref, Identity and Access"
+        timestamp performed_at
+        varchar evidence_url
+    }
+    repairs {
+        uuid id PK
+        uuid incident_id FK
+        varchar workshop
+        decimal cost
+        date started_at
+        date finished_at
+        varchar status "SCHEDULED, IN_PROGRESS, COMPLETED"
+    }
+    incident_follow_ups {
+        uuid id PK
+        uuid incident_id FK
+        text note
+        uuid created_by "id-ref, Identity and Access"
+        timestamp created_at
+    }
+```
+
+Este contexto es responsable del registro, seguimiento y resolución de las incidencias detectadas en los vehículos.
+
+- **incident_types:** catálogo de clasificación de las incidencias, correspondiente al término *Incident Type*.
+- **incidents:** almacena cada incidencia detectada, su severidad, su estado y la forma en que fue resuelta.
+- **corrective_actions:** almacena las acciones realizadas para solucionar o reducir el efecto de la condición detectada. Corresponde al término *Corrective Action*.
+- **repairs:** almacena el trabajo realizado sobre el vehículo para corregir la condición, con el taller responsable, el costo y las fechas de ejecución. Corresponde al término *Repair*.
+- **incident_follow_ups:** almacena el registro cronológico de las revisiones que el supervisor realiza sobre una incidencia. Corresponde al término *Incident Follow-up*.
+
+**Decisión de diseño: una incidencia no depende necesariamente de una inspección.** El Ubiquitous Language define la incidencia como un problema detectado en un vehículo "durante una inspección **o durante su operación**". Por ello la columna `inspection_id` admite valor nulo y se acompaña de la columna `origin`, que distingue explícitamente ambos casos. Si la referencia a la inspección fuera obligatoria, las incidencias surgidas durante la operación no podrían registrarse.
+
+---
+
+#### Resumen de referencias entre bounded contexts
+
+El siguiente cuadro concentra las referencias que cruzan la frontera de un bounded context. Todas se implementan como columna de identificador, sin clave foránea, según la convención establecida al inicio de esta sección.
+
+| Tabla origen | Columna | Bounded context destino | Objeto referenciado |
+|:-------------|:--------|:------------------------|:--------------------|
+| `users` | `company_id` | Fleet Management | `companies` |
+| `drivers` | `user_id` | Identity and Access | `users` |
+| `vehicle_documents` | `vehicle_id` | Fleet Management | `vehicles` |
+| `inspections` | `vehicle_id` | Fleet Management | `vehicles` |
+| `inspections` | `driver_id` | Fleet Management | `drivers` |
+| `observations` | `created_by` | Identity and Access | `users` |
+| `evaluation_rules` | `inspection_item_id` | Pre-Operational Inspection | `inspection_items` |
+| `evaluations` | `inspection_id` | Pre-Operational Inspection | `inspections` |
+| `evaluations` | `evaluated_by` | Identity and Access | `users` |
+| `evaluation_details` | `inspection_result_id` | Pre-Operational Inspection | `inspection_results` |
+| `operational_authorizations` | `vehicle_id` | Fleet Management | `vehicles` |
+| `incidents` | `vehicle_id` | Fleet Management | `vehicles` |
+| `incidents` | `inspection_id` | Pre-Operational Inspection | `inspections` |
+| `incidents` | `reported_by` | Identity and Access | `users` |
+| `corrective_actions` | `performed_by` | Identity and Access | `users` |
+| `incident_follow_ups` | `created_by` | Identity and Access | `users` |
+
+#### Recorrido del flujo principal sobre el modelo
+
+El flujo núcleo de FleetSafe —inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento— se recorre sobre el modelo de la siguiente manera:
+
+1. El conductor inicia una inspección sobre el vehículo que tiene asignado, determinado por `vehicle_assignments`. Se crea una fila en `inspections`.
+2. Por cada elemento del catálogo `inspection_items` se registra una fila en `inspection_results`, con el resultado obtenido y una copia del nombre y la categoría del elemento.
+3. Cuando el resultado no es `OK`, el conductor registra una fila en `observations` y, si corresponde, una o más filas en `evidences`.
+4. Al completarse la inspección, el sistema crea una fila en `evaluations` y aplica las reglas de `evaluation_rules` correspondientes a cada elemento, dejando constancia en `evaluation_details`.
+5. El impacto más restrictivo determina el estado, que se registra en `operational_authorizations` y se refleja en `vehicles.current_status`.
+6. Las condiciones que requieren atención generan una fila en `incidents`, con `origin` igual a `INSPECTION`, que el supervisor atiende mediante `corrective_actions`, `repairs` e `incident_follow_ups` hasta su resolución.
+7. Si la operación exige que un vehículo no habilitado salga igualmente, el supervisor registra una nueva fila en `operational_authorizations` con `is_override` en verdadero, indicando la justificación y quedando registrado como responsable de la decisión.
 
 ---
 
