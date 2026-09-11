@@ -594,177 +594,165 @@ La información obtenida permitirá validar o corregir las suposiciones plantead
 <a id="21-competidores"></a>
 ## 2.1. Competidores
 
-Con la finalidad de comprender el entorno competitivo en el cual se desarrollará FleetSafe, se identificaron tres soluciones digitales que ofrecen funcionalidades relacionadas con inspecciones vehiculares, control preventivo, gestión de incidencias, mantenimiento y cumplimiento de condiciones de seguridad.
+Con la finalidad de comprender el entorno competitivo en el cual se desarrollará FleetSafe, se identificaron las soluciones digitales que atienden necesidades relacionadas con la inspección preoperacional de vehículos, el control preventivo, la habilitación operativa y la gestión de incidencias.
 
-Los competidores seleccionados son:
+El análisis del entorno competitivo permitió identificar **tres capas de competencia** con características distintas:
 
-1. **Fleetio**
-2. **Whip Around**
-3. **Verizon Connect**
+| Capa | Quiénes | Relación con FleetSafe |
+|:-----|:--------|:-----------------------|
+| **Competidores directos** | Fleetio, Whip Around, Vehicheck, Verizon Connect | Digitalizan la inspección de vehículos y, en distintos grados, determinan si la unidad puede operar |
+| **Competidores indirectos** | Proveedores de telemática y gestión de flotas en Perú; plataformas genéricas de formularios digitales | Resuelven problemas adyacentes —rastreo, mantenimiento, digitalización de formatos— sin llegar a la habilitación operativa |
+| **Alternativa vigente** | Formatos físicos, hojas de cálculo y formularios genéricos | Es la práctica actual en la mayoría de empresas y, en la práctica, la opción con la que se compara la adopción de FleetSafe |
 
-Estas plataformas constituyen competidores directos o parcialmente directos debido a que atienden necesidades relacionadas con inspecciones de vehículos, identificación de defectos, gestión de incidencias, mantenimiento preventivo y control de la condición de las unidades.
-
-A diferencia de estas soluciones, FleetSafe plantea inicialmente un enfoque específico en el **control preventivo y la habilitación operativa de vehículos de transporte de carga**, donde el resultado de la inspección permite determinar si una unidad se encuentra habilitada, observada o no habilitada para operar.
+Un hallazgo relevante del análisis es que **cada solución existente está construida alrededor del marco normativo de un país determinado**, del cual depende la evidencia que el cliente y el ente fiscalizador exigen. Esta observación resultó determinante para la definición de la ventaja competitiva de FleetSafe y se desarrolla en la sección 2.1.2.
 
 ### Competidor 1: Fleetio
 
-**Fleetio** es una plataforma de gestión de flotas que incluye funcionalidades orientadas a las inspecciones de vehículos, mantenimiento y seguimiento de problemas.
+**Fleetio** es una plataforma estadounidense de gestión de flotas que incluye funcionalidades de inspección de vehículos, mantenimiento y seguimiento de problemas.
 
-Entre sus principales capacidades se encuentran las inspecciones digitales personalizables, formularios de inspección, registro de fotografías y comentarios, alertas ante problemas detectados, historial de inspecciones y generación de reportes.
+Permite realizar inspecciones digitales personalizables, registrar fotografías y comentarios, generar alertas ante problemas detectados, mantener el historial de inspecciones y convertir los elementos fallidos en órdenes de trabajo.
 
-La plataforma también permite convertir elementos fallidos de una inspección en órdenes de trabajo para iniciar procesos de mantenimiento y realizar seguimiento de los problemas identificados.
+Respecto de la habilitación del vehículo, Fleetio permite que un elemento fallido **cambie automáticamente el estado del vehículo a "Out of Service"** mediante la configuración de *workflows*. Es importante precisar que este no es el comportamiento predeterminado —de forma predeterminada únicamente se genera una incidencia— y que los *workflows* se encuentran disponibles en los planes Professional y Premium.
+
+Su modelo de cumplimiento está orientado a la normativa federal estadounidense (DOT). Ofrece traducción al español en su aplicación móvil y en su centro de ayuda, aunque **no ofrece soporte telefónico ni acompañamiento de implementación en español**.
 
 ### Competidor 2: Whip Around
 
-**Whip Around** es una plataforma de gestión de flotas orientada a inspecciones, mantenimiento y cumplimiento.
+**Whip Around** es una plataforma estadounidense especializada en inspecciones de flota, mantenimiento y cumplimiento normativo.
 
-La solución permite realizar inspecciones preoperacionales y postoperacionales mediante dispositivos móviles, utilizar formularios personalizables, registrar defectos, adjuntar fotografías y almacenar el historial de inspecciones.
+Permite realizar inspecciones preoperacionales y postoperacionales desde dispositivos móviles, con formularios personalizables, registro de defectos con indicación de severidad y adjunto de fotografías.
 
-Además, los responsables de la flota pueden recibir notificaciones sobre problemas detectados y realizar seguimiento de los defectos hasta su resolución.
+Respecto de la habilitación del vehículo, cuando se registra un defecto la plataforma genera la orden de trabajo correspondiente y **mantiene la unidad fuera de servicio hasta que la reparación se encuentra documentada**. Para los defectos que afectan la operación segura, el vehículo no puede volver a operar hasta que un mecánico certificado o un representante autorizado del transportista firme la certificación correspondiente, conforme al procedimiento del *Driver Vehicle Inspection Report* (DVIR) estadounidense.
 
-### Competidor 3: Verizon Connect
+Su soporte de idiomas en el panel y la aplicación se realiza **mediante traducción automática**, no mediante una localización propia.
 
-**Verizon Connect** es una plataforma de gestión de flotas que incluye funcionalidades de Driver Vehicle Inspection Reports (DVIR).
+### Competidor 3: Vehicheck
 
-La solución permite que los conductores realicen inspecciones mediante listas de componentes del vehículo desde dispositivos móviles, registren defectos, agreguen comentarios y adjunten fotografías.
+**Vehicheck** es una solución colombiana orientada específicamente a la digitalización de la inspección preoperacional de flotas, y constituye el competidor directo más cercano a la propuesta de FleetSafe.
 
-Las inspecciones quedan almacenadas en el sistema y pueden ser consultadas posteriormente por los responsables de la flota, facilitando el seguimiento de las condiciones de los vehículos y la documentación relacionada con las inspecciones.
+Permite que el conductor realice la inspección desde un dispositivo móvil generando evidencia digital con fotografías, firma y marca de tiempo, e incorpora **bloqueo automático de vehículos con fallas críticas**: cuando un elemento crítico se encuentra en mal estado, la inspección se marca como no aprobada. Incluye además alertas de vencimiento del SOAT y de la revisión técnico-mecánica.
+
+La solución se presenta **alineada de forma exclusiva con el Plan Estratégico de Seguridad Vial (PESV) de Colombia** y se comercializa en ese mercado. No declara presencia en Perú ni en otros países, y no publica información de precios.
+
+La existencia de Vehicheck confirma que el problema que aborda FleetSafe es real y comercialmente viable en el contexto latinoamericano, y evidencia al mismo tiempo que las soluciones de esta categoría se construyen alrededor del marco normativo del país al que se dirigen.
+
+### Competidor 4: Verizon Connect
+
+**Verizon Connect** es una plataforma estadounidense de gestión de flotas y telemática que incluye funcionalidades de *Driver Vehicle Inspection Reports* (DVIR).
+
+Permite que los conductores realicen inspecciones mediante listas de componentes desde dispositivos móviles, registren defectos, agreguen comentarios y adjunten fotografías, manteniendo los registros disponibles para su consulta posterior.
+
+A diferencia de las anteriores, su propuesta **requiere la instalación de equipamiento telemático en cada vehículo**, lo que implica una inversión inicial y un proceso de implementación considerablemente mayores.
+
+### Competidores indirectos
+
+**Proveedores de telemática y gestión de flotas en Perú.** El mercado peruano cuenta con proveedores consolidados orientados al monitoreo por GPS, el mantenimiento y la trazabilidad de la operación, entre los que se encuentran Zonar Systems Perú —certificado por SUTRAN—, MiX Telematics a través de PSTECH Perú, y Prolyam, que ofrece un ERP vehicular con presencia en Lima, Callao, Arequipa, Trujillo y Piura. Estas soluciones no tienen como núcleo la inspección preoperacional ni la determinación de la condición operativa del vehículo, pero atienden al mismo cliente y compiten por el mismo presupuesto.
+
+**Plataformas genéricas de formularios digitales.** Soluciones como DataScope permiten crear y consolidar formularios de inspección de cualquier tipo. Resuelven la digitalización del formato, pero no incorporan reglas de evaluación, habilitación operativa ni seguimiento de incidencias asociado al vehículo.
+
+**La alternativa vigente: el formato físico y la hoja de cálculo.** En la mayoría de empresas de transporte de carga el control preoperacional se realiza mediante formatos impresos que se archivan físicamente. Aunque no constituye un producto, es la opción con la que compite realmente FleetSafe en la decisión de compra: su costo directo es cero y su principal debilidad es que la información no está disponible cuando se requiere demostrarla.
 
 ---
 
 <a id="211-analisis-competitivo"></a>
 ### 2.1.1. Análisis competitivo
 
-El análisis competitivo tiene como objetivo identificar las principales características, fortalezas y limitaciones de soluciones existentes relacionadas con la inspección y control preventivo de vehículos.
-
-La pregunta que orienta este análisis es:
-
-> **¿Cómo puede FleetSafe diferenciarse de las soluciones actuales de gestión de flotas e inspección vehicular para ofrecer una propuesta de valor adecuada a empresas de transporte de carga?**
+El análisis competitivo tiene como objetivo que BitMeisters conozca mejor a sus competidores, contrastando la idea inicial que el equipo tenía sobre ellos con la información verificable disponible en sus canales oficiales y de soporte.
 
 #### Competitive Analysis Landscape
 
-| Criterio                      | **FleetSafe**                                                                                                                                            | **Fleetio**                                                                                                                                          | **Whip Around**                                                                                                                            | **Verizon Connect**                                                                                                                           |
-|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Overview**                  | Plataforma web orientada al control preventivo y habilitación operativa de vehículos de transporte de carga.                                             | Plataforma de gestión de flotas con funcionalidades de inspección, mantenimiento y gestión de problemas.                                             | Plataforma de gestión de flotas enfocada en inspecciones, mantenimiento y cumplimiento.                                                    | Plataforma de gestión de flotas que incluye funcionalidades de inspección vehicular y DVIR.                                                   |
-| **Ventaja competitiva**       | Enfoque específico en la evaluación de las condiciones del vehículo y determinación de su estado como habilitado, observado o no habilitado para operar. | Amplia gestión del ciclo de inspección y mantenimiento, con formularios personalizables y automatización de acciones posteriores a las inspecciones. | Enfoque especializado en digitalizar inspecciones y gestionar defectos de manera rápida, con herramientas para conductores y supervisores. | Integración de las inspecciones vehiculares con una plataforma más amplia de gestión de flotas, telemática y operaciones.                     |
-| **Valor ofrecido al cliente** | Centralización de inspecciones, evaluación de condiciones, identificación de riesgos, habilitación operativa y seguimiento de incidencias.               | Digitalización de inspecciones, identificación de problemas y conexión de los resultados con procesos de mantenimiento.                              | Reducción del uso de formularios físicos, mayor visibilidad sobre defectos y seguimiento de inspecciones.                                  | Facilitar la realización, almacenamiento y consulta de inspecciones y reportes de vehículos dentro de una solución de gestión de flotas.      |
-| **Mercado objetivo**          | Empresas de transporte de carga que necesitan controlar la condición de seguridad de sus vehículos antes de operar.                                      | Empresas que administran vehículos, equipos y diferentes tipos de activos.                                                                           | Empresas que administran flotas y necesitan gestionar inspecciones, mantenimiento y cumplimiento.                                          | Empresas que necesitan gestionar flotas, seguridad, seguimiento de vehículos e inspecciones.                                                  |
-| **Estrategia de marketing**   | Landing Page, demostraciones del producto, contacto directo con empresas de transporte y pruebas piloto.                                                 | Contenido digital, demostraciones, prueba del producto y comunicación enfocada en la gestión de flotas.                                              | Demostraciones, contenido especializado, casos de uso y contacto comercial.                                                                | Demostraciones comerciales, contenido especializado, casos de éxito y contacto empresarial.                                                   |
-| **Productos y servicios**     | Inspecciones preoperacionales, evaluación mediante reglas, identificación de riesgos, habilitación del vehículo, gestión de incidencias e historial.     | Inspecciones digitales, formularios personalizados, gestión de problemas, órdenes de trabajo, mantenimiento e historial.                             | Inspecciones digitales, formularios personalizados, gestión de defectos, mantenimiento, cumplimiento e historial.                          | DVIR, inspecciones mediante checklist, registro de defectos, fotografías, almacenamiento de inspecciones y herramientas de gestión de flotas. |
-| **Precios y costos**          | Modelo de negocio pendiente de validación.                                                                                                               | Modelo comercial basado en planes de servicio y funcionalidades de gestión de flotas.                                                                | Modelo comercial orientado a empresas y gestión de flotas.                                                                                 | Modelo comercial orientado a empresas y soluciones de gestión de flotas.                                                                      |
-| **Canales de distribución**   | Plataforma web.                                                                                                                                          | Plataforma web y aplicación móvil.                                                                                                                   | Plataforma web y aplicación móvil.                                                                                                         | Plataforma web y aplicaciones móviles.                                                                                                        |
+| **¿Por qué llevar a cabo este análisis?** |
+|:---|
+| Conocer cómo las soluciones existentes de inspección y control preventivo vehicular resuelven la habilitación operativa del vehículo, y determinar cómo puede FleetSafe diferenciarse para ofrecer una propuesta de valor adecuada a las empresas de transporte de carga en el Perú. |
 
----
+| | | <img src="img/competitors/fleetsafe.png" alt="Logo de FleetSafe" width="80"><br>**FleetSafe** | <img src="img/competitors/fleetio.png" alt="Logo de Fleetio" width="80"><br>**Fleetio** | <img src="img/competitors/whip-around.png" alt="Logo de Whip Around" width="80"><br>**Whip Around** | <img src="img/competitors/vehicheck.png" alt="Logo de Vehicheck" width="80"><br>**Vehicheck** | <img src="img/competitors/verizon-connect.png" alt="Logo de Verizon Connect" width="80"><br>**Verizon Connect** |
+|:---|:---|:---|:---|:---|:---|:---|
+| **Perfil** | Overview | Control preventivo y habilitación operativa de vehículos de carga, alineado al marco de cumplimiento peruano. | Gestión integral de flotas con inspecciones, mantenimiento y órdenes de trabajo. | Plataforma especializada en inspecciones DVIR, defectos y cumplimiento. | Inspección preoperacional digital alineada al PESV de Colombia. | Gestión de flotas y telemática con módulo DVIR. |
+| | Ventaja competitiva<br>¿Qué valor ofrece a los clientes? | Produce la evidencia que exigen la normativa peruana de SST y las auditorías de homologación, y deja registro de quién autoriza cada excepción. | Amplitud funcional y automatización entre inspección, incidencia y mantenimiento. | Especialización en el ciclo de defectos y en el cumplimiento del DOT. | Cumplimiento del PESV sin papel, con bloqueo automático ante fallas críticas. | Integración de las inspecciones con telemática y rastreo en tiempo real. |
+| **Perfil de Marketing** | Mercado objetivo | Empresas de transporte de carga en Perú, con énfasis en las que prestan servicio a clientes industriales y mineros. | Empresas que administran vehículos y activos, principalmente en Estados Unidos. | Flotas de cualquier tamaño; plan gratuito para un solo activo. | Empresas colombianas obligadas a cumplir el PESV. | Empresas que requieren rastreo, seguridad y gestión integral de flota. |
+| | Estrategias de marketing | Landing Page, demostraciones, pruebas piloto y contacto directo con empresas de transporte. | Contenido digital, precios publicados y prueba gratuita. | Contenido sobre cumplimiento DOT, plan gratuito de entrada y calculadora de retorno de inversión. | Contacto directo por WhatsApp y demostración; producto en lanzamiento. | Fuerza comercial, cotización a medida y casos de éxito. |
+| **Perfil de Producto** | Productos & Servicios | Inspección preoperacional, evaluación por reglas, habilitación operativa con registro de excepciones, gestión de incidencias, documentación vehicular e historial auditable. | Inspecciones, incidencias, órdenes de trabajo, mantenimiento, combustible e informes. | Inspecciones, defectos con severidad, órdenes de trabajo, mantenimiento y cumplimiento. | Inspección preoperacional, evidencia digital, bloqueo automático y alertas de SOAT y RTM. | DVIR, rastreo GPS, telemática, análisis de conducción y gestión de flota. |
+| | Precios & Costos | Suscripción mensual por vehículo activo; estructura pendiente de validación. | Essential USD 4 por vehículo/mes con pago anual (USD 5 mensual); Professional USD 7; Premium USD 10. Mínimo de 5 vehículos. | Basic gratuito para 1 activo; Standard USD 5 por activo/mes; Pro USD 10 con pago anual; plan fijo ilimitado a medida. Sin mínimo de flota. | No publica precios. | No publica precios; cotización a medida. Estimaciones del sector entre USD 20 y USD 40 por vehículo/mes, además del equipamiento. |
+| | Canales de distribución<br>(Web y/o Móvil) | Plataforma web responsive, sin instalación. | Plataforma web y aplicación móvil. | Plataforma web y aplicación móvil. | Plataforma web y aplicación móvil. | Plataforma web, aplicación móvil y equipamiento instalado en el vehículo. |
+| **Análisis SWOT** | Fortalezas | Enfoque exclusivo en control preventivo y habilitación; reglas configurables por la empresa; registro de la autorización de excepciones con responsable y justificación; historial orientado a las exigencias documentales locales; adopción sin hardware ni instalación. | Amplitud funcional y madurez; precios publicados y prueba gratuita; cambio automático del estado del vehículo mediante *workflows*. | Especialización en inspecciones; retiene la unidad fuera de servicio hasta documentar la reparación; plan gratuito y sin mínimo de flota; severidad declarada por el conductor. | Propuesta casi equivalente a la de FleetSafe; bloqueo automático; evidencia con fotografía, firma y marca de tiempo; alineamiento explícito con una normativa nacional. | Plataforma consolidada con telemática, rastreo y DVIR integrados; respaldo corporativo; información en tiempo real. |
+| | Debilidades | Producto nuevo, sin clientes ni posicionamiento; menor amplitud funcional; recursos limitados del equipo; la inspección es autorreportada por el conductor, por lo que el sistema no puede garantizar que la revisión física se haya realizado. | El bloqueo del vehículo no es el comportamiento predeterminado y requiere configuración y un plan superior; cumplimiento orientado a la normativa estadounidense; sin soporte telefónico ni implementación en español. | El retorno a servicio se apoya en la figura del mecánico certificado del modelo DVIR estadounidense, ajena a la práctica peruana; soporte de idiomas mediante traducción automática. | Alcance limitado a Colombia y al PESV; producto en lanzamiento, sin precios publicados ni casos de éxito; canal comercial basado en contacto directo. | Requiere instalación de equipamiento en cada vehículo, con inversión inicial y tiempo de implementación; no publica precios; propuesta más extensa de lo que exige el control preventivo. |
+| | Oportunidades | Ausencia de soluciones construidas sobre el marco de cumplimiento peruano; exigencia creciente de evidencia documentada en los procesos de homologación; predominio aún del formato físico; integración futura con mantenimiento, GPS o IoT. | Expansión hacia mercados hispanohablantes; mayor integración entre inspección y mantenimiento. | Crecimiento de la digitalización de inspecciones; demanda creciente de trazabilidad de defectos. | Expansión hacia otros países de la región con normativas de seguridad vial equivalentes. | Uso de datos telemáticos para anticipar fallas antes de la inspección. |
+| | Amenazas | Entrada al mercado peruano de soluciones regionales ya operativas, como Vehicheck; incorporación de capacidades equivalentes por plataformas consolidadas; proveedores locales de telemática que añadan módulos de inspección; resistencia al cambio de procesos. | Competencia de soluciones especializadas y de menor complejidad; productos locales adaptados a marcos normativos específicos. | Plataformas de gestión de flotas que incorporan inspecciones; soluciones regionales adaptadas a normativas locales. | Aparición de soluciones locales en cada mercado al que pretenda expandirse; plataformas consolidadas que incorporen el bloqueo de forma predeterminada. | Soluciones sin hardware y de adopción inmediata; competidores especializados de menor costo. |
 
-#### Análisis SWOT
-
-##### FleetSafe
-
-|                   |                                                                                                                                                                                                                                                                                                                         |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Enfoque específico en seguridad y control preventivo vehicular; inspecciones preoperacionales digitales; evaluación de condiciones mediante reglas; identificación de vehículos habilitados, observados y no habilitados; registro y seguimiento de incidencias.                                                        |
-| **Debilidades**   | Producto nuevo sin clientes ni posicionamiento inicial; menor cantidad de funcionalidades que plataformas consolidadas de gestión de flotas; recursos limitados del equipo; funcionalidades avanzadas de gestión de flotas e integración con telemática fuera del alcance inicial.                                      |
-| **Oportunidades** | Digitalización de controles preventivos realizados mediante formatos físicos, hojas de cálculo o procesos dispersos; necesidad de centralizar inspecciones y problemas detectados; posibilidad de especializar el proceso de habilitación de vehículos; futura integración con sistemas de mantenimiento, GPS o IoT.    |
-| **Amenazas**      | Existencia de plataformas consolidadas de gestión de flotas e inspecciones; incorporación de funcionalidades similares por parte de competidores; resistencia de algunas empresas a modificar sus procesos actuales; capacidad de competidores establecidos para integrar inspecciones con otras soluciones de gestión. |
-
-##### Fleetio
-
-|                   |                                                                                                                                                                                                                                          |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Inspecciones digitales personalizables; gestión de problemas; fotografías y comentarios; alertas ante fallos; historial de inspecciones; integración con procesos de mantenimiento y órdenes de trabajo.                                 |
-| **Debilidades**   | Su propuesta cubre un conjunto amplio de necesidades de gestión de flotas, por lo que puede resultar más extensa que las necesidades de una empresa que busque principalmente un proceso de control preventivo y habilitación operativa. |
-| **Oportunidades** | Crecimiento de la digitalización de inspecciones; integración entre inspecciones y mantenimiento; necesidad de reducir el uso de formularios físicos y mejorar el control de los activos.                                                |
-| **Amenazas**      | Competencia de otras plataformas especializadas en inspecciones y gestión de flotas; aparición de soluciones locales con procesos más adaptados a mercados específicos.                                                                  |
-
-##### Whip Around
-
-|                   |                                                                                                                                                                                                                                |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Especialización en inspecciones digitales; formularios personalizables; gestión de defectos; fotografías; historial de inspecciones; notificaciones y seguimiento de problemas; aplicaciones para conductores.                 |
-| **Debilidades**   | Su propuesta cubre inspecciones, mantenimiento y cumplimiento de manera amplia, mientras que FleetSafe plantea inicialmente concentrarse en la determinación de la condición preventiva y habilitación operativa del vehículo. |
-| **Oportunidades** | Crecimiento de la sustitución de inspecciones físicas por procesos digitales; necesidad de mejorar la trazabilidad de defectos; incremento de la demanda de herramientas de cumplimiento y seguridad.                          |
-| **Amenazas**      | Competencia de plataformas de gestión de flotas que incorporan inspecciones como parte de soluciones más amplias; aparición de nuevas soluciones especializadas en inspecciones vehiculares.                                   |
-
-##### Verizon Connect
-
-|                   |                                                                                                                                                                                                                                                                        |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fortalezas**    | Plataforma consolidada de gestión de flotas; inspecciones DVIR digitales; listas de inspección para conductores; registro de fotografías y comentarios; almacenamiento de historial de inspecciones; integración con otras capacidades de gestión vehicular.           |
-| **Debilidades**   | Su propuesta se encuentra integrada dentro de un ecosistema más amplio de gestión de flotas, por lo que puede representar una solución más extensa de lo necesario para organizaciones que busquen únicamente controlar preventivamente la condición de sus vehículos. |
-| **Oportunidades** | Crecimiento de la digitalización de procesos de seguridad; integración de inspecciones con telemática; utilización de información histórica para mejorar la seguridad y mantenimiento de las flotas.                                                                   |
-| **Amenazas**      | Competencia de plataformas especializadas en inspecciones; soluciones de menor complejidad orientadas a empresas pequeñas y medianas; aparición de nuevas tecnologías para automatizar la identificación de defectos.                                                  |
+> **Nota sobre las fuentes.** Los precios y el comportamiento ante fallas de Fleetio y Whip Around corresponden a la información publicada en sus páginas de precios y en sus centros de ayuda; los datos de Vehicheck provienen de su sitio oficial; los rangos de Verizon Connect corresponden a estimaciones del sector, dado que la empresa no publica tarifas. Las referencias completas se encuentran en la sección de Bibliografía.
 
 ---
 
 <a id="212-estrategias-y-tacticas-frente-a-competidores"></a>
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-A partir del análisis competitivo, el equipo plantea estrategias preliminares para posicionar FleetSafe frente a plataformas consolidadas como Fleetio, Whip Around y Verizon Connect.
+El análisis competitivo permitió identificar un patrón determinante: **las soluciones existentes se construyen alrededor del marco normativo del país al que se dirigen**, porque de ese marco depende la evidencia que el cliente y el ente fiscalizador exigen.
 
-#### Estrategia 1: Especialización en control preventivo y habilitación operativa
+| Solución | Marco de cumplimiento sobre el que está construida |
+|:---------|:----------------------------------------------------|
+| Fleetio, Whip Around, Verizon Connect | *Driver Vehicle Inspection Report* y normativa federal de los Estados Unidos |
+| Vehicheck | Plan Estratégico de Seguridad Vial (PESV) de Colombia |
+| Proveedores peruanos de telemática | Rastreo y mantenimiento; no abordan la habilitación operativa |
+| **FleetSafe** | **Normativa peruana de seguridad y salud en el trabajo, normativa de seguridad minera y homologación de proveedores** |
 
-FleetSafe buscará diferenciarse mediante un enfoque específico en determinar si un vehículo cumple las condiciones necesarias para iniciar una operación.
+Sobre esta base, BitMeisters plantea las siguientes estrategias, que corresponden a una **estrategia competitiva de enfoque**: en lugar de competir por amplitud funcional frente a plataformas consolidadas, FleetSafe se especializa en atender de manera completa a un segmento y un marco de cumplimiento determinados.
 
-**Tácticas:**
+#### Estrategia 1: Especialización en el marco de cumplimiento peruano
 
-- Diseñar el flujo principal de la plataforma alrededor de la inspección preoperacional.
-- Evaluar los resultados de la inspección mediante reglas establecidas por la empresa.
-- Identificar automáticamente las condiciones que pueden representar un riesgo.
-- Clasificar los vehículos como **HABILITADO, OBSERVADO o NO HABILITADO**.
-- Permitir que el supervisor conozca rápidamente qué unidades cumplen las condiciones para operar.
-
-#### Estrategia 2: Mantener una experiencia sencilla para el conductor
-
-En lugar de competir inicialmente por la cantidad de funcionalidades, FleetSafe buscará ofrecer una experiencia enfocada en las actividades esenciales que debe realizar el conductor durante una inspección.
+FleetSafe se posicionará como la solución de control preventivo diseñada para las exigencias documentales del mercado peruano, y no como una alternativa funcionalmente equivalente a las plataformas existentes.
 
 **Tácticas:**
 
-- Reducir la cantidad de pasos necesarios para completar una inspección.
-- Diseñar una interfaz web responsive adecuada para dispositivos móviles.
-- Permitir registrar rápidamente el estado de los componentes y elementos de seguridad.
-- Facilitar el registro de observaciones y evidencias.
-- Evitar incorporar funcionalidades que no estén relacionadas con el objetivo principal del control preventivo.
+- Diseñar el historial y los reportes en función de la evidencia que solicitan las auditorías de homologación de clientes industriales y mineros.
+- Estructurar el registro de inspecciones de modo que sirva como evidencia dentro del sistema de gestión de seguridad y salud en el trabajo de la empresa.
+- Incorporar el control de vigencia de la documentación vehicular exigida en el ámbito local.
+- Comunicar la propuesta en términos de cumplimiento y de continuidad operativa, no en términos de cantidad de funcionalidades.
 
-#### Estrategia 3: Centralización de la información de seguridad vehicular
+#### Estrategia 2: Habilitación operativa con trazabilidad de las excepciones
 
-FleetSafe buscará diferenciarse mediante la centralización de la información relacionada con inspecciones, riesgos, documentación e incidencias.
+Las soluciones analizadas plantean dos extremos: o el vehículo queda retenido hasta contar con la certificación de un mecánico, conforme al modelo estadounidense, o el bloqueo se limita al registro del defecto. En la práctica peruana, la excepción se autoriza de manera verbal y no queda constancia de ella.
 
-**Tácticas:**
-
-- Centralizar las inspecciones realizadas.
-- Mantener un registro de los problemas detectados.
-- Identificar las unidades que presentan riesgos.
-- Facilitar la consulta de documentos próximos a vencer.
-- Mantener información sobre las incidencias pendientes.
-- Permitir consultar el historial de las condiciones preventivas de cada vehículo.
-
-#### Estrategia 4: Diferenciación mediante el seguimiento de incidencias
-
-FleetSafe buscará proporcionar especial importancia al registro y seguimiento de problemas detectados durante las inspecciones.
+FleetSafe permitirá la excepción, pero exigirá dejar registro de quién la autoriza y por qué.
 
 **Tácticas:**
 
-- Permitir registrar una incidencia cuando se detecte un problema.
-- Permitir al supervisor revisar la incidencia.
-- Registrar la acción correctiva o mantenimiento realizado.
-- Registrar la solución aplicada.
-- Permitir volver a evaluar el vehículo después de solucionar el problema.
-- Mantener un historial de las incidencias asociadas a cada vehículo.
+- Determinar automáticamente la condición del vehículo como habilitado, observado o no habilitado a partir de las reglas configuradas por la empresa.
+- Permitir que un supervisor levante un bloqueo únicamente registrando responsable y justificación.
+- Incorporar las excepciones autorizadas al historial y a los reportes de auditoría.
+- Presentar al supervisor el indicador de excepciones autorizadas por periodo como información de control.
 
-#### Estrategia 5: Evolución progresiva de las capacidades tecnológicas
+#### Estrategia 3: Adopción sin barreras de entrada
 
-FleetSafe priorizará inicialmente las funcionalidades principales de control preventivo y dejará capacidades tecnológicas de mayor complejidad para etapas posteriores.
+Frente a soluciones que requieren equipamiento telemático o la instalación de una aplicación, FleetSafe se ejecutará íntegramente en el navegador.
 
 **Tácticas:**
 
-- Desarrollar inicialmente la gestión de vehículos y usuarios.
-- Implementar las inspecciones preoperacionales digitales.
-- Implementar la evaluación mediante reglas.
-- Implementar la clasificación de vehículos según su condición.
-- Implementar el registro y seguimiento de incidencias.
-- Evaluar posteriormente la integración con sistemas de mantenimiento.
-- Considerar posteriormente la integración con GPS, IoT o sistemas de telemática cuando las necesidades de los usuarios lo justifiquen.
-- Incorporar funcionalidades avanzadas de análisis de información de manera progresiva.
+- Desarrollar la Web Application con diseño responsive, apta para su uso desde el navegador de un teléfono móvil.
+- No requerir hardware, instalación ni inversión inicial.
+- Diseñar la puesta en marcha de modo que una empresa pueda registrar su flota y comenzar a inspeccionar el mismo día.
+- Ofrecer un periodo de prueba antes de la contratación.
+
+#### Estrategia 4: Experiencia mínima para el conductor
+
+El conductor es el usuario que ejecuta la inspección y, a la vez, el que menos incentivos tiene para adoptarla. Si el proceso digital resulta más lento que el formato físico, el equipo prevé que se producirá un retorno al papel.
+
+**Tácticas:**
+
+- Reducir al mínimo la cantidad de pasos necesarios para completar una inspección.
+- Presentar al conductor únicamente el vehículo que tiene asignado.
+- Solicitar observación y evidencia únicamente cuando el resultado del elemento lo requiera.
+- Validar el tiempo de ejecución con conductores reales durante las entrevistas de validación.
+
+#### Estrategia 5: Localización y acompañamiento local
+
+Las plataformas analizadas ofrecen traducción automática o traducción parcial, y ninguna ofrece acompañamiento de implementación en español.
+
+**Tácticas:**
+
+- Adoptar el español latinoamericano y el inglés como idiomas de la solución, con terminología propia del dominio local.
+- Emplear la terminología del Ubiquitous Language definido en la sección 2.5 en toda la interfaz.
+- Ofrecer acompañamiento en la configuración inicial del catálogo de inspección y de las reglas de evaluación.
+- Incorporar progresivamente capacidades tecnológicas de mayor complejidad, como la integración con mantenimiento, GPS o telemática, cuando las necesidades de los usuarios lo justifiquen.
 
 ---
 <a id="22-entrevistas"></a>
@@ -1766,200 +1754,590 @@ Las relaciones entre las clases reflejan la estructura del dominio de FleetSafe,
 <a id="48-database-design"></a>
 ## 4.8. Database Design.
 
+En esta sección se presenta el diseño de la base de datos que permitirá la persistencia de la información de FleetSafe. El diseño se elabora **por cada bounded context** identificado en la sección 4.6, de modo que cada contexto define y es responsable de sus propias tablas.
+
+La base de datos seleccionada es **PostgreSQL**, por su soporte nativo del tipo `UUID`, de las restricciones de integridad referencial y de los tipos temporales utilizados en el modelo. El acceso a datos se realiza mediante **Spring Data JPA**, conforme a la tecnología establecida para los Web Services.
+
+**Convenciones aplicadas al modelo**
+
+| Convención | Descripción |
+|:-----------|:------------|
+| Nomenclatura | Nombres de tablas y columnas en inglés, en minúsculas y con guion bajo. Los nombres de las tablas provienen del Ubiquitous Language definido en la sección 2.5. |
+| Identificadores | Todas las tablas utilizan `UUID` como clave primaria, generado por la aplicación. |
+| Auditoría | Las tablas que representan entidades con ciclo de vida incluyen `created_at` y `updated_at`. |
+| Enumeraciones | Los valores de estado se almacenan como `VARCHAR` y se documentan como enumeraciones, en correspondencia con los `enum` del diagrama de clases de la sección 4.7. |
+| Referencias internas | Las relaciones entre tablas de un mismo bounded context se implementan con **clave foránea (FK)**. |
+| Referencias entre contextos | Las relaciones que cruzan la frontera de un bounded context se implementan como **columna de identificador, sin clave foránea**, y se identifican en los diagramas con la anotación `id-ref`. |
+
+**Sobre las referencias entre bounded contexts**
+
+En Domain-Driven Design, cada bounded context es responsable de la consistencia de su propio modelo. Establecer claves foráneas entre contextos acoplaría sus esquemas e impediría que evolucionen de forma independiente. Por ello, cuando una tabla necesita referirse a un objeto que pertenece a otro contexto —por ejemplo, cuando una inspección se refiere a un vehículo— se almacena únicamente su identificador, y la validación de su existencia es responsabilidad de la capa de aplicación.
+
 <a id="481-database-diagrams"></a>
 ### 4.8.1. Database Diagrams.
 
-El Database Diagram es una representación de la estructura de la base de datos que permitirá la persistencia de la información de FleetSafe. A continuación se presenta el diagrama de base de datos consolidado, que integra las tablas de todos los bounded contexts identificados.
+A continuación se presentan dos vistas complementarias del diseño de la base de datos. En primer lugar, el **modelo consolidado**, que muestra la totalidad del esquema tal como se persiste en la instancia de PostgreSQL. A continuación, un **diagrama por cada uno de los seis bounded contexts** identificados en la sección 4.6, con la explicación de las tablas que lo componen y de las decisiones de diseño adoptadas.
 
-```plantuml
-@startuml
-title Database Diagram - FleetSafe
+| Bounded Context | Tipo | Tablas |
+|:----------------|:-----|:-------|
+| Identity and Access | Genérico | `users` |
+| Fleet Management | Soporte | `companies`, `fleets`, `vehicles`, `drivers`, `vehicle_assignments` |
+| Vehicle Documentation | Soporte | `document_types`, `vehicle_documents` |
+| Pre-Operational Inspection | Core | `inspection_items`, `inspections`, `inspection_results`, `observations`, `evidences` |
+| Evaluation and Authorization | Core | `evaluation_rules`, `evaluations`, `evaluation_details`, `operational_authorizations` |
+| Incident Management | Soporte | `incident_types`, `incidents`, `corrective_actions`, `repairs`, `incident_follow_ups` |
 
-entity "companies" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    * ruc : VARCHAR(20) <<UNIQUE>>
-    address : VARCHAR(200)
-    phone : VARCHAR(20)
-    email : VARCHAR(100)
-    * created_at : TIMESTAMP
-}
+---
 
-entity "users" {
-    * id : UUID <<PK>>
-    --
-    * company_id : UUID <<FK>>
-    * email : VARCHAR(100) <<UNIQUE>>
-    * password : VARCHAR(255)
-    * first_name : VARCHAR(50)
-    * last_name : VARCHAR(50)
-    * role : VARCHAR(20)
-    * is_active : BOOLEAN
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
+#### Database Diagram: modelo consolidado
 
-entity "fleets" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    * company_id : UUID <<FK>>
-    * created_at : TIMESTAMP
-}
+La solución se despliega como una aplicación única que persiste sobre una **sola instancia de PostgreSQL**. Por ello, además de los diagramas por bounded context, se presenta el modelo consolidado con la totalidad de las tablas y de las relaciones que existen efectivamente en el esquema.
 
-entity "vehicles" {
-    * id : UUID <<PK>>
-    --
-    * plate : VARCHAR(20) <<UNIQUE>>
-    * brand : VARCHAR(50)
-    * model : VARCHAR(50)
-    * year : INTEGER
-    * type : VARCHAR(50)
-    capacity : DECIMAL(10,2)
-    * status : VARCHAR(20)
-    * fleet_id : UUID <<FK>>
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
+Ambas vistas son complementarias y responden a preguntas distintas: el modelo consolidado muestra **cómo se persiste la información**; los diagramas por bounded context muestran **qué contexto es responsable de cada tabla** y dónde se encuentran las fronteras del modelo de dominio.
 
-entity "inspections" {
-    * id : UUID <<PK>>
-    --
-    * vehicle_id : UUID <<FK>>
-    * driver_id : UUID <<FK>>
-    * status : VARCHAR(20)
-    * started_at : TIMESTAMP
-    completed_at : TIMESTAMP
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
+En el diagrama, la **línea continua** representa una relación con clave foránea dentro de un mismo bounded context, y la **línea discontinua**, una referencia por identificador que cruza la frontera de un contexto.
 
-entity "inspection_items" {
-    * id : UUID <<PK>>
-    --
-    * inspection_id : UUID <<FK>>
-    * item_id : UUID <<FK>>
-    * result : VARCHAR(20)
-    observation : TEXT
-    evidence_url : VARCHAR(500)
-    * created_at : TIMESTAMP
-}
+```mermaid
+erDiagram
+    companies ||--o{ fleets : ""
+    fleets ||--o{ vehicles : ""
+    vehicles ||--o{ vehicle_assignments : ""
+    drivers ||--o{ vehicle_assignments : ""
+    document_types ||--o{ vehicle_documents : ""
+    inspections ||--o{ inspection_results : ""
+    inspection_items ||--o{ inspection_results : ""
+    inspection_results ||--o{ observations : ""
+    observations ||--o{ evidences : ""
+    evaluations ||--o{ evaluation_details : ""
+    evaluation_rules ||--o{ evaluation_details : ""
+    evaluations ||--|| operational_authorizations : ""
+    incident_types ||--o{ incidents : ""
+    incidents ||--o{ corrective_actions : ""
+    incidents ||--o{ repairs : ""
+    incidents ||--o{ incident_follow_ups : ""
 
-entity "inspection_item_catalog" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    description : TEXT
-    * category : VARCHAR(50)
-    * is_safety_component : BOOLEAN
-    * is_active : BOOLEAN
-}
+    companies ||..o{ users : ""
+    users ||..o| drivers : ""
+    vehicles ||..o{ vehicle_documents : ""
+    vehicles ||..o{ inspections : ""
+    drivers ||..o{ inspections : ""
+    users ||..o{ observations : ""
+    inspection_items ||..o{ evaluation_rules : ""
+    inspections ||..|| evaluations : ""
+    users ||..o{ evaluations : ""
+    inspection_results ||..o{ evaluation_details : ""
+    vehicles ||..o{ operational_authorizations : ""
+    users ||..o{ operational_authorizations : ""
+    vehicles ||..o{ incidents : ""
+    inspections ||..o{ incidents : ""
+    users ||..o{ incidents : ""
+    users ||..o{ corrective_actions : ""
+    users ||..o{ incident_follow_ups : ""
 
-entity "evaluations" {
-    * id : UUID <<PK>>
-    --
-    * inspection_id : UUID <<FK>>
-    * vehicle_id : UUID <<FK>>
-    * status : VARCHAR(20)
-    * evaluated_at : TIMESTAMP
-    * evaluated_by : UUID <<FK>>
-    * created_at : TIMESTAMP
-}
-
-entity "evaluation_details" {
-    * id : UUID <<PK>>
-    --
-    * evaluation_id : UUID <<FK>>
-    * inspection_item_id : UUID <<FK>>
-    * rule_id : UUID <<FK>>
-    * result : VARCHAR(50)
-    * impact : VARCHAR(20)
-}
-
-entity "evaluation_rules" {
-    * id : UUID <<PK>>
-    --
-    * name : VARCHAR(100)
-    description : TEXT
-    * condition : TEXT
-    * impact : VARCHAR(20)
-    * is_active : BOOLEAN
-}
-
-entity "incidents" {
-    * id : UUID <<PK>>
-    --
-    * vehicle_id : UUID <<FK>>
-    * inspection_id : UUID <<FK>>
-    * reported_by : UUID <<FK>>
-    * type : VARCHAR(30)
-    * description : TEXT
-    * status : VARCHAR(20)
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
-
-entity "corrective_actions" {
-    * id : UUID <<PK>>
-    --
-    * incident_id : UUID <<FK>>
-    * description : TEXT
-    * performed_by : UUID <<FK>>
-    * performed_at : TIMESTAMP
-    evidence_url : VARCHAR(500)
-}
-
-entity "vehicle_documents" {
-    * id : UUID <<PK>>
-    --
-    * vehicle_id : UUID <<FK>>
-    * type : VARCHAR(30)
-    * number : VARCHAR(50)
-    * issue_date : DATE
-    * expiration_date : DATE
-    * status : VARCHAR(20)
-    file_url : VARCHAR(500)
-    * created_at : TIMESTAMP
-    * updated_at : TIMESTAMP
-}
-
-companies ||--o{ users
-companies ||--o{ fleets
-fleets ||--o{ vehicles
-vehicles ||--o{ inspections
-vehicles ||--o{ incidents
-vehicles ||--o{ vehicle_documents
-users ||--o{ inspections
-inspections ||--o{ inspection_items
-inspection_items }o--|| inspection_item_catalog
-inspections ||--o| evaluations
-evaluations ||--o{ evaluation_details
-evaluation_details }o--|| evaluation_rules
-incidents ||--o{ corrective_actions
-
-@enduml
+    users {
+        uuid id PK
+        uuid company_id
+        varchar role
+    }
+    companies {
+        uuid id PK
+        varchar tax_id UK
+    }
+    fleets {
+        uuid id PK
+        uuid company_id FK
+    }
+    vehicles {
+        uuid id PK
+        uuid fleet_id FK
+        varchar plate UK
+        varchar current_status
+    }
+    drivers {
+        uuid id PK
+        uuid user_id UK
+        varchar license_number UK
+    }
+    vehicle_assignments {
+        uuid id PK
+        uuid vehicle_id FK
+        uuid driver_id FK
+        boolean is_active
+    }
+    document_types {
+        uuid id PK
+        varchar code UK
+        boolean is_required
+    }
+    vehicle_documents {
+        uuid id PK
+        uuid vehicle_id
+        uuid document_type_id FK
+        date expiration_date
+        varchar status
+    }
+    inspection_items {
+        uuid id PK
+        varchar code UK
+        varchar category
+        boolean requires_evidence
+    }
+    inspections {
+        uuid id PK
+        uuid vehicle_id
+        uuid driver_id
+        varchar status
+    }
+    inspection_results {
+        uuid id PK
+        uuid inspection_id FK
+        uuid inspection_item_id FK
+        varchar result
+    }
+    observations {
+        uuid id PK
+        uuid inspection_result_id FK
+        uuid created_by
+    }
+    evidences {
+        uuid id PK
+        uuid observation_id FK
+        varchar file_url
+    }
+    evaluation_rules {
+        uuid id PK
+        uuid inspection_item_id
+        varchar found_result
+        varchar resulting_impact
+    }
+    evaluations {
+        uuid id PK
+        uuid inspection_id UK
+        uuid evaluated_by
+    }
+    evaluation_details {
+        uuid id PK
+        uuid evaluation_id FK
+        uuid inspection_result_id
+        uuid evaluation_rule_id FK
+        varchar applied_impact
+    }
+    operational_authorizations {
+        uuid id PK
+        uuid evaluation_id FK
+        uuid vehicle_id
+        varchar status
+        boolean is_override
+        uuid authorized_by
+    }
+    incident_types {
+        uuid id PK
+        varchar code UK
+    }
+    incidents {
+        uuid id PK
+        uuid vehicle_id
+        uuid incident_type_id FK
+        uuid inspection_id
+        varchar origin
+        varchar status
+        uuid reported_by
+    }
+    corrective_actions {
+        uuid id PK
+        uuid incident_id FK
+        uuid performed_by
+    }
+    repairs {
+        uuid id PK
+        uuid incident_id FK
+        varchar status
+    }
+    incident_follow_ups {
+        uuid id PK
+        uuid incident_id FK
+        uuid created_by
+    }
 ```
 
-**Explicación del diagrama:**
+El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los apartados siguientes.
 
-El diagrama de base de datos consolidado de FleetSafe presenta las tablas, columnas, constraints y relaciones que permitirán la persistencia de la información de la plataforma. Se han definido las siguientes tablas:
+Todas las columnas con el sufijo `_by` —`created_by`, `reported_by`, `performed_by`, `evaluated_by` y `authorized_by`— referencian la tabla `users` del contexto Identity and Access, y registran la trazabilidad de quién realiza cada acción.
 
-- **companies:** almacena la información de las empresas de transporte de carga.
-- **users:** almacena los usuarios de la plataforma y su rol asignado.
-- **fleets:** almacena las flotas de vehículos de cada empresa.
-- **vehicles:** almacena los vehículos que conforman las flotas.
-- **inspections:** almacena las inspecciones preoperacionales realizadas.
-- **inspection_items:** almacena los resultados de cada elemento inspeccionado.
-- **inspection_item_catalog:** almacena el catálogo de elementos que pueden ser inspeccionados.
-- **evaluations:** almacena las evaluaciones realizadas sobre las inspecciones.
-- **evaluation_details:** almacena el detalle de cada evaluación por elemento.
-- **evaluation_rules:** almacena las reglas de evaluación configuradas.
-- **incidents:** almacena las incidencias detectadas en los vehículos.
-- **corrective_actions:** almacena las acciones correctivas aplicadas a las incidencias.
-- **vehicle_documents:** almacena los documentos asociados a los vehículos.
+---
 
-Se han definido claves primarias (PK), claves foráneas (FK), restricciones de unicidad (UNIQUE) y relaciones uno a muchos entre las entidades. La base de datos seleccionada es PostgreSQL, que soporta el tipo de datos UUID y las restricciones definidas.
+#### Database Diagram: Identity and Access
+
+```mermaid
+erDiagram
+    users {
+        uuid id PK
+        uuid company_id "id-ref, Fleet Management"
+        varchar email UK
+        varchar password_hash
+        varchar first_name
+        varchar last_name
+        varchar role "ADMINISTRATOR, FLEET_SUPERVISOR, DRIVER"
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+```
+
+Este contexto es responsable de la identidad de las personas que acceden a la plataforma y del rol con el que lo hacen.
+
+- **users:** almacena las credenciales y los datos de identificación de cada usuario, junto con el rol asignado. El rol se modela como enumeración con tres valores —`ADMINISTRATOR`, `FLEET_SUPERVISOR` y `DRIVER`— en correspondencia con los tres roles descritos en la sección 1.1.1. La contraseña se almacena cifrada en la columna `password_hash`.
+
+La columna `company_id` referencia a la empresa a la que pertenece el usuario, que es un objeto del contexto **Fleet Management**, por lo que se implementa como referencia por identificador.
+
+---
+
+#### Database Diagram: Fleet Management
+
+```mermaid
+erDiagram
+    companies ||--o{ fleets : "organiza"
+    fleets ||--o{ vehicles : "agrupa"
+    vehicles ||--o{ vehicle_assignments : "es asignado en"
+    drivers ||--o{ vehicle_assignments : "recibe"
+
+    companies {
+        uuid id PK
+        varchar name
+        varchar tax_id UK
+        varchar address
+        varchar phone
+        varchar email
+        timestamp created_at
+        timestamp updated_at
+    }
+    fleets {
+        uuid id PK
+        uuid company_id FK
+        varchar name
+        text description
+        timestamp created_at
+        timestamp updated_at
+    }
+    vehicles {
+        uuid id PK
+        uuid fleet_id FK
+        varchar plate UK
+        varchar brand
+        varchar model
+        integer year
+        varchar type
+        decimal capacity
+        varchar current_status "ENABLED, OBSERVED, NOT_ENABLED"
+        timestamp created_at
+        timestamp updated_at
+    }
+    drivers {
+        uuid id PK
+        uuid user_id UK "id-ref, Identity and Access"
+        varchar license_number UK
+        date license_expiration_date
+        timestamp created_at
+        timestamp updated_at
+    }
+    vehicle_assignments {
+        uuid id PK
+        uuid vehicle_id FK
+        uuid driver_id FK
+        date assigned_from
+        date assigned_to
+        boolean is_active
+        timestamp created_at
+    }
+```
+
+Este contexto es responsable de los activos sobre los que opera la plataforma: las empresas, sus flotas, los vehículos que las componen y los conductores que los operan.
+
+- **companies:** almacena la información de las empresas de transporte de carga. La columna `tax_id` registra el identificador tributario de la empresa y es única.
+- **fleets:** almacena las flotas en las que cada empresa organiza sus vehículos.
+- **vehicles:** almacena los vehículos que conforman cada flota, con sus características y su condición operativa actual.
+- **drivers:** almacena los datos propios del conductor que no corresponden a su identidad como usuario, en particular el número y la fecha de vencimiento de su licencia de conducir.
+- **vehicle_assignments:** registra qué vehículo ha sido asignado a qué conductor y durante qué periodo. Esta tabla es la que permite determinar cuál es el vehículo asignado a un conductor en el momento de iniciar una inspección preoperacional.
+
+**Decisión de diseño: `current_status` es un valor derivado.** La columna `vehicles.current_status` refleja la condición operativa vigente del vehículo y existe para permitir consultar el estado de una flota completa sin recorrer su historial. Sin embargo, **no constituye la fuente de verdad**: esta es la última habilitación registrada en la tabla `operational_authorizations` del contexto Evaluation and Authorization. El valor se actualiza únicamente como consecuencia de una evaluación, y nunca mediante edición directa, ya que de lo contrario el control preventivo perdería su validez.
+
+---
+
+#### Database Diagram: Vehicle Documentation
+
+```mermaid
+erDiagram
+    document_types ||--o{ vehicle_documents : "clasifica"
+
+    document_types {
+        uuid id PK
+        varchar code UK
+        varchar name
+        text description
+        boolean is_required
+        boolean is_active
+    }
+    vehicle_documents {
+        uuid id PK
+        uuid vehicle_id "id-ref, Fleet Management"
+        uuid document_type_id FK
+        varchar number
+        date issue_date
+        date expiration_date
+        varchar status "VALID, EXPIRING, EXPIRED"
+        varchar file_url
+        timestamp created_at
+        timestamp updated_at
+    }
+```
+
+Este contexto es responsable de controlar la vigencia de los documentos asociados a cada vehículo.
+
+- **document_types:** catálogo de los tipos de documento que un vehículo puede requerir. La columna `is_required` indica si el documento es obligatorio para que el vehículo pueda operar.
+- **vehicle_documents:** almacena cada documento asociado a un vehículo, con su número, sus fechas de emisión y de vencimiento, y el archivo digitalizado correspondiente.
+
+**Decisión de diseño: el estado del documento se deriva de su fecha de vencimiento.** La columna `status` toma el valor `VALID`, `EXPIRING` o `EXPIRED` a partir de la comparación entre `expiration_date` y la fecha actual, y se recalcula de forma programada. Se almacena en lugar de calcularse en cada consulta porque el listado de documentos próximos a vencer es una de las consultas más frecuentes del supervisor de flota, descrita en la sección 1.2.1.
+
+---
+
+#### Database Diagram: Pre-Operational Inspection
+
+```mermaid
+erDiagram
+    inspections ||--o{ inspection_results : "contiene"
+    inspection_items ||--o{ inspection_results : "es verificado en"
+    inspection_results ||--o{ observations : "puede registrar"
+    observations ||--o{ evidences : "es respaldada por"
+
+    inspection_items {
+        uuid id PK
+        varchar code UK
+        varchar name
+        text description
+        varchar category "COMPONENT, SAFETY_COMPONENT, DOCUMENTATION"
+        boolean is_safety_component
+        boolean requires_evidence
+        integer display_order
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    inspections {
+        uuid id PK
+        uuid vehicle_id "id-ref, Fleet Management"
+        uuid driver_id "id-ref, Fleet Management"
+        varchar status "IN_PROGRESS, COMPLETED"
+        integer odometer
+        timestamp started_at
+        timestamp completed_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    inspection_results {
+        uuid id PK
+        uuid inspection_id FK
+        uuid inspection_item_id FK
+        varchar item_name "copia al momento de inspeccionar"
+        varchar item_category "copia al momento de inspeccionar"
+        varchar result "OK, OBSERVED, FAIL"
+        timestamp created_at
+    }
+    observations {
+        uuid id PK
+        uuid inspection_result_id FK
+        text description
+        uuid created_by "id-ref, Identity and Access"
+        timestamp created_at
+    }
+    evidences {
+        uuid id PK
+        uuid observation_id FK
+        varchar file_url
+        varchar media_type
+        timestamp uploaded_at
+    }
+```
+
+Este es el contexto núcleo de la solución: registra la inspección preoperacional que el conductor realiza sobre el vehículo asignado antes de iniciar una operación.
+
+- **inspection_items:** catálogo de los elementos que deben ser revisados durante una inspección. Corresponde al término *Inspection Item* del Ubiquitous Language. La columna `category` distingue si el elemento es un componente del vehículo, un elemento de seguridad o un aspecto de documentación, y `display_order` determina el orden en que se presentan al conductor.
+- **inspections:** almacena cada inspección realizada, indicando el vehículo inspeccionado, el conductor que la realizó, el odómetro registrado y las marcas de tiempo de inicio y término.
+- **inspection_results:** almacena el resultado obtenido para cada elemento revisado durante una inspección. Corresponde al término *Inspection Result* del Ubiquitous Language.
+- **observations:** almacena las descripciones que el conductor o el supervisor registran sobre una condición detectada. Corresponde al término *Observation*.
+- **evidences:** almacena los registros que respaldan una condición detectada, como una fotografía. Corresponde al término *Evidence*.
+
+**Decisión de diseño: la evidencia depende de la observación.** Una evidencia siempre respalda una condición concreta detectada durante la inspección. Por ello la cadena de dependencia es `inspection_result → observation → evidence`, y no una relación directa entre la inspección y sus archivos. Esta estructura permite además registrar varias observaciones sobre un mismo elemento y varias evidencias sobre una misma observación.
+
+**Decisión de diseño: el resultado conserva una copia del elemento inspeccionado.** Las columnas `item_name` e `item_category` de `inspection_results` almacenan el nombre y la categoría que el elemento del catálogo tenía **en el momento de realizarse la inspección**. Si posteriormente el administrador modifica o desactiva ese elemento, las inspecciones anteriores continúan reflejando fielmente lo que se revisó. Dado que el valor de FleetSafe reside en disponer de un historial verificable de la condición de los vehículos, ese historial no debe poder alterarse de forma retroactiva.
+
+---
+
+#### Database Diagram: Evaluation and Authorization
+
+```mermaid
+erDiagram
+    evaluations ||--o{ evaluation_details : "se descompone en"
+    evaluation_rules ||--o{ evaluation_details : "es aplicada en"
+    evaluations ||--|| operational_authorizations : "produce"
+
+    evaluation_rules {
+        uuid id PK
+        uuid inspection_item_id "id-ref, Pre-Operational Inspection"
+        varchar name
+        varchar found_result "OK, OBSERVED, FAIL"
+        varchar resulting_impact "NONE, OBSERVED, BLOCKING"
+        text description
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    evaluations {
+        uuid id PK
+        uuid inspection_id "id-ref, UNIQUE, Pre-Operational Inspection"
+        timestamp evaluated_at
+        uuid evaluated_by "id-ref, Identity and Access, nullable"
+        timestamp created_at
+    }
+    evaluation_details {
+        uuid id PK
+        uuid evaluation_id FK
+        uuid inspection_result_id "id-ref, Pre-Operational Inspection"
+        uuid evaluation_rule_id FK
+        varchar applied_impact "NONE, OBSERVED, BLOCKING"
+    }
+    operational_authorizations {
+        uuid id PK
+        uuid evaluation_id FK "UNIQUE"
+        uuid vehicle_id "id-ref, Fleet Management"
+        varchar status "ENABLED, OBSERVED, NOT_ENABLED"
+        boolean is_override "levanta un bloqueo previo"
+        text override_reason "obligatorio si is_override"
+        uuid authorized_by "id-ref, Identity and Access, obligatorio si is_override"
+        timestamp authorized_at
+        timestamp valid_until
+        timestamp created_at
+    }
+```
+
+Este es el segundo contexto núcleo: aplica las reglas establecidas por la empresa sobre los resultados de una inspección y determina si el vehículo se encuentra habilitado para operar.
+
+- **evaluation_rules:** almacena las reglas que la empresa establece para determinar cómo una condición detectada afecta al estado del vehículo. Corresponde al término *Evaluation Rule* del Ubiquitous Language.
+- **evaluations:** registra la evaluación realizada sobre una inspección. La columna `evaluated_by` admite valor nulo, porque la evaluación se ejecuta de forma automática al completarse la inspección y solo se registra un usuario cuando media una revisión manual del supervisor.
+- **evaluation_details:** registra qué regla se aplicó a qué resultado de inspección y con qué impacto, dejando constancia del razonamiento seguido por el sistema.
+- **operational_authorizations:** registra la habilitación operativa resultante de la evaluación. Corresponde al término *Operational Authorization* del Ubiquitous Language, y es la fuente de verdad de la condición operativa del vehículo. Registra además si la habilitación corresponde al levantamiento de un bloqueo previo, con su justificación y su responsable.
+
+**Decisión de diseño: la regla se define sobre un elemento del catálogo.** Cada fila de `evaluation_rules` expresa una regla legible de la forma *"si el elemento X presenta el resultado Y, el impacto sobre el vehículo es Z"*. La columna `inspection_item_id` es la que permite al sistema determinar qué reglas aplicar a cada resultado de una inspección. Se ha optado por esta estructura, y no por almacenar la condición como texto libre, porque una condición estructurada puede evaluarse de forma determinista y auditarse posteriormente.
+
+**Decisión de diseño: la excepción se permite, pero deja rastro.** En la operación real siempre se presentan situaciones en las que un vehículo debe salir pese a encontrarse observado o no habilitado. Si el sistema no admitiera esa excepción, los usuarios lo evitarían y regresarían al procedimiento en papel; si la admitiera sin dejar constancia, el historial perdería valor como evidencia. Por ello, el levantamiento de un bloqueo se registra como una nueva habilitación con `is_override` en verdadero, y en ese caso `override_reason` y `authorized_by` son obligatorios. Esta decisión sustenta la Estrategia 2 planteada en la sección 2.1.2 y permite además reportar el número de excepciones autorizadas por periodo y por responsable.
+
+**Decisión de diseño: la evaluación y la habilitación son entidades distintas.** La evaluación es el proceso de aplicar las reglas; la habilitación es la decisión resultante, con su vigencia. Separarlas permite conservar el detalle del razonamiento en `evaluation_details` y, a la vez, consultar de forma directa cuál es la condición vigente de un vehículo. El estado final se determina por el impacto más restrictivo entre los detalles de la evaluación: un solo impacto `BLOCKING` produce el estado `NOT_ENABLED`.
+
+---
+
+#### Database Diagram: Incident Management
+
+```mermaid
+erDiagram
+    incident_types ||--o{ incidents : "clasifica"
+    incidents ||--o{ corrective_actions : "es atendida mediante"
+    incidents ||--o{ repairs : "puede requerir"
+    incidents ||--o{ incident_follow_ups : "es seguida mediante"
+
+    incident_types {
+        uuid id PK
+        varchar code UK
+        varchar name
+        text description
+        boolean is_active
+    }
+    incidents {
+        uuid id PK
+        uuid vehicle_id "id-ref, Fleet Management"
+        uuid incident_type_id FK
+        uuid inspection_id "id-ref, nullable, Pre-Operational Inspection"
+        varchar origin "INSPECTION, OPERATION"
+        text description
+        varchar severity "LOW, MEDIUM, HIGH, CRITICAL"
+        varchar status "OPEN, IN_PROGRESS, RESOLVED, CLOSED"
+        uuid reported_by "id-ref, Identity and Access"
+        timestamp reported_at
+        varchar resolution_type
+        timestamp resolved_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    corrective_actions {
+        uuid id PK
+        uuid incident_id FK
+        text description
+        uuid performed_by "id-ref, Identity and Access"
+        timestamp performed_at
+        varchar evidence_url
+    }
+    repairs {
+        uuid id PK
+        uuid incident_id FK
+        varchar workshop
+        decimal cost
+        date started_at
+        date finished_at
+        varchar status "SCHEDULED, IN_PROGRESS, COMPLETED"
+    }
+    incident_follow_ups {
+        uuid id PK
+        uuid incident_id FK
+        text note
+        uuid created_by "id-ref, Identity and Access"
+        timestamp created_at
+    }
+```
+
+Este contexto es responsable del registro, seguimiento y resolución de las incidencias detectadas en los vehículos.
+
+- **incident_types:** catálogo de clasificación de las incidencias, correspondiente al término *Incident Type*.
+- **incidents:** almacena cada incidencia detectada, su severidad, su estado y la forma en que fue resuelta.
+- **corrective_actions:** almacena las acciones realizadas para solucionar o reducir el efecto de la condición detectada. Corresponde al término *Corrective Action*.
+- **repairs:** almacena el trabajo realizado sobre el vehículo para corregir la condición, con el taller responsable, el costo y las fechas de ejecución. Corresponde al término *Repair*.
+- **incident_follow_ups:** almacena el registro cronológico de las revisiones que el supervisor realiza sobre una incidencia. Corresponde al término *Incident Follow-up*.
+
+**Decisión de diseño: una incidencia no depende necesariamente de una inspección.** El Ubiquitous Language define la incidencia como un problema detectado en un vehículo "durante una inspección **o durante su operación**". Por ello la columna `inspection_id` admite valor nulo y se acompaña de la columna `origin`, que distingue explícitamente ambos casos. Si la referencia a la inspección fuera obligatoria, las incidencias surgidas durante la operación no podrían registrarse.
+
+---
+
+#### Resumen de referencias entre bounded contexts
+
+El siguiente cuadro concentra las referencias que cruzan la frontera de un bounded context. Todas se implementan como columna de identificador, sin clave foránea, según la convención establecida al inicio de esta sección.
+
+| Tabla origen | Columna | Bounded context destino | Objeto referenciado |
+|:-------------|:--------|:------------------------|:--------------------|
+| `users` | `company_id` | Fleet Management | `companies` |
+| `drivers` | `user_id` | Identity and Access | `users` |
+| `vehicle_documents` | `vehicle_id` | Fleet Management | `vehicles` |
+| `inspections` | `vehicle_id` | Fleet Management | `vehicles` |
+| `inspections` | `driver_id` | Fleet Management | `drivers` |
+| `observations` | `created_by` | Identity and Access | `users` |
+| `evaluation_rules` | `inspection_item_id` | Pre-Operational Inspection | `inspection_items` |
+| `evaluations` | `inspection_id` | Pre-Operational Inspection | `inspections` |
+| `evaluations` | `evaluated_by` | Identity and Access | `users` |
+| `evaluation_details` | `inspection_result_id` | Pre-Operational Inspection | `inspection_results` |
+| `operational_authorizations` | `vehicle_id` | Fleet Management | `vehicles` |
+| `incidents` | `vehicle_id` | Fleet Management | `vehicles` |
+| `incidents` | `inspection_id` | Pre-Operational Inspection | `inspections` |
+| `incidents` | `reported_by` | Identity and Access | `users` |
+| `corrective_actions` | `performed_by` | Identity and Access | `users` |
+| `incident_follow_ups` | `created_by` | Identity and Access | `users` |
+
+#### Recorrido del flujo principal sobre el modelo
+
+El flujo núcleo de FleetSafe —inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento— se recorre sobre el modelo de la siguiente manera:
+
+1. El conductor inicia una inspección sobre el vehículo que tiene asignado, determinado por `vehicle_assignments`. Se crea una fila en `inspections`.
+2. Por cada elemento del catálogo `inspection_items` se registra una fila en `inspection_results`, con el resultado obtenido y una copia del nombre y la categoría del elemento.
+3. Cuando el resultado no es `OK`, el conductor registra una fila en `observations` y, si corresponde, una o más filas en `evidences`.
+4. Al completarse la inspección, el sistema crea una fila en `evaluations` y aplica las reglas de `evaluation_rules` correspondientes a cada elemento, dejando constancia en `evaluation_details`.
+5. El impacto más restrictivo determina el estado, que se registra en `operational_authorizations` y se refleja en `vehicles.current_status`.
+6. Las condiciones que requieren atención generan una fila en `incidents`, con `origin` igual a `INSPECTION`, que el supervisor atiende mediante `corrective_actions`, `repairs` e `incident_follow_ups` hasta su resolución.
+7. Si la operación exige que un vehículo no habilitado salga igualmente, el supervisor registra una nueva fila en `operational_authorizations` con `is_override` en verdadero, indicando la justificación y quedando registrado como responsable de la decisión.
 
 ---
 
@@ -2049,6 +2427,38 @@ Se han definido claves primarias (PK), claves foráneas (FK), restricciones de u
 
 <a id="bibliografia"></a>
 # Bibliografía
+
+Las referencias se presentan en formato APA. Esta sección se ampliará en cada entrega conforme se incorporen nuevas fuentes al informe.
+
+**Competidores y análisis del mercado**
+
+Fleetio. (s. f.). *Fleetio pricing*. Recuperado el 11 de septiembre de 2026, de https://www.fleetio.com/pricing
+
+Fleetio. (s. f.). *Inspections – Item failures*. Fleetio Help Center. Recuperado el 11 de septiembre de 2026, de https://help.fleetio.com/inspections/inspections-item-failures
+
+Fleetio. (s. f.). *Inspections – Workflows*. Fleetio Help Center. Recuperado el 11 de septiembre de 2026, de https://help.fleetio.com/inspections/inspections-workflows
+
+Fleetio. (s. f.). *Fleetio Go in Spanish for administrators*. Fleetio Help Center. Recuperado el 11 de septiembre de 2026, de https://help.fleetio.com/en_US/fleetio-go-for-account-owners-admins/fleetio-go-in-spanish-for-administrators
+
+Whip Around. (s. f.). *Whip Around pricing plans for fleet businesses*. Recuperado el 11 de septiembre de 2026, de https://whiparound.com/pricing/
+
+Whip Around. (s. f.). *How Whip Around’s plans work*. Whip Around Help Center. Recuperado el 11 de septiembre de 2026, de https://help.whiparound.com/en/articles/6925626-how-whip-around-s-plans-work
+
+Whip Around. (s. f.). *Multiple language settings*. Whip Around Help Center. Recuperado el 11 de septiembre de 2026, de https://help.whiparound.com/en/articles/4045037-multiple-language-settings
+
+Whip Around. (s. f.). *The 3 DVIR signatures and why the one that certifies safe operation often goes missing*. Recuperado el 11 de septiembre de 2026, de https://whiparound.com/blog/3-dvir-signatures-safe-to-operate/
+
+Vehicheck. (s. f.). *Vehicheck – Inspección preoperacional digital, alineada con el PESV*. Recuperado el 11 de septiembre de 2026, de https://vehicheck.co/
+
+Verizon Connect. (s. f.). *Fleet management software*. Recuperado el 11 de septiembre de 2026, de https://www.verizonconnect.com/
+
+Zonar Systems Perú. (s. f.). *Gestión de flotas en Perú: monitoreo GPS y control vehicular*. Recuperado el 11 de septiembre de 2026, de https://zonar.com.pe/
+
+PSTECH Perú. (s. f.). *Sistema de gestión de flotas MiX Telematics*. Recuperado el 11 de septiembre de 2026, de https://www.pstechperu.com/
+
+Prolyam. (s. f.). *ERP vehicular: la clave para optimizar la gestión de flotas*. Recuperado el 11 de septiembre de 2026, de https://prolyam.com/erp-vehicular/
+
+DataScope. (s. f.). *Digitalización del checklist preoperacional en gestión de flotas*. Recuperado el 11 de septiembre de 2026, de https://datascope.io/es/blog/digitalizacion-del-checklist-preoperacional-en-gestion-de-flotas/
 
 <hr>
 
