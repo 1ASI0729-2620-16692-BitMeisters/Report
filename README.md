@@ -954,6 +954,25 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="24-big-picture-eventstorming"></a>
 ## 2.4. Big Picture EventStorming.
 
+Big Picture Event Storming es una técnica colaborativa que nos permitirá comprender el funcionamiento global de FLEETSAFE. Se basará en visualizar eventos clave del dominio(domain events), fomentar el diálogo entre roles (actores) diversos y detectar oportunidades de mejora. El proceso se divide en tres fases principales:
+
+**Primera Etapa: OPEN**
+Aqui colocamos todos los eventos de dominio que se nos ocurra
+
+<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+
+**Segunda Etapa: EXPLORE**
+Identificamos actores y pain points que luego cuestionamos, y lo más importante crear una secuencia entre los eventos de dominio.
+
+<img src="img/bigPictureEventStorming/explore1-eventstorming.png" alt="Explore EventStorming de FleetSafe - Parte 1" width="800">
+
+<img src="img/bigPictureEventStorming/explore2-eventstorming.png" alt="Explore EventStorming de FleetSafe - Parte 2" width="800">
+
+**Tercera Etapa: CLOSE**
+Identificamos problemas que hayamos encontrado, temas a investigar más a fondo y declaramos que esta fuera de nuestro alcance actual.
+
+<img src="img/bigPictureEventStorming/close-eventstorming.png" alt="Close EventStorming de FleetSafe" width="800">
+
 <a id="25-ubiquitous-language"></a>
 ## 2.5. Ubiquitous Language.
 
@@ -1251,6 +1270,53 @@ A partir del Ubiquitous Language y del proceso de Big Picture EventStorming, se 
 
 <a id="461-design-level-event-storming"></a>
 ### 4.6.1. Design-level Event Storming.
+
+Proceso del Design-Level event storming
+
+Paso 1: Partimos del Big Picture Event Storming como base.
+
+<br>**Unstructure Exploration**
+<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+
+Paso 2: Ordenamos los domain events
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming2.png" alt=" paso 2 del designlevelES" width="800">
+
+Paso 3: Se colocó dudas/posibles problemas a futuro sobre el dominio en algunas partes del flujo.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming3.png" alt=" paso 3 del designlevelES" width="800">
+
+Paso 4: Exploramos que "pivotal events" pueden identificarse.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming4.png" alt=" paso 4 del designlevelES" width="800">
+
+Paso 5: Se añadió comandos que desencadenen eventos y tambien agregamos sus actores
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming5.1.png" alt=" paso 5 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming5.2.png" alt=" paso 5 del designlevelES" width="800">
+
+Paso 6: Se equipo añadió 'policies' o reglas de negocio que hacen que se ejecuten eventos de dominio
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming6.1.png" alt=" paso 6 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming6.2.png" alt=" paso 6 del designlevelES" width="800">
+
+Paso 7: Se añadió read models, son la vista de datos o 'views' que ayudarán al usuario con la ejecución de comandos
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming7.1.png" alt=" paso 7 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming7.2.png" alt=" paso 7 del designlevelES" width="800">
+
+Paso 8: Se identifico sistemas externos, tales como el servicio de guardado de imagenes en la nube, por ahora va como "Cloud Storage"
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.0.png" alt=" paso 8 del designlevelES" width="800">
+
+Paso 9: Se agregan los aggregates
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.1.png" alt=" paso 9 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.2.png" alt=" paso 9 del designlevelES" width="800">
+
+Paso 10: Separamos por BOUNDED CONTEXT en los cuales algunos tienen un cierto tipo de relación medianto comando y domain.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming10.png" alt=" paso 10 del designlevelES" width="800">
 
 <a id="462-software-architecture-context-diagram"></a>
 ### 4.6.2. Software Architecture Context Diagram.
