@@ -1214,6 +1214,7 @@ A continuación se presenta el Product Backlog consolidado:
 <img src="img/wireframe/04-plataforma.png" width="500">
 <img src="img/wireframe/05-proceso.png" width="500">
 <img src="img/wireframe/06-perfiles.png" width="500">
+<img src="img/wireframe/07-equipo.png" width="500">
 
 
 
