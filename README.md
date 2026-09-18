@@ -252,7 +252,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 | **Código del Estudiante** | U202318309                                                                                                     |
 | **Carrera**               | Ingeniería de Software                                                                                         |
 | **Descripción**           | _Pendiente de redacción por el integrante._                                                                    |
-| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
+| **Foto**                  | <img src="img/team-members/RodrigoAguilar.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
 
