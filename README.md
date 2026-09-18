@@ -30,9 +30,19 @@
 <a id="registro-de-versiones-del-informe"></a>
 # **Registro de Versiones del Informe**
 
-| Versión | Fecha | Autor   | Descripción de modificación |
-|:--------|:------|:--------|:----------------------------|
-| AV1     |       | Gerardo | palabra                     |
+| Versión | Fecha      | Autor                              | Descripción de modificación                                                                                                                        |
+|:--------|:-----------|:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0     | 2026-09-01 | Gerardo Valentin Palacin Lazo      | Creación del informe a partir de la plantilla del curso, con la carátula, el índice y la estructura de capítulos.                                  |
+| 1.1     | 2026-09-02 | Alejandro Espino Flores            | Redacción del Capítulo I, incluyendo el Startup Profile, el Solution Profile con el análisis 5W y 2H, el Lean UX Process y los segmentos objetivo. |
+| 1.2     | 2026-09-02 | Alejandro Espino Flores            | Redacción del Capítulo II con el análisis competitivo, las estrategias frente a competidores y el diseño de entrevistas por segmento.              |
+| 1.3     | 2026-09-04 | Elizabeth Noelia Apaza Bocanegra   | Redacción del Capítulo III con las Epics, User Stories, Technical Stories y el Product Backlog priorizado.                                         |
+| 1.4     | 2026-09-07 | Rodrigo Fabrizio Aguilar Untiveros | Redacción de las secciones 4.1 Style Guidelines y 4.2 Information Architecture del Capítulo IV.                                                    |
+| 1.5     | 2026-09-08 | Juan Manuel Santos Torres          | Desarrollo de la primera versión de la landing page y sus respectivos Wireframes y Mock-ups.                                                       |
+| 1.6     | 2026-09-10 | Gerardo Valentin Palacin Lazo      | Redacción de la sección 5.1 Software Configuration Management del Capítulo V.                                                                      |
+| 1.7     | 2026-09-01 |                                    |                                                                                                                                                    |
+| 1.8     | 2026-09-01 |                                    |                                                                                                                                                    |
+| 1.9     | 2026-09-01 |                                    |                                                                                                                                                    |
+
 
 <hr>
 
@@ -225,21 +235,21 @@ FleetSafe no tiene como objetivo principal gestionar rutas, puntos de entrega o 
 
 A continuación se presenta la ficha de cada integrante del equipo, indicando su código de estudiante, la carrera que cursa y un resumen de los principales conocimientos técnicos y habilidades que aporta al equipo.
 
-| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                                  |
-| :------------------------ |:----------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20211C201                                                                                                      |
-| **Carrera**               | Ingeniería de Software                                                                                          |
-| **Descripción**            | _Pendiente de redacción por el integrante._                                                                     |
-| **Foto**                  | <img src="img/team-members/gerardo-palacin.jpeg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
+| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                          |
+|:--------------------------|:--------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U20211C201                                                                                              |
+| **Carrera**               | Ingeniería de Software                                                                                  |
+| **Descripción**           | _Pendiente de redacción por el integrante._                                                             |
+| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
 
 ---
 
-| **Integrante**            | Rodrigo Fabrizio Aguilar Untiveros                                                                                |
-|:--------------------------|:------------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U202318309                                                                                                        |
-| **Carrera**               | Ingeniería de Software                                                                                            |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                       |
-| **Foto**                  | <img src="img/team-members/angel-crispin.jpg" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
+| **Integrante**            | Rodrigo Fabrizio Aguilar Untiveros                                                                             |
+|:--------------------------|:---------------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U202318309                                                                                                     |
+| **Carrera**               | Ingeniería de Software                                                                                         |
+| **Descripción**           | _Pendiente de redacción por el integrante._                                                                    |
+| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
 
@@ -261,12 +271,12 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 
 ---
 
-| **Integrante**            | Juan Manuel Santos Torres                                                                               |
-|:--------------------------|:--------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20221a371                                                                                              |
-| **Carrera**               | Ingeniería de Software                                                                                  |
-| **Descripción**           | _Pendiente de redacción por la integrante._                                                             |
-| **Foto**                  | <img src="img/team-members/juan-santos.jpeg" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
+| **Integrante**            | Juan Manuel Santos Torres                                                                             |
+|:--------------------------|:------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U20221a371                                                                                            |
+| **Carrera**               | Ingeniería de Software                                                                                |
+| **Descripción**           | _Pendiente de redacción por la integrante._                                                           |
+| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
 
 ---
 
