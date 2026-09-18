@@ -964,6 +964,25 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="24-big-picture-eventstorming"></a>
 ## 2.4. Big Picture EventStorming.
 
+Big Picture Event Storming es una técnica colaborativa que nos permitirá comprender el funcionamiento global de FLEETSAFE. Se basará en visualizar eventos clave del dominio(domain events), fomentar el diálogo entre roles (actores) diversos y detectar oportunidades de mejora. El proceso se divide en tres fases principales:
+
+**Primera Etapa: OPEN**
+Aqui colocamos todos los eventos de dominio que se nos ocurra
+
+<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+
+**Segunda Etapa: EXPLORE**
+Identificamos actores y pain points que luego cuestionamos, y lo más importante crear una secuencia entre los eventos de dominio.
+
+<img src="img/bigPictureEventStorming/explore1-eventstorming.png" alt="Explore EventStorming de FleetSafe - Parte 1" width="800">
+
+<img src="img/bigPictureEventStorming/explore2-eventstorming.png" alt="Explore EventStorming de FleetSafe - Parte 2" width="800">
+
+**Tercera Etapa: CLOSE**
+Identificamos problemas que hayamos encontrado, temas a investigar más a fondo y declaramos que esta fuera de nuestro alcance actual.
+
+<img src="img/bigPictureEventStorming/close-eventstorming.png" alt="Close EventStorming de FleetSafe" width="800">
+
 <a id="25-ubiquitous-language"></a>
 ## 2.5. Ubiquitous Language.
 
@@ -1190,27 +1209,1229 @@ A continuación se presenta el Product Backlog consolidado:
 <a id="411-general-style-guidelines"></a>
 ### 4.1.1. General Style Guidelines.
 
+En esta sección, el equipo establece las bases visuales y comunicativas de FleetSafe con el fin de contar con un repositorio central y organizado de uso común para todos los integrantes. Esto permite mantener una presentación consistente y enfocada en los tres productos que conforman la solución: la Landing Page, la Web Application y el Backend RESTful API.
+
+Las decisiones que se presentan a continuación se derivan de tres fuentes: el **Ubiquitous Language** definido en la sección 2.5, los **segmentos objetivo** descritos en la sección 1.3 y las **estrategias competitivas** planteadas en la sección 2.1.2. En particular, la Estrategia 5 —localización y acompañamiento local— determina que toda la terminología de la interfaz debe emplear el español latinoamericano y los términos del dominio definidos por el equipo.
+
+---
+
+#### Branding
+
+FleetSafe es una plataforma de seguridad y control preventivo vehicular. Su identidad visual debe comunicar **confiabilidad, control y prevención**, y no velocidad, modernidad o innovación tecnológica por sí mismas. El usuario de FleetSafe —un supervisor de flota o un conductor de vehículo de carga— debe percibir que la plataforma es una herramienta de trabajo seria, no un producto experimental.
+
+| Elemento | Definición |
+|:---------|:-----------|
+| **Nombre del producto** | FleetSafe |
+| **Startup** | BitMeisters |
+| **Concepto de marca** | La unión de los conceptos *fleet* (flota) y *safe* (seguro) sintetiza la propuesta de valor: una flota que opera de forma segura porque su condición ha sido verificada antes de operar. |
+| **Logotipo** | Compuesto por el isotipo —una marca de verificación integrada a la silueta de un vehículo— y el logotipo tipográfico "FleetSafe" en una sola palabra, con la "F" y la "S" en mayúscula. |
+| **Isotipo** | La marca de verificación representa el resultado de la inspección preoperacional: el vehículo ha sido verificado y se encuentra habilitado. |
+| **Versión monocromática** | El logotipo debe contar con una versión en un solo color para su uso sobre fondos de color pleno o fotografías. |
+| **Área de resguardo** | El logotipo debe mantener un margen libre equivalente a la altura de la letra "F" en todos sus lados. |
+| **Tamaño mínimo** | 24 px de alto en interfaces digitales. |
+| **Usos incorrectos** | No se debe deformar, rotar, aplicar sombras, degradados ni contornos al logotipo. No se debe alterar la relación entre el isotipo y el logotipo tipográfico. |
+
+> **Pendiente:** incorporar el archivo del logotipo y del isotipo en `img/brand/` y referenciarlo desde esta sección.
+
+---
+
+#### Tono de comunicación y lenguaje
+
+El tono de FleetSafe se define a partir de la naturaleza del dominio: se trata de una herramienta de control preventivo cuyas decisiones afectan la seguridad de las personas y la continuidad operativa de una empresa. Esto determina un tono **serio, formal y respetuoso**, pero **no distante ni burocrático**.
+
+| Dimensión | Posición adoptada | Sustento |
+|:----------|:------------------|:---------|
+| Divertido / **Serio** | Serio | La plataforma interviene en decisiones sobre seguridad vehicular. Un tono liviano resultaría inapropiado. |
+| **Formal** / Casual | Formal | El usuario principal es un supervisor de flota que reporta a una empresa y cuyas decisiones pueden ser auditadas. |
+| **Respetuoso** / Irreverente | Respetuoso | El conductor es el usuario que ejecuta la inspección y no debe sentirse fiscalizado por el sistema. |
+| Entusiasta / **Sereno** | Sereno | El sistema comunica estados y consecuencias; la exaltación genera desconfianza en un contexto de control. |
+
+**Principios de redacción aplicados a la interfaz:**
+
+- **Claridad sobre brevedad.** Los mensajes deben indicar qué ocurrió y qué debe hacer el usuario. Ejemplo: *"El vehículo no se encuentra habilitado para operar. Registre una acción correctiva o solicite una autorización de excepción."*
+- **Terminología del dominio.** La interfaz emplea los términos del Ubiquitous Language (sección 2.5) y no sinónimos técnicos. Se dice *inspección preoperacional*, no *checklist*; se dice *habilitado*, no *activo*; se dice *incidencia*, no *ticket*.
+- **Voz activa y segunda persona.** El sistema se dirige al usuario de forma directa: *"Registre el estado del elemento"*, no *"El estado del elemento debe ser registrado"*.
+- **Neutralidad ante el error del usuario.** Los mensajes de error describen la causa y la corrección, sin calificar la acción: *"La placa ya se encuentra registrada"*, no *"Ingresó una placa inválida"*.
+- **Sin lenguaje promocional dentro de la aplicación.** Los calificativos como *fácil*, *rápido* o *intuitivo* se reservan para la Landing Page y no se emplean en la Web Application.
+
+**Idioma.** El español latinoamericano es el idioma principal de la solución. El inglés se mantiene como idioma secundario y como idioma de la nomenclatura técnica del modelo de dominio, conforme a lo establecido en la sección 2.5.
+
+---
+
+#### Tipografía
+
+Se adopta **Inter** como familia tipográfica principal y **JetBrains Mono** como familia secundaria para datos técnicos.
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Familia principal** | Inter |
+| **Familia secundaria** | JetBrains Mono, para identificadores, placas vehiculares, códigos y valores numéricos |
+| **Sustento de la elección** | Inter es una familia de código abierto, optimizada para interfaces digitales y con alta legibilidad en tamaños pequeños, lo que resulta determinante porque el conductor realiza la inspección desde el navegador de un teléfono móvil. JetBrains Mono se emplea donde la distinción entre caracteres similares —`0` y `O`, `1` y `l`— es crítica, como en placas vehiculares y códigos de elemento. |
+| **Alternativas de respaldo** | `system-ui`, `-apple-system`, `Segoe UI`, `Roboto`, `sans-serif` |
+
+**Escala tipográfica**
+
+| Token | Tamaño | Altura de línea | Peso | Uso |
+|:------|:-------|:----------------|:-----|:----|
+| `display` | 40 px | 48 px | 700 | Título principal de la Landing Page |
+| `heading-1` | 32 px | 40 px | 700 | Título de sección en la Landing Page |
+| `heading-2` | 24 px | 32 px | 600 | Encabezado de módulo en la Web Application |
+| `heading-3` | 20 px | 28 px | 600 | Encabezado de tarjeta o panel |
+| `body-large` | 18 px | 28 px | 400 | Texto introductorio |
+| `body` | 16 px | 24 px | 400 | Texto general de la interfaz |
+| `body-small` | 14 px | 20 px | 400 | Texto secundario, descripciones de campo |
+| `caption` | 12 px | 16 px | 500 | Etiquetas, metadatos, marcas de tiempo |
+| `mono-data` | 16 px | 24 px | 500 | Placas, códigos e identificadores |
+
+**Reglas de aplicación:**
+
+- No se emplean más de tres niveles tipográficos en una misma vista.
+- Los textos en mayúsculas se reservan para etiquetas cortas y nunca para párrafos completos.
+- El peso `700` se reserva para títulos; el peso `600` para encabezados de componente.
+- En la Web Application, el tamaño mínimo de texto es `14 px`, con excepción de las etiquetas `caption`.
+
+---
+
+#### Colores
+
+La paleta se construye sobre un **azul profundo** como color primario, que comunica confiabilidad y control, y un **verde** como color de confirmación, asociado directamente al estado *habilitado* del vehículo. Los colores de estado se derivan directamente de los tres valores del término *Vehicle Status* del Ubiquitous Language.
+
+**Colores de marca**
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `color-primary-900` | `#0B2545` | Fondo de encabezados, texto de máximo contraste |
+| `color-primary-700` | `#13315C` | Color primario de la marca, botones principales |
+| `color-primary-500` | `#1D4E89` | Estados hover de elementos primarios |
+| `color-primary-100` | `#D6E4F0` | Fondos de énfasis suave, filas seleccionadas |
+| `color-accent-500` | `#F4A261` | Llamadas a la acción secundarias en la Landing Page |
+
+**Colores de estado del vehículo**
+
+| Estado | Token | Valor | Uso |
+|:-------|:------|:------|:----|
+| **Habilitado** | `color-status-enabled` | `#2A9D8F` | Indicador de vehículo habilitado para operar |
+| **Observado** | `color-status-observed` | `#E9C46A` | Indicador de vehículo que requiere atención o seguimiento |
+| **No habilitado** | `color-status-not-enabled` | `#E76F51` | Indicador de vehículo que no puede operar |
+
+**Colores de resultado de inspección**
+
+| Resultado | Token | Valor |
+|:----------|:------|:------|
+| Conforme (`OK`) | `color-result-ok` | `#2A9D8F` |
+| Observado (`OBSERVED`) | `color-result-observed` | `#E9C46A` |
+| No conforme (`FAIL`) | `color-result-fail` | `#E76F51` |
+| No aplica (`N/A`) | `color-result-na` | `#8D99AE` |
+
+**Colores neutros y semánticos**
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `color-neutral-900` | `#1A1A1A` | Texto principal |
+| `color-neutral-700` | `#4A4A4A` | Texto secundario |
+| `color-neutral-400` | `#9E9E9E` | Texto deshabilitado, bordes suaves |
+| `color-neutral-200` | `#E0E0E0` | Bordes y separadores |
+| `color-neutral-050` | `#F7F8FA` | Fondo general de la aplicación |
+| `color-surface` | `#FFFFFF` | Fondo de tarjetas y paneles |
+| `color-info` | `#3A86FF` | Mensajes informativos |
+| `color-success` | `#2A9D8F` | Confirmación de operación exitosa |
+| `color-warning` | `#E9C46A` | Advertencia que no impide continuar |
+| `color-error` | `#E76F51` | Error que impide completar la operación |
+
+**Reglas de aplicación:**
+
+- El color nunca es el único portador de significado. Todo indicador de estado debe acompañarse de texto o de un ícono, para no depender exclusivamente de la percepción cromática del usuario.
+- Los colores de estado del vehículo (`enabled`, `observed`, `not-enabled`) se aplican de forma consistente en todas las vistas: listados, tarjetas, detalle e historial.
+- El color `color-error` se reserva para errores que impiden completar una operación y no se emplea como color decorativo.
+
+---
+
+#### Espaciado
+
+Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consistente y facilita la adaptación a distintas densidades de pantalla.
+
+| Token | Valor | Uso típico |
+|:------|:------|:-----------|
+| `space-1` | 4 px | Separación entre ícono y etiqueta |
+| `space-2` | 8 px | Separación interna de un componente |
+| `space-3` | 12 px | Separación entre campos de un formulario |
+| `space-4` | 16 px | Padding interno de tarjetas |
+| `space-5` | 24 px | Separación entre bloques de una vista |
+| `space-6` | 32 px | Separación entre secciones |
+| `space-7` | 48 px | Separación entre secciones de la Landing Page |
+| `space-8` | 64 px | Margen superior e inferior de bloques de la Landing Page |
+
+**Reglas de aplicación:**
+
+- El espaciado entre secciones siempre es mayor que el espaciado entre componentes de una misma sección.
+- Las tarjetas emplean `space-4` como padding interno y `space-5` como separación entre ellas.
+- En la Web Application, la densidad de espaciado es mayor que en la Landing Page, porque el usuario debe poder revisar varios elementos sin desplazarse.
+
+---
+
+#### Radios, bordes y elevación
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `radius-sm` | 4 px | Campos de formulario, etiquetas |
+| `radius-md` | 8 px | Botones, tarjetas |
+| `radius-lg` | 16 px | Paneles y modales |
+| `border-width` | 1 px | Bordes de campos y separadores |
+| `shadow-sm` | `0 1px 2px rgba(0,0,0,0.06)` | Tarjetas en reposo |
+| `shadow-md` | `0 4px 8px rgba(0,0,0,0.08)` | Tarjetas en hover, menús desplegables |
+| `shadow-lg` | `0 8px 24px rgba(0,0,0,0.12)` | Modales y paneles flotantes |
+
+---
+
+#### Iconografía
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Set seleccionado** | Lucide Icons |
+| **Sustento** | Es un set de código abierto, con trazo uniforme, que mantiene coherencia visual con la familia Inter y no requiere licencia. |
+| **Tamaños** | 16 px (en línea con texto), 20 px (en botones), 24 px (en encabezados) |
+| **Grosor de trazo** | 1.5 px, constante en todos los tamaños |
+| **Regla** | Los íconos acompañan al texto y no lo reemplazan. Ningún ícono debe ser el único medio para identificar una acción. |
+
+---
+
+#### Accesibilidad
+
+Las decisiones anteriores se complementan con los siguientes criterios mínimos, considerando que la inspección se realiza frecuentemente desde el navegador de un teléfono móvil, en exteriores y bajo luz solar directa.
+
+| Criterio | Definición |
+|:---------|:-----------|
+| **Contraste** | Todo texto debe alcanzar una relación de contraste mínima de 4.5:1 sobre su fondo, conforme al nivel AA de WCAG 2.1. |
+| **Área táctil** | Los elementos interactivos deben tener un área mínima de 44 × 44 px, para su uso con guantes o con una sola mano. |
+| **Foco visible** | Todo elemento interactivo debe presentar un indicador de foco perceptible para la navegación por teclado. |
+| **Independencia del color** | Ningún estado se comunica exclusivamente mediante color, según lo establecido en la sección de colores. |
+| **Tamaño de texto** | El tamaño mínimo de texto en la Web Application es de 14 px, con excepción de las etiquetas `caption`. |
+| **Movimiento** | Las animaciones son breves y no interfieren con la ejecución de una tarea. |
+
+---
+
+#### Repositorio de assets
+
+Los recursos visuales del proyecto se organizan de la siguiente manera dentro del repositorio, en coherencia con la estructura de archivos presentada al inicio de este informe:
+
+| Ruta | Contenido |
+|:-----|:----------|
+| `img/UPC.png` | Logotipo institucional, empleado en la portada del informe |
+| `img/team-members/` | Fotografías de los integrantes del equipo |
+| `img/bigPictureEventStorming/` | Imágenes del Big Picture EventStorming (sección 2.4) |
+| `img/designLevelEventStorming/` | Imágenes del Design-level Event Storming (sección 4.6.1) |
+| `img/competitors/` | Logotipos de los competidores analizados en la sección 2.1 |
+| `img/brand/` | *(Pendiente)* Logotipo, isotipo y versiones monocromáticas de FleetSafe |
+| `img/landing/` | *(Pendiente)* Wireframes y mock-ups de la Landing Page (sección 4.3) |
+| `img/webapp/` | *(Pendiente)* Wireframes y mock-ups de la Web Application (sección 4.4) |
+
+---
+
+
 <a id="412-web-style-guidelines"></a>
 ### 4.1.2. Web Style Guidelines.
+
+Esta sección define los estándares visuales y de interacción aplicables a las interfaces web responsive de FleetSafe: la Landing Page y la Web Application. Los lineamientos aquí establecidos complementan los General Style Guidelines de la sección 4.1.1 y se aplican de forma diferenciada según el producto, en coherencia con la distinción entre ambos establecida en la sección 1.1.1.
+
+---
+
+#### Principios de diseño responsive
+
+La solución se ejecuta íntegramente en el navegador, sin requerir instalación ni hardware, conforme a la Estrategia 3 planteada en la sección 2.1.2. Esto determina que la interfaz debe adaptarse correctamente a los siguientes contextos de uso:
+
+| Contexto | Producto | Dispositivo típico | Condición de uso |
+|:---------|:---------|:-------------------|:-----------------|
+| Presentación | Landing Page | Computadora de escritorio, laptop, tablet | El visitante evalúa la propuesta de valor en un entorno controlado. |
+| Supervisión | Web Application | Computadora de escritorio, laptop | El supervisor revisa estados, gestiona incidencias y consulta historial. |
+| Inspección | Web Application | Teléfono móvil | El conductor realiza la inspección junto al vehículo, frecuentemente en exteriores y bajo luz solar directa. |
+
+El tercer contexto es el más restrictivo y es el que condiciona las decisiones de esta sección: la inspección preoperacional debe poder completarse desde el navegador de un teléfono móvil, con una sola mano y en condiciones de luz adversas.
+
+---
+
+#### Breakpoints
+
+Se adopta un enfoque **mobile-first** para la Web Application y un enfoque **desktop-first** para la Landing Page, dado que los contextos de uso de cada producto son distintos.
+
+| Token | Rango | Aplicación |
+|:------|:------|:-----------|
+| `bp-mobile` | 320 px – 639 px | Web Application: inspección preoperacional |
+| `bp-tablet` | 640 px – 1023 px | Web Application: supervisión en tablet |
+| `bp-desktop` | 1024 px – 1439 px | Landing Page y Web Application: supervisión |
+| `bp-wide` | 1440 px en adelante | Landing Page: presentación |
+
+---
+
+#### Grilla y layout
+
+| Aspecto | Landing Page | Web Application |
+|:--------|:-------------|:----------------|
+| **Columnas** | 12 columnas | 12 columnas |
+| **Ancho máximo de contenido** | 1200 px | 1440 px |
+| **Gutter** | `space-5` (24 px) | `space-4` (16 px) |
+| **Margen lateral** | `space-7` (48 px) en desktop, `space-4` en móvil | `space-4` en todas las resoluciones |
+| **Estructura** | Secciones apiladas verticalmente, cada una de ancho completo | Barra lateral de navegación fija más área de contenido |
+
+**Estructura de la Web Application**
+
+En resoluciones de escritorio, la Web Application emplea una barra lateral de navegación fija de 240 px y un área de contenido que ocupa el resto del ancho. En resoluciones móviles, la barra lateral se reemplaza por un menú colapsable, y el área de contenido ocupa el ancho completo, dado que el conductor debe concentrarse en la inspección y no en la navegación.
+
+---
+
+#### Componentes de interfaz
+
+Los componentes que se describen a continuación se emplean de forma consistente en toda la Web Application, en correspondencia con las funcionalidades definidas en las User Stories de la sección 3.1.
+
+**Botones**
+
+| Variante | Uso | Ejemplo de aplicación |
+|:---------|:----|:----------------------|
+| `primary` | Acción principal de una vista | Finalizar inspección (US21) |
+| `secondary` | Acción alternativa | Cancelar, volver |
+| `danger` | Acción destructiva o de bloqueo | Marcar vehículo como no habilitado |
+| `ghost` | Acción terciaria o dentro de una tabla | Consultar detalle (US14) |
+
+**Campos de formulario**
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Altura** | 44 px en móvil, 40 px en escritorio |
+| **Borde** | `1 px solid color-neutral-200`, con `radius-sm` |
+| **Estado de foco** | Borde `color-primary-500` con anillo de foco perceptible |
+| **Estado de error** | Borde `color-error` acompañado de mensaje de texto descriptivo |
+| **Validación** | Se ejecuta al perder el foco y al enviar el formulario, nunca mientras el usuario escribe |
+| **Etiquetas** | Siempre visibles sobre el campo, nunca como *placeholder* únicamente |
+
+**Indicadores de estado del vehículo**
+
+El estado del vehículo es la información más relevante de la interfaz, porque responde a la pregunta principal de FleetSafe: *¿este vehículo cumple las condiciones necesarias para operar?* Por ello, todo indicador de estado debe presentarse como una etiqueta que combine color, ícono y texto.
+
+| Estado | Presentación |
+|:-------|:-------------|
+| **Habilitado** | Fondo `color-status-enabled` al 10 %, texto e ícono en `color-status-enabled`, etiqueta "Habilitado" |
+| **Observado** | Fondo `color-status-observed` al 10 %, texto e ícono en `color-status-observed`, etiqueta "Observado" |
+| **No habilitado** | Fondo `color-status-not-enabled` al 10 %, texto e ícono en `color-status-not-enabled`, etiqueta "No habilitado" |
+
+**Tarjetas de elemento de inspección**
+
+Cada elemento del catálogo de inspección se presenta al conductor como una tarjeta que contiene el nombre del elemento, su categoría y tres opciones de resultado: Conforme, Observado y No conforme. Cuando el conductor selecciona Observado o No conforme, la tarjeta se expande y solicita la observación y, si corresponde, la evidencia fotográfica, conforme a los criterios de aceptación de US18, US19 y US20.
+
+**Tablas de datos**
+
+Las vistas de supervisión —listado de vehículos, incidencias e historial— emplean tablas con las siguientes características:
+
+- Encabezado fijo al desplazarse verticalmente.
+- Filtros por estado y por vehículo, conforme a US13, US25 y US28.
+- Paginación cuando el número de filas supera las 20.
+- En resoluciones móviles, la tabla se transforma en una lista de tarjetas apiladas.
+
+---
+
+#### Estados de la interfaz
+
+Toda vista que consulte datos debe contemplar los siguientes estados, con el fin de evitar que el usuario interprete una ausencia de información como un error del sistema.
+
+| Estado | Presentación | Ejemplo |
+|:-------|:-------------|:--------|
+| **Carga** | Indicador de progreso o esqueleto de la estructura | Consulta del listado de vehículos (US13) |
+| **Vacío** | Mensaje descriptivo que indica la ausencia de datos y, cuando corresponde, la acción para generarlos | "El vehículo no tiene inspecciones registradas" (US14) |
+| **Error** | Mensaje que describe la causa y ofrece una acción de recuperación | Fallo al cargar el listado de incidencias (US28) |
+| **Éxito** | Confirmación breve de la operación realizada | "Inspección finalizada. El vehículo ha sido evaluado." (US21) |
+
+---
+
+#### Interacción y retroalimentación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Transiciones** | Entre 150 ms y 250 ms, con curva de aceleración suave |
+| **Confirmación de acciones destructivas** | Toda acción irreversible requiere confirmación explícita del usuario |
+| **Mensajes de validación** | Se presentan junto al campo que originó el error, no en un bloque global |
+| **Notificaciones** | Se emplean únicamente para informar el resultado de una operación, nunca para promociones ni mensajes ajenos a la tarea |
+| **Autoguardado** | La inspección en progreso se conserva localmente para evitar pérdida de información ante una interrupción de conectividad |
+
+El último aspecto es determinante para el conductor: una inspección puede realizarse en una zona con conectividad limitada, y la pérdida de los resultados registrados obligaría a repetir el proceso completo.
+
+---
+
+#### Formato de datos
+
+| Tipo de dato | Formato | Ejemplo |
+|:-------------|:--------|:--------|
+| Fecha | `DD/MM/AAAA` | 11/09/2026 |
+| Fecha y hora | `DD/MM/AAAA HH:mm` | 11/09/2026 14:30 |
+| Placa vehicular | Mayúsculas, sin separadores, en `mono-data` | ABC123 |
+| Identificador | UUID truncado en vistas de listado | a3f2…9c1b |
+| Estado | Etiqueta con color, ícono y texto | Habilitado |
+
+El formato de fecha `DD/MM/AAAA` se adopta por corresponder a la convención empleada en el Perú y en el resto de la región, conforme a la Estrategia 5 de la sección 2.1.2.
+
+---
+
+#### Accesibilidad en la web
+
+Además de los criterios establecidos en la sección 4.1.1, se aplican las siguientes consideraciones específicas de la interfaz web.
+
+| Criterio | Definición |
+|:---------|:-----------|
+| **Navegación por teclado** | Toda funcionalidad debe ser accesible mediante teclado, sin excepción |
+| **Orden de tabulación** | Debe seguir el orden lógico de lectura de la interfaz |
+| **Estructura semántica** | Uso correcto de `header`, `nav`, `main`, `section`, `article` y `footer` |
+| **Etiquetas ARIA** | Se emplean cuando el elemento nativo no comunica adecuadamente su propósito |
+| **Textos alternativos** | Toda imagen informativa debe incluir texto alternativo |
+| **Zoom** | La interfaz debe permanecer funcional con un zoom del 200 % |
+
+---
+
+#### Convenciones de implementación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Unidades** | `rem` para tipografía y espaciado, `px` para bordes y radios |
+| **Metodología CSS** | BEM (Block, Element, Modifier) para la nomenclatura de clases |
+| **Tokens** | Los valores definidos en la sección 4.1.1 se implementan como variables CSS |
+| **Nomenclatura de componentes** | PascalCase para componentes, kebab-case para archivos |
+| **Framework** | Angular, conforme a lo establecido en la sección 4.6.3 |
+| **Responsive** | Media queries basadas en los breakpoints definidos en esta sección |
+
+---
 
 
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
 
+<a id="42-information-architecture"></a>
+## 4.2. Information Architecture.
+
+La arquitectura de información de FleetSafe define cómo se organiza, etiqueta, estructura y navega el contenido de la Landing Page y de la Web Application, con el fin de que los usuarios de los tres segmentos objetivo —empresas de transporte de carga, supervisores de flota y conductores— encuentren la información y ejecuten las tareas que les corresponden según su rol.
+
+Las decisiones que se presentan en esta sección se derivan de las siguientes fuentes:
+
+- Los **segmentos objetivo** definidos en la sección 1.3.
+- Los **roles de la plataforma** establecidos en la sección 1.1.1: Administrador, Supervisor de flota y Conductor.
+- Las **Epics y User Stories** definidas en la sección 3.1, que determinan las funcionalidades que cada rol debe poder ejecutar.
+- El **Ubiquitous Language** definido en la sección 2.5, que establece la terminología que debe emplearse en las etiquetas de la interfaz.
+- Las **Web Style Guidelines** establecidas en la sección 4.1.2, que condicionan la presentación de la información según el dispositivo.
+
+**Estructura general de la solución**
+
+FleetSafe está compuesta por tres productos, cada uno con una arquitectura de información diferenciada:
+
+| Producto | Audiencia | Propósito | Enfoque de arquitectura |
+|:---------|:----------|:----------|:------------------------|
+| **Landing Page** | Visitantes externos | Presentar la propuesta de valor y captar contactos | Secuencial, orientado a la narrativa de presentación |
+| **Web Application** | Usuarios autenticados | Ejecutar las funcionalidades según el rol | Jerárquico, orientado a tareas por rol |
+| **Backend RESTful API** | Desarrolladores | Exponer la lógica de negocio | Recursos RESTful, orientado a endpoints |
+
+Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.x.6.
+
+---
+
 <a id="421-organization-systems"></a>
 ### 4.2.1. Organization Systems.
+
+Los sistemas de organización determinan cómo se estructura y presenta la información a los usuarios. Para FleetSafe se emplean distintos esquemas según el producto y el tipo de contenido, en coherencia con las tareas que cada rol debe ejecutar.
+
+---
+
+#### Esquemas de organización aplicados
+
+Se emplean los siguientes esquemas, cada uno sustentado en la naturaleza del contenido que organiza y en la tarea que el usuario debe realizar sobre él.
+
+| Esquema | Producto | Contenido al que se aplica | Sustento |
+|:--------|:---------|:---------------------------|:---------|
+| **Jerárquico** | Web Application | Navegación principal por módulos según el rol del usuario | Cada rol accede únicamente a las funcionalidades que le corresponden, conforme a los roles definidos en la sección 1.1.1 y a las User Stories de la sección 3.1. |
+| **Secuencial** | Web Application | Flujo de inspección preoperacional | La inspección es un proceso ordenado que debe completarse paso a paso: iniciar (US17), registrar elementos (US18), registrar observaciones (US19), adjuntar evidencia (US20) y finalizar (US21). |
+| **Secuencial** | Landing Page | Narrativa de presentación | La Landing Page presenta la propuesta de valor en un orden progresivo: inicio (US01), funcionalidades (US02), beneficios por segmento (US03) y contacto (US04). |
+| **Por audiencia** | Landing Page | Sección de beneficios | Los beneficios se presentan diferenciados por segmento —empresas, supervisores y conductores— conforme a US03. |
+| **Por tarea** | Web Application | Vistas de supervisión | El supervisor accede a las vistas en función de la tarea que debe ejecutar: registrar vehículo (US12), consultar estado (US25), gestionar incidencias (US28), consultar historial (US35). |
+| **Por estado** | Web Application | Listado de vehículos | Los vehículos se agrupan por estado operativo —habilitado, observado, no habilitado— conforme a US25, dado que el estado es la información que determina la decisión del supervisor. |
+| **Cronológico** | Web Application | Historial de inspecciones, incidencias y estados | El historial se presenta en orden cronológico descendente, conforme a US31, US35 y US37, porque el usuario necesita conocer primero lo más reciente. |
+| **Alfabético** | Web Application | Catálogo de elementos de inspección | El catálogo se presenta en el orden definido por `display_order` y, en su defecto, alfabéticamente, para facilitar la localización de un elemento durante la inspección. |
+
+---
+
+#### Organización por rol
+
+La Web Application organiza su contenido principal según el rol del usuario autenticado. Cada rol accede a un conjunto diferenciado de módulos, conforme a las User Stories definidas en la sección 3.1.
+
+| Rol | Módulos accesibles | User Stories relacionadas |
+|:----|:-------------------|:--------------------------|
+| **Administrador** | Usuarios y roles, configuración del catálogo de inspección, reglas de evaluación | US07, US08, US11 |
+| **Supervisor de flota** | Vehículos y flota, inspecciones, evaluación y habilitación, incidencias, documentación vehicular, historial y reportes | US12–US16, US25, US26, US28–US37 |
+| **Conductor** | Inspección preoperacional, incidencias propias, consulta de sus inspecciones | US17–US22, US27 |
+
+Esta organización jerárquica por rol tiene dos consecuencias directas sobre la interfaz:
+
+- El conductor accede únicamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2, que busca reducir al mínimo los pasos necesarios para completar una inspección.
+- El supervisor no visualiza las funcionalidades administrativas, porque su tarea se concentra en el control preventivo y no en la configuración de la plataforma.
+
+---
+
+#### Organización del flujo de inspección
+
+El flujo de inspección preoperacional constituye el núcleo del dominio de FleetSafe y se organiza de forma estrictamente secuencial, porque cada paso depende del anterior y el sistema no debe permitir que la inspección se finalice sin haber completado todos los elementos.
+
+| Paso | Acción del conductor | User Story | Condición para avanzar |
+|:-----|:---------------------|:-----------|:-----------------------|
+| 1 | Iniciar la inspección del vehículo asignado | US17 | No debe existir otra inspección en progreso para el mismo vehículo |
+| 2 | Registrar el estado de cada elemento del catálogo | US18 | Todos los elementos deben tener un resultado registrado |
+| 3 | Registrar observaciones en los elementos no conformes | US19 | La observación no puede estar vacía |
+| 4 | Adjuntar evidencia fotográfica cuando corresponda | US20 | El archivo debe tener un formato permitido |
+| 5 | Finalizar la inspección | US21 | Todos los elementos deben estar completos |
+
+Al finalizar el paso 5, el sistema inicia automáticamente la evaluación del vehículo, conforme a US23 y US24, y determina su condición operativa.
+
+---
+
+#### Organización del contenido de la Landing Page
+
+La Landing Page organiza su contenido de forma secuencial, siguiendo el recorrido natural de un visitante que evalúa la propuesta de valor de FleetSafe.
+
+| Sección | Contenido | User Story |
+|:--------|:----------|:-----------|
+| 1. Encabezado | Nombre, propuesta de valor y llamada a la acción principal | US01 |
+| 2. Funcionalidades | Inspección preoperacional, evaluación de condiciones, habilitación operativa y gestión de incidencias | US02 |
+| 3. Beneficios por segmento | Beneficios diferenciados para empresas, supervisores y conductores | US03 |
+| 4. Contacto | Formulario de solicitud de demostración | US04 |
+| 5. Pie de página | Información de contacto y redes sociales | US06 |
+
+La sección de beneficios se organiza **por audiencia**, dado que cada segmento objetivo tiene necesidades distintas respecto de la plataforma, conforme a lo establecido en la sección 1.3.
+
+---
+
+#### Estructura de navegación por producto
+
+| Producto | Tipo de navegación | Niveles de profundidad | Sustento |
+|:---------|:-------------------|:-----------------------|:---------|
+| **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | 1 nivel | El visitante no requiere autenticación ni recorridos profundos. |
+| **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | 3 niveles: módulo, listado, detalle | El supervisor y el conductor requieren acceder a vistas específicas dentro de cada módulo. |
+
+**Estructura de la Web Application**
+
+En la Web Application, los tres niveles de profundidad corresponden a:
+
+- **Nivel 1 — Módulo:** agrupación funcional (por ejemplo, *Vehículos*).
+- **Nivel 2 — Listado:** vista consolidada de los objetos del módulo (por ejemplo, listado de vehículos con filtros por estado).
+- **Nivel 3 — Detalle:** vista específica de un objeto (por ejemplo, detalle de un vehículo con su historial e incidencias).
+
+Este esquema coincide con la estructura de User Stories de la sección 3.1, donde cada módulo presenta una historia de listado y una historia de detalle.
+
+---
+
+#### Correspondencia con los bounded contexts
+
+La organización de la información en la interfaz guarda correspondencia con los sub-dominios y bounded contexts identificados en la sección 4.6, lo que permite mantener coherencia entre el modelo de dominio y la estructura de navegación.
+
+| Módulo de la interfaz | Bounded context asociado (sección 4.8.1) |
+|:----------------------|:-----------------------------------------|
+| Usuarios y roles | Identity and Access |
+| Vehículos y flota | Fleet Management |
+| Inspección preoperacional | Pre-Operational Inspection |
+| Evaluación y habilitación | Evaluation and Authorization |
+| Incidencias | Incident Management |
+| Documentación vehicular | Vehicle Documentation |
+
+---
 
 <a id="422-labeling-systems"></a>
 ### 4.2.2. Labeling Systems.
 
+Los sistemas de etiquetado definen los términos que se emplean en la interfaz para nombrar las secciones, los módulos, las acciones y los estados que el usuario encuentra durante su recorrido por FleetSafe. Su propósito es que el usuario reconozca de inmediato qué hace cada elemento y qué información contiene cada vista, sin necesidad de interpretar términos técnicos ni de aprender una nomenclatura ajena a su actividad.
+
+Las etiquetas que se definen en esta sección se derivan directamente del **Ubiquitous Language** establecido en la sección 2.5, conforme al principio de redacción formulado en la sección 4.1.1, según el cual la interfaz emplea los términos del dominio y no sinónimos técnicos.
+
+---
+
+#### Principios de etiquetado
+
+| Principio | Definición | Ejemplo |
+|:----------|:-----------|:--------|
+| **Terminología del dominio** | Se emplean los términos del Ubiquitous Language y no sinónimos técnicos. | Se emplea *inspección preoperacional*, no *checklist* ni *formulario*. |
+| **Orientación a la tarea** | Las etiquetas describen lo que el usuario hace, no la estructura interna del sistema. | Se emplea *Registrar vehículo*, no *Crear entidad de vehículo*. |
+| **Consistencia** | Un mismo concepto se nombra siempre con la misma etiqueta en toda la interfaz. | *Habilitado*, *Observado* y *No habilitado* se emplean de forma uniforme en listados, tarjetas y detalles. |
+| **Precisión sobre brevedad** | Cuando abreviar introduce ambigüedad, se prefiere la etiqueta completa. | Se emplea *Elementos de inspección*, no *Elementos*. |
+| **Idioma del usuario** | Las etiquetas se redactan en español latinoamericano, conforme a la sección 4.1.1. | Se emplea *Conductor*, no *Driver* ni *Chofer*. |
+| **Voz activa en acciones** | Las acciones se expresan en infinitivo o en imperativo según el contexto. | *Registrar incidencia* (menú), *Registrar incidencia* (botón). |
+
+---
+
+#### Etiquetas de navegación principal
+
+La navegación principal de la Web Application se organiza por módulos, en correspondencia con los esquemas jerárquicos definidos en la sección 4.2.1 y con los bounded contexts identificados en la sección 4.8.1.
+
+| Etiqueta en la interfaz | Módulo | Bounded context (sección 4.8.1) | Roles con acceso |
+|:------------------------|:-------|:--------------------------------|:-----------------|
+| **Panel** | Vista inicial con indicadores de estado de la flota | — | Administrador, Supervisor |
+| **Usuarios** | Gestión de usuarios y roles | Identity and Access | Administrador |
+| **Vehículos** | Registro y consulta de vehículos de la flota | Fleet Management | Administrador, Supervisor |
+| **Inspecciones** | Registro y consulta de inspecciones preoperacionales | Pre-Operational Inspection | Supervisor, Conductor |
+| **Habilitación** | Estados de habilitación operativa de los vehículos | Evaluation and Authorization | Supervisor |
+| **Incidencias** | Registro y seguimiento de incidencias | Incident Management | Supervisor, Conductor |
+| **Documentación** | Control de documentos vehiculares y vencimientos | Vehicle Documentation | Supervisor |
+| **Reportes** | Historial y reportes de control preventivo | — | Supervisor |
+
+Las etiquetas **Panel** y **Reportes** no corresponden a un bounded context específico, dado que agregan información proveniente de varios de ellos.
+
+---
+
+#### Etiquetas de estados del vehículo
+
+Los tres estados del vehículo constituyen la información más relevante de la interfaz, porque responden a la pregunta principal de FleetSafe planteada en la sección 1.2: *¿este vehículo cumple las condiciones necesarias para operar?* Por esta razón, sus etiquetas deben ser inequívocas y emplearse de forma uniforme en todas las vistas.
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Habilitado** | `ENABLED` | El vehículo cumple las condiciones necesarias para operar. |
+| **Observado** | `OBSERVED` | El vehículo presenta condiciones que requieren atención o seguimiento, pero no impiden necesariamente su operación. |
+| **No habilitado** | `NOT_ENABLED` | El vehículo presenta una condición que impide que sea considerado apto para operar. |
+
+Estas etiquetas se emplean de forma idéntica en listados, tarjetas, vistas de detalle, historial y reportes. No se emplean variantes como *Apto*, *En observación* o *Bloqueado*, porque introducirían ambigüedad respecto de los valores del dominio.
+
+---
+
+#### Etiquetas de estados de la inspección
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **En progreso** | `IN_PROGRESS` | La inspección ha sido iniciada y aún no ha sido finalizada. |
+| **Completada** | `COMPLETED` | La inspección ha sido finalizada y el sistema ha iniciado su evaluación. |
+| **Cancelada** | `CANCELLED` | La inspección fue interrumpida y no será considerada en la evaluación. |
+
+---
+
+#### Etiquetas de resultados de inspección
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Conforme** | `OK` | El elemento revisado se encuentra en condiciones adecuadas. |
+| **Observado** | `OBSERVED` | El elemento revisado presenta una condición que requiere atención. |
+| **No conforme** | `FAIL` | El elemento revisado presenta una condición que impide su uso o afecta la seguridad. |
+| **No aplica** | `NOT_APPLICABLE` | El elemento no corresponde al vehículo inspeccionado. |
+
+Se emplea **No conforme** en lugar de *Fallido* o *Falla*, porque describe la condición encontrada y no anticipa su causa, conforme al principio de neutralidad formulado en la sección 4.1.1.
+
+---
+
+#### Etiquetas de estados de la incidencia
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Registrada** | `REGISTERED` | La incidencia ha sido registrada y aún no ha sido revisada. |
+| **En revisión** | `IN_REVIEW` | El supervisor se encuentra revisando la incidencia. |
+| **Resuelta** | `RESOLVED` | Se ha registrado la acción correctiva que soluciona el problema. |
+| **Cerrada** | `CLOSED` | La incidencia ha sido verificada y no admite nuevas actualizaciones. |
+
+---
+
+#### Etiquetas de estados de la documentación vehicular
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Vigente** | `VALID` | El documento se encuentra dentro de su periodo de vigencia. |
+| **Próximo a vencer** | `EXPIRING` | El documento se encuentra dentro del umbral de alerta previo a su vencimiento. |
+| **Vencido** | `EXPIRED` | El documento ha superado su fecha de vencimiento. |
+
+---
+
+#### Etiquetas de acciones
+
+Las acciones se expresan mediante verbos en infinitivo cuando aparecen en menús o encabezados de vista, y en imperativo cuando constituyen la etiqueta de un botón que el usuario ejecuta en el momento.
+
+| Etiqueta en la interfaz | Acción | User Story |
+|:------------------------|:-------|:-----------|
+| **Iniciar inspección** | Crea una nueva inspección preoperacional en estado en progreso | US17 |
+| **Registrar resultado** | Almacena el resultado de un elemento de inspección | US18 |
+| **Agregar observación** | Registra una observación asociada a un elemento no conforme | US19 |
+| **Adjuntar evidencia** | Incorpora una fotografía que respalda la condición detectada | US20 |
+| **Finalizar inspección** | Cierra la inspección e inicia la evaluación del vehículo | US21 |
+| **Registrar vehículo** | Incorpora un nuevo vehículo a la flota | US12 |
+| **Asignar conductor** | Vincula un vehículo a un conductor para la inspección | US16 |
+| **Registrar incidencia** | Crea una incidencia asociada a un vehículo | US27 |
+| **Registrar acción correctiva** | Documenta la acción aplicada a una incidencia | US30 |
+| **Solicitar excepción** | Registra el levantamiento de un bloqueo, con responsable y justificación | Estrategia 2 (sección 2.1.2) |
+
+La etiqueta **Solicitar excepción** se incorpora de forma deliberada y no se denomina *Desbloquear vehículo*, porque el dominio exige que el levantamiento de un bloqueo quede registrado con responsable y justificación, conforme a la decisión de diseño establecida en la sección 4.8.1 para la tabla `operational_authorizations`.
+
+---
+
+#### Etiquetas de campos de formulario
+
+| Etiqueta en la interfaz | Campo del modelo (sección 4.7.1) | Observación |
+|:------------------------|:---------------------------------|:------------|
+| **Placa** | `Vehicle.plate` | Se presenta en mayúsculas y con tipografía `mono-data`. |
+| **Marca** | `Vehicle.brand` | — |
+| **Modelo** | `Vehicle.model` | — |
+| **Año** | `Vehicle.year` | — |
+| **Capacidad** | `Vehicle.capacity` | Se indica la unidad de medida en el propio campo. |
+| **Número de licencia** | `Driver.licenseNumber` | Se presenta en `mono-data`. |
+| **Vencimiento de licencia** | `Driver.licenseExpirationDate` | Formato `DD/MM/AAAA`. |
+| **Fecha de vencimiento** | `VehicleDocument.expirationDate` | Formato `DD/MM/AAAA`. |
+| **Odómetro** | `Inspection.odometer` | Se indica la unidad de medida en el propio campo. |
+
+---
+
+#### Etiquetas de la Landing Page
+
+| Etiqueta | Sección | User Story |
+|:---------|:--------|:-----------|
+| **Inicio** | Encabezado con la propuesta de valor | US01 |
+| **Funcionalidades** | Descripción de las capacidades de la plataforma | US02 |
+| **Beneficios** | Beneficios diferenciados por segmento | US03 |
+| **Contacto** | Formulario de solicitud de demostración | US04 |
+| **Solicitar demostración** | Botón de llamada a la acción principal | US04 |
+| **Conocer más** | Botón de llamada a la acción secundaria | US02 |
+
+---
+
+#### Términos que se evitan
+
+Con el fin de mantener la coherencia entre el modelo de dominio y la interfaz, se evitan de forma deliberada los siguientes términos.
+
+| Término evitado | Término adoptado | Motivo |
+|:----------------|:-----------------|:-------|
+| Checklist | Inspección preoperacional | Anglicismo ajeno al Ubiquitous Language. |
+| Formulario | Inspección preoperacional | Describe el soporte, no la actividad del dominio. |
+| Activo | Vehículo | Término genérico que diluye el objeto del dominio. |
+| Ticket | Incidencia | Anglicismo ajeno al Ubiquitous Language. |
+| Bloqueado | No habilitado | Introduce una connotación distinta a la del estado del dominio. |
+| Apto | Habilitado | Introduce una valoración que el dominio no establece. |
+| Chofer | Conductor | Regionalismo; el Ubiquitous Language adopta *Driver* (Conductor). |
+| Usuario final | Conductor, Supervisor de flota | No distingue el rol, que es determinante en FleetSafe. |
+
+---
+
+#### Correspondencia entre etiquetas y User Stories
+
+El siguiente cuadro permite verificar que cada etiqueta definida en esta sección se corresponde con una funcionalidad efectivamente definida en la sección 3.1.
+
+| Grupo de etiquetas | User Stories relacionadas |
+|:-------------------|:--------------------------|
+| Navegación principal | US07–US37 |
+| Estados del vehículo | US24, US25, US26, US37 |
+| Estados de la inspección | US17, US21, US22 |
+| Resultados de inspección | US18, US19, US20 |
+| Estados de la incidencia | US27, US29, US30, US31 |
+| Estados de la documentación | US32, US33, US34 |
+| Acciones | US12, US16, US17–US21, US27, US30 |
+| Campos de formulario | US12, US15, US32, US34 |
+| Landing Page | US01–US06 |
+
+---
+
 <a id="423-seo-tags-and-meta-tags"></a>
 ### 4.2.3. SEO Tags and Meta Tags.
+
+Los SEO Tags y Meta Tags son los elementos del código HTML que describen el contenido de cada página a los motores de búsqueda y a los navegadores. Su correcta definición determina que un visitante que busca una solución de control preventivo vehicular encuentre FleetSafe, y que al encontrarla reciba una descripción precisa de lo que la plataforma ofrece.
+
+Las etiquetas definidas en esta sección se aplican a la **Landing Page**, dado que es el único producto de FleetSafe expuesto públicamente. La Web Application se encuentra detrás de autenticación y se excluye de la indexación conforme a la sección de directivas de rastreo.
+
+---
+
+#### Objetivo del etiquetado SEO
+
+El etiquetado de la Landing Page persigue tres objetivos concretos, en coherencia con los segmentos objetivo definidos en la sección 1.3 y con las estrategias competitivas planteadas en la sección 2.1.2:
+
+| Objetivo | Descripción |
+|:---------|:------------|
+| **Visibilidad ante búsquedas del dominio** | Que la Landing Page aparezca cuando un responsable de flota busque términos relacionados con inspección preoperacional, control preventivo vehicular o habilitación operativa en el contexto peruano. |
+| **Descripción precisa en resultados** | Que el título y la descripción que aparecen en los resultados de búsqueda comuniquen con exactitud qué hace FleetSafe y a quién se dirige. |
+| **Coherencia terminológica** | Que los términos empleados en las etiquetas coincidan con el Ubiquitous Language de la sección 2.5 y con las etiquetas de la sección 4.2.2, evitando sinónimos que diluyan el posicionamiento. |
+
+El tercer objetivo es determinante para la Estrategia 1 planteada en la sección 2.1.2: si FleetSafe se posiciona como la solución construida sobre el marco de cumplimiento peruano, la terminología de sus etiquetas debe reflejarlo de forma explícita.
+
+---
+
+#### Meta Tags generales
+
+Estas etiquetas se incorporan en el `<head>` del documento HTML y se aplican a toda la Landing Page.
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<title>` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título que aparece en la pestaña del navegador y en los resultados de búsqueda. |
+| `<meta charset="UTF-8">` | `UTF-8` | Codificación de caracteres, necesaria para el correcto uso del español. |
+| `<meta name="viewport">` | `width=device-width, initial-scale=1.0` | Configuración de la vista responsive, conforme a los breakpoints de la sección 4.1.2. |
+| `<meta name="description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga. Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción que aparece bajo el título en los resultados de búsqueda. Longitud aproximada: 155 caracteres. |
+| `<meta name="keywords">` | `inspección preoperacional, control preventivo vehicular, habilitación operativa, gestión de flotas, seguridad vehicular, transporte de carga, Perú` | Términos que describen el contenido. Su peso en el posicionamiento es limitado en la actualidad, pero se mantiene por completitud. |
+| `<meta name="author">` | `BitMeisters` | Identifica a la startup responsable del producto. |
+| `<meta name="robots">` | `index, follow` | Indica a los motores de búsqueda que indexen la página y sigan sus enlaces. |
+| `<meta name="language">` | `es-PE` | Declara el idioma y la variante regional, en coherencia con la sección 4.1.1. |
+| `<link rel="canonical">` | `https://fleetsafe.bitmeisters.com/` | Establece la URL canónica de la Landing Page. |
+
+---
+
+#### Open Graph Tags
+
+Las Open Graph Tags determinan cómo se presenta la Landing Page cuando se comparte en redes sociales y aplicaciones de mensajería. Su correcta definición es relevante porque los segmentos objetivo —supervisores de flota y responsables de empresas de transporte— reciben recomendaciones por canales informales.
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta property="og:type">` | `website` | Tipo de contenido. |
+| `<meta property="og:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado al compartir el enlace. |
+| `<meta property="og:description">` | `Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción mostrada al compartir el enlace. |
+| `<meta property="og:url">` | `https://fleetsafe.bitmeisters.com/` | URL canónica del contenido. |
+| `<meta property="og:image">` | `https://fleetsafe.bitmeisters.com/img/brand/og-image.png` | Imagen representativa de la plataforma. Dimensiones recomendadas: 1200 × 630 px. |
+| `<meta property="og:image:alt">` | `Interfaz de FleetSafe mostrando el estado de habilitación de una flota de vehículos de carga` | Texto alternativo de la imagen. |
+| `<meta property="og:locale">` | `es_PE` | Idioma y variante regional del contenido. |
+| `<meta property="og:site_name">` | `FleetSafe` | Nombre del sitio. |
+
+---
+
+#### Twitter Card Tags
+
+Complementan las Open Graph Tags para la presentación del enlace en la plataforma X (anteriormente Twitter).
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta name="twitter:card">` | `summary_large_image` | Formato de la tarjeta: imagen grande con título y descripción. |
+| `<meta name="twitter:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado en la tarjeta. |
+| `<meta name="twitter:description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga.` | Descripción mostrada en la tarjeta. |
+| `<meta name="twitter:image">` | `https://fleetsafe.bitmeisters.com/img/brand/og-image.png` | Imagen mostrada en la tarjeta. |
+| `<meta name="twitter:image:alt">` | `Interfaz de FleetSafe mostrando el estado de habilitación de una flota de vehículos de carga` | Texto alternativo de la imagen. |
+
+---
+
+#### Directivas para la Web Application
+
+La Web Application no debe ser indexada por los motores de búsqueda, dado que su contenido requiere autenticación y expone información operativa de la empresa. Por ello, todas sus vistas incorporan la siguiente directiva:
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta name="robots">` | `noindex, nofollow` | Impide la indexación de las vistas autenticadas y el seguimiento de sus enlaces. |
+
+Adicionalmente, se configura un archivo `robots.txt` en la raíz del dominio que restringe el rastreo de las rutas de la Web Application:
+
+```text
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /api/
+```
+
+El archivo `sitemap.xml` incluye únicamente las secciones públicas de la Landing Page.
+
+---
+
+#### Etiquetas por sección de la Landing Page
+
+La Landing Page es un sitio de una sola página con desplazamiento entre secciones. Dado que las secciones no constituyen URLs independientes, se emplean **etiquetas de encabezado semánticas** (`<h1>`, `<h2>`, `<h3>`) y **atributos de anclaje** (`id`) para que los motores de búsqueda identifiquen la estructura del contenido.
+
+| Sección | Encabezado | Anclaje | User Story |
+|:--------|:-----------|:--------|:-----------|
+| Inicio | `<h1>Control preventivo y habilitación operativa de su flota</h1>` | `#inicio` | US01 |
+| Funcionalidades | `<h2>Funcionalidades de FleetSafe</h2>` | `#funcionalidades` | US02 |
+| Beneficios | `<h2>Beneficios para su organización</h2>` | `#beneficios` | US03 |
+| Contacto | `<h2>Solicite una demostración</h2>` | `#contacto` | US04 |
+
+**Regla de encabezados:** cada página debe contener exactamente un `<h1>`, y los niveles `<h2>` y `<h3>` deben respetar la jerarquía sin saltos, conforme a las buenas prácticas de accesibilidad establecidas en la sección 4.1.2.
+
+---
+
+#### Datos estructurados
+
+Se incorpora un bloque de datos estructurados en formato JSON-LD que describe la organización y el producto, con el fin de que los motores de búsqueda presenten información enriquecida en los resultados.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FleetSafe",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Plataforma web de control preventivo vehicular para empresas de transporte de carga. Permite realizar inspecciones preoperacionales digitales y determinar si un vehículo se encuentra habilitado para operar.",
+  "inLanguage": "es-PE",
+  "author": {
+    "@type": "Organization",
+    "name": "BitMeisters"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PEN",
+    "description": "Periodo de prueba"
+  }
+}
+```
+
+> **Nota:** los valores de `offers` son provisionales, dado que el modelo de negocio de FleetSafe se encuentra pendiente de definición conforme a lo establecido en la sección 1.1.1.
+
+---
+
+#### Palabras clave por segmento
+
+Las palabras clave se seleccionan a partir de los segmentos objetivo definidos en la sección 1.3 y de los términos del Ubiquitous Language de la sección 2.5.
+
+| Segmento | Palabras clave principales |
+|:---------|:---------------------------|
+| **Empresas de transporte de carga** | control preventivo vehicular, seguridad de flota, habilitación operativa, gestión de flotas Perú, cumplimiento normativo transporte |
+| **Supervisores de flota** | inspección preoperacional digital, control de vehículos, estado de flota, gestión de incidencias vehiculares, historial de inspecciones |
+| **Conductores de vehículos de carga** | inspección de vehículo, revisión preoperacional, reporte de fallas, checklist digital de vehículo |
+
+---
+
+#### Relación con las estrategias competitivas
+
+El etiquetado definido en esta sección sustenta directamente dos de las estrategias planteadas en la sección 2.1.2:
+
+| Estrategia | Relación con el etiquetado |
+|:-----------|:---------------------------|
+| **Estrategia 1: Especialización en el marco de cumplimiento peruano** | Las palabras clave incorporan la referencia geográfica y las etiquetas mencionan el contexto peruano, lo que permite diferenciar a FleetSafe de soluciones construidas sobre marcos normativos de otros países. |
+| **Estrategia 5: Localización y acompañamiento local** | El idioma declarado es `es-PE`, y la terminología empleada en las etiquetas corresponde al español latinoamericano establecido en la sección 4.1.1. |
+
+---
 
 <a id="424-searching-systems"></a>
 ### 4.2.4. Searching Systems.
 
+Los sistemas de búsqueda definen los mecanismos mediante los cuales el usuario localiza información específica dentro de FleetSafe. Su diseño responde a una condición propia del dominio: el supervisor de flota consulta información operativa con frecuencia y bajo presión de tiempo, mientras que el conductor necesita encontrar el vehículo y los elementos de inspección que le corresponden sin distraerse del proceso.
+
+Las decisiones que se presentan en esta sección se derivan de los esquemas de organización establecidos en la sección 4.2.1 y de las etiquetas definidas en la sección 4.2.2.
+
+---
+
+#### Principios de búsqueda
+
+| Principio | Definición | Sustento |
+|:----------|:-----------|:---------|
+| **Búsqueda contextual** | Los filtros disponibles en cada vista corresponden al tipo de información que esa vista presenta. | Un listado de vehículos no ofrece filtro por tipo de incidencia. |
+| **Filtros sobre búsqueda libre** | Se priorizan filtros estructurados sobre campos de texto libre, porque la mayoría de las consultas del dominio se resuelven por estado, por fecha o por vehículo. | Las User Stories US13, US25 y US28 definen filtros, no búsqueda por texto. |
+| **Combinación de criterios** | Los filtros se pueden combinar entre sí, y el sistema aplica la intersección de los criterios seleccionados. | US13 y US28 establecen filtros acumulables. |
+| **Resultados visibles sin desplazamiento** | Los resultados se presentan en el menor número de pantallas posible, con paginación cuando el volumen lo exige. | Sección 4.1.2, componente de tablas de datos. |
+| **Persistencia de filtros** | Los filtros aplicados se conservan mientras el usuario permanece en la vista, y se restablecen al salir de ella. | Evita que el usuario reconstruya el contexto de consulta tras revisar un detalle. |
+
+---
+
+#### Mecanismos de búsqueda por vista
+
+A continuación se detallan los mecanismos disponibles en cada vista de la Web Application, en correspondencia con las User Stories de la sección 3.1.
+
+| Vista | Mecanismo | Criterios disponibles | User Story |
+|:------|:----------|:----------------------|:-----------|
+| **Listado de vehículos** | Filtros estructurados | Estado, flota, marca, año | US13 |
+| **Listado de vehículos por estado** | Filtros estructurados y agrupación | Estado (habilitado, observado, no habilitado) | US25 |
+| **Listado de usuarios** | Filtros estructurados | Rol, estado de la cuenta | US11 |
+| **Listado de inspecciones** | Filtros estructurados y rango de fechas | Vehículo, conductor, estado, rango de fechas | US22, US35 |
+| **Listado de incidencias** | Filtros estructurados y búsqueda por texto | Estado, vehículo, tipo de incidencia, severidad, rango de fechas | US28 |
+| **Historial de incidencias por vehículo** | Filtros estructurados | Estado, tipo, rango de fechas | US31 |
+| **Listado de documentos vehiculares** | Filtros estructurados | Tipo de documento, estado de vigencia, rango de fechas | US33 |
+| **Historial de estados del vehículo** | Filtro por rango de fechas | Rango de fechas | US37 |
+| **Catálogo de elementos de inspección** | Búsqueda por texto y orden predefinido | Nombre, código, categoría | US18 |
+| **Reporte de estado de flota** | Filtros estructurados | Rango de fechas, flota, estado | US36 |
+
+---
+
+#### Búsqueda por texto libre
+
+La búsqueda por texto libre se emplea únicamente donde los criterios estructurados no permiten resolver la consulta, conforme al principio de filtros sobre búsqueda libre. Se aplica en tres casos concretos:
+
+| Vista | Campo de búsqueda | Campos consultados | User Story |
+|:------|:------------------|:-------------------|:-----------|
+| **Listado de incidencias** | Descripción de la incidencia | Descripción, observaciones asociadas | US28 |
+| **Catálogo de elementos de inspección** | Nombre o código del elemento | Nombre, código, descripción | US18 |
+| **Listado de vehículos** | Placa del vehículo | Placa | US13 |
+
+**Reglas de aplicación:**
+
+- La búsqueda por texto libre no distingue mayúsculas de minúsculas.
+- La búsqueda por texto libre se ejecuta a partir de tres caracteres ingresados.
+- Los resultados se presentan en orden de relevancia y se acompañan del criterio de coincidencia aplicado.
+- La búsqueda por placa normaliza el texto ingresado: convierte a mayúsculas y elimina guiones y espacios, conforme al formato de datos establecido en la sección 4.1.2.
+
+---
+
+#### Ordenamiento de resultados
+
+Toda vista que presente un listado ofrece ordenamiento por al menos una columna, con un orden predeterminado que responde a la necesidad más frecuente del usuario.
+
+| Vista | Orden predeterminado | Criterios de ordenamiento disponibles |
+|:------|:---------------------|:--------------------------------------|
+| Listado de vehículos | Placa (ascendente) | Placa, estado, marca, año |
+| Listado de inspecciones | Fecha de realización (descendente) | Fecha, vehículo, estado |
+| Listado de incidencias | Fecha de registro (descendente) | Fecha, severidad, estado |
+| Historial de incidencias | Fecha de registro (descendente) | Fecha, tipo |
+| Listado de documentos | Fecha de vencimiento (ascendente) | Vencimiento, tipo, estado |
+| Historial de estados | Fecha del cambio (descendente) | Fecha |
+| Reporte de estado de flota | Estado (habilitado, observado, no habilitado) | Estado, placa |
+
+El orden predeterminado del listado de documentos se establece como fecha de vencimiento ascendente porque la tarea del supervisor es anticipar los vencimientos próximos, conforme a US33.
+
+---
+
+#### Paginación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Tamaño de página** | 20 elementos en resoluciones de escritorio, 10 en resoluciones móviles |
+| **Navegación** | Anterior, siguiente y número de página |
+| **Indicador** | Se muestra el número total de resultados y el rango visible |
+| **Persistencia** | El tamaño de página seleccionado por el usuario se conserva durante la sesión |
+
+---
+
+#### Búsqueda dentro del flujo de inspección
+
+El flujo de inspección preoperacional no requiere búsqueda, dado que el conductor accede directamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2. Sin embargo, sí se aplican dos mecanismos de localización dentro de la inspección:
+
+| Mecanismo | Propósito | Sustento |
+|:----------|:----------|:---------|
+| **Orden predefinido del catálogo** | Los elementos de inspección se presentan en el orden establecido por `display_order`, conforme a la sección 4.8.1. | El conductor no necesita buscar; el sistema le presenta los elementos en el orden correcto. |
+| **Filtro por categoría** | El conductor puede filtrar los elementos por categoría (componente, elemento de seguridad, documentación). | Permite concentrarse en un grupo de elementos cuando la inspección se realiza por etapas. |
+
+Este diseño responde a la condición de uso del conductor: la inspección se realiza junto al vehículo, frecuentemente con una sola mano y en exteriores. Incorporar un campo de búsqueda añadiría complejidad sin aportar valor, dado que el conjunto de elementos es acotado y conocido.
+
+---
+
+#### Ausencia de resultados
+
+Toda búsqueda o filtro que no arroje resultados debe presentar un mensaje que explique la situación y, cuando corresponda, ofrezca una acción para revertirla, conforme al estado vacío definido en la sección 4.1.2.
+
+| Situación | Mensaje | Acción ofrecida |
+|:----------|:--------|:----------------|
+| Filtro sin coincidencias | "No se encontraron vehículos que cumplan los criterios seleccionados." | Restablecer filtros |
+| Búsqueda por texto sin coincidencias | "No se encontraron incidencias que coincidan con la búsqueda." | Limpiar búsqueda |
+| Historial sin registros | "El vehículo no tiene inspecciones registradas." | Registrar inspección (según rol) |
+| Documentos sin resultados | "No hay documentos que cumplan los criterios seleccionados." | Restablecer filtros |
+
+---
+
+#### Correspondencia con las User Stories
+
+| Mecanismo | User Stories relacionadas |
+|:----------|:--------------------------|
+| Filtros por estado | US13, US25, US28, US33, US36 |
+| Filtros por vehículo | US28, US31 |
+| Filtros por tipo | US28, US31, US33 |
+| Filtros por rango de fechas | US28, US31, US33, US35, US36, US37 |
+| Búsqueda por texto libre | US13, US18, US28 |
+| Ordenamiento | US13, US22, US28, US31, US33, US35, US37 |
+| Paginación | US11, US13, US22, US28, US31, US33, US35 |
+
+---
+
 <a id="425-navigation-systems"></a>
 ### 4.2.5. Navigation Systems.
+
+Los sistemas de navegación definen cómo el usuario se desplaza entre las distintas vistas de FleetSafe, cómo reconoce en qué parte de la aplicación se encuentra y cómo regresa a un punto anterior. Su diseño responde a dos condiciones propias del dominio: el supervisor de flota alterna con frecuencia entre módulos para tomar decisiones, y el conductor debe poder completar la inspección sin desviarse del flujo establecido.
+
+Las decisiones que se presentan en esta sección se derivan de la estructura jerárquica por rol establecida en la sección 4.2.1, de las etiquetas definidas en la sección 4.2.2 y de los componentes de interfaz descritos en la sección 4.1.2.
+
+---
+
+#### Principios de navegación
+
+| Principio | Definición | Sustento |
+|:----------|:-----------|:---------|
+| **Navegación por rol** | Cada usuario accede únicamente a los módulos que corresponden a su rol. | Sección 4.2.1, organización jerárquica por rol. |
+| **Orientación permanente** | El usuario debe poder reconocer en todo momento en qué módulo y en qué nivel de profundidad se encuentra. | Se emplean migas de pan y resaltado del elemento activo. |
+| **Profundidad acotada** | La navegación no excede los tres niveles: módulo, listado y detalle. | Sección 4.2.1, estructura de navegación. |
+| **Retorno predecible** | Toda vista de detalle permite regresar al listado del que proviene, conservando los filtros aplicados. | Sección 4.2.4, persistencia de filtros. |
+| **Consistencia** | La posición de la navegación principal y de las acciones es la misma en todas las vistas. | Sección 4.1.2, grilla y layout. |
+
+---
+
+#### Estructura de navegación por producto
+
+| Producto | Tipo de navegación | Elementos | Niveles de profundidad |
+|:---------|:-------------------|:----------|:-----------------------|
+| **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | Encabezado fijo con menú de anclas y pie de página | 1 nivel |
+| **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | Barra lateral, migas de pan y barra superior | 3 niveles |
+
+---
+
+#### Navegación de la Landing Page
+
+La Landing Page es un sitio de una sola página con desplazamiento entre secciones, conforme a la estructura establecida en la sección 4.2.1. La navegación se resuelve mediante un encabezado fijo y anclas internas.
+
+**Encabezado fijo**
+
+| Elemento | Posición | Comportamiento |
+|:---------|:---------|:---------------|
+| Logotipo FleetSafe | Extremo izquierdo | Regresa al inicio de la página (`#inicio`) |
+| Menú de anclas | Centro | Desplaza la vista hacia la sección seleccionada |
+| Botón "Solicitar demostración" | Extremo derecho | Desplaza la vista hacia el formulario de contacto (`#contacto`) |
+
+**Menú de anclas**
+
+| Etiqueta | Anclaje | User Story |
+|:---------|:--------|:-----------|
+| Inicio | `#inicio` | US01 |
+| Funcionalidades | `#funcionalidades` | US02 |
+| Beneficios | `#beneficios` | US03 |
+| Contacto | `#contacto` | US04 |
+
+**Comportamiento del encabezado**
+
+- El encabezado permanece fijo en la parte superior durante el desplazamiento, conforme a la sección 4.1.2.
+- Al desplazarse hacia abajo, el encabezado reduce su altura para liberar espacio de contenido.
+- En resoluciones móviles, el menú de anclas se reemplaza por un menú colapsable, conforme a US05.
+
+**Pie de página**
+
+| Elemento | Contenido |
+|:---------|:----------|
+| Información de contacto | Correo electrónico, teléfono y dirección |
+| Redes sociales | Enlaces a los perfiles oficiales de FleetSafe |
+| Enlaces internos | Anclas a las secciones de la página |
+| Aviso legal | Derechos de autor y año |
+
+El pie de página se documenta conforme a US06.
+
+---
+
+#### Navegación de la Web Application
+
+La Web Application emplea una navegación jerárquica de tres niveles, en correspondencia con la estructura establecida en la sección 4.2.1.
+
+**Nivel 1 — Módulo**
+
+El primer nivel corresponde a los módulos funcionales de la aplicación. El usuario accede a ellos mediante la barra lateral de navegación, cuya visibilidad depende del rol autenticado.
+
+| Etiqueta | Ruta | Roles con acceso | User Stories relacionadas |
+|:---------|:-----|:-----------------|:--------------------------|
+| Panel | `/app/dashboard` | Administrador, Supervisor | — |
+| Usuarios | `/app/users` | Administrador | US07, US08, US11 |
+| Vehículos | `/app/vehicles` | Administrador, Supervisor | US12–US16 |
+| Inspecciones | `/app/inspections` | Supervisor, Conductor | US17–US22, US35 |
+| Habilitación | `/app/authorizations` | Supervisor | US25, US26, US37 |
+| Incidencias | `/app/incidents` | Supervisor, Conductor | US27–US31 |
+| Documentación | `/app/documents` | Supervisor | US32–US34 |
+| Reportes | `/app/reports` | Supervisor | US36 |
+
+**Nivel 2 — Listado**
+
+El segundo nivel corresponde a la vista consolidada de los objetos del módulo. Se accede desde la barra lateral y presenta los mecanismos de búsqueda y ordenamiento definidos en la sección 4.2.4.
+
+| Vista | Ruta | Filtros disponibles | User Story |
+|:------|:-----|:--------------------|:-----------|
+| Listado de usuarios | `/app/users` | Rol, estado de la cuenta | US11 |
+| Listado de vehículos | `/app/vehicles` | Estado, flota, marca, año, placa | US13 |
+| Listado de inspecciones | `/app/inspections` | Vehículo, conductor, estado, rango de fechas | US22, US35 |
+| Listado de incidencias | `/app/incidents` | Estado, vehículo, tipo, severidad, rango de fechas | US28 |
+| Listado de documentos | `/app/documents` | Tipo, estado de vigencia, rango de fechas | US33 |
+| Reporte de estado de flota | `/app/reports/fleet-status` | Rango de fechas, flota, estado | US36 |
+
+**Nivel 3 — Detalle**
+
+El tercer nivel corresponde a la vista específica de un objeto. Se accede desde el listado y permite consultar su información completa, su historial y las acciones disponibles.
+
+| Vista | Ruta | Contenido | User Story |
+|:------|:-----|:----------|:-----------|
+| Detalle de vehículo | `/app/vehicles/{id}` | Información, estado actual, historial de inspecciones, incidencias y documentos | US14 |
+| Detalle de inspección | `/app/inspections/{id}` | Resultados por elemento, observaciones y evidencias | US22 |
+| Detalle de incidencia | `/app/incidents/{id}` | Descripción, acciones correctivas, reparaciones y seguimiento | US29, US30, US31 |
+| Detalle de documento | `/app/documents/{id}` | Información del documento y estado de vigencia | US34 |
+| Historial de estados | `/app/vehicles/{id}/status-history` | Evolución del estado del vehículo | US37 |
+| Ejecución de inspección | `/app/inspections/{id}/execute` | Registro de resultados, observaciones y evidencias | US17–US21 |
+
+---
+
+#### Componentes de navegación
+
+**Barra lateral de navegación**
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| Ancho | 240 px en resoluciones de escritorio |
+| Visibilidad | Permanente en escritorio; colapsable en móvil, conforme a la sección 4.1.2 |
+| Contenido | Logotipo, módulos habilitados según el rol, datos del usuario autenticado |
+| Indicador de ubicación | El módulo activo se resalta con `color-primary-100` como fondo y `color-primary-700` como texto |
+| Acceso en móvil | Se abre mediante un botón de menú en la barra superior |
+
+**Barra superior**
+
+| Elemento | Posición | Comportamiento |
+|:---------|:---------|:---------------|
+| Botón de menú | Extremo izquierdo, solo en móvil | Abre la barra lateral |
+| Migas de pan | Centro-izquierda | Indica la ubicación actual dentro de la jerarquía |
+| Acciones rápidas | Extremo derecho | Notificaciones y menú del usuario |
+
+**Migas de pan**
+
+Las migas de pan reflejan la ruta de navegación en los tres niveles y permiten regresar a cualquier nivel anterior mediante un clic.
+
+Ejemplo para el detalle de una inspección:
+
+```
+Panel > Inspecciones > Inspección #INS-2026-0042
+```
+
+Ejemplo para el detalle de una incidencia:
+
+```
+Panel > Incidencias > Incidencia #INC-2026-0117
+```
+
+**Menú de usuario**
+
+| Opción | Comportamiento | User Story |
+|:-------|:---------------|:-----------|
+| Ver perfil | Muestra los datos del usuario autenticado | — |
+| Cerrar sesión | Finaliza la sesión y redirige a la pantalla de inicio de sesión | US10 |
+
+---
+
+#### Navegación dentro del flujo de inspección
+
+El flujo de inspección preoperacional se organiza de forma secuencial, conforme a la sección 4.2.1, y su navegación refleja esa secuencia. El conductor no navega libremente entre módulos durante la inspección; avanza paso a paso por el flujo y solo puede retroceder para corregir un elemento ya registrado.
+
+**Flujo de navegación del conductor**
+
+| Paso | Vista | Acciones disponibles | Restricción de avance |
+|:-----|:------|:---------------------|:-----------------------|
+| 1 | Selección de vehículo asignado | Iniciar inspección | Debe existir un vehículo asignado y no debe haber otra inspección en progreso |
+| 2 | Registro de elementos de inspección | Registrar resultado, agregar observación, adjuntar evidencia, retroceder | Ninguna, hasta completar el paso 5 |
+| 3 | Revisión previa | Revisar resultados registrados, corregir un elemento, cancelar | Ninguna |
+| 4 | Confirmación de finalización | Finalizar inspección, volver a la revisión | Todos los elementos deben estar completos |
+| 5 | Resultado de la evaluación | Consultar el estado determinado, regresar al panel | Ninguna |
+
+**Reglas de navegación en el flujo**
+
+- El conductor no puede acceder directamente a los módulos de supervisión durante la inspección.
+- El conductor puede abandonar la inspección en cualquier momento; en ese caso, la inspección permanece en estado *en progreso* y puede retomarse.
+- Al finalizar la inspección, el sistema determina el estado del vehículo y presenta el resultado al conductor antes de devolverlo al panel.
+
+---
+
+#### Navegación desde el panel
+
+El panel es la vista inicial de la Web Application tras la autenticación. Su función es orientar al usuario hacia la tarea que debe ejecutar, y no reemplazar la navegación principal.
+
+| Elemento del panel | Comportamiento | Rol |
+|:-------------------|:---------------|:----|
+| Indicadores de estado de flota | Enlaza al listado de vehículos filtrado por estado | Supervisor |
+| Inspecciones recientes | Enlaza al detalle de la inspección seleccionada | Supervisor |
+| Incidencias abiertas | Enlaza al listado de incidencias filtrado por estado | Supervisor |
+| Documentos próximos a vencer | Enlaza al listado de documentos filtrado por estado | Supervisor |
+| Vehículo asignado | Enlaza al inicio de la inspección | Conductor |
+
+---
+
+#### Estados de la navegación
+
+| Estado | Comportamiento |
+|:-------|:---------------|
+| Módulo activo | Se resalta en la barra lateral con `color-primary-100` como fondo y `color-primary-700` como texto |
+| Nivel actual | Se refleja en las migas de pan |
+| Ruta protegida | Si el usuario no está autenticado, el sistema redirige a la pantalla de inicio de sesión, conforme a US09 |
+| Ruta no autorizada | Si el usuario autenticado no tiene el rol requerido, el sistema redirige al panel y muestra un mensaje informativo |
+| Ruta no encontrada | El sistema muestra una vista de error con un enlace de regreso al panel |
+
+---
+
+#### Correspondencia con las User Stories
+
+| Elemento de navegación | User Stories relacionadas |
+|:-----------------------|:--------------------------|
+| Encabezado fijo de la Landing Page | US05 |
+| Menú de anclas | US05 |
+| Pie de página | US06 |
+| Barra lateral | US07–US37 |
+| Migas de pan | US14, US22, US29, US35, US37 |
+| Menú de usuario y cierre de sesión | US09, US10 |
+| Flujo de inspección | US17–US21 |
+| Redirección por falta de autenticación | US09 |
+| Redirección por falta de autorización | US07, US08 |
+
+---
 
 
 <a id="43-landing-page-ui-design"></a>
@@ -1280,6 +2501,53 @@ A partir del Ubiquitous Language y del proceso de Big Picture EventStorming, se 
 
 <a id="461-design-level-event-storming"></a>
 ### 4.6.1. Design-level Event Storming.
+
+Proceso del Design-Level event storming
+
+Paso 1: Partimos del Big Picture Event Storming como base.
+
+<br>**Unstructure Exploration**
+<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+
+Paso 2: Ordenamos los domain events
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming2.png" alt=" paso 2 del designlevelES" width="800">
+
+Paso 3: Se colocó dudas/posibles problemas a futuro sobre el dominio en algunas partes del flujo.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming3.png" alt=" paso 3 del designlevelES" width="800">
+
+Paso 4: Exploramos que "pivotal events" pueden identificarse.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming4.png" alt=" paso 4 del designlevelES" width="800">
+
+Paso 5: Se añadió comandos que desencadenen eventos y tambien agregamos sus actores
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming5.1.png" alt=" paso 5 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming5.2.png" alt=" paso 5 del designlevelES" width="800">
+
+Paso 6: Se equipo añadió 'policies' o reglas de negocio que hacen que se ejecuten eventos de dominio
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming6.1.png" alt=" paso 6 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming6.2.png" alt=" paso 6 del designlevelES" width="800">
+
+Paso 7: Se añadió read models, son la vista de datos o 'views' que ayudarán al usuario con la ejecución de comandos
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming7.1.png" alt=" paso 7 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming7.2.png" alt=" paso 7 del designlevelES" width="800">
+
+Paso 8: Se identifico sistemas externos, tales como el servicio de guardado de imagenes en la nube, por ahora va como "Cloud Storage"
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.0.png" alt=" paso 8 del designlevelES" width="800">
+
+Paso 9: Se agregan los aggregates
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.1.png" alt=" paso 9 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.2.png" alt=" paso 9 del designlevelES" width="800">
+
+Paso 10: Separamos por BOUNDED CONTEXT en los cuales algunos tienen un cierto tipo de relación medianto comando y domain.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming10.png" alt=" paso 10 del designlevelES" width="800">
 
 <a id="462-software-architecture-context-diagram"></a>
 ### 4.6.2. Software Architecture Context Diagram.
