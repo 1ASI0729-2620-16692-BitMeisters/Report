@@ -1217,7 +1217,7 @@ A continuación se presenta el Product Backlog consolidado:
 <img src="img/wireframe/07-equipo.png" width="500">
 <img src="img/wireframe/08-preguntas.png" width="500">
 <img src="img/wireframe/09-llamada-accion.png" width="500">
-
+<img src="img/wireframe/10-footer.png" width="500">
 
 
 <a id="432-landing-page-mock-up"></a>
