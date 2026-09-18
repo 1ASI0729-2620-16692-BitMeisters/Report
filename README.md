@@ -49,6 +49,7 @@
 
 <hr>
 
+<a id="project-report-collaboration-insights"></a>
 # **Project Report Collaboration Insights**
 
 <hr>
@@ -134,15 +135,15 @@
         - <a href="#513-source-code-style-guide-and-conventions">5.1.3. Source Code Style Guide and Conventions.</a>
         - <a href="#514-software-deployment-configuration">5.1.4. Software Deployment Configuration.</a>
     - <a href="#52-landing-page-services-applications-implementation">5.2. Landing Page, Services & Applications Implementation.</a>
-        - <a href="#52x-sprint-n">5.2.x. Sprint n</a>
-            - <a href="#52x1-sprint-planning-n">5.2.x.1. Sprint Planning n.</a>
-            - <a href="#52x2-aspect-leader-and-colaborators">5.2.x.2. Aspect Leader and Colaborators.</a>
-            - <a href="#52x3-sprint-backlog-n">5.2.x.3. Sprint Backlog n.</a>
-            - <a href="#52x4-development-evidence-for-sprint-review">5.2.x.4. Development Evidence for Sprint Review.</a>
-            - <a href="#52x5-execution-evidence-for-sprint-review">5.2.x.5. Execution Evidence for Sprint Review.</a>
-            - <a href="#52x6-services-documentation-evidence-for-sprint-review">5.2.x.6. Services Documentation Evidence for Sprint Review.</a>
-            - <a href="#52x7-software-deployment-evidence-for-sprint-review">5.2.x.7. Software Deployment Evidence for Sprint Review.</a>
-            - <a href="#52x8-team-colaboration-insights-during-sprint">5.2.x.8. Team Colaboration Insights during Sprint.</a>
+        - <a href="#521-sprint-1">5.2.1. Sprint 1</a>
+            - <a href="#5211-sprint-planning-1">5.2.1.1. Sprint Planning 1.</a>
+            - <a href="#5212-aspect-leader-and-colaborators">5.2.1.2. Aspect Leader and Colaborators.</a>
+            - <a href="#5213-sprint-backlog-1">5.2.1.3. Sprint Backlog 1.</a>
+            - <a href="#5214-development-evidence-for-sprint-review">5.2.1.4. Development Evidence for Sprint Review.</a>
+            - <a href="#5215-execution-evidence-for-sprint-review">5.2.1.5. Execution Evidence for Sprint Review.</a>
+            - <a href="#5216-services-documentation-evidence-for-sprint-review">5.2.1.6. Services Documentation Evidence for Sprint Review.</a>
+            - <a href="#5217-software-deployment-evidence-for-sprint-review">5.2.1.7. Software Deployment Evidence for Sprint Review.</a>
+            - <a href="#5218-team-colaboration-insights-during-sprint">5.2.1.8. Team Colaboration Insights during Sprint.</a>
     - <a href="#53-validation-interviews">5.3. Validation Interviews.</a>
         - <a href="#531-diseno-de-entrevistas">5.3.1. Diseño de Entrevistas.</a>
         - <a href="#532-registro-de-entrevistas">5.3.2. Registro de Entrevistas.</a>
@@ -156,6 +157,9 @@
 - <a href="#bibliografia">Bibliografía</a>
 
 - <a href="#anexos">Anexos</a>
+    - <a href="#anexo-a-videos-de-exposiciones">Anexo A — Videos de Exposiciones</a>
+    - <a href="#anexo-b-videos-de-entrevistas">Anexo B — Videos de Entrevistas</a>
+    - <a href="#anexo-c-enlaces-de-los-productos">Anexo C — Enlaces de los productos y repositorios</a>
 
 <hr>
 
@@ -174,8 +178,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico                                                   | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>_Pendiente de completar por el integrante._<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Pendiente de completar por el integrante._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Pendiente de completar por el integrante._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>_Pendiente de completar por la integrante._ | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos. |
-| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>_Pendiente de completar por el integrante._<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Pendiente de completar por el integrante._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Pendiente de completar por el integrante._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>_Pendiente de completar por la integrante._  | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.                           |
+| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>_Pendiente de completar por la integrante._ | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos. |
+| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>_Pendiente de completar por la integrante._  | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.                           |
 
 <hr>
 
@@ -252,7 +256,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 | **Código del Estudiante** | U202318309                                                                                                     |
 | **Carrera**               | Ingeniería de Software                                                                                         |
 | **Descripción**           | _Pendiente de redacción por el integrante._                                                                    |
-| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
+| **Foto**                  | <img src="img/team-members/RodrigoAguilar.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
 
@@ -269,7 +273,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:---------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U202122129                                                                                               |
 | **Carrera**               | Ingeniería de Software                                                                                   |
-| **Descripción**           | _Pendiente de redacción por la integrante._                                                              |
+| **Descripción**           | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. En FleetSafe asumí el modelado del dominio: la división en bounded contexts, el diseño de la base de datos por contexto, los diagramas C4 en Structurizr y los diagramas de clases. Aporto conocimientos en Java con Spring Boot, bases de datos relacionales con PostgreSQL, Git y GitFlow, y modelado con UML y C4. Procuro que lo que el informe afirma se pueda comprobar: durante el análisis competitivo verifiqué el comportamiento real de cada producto en sus fuentes oficiales y corregí una ventaja competitiva que el equipo había dado por cierta y era falsa. |
 | **Foto**                  | <img src="img/team-members/ariana-huapaya.jpeg" alt="Fotografía de Alejandro Espino Flores" width="140"> |
 
 ---
@@ -1199,6 +1203,23 @@ A continuación se presenta el Product Backlog consolidado:
 | 43 | US37 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | 3 |
 | 44 | US45 | API de historial y reportes | Como developer, se desea exponer endpoints para la consulta de historial y generación de reportes. | 5 |
 
+El Product Backlog se gestiona en **Trello**, conforme a las herramientas indicadas en el enunciado. El tablero es **público** y puede consultarse en la siguiente dirección:
+
+**https://trello.com/b/LnAD1sH3/fleetsafe-product-backlog**
+
+<img src="img/backlog/product-backlog-trello.png" alt="Tablero del Product Backlog de FleetSafe en Trello, con 44 User Stories en la lista Product Backlog" width="1000">
+
+El tablero se organiza en cuatro listas que reflejan el estado de avance de cada User Story:
+
+| Lista | Contenido |
+|:------|:----------|
+| **Product Backlog** | Las 44 User Stories del cuadro anterior, en el mismo orden de priorización |
+| **Sprint Backlog 1** | Las User Stories seleccionadas para el Sprint 1 |
+| **In Progress** | Las User Stories en desarrollo durante el sprint en curso |
+| **Done** | Las User Stories que cumplen la definición de terminado |
+
+Cada tarjeta conserva el identificador de la User Story, su título, sus Story Points y la descripción en formato *"Como… deseo… para…"*, además del bounded context al que pertenece, de modo que el tablero y la sección 3.1 del informe se mantengan consistentes entre sí.
+
 
 <hr>
 
@@ -1623,7 +1644,7 @@ FleetSafe está compuesta por tres productos, cada uno con una arquitectura de i
 | **Web Application** | Usuarios autenticados | Ejecutar las funcionalidades según el rol | Jerárquico, orientado a tareas por rol |
 | **Backend RESTful API** | Desarrolladores | Exponer la lógica de negocio | Recursos RESTful, orientado a endpoints |
 
-Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.x.6.
+Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.1.6.
 
 ---
 
@@ -2466,18 +2487,291 @@ El panel es la vista inicial de la Web Application tras la autenticación. Su fu
 <a id="44-web-applications-uxui-design"></a>
 ## 4.4. Web Applications UX/UI Design.
 
+En esta sección se presenta el diseño de la Frontend Web Application de FleetSafe. El punto de partida son las decisiones establecidas en las secciones 4.1 y 4.2: el design system, la retícula de 4 px, la paleta de estado operativo y los sistemas de organización y navegación definidos para cada rol.
+
+**Criterio de diseño: cada producto se diseña primero en el dispositivo desde el que se usa.** La Web Application tiene dos audiencias con contextos de uso opuestos. El **conductor** la utiliza de pie junto al vehículo, de madrugada, con una sola mano libre y con prisa; sus vistas se diseñan primero para **Mobile 390 px**. El **supervisor de flota** trabaja sentado ante un monitor revisando una flota completa; sus vistas se diseñan primero para **Desktop 1280 px**. Cada una se adapta después al otro extremo, conforme a los patrones establecidos en la sección 4.1.2.
+
+Se han diseñado **catorce vistas** que cubren los recorridos completos de ambos roles, además de la administración de documentos e incidencias.
+
 <a id="441-web-applications-wireframes"></a>
 ### 4.4.1. Web Applications Wireframes.
+
+Se presentan las **catorce vistas** en baja fidelidad. Los wireframes establecen la estructura, la jerarquía visual y la disposición de los elementos de cada vista **sin recurrir al color de marca ni al color semántico**. Trabajar primero en baja fidelidad permite verificar que la información se ordena correctamente por sí sola: si una vista se entiende en escala de grises, se entenderá también con color.
+
+Esta comprobación tiene además una función de **diseño inclusivo**. La condición operativa del vehículo —`Enabled`, `Observed`, `Not Enabled`— es la información más importante del producto, y en los wireframes se lee únicamente por su etiqueta de texto. Eso confirma que un usuario con deficiencia en la percepción del color puede operar la plataforma sin pérdida de información, requisito que la sección 4.1.1 establece como decisión de diseño.
+
+#### Flujo del conductor — Mobile 390 px
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="img/webapp/wireframes/01-sign-in-mobile.png" alt="Wireframe de la vista de inicio de sesión en móvil" width="260"> | <img src="img/webapp/wireframes/02-assigned-vehicle-mobile.png" alt="Wireframe de la vista del vehículo asignado en móvil" width="260"> | <img src="img/webapp/wireframes/03-inspection-checklist-mobile.png" alt="Wireframe del checklist de inspección en móvil" width="260"> |
+| **Sign in** | **My assigned vehicle** | **Inspection checklist** |
+| <img src="img/webapp/wireframes/04-observation-evidence-mobile.png" alt="Wireframe del registro de observación y evidencia en móvil" width="260"> | <img src="img/webapp/wireframes/05-summary-mobile.png" alt="Wireframe del resumen de la inspección en móvil" width="260"> | <img src="img/webapp/wireframes/06-result-mobile.png" alt="Wireframe del resultado de la inspección en móvil" width="260"> |
+| **Observation and evidence** | **Summary** | **Result** |
+
+Las seis vistas cubren el recorrido completo de la inspección preoperacional, de principio a fin.
+
+#### Flujo del supervisor — Desktop 1280 px
+
+<img src="img/webapp/wireframes/07-fleet-dashboard-desktop.png" alt="Wireframe del tablero de flota en escritorio" width="1000">
+
+**Fleet dashboard.** La jerarquía sitúa primero el resumen por condición operativa y después el detalle por vehículo, conforme al principio de *surfacing the summary before the detail* establecido en 4.1.1.
+
+<img src="img/webapp/wireframes/08-vehicle-detail-desktop.png" alt="Wireframe del detalle de vehículo en escritorio" width="1000">
+
+**Vehicle detail.** Presenta la ficha del vehículo, su conductor asignado y el estado de sus documentos, con el historial de inspecciones organizado en pestañas.
+
+<img src="img/webapp/wireframes/09-inspection-detail-desktop.png" alt="Wireframe del detalle de una inspección en escritorio" width="1000">
+
+**Inspection detail.** El bloque superior explica **por qué** el vehículo no está habilitado, citando la regla concreta que se aplicó.
+
+<img src="img/webapp/wireframes/10-lift-block-desktop.png" alt="Wireframe del diálogo de levantamiento de bloqueo" width="1000">
+
+**Lift block.** Diálogo modal sobre velo, con la justificación como campo obligatorio.
+
+<img src="img/webapp/wireframes/11-inspection-history-desktop.png" alt="Wireframe del historial de inspecciones en escritorio" width="1000">
+
+**Inspection history.** Vista de auditoría, con filtros acumulativos y el recuento de excepciones autorizadas.
+
+<img src="img/webapp/wireframes/13-documents-desktop.png" alt="Wireframe de la vista de documentos vehiculares en escritorio" width="1000">
+
+**Documents.** Control de vigencia documental, ordenado por proximidad al vencimiento.
+
+<img src="img/webapp/wireframes/14-incidents-desktop.png" alt="Wireframe de la vista de incidencias en escritorio" width="1000">
+
+**Incidents.** Seguimiento de las incidencias detectadas, con el detalle de la acción correctiva y la reparación programada bajo el listado.
+
+#### Vista del supervisor adaptada a Mobile
+
+<img src="img/webapp/wireframes/12-fleet-mobile.png" alt="Wireframe del listado de flota adaptado a móvil" width="300">
+
+**Fleet.** Muestra la adaptación declarada en la sección 4.1.2: el listado que en escritorio es una tabla con columnas ordenables se convierte en tarjetas apiladas, una por vehículo, porque una tabla de seis columnas no resulta operable a 390 px. La navegación lateral se sustituye por una barra inferior de cuatro destinos.
 
 <a id="442-web-applications-wireflow-diagrams"></a>
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
+Los wireflows muestran el recorrido que sigue el usuario para alcanzar un User goal, representando **cada cambio de pantalla como un paso con el wireframe del nuevo estado**. La flecha entre dos pasos nombra la acción que provoca la transición.
+
+Los wireframes empleados son exactamente los mismos de la sección 4.4.1, de modo que ambos artefactos no pueden divergir: una modificación en una vista se refleja en los dos.
+
+#### Wireflow 1 — Driver: realizar la inspección preoperacional
+
+**User goal.** Como conductor, deseo registrar el estado del vehículo asignado antes de iniciar la operación. Corresponde a las User Stories US17 a US21.
+
+<img src="img/webapp/wireflows/01-driver-inspection.png" alt="Wireflow del recorrido de inspección preoperacional del conductor, en seis pasos" width="1000">
+
+El recorrido recoge el caso **más exigente**, no el más favorable: el conductor detecta una falla en el sistema de frenos, el sistema le exige observación y evidencia fotográfica antes de continuar, y la inspección termina con el vehículo no habilitado. El paso 4 regresa al checklist, lo que evidencia que el registro de una observación no interrumpe la secuencia.
+
+#### Wireflow 2 — Fleet Supervisor: saber qué vehículos pueden operar
+
+**User goal.** Como supervisor, deseo identificar qué unidades pueden operar y conocer el motivo cuando alguna no puede. Corresponde a US25 y US35.
+
+<img src="img/webapp/wireflows/02-supervisor-fleet-status.png" alt="Wireflow del recorrido de consulta de la condición de la flota, en tres pasos" width="1000">
+
+Tres pasos bastan para pasar de la visión general de la flota a la regla concreta que bloqueó un vehículo. Esa brevedad es deliberada: es la consulta que el supervisor realiza a primera hora, todos los días.
+
+#### Wireflow 3 — Fleet Supervisor: levantar el bloqueo de un vehículo
+
+**User goal.** Como supervisor, deseo autorizar la salida de un vehículo no habilitado cuando la operación no puede esperar, dejando constancia. Sostiene la Estrategia 2 de la sección 2.1.2.
+
+<img src="img/webapp/wireflows/03-supervisor-lift-block.png" alt="Wireflow del recorrido de levantamiento de bloqueo, en tres pasos" width="1000">
+
+El tercer paso no es decorativo: cierra el recorrido mostrando la excepción ya registrada en el historial de auditoría. Es la contrapartida que hace aceptable permitir la excepción, y el usuario la ve antes de autorizar.
+
 <a id="443-web-applications-mock-ups"></a>
 ### 4.4.3. Web Applications Mock-ups.
+
+Los mock-ups aplican sobre los wireframes anteriores el **design system** definido en la sección 4.1: la paleta de marca, los colores de estado operativo verificados contra WCAG 2.1 AA, la escala tipográfica de Roboto, la retícula de espaciado de 4 px y los componentes de Angular Material.
+
+Se incorporan además dos elementos que los wireframes no representan: el **selector de idioma** `EN · ES` en la barra superior, conforme al sistema de navegación de la sección 4.2.5, y la **codificación cromática del estado operativo**, que acompaña siempre a la etiqueta de texto y nunca la sustituye.
+
+#### Flujo del conductor — Mobile 390 px
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="img/webapp/mockups/01-sign-in-mobile.png" alt="Mock-up de la vista de inicio de sesión en móvil" width="260"> | <img src="img/webapp/mockups/02-assigned-vehicle-mobile.png" alt="Mock-up de la vista del vehículo asignado en móvil" width="260"> | <img src="img/webapp/mockups/03-inspection-checklist-mobile.png" alt="Mock-up del checklist de inspección en móvil" width="260"> |
+| **Sign in** | **My assigned vehicle** | **Inspection checklist** |
+| <img src="img/webapp/mockups/04-observation-evidence-mobile.png" alt="Mock-up del registro de observación y evidencia en móvil" width="260"> | <img src="img/webapp/mockups/05-summary-mobile.png" alt="Mock-up del resumen de la inspección en móvil" width="260"> | <img src="img/webapp/mockups/06-result-mobile.png" alt="Mock-up del resultado de la inspección en móvil" width="260"> |
+| **Observation and evidence** | **Summary** | **Result** |
+
+En el **checklist** el selector segmentado `OK · Obs. · Fail` mide 48 × 48 px, la medida mínima que establece la sección 4.1.2. No es un detalle menor: el conductor lo pulsa cuarenta y dos veces seguidas, con guantes y sin detenerse a mirar.
+
+La vista **Result** emplea el tono definido en 4.1.1 —serio, respetuoso y sereno—: describe la condición del vehículo, no evalúa al conductor, y explica el paso siguiente en lugar de alarmar.
+
+#### Flujo del supervisor — Desktop 1280 px
+
+<img src="img/webapp/mockups/07-fleet-dashboard-desktop.png" alt="Mock-up del tablero de flota en escritorio" width="1000">
+
+<img src="img/webapp/mockups/08-vehicle-detail-desktop.png" alt="Mock-up del detalle de vehículo en escritorio" width="1000">
+
+<img src="img/webapp/mockups/09-inspection-detail-desktop.png" alt="Mock-up del detalle de una inspección en escritorio" width="1000">
+
+<img src="img/webapp/mockups/10-lift-block-desktop.png" alt="Mock-up del diálogo de levantamiento de bloqueo" width="1000">
+
+<img src="img/webapp/mockups/11-inspection-history-desktop.png" alt="Mock-up del historial de inspecciones en escritorio" width="1000">
+
+<img src="img/webapp/mockups/13-documents-desktop.png" alt="Mock-up de la vista de documentos vehiculares en escritorio" width="1000">
+
+<img src="img/webapp/mockups/14-incidents-desktop.png" alt="Mock-up de la vista de incidencias en escritorio" width="1000">
+
+#### Vistas del supervisor adaptadas a Mobile
+
+<img src="img/webapp/mockups/12-fleet-mobile.png" alt="Mock-up del listado de flota adaptado a móvil" width="300">
+
+El botón **Authorize departure** del diálogo de levantamiento de bloqueo es el único elemento del producto que emplea el color destructivo. Esa excepción es deliberada: señala que la acción interrumpe el control preventivo y quedará registrada con el nombre de quien la autoriza.
 
 <a id="444-web-applications-user-flow-diagrams"></a>
 ### 4.4.4. Web Applications User Flow Diagrams.
 
+Los User Flow Diagrams representan el recorrido completo que sigue cada usuario para alcanzar un objetivo dentro de la Web Application, incluyendo las decisiones que el sistema evalúa en el camino. A diferencia de los wireflows de la sección 4.4.2, que muestran **qué ve** el usuario en cada paso, los user flows muestran **qué ocurre** y qué caminos alternativos existen cuando una condición no se cumple.
+
+Se presenta un diagrama por cada User goal, consistente con el wireflow del que deriva. Cada uno recoge el **happy path** —el recorrido cuando todo transcurre según lo previsto— y las **rutas alternativas**, que son las que en la práctica determinan si el producto resulta usable: qué ocurre cuando el conductor no tiene vehículo asignado, cuando un elemento crítico exige evidencia fotográfica, o cuando el supervisor intenta autorizar una salida sin justificarla.
+
+**Convención de color.** Cada tipo de nodo tiene un color propio, tomado de los tokens definidos en la sección 4.1.1. El color acompaña siempre al texto del nodo y nunca lo sustituye, de modo que el diagrama se lee igual sin distinguir los colores.
+
+| Color | Tipo de nodo |
+|:------|:-------------|
+| Gris oscuro | Inicio y fin del recorrido |
+| Azul | Acción que ejecuta el usuario |
+| Gris pizarra | Paso que ejecuta el sistema |
+| Ámbar (rombo) | Decisión |
+| Rojo | Ruta alternativa o salida bloqueada |
+| Verde | Salida favorable |
+
+---
+
+#### User Flow: realizar la inspección preoperacional del vehículo asignado
+
+**User goal.** Como conductor, deseo registrar el estado del vehículo que tengo asignado antes de iniciar la operación, para saber si puedo salir. Corresponde a las User Stories US17 a US21 de la sección 3.1.
+
+```mermaid
+flowchart TD
+    A([Driver signs in]) --> B{Has an active vehicle assignment?}
+    B -->|No| B1[No vehicle assigned today.<br>Contact your supervisor]
+    B1 --> Z([End])
+    B -->|Yes| C[Shows the assigned vehicle<br>and its current status]
+    C --> D[Driver starts the inspection]
+    D --> E[Registers the result of an inspection item]
+    E --> F{Is the result Observed or Fail?}
+    F -->|No · OK| J
+    F -->|Yes| G[Registers an observation<br>describing the condition]
+    G --> H{Does the item require evidence?}
+    H -->|No| J
+    H -->|Yes| I[Attaches a photograph as evidence]
+    I --> J{Are all 42 items registered?}
+    J -->|No| E
+    J -->|Yes| K[Reviews the summary<br>and submits the inspection]
+    K --> L[Applies the active evaluation rules<br>to every result]
+    L --> M{Most restrictive impact obtained}
+    M -->|Blocking| N[Not Enabled<br>Incident registered,<br>supervisor notified]
+    M -->|Observed| O[Observed<br>May operate with the<br>findings recorded]
+    M -->|None| P[Enabled<br>Authorized to operate]
+    N --> Z
+    O --> Z
+    P --> Z
+
+    classDef inicio fill:#0f172a,stroke:#0f172a,color:#ffffff
+    classDef accion fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef sistema fill:#475569,stroke:#334155,color:#ffffff
+    classDef decision fill:#b45309,stroke:#92400e,color:#ffffff
+    classDef alterna fill:#b91c1c,stroke:#991b1b,color:#ffffff
+    classDef favorable fill:#15803d,stroke:#166534,color:#ffffff
+
+    class A,Z inicio
+    class D,E,G,I,K accion
+    class C,L sistema
+    class B,F,H,J,M decision
+    class B1,N alterna
+    class O,P favorable
+```
+
+**Explicación del flujo.** El recorrido no avanza hasta que los 42 elementos tienen resultado registrado, porque una inspección incompleta no permite evaluar el vehículo y perdería su valor como evidencia. Las tres salidas finales se corresponden con los tres valores de `AuthorizationStatus` del modelo de la sección 4.8, y se determinan por el **impacto más restrictivo** obtenido: basta un solo impacto `Blocking` para que el vehículo quede `Not Enabled`, aunque los otros 41 elementos estén conformes.
+
+La ruta alternativa de la evidencia obligatoria es la que sostiene el atributo `inspection_items.requires_evidence`: cuando el elemento lo exige, el conductor no puede continuar sin adjuntar una fotografía.
+
+---
+
+#### User Flow: saber qué vehículos pueden operar y por qué
+
+**User goal.** Como supervisor de flota, deseo identificar rápidamente qué unidades están habilitadas para operar y conocer el motivo cuando alguna no lo está. Corresponde a las User Stories US25 y US35.
+
+```mermaid
+flowchart TD
+    A([Supervisor opens Fleet]) --> B[Shows the fleet grouped<br>by operational status]
+    B --> C{Is any vehicle Not Enabled?}
+    C -->|No| C1[Whole fleet authorized.<br>No action required]
+    C1 --> Z([End])
+    C -->|Yes| D[Opens the vehicle detail]
+    D --> E{Has it been inspected today?}
+    E -->|No| E1[Not inspected. The driver<br>has not started the inspection]
+    E1 --> Z
+    E -->|Yes| F[Opens the inspection detail]
+    F --> G[Shows the rule that produced<br>the blocking impact]
+    G --> H{Does the finding justify keeping the block?}
+    H -->|No · operation cannot wait| I[Lifts the block with<br>written justification]
+    H -->|Yes| J[Manages the incident<br>and schedules the repair]
+    I --> Z
+    J --> Z
+
+    classDef inicio fill:#0f172a,stroke:#0f172a,color:#ffffff
+    classDef accion fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef sistema fill:#475569,stroke:#334155,color:#ffffff
+    classDef decision fill:#b45309,stroke:#92400e,color:#ffffff
+    classDef alterna fill:#b91c1c,stroke:#991b1b,color:#ffffff
+    classDef favorable fill:#15803d,stroke:#166534,color:#ffffff
+
+    class A,Z inicio
+    class D,F,I,J accion
+    class B,G sistema
+    class C,E,H decision
+    class E1 alterna
+    class C1 favorable
+```
+
+**Explicación del flujo.** El recorrido responde a la pregunta con la que el supervisor empieza su jornada, y en tres pasos llega de la visión general de la flota a la regla concreta que bloqueó un vehículo. La ruta alternativa *"no inspeccionado"* es relevante porque un vehículo sin inspección **no está habilitado ni bloqueado**: sencillamente no ha sido evaluado, y la acción que corresponde es distinta.
+
+La decisión final bifurca hacia los otros dos objetivos del supervisor —gestionar la incidencia o levantar el bloqueo—, lo que refleja que en la operación real ambos caminos son legítimos.
+
+---
+
+#### User Flow: levantar el bloqueo de un vehículo dejando constancia
+
+**User goal.** Como supervisor de flota, deseo autorizar la salida de un vehículo no habilitado cuando la operación no puede esperar, dejando registrado quién lo autorizó y por qué. Sostiene la Estrategia 2 de la sección 2.1.2.
+
+```mermaid
+flowchart TD
+    A([Supervisor opens a<br>Not Enabled vehicle]) --> B{Does the role allow lifting a block?}
+    B -->|No| B1[Action not available. Only a supervisor<br>or administrator may authorize]
+    B1 --> Z([End])
+    B -->|Yes| C[Opens the Lift block dialog]
+    C --> D[Shows why the vehicle is Not Enabled]
+    D --> E{Has a reason been written?}
+    E -->|No| E1[A reason is required<br>to authorize the departure]
+    E1 --> C
+    E -->|Yes| F[Authorizes the departure]
+    F --> G[Records a new operational authorization<br>as an override, with reason<br>and responsible user]
+    G --> H[Vehicle status becomes Enabled]
+    H --> I[The exception appears in the audit history<br>and in the exceptions per period report]
+    I --> Z
+
+    classDef inicio fill:#0f172a,stroke:#0f172a,color:#ffffff
+    classDef accion fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef sistema fill:#475569,stroke:#334155,color:#ffffff
+    classDef decision fill:#b45309,stroke:#92400e,color:#ffffff
+    classDef alterna fill:#b91c1c,stroke:#991b1b,color:#ffffff
+    classDef favorable fill:#15803d,stroke:#166534,color:#ffffff
+
+    class A,Z inicio
+    class C,F accion
+    class D,G,H sistema
+    class B,E decision
+    class B1,E1 alterna
+    class I favorable
+```
+
+**Explicación del flujo.** Este es el recorrido que traduce a interfaz la decisión de diseño de la sección 4.8: *la excepción se permite, pero se cobra en trazabilidad*. La ruta alternativa de la justificación no es una validación de formulario cualquiera, sino la que garantiza que `operational_authorizations.override_reason` nunca quede vacío cuando `is_override` es verdadero.
+
+El último paso —la aparición de la excepción en el historial de auditoría y en el reporte de excepciones por periodo— es la contrapartida que hace aceptable permitir la excepción: el supervisor sabe, al autorizar, que su decisión queda registrada con su nombre.
 
 <a id="45-web-applications-prototyping"></a>
 ## 4.5. Web Applications Prototyping.
@@ -2549,6 +2843,85 @@ Paso 10: Separamos por BOUNDED CONTEXT en los cuales algunos tienen un cierto ti
 
 <img src="img/designLevelEventStorming/designlevel-eventstorming10.png" alt=" paso 10 del designlevelES" width="800">
 
+---
+
+#### Consolidación del modelo: Aggregates, Commands, Domain Events y Queries
+
+Las capturas anteriores recogen el resultado de la sesión. A continuación se consolida por escrito lo identificado en ella, agrupado por los seis bounded contexts de la sección 4.6, de modo que cada elemento del EventStorming pueda rastrearse hasta su clase en la sección 4.7.1 y hasta su tabla en la sección 4.8.
+
+**Notación.** El *aggregate* es la entidad que garantiza la consistencia de un grupo de objetos y es la única puerta de entrada a ellos. El *command* es la intención de un actor de cambiar el estado del sistema. El *domain event* es el hecho consumado, redactado en pasado, que se produce cuando un command se ejecuta con éxito. La *query* es una consulta que no modifica el estado.
+
+##### Identity and Access
+
+| | |
+|:---|:---|
+| **Aggregate** | `User` |
+| **Commands** | `SignIn` · `RegisterUser` · `ChangeUserRole` · `DeactivateUser` |
+| **Domain Events** | `UserSignedIn` · `UserRegistered` · `UserRoleChanged` · `UserDeactivated` |
+| **Queries** | `GetUserById` · `GetUsersByCompany` · `GetAuthenticatedUserProfile` |
+
+##### Fleet Management
+
+| | |
+|:---|:---|
+| **Aggregates** | `Company` · `Fleet` · `Vehicle` · `Driver` |
+| **Commands** | `RegisterVehicle` · `UpdateVehicle` · `RegisterDriver` · `AssignVehicleToDriver` · `CloseVehicleAssignment` · `ApplyAuthorizationResult` |
+| **Domain Events** | `VehicleRegistered` · `VehicleUpdated` · `DriverRegistered` · `VehicleAssignedToDriver` · `VehicleAssignmentClosed` · `VehicleCurrentStatusChanged` |
+| **Queries** | `GetVehicleById` · `GetVehiclesByFleet` · `GetVehiclesByStatus` · `GetVehicleAssignedToDriver` · `GetFleetSummary` |
+
+El command `ApplyAuthorizationResult` no lo origina un actor humano: lo desencadena la *policy* descrita en el contexto Evaluation and Authorization, y es la única vía por la que `vehicles.current_status` puede modificarse.
+
+##### Vehicle Documentation
+
+| | |
+|:---|:---|
+| **Aggregates** | `DocumentType` · `VehicleDocument` |
+| **Commands** | `RegisterVehicleDocument` · `UpdateVehicleDocument` · `RecalculateDocumentStatus` |
+| **Domain Events** | `VehicleDocumentRegistered` · `VehicleDocumentUpdated` · `VehicleDocumentExpiringSoon` · `VehicleDocumentExpired` |
+| **Queries** | `GetDocumentsByVehicle` · `GetExpiringDocuments` · `GetDocumentTypes` |
+
+##### Pre-Operational Inspection
+
+| | |
+|:---|:---|
+| **Aggregates** | `Inspection` · `InspectionItem` |
+| **Commands** | `StartInspection` · `RegisterInspectionResult` · `AddObservation` · `AttachEvidence` · `CompleteInspection` |
+| **Domain Events** | `InspectionStarted` · `InspectionResultRegistered` · `ObservationAdded` · `EvidenceAttached` · **`InspectionCompleted`** |
+| **Queries** | `GetInspectionById` · `GetInspectionsByVehicle` · `GetInspectionsByDriver` · `GetActiveInspectionItems` |
+
+`InspectionCompleted` es el **pivotal event** del dominio: es el hecho a partir del cual se dispara toda la cadena de evaluación y habilitación, y el que separa los dos contextos núcleo.
+
+##### Evaluation and Authorization
+
+| | |
+|:---|:---|
+| **Aggregates** | `Evaluation` · `OperationalAuthorization` · `EvaluationRule` |
+| **Commands** | `EvaluateInspection` · `IssueOperationalAuthorization` · `LiftBlock` · `DefineEvaluationRule` · `DeactivateEvaluationRule` |
+| **Domain Events** | `InspectionEvaluated` · `VehicleEnabled` · `VehicleObserved` · `VehicleNotEnabled` · `BlockLifted` · `EvaluationRuleDefined` |
+| **Queries** | `GetCurrentAuthorization` · `GetAuthorizationHistoryByVehicle` · `GetEvaluationDetail` · `GetActiveEvaluationRules` · `GetOverridesByPeriod` |
+
+##### Incident Management
+
+| | |
+|:---|:---|
+| **Aggregates** | `Incident` · `IncidentType` |
+| **Commands** | `ReportIncident` · `RegisterCorrectiveAction` · `ScheduleRepair` · `CompleteRepair` · `AddIncidentFollowUp` · `ResolveIncident` |
+| **Domain Events** | `IncidentReported` · `CorrectiveActionRegistered` · `RepairScheduled` · `RepairCompleted` · `IncidentFollowUpAdded` · `IncidentResolved` |
+| **Queries** | `GetIncidentById` · `GetOpenIncidentsByVehicle` · `GetIncidentsBySeverity` · `GetIncidentHistory` |
+
+##### Policies entre contextos
+
+Las *policies* son las reglas que conectan un domain event de un contexto con un command de otro. Son las tres que cruzan fronteras y explican cómo se comunican los contextos sin acoplarse:
+
+| Cuando ocurre | La política establece que | Y ejecuta el command |
+|:--------------|:--------------------------|:---------------------|
+| `InspectionCompleted` | toda inspección completada debe evaluarse de forma automática | `EvaluateInspection` |
+| `InspectionEvaluated` | el resultado de la evaluación determina la habilitación del vehículo | `IssueOperationalAuthorization` |
+| `VehicleNotEnabled` · `VehicleObserved` | la condición operativa resultante debe reflejarse en el vehículo y notificarse al supervisor | `ApplyAuthorizationResult` |
+
+Esta cadena es la que se traduce, en la sección 4.6.4, en las relaciones `Inspection Service → Evaluation Engine → Authorization Service → Fleet Service`.
+
+
 <a id="462-software-architecture-context-diagram"></a>
 ### 4.6.2. Software Architecture Context Diagram.
 
@@ -2597,8 +2970,6 @@ El diagrama de contexto de FleetSafe muestra los actores que interactúan con la
 - **Visitor:** cliente potencial que evalúa la propuesta de valor de FleetSafe en el Landing Page antes de crear una cuenta. Se incorpora como actor porque es el rol base de las User Stories del Landing Page descritas en la sección 3.1.
 
 El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento de objetos para las evidencias fotográficas registradas durante las inspecciones.
-
-> **Pendiente de decisión.** El servicio externo de terceros que consumirá la plataforma se encuentra en evaluación. Los dos sistemas externos representados corresponden a capacidades de infraestructura ya identificadas; una vez seleccionado el proveedor concreto, el diagrama se actualizará con su nombre y el protocolo de integración correspondiente.
 
 ---
 
@@ -4059,48 +4430,284 @@ El flujo núcleo de FleetSafe —inspección, validación, evaluación, identifi
 <a id="51-software-configuration-management"></a>
 ## 5.1. Software Configuration Management.
 
+En esta sección se establecen las decisiones y convenciones que permiten mantener la consistencia del producto a lo largo de su ciclo de vida. Son acuerdos de equipo, no preferencias individuales: su valor está en que los cinco integrantes trabajen sobre los mismos repositorios, con las mismas herramientas y las mismas convenciones, de modo que cualquiera pueda continuar el trabajo de otro sin renegociar cómo se hace.
+
 <a id="511-software-development-environment-configuration"></a>
 ### 5.1.1. Software Development Environment Configuration.
+
+A continuación se detallan los productos de software que el equipo utiliza, organizados por tipo de actividad, indicando el propósito de uso en el proyecto y la ruta de referencia para los servicios en la nube o de descarga para los productos que se ejecutan en el computador de cada integrante.
+
+#### Project Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **Trello** | Gestión del Product Backlog y de los Sprint Backlogs. Cada User Story se registra como una tarjeta con su identificador, descripción y Story Points, y las listas representan el estado de avance dentro de cada sprint. | https://trello.com |
+| **GitHub Projects** | Seguimiento de las tareas de implementación asociadas a cada rama de trabajo. | https://github.com/features/issues |
+| **Discord** | Comunicación diaria del equipo y coordinación de las sesiones de trabajo remoto. | https://discord.com/download |
+
+#### Requirements Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **UXPressia** | Elaboración de los User Personas, User Journey Maps, Empathy Maps e Impact Mapping de las secciones 2.3 y 3.2. | https://uxpressia.com |
+| **Microsoft Stream** | Alojamiento de los videos de entrevistas de needfinding y de validación, enlazados desde el informe. | https://www.microsoft365.com/launch/stream |
+
+#### Product UX/UI Design
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **Figma** | Elaboración de los wireframes, mock-ups y prototipos navegables del Landing Page y de la Web Application, y definición del design system descrito en la sección 4.1. | https://www.figma.com |
+| **FigJam** | Elaboración de los wireflow diagrams, user flow diagrams y de las sesiones de EventStorming de las secciones 2.4 y 4.6.1. | https://www.figma.com/figjam |
+
+#### Software Development
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia o de descarga |
+|:---------|:--------------------------------|:---------------------------------|
+| **IntelliJ IDEA** | Entorno de desarrollo del Backend RESTful API en Java con Spring Boot. | https://www.jetbrains.com/idea/download |
+| **WebStorm** | Entorno de desarrollo de la Frontend Web Application en Angular y TypeScript. | https://www.jetbrains.com/webstorm/download |
+| **Visual Studio Code** | Edición del Landing Page en HTML5, CSS3 y JavaScript, y del informe en Markdown. | https://code.visualstudio.com/download |
+| **JDK 21 (LTS)** | Plataforma de ejecución y compilación del Backend RESTful API. | https://adoptium.net/temurin/releases |
+| **Apache Maven** | Gestión de dependencias y construcción del Backend RESTful API. | https://maven.apache.org/download.cgi |
+| **Node.js LTS y npm** | Entorno de ejecución y gestión de dependencias de la Frontend Web Application. | https://nodejs.org/en/download |
+| **Angular CLI** | Generación de componentes, servicios y módulos, y construcción de la Web Application. | https://angular.dev/tools/cli |
+| **PostgreSQL** | Motor de base de datos relacional de la solución, según el diseño de la sección 4.8. | https://www.postgresql.org/download |
+| **Git** | Sistema de control de versiones distribuido. | https://git-scm.com/downloads |
+| **Postman** | Verificación manual de los endpoints del Backend RESTful API durante el desarrollo. | https://www.postman.com/downloads |
+
+#### Software Deployment
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **GitHub Pages** | Publicación del Landing Page como sitio estático a partir de su repositorio. | https://pages.github.com |
+| **Vercel** | Publicación de la Frontend Web Application, con despliegue automático a partir del repositorio de GitHub. | https://vercel.com |
+| **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
+| **Azure Database for PostgreSQL** | Instancia gestionada de PostgreSQL que soporta la persistencia de la solución. | https://azure.microsoft.com/products/postgresql |
+| **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
+
+**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page es un sitio estático y se publica en GitHub Pages, que ya forma parte de la misma plataforma donde reside el repositorio. La Web Application requiere un proceso de construcción de Angular y se publica en Vercel, orientado precisamente a ese caso. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y ni GitHub Pages ni Vercel lo admiten, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students.
+
+#### Software Documentation
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **GitHub** | Alojamiento del informe en formato Markdown, que constituye el entregable evaluado, y de los repositorios de los tres productos. | https://github.com |
+| **Structurizr** | Elaboración de los diagramas C4 de la sección 4.6 a partir del archivo `workspace.dsl`. | https://structurizr.com |
+| **Mermaid** | Elaboración de los diagramas de clases de la sección 4.7 y de los diagramas de base de datos de la sección 4.8, versionados junto al informe. | https://mermaid.js.org |
+| **OpenAPI y Swagger UI** | Documentación de los endpoints del Backend RESTful API, generada mediante springdoc-openapi y accesible desde el propio servicio. | https://swagger.io/tools/swagger-ui |
+
+---
 
 <a id="512-source-code-management"></a>
 ### 5.1.2. Source Code Management.
 
+El equipo utiliza **Git** como sistema de control de versiones y **GitHub** como plataforma de alojamiento. Todos los repositorios pertenecen a la organización pública **`1ASI0729-2620-16692-BitMeisters`**.
+
+#### Repositorios del proyecto
+
+| Producto | Repositorio |
+|:---------|:------------|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application |
+| Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services |
+| Informe | https://github.com/1ASI0729-2620-16692-BitMeisters/Report |
+
+El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con sus archivos de pruebas, tanto unitarias como de integración y aceptación, organizadas bajo `src/test/java` conforme a la estructura estándar de Maven.
+
+#### Implementación de GitFlow
+
+Se adopta **GitFlow**, según el modelo descrito por Vincent Driessen, con las siguientes ramas:
+
+| Rama | Propósito | Origen | Destino |
+|:-----|:----------|:-------|:--------|
+| `main` | Contiene únicamente versiones publicadas y estables. Cada integración recibe un tag de versión. | — | — |
+| `develop` | Rama de integración del trabajo en curso. Es el punto de partida y de llegada de toda funcionalidad. | `main` | `main` (vía `release`) |
+| `feature/*` | Una rama por cada funcionalidad o sección en desarrollo. | `develop` | `develop` |
+| `release/*` | Preparación de una versión: correcciones finales y actualización de la documentación. | `develop` | `main` y `develop` |
+| `hotfix/*` | Corrección urgente sobre una versión ya publicada. | `main` | `main` y `develop` |
+
+**Convenciones de nombres de rama.** El nombre se compone del tipo, una barra y una descripción breve en inglés, en minúsculas y con guiones como separador:
+
+```
+feature/<descripción-breve>      feature/vehicle-inspection-form
+                                 feature/evaluation-rules-engine
+release/<versión>                release/1.0.0
+hotfix/<descripción-breve>       hotfix/expired-token-handling
+```
+
+**Ninguna funcionalidad se integra directamente en `main`.** Toda rama `feature/*` se incorpora a `develop` mediante un Pull Request, que debe ser revisado por al menos un integrante distinto de su autor antes de aceptarse.
+
+#### Semantic Versioning
+
+Las versiones publicadas se nombran conforme a **Semantic Versioning 2.0.0**, con el formato `MAJOR.MINOR.PATCH`:
+
+| Componente | Se incrementa cuando |
+|:-----------|:---------------------|
+| `MAJOR` | se introduce un cambio incompatible con la versión anterior |
+| `MINOR` | se añade funcionalidad manteniendo la compatibilidad |
+| `PATCH` | se corrige un defecto sin alterar la funcionalidad |
+
+Cada entrega del curso corresponde a una versión publicada en `main` con su tag correspondiente: `v1.0.0` para AV1, `v2.0.0` para TB1, `v3.0.0` para AV2 y `v4.0.0` para TB2, con versiones `MINOR` y `PATCH` intermedias según el trabajo realizado.
+
+#### Conventional Commits
+
+Los mensajes de commit siguen la especificación **Conventional Commits**, con la estructura `<tipo>(<alcance>): <descripción>`. La descripción se redacta en **inglés**, en modo imperativo, en minúsculas y sin punto final.
+
+| Tipo | Se utiliza para |
+|:-----|:----------------|
+| `feat` | funcionalidad nueva perceptible por el usuario |
+| `fix` | corrección de un defecto |
+| `refactor` | cambio que no altera el comportamiento |
+| `docs` | cambios en el informe o en la documentación |
+| `test` | incorporación o modificación de pruebas |
+| `build` | dependencias, configuración de construcción o despliegue |
+| `chore` | tareas que no encajan en las anteriores |
+
+El alcance identifica el bounded context o el producto afectado —`inspection`, `evaluation`, `fleet`, `landing`— y no la capa técnica. Ejemplos tomados del histórico de los repositorios del proyecto:
+
+```
+feat: add responsive navbar with brand logo and links
+feat: create hero section with main value proposition and image
+docs(architecture): model the c4 diagrams with structurizr
+refactor: improve code structure in main files
+```
+
+---
+
 <a id="513-source-code-style-guide-and-conventions"></a>
 ### 5.1.3. Source Code Style Guide and Conventions.
+
+El equipo adopta guías de estilo ya establecidas en lugar de definir convenciones propias, de modo que el código resulte familiar para cualquier desarrollador ajeno al equipo y las decisiones de formato no sean objeto de discusión.
+
+| Lenguaje o artefacto | Guía adoptada | Referencia |
+|:---------------------|:--------------|:-----------|
+| HTML | HTML Style Guide and Coding Conventions · Google HTML/CSS Style Guide | https://www.w3schools.com/html/html5_syntax.asp · https://google.github.io/styleguide/htmlcssguide.html |
+| CSS | Google HTML/CSS Style Guide | https://google.github.io/styleguide/htmlcssguide.html |
+| JavaScript | Google JavaScript Style Guide | https://google.github.io/styleguide/jsguide.html |
+| TypeScript | Google TypeScript Style Guide · Angular coding style guide | https://google.github.io/styleguide/tsguide.html · https://angular.dev/style-guide |
+| Java | Google Java Style Guide · Spring Boot Features | https://google.github.io/styleguide/javaguide.html · https://docs.spring.io/spring-boot/reference/features |
+| Criterios de aceptación | Gherkin Conventions for Readable Specifications | https://cucumber.io/docs/bdd/better-gherkin |
+
+#### Nomenclatura
+
+**Todo el código se escribe en inglés**: nombres de clases, métodos, variables, archivos, ramas, tablas, columnas y endpoints. Los nombres del dominio proceden del Ubiquitous Language de la sección 2.5, de modo que un mismo concepto se llama igual en la interfaz, en la API y en la base de datos.
+
+| Elemento | Convención | Ejemplo |
+|:---------|:-----------|:--------|
+| Clase Java | `PascalCase`, sustantivo singular | `OperationalAuthorization` |
+| Método Java | `camelCase`, verbo en infinitivo | `evaluateInspection()` |
+| Constante Java | `UPPER_SNAKE_CASE` | `MAX_INSPECTION_ITEMS` |
+| Paquete Java | minúsculas, por bounded context | `pe.bitmeisters.fleetsafe.inspection` |
+| Tabla de base de datos | `snake_case`, plural | `operational_authorizations` |
+| Columna de base de datos | `snake_case`, singular | `override_reason` |
+| Endpoint REST | `kebab-case`, sustantivo plural | `/api/v1/operational-authorizations` |
+| Componente Angular | `kebab-case` en el archivo, `PascalCase` en la clase | `inspection-form.component.ts` · `InspectionFormComponent` |
+| Servicio Angular | sufijo `Service` | `InspectionService` |
+| Clase CSS | `kebab-case` | `.inspection-item-row` |
+| Identificador HTML | `kebab-case` | `id="vehicle-status"` |
+
+#### Convenciones propias de la solución
+
+- **Los endpoints se versionan** bajo el prefijo `/api/v1`, de modo que un cambio incompatible pueda publicarse sin romper a los consumidores existentes.
+- **Los paquetes del backend se organizan por bounded context**, no por capa técnica, en coherencia con el diagrama de componentes de la sección 4.6.4. Cada paquete contiene sus propias capas en el interior.
+- **Los textos de la interfaz no se escriben en el marcado**: se resuelven mediante los archivos de traducción de `en_US` y `es_419`, conforme a lo establecido en la sección 4.1.2.
+- **Los criterios de aceptación se redactan en Gherkin**, en tiempo presente y tercera persona, sin referencias a detalles de interfaz, según la sección 3.1.
+
+---
 
 <a id="514-software-deployment-configuration"></a>
 ### 5.1.4. Software Deployment Configuration.
 
+A continuación se especifican los pasos necesarios para lograr, a partir de los repositorios de código fuente, la publicación de cada uno de los productos de la solución.
+
+#### Landing Page — GitHub Pages
+
+El Landing Page es un sitio estático compuesto por HTML5, CSS3 y JavaScript, por lo que se publica directamente desde su repositorio sin proceso de construcción.
+
+1. En el repositorio `Landing-Page`, acceder a **Settings › Pages**.
+2. En *Build and deployment*, seleccionar como origen la rama **`main`** y la carpeta **`/ (root)`**.
+3. Confirmar con *Save*. GitHub Pages construye y publica el sitio, y devuelve la URL pública `https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/`.
+4. Cada integración en `main` vuelve a publicar el sitio de forma automática.
+
+#### Frontend Web Application — Vercel
+
+La Web Application requiere un proceso de construcción previo, que Vercel ejecuta a partir del repositorio.
+
+1. Iniciar sesión en Vercel con la cuenta de GitHub y seleccionar **Add New › Project**.
+2. Importar el repositorio `Frontend-Web-Application` de la organización.
+3. Configurar la construcción:
+   - *Framework Preset*: **Angular**
+   - *Build Command*: `ng build --configuration production`
+   - *Output Directory*: `dist/<nombre-del-proyecto>/browser`
+   - *Install Command*: `npm ci`
+4. Registrar la variable de entorno `API_BASE_URL` con la dirección pública del Backend RESTful API.
+5. Establecer `develop` como rama de vista previa y `main` como rama de producción, de modo que cada Pull Request genere un despliegue de vista previa y solo `main` publique la versión estable.
+
+#### Web Services — Azure App Service
+
+El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publica en Azure App Service, con la persistencia en Azure Database for PostgreSQL.
+
+**Preparación de la base de datos**
+
+1. Crear un servidor **Azure Database for PostgreSQL – Flexible Server**, en la región `Brazil South`, que es la más cercana a Perú.
+2. Crear la base de datos `fleetsafe` sobre ese servidor.
+3. En *Networking*, habilitar la regla **Allow public access from any Azure service within Azure**, de modo que App Service pueda alcanzarla, y añadir la dirección IP de cada integrante para poder trabajar en local.
+4. Aplicar el esquema descrito en la sección 4.8. Spring Data JPA lo genera a partir de las entidades; para los entornos publicados se conserva el script de migración en el repositorio.
+
+**Publicación del servicio**
+
+1. Construir el artefacto con `mvn clean package -DskipTests=false`, de modo que la publicación solo proceda si las pruebas pasan.
+2. Crear un **App Service** con pila de ejecución **Java 21** y contenedor **Java SE**, en la misma región que la base de datos.
+3. En *Deployment Center*, seleccionar GitHub como origen, el repositorio `Web-Services` y la rama `main`. Azure genera el flujo de trabajo de GitHub Actions que construye y publica en cada integración.
+4. Registrar en *Environment variables* los ajustes de la aplicación:
+
+   | Variable | Valor |
+   |:---------|:------|
+   | `SPRING_DATASOURCE_URL` | `jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require` |
+   | `SPRING_DATASOURCE_USERNAME` | usuario administrador del servidor |
+   | `SPRING_DATASOURCE_PASSWORD` | contraseña del servidor |
+   | `JWT_SECRET` | clave de firma del token de autenticación |
+   | `SPRING_PROFILES_ACTIVE` | `prod` |
+
+5. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>.azurewebsites.net/swagger-ui.html`.
+6. Registrar la dirección pública resultante en la variable `API_BASE_URL` de la Web Application en Vercel, y habilitar esa dirección en la configuración CORS del servicio.
+
+**Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito y ofrece crédito suficiente para los planes de nivel gratuito de App Service y de PostgreSQL Flexible Server durante el ciclo.
+
+#### Consideraciones comunes
+
+- **Ningún secreto se versiona.** Las credenciales y cadenas de conexión se registran como variables de entorno en la plataforma de despliegue, y los archivos `.env` figuran en el `.gitignore` de cada repositorio.
+- **Solo `main` publica a producción.** Las ramas `feature/*` y `develop` generan despliegues de vista previa cuando la plataforma lo permite.
+- **Cada versión publicada lleva su tag de SemVer**, de modo que una publicación pueda revertirse volviendo al tag anterior.
 
 <a id="52-landing-page-services-applications-implementation"></a>
 ## 5.2. Landing Page, Services & Applications Implementation.
 
-<a id="52x-sprint-n"></a>
-### 5.2.x. Sprint n
+<a id="521-sprint-1"></a>
+### 5.2.1. Sprint 1
 
-<a id="52x1-sprint-planning-n"></a>
-#### 5.2.x.1. Sprint Planning n.
+<a id="5211-sprint-planning-1"></a>
+#### 5.2.1.1. Sprint Planning 1.
 
-<a id="52x2-aspect-leader-and-colaborators"></a>
-#### 5.2.x.2. Aspect Leader and Colaborators.
+<a id="5212-aspect-leader-and-colaborators"></a>
+#### 5.2.1.2. Aspect Leader and Colaborators.
 
-<a id="52x3-sprint-backlog-n"></a>
-#### 5.2.x.3. Sprint Backlog n.
+<a id="5213-sprint-backlog-1"></a>
+#### 5.2.1.3. Sprint Backlog 1.
 
-<a id="52x4-development-evidence-for-sprint-review"></a>
-#### 5.2.x.4. Development Evidence for Sprint Review.
+<a id="5214-development-evidence-for-sprint-review"></a>
+#### 5.2.1.4. Development Evidence for Sprint Review.
 
-<a id="52x5-execution-evidence-for-sprint-review"></a>
-#### 5.2.x.5. Execution Evidence for Sprint Review.
+<a id="5215-execution-evidence-for-sprint-review"></a>
+#### 5.2.1.5. Execution Evidence for Sprint Review.
 
-<a id="52x6-services-documentation-evidence-for-sprint-review"></a>
-#### 5.2.x.6. Services Documentation Evidence for Sprint Review.
+<a id="5216-services-documentation-evidence-for-sprint-review"></a>
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review.
 
-<a id="52x7-software-deployment-evidence-for-sprint-review"></a>
-#### 5.2.x.7. Software Deployment Evidence for Sprint Review.
+<a id="5217-software-deployment-evidence-for-sprint-review"></a>
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review.
 
-<a id="52x8-team-colaboration-insights-during-sprint"></a>
-#### 5.2.x.8. Team Colaboration Insights during Sprint.
+<a id="5218-team-colaboration-insights-during-sprint"></a>
+#### 5.2.1.8. Team Colaboration Insights during Sprint.
 
 
 <a id="53-validation-interviews"></a>
@@ -4174,3 +4781,47 @@ DataScope. (s. f.). *Digitalización del checklist preoperacional en gestión de
 
 <a id="anexos"></a>
 # Anexos
+
+<a id="anexo-a-videos-de-exposiciones"></a>
+## Anexo A — Videos de Exposiciones
+
+En este anexo se registran los videos de exposición correspondientes a cada entrega. Cada video presenta a los cinco integrantes ante cámara y tiene una duración máxima de 30 minutos, conforme a lo establecido en el enunciado. Los videos se alojan en Microsoft Stream y se enlazan mediante su dirección completa.
+
+| Entrega | Semana | Fecha | Enlace de Microsoft Stream | Duración |
+|:--------|:-------|:------|:---------------------------|:---------|
+| **AV1** | 4 | | | |
+| **TB1** | 7 | | | |
+| **AV2** | 12 | | | |
+| **TB2** | 15 | | | |
+
+Este anexo se amplía en cada entrega con la fila correspondiente.
+
+<a id="anexo-b-videos-de-entrevistas"></a>
+## Anexo B — Videos de Entrevistas
+
+Registro de los videos de las entrevistas realizadas a los tres segmentos objetivo, tanto en la fase de needfinding como en la de validación.
+
+| Fase | Segmento | Entrevistados | Enlace de Microsoft Stream | Duración |
+|:-----|:---------|:--------------|:---------------------------|:---------|
+| Needfinding | Empresas de transporte de carga | | | |
+| Needfinding | Supervisores de flota | | | |
+| Needfinding | Conductores de vehículos de carga | | | |
+| Validación | Empresas de transporte de carga | | | |
+| Validación | Supervisores de flota | | | |
+| Validación | Conductores de vehículos de carga | | | |
+
+<a id="anexo-c-enlaces-de-los-productos"></a>
+## Anexo C — Enlaces de los productos y repositorios
+
+| Producto | Repositorio | Despliegue |
+|:---------|:------------|:-----------|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | |
+| Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | |
+| Informe | https://github.com/1ASI0729-2620-16692-BitMeisters/Report | — |
+
+| Artefacto | Enlace |
+|:----------|:-------|
+| Product Backlog en Trello | https://trello.com/b/LnAD1sH3/fleetsafe-product-backlog |
+| Organización de GitHub | https://github.com/1ASI0729-2620-16692-BitMeisters |
+
