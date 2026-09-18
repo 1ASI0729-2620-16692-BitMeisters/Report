@@ -4138,18 +4138,232 @@ El flujo núcleo de FleetSafe —inspección, validación, evaluación, identifi
 <a id="51-software-configuration-management"></a>
 ## 5.1. Software Configuration Management.
 
+En esta sección se establecen las decisiones y convenciones que permiten mantener la consistencia del producto a lo largo de su ciclo de vida. Son acuerdos de equipo, no preferencias individuales: su valor está en que los cinco integrantes trabajen sobre los mismos repositorios, con las mismas herramientas y las mismas convenciones, de modo que cualquiera pueda continuar el trabajo de otro sin renegociar cómo se hace.
+
 <a id="511-software-development-environment-configuration"></a>
 ### 5.1.1. Software Development Environment Configuration.
+
+A continuación se detallan los productos de software que el equipo utiliza, organizados por tipo de actividad, indicando el propósito de uso en el proyecto y la ruta de referencia para los servicios en la nube o de descarga para los productos que se ejecutan en el computador de cada integrante.
+
+#### Project Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **Trello** | Gestión del Product Backlog y de los Sprint Backlogs. Cada User Story se registra como una tarjeta con su identificador, descripción y Story Points, y las listas representan el estado de avance dentro de cada sprint. | https://trello.com |
+| **GitHub Projects** | Seguimiento de las tareas de implementación asociadas a cada rama de trabajo. | https://github.com/features/issues |
+| **Discord** | Comunicación diaria del equipo y coordinación de las sesiones de trabajo remoto. | https://discord.com/download |
+
+#### Requirements Management
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **UXPressia** | Elaboración de los User Personas, User Journey Maps, Empathy Maps e Impact Mapping de las secciones 2.3 y 3.2. | https://uxpressia.com |
+| **Microsoft Stream** | Alojamiento de los videos de entrevistas de needfinding y de validación, enlazados desde el informe. | https://www.microsoft365.com/launch/stream |
+
+#### Product UX/UI Design
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **Figma** | Elaboración de los wireframes, mock-ups y prototipos navegables del Landing Page y de la Web Application, y definición del design system descrito en la sección 4.1. | https://www.figma.com |
+| **FigJam** | Elaboración de los wireflow diagrams, user flow diagrams y de las sesiones de EventStorming de las secciones 2.4 y 4.6.1. | https://www.figma.com/figjam |
+
+#### Software Development
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia o de descarga |
+|:---------|:--------------------------------|:---------------------------------|
+| **IntelliJ IDEA** | Entorno de desarrollo del Backend RESTful API en Java con Spring Boot. | https://www.jetbrains.com/idea/download |
+| **WebStorm** | Entorno de desarrollo de la Frontend Web Application en Angular y TypeScript. | https://www.jetbrains.com/webstorm/download |
+| **Visual Studio Code** | Edición del Landing Page en HTML5, CSS3 y JavaScript, y del informe en Markdown. | https://code.visualstudio.com/download |
+| **JDK 21 (LTS)** | Plataforma de ejecución y compilación del Backend RESTful API. | https://adoptium.net/temurin/releases |
+| **Apache Maven** | Gestión de dependencias y construcción del Backend RESTful API. | https://maven.apache.org/download.cgi |
+| **Node.js LTS y npm** | Entorno de ejecución y gestión de dependencias de la Frontend Web Application. | https://nodejs.org/en/download |
+| **Angular CLI** | Generación de componentes, servicios y módulos, y construcción de la Web Application. | https://angular.dev/tools/cli |
+| **PostgreSQL** | Motor de base de datos relacional de la solución, según el diseño de la sección 4.8. | https://www.postgresql.org/download |
+| **Git** | Sistema de control de versiones distribuido. | https://git-scm.com/downloads |
+| **Postman** | Verificación manual de los endpoints del Backend RESTful API durante el desarrollo. | https://www.postman.com/downloads |
+
+#### Software Deployment
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **GitHub Pages** | Publicación del Landing Page como sitio estático a partir de su repositorio. | https://pages.github.com |
+| **Vercel** | Publicación de la Frontend Web Application, con despliegue automático a partir del repositorio de GitHub. | https://vercel.com |
+| **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
+
+> **Decisión pendiente.** El proveedor de alojamiento del **Backend RESTful API** y de la instancia de **PostgreSQL** se encuentra en evaluación. Vercel está orientado a aplicaciones de frontend y funciones sin estado, por lo que no resulta adecuado para un proceso Java persistente. Una vez seleccionado el proveedor, esta sección y la sección 5.1.4 se actualizarán con su nombre y su ruta de referencia.
+
+#### Software Documentation
+
+| Producto | Propósito de uso en el proyecto | Ruta de referencia |
+|:---------|:--------------------------------|:-------------------|
+| **GitHub** | Alojamiento del informe en formato Markdown, que constituye el entregable evaluado, y de los repositorios de los tres productos. | https://github.com |
+| **Structurizr** | Elaboración de los diagramas C4 de la sección 4.6 a partir del archivo `workspace.dsl`. | https://structurizr.com |
+| **Mermaid** | Elaboración de los diagramas de clases de la sección 4.7 y de los diagramas de base de datos de la sección 4.8, versionados junto al informe. | https://mermaid.js.org |
+| **OpenAPI y Swagger UI** | Documentación de los endpoints del Backend RESTful API, generada mediante springdoc-openapi y accesible desde el propio servicio. | https://swagger.io/tools/swagger-ui |
+
+---
 
 <a id="512-source-code-management"></a>
 ### 5.1.2. Source Code Management.
 
+El equipo utiliza **Git** como sistema de control de versiones y **GitHub** como plataforma de alojamiento. Todos los repositorios pertenecen a la organización pública **`1ASI0729-2620-16692-BitMeisters`**.
+
+#### Repositorios del proyecto
+
+| Producto | Repositorio |
+|:---------|:------------|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application |
+| Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services |
+| Informe | https://github.com/1ASI0729-2620-16692-BitMeisters/Report |
+
+El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con sus archivos de pruebas, tanto unitarias como de integración y aceptación, organizadas bajo `src/test/java` conforme a la estructura estándar de Maven.
+
+#### Implementación de GitFlow
+
+Se adopta **GitFlow**, según el modelo descrito por Vincent Driessen, con las siguientes ramas:
+
+| Rama | Propósito | Origen | Destino |
+|:-----|:----------|:-------|:--------|
+| `main` | Contiene únicamente versiones publicadas y estables. Cada integración recibe un tag de versión. | — | — |
+| `develop` | Rama de integración del trabajo en curso. Es el punto de partida y de llegada de toda funcionalidad. | `main` | `main` (vía `release`) |
+| `feature/*` | Una rama por cada funcionalidad o sección en desarrollo. | `develop` | `develop` |
+| `release/*` | Preparación de una versión: correcciones finales y actualización de la documentación. | `develop` | `main` y `develop` |
+| `hotfix/*` | Corrección urgente sobre una versión ya publicada. | `main` | `main` y `develop` |
+
+**Convenciones de nombres de rama.** El nombre se compone del tipo, una barra y una descripción breve en inglés, en minúsculas y con guiones como separador:
+
+```
+feature/<descripción-breve>      feature/vehicle-inspection-form
+                                 feature/evaluation-rules-engine
+release/<versión>                release/1.0.0
+hotfix/<descripción-breve>       hotfix/expired-token-handling
+```
+
+**Ninguna funcionalidad se integra directamente en `main`.** Toda rama `feature/*` se incorpora a `develop` mediante un Pull Request, que debe ser revisado por al menos un integrante distinto de su autor antes de aceptarse.
+
+#### Semantic Versioning
+
+Las versiones publicadas se nombran conforme a **Semantic Versioning 2.0.0**, con el formato `MAJOR.MINOR.PATCH`:
+
+| Componente | Se incrementa cuando |
+|:-----------|:---------------------|
+| `MAJOR` | se introduce un cambio incompatible con la versión anterior |
+| `MINOR` | se añade funcionalidad manteniendo la compatibilidad |
+| `PATCH` | se corrige un defecto sin alterar la funcionalidad |
+
+Cada entrega del curso corresponde a una versión publicada en `main` con su tag correspondiente: `v1.0.0` para AV1, `v2.0.0` para TB1, `v3.0.0` para AV2 y `v4.0.0` para TB2, con versiones `MINOR` y `PATCH` intermedias según el trabajo realizado.
+
+#### Conventional Commits
+
+Los mensajes de commit siguen la especificación **Conventional Commits**, con la estructura `<tipo>(<alcance>): <descripción>`. La descripción se redacta en **inglés**, en modo imperativo, en minúsculas y sin punto final.
+
+| Tipo | Se utiliza para |
+|:-----|:----------------|
+| `feat` | funcionalidad nueva perceptible por el usuario |
+| `fix` | corrección de un defecto |
+| `refactor` | cambio que no altera el comportamiento |
+| `docs` | cambios en el informe o en la documentación |
+| `test` | incorporación o modificación de pruebas |
+| `build` | dependencias, configuración de construcción o despliegue |
+| `chore` | tareas que no encajan en las anteriores |
+
+El alcance identifica el bounded context o el producto afectado —`inspection`, `evaluation`, `fleet`, `landing`— y no la capa técnica. Ejemplos tomados del histórico de los repositorios del proyecto:
+
+```
+feat: add responsive navbar with brand logo and links
+feat: create hero section with main value proposition and image
+docs(architecture): model the c4 diagrams with structurizr
+refactor: improve code structure in main files
+```
+
+---
+
 <a id="513-source-code-style-guide-and-conventions"></a>
 ### 5.1.3. Source Code Style Guide and Conventions.
+
+El equipo adopta guías de estilo ya establecidas en lugar de definir convenciones propias, de modo que el código resulte familiar para cualquier desarrollador ajeno al equipo y las decisiones de formato no sean objeto de discusión.
+
+| Lenguaje o artefacto | Guía adoptada | Referencia |
+|:---------------------|:--------------|:-----------|
+| HTML | HTML Style Guide and Coding Conventions · Google HTML/CSS Style Guide | https://www.w3schools.com/html/html5_syntax.asp · https://google.github.io/styleguide/htmlcssguide.html |
+| CSS | Google HTML/CSS Style Guide | https://google.github.io/styleguide/htmlcssguide.html |
+| JavaScript | Google JavaScript Style Guide | https://google.github.io/styleguide/jsguide.html |
+| TypeScript | Google TypeScript Style Guide · Angular coding style guide | https://google.github.io/styleguide/tsguide.html · https://angular.dev/style-guide |
+| Java | Google Java Style Guide · Spring Boot Features | https://google.github.io/styleguide/javaguide.html · https://docs.spring.io/spring-boot/reference/features |
+| Criterios de aceptación | Gherkin Conventions for Readable Specifications | https://cucumber.io/docs/bdd/better-gherkin |
+
+#### Nomenclatura
+
+**Todo el código se escribe en inglés**: nombres de clases, métodos, variables, archivos, ramas, tablas, columnas y endpoints. Los nombres del dominio proceden del Ubiquitous Language de la sección 2.5, de modo que un mismo concepto se llama igual en la interfaz, en la API y en la base de datos.
+
+| Elemento | Convención | Ejemplo |
+|:---------|:-----------|:--------|
+| Clase Java | `PascalCase`, sustantivo singular | `OperationalAuthorization` |
+| Método Java | `camelCase`, verbo en infinitivo | `evaluateInspection()` |
+| Constante Java | `UPPER_SNAKE_CASE` | `MAX_INSPECTION_ITEMS` |
+| Paquete Java | minúsculas, por bounded context | `pe.bitmeisters.fleetsafe.inspection` |
+| Tabla de base de datos | `snake_case`, plural | `operational_authorizations` |
+| Columna de base de datos | `snake_case`, singular | `override_reason` |
+| Endpoint REST | `kebab-case`, sustantivo plural | `/api/v1/operational-authorizations` |
+| Componente Angular | `kebab-case` en el archivo, `PascalCase` en la clase | `inspection-form.component.ts` · `InspectionFormComponent` |
+| Servicio Angular | sufijo `Service` | `InspectionService` |
+| Clase CSS | `kebab-case` | `.inspection-item-row` |
+| Identificador HTML | `kebab-case` | `id="vehicle-status"` |
+
+#### Convenciones propias de la solución
+
+- **Los endpoints se versionan** bajo el prefijo `/api/v1`, de modo que un cambio incompatible pueda publicarse sin romper a los consumidores existentes.
+- **Los paquetes del backend se organizan por bounded context**, no por capa técnica, en coherencia con el diagrama de componentes de la sección 4.6.4. Cada paquete contiene sus propias capas en el interior.
+- **Los textos de la interfaz no se escriben en el marcado**: se resuelven mediante los archivos de traducción de `en_US` y `es_419`, conforme a lo establecido en la sección 4.1.2.
+- **Los criterios de aceptación se redactan en Gherkin**, en tiempo presente y tercera persona, sin referencias a detalles de interfaz, según la sección 3.1.
+
+---
 
 <a id="514-software-deployment-configuration"></a>
 ### 5.1.4. Software Deployment Configuration.
 
+A continuación se especifican los pasos necesarios para lograr, a partir de los repositorios de código fuente, la publicación de cada uno de los productos de la solución.
+
+#### Landing Page — GitHub Pages
+
+El Landing Page es un sitio estático compuesto por HTML5, CSS3 y JavaScript, por lo que se publica directamente desde su repositorio sin proceso de construcción.
+
+1. En el repositorio `Landing-Page`, acceder a **Settings › Pages**.
+2. En *Build and deployment*, seleccionar como origen la rama **`main`** y la carpeta **`/ (root)`**.
+3. Confirmar con *Save*. GitHub Pages construye y publica el sitio, y devuelve la URL pública `https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/`.
+4. Cada integración en `main` vuelve a publicar el sitio de forma automática.
+
+#### Frontend Web Application — Vercel
+
+La Web Application requiere un proceso de construcción previo, que Vercel ejecuta a partir del repositorio.
+
+1. Iniciar sesión en Vercel con la cuenta de GitHub y seleccionar **Add New › Project**.
+2. Importar el repositorio `Frontend-Web-Application` de la organización.
+3. Configurar la construcción:
+   - *Framework Preset*: **Angular**
+   - *Build Command*: `ng build --configuration production`
+   - *Output Directory*: `dist/<nombre-del-proyecto>/browser`
+   - *Install Command*: `npm ci`
+4. Registrar la variable de entorno `API_BASE_URL` con la dirección pública del Backend RESTful API.
+5. Establecer `develop` como rama de vista previa y `main` como rama de producción, de modo que cada Pull Request genere un despliegue de vista previa y solo `main` publique la versión estable.
+
+#### Web Services — pendiente de definir el proveedor
+
+El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable mediante `mvn clean package`, y se ejecuta con `java -jar`. Los pasos independientes del proveedor son:
+
+1. Construir el artefacto con `mvn clean package -DskipTests=false`, de modo que el despliegue solo proceda si las pruebas pasan.
+2. Configurar las variables de entorno de la instancia: `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `JWT_SECRET` y las credenciales del servicio de almacenamiento de evidencias.
+3. Aplicar el esquema de base de datos descrito en la sección 4.8 sobre la instancia de PostgreSQL.
+4. Verificar que la documentación OpenAPI queda accesible en `/swagger-ui.html` una vez publicado el servicio.
+
+> **Decisión pendiente.** El proveedor de alojamiento del Backend RESTful API y de la instancia de PostgreSQL se encuentra en evaluación. Los pasos específicos de la plataforma se incorporarán a esta sección una vez tomada la decisión.
+
+#### Consideraciones comunes
+
+- **Ningún secreto se versiona.** Las credenciales y cadenas de conexión se registran como variables de entorno en la plataforma de despliegue, y los archivos `.env` figuran en el `.gitignore` de cada repositorio.
+- **Solo `main` publica a producción.** Las ramas `feature/*` y `develop` generan despliegues de vista previa cuando la plataforma lo permite.
+- **Cada versión publicada lleva su tag de SemVer**, de modo que una publicación pueda revertirse volviendo al tag anterior.
 
 <a id="52-landing-page-services-applications-implementation"></a>
 ## 5.2. Landing Page, Services & Applications Implementation.
