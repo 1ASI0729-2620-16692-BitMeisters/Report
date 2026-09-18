@@ -2200,6 +2200,229 @@ Toda búsqueda o filtro que no arroje resultados debe presentar un mensaje que e
 <a id="425-navigation-systems"></a>
 ### 4.2.5. Navigation Systems.
 
+Los sistemas de navegación definen cómo el usuario se desplaza entre las distintas vistas de FleetSafe, cómo reconoce en qué parte de la aplicación se encuentra y cómo regresa a un punto anterior. Su diseño responde a dos condiciones propias del dominio: el supervisor de flota alterna con frecuencia entre módulos para tomar decisiones, y el conductor debe poder completar la inspección sin desviarse del flujo establecido.
+
+Las decisiones que se presentan en esta sección se derivan de la estructura jerárquica por rol establecida en la sección 4.2.1, de las etiquetas definidas en la sección 4.2.2 y de los componentes de interfaz descritos en la sección 4.1.2.
+
+---
+
+#### Principios de navegación
+
+| Principio | Definición | Sustento |
+|:----------|:-----------|:---------|
+| **Navegación por rol** | Cada usuario accede únicamente a los módulos que corresponden a su rol. | Sección 4.2.1, organización jerárquica por rol. |
+| **Orientación permanente** | El usuario debe poder reconocer en todo momento en qué módulo y en qué nivel de profundidad se encuentra. | Se emplean migas de pan y resaltado del elemento activo. |
+| **Profundidad acotada** | La navegación no excede los tres niveles: módulo, listado y detalle. | Sección 4.2.1, estructura de navegación. |
+| **Retorno predecible** | Toda vista de detalle permite regresar al listado del que proviene, conservando los filtros aplicados. | Sección 4.2.4, persistencia de filtros. |
+| **Consistencia** | La posición de la navegación principal y de las acciones es la misma en todas las vistas. | Sección 4.1.2, grilla y layout. |
+
+---
+
+#### Estructura de navegación por producto
+
+| Producto | Tipo de navegación | Elementos | Niveles de profundidad |
+|:---------|:-------------------|:----------|:-----------------------|
+| **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | Encabezado fijo con menú de anclas y pie de página | 1 nivel |
+| **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | Barra lateral, migas de pan y barra superior | 3 niveles |
+
+---
+
+#### Navegación de la Landing Page
+
+La Landing Page es un sitio de una sola página con desplazamiento entre secciones, conforme a la estructura establecida en la sección 4.2.1. La navegación se resuelve mediante un encabezado fijo y anclas internas.
+
+**Encabezado fijo**
+
+| Elemento | Posición | Comportamiento |
+|:---------|:---------|:---------------|
+| Logotipo FleetSafe | Extremo izquierdo | Regresa al inicio de la página (`#inicio`) |
+| Menú de anclas | Centro | Desplaza la vista hacia la sección seleccionada |
+| Botón "Solicitar demostración" | Extremo derecho | Desplaza la vista hacia el formulario de contacto (`#contacto`) |
+
+**Menú de anclas**
+
+| Etiqueta | Anclaje | User Story |
+|:---------|:--------|:-----------|
+| Inicio | `#inicio` | US01 |
+| Funcionalidades | `#funcionalidades` | US02 |
+| Beneficios | `#beneficios` | US03 |
+| Contacto | `#contacto` | US04 |
+
+**Comportamiento del encabezado**
+
+- El encabezado permanece fijo en la parte superior durante el desplazamiento, conforme a la sección 4.1.2.
+- Al desplazarse hacia abajo, el encabezado reduce su altura para liberar espacio de contenido.
+- En resoluciones móviles, el menú de anclas se reemplaza por un menú colapsable, conforme a US05.
+
+**Pie de página**
+
+| Elemento | Contenido |
+|:---------|:----------|
+| Información de contacto | Correo electrónico, teléfono y dirección |
+| Redes sociales | Enlaces a los perfiles oficiales de FleetSafe |
+| Enlaces internos | Anclas a las secciones de la página |
+| Aviso legal | Derechos de autor y año |
+
+El pie de página se documenta conforme a US06.
+
+---
+
+#### Navegación de la Web Application
+
+La Web Application emplea una navegación jerárquica de tres niveles, en correspondencia con la estructura establecida en la sección 4.2.1.
+
+**Nivel 1 — Módulo**
+
+El primer nivel corresponde a los módulos funcionales de la aplicación. El usuario accede a ellos mediante la barra lateral de navegación, cuya visibilidad depende del rol autenticado.
+
+| Etiqueta | Ruta | Roles con acceso | User Stories relacionadas |
+|:---------|:-----|:-----------------|:--------------------------|
+| Panel | `/app/dashboard` | Administrador, Supervisor | — |
+| Usuarios | `/app/users` | Administrador | US07, US08, US11 |
+| Vehículos | `/app/vehicles` | Administrador, Supervisor | US12–US16 |
+| Inspecciones | `/app/inspections` | Supervisor, Conductor | US17–US22, US35 |
+| Habilitación | `/app/authorizations` | Supervisor | US25, US26, US37 |
+| Incidencias | `/app/incidents` | Supervisor, Conductor | US27–US31 |
+| Documentación | `/app/documents` | Supervisor | US32–US34 |
+| Reportes | `/app/reports` | Supervisor | US36 |
+
+**Nivel 2 — Listado**
+
+El segundo nivel corresponde a la vista consolidada de los objetos del módulo. Se accede desde la barra lateral y presenta los mecanismos de búsqueda y ordenamiento definidos en la sección 4.2.4.
+
+| Vista | Ruta | Filtros disponibles | User Story |
+|:------|:-----|:--------------------|:-----------|
+| Listado de usuarios | `/app/users` | Rol, estado de la cuenta | US11 |
+| Listado de vehículos | `/app/vehicles` | Estado, flota, marca, año, placa | US13 |
+| Listado de inspecciones | `/app/inspections` | Vehículo, conductor, estado, rango de fechas | US22, US35 |
+| Listado de incidencias | `/app/incidents` | Estado, vehículo, tipo, severidad, rango de fechas | US28 |
+| Listado de documentos | `/app/documents` | Tipo, estado de vigencia, rango de fechas | US33 |
+| Reporte de estado de flota | `/app/reports/fleet-status` | Rango de fechas, flota, estado | US36 |
+
+**Nivel 3 — Detalle**
+
+El tercer nivel corresponde a la vista específica de un objeto. Se accede desde el listado y permite consultar su información completa, su historial y las acciones disponibles.
+
+| Vista | Ruta | Contenido | User Story |
+|:------|:-----|:----------|:-----------|
+| Detalle de vehículo | `/app/vehicles/{id}` | Información, estado actual, historial de inspecciones, incidencias y documentos | US14 |
+| Detalle de inspección | `/app/inspections/{id}` | Resultados por elemento, observaciones y evidencias | US22 |
+| Detalle de incidencia | `/app/incidents/{id}` | Descripción, acciones correctivas, reparaciones y seguimiento | US29, US30, US31 |
+| Detalle de documento | `/app/documents/{id}` | Información del documento y estado de vigencia | US34 |
+| Historial de estados | `/app/vehicles/{id}/status-history` | Evolución del estado del vehículo | US37 |
+| Ejecución de inspección | `/app/inspections/{id}/execute` | Registro de resultados, observaciones y evidencias | US17–US21 |
+
+---
+
+#### Componentes de navegación
+
+**Barra lateral de navegación**
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| Ancho | 240 px en resoluciones de escritorio |
+| Visibilidad | Permanente en escritorio; colapsable en móvil, conforme a la sección 4.1.2 |
+| Contenido | Logotipo, módulos habilitados según el rol, datos del usuario autenticado |
+| Indicador de ubicación | El módulo activo se resalta con `color-primary-100` como fondo y `color-primary-700` como texto |
+| Acceso en móvil | Se abre mediante un botón de menú en la barra superior |
+
+**Barra superior**
+
+| Elemento | Posición | Comportamiento |
+|:---------|:---------|:---------------|
+| Botón de menú | Extremo izquierdo, solo en móvil | Abre la barra lateral |
+| Migas de pan | Centro-izquierda | Indica la ubicación actual dentro de la jerarquía |
+| Acciones rápidas | Extremo derecho | Notificaciones y menú del usuario |
+
+**Migas de pan**
+
+Las migas de pan reflejan la ruta de navegación en los tres niveles y permiten regresar a cualquier nivel anterior mediante un clic.
+
+Ejemplo para el detalle de una inspección:
+
+```
+Panel > Inspecciones > Inspección #INS-2026-0042
+```
+
+Ejemplo para el detalle de una incidencia:
+
+```
+Panel > Incidencias > Incidencia #INC-2026-0117
+```
+
+**Menú de usuario**
+
+| Opción | Comportamiento | User Story |
+|:-------|:---------------|:-----------|
+| Ver perfil | Muestra los datos del usuario autenticado | — |
+| Cerrar sesión | Finaliza la sesión y redirige a la pantalla de inicio de sesión | US10 |
+
+---
+
+#### Navegación dentro del flujo de inspección
+
+El flujo de inspección preoperacional se organiza de forma secuencial, conforme a la sección 4.2.1, y su navegación refleja esa secuencia. El conductor no navega libremente entre módulos durante la inspección; avanza paso a paso por el flujo y solo puede retroceder para corregir un elemento ya registrado.
+
+**Flujo de navegación del conductor**
+
+| Paso | Vista | Acciones disponibles | Restricción de avance |
+|:-----|:------|:---------------------|:-----------------------|
+| 1 | Selección de vehículo asignado | Iniciar inspección | Debe existir un vehículo asignado y no debe haber otra inspección en progreso |
+| 2 | Registro de elementos de inspección | Registrar resultado, agregar observación, adjuntar evidencia, retroceder | Ninguna, hasta completar el paso 5 |
+| 3 | Revisión previa | Revisar resultados registrados, corregir un elemento, cancelar | Ninguna |
+| 4 | Confirmación de finalización | Finalizar inspección, volver a la revisión | Todos los elementos deben estar completos |
+| 5 | Resultado de la evaluación | Consultar el estado determinado, regresar al panel | Ninguna |
+
+**Reglas de navegación en el flujo**
+
+- El conductor no puede acceder directamente a los módulos de supervisión durante la inspección.
+- El conductor puede abandonar la inspección en cualquier momento; en ese caso, la inspección permanece en estado *en progreso* y puede retomarse.
+- Al finalizar la inspección, el sistema determina el estado del vehículo y presenta el resultado al conductor antes de devolverlo al panel.
+
+---
+
+#### Navegación desde el panel
+
+El panel es la vista inicial de la Web Application tras la autenticación. Su función es orientar al usuario hacia la tarea que debe ejecutar, y no reemplazar la navegación principal.
+
+| Elemento del panel | Comportamiento | Rol |
+|:-------------------|:---------------|:----|
+| Indicadores de estado de flota | Enlaza al listado de vehículos filtrado por estado | Supervisor |
+| Inspecciones recientes | Enlaza al detalle de la inspección seleccionada | Supervisor |
+| Incidencias abiertas | Enlaza al listado de incidencias filtrado por estado | Supervisor |
+| Documentos próximos a vencer | Enlaza al listado de documentos filtrado por estado | Supervisor |
+| Vehículo asignado | Enlaza al inicio de la inspección | Conductor |
+
+---
+
+#### Estados de la navegación
+
+| Estado | Comportamiento |
+|:-------|:---------------|
+| Módulo activo | Se resalta en la barra lateral con `color-primary-100` como fondo y `color-primary-700` como texto |
+| Nivel actual | Se refleja en las migas de pan |
+| Ruta protegida | Si el usuario no está autenticado, el sistema redirige a la pantalla de inicio de sesión, conforme a US09 |
+| Ruta no autorizada | Si el usuario autenticado no tiene el rol requerido, el sistema redirige al panel y muestra un mensaje informativo |
+| Ruta no encontrada | El sistema muestra una vista de error con un enlace de regreso al panel |
+
+---
+
+#### Correspondencia con las User Stories
+
+| Elemento de navegación | User Stories relacionadas |
+|:-----------------------|:--------------------------|
+| Encabezado fijo de la Landing Page | US05 |
+| Menú de anclas | US05 |
+| Pie de página | US06 |
+| Barra lateral | US07–US37 |
+| Migas de pan | US14, US22, US29, US35, US37 |
+| Menú de usuario y cierre de sesión | US09, US10 |
+| Flujo de inspección | US17–US21 |
+| Redirección por falta de autenticación | US09 |
+| Redirección por falta de autorización | US07, US08 |
+
+---
+
 
 <a id="43-landing-page-ui-design"></a>
 ## 4.3. Landing Page UI Design.
