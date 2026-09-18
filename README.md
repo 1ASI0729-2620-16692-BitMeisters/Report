@@ -1590,8 +1590,139 @@ Además de los criterios establecidos en la sección 4.1.1, se aplican las sigui
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
 
+<a id="42-information-architecture"></a>
+## 4.2. Information Architecture.
+
+La arquitectura de información de FleetSafe define cómo se organiza, etiqueta, estructura y navega el contenido de la Landing Page y de la Web Application, con el fin de que los usuarios de los tres segmentos objetivo —empresas de transporte de carga, supervisores de flota y conductores— encuentren la información y ejecuten las tareas que les corresponden según su rol.
+
+Las decisiones que se presentan en esta sección se derivan de las siguientes fuentes:
+
+- Los **segmentos objetivo** definidos en la sección 1.3.
+- Los **roles de la plataforma** establecidos en la sección 1.1.1: Administrador, Supervisor de flota y Conductor.
+- Las **Epics y User Stories** definidas en la sección 3.1, que determinan las funcionalidades que cada rol debe poder ejecutar.
+- El **Ubiquitous Language** definido en la sección 2.5, que establece la terminología que debe emplearse en las etiquetas de la interfaz.
+- Las **Web Style Guidelines** establecidas en la sección 4.1.2, que condicionan la presentación de la información según el dispositivo.
+
+**Estructura general de la solución**
+
+FleetSafe está compuesta por tres productos, cada uno con una arquitectura de información diferenciada:
+
+| Producto | Audiencia | Propósito | Enfoque de arquitectura |
+|:---------|:----------|:----------|:------------------------|
+| **Landing Page** | Visitantes externos | Presentar la propuesta de valor y captar contactos | Secuencial, orientado a la narrativa de presentación |
+| **Web Application** | Usuarios autenticados | Ejecutar las funcionalidades según el rol | Jerárquico, orientado a tareas por rol |
+| **Backend RESTful API** | Desarrolladores | Exponer la lógica de negocio | Recursos RESTful, orientado a endpoints |
+
+Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.x.6.
+
+---
+
 <a id="421-organization-systems"></a>
 ### 4.2.1. Organization Systems.
+
+Los sistemas de organización determinan cómo se estructura y presenta la información a los usuarios. Para FleetSafe se emplean distintos esquemas según el producto y el tipo de contenido, en coherencia con las tareas que cada rol debe ejecutar.
+
+---
+
+#### Esquemas de organización aplicados
+
+Se emplean los siguientes esquemas, cada uno sustentado en la naturaleza del contenido que organiza y en la tarea que el usuario debe realizar sobre él.
+
+| Esquema | Producto | Contenido al que se aplica | Sustento |
+|:--------|:---------|:---------------------------|:---------|
+| **Jerárquico** | Web Application | Navegación principal por módulos según el rol del usuario | Cada rol accede únicamente a las funcionalidades que le corresponden, conforme a los roles definidos en la sección 1.1.1 y a las User Stories de la sección 3.1. |
+| **Secuencial** | Web Application | Flujo de inspección preoperacional | La inspección es un proceso ordenado que debe completarse paso a paso: iniciar (US17), registrar elementos (US18), registrar observaciones (US19), adjuntar evidencia (US20) y finalizar (US21). |
+| **Secuencial** | Landing Page | Narrativa de presentación | La Landing Page presenta la propuesta de valor en un orden progresivo: inicio (US01), funcionalidades (US02), beneficios por segmento (US03) y contacto (US04). |
+| **Por audiencia** | Landing Page | Sección de beneficios | Los beneficios se presentan diferenciados por segmento —empresas, supervisores y conductores— conforme a US03. |
+| **Por tarea** | Web Application | Vistas de supervisión | El supervisor accede a las vistas en función de la tarea que debe ejecutar: registrar vehículo (US12), consultar estado (US25), gestionar incidencias (US28), consultar historial (US35). |
+| **Por estado** | Web Application | Listado de vehículos | Los vehículos se agrupan por estado operativo —habilitado, observado, no habilitado— conforme a US25, dado que el estado es la información que determina la decisión del supervisor. |
+| **Cronológico** | Web Application | Historial de inspecciones, incidencias y estados | El historial se presenta en orden cronológico descendente, conforme a US31, US35 y US37, porque el usuario necesita conocer primero lo más reciente. |
+| **Alfabético** | Web Application | Catálogo de elementos de inspección | El catálogo se presenta en el orden definido por `display_order` y, en su defecto, alfabéticamente, para facilitar la localización de un elemento durante la inspección. |
+
+---
+
+#### Organización por rol
+
+La Web Application organiza su contenido principal según el rol del usuario autenticado. Cada rol accede a un conjunto diferenciado de módulos, conforme a las User Stories definidas en la sección 3.1.
+
+| Rol | Módulos accesibles | User Stories relacionadas |
+|:----|:-------------------|:--------------------------|
+| **Administrador** | Usuarios y roles, configuración del catálogo de inspección, reglas de evaluación | US07, US08, US11 |
+| **Supervisor de flota** | Vehículos y flota, inspecciones, evaluación y habilitación, incidencias, documentación vehicular, historial y reportes | US12–US16, US25, US26, US28–US37 |
+| **Conductor** | Inspección preoperacional, incidencias propias, consulta de sus inspecciones | US17–US22, US27 |
+
+Esta organización jerárquica por rol tiene dos consecuencias directas sobre la interfaz:
+
+- El conductor accede únicamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2, que busca reducir al mínimo los pasos necesarios para completar una inspección.
+- El supervisor no visualiza las funcionalidades administrativas, porque su tarea se concentra en el control preventivo y no en la configuración de la plataforma.
+
+---
+
+#### Organización del flujo de inspección
+
+El flujo de inspección preoperacional constituye el núcleo del dominio de FleetSafe y se organiza de forma estrictamente secuencial, porque cada paso depende del anterior y el sistema no debe permitir que la inspección se finalice sin haber completado todos los elementos.
+
+| Paso | Acción del conductor | User Story | Condición para avanzar |
+|:-----|:---------------------|:-----------|:-----------------------|
+| 1 | Iniciar la inspección del vehículo asignado | US17 | No debe existir otra inspección en progreso para el mismo vehículo |
+| 2 | Registrar el estado de cada elemento del catálogo | US18 | Todos los elementos deben tener un resultado registrado |
+| 3 | Registrar observaciones en los elementos no conformes | US19 | La observación no puede estar vacía |
+| 4 | Adjuntar evidencia fotográfica cuando corresponda | US20 | El archivo debe tener un formato permitido |
+| 5 | Finalizar la inspección | US21 | Todos los elementos deben estar completos |
+
+Al finalizar el paso 5, el sistema inicia automáticamente la evaluación del vehículo, conforme a US23 y US24, y determina su condición operativa.
+
+---
+
+#### Organización del contenido de la Landing Page
+
+La Landing Page organiza su contenido de forma secuencial, siguiendo el recorrido natural de un visitante que evalúa la propuesta de valor de FleetSafe.
+
+| Sección | Contenido | User Story |
+|:--------|:----------|:-----------|
+| 1. Encabezado | Nombre, propuesta de valor y llamada a la acción principal | US01 |
+| 2. Funcionalidades | Inspección preoperacional, evaluación de condiciones, habilitación operativa y gestión de incidencias | US02 |
+| 3. Beneficios por segmento | Beneficios diferenciados para empresas, supervisores y conductores | US03 |
+| 4. Contacto | Formulario de solicitud de demostración | US04 |
+| 5. Pie de página | Información de contacto y redes sociales | US06 |
+
+La sección de beneficios se organiza **por audiencia**, dado que cada segmento objetivo tiene necesidades distintas respecto de la plataforma, conforme a lo establecido en la sección 1.3.
+
+---
+
+#### Estructura de navegación por producto
+
+| Producto | Tipo de navegación | Niveles de profundidad | Sustento |
+|:---------|:-------------------|:-----------------------|:---------|
+| **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | 1 nivel | El visitante no requiere autenticación ni recorridos profundos. |
+| **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | 3 niveles: módulo, listado, detalle | El supervisor y el conductor requieren acceder a vistas específicas dentro de cada módulo. |
+
+**Estructura de la Web Application**
+
+En la Web Application, los tres niveles de profundidad corresponden a:
+
+- **Nivel 1 — Módulo:** agrupación funcional (por ejemplo, *Vehículos*).
+- **Nivel 2 — Listado:** vista consolidada de los objetos del módulo (por ejemplo, listado de vehículos con filtros por estado).
+- **Nivel 3 — Detalle:** vista específica de un objeto (por ejemplo, detalle de un vehículo con su historial e incidencias).
+
+Este esquema coincide con la estructura de User Stories de la sección 3.1, donde cada módulo presenta una historia de listado y una historia de detalle.
+
+---
+
+#### Correspondencia con los bounded contexts
+
+La organización de la información en la interfaz guarda correspondencia con los sub-dominios y bounded contexts identificados en la sección 4.6, lo que permite mantener coherencia entre el modelo de dominio y la estructura de navegación.
+
+| Módulo de la interfaz | Bounded context asociado (sección 4.8.1) |
+|:----------------------|:-----------------------------------------|
+| Usuarios y roles | Identity and Access |
+| Vehículos y flota | Fleet Management |
+| Inspección preoperacional | Pre-Operational Inspection |
+| Evaluación y habilitación | Evaluation and Authorization |
+| Incidencias | Incident Management |
+| Documentación vehicular | Vehicle Documentation |
+
+---
 
 <a id="422-labeling-systems"></a>
 ### 4.2.2. Labeling Systems.
