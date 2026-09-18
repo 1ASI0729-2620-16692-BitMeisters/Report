@@ -1227,7 +1227,7 @@ A continuación se presenta el Product Backlog consolidado:
 <img src="img/mockup/04-plataforma.png" width="1000">
 <img src="img/mockup/05-proceso.png" width="1000">
 <img src="img/mockup/06-perfiles.png" width="1000">
-
+<img src="img/mockup/07-equipo.png" width="1000">
 
 
 <a id="44-web-applications-uxui-design"></a>
