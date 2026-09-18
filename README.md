@@ -4209,9 +4209,11 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 |:---------|:--------------------------------|:-------------------|
 | **GitHub Pages** | Publicación del Landing Page como sitio estático a partir de su repositorio. | https://pages.github.com |
 | **Vercel** | Publicación de la Frontend Web Application, con despliegue automático a partir del repositorio de GitHub. | https://vercel.com |
+| **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
+| **Azure Database for PostgreSQL** | Instancia gestionada de PostgreSQL que soporta la persistencia de la solución. | https://azure.microsoft.com/products/postgresql |
 | **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
 
-> **Decisión pendiente.** El proveedor de alojamiento del **Backend RESTful API** y de la instancia de **PostgreSQL** se encuentra en evaluación. Vercel está orientado a aplicaciones de frontend y funciones sin estado, por lo que no resulta adecuado para un proceso Java persistente. Una vez seleccionado el proveedor, esta sección y la sección 5.1.4 se actualizarán con su nombre y su ruta de referencia.
+**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page es un sitio estático y se publica en GitHub Pages, que ya forma parte de la misma plataforma donde reside el repositorio. La Web Application requiere un proceso de construcción de Angular y se publica en Vercel, orientado precisamente a ese caso. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y ni GitHub Pages ni Vercel lo admiten, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students.
 
 #### Software Documentation
 
@@ -4369,16 +4371,36 @@ La Web Application requiere un proceso de construcción previo, que Vercel ejecu
 4. Registrar la variable de entorno `API_BASE_URL` con la dirección pública del Backend RESTful API.
 5. Establecer `develop` como rama de vista previa y `main` como rama de producción, de modo que cada Pull Request genere un despliegue de vista previa y solo `main` publique la versión estable.
 
-#### Web Services — pendiente de definir el proveedor
+#### Web Services — Azure App Service
 
-El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable mediante `mvn clean package`, y se ejecuta con `java -jar`. Los pasos independientes del proveedor son:
+El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publica en Azure App Service, con la persistencia en Azure Database for PostgreSQL.
 
-1. Construir el artefacto con `mvn clean package -DskipTests=false`, de modo que el despliegue solo proceda si las pruebas pasan.
-2. Configurar las variables de entorno de la instancia: `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `JWT_SECRET` y las credenciales del servicio de almacenamiento de evidencias.
-3. Aplicar el esquema de base de datos descrito en la sección 4.8 sobre la instancia de PostgreSQL.
-4. Verificar que la documentación OpenAPI queda accesible en `/swagger-ui.html` una vez publicado el servicio.
+**Preparación de la base de datos**
 
-> **Decisión pendiente.** El proveedor de alojamiento del Backend RESTful API y de la instancia de PostgreSQL se encuentra en evaluación. Los pasos específicos de la plataforma se incorporarán a esta sección una vez tomada la decisión.
+1. Crear un servidor **Azure Database for PostgreSQL – Flexible Server**, en la región `Brazil South`, que es la más cercana a Perú.
+2. Crear la base de datos `fleetsafe` sobre ese servidor.
+3. En *Networking*, habilitar la regla **Allow public access from any Azure service within Azure**, de modo que App Service pueda alcanzarla, y añadir la dirección IP de cada integrante para poder trabajar en local.
+4. Aplicar el esquema descrito en la sección 4.8. Spring Data JPA lo genera a partir de las entidades; para los entornos publicados se conserva el script de migración en el repositorio.
+
+**Publicación del servicio**
+
+1. Construir el artefacto con `mvn clean package -DskipTests=false`, de modo que la publicación solo proceda si las pruebas pasan.
+2. Crear un **App Service** con pila de ejecución **Java 21** y contenedor **Java SE**, en la misma región que la base de datos.
+3. En *Deployment Center*, seleccionar GitHub como origen, el repositorio `Web-Services` y la rama `main`. Azure genera el flujo de trabajo de GitHub Actions que construye y publica en cada integración.
+4. Registrar en *Environment variables* los ajustes de la aplicación:
+
+   | Variable | Valor |
+   |:---------|:------|
+   | `SPRING_DATASOURCE_URL` | `jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require` |
+   | `SPRING_DATASOURCE_USERNAME` | usuario administrador del servidor |
+   | `SPRING_DATASOURCE_PASSWORD` | contraseña del servidor |
+   | `JWT_SECRET` | clave de firma del token de autenticación |
+   | `SPRING_PROFILES_ACTIVE` | `prod` |
+
+5. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>.azurewebsites.net/swagger-ui.html`.
+6. Registrar la dirección pública resultante en la variable `API_BASE_URL` de la Web Application en Vercel, y habilitar esa dirección en la configuración CORS del servicio.
+
+**Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito y ofrece crédito suficiente para los planes de nivel gratuito de App Service y de PostgreSQL Flexible Server durante el ciclo.
 
 #### Consideraciones comunes
 
