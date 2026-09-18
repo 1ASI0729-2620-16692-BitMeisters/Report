@@ -2967,8 +2967,6 @@ El diagrama de contexto de FleetSafe muestra los actores que interactúan con la
 
 El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento de objetos para las evidencias fotográficas registradas durante las inspecciones.
 
-> **Pendiente de decisión.** El servicio externo de terceros que consumirá la plataforma se encuentra en evaluación. Los dos sistemas externos representados corresponden a capacidades de infraestructura ya identificadas; una vez seleccionado el proveedor concreto, el diagrama se actualizará con su nombre y el protocolo de integración correspondiente.
-
 ---
 
 <a id="463-software-architecture-container-diagrams"></a>
