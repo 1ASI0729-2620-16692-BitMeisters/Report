@@ -1911,6 +1911,164 @@ El siguiente cuadro permite verificar que cada etiqueta definida en esta secció
 <a id="423-seo-tags-and-meta-tags"></a>
 ### 4.2.3. SEO Tags and Meta Tags.
 
+Los SEO Tags y Meta Tags son los elementos del código HTML que describen el contenido de cada página a los motores de búsqueda y a los navegadores. Su correcta definición determina que un visitante que busca una solución de control preventivo vehicular encuentre FleetSafe, y que al encontrarla reciba una descripción precisa de lo que la plataforma ofrece.
+
+Las etiquetas definidas en esta sección se aplican a la **Landing Page**, dado que es el único producto de FleetSafe expuesto públicamente. La Web Application se encuentra detrás de autenticación y se excluye de la indexación conforme a la sección de directivas de rastreo.
+
+---
+
+#### Objetivo del etiquetado SEO
+
+El etiquetado de la Landing Page persigue tres objetivos concretos, en coherencia con los segmentos objetivo definidos en la sección 1.3 y con las estrategias competitivas planteadas en la sección 2.1.2:
+
+| Objetivo | Descripción |
+|:---------|:------------|
+| **Visibilidad ante búsquedas del dominio** | Que la Landing Page aparezca cuando un responsable de flota busque términos relacionados con inspección preoperacional, control preventivo vehicular o habilitación operativa en el contexto peruano. |
+| **Descripción precisa en resultados** | Que el título y la descripción que aparecen en los resultados de búsqueda comuniquen con exactitud qué hace FleetSafe y a quién se dirige. |
+| **Coherencia terminológica** | Que los términos empleados en las etiquetas coincidan con el Ubiquitous Language de la sección 2.5 y con las etiquetas de la sección 4.2.2, evitando sinónimos que diluyan el posicionamiento. |
+
+El tercer objetivo es determinante para la Estrategia 1 planteada en la sección 2.1.2: si FleetSafe se posiciona como la solución construida sobre el marco de cumplimiento peruano, la terminología de sus etiquetas debe reflejarlo de forma explícita.
+
+---
+
+#### Meta Tags generales
+
+Estas etiquetas se incorporan en el `<head>` del documento HTML y se aplican a toda la Landing Page.
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<title>` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título que aparece en la pestaña del navegador y en los resultados de búsqueda. |
+| `<meta charset="UTF-8">` | `UTF-8` | Codificación de caracteres, necesaria para el correcto uso del español. |
+| `<meta name="viewport">` | `width=device-width, initial-scale=1.0` | Configuración de la vista responsive, conforme a los breakpoints de la sección 4.1.2. |
+| `<meta name="description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga. Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción que aparece bajo el título en los resultados de búsqueda. Longitud aproximada: 155 caracteres. |
+| `<meta name="keywords">` | `inspección preoperacional, control preventivo vehicular, habilitación operativa, gestión de flotas, seguridad vehicular, transporte de carga, Perú` | Términos que describen el contenido. Su peso en el posicionamiento es limitado en la actualidad, pero se mantiene por completitud. |
+| `<meta name="author">` | `BitMeisters` | Identifica a la startup responsable del producto. |
+| `<meta name="robots">` | `index, follow` | Indica a los motores de búsqueda que indexen la página y sigan sus enlaces. |
+| `<meta name="language">` | `es-PE` | Declara el idioma y la variante regional, en coherencia con la sección 4.1.1. |
+| `<link rel="canonical">` | `https://fleetsafe.bitmeisters.com/` | Establece la URL canónica de la Landing Page. |
+
+---
+
+#### Open Graph Tags
+
+Las Open Graph Tags determinan cómo se presenta la Landing Page cuando se comparte en redes sociales y aplicaciones de mensajería. Su correcta definición es relevante porque los segmentos objetivo —supervisores de flota y responsables de empresas de transporte— reciben recomendaciones por canales informales.
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta property="og:type">` | `website` | Tipo de contenido. |
+| `<meta property="og:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado al compartir el enlace. |
+| `<meta property="og:description">` | `Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción mostrada al compartir el enlace. |
+| `<meta property="og:url">` | `https://fleetsafe.bitmeisters.com/` | URL canónica del contenido. |
+| `<meta property="og:image">` | `https://fleetsafe.bitmeisters.com/img/brand/og-image.png` | Imagen representativa de la plataforma. Dimensiones recomendadas: 1200 × 630 px. |
+| `<meta property="og:image:alt">` | `Interfaz de FleetSafe mostrando el estado de habilitación de una flota de vehículos de carga` | Texto alternativo de la imagen. |
+| `<meta property="og:locale">` | `es_PE` | Idioma y variante regional del contenido. |
+| `<meta property="og:site_name">` | `FleetSafe` | Nombre del sitio. |
+
+---
+
+#### Twitter Card Tags
+
+Complementan las Open Graph Tags para la presentación del enlace en la plataforma X (anteriormente Twitter).
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta name="twitter:card">` | `summary_large_image` | Formato de la tarjeta: imagen grande con título y descripción. |
+| `<meta name="twitter:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado en la tarjeta. |
+| `<meta name="twitter:description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga.` | Descripción mostrada en la tarjeta. |
+| `<meta name="twitter:image">` | `https://fleetsafe.bitmeisters.com/img/brand/og-image.png` | Imagen mostrada en la tarjeta. |
+| `<meta name="twitter:image:alt">` | `Interfaz de FleetSafe mostrando el estado de habilitación de una flota de vehículos de carga` | Texto alternativo de la imagen. |
+
+---
+
+#### Directivas para la Web Application
+
+La Web Application no debe ser indexada por los motores de búsqueda, dado que su contenido requiere autenticación y expone información operativa de la empresa. Por ello, todas sus vistas incorporan la siguiente directiva:
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta name="robots">` | `noindex, nofollow` | Impide la indexación de las vistas autenticadas y el seguimiento de sus enlaces. |
+
+Adicionalmente, se configura un archivo `robots.txt` en la raíz del dominio que restringe el rastreo de las rutas de la Web Application:
+
+```text
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /api/
+```
+
+El archivo `sitemap.xml` incluye únicamente las secciones públicas de la Landing Page.
+
+---
+
+#### Etiquetas por sección de la Landing Page
+
+La Landing Page es un sitio de una sola página con desplazamiento entre secciones. Dado que las secciones no constituyen URLs independientes, se emplean **etiquetas de encabezado semánticas** (`<h1>`, `<h2>`, `<h3>`) y **atributos de anclaje** (`id`) para que los motores de búsqueda identifiquen la estructura del contenido.
+
+| Sección | Encabezado | Anclaje | User Story |
+|:--------|:-----------|:--------|:-----------|
+| Inicio | `<h1>Control preventivo y habilitación operativa de su flota</h1>` | `#inicio` | US01 |
+| Funcionalidades | `<h2>Funcionalidades de FleetSafe</h2>` | `#funcionalidades` | US02 |
+| Beneficios | `<h2>Beneficios para su organización</h2>` | `#beneficios` | US03 |
+| Contacto | `<h2>Solicite una demostración</h2>` | `#contacto` | US04 |
+
+**Regla de encabezados:** cada página debe contener exactamente un `<h1>`, y los niveles `<h2>` y `<h3>` deben respetar la jerarquía sin saltos, conforme a las buenas prácticas de accesibilidad establecidas en la sección 4.1.2.
+
+---
+
+#### Datos estructurados
+
+Se incorpora un bloque de datos estructurados en formato JSON-LD que describe la organización y el producto, con el fin de que los motores de búsqueda presenten información enriquecida en los resultados.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FleetSafe",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Plataforma web de control preventivo vehicular para empresas de transporte de carga. Permite realizar inspecciones preoperacionales digitales y determinar si un vehículo se encuentra habilitado para operar.",
+  "inLanguage": "es-PE",
+  "author": {
+    "@type": "Organization",
+    "name": "BitMeisters"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PEN",
+    "description": "Periodo de prueba"
+  }
+}
+```
+
+> **Nota:** los valores de `offers` son provisionales, dado que el modelo de negocio de FleetSafe se encuentra pendiente de definición conforme a lo establecido en la sección 1.1.1.
+
+---
+
+#### Palabras clave por segmento
+
+Las palabras clave se seleccionan a partir de los segmentos objetivo definidos en la sección 1.3 y de los términos del Ubiquitous Language de la sección 2.5.
+
+| Segmento | Palabras clave principales |
+|:---------|:---------------------------|
+| **Empresas de transporte de carga** | control preventivo vehicular, seguridad de flota, habilitación operativa, gestión de flotas Perú, cumplimiento normativo transporte |
+| **Supervisores de flota** | inspección preoperacional digital, control de vehículos, estado de flota, gestión de incidencias vehiculares, historial de inspecciones |
+| **Conductores de vehículos de carga** | inspección de vehículo, revisión preoperacional, reporte de fallas, checklist digital de vehículo |
+
+---
+
+#### Relación con las estrategias competitivas
+
+El etiquetado definido en esta sección sustenta directamente dos de las estrategias planteadas en la sección 2.1.2:
+
+| Estrategia | Relación con el etiquetado |
+|:-----------|:---------------------------|
+| **Estrategia 1: Especialización en el marco de cumplimiento peruano** | Las palabras clave incorporan la referencia geográfica y las etiquetas mencionan el contexto peruano, lo que permite diferenciar a FleetSafe de soluciones construidas sobre marcos normativos de otros países. |
+| **Estrategia 5: Localización y acompañamiento local** | El idioma declarado es `es-PE`, y la terminología empleada en las etiquetas corresponde al español latinoamericano establecido en la sección 4.1.1. |
+
+---
+
 <a id="424-searching-systems"></a>
 ### 4.2.4. Searching Systems.
 
