@@ -1727,6 +1727,187 @@ La organización de la información en la interfaz guarda correspondencia con lo
 <a id="422-labeling-systems"></a>
 ### 4.2.2. Labeling Systems.
 
+Los sistemas de etiquetado definen los términos que se emplean en la interfaz para nombrar las secciones, los módulos, las acciones y los estados que el usuario encuentra durante su recorrido por FleetSafe. Su propósito es que el usuario reconozca de inmediato qué hace cada elemento y qué información contiene cada vista, sin necesidad de interpretar términos técnicos ni de aprender una nomenclatura ajena a su actividad.
+
+Las etiquetas que se definen en esta sección se derivan directamente del **Ubiquitous Language** establecido en la sección 2.5, conforme al principio de redacción formulado en la sección 4.1.1, según el cual la interfaz emplea los términos del dominio y no sinónimos técnicos.
+
+---
+
+#### Principios de etiquetado
+
+| Principio | Definición | Ejemplo |
+|:----------|:-----------|:--------|
+| **Terminología del dominio** | Se emplean los términos del Ubiquitous Language y no sinónimos técnicos. | Se emplea *inspección preoperacional*, no *checklist* ni *formulario*. |
+| **Orientación a la tarea** | Las etiquetas describen lo que el usuario hace, no la estructura interna del sistema. | Se emplea *Registrar vehículo*, no *Crear entidad de vehículo*. |
+| **Consistencia** | Un mismo concepto se nombra siempre con la misma etiqueta en toda la interfaz. | *Habilitado*, *Observado* y *No habilitado* se emplean de forma uniforme en listados, tarjetas y detalles. |
+| **Precisión sobre brevedad** | Cuando abreviar introduce ambigüedad, se prefiere la etiqueta completa. | Se emplea *Elementos de inspección*, no *Elementos*. |
+| **Idioma del usuario** | Las etiquetas se redactan en español latinoamericano, conforme a la sección 4.1.1. | Se emplea *Conductor*, no *Driver* ni *Chofer*. |
+| **Voz activa en acciones** | Las acciones se expresan en infinitivo o en imperativo según el contexto. | *Registrar incidencia* (menú), *Registrar incidencia* (botón). |
+
+---
+
+#### Etiquetas de navegación principal
+
+La navegación principal de la Web Application se organiza por módulos, en correspondencia con los esquemas jerárquicos definidos en la sección 4.2.1 y con los bounded contexts identificados en la sección 4.8.1.
+
+| Etiqueta en la interfaz | Módulo | Bounded context (sección 4.8.1) | Roles con acceso |
+|:------------------------|:-------|:--------------------------------|:-----------------|
+| **Panel** | Vista inicial con indicadores de estado de la flota | — | Administrador, Supervisor |
+| **Usuarios** | Gestión de usuarios y roles | Identity and Access | Administrador |
+| **Vehículos** | Registro y consulta de vehículos de la flota | Fleet Management | Administrador, Supervisor |
+| **Inspecciones** | Registro y consulta de inspecciones preoperacionales | Pre-Operational Inspection | Supervisor, Conductor |
+| **Habilitación** | Estados de habilitación operativa de los vehículos | Evaluation and Authorization | Supervisor |
+| **Incidencias** | Registro y seguimiento de incidencias | Incident Management | Supervisor, Conductor |
+| **Documentación** | Control de documentos vehiculares y vencimientos | Vehicle Documentation | Supervisor |
+| **Reportes** | Historial y reportes de control preventivo | — | Supervisor |
+
+Las etiquetas **Panel** y **Reportes** no corresponden a un bounded context específico, dado que agregan información proveniente de varios de ellos.
+
+---
+
+#### Etiquetas de estados del vehículo
+
+Los tres estados del vehículo constituyen la información más relevante de la interfaz, porque responden a la pregunta principal de FleetSafe planteada en la sección 1.2: *¿este vehículo cumple las condiciones necesarias para operar?* Por esta razón, sus etiquetas deben ser inequívocas y emplearse de forma uniforme en todas las vistas.
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Habilitado** | `ENABLED` | El vehículo cumple las condiciones necesarias para operar. |
+| **Observado** | `OBSERVED` | El vehículo presenta condiciones que requieren atención o seguimiento, pero no impiden necesariamente su operación. |
+| **No habilitado** | `NOT_ENABLED` | El vehículo presenta una condición que impide que sea considerado apto para operar. |
+
+Estas etiquetas se emplean de forma idéntica en listados, tarjetas, vistas de detalle, historial y reportes. No se emplean variantes como *Apto*, *En observación* o *Bloqueado*, porque introducirían ambigüedad respecto de los valores del dominio.
+
+---
+
+#### Etiquetas de estados de la inspección
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **En progreso** | `IN_PROGRESS` | La inspección ha sido iniciada y aún no ha sido finalizada. |
+| **Completada** | `COMPLETED` | La inspección ha sido finalizada y el sistema ha iniciado su evaluación. |
+| **Cancelada** | `CANCELLED` | La inspección fue interrumpida y no será considerada en la evaluación. |
+
+---
+
+#### Etiquetas de resultados de inspección
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Conforme** | `OK` | El elemento revisado se encuentra en condiciones adecuadas. |
+| **Observado** | `OBSERVED` | El elemento revisado presenta una condición que requiere atención. |
+| **No conforme** | `FAIL` | El elemento revisado presenta una condición que impide su uso o afecta la seguridad. |
+| **No aplica** | `NOT_APPLICABLE` | El elemento no corresponde al vehículo inspeccionado. |
+
+Se emplea **No conforme** en lugar de *Fallido* o *Falla*, porque describe la condición encontrada y no anticipa su causa, conforme al principio de neutralidad formulado en la sección 4.1.1.
+
+---
+
+#### Etiquetas de estados de la incidencia
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Registrada** | `REGISTERED` | La incidencia ha sido registrada y aún no ha sido revisada. |
+| **En revisión** | `IN_REVIEW` | El supervisor se encuentra revisando la incidencia. |
+| **Resuelta** | `RESOLVED` | Se ha registrado la acción correctiva que soluciona el problema. |
+| **Cerrada** | `CLOSED` | La incidencia ha sido verificada y no admite nuevas actualizaciones. |
+
+---
+
+#### Etiquetas de estados de la documentación vehicular
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Vigente** | `VALID` | El documento se encuentra dentro de su periodo de vigencia. |
+| **Próximo a vencer** | `EXPIRING` | El documento se encuentra dentro del umbral de alerta previo a su vencimiento. |
+| **Vencido** | `EXPIRED` | El documento ha superado su fecha de vencimiento. |
+
+---
+
+#### Etiquetas de acciones
+
+Las acciones se expresan mediante verbos en infinitivo cuando aparecen en menús o encabezados de vista, y en imperativo cuando constituyen la etiqueta de un botón que el usuario ejecuta en el momento.
+
+| Etiqueta en la interfaz | Acción | User Story |
+|:------------------------|:-------|:-----------|
+| **Iniciar inspección** | Crea una nueva inspección preoperacional en estado en progreso | US17 |
+| **Registrar resultado** | Almacena el resultado de un elemento de inspección | US18 |
+| **Agregar observación** | Registra una observación asociada a un elemento no conforme | US19 |
+| **Adjuntar evidencia** | Incorpora una fotografía que respalda la condición detectada | US20 |
+| **Finalizar inspección** | Cierra la inspección e inicia la evaluación del vehículo | US21 |
+| **Registrar vehículo** | Incorpora un nuevo vehículo a la flota | US12 |
+| **Asignar conductor** | Vincula un vehículo a un conductor para la inspección | US16 |
+| **Registrar incidencia** | Crea una incidencia asociada a un vehículo | US27 |
+| **Registrar acción correctiva** | Documenta la acción aplicada a una incidencia | US30 |
+| **Solicitar excepción** | Registra el levantamiento de un bloqueo, con responsable y justificación | Estrategia 2 (sección 2.1.2) |
+
+La etiqueta **Solicitar excepción** se incorpora de forma deliberada y no se denomina *Desbloquear vehículo*, porque el dominio exige que el levantamiento de un bloqueo quede registrado con responsable y justificación, conforme a la decisión de diseño establecida en la sección 4.8.1 para la tabla `operational_authorizations`.
+
+---
+
+#### Etiquetas de campos de formulario
+
+| Etiqueta en la interfaz | Campo del modelo (sección 4.7.1) | Observación |
+|:------------------------|:---------------------------------|:------------|
+| **Placa** | `Vehicle.plate` | Se presenta en mayúsculas y con tipografía `mono-data`. |
+| **Marca** | `Vehicle.brand` | — |
+| **Modelo** | `Vehicle.model` | — |
+| **Año** | `Vehicle.year` | — |
+| **Capacidad** | `Vehicle.capacity` | Se indica la unidad de medida en el propio campo. |
+| **Número de licencia** | `Driver.licenseNumber` | Se presenta en `mono-data`. |
+| **Vencimiento de licencia** | `Driver.licenseExpirationDate` | Formato `DD/MM/AAAA`. |
+| **Fecha de vencimiento** | `VehicleDocument.expirationDate` | Formato `DD/MM/AAAA`. |
+| **Odómetro** | `Inspection.odometer` | Se indica la unidad de medida en el propio campo. |
+
+---
+
+#### Etiquetas de la Landing Page
+
+| Etiqueta | Sección | User Story |
+|:---------|:--------|:-----------|
+| **Inicio** | Encabezado con la propuesta de valor | US01 |
+| **Funcionalidades** | Descripción de las capacidades de la plataforma | US02 |
+| **Beneficios** | Beneficios diferenciados por segmento | US03 |
+| **Contacto** | Formulario de solicitud de demostración | US04 |
+| **Solicitar demostración** | Botón de llamada a la acción principal | US04 |
+| **Conocer más** | Botón de llamada a la acción secundaria | US02 |
+
+---
+
+#### Términos que se evitan
+
+Con el fin de mantener la coherencia entre el modelo de dominio y la interfaz, se evitan de forma deliberada los siguientes términos.
+
+| Término evitado | Término adoptado | Motivo |
+|:----------------|:-----------------|:-------|
+| Checklist | Inspección preoperacional | Anglicismo ajeno al Ubiquitous Language. |
+| Formulario | Inspección preoperacional | Describe el soporte, no la actividad del dominio. |
+| Activo | Vehículo | Término genérico que diluye el objeto del dominio. |
+| Ticket | Incidencia | Anglicismo ajeno al Ubiquitous Language. |
+| Bloqueado | No habilitado | Introduce una connotación distinta a la del estado del dominio. |
+| Apto | Habilitado | Introduce una valoración que el dominio no establece. |
+| Chofer | Conductor | Regionalismo; el Ubiquitous Language adopta *Driver* (Conductor). |
+| Usuario final | Conductor, Supervisor de flota | No distingue el rol, que es determinante en FleetSafe. |
+
+---
+
+#### Correspondencia entre etiquetas y User Stories
+
+El siguiente cuadro permite verificar que cada etiqueta definida en esta sección se corresponde con una funcionalidad efectivamente definida en la sección 3.1.
+
+| Grupo de etiquetas | User Stories relacionadas |
+|:-------------------|:--------------------------|
+| Navegación principal | US07–US37 |
+| Estados del vehículo | US24, US25, US26, US37 |
+| Estados de la inspección | US17, US21, US22 |
+| Resultados de inspección | US18, US19, US20 |
+| Estados de la incidencia | US27, US29, US30, US31 |
+| Estados de la documentación | US32, US33, US34 |
+| Acciones | US12, US16, US17–US21, US27, US30 |
+| Campos de formulario | US12, US15, US32, US34 |
+| Landing Page | US01–US06 |
+
+---
+
 <a id="423-seo-tags-and-meta-tags"></a>
 ### 4.2.3. SEO Tags and Meta Tags.
 
