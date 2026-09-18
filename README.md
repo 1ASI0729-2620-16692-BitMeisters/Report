@@ -2619,6 +2619,155 @@ El botón **Authorize departure** del diálogo de levantamiento de bloqueo es el
 <a id="444-web-applications-user-flow-diagrams"></a>
 ### 4.4.4. Web Applications User Flow Diagrams.
 
+Los User Flow Diagrams representan el recorrido completo que sigue cada usuario para alcanzar un objetivo dentro de la Web Application, incluyendo las decisiones que el sistema evalúa en el camino. A diferencia de los wireflows de la sección 4.4.2, que muestran **qué ve** el usuario en cada paso, los user flows muestran **qué ocurre** y qué caminos alternativos existen cuando una condición no se cumple.
+
+Se presenta un diagrama por cada User goal, consistente con el wireflow del que deriva. Cada uno recoge el **happy path** —el recorrido cuando todo transcurre según lo previsto— y las **rutas alternativas**, que son las que en la práctica determinan si el producto resulta usable: qué ocurre cuando el conductor no tiene vehículo asignado, cuando un elemento crítico exige evidencia fotográfica, o cuando el supervisor intenta autorizar una salida sin justificarla.
+
+**Convención de color.** Cada tipo de nodo tiene un color propio, tomado de los tokens definidos en la sección 4.1.1. El color acompaña siempre al texto del nodo y nunca lo sustituye, de modo que el diagrama se lee igual sin distinguir los colores.
+
+| Color | Tipo de nodo |
+|:------|:-------------|
+| Gris oscuro | Inicio y fin del recorrido |
+| Azul | Acción que ejecuta el usuario |
+| Gris pizarra | Paso que ejecuta el sistema |
+| Ámbar (rombo) | Decisión |
+| Rojo | Ruta alternativa o salida bloqueada |
+| Verde | Salida favorable |
+
+---
+
+#### User Flow: realizar la inspección preoperacional del vehículo asignado
+
+**User goal.** Como conductor, deseo registrar el estado del vehículo que tengo asignado antes de iniciar la operación, para saber si puedo salir. Corresponde a las User Stories US17 a US21 de la sección 3.1.
+
+```mermaid
+flowchart TD
+    A([Driver signs in]) --> B{Has an active vehicle assignment?}
+    B -->|No| B1[No vehicle assigned today.<br>Contact your supervisor]
+    B1 --> Z([End])
+    B -->|Yes| C[Shows the assigned vehicle<br>and its current status]
+    C --> D[Driver starts the inspection]
+    D --> E[Registers the result of an inspection item]
+    E --> F{Is the result Observed or Fail?}
+    F -->|No · OK| J
+    F -->|Yes| G[Registers an observation<br>describing the condition]
+    G --> H{Does the item require evidence?}
+    H -->|No| J
+    H -->|Yes| I[Attaches a photograph as evidence]
+    I --> J{Are all 42 items registered?}
+    J -->|No| E
+    J -->|Yes| K[Reviews the summary<br>and submits the inspection]
+    K --> L[Applies the active evaluation rules<br>to every result]
+    L --> M{Most restrictive impact obtained}
+    M -->|Blocking| N[Not Enabled<br>Incident registered,<br>supervisor notified]
+    M -->|Observed| O[Observed<br>May operate with the<br>findings recorded]
+    M -->|None| P[Enabled<br>Authorized to operate]
+    N --> Z
+    O --> Z
+    P --> Z
+
+    classDef inicio fill:#0f172a,stroke:#0f172a,color:#ffffff
+    classDef accion fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef sistema fill:#475569,stroke:#334155,color:#ffffff
+    classDef decision fill:#b45309,stroke:#92400e,color:#ffffff
+    classDef alterna fill:#b91c1c,stroke:#991b1b,color:#ffffff
+    classDef favorable fill:#15803d,stroke:#166534,color:#ffffff
+
+    class A,Z inicio
+    class D,E,G,I,K accion
+    class C,L sistema
+    class B,F,H,J,M decision
+    class B1,N alterna
+    class O,P favorable
+```
+
+**Explicación del flujo.** El recorrido no avanza hasta que los 42 elementos tienen resultado registrado, porque una inspección incompleta no permite evaluar el vehículo y perdería su valor como evidencia. Las tres salidas finales se corresponden con los tres valores de `AuthorizationStatus` del modelo de la sección 4.8, y se determinan por el **impacto más restrictivo** obtenido: basta un solo impacto `Blocking` para que el vehículo quede `Not Enabled`, aunque los otros 41 elementos estén conformes.
+
+La ruta alternativa de la evidencia obligatoria es la que sostiene el atributo `inspection_items.requires_evidence`: cuando el elemento lo exige, el conductor no puede continuar sin adjuntar una fotografía.
+
+---
+
+#### User Flow: saber qué vehículos pueden operar y por qué
+
+**User goal.** Como supervisor de flota, deseo identificar rápidamente qué unidades están habilitadas para operar y conocer el motivo cuando alguna no lo está. Corresponde a las User Stories US25 y US35.
+
+```mermaid
+flowchart TD
+    A([Supervisor opens Fleet]) --> B[Shows the fleet grouped<br>by operational status]
+    B --> C{Is any vehicle Not Enabled?}
+    C -->|No| C1[Whole fleet authorized.<br>No action required]
+    C1 --> Z([End])
+    C -->|Yes| D[Opens the vehicle detail]
+    D --> E{Has it been inspected today?}
+    E -->|No| E1[Not inspected. The driver<br>has not started the inspection]
+    E1 --> Z
+    E -->|Yes| F[Opens the inspection detail]
+    F --> G[Shows the rule that produced<br>the blocking impact]
+    G --> H{Does the finding justify keeping the block?}
+    H -->|No · operation cannot wait| I[Lifts the block with<br>written justification]
+    H -->|Yes| J[Manages the incident<br>and schedules the repair]
+    I --> Z
+    J --> Z
+
+    classDef inicio fill:#0f172a,stroke:#0f172a,color:#ffffff
+    classDef accion fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef sistema fill:#475569,stroke:#334155,color:#ffffff
+    classDef decision fill:#b45309,stroke:#92400e,color:#ffffff
+    classDef alterna fill:#b91c1c,stroke:#991b1b,color:#ffffff
+    classDef favorable fill:#15803d,stroke:#166534,color:#ffffff
+
+    class A,Z inicio
+    class D,F,I,J accion
+    class B,G sistema
+    class C,E,H decision
+    class E1 alterna
+    class C1 favorable
+```
+
+**Explicación del flujo.** El recorrido responde a la pregunta con la que el supervisor empieza su jornada, y en tres pasos llega de la visión general de la flota a la regla concreta que bloqueó un vehículo. La ruta alternativa *"no inspeccionado"* es relevante porque un vehículo sin inspección **no está habilitado ni bloqueado**: sencillamente no ha sido evaluado, y la acción que corresponde es distinta.
+
+La decisión final bifurca hacia los otros dos objetivos del supervisor —gestionar la incidencia o levantar el bloqueo—, lo que refleja que en la operación real ambos caminos son legítimos.
+
+---
+
+#### User Flow: levantar el bloqueo de un vehículo dejando constancia
+
+**User goal.** Como supervisor de flota, deseo autorizar la salida de un vehículo no habilitado cuando la operación no puede esperar, dejando registrado quién lo autorizó y por qué. Sostiene la Estrategia 2 de la sección 2.1.2.
+
+```mermaid
+flowchart TD
+    A([Supervisor opens a<br>Not Enabled vehicle]) --> B{Does the role allow lifting a block?}
+    B -->|No| B1[Action not available. Only a supervisor<br>or administrator may authorize]
+    B1 --> Z([End])
+    B -->|Yes| C[Opens the Lift block dialog]
+    C --> D[Shows why the vehicle is Not Enabled]
+    D --> E{Has a reason been written?}
+    E -->|No| E1[A reason is required<br>to authorize the departure]
+    E1 --> C
+    E -->|Yes| F[Authorizes the departure]
+    F --> G[Records a new operational authorization<br>as an override, with reason<br>and responsible user]
+    G --> H[Vehicle status becomes Enabled]
+    H --> I[The exception appears in the audit history<br>and in the exceptions per period report]
+    I --> Z
+
+    classDef inicio fill:#0f172a,stroke:#0f172a,color:#ffffff
+    classDef accion fill:#2563eb,stroke:#1d4ed8,color:#ffffff
+    classDef sistema fill:#475569,stroke:#334155,color:#ffffff
+    classDef decision fill:#b45309,stroke:#92400e,color:#ffffff
+    classDef alterna fill:#b91c1c,stroke:#991b1b,color:#ffffff
+    classDef favorable fill:#15803d,stroke:#166534,color:#ffffff
+
+    class A,Z inicio
+    class C,F accion
+    class D,G,H sistema
+    class B,E decision
+    class B1,E1 alterna
+    class I favorable
+```
+
+**Explicación del flujo.** Este es el recorrido que traduce a interfaz la decisión de diseño de la sección 4.8: *la excepción se permite, pero se cobra en trazabilidad*. La ruta alternativa de la justificación no es una validación de formulario cualquiera, sino la que garantiza que `operational_authorizations.override_reason` nunca quede vacío cuando `is_override` es verdadero.
+
+El último paso —la aparición de la excepción en el historial de auditoría y en el reporte de excepciones por periodo— es la contrapartida que hace aceptable permitir la excepción: el supervisor sabe, al autorizar, que su decisión queda registrada con su nombre.
 
 <a id="45-web-applications-prototyping"></a>
 ## 4.5. Web Applications Prototyping.
