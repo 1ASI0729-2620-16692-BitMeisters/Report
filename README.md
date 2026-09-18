@@ -30,9 +30,22 @@
 <a id="registro-de-versiones-del-informe"></a>
 # **Registro de Versiones del Informe**
 
-| Versión | Fecha | Autor   | Descripción de modificación |
-|:--------|:------|:--------|:----------------------------|
-| AV1     |       | Gerardo | palabra                     |
+| Versión | Fecha | Autor | Descripción de modificación |
+|:--------|:------|:------|:----------------------------|
+| 0.1.0 | 2026-09-03 | Gerardo Palacin | Estructura inicial del informe a partir de la plantilla del curso: carátula, tabla de contenido de cuatro niveles y encabezados de los cinco capítulos. |
+| 0.2.0 | 2026-09-05 | Gerardo Palacin | Redacción del Capítulo I —Startup Profile, Solution Profile con 5W+2H, Lean UX y segmentos objetivo— y del inicio del Capítulo II. |
+| 0.3.0 | 2026-09-07 | Gerardo Palacin | Incorporación del Ubiquitous Language de la sección 2.5, con treinta términos del dominio agrupados en cinco familias. |
+| 0.4.0 | 2026-09-10 | Rodrigo Aguilar | Incorporación de las User Stories con criterios de aceptación en Gherkin (3.1) y del Product Backlog priorizado con Story Points (3.3). |
+| 0.5.0 | 2026-09-10 | Rodrigo Aguilar | Primera versión de la arquitectura: diagramas C4 de contexto, contenedores y componentes (4.6), diagrama de clases consolidado (4.7) y diagrama de base de datos consolidado (4.8). |
+| 0.6.0 | 2026-09-11 | Alejandro Espino | **Corrección por autocrítica del equipo.** Se verificó el comportamiento real de los competidores y se comprobó que la ventaja competitiva declarada era falsa: Whip Around y Fleetio también retienen el vehículo ante un defecto. Se reconstruyó el análisis competitivo (2.1) sobre datos verificados, se incorporó el competidor latinoamericano Vehicheck y los competidores indirectos peruanos, y se replanteó la ventaja competitiva como estrategia de enfoque en el marco normativo peruano. |
+| 0.6.1 | 2026-09-11 | Alejandro Espino | **Corrección de formato.** El Competitive Analysis Landscape no seguía la plantilla del enunciado: el SWOT estaba en fichas separadas, los nombres de fila no eran los literales exigidos y la pregunta del análisis quedaba fuera del cuadro. Se reestructuró en una sola tabla conforme al formato oficial. |
+| 0.6.2 | 2026-09-11 | Alejandro Espino | Redacción de la sección Bibliografía, que se encontraba vacía, con catorce referencias en formato APA correspondientes al análisis competitivo. |
+| 0.7.0 | 2026-09-11 | Alejandro Espino | **Corrección por autocrítica del equipo.** El diseño de base de datos era un único diagrama consolidado, cuando el enunciado exige uno por bounded context, y el modelo presentaba huecos que impedían implementar el motor de evaluación. Se dividió en seis diagramas por contexto más el consolidado, se renombraron las entidades según el glosario de 2.5, se incorporaron `observations`, `evidences` y `operational_authorizations`, y se añadieron las entidades `drivers` y `vehicle_assignments`. |
+| 0.8.0 | 2026-09-18 | Juan Manuel Santos | Incorporación del wireframe del Landing Page (4.3.1), con las diez secciones de la página en versión Desktop. |
+| 0.8.1 | 2026-09-18 | Juan Manuel Santos | Incorporación del mock-up del Landing Page (4.3.2), con las diez secciones de la página en versión Desktop. |
+| 0.9.0 | 2026-09-18 | Alejandro Espino | **Corrección por autocrítica del equipo.** Los diagramas C4 y el diagrama de clases quedaron desactualizados respecto del modelo de datos corregido en la versión 0.7.0. Se migraron los tres diagramas C4 de PlantUML a **Structurizr**, la herramienta indicada por el enunciado, manteniendo el modelo como código en el archivo `workspace.dsl`. |
+| 0.9.1 | 2026-09-18 | Alejandro Espino | Ampliación de la sección 4.6.4, que contenía un único diagrama de componentes de los tres containers de software exigidos. Se añadieron los diagramas del Landing Page y de la Web Application, y se reorganizaron los componentes del Backend RESTful API **por bounded context en lugar de por capa técnica**, en coherencia con el diseño orientado al dominio de la sección 4.6. |
+| 0.9.2 | 2026-09-18 | Alejandro Espino | Reescritura de la sección 4.7.1, que presentaba un diagrama de clases consolidado con nomenclatura contradictoria respecto de la sección 4.8. Se dividió en **seis diagramas por bounded context**, se corrigieron los nombres (`InspectionItemCatalog` → `InspectionItem`, `Company.ruc` → `Company.taxId`) y se incorporaron las clases `Driver`, `VehicleAssignment` y `OperationalAuthorization`, sin las cuales la Estrategia 2 de la sección 2.1.2 carecía de sustento en el diseño. |
 
 <hr>
 
