@@ -1190,12 +1190,176 @@ A continuación se presenta el Product Backlog consolidado:
 <a id="41-style-guidelines"></a>
 ## 4.1. Style Guidelines.
 
+Las Style Guidelines reúnen las decisiones visuales y de lenguaje que deben aplicarse de forma idéntica en el Landing Page y en la Web Application, de modo que ambos productos se perciban como la misma plataforma. El lenguaje de diseño adoptado es **Material Design 3**, y la biblioteca de componentes de interfaz es **Angular Material**, conforme a la tecnología establecida para el proyecto.
+
+El criterio que ordena todas las decisiones que siguen es el contexto de uso real del producto. FleetSafe se utiliza en dos situaciones muy distintas: un conductor de pie junto a su vehículo, a las cinco de la mañana, con una sola mano libre y con prisa; y un supervisor sentado ante un monitor revisando una flota completa. Las decisiones de tipografía, tamaño de los elementos accionables y jerarquía visual se toman a partir de la primera situación, que es la más exigente, y se adaptan a la segunda.
+
 <a id="411-general-style-guidelines"></a>
 ### 4.1.1. General Style Guidelines.
+
+#### Branding
+
+El nombre del producto es **FleetSafe** y la startup que lo desarrolla es **BitMeisters**. El nombre se compone de *fleet* y *safe*, y enuncia la promesa del producto sin necesidad de explicación: la flota opera de forma segura.
+
+| Elemento | Definición |
+|:---------|:-----------|
+| Nombre del producto | FleetSafe, escrito siempre en una sola palabra y con ambas iniciales en mayúscula |
+| Símbolo | La letra `F` en blanco sobre un círculo de color primario |
+| Logotipo | El símbolo seguido del nombre en Roboto 700 |
+| Área de protección | Un espacio libre equivalente al diámetro del símbolo alrededor del logotipo |
+| Uso incorrecto | Deformar las proporciones, aplicar sombras, traducir el nombre o usar el símbolo sobre fondos de color de estado operativo |
+
+#### Colors
+
+La paleta se organiza en tres familias con funciones distintas y que no deben mezclarse.
+
+**Colores de marca.** Heredados del Landing Page v1. El color primario es `brand-600`, que se emplea en las acciones principales, los elementos activos de navegación y la barra superior.
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `brand-50` | `#eff6ff` | fondos de realce muy suaves |
+| `brand-100` | `#dbeafe` | fondos de elementos seleccionados |
+| `brand-500` | `#3b82f6` | estados *hover* de elementos primarios |
+| **`brand-600`** | **`#2563eb`** | **color primario: acciones, enlaces, barra superior** |
+| `brand-700` | `#1d4ed8` | estado *pressed* de elementos primarios |
+| `brand-900` | `#1e3a8a` | titulares sobre fondos claros de marca |
+
+**Colores de estado operativo.** Comunican la condición del vehículo, que es la información central del producto. Cada estado tiene dos valores: uno **saturado**, para rellenos y elementos no textuales, y uno **oscuro**, obligatorio siempre que el color acompañe a un texto.
+
+| Estado | Saturado | Oscuro (texto) | Fondo | Contraste del texto sobre su fondo |
+|:-------|:---------|:---------------|:------|:-----------------------------------|
+| `Enabled` | `#16a34a` | `#15803d` | `#dcfce7` | 4.57:1 — AA |
+| `Observed` | `#d97706` | `#b45309` | `#fef3c7` | 4.51:1 — AA |
+| `Not Enabled` | `#dc2626` | `#b91c1c` | `#fee2e2` | 5.30:1 — AA |
+
+**Neutros.** Estructuran la interfaz sin competir con los dos anteriores.
+
+| Token | Valor | Uso | Contraste sobre blanco |
+|:------|:------|:----|:-----------------------|
+| `n-0` | `#ffffff` | fondo de superficies | — |
+| `n-50` | `#f8fafc` | fondo de la aplicación | — |
+| `n-100` | `#f1f5f9` | cabeceras de tabla | — |
+| `n-200` | `#e2e8f0` | bordes y separadores | — |
+| `n-400` | `#94a3b8` | bordes de campos, iconografía decorativa | 2.56:1 — **no apto para texto** |
+| `n-600` | `#475569` | texto secundario y etiquetas | 7.58:1 — AAA |
+| `n-900` | `#0f172a` | texto principal | 17.85:1 — AAA |
+
+**Decisión de diseño: el color nunca comunica por sí solo.** Un elemento que indique la condición operativa de un vehículo lleva siempre una etiqueta de texto junto al color —`Enabled`, `Observed`, `Not Enabled`— y, cuando se presenta en una tabla, también una forma distinguible. La razón es doble. La primera es de diseño inclusivo: aproximadamente uno de cada doce hombres presenta alguna deficiencia en la percepción del color, y la combinación verde–ámbar–rojo es precisamente la que se ve afectada; dado que el segmento de conductores de transporte de carga es mayoritariamente masculino, el riesgo no es teórico. La segunda es de negocio: confundir un vehículo observado con uno habilitado es exactamente el error que el producto existe para evitar.
+
+Por ese mismo motivo se descartó el valor `#94a3b8` para cualquier texto, incluidos los textos de ayuda de los campos, que pasan a usar `n-600`.
+
+#### Typography
+
+La familia tipográfica es **Roboto**, la propia de Material Design, con `Segoe UI` y la tipografía del sistema como alternativas. Se eligió por su legibilidad en tamaños pequeños y sobre pantallas de gama baja, que son las que utiliza el segmento de conductores.
+
+| Estilo | Tamaño / peso | Uso |
+|:-------|:--------------|:----|
+| Display | 28 / 700 | titular de una vista o de una sección del Landing |
+| Título | 20 / 600 | encabezado de tarjeta o de bloque |
+| Subtítulo | 16 / 600 | encabezado de grupo dentro de una tarjeta |
+| Cuerpo | 14 / 400 | texto general, celdas de tabla, descripciones |
+| Etiqueta | 12 / 400 | etiquetas de campo, marcas de tiempo, texto de apoyo |
+
+La escala se detiene en 12 px: ningún texto del producto baja de ese tamaño. En la vista de inspección del conductor, el nombre del elemento que se está revisando se presenta en Subtítulo y no en Cuerpo, porque es el texto que debe leerse de un vistazo y con el dispositivo en movimiento.
+
+#### Spacing
+
+El sistema de espaciado tiene una **base de 4 px**, y todos los márgenes, rellenos y separaciones son múltiplos de esa unidad. Disponer de una base única evita las decisiones arbitrarias y hace que dos vistas construidas por integrantes distintos se vean iguales.
+
+| Token | Valor | Uso habitual |
+|:------|:------|:-------------|
+| `s-1` | 4 px | separación entre una etiqueta y su valor |
+| `s-2` | 8 px | separación entre elementos de un mismo grupo |
+| `s-3` | 12 px | relleno interno de elementos de lista |
+| `s-4` | 16 px | relleno de tarjetas y margen lateral en móvil |
+| `s-6` | 24 px | separación entre bloques |
+| `s-8` | 32 px | relleno de secciones y márgenes de página |
+
+Los radios de borde son **8 px** para elementos pequeños, **12 px** para tarjetas, **16 px** para contenedores destacados y **completo** para botones y chips de estado.
+
+#### Componentes base
+
+| Componente | Definición |
+|:-----------|:-----------|
+| Botón principal | Relleno `brand-600`, texto blanco, radio completo, relleno 12×24 px |
+| Botón secundario | Fondo transparente, borde y texto `brand-600` |
+| Botón destructivo | Relleno `#b91c1c`, reservado a acciones que interrumpen la operación |
+| Chip de estado | Radio completo, fondo y texto según la familia de estado operativo, siempre con etiqueta |
+| Campo de texto | Borde `n-400`, radio 8 px, etiqueta en Etiqueta / `n-600` sobre el campo |
+| Elemento de checklist | Nombre del elemento en Subtítulo y selector segmentado `OK · Obs. · Falla` a la derecha |
+
+#### Tono de comunicación y lenguaje
+
+El tono se define en las cuatro dimensiones exigidas, y la posición de cada una responde al contexto de uso descrito al inicio de la sección.
+
+| Dimensión | Posición | Sustento |
+|:----------|:---------|:---------|
+| Divertido ↔ **Serio** | Serio | El producto determina si un vehículo puede circular. La seguridad de las personas no admite ligereza en el lenguaje. |
+| Formal ↔ Casual | **Neutro, cercano al formal** | Los mismos textos los lee un gerente de operaciones y un conductor. Un registro demasiado formal resultaría burocrático para el segundo; uno demasiado casual restaría credibilidad ante el primero. |
+| **Respetuoso** ↔ Irreverente | Respetuoso | El conductor es quien registra los defectos. Si percibe el sistema como una acusación, dejará de reportarlos y el producto pierde su función. Los mensajes describen la condición del vehículo, nunca evalúan a la persona. |
+| Entusiasta ↔ **Sereno** | Sereno | Un vehículo no habilitado se comunica con claridad y sin dramatismo. Las alertas informan y explican qué hacer a continuación; no alarman. |
+
+La aplicación concreta de estas cuatro posiciones se comprueba en los mensajes de estado. Ante un bloqueo, el producto no dice *"¡Atención! Has reportado una falla crítica"*, sino **"El vehículo no está habilitado para operar. Comunícate con tu supervisor."**: describe la condición, no culpa a nadie, y ofrece el paso siguiente.
+
+#### Sustento de principios y elementos de diseño
+
+Las decisiones anteriores se apoyan en cuatro principios, cada uno con su traducción concreta:
+
+- **Jerarquía visual.** En cada vista existe un único elemento dominante. En la del conductor es el estado del vehículo y la acción de iniciar la inspección; todo lo demás se presenta en Cuerpo o Etiqueta y en neutros.
+- **Contraste.** Se emplea para dirigir la atención, no para decorar: el color de marca aparece únicamente en lo accionable, de modo que un elemento azul siempre significa que se puede pulsar.
+- **Consistencia.** Un mismo concepto se representa siempre igual. La condición operativa se muestra siempre como chip con etiqueta, tanto en el listado de la flota como en el detalle de un vehículo o en el historial.
+- **Realimentación.** Toda acción que modifica el estado del sistema confirma su resultado, y las que son irreversibles —como el levantamiento de un bloqueo— exigen confirmación explícita y justificación escrita.
+
+Los elementos de diseño empleados son el **color**, con las tres familias descritas; la **tipografía**, con una escala de cinco niveles; el **espacio**, con la retícula de 4 px; y la **forma**, mediante los radios que distinguen los elementos accionables (radio completo) de los contenedores (radios de 8 a 16 px).
 
 <a id="412-web-style-guidelines"></a>
 ### 4.1.2. Web Style Guidelines.
 
+Estas directrices aplican las decisiones generales a interfaces web adaptables, y rigen tanto para el Landing Page como para la Web Application.
+
+#### Retícula y puntos de quiebre
+
+| Punto de quiebre | Ancho | Retícula | Márgenes laterales |
+|:-----------------|:------|:---------|:-------------------|
+| Mobile | < 600 px | 4 columnas | 16 px |
+| Tablet | 600 – 1023 px | 8 columnas | 24 px |
+| Desktop | ≥ 1024 px | 12 columnas | 32 px, con contenido limitado a 1280 px |
+
+El diseño se elabora **partiendo del móvil**. La razón no es una convención: el conductor —que es quien más veces al día usa el producto— lo hace siempre desde un teléfono y de pie junto al vehículo. El supervisor, en cambio, trabaja desde un escritorio. Por eso la vista de inspección se diseña primero para 390 px de ancho y el tablero de flota primero para 1280 px, y cada una se adapta después al otro extremo.
+
+#### Adaptación de los patrones
+
+| Patrón | Mobile | Desktop |
+|:-------|:-------|:--------|
+| Navegación de la aplicación | barra inferior o menú desplegable | barra lateral permanente de 220 px |
+| Listado de flota | tarjetas apiladas, una por vehículo | tabla con columnas ordenables |
+| Acción principal | botón de ancho completo fijado al borde inferior | botón alineado al contenido |
+| Diálogo | hoja que asciende desde el borde inferior | ventana centrada de 520 px sobre velo |
+| Formulario | una columna | dos columnas cuando los campos son breves |
+
+#### Interacción
+
+- **Los elementos accionables miden 48 × 48 px como mínimo**, la medida recomendada por Material Design. En la vista de inspección esto es determinante: el conductor pulsa `OK`, `Obs.` o `Falla` cuarenta y dos veces seguidas, con guantes y sin detenerse a mirar.
+- **Todo estado interactivo es visible**: reposo, *hover*, foco, pulsado y deshabilitado. El foco se representa con un contorno de 2 px en `brand-600`, y **nunca se suprime**, porque es el único indicador disponible para quien navega con el teclado.
+- **Las operaciones que tardan muestran su progreso** en el propio elemento que las originó, no mediante un velo que bloquee la pantalla completa.
+- **Los errores se muestran junto al campo** que los causa y explican cómo corregirlos.
+
+#### Accesibilidad
+
+La accesibilidad es un requisito del producto y se concreta así:
+
+- Estructura semántica con `header`, `nav`, `main` y `footer`, y un único `h1` por vista.
+- Atributos **ARIA** en todos los componentes interactivos: `aria-label` en los controles que solo muestran icono, `aria-live` en las regiones que anuncian el resultado de una evaluación, `aria-current` en el elemento activo de la navegación y `role` en los componentes construidos a medida.
+- Todo elemento accionable es alcanzable y operable con el teclado, en un orden de tabulación que sigue el orden visual.
+- Las imágenes llevan texto alternativo, y las decorativas se marcan con `alt=""`.
+- Contraste mínimo **4.5:1** para texto normal y **3:1** para elementos de interfaz, conforme a WCAG 2.1 nivel AA. Los valores concretos de la paleta están verificados en la sección 4.1.1.
+- La interfaz soporta un aumento del tamaño de texto hasta el 200 % sin pérdida de contenido ni de funcionalidad.
+
+#### Internacionalización
+
+El idioma por defecto del producto es el **inglés (`en_US`)**, con **español latinoamericano (`es_419`)** como segundo idioma. Ninguna cadena de texto se escribe directamente en el marcado: todas se resuelven mediante los archivos de traducción. El selector de idioma está disponible en el pie del Landing Page y en la barra superior de la Web Application, y el atributo `lang` del documento se actualiza al cambiarlo. Los diseños reservan un **30 % adicional de ancho** en etiquetas y botones, porque la traducción al español es sistemáticamente más larga que el original en inglés.
+
+---
 
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
