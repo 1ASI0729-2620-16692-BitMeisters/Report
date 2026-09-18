@@ -1225,6 +1225,10 @@ A continuación se presenta el Product Backlog consolidado:
 <img src="img/mockup/02-hero.png" width="1000">
 <img src="img/mockup/03-problema.png" width="1000">
 <img src="img/mockup/04-plataforma.png" width="1000">
+<img src="img/mockup/05-proceso.png" width="1000">
+
+
+
 
 <a id="44-web-applications-uxui-design"></a>
 ## 4.4. Web Applications UX/UI Design.
