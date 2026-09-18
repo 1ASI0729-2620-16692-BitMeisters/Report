@@ -30,19 +30,22 @@
 <a id="registro-de-versiones-del-informe"></a>
 # **Registro de Versiones del Informe**
 
-| Versión | Fecha      | Autor                              | Descripción de modificación                                                                                                                        |
-|:--------|:-----------|:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0     | 2026-09-01 | Gerardo Valentin Palacin Lazo      | Creación del informe a partir de la plantilla del curso, con la carátula, el índice y la estructura de capítulos.                                  |
-| 1.1     | 2026-09-02 | Alejandro Espino Flores            | Redacción del Capítulo I, incluyendo el Startup Profile, el Solution Profile con el análisis 5W y 2H, el Lean UX Process y los segmentos objetivo. |
-| 1.2     | 2026-09-02 | Alejandro Espino Flores            | Redacción del Capítulo II con el análisis competitivo, las estrategias frente a competidores y el diseño de entrevistas por segmento.              |
-| 1.3     | 2026-09-04 | Elizabeth Noelia Apaza Bocanegra   | Redacción del Capítulo III con las Epics, User Stories, Technical Stories y el Product Backlog priorizado.                                         |
-| 1.4     | 2026-09-07 | Rodrigo Fabrizio Aguilar Untiveros | Redacción de las secciones 4.1 Style Guidelines y 4.2 Information Architecture del Capítulo IV.                                                    |
-| 1.5     | 2026-09-08 | Juan Manuel Santos Torres          | Desarrollo de la primera versión de la landing page y sus respectivos Wireframes y Mock-ups.                                                       |
-| 1.6     | 2026-09-10 | Gerardo Valentin Palacin Lazo      | Redacción de la sección 5.1 Software Configuration Management del Capítulo V.                                                                      |
-| 1.7     | 2026-09-01 |                                    |                                                                                                                                                    |
-| 1.8     | 2026-09-01 |                                    |                                                                                                                                                    |
-| 1.9     | 2026-09-01 |                                    |                                                                                                                                                    |
-
+| Versión | Fecha | Autor | Descripción de modificación |
+|:--------|:------|:------|:----------------------------|
+| 0.1.0 | 2026-09-03 | Gerardo Palacin | Estructura inicial del informe a partir de la plantilla del curso: carátula, tabla de contenido de cuatro niveles y encabezados de los cinco capítulos. |
+| 0.2.0 | 2026-09-05 | Gerardo Palacin | Redacción del Capítulo I —Startup Profile, Solution Profile con 5W+2H, Lean UX y segmentos objetivo— y del inicio del Capítulo II. |
+| 0.3.0 | 2026-09-07 | Gerardo Palacin | Incorporación del Ubiquitous Language de la sección 2.5, con treinta términos del dominio agrupados en cinco familias. |
+| 0.4.0 | 2026-09-10 | Rodrigo Aguilar | Incorporación de las User Stories con criterios de aceptación en Gherkin (3.1) y del Product Backlog priorizado con Story Points (3.3). |
+| 0.5.0 | 2026-09-10 | Rodrigo Aguilar | Primera versión de la arquitectura: diagramas C4 de contexto, contenedores y componentes (4.6), diagrama de clases consolidado (4.7) y diagrama de base de datos consolidado (4.8). |
+| 0.6.0 | 2026-09-11 | Alejandro Espino | **Corrección por autocrítica del equipo.** Se verificó el comportamiento real de los competidores y se comprobó que la ventaja competitiva declarada era falsa: Whip Around y Fleetio también retienen el vehículo ante un defecto. Se reconstruyó el análisis competitivo (2.1) sobre datos verificados, se incorporó el competidor latinoamericano Vehicheck y los competidores indirectos peruanos, y se replanteó la ventaja competitiva como estrategia de enfoque en el marco normativo peruano. |
+| 0.6.1 | 2026-09-11 | Alejandro Espino | **Corrección de formato.** El Competitive Analysis Landscape no seguía la plantilla del enunciado: el SWOT estaba en fichas separadas, los nombres de fila no eran los literales exigidos y la pregunta del análisis quedaba fuera del cuadro. Se reestructuró en una sola tabla conforme al formato oficial. |
+| 0.6.2 | 2026-09-11 | Alejandro Espino | Redacción de la sección Bibliografía, que se encontraba vacía, con catorce referencias en formato APA correspondientes al análisis competitivo. |
+| 0.7.0 | 2026-09-11 | Alejandro Espino | **Corrección por autocrítica del equipo.** El diseño de base de datos era un único diagrama consolidado, cuando el enunciado exige uno por bounded context, y el modelo presentaba huecos que impedían implementar el motor de evaluación. Se dividió en seis diagramas por contexto más el consolidado, se renombraron las entidades según el glosario de 2.5, se incorporaron `observations`, `evidences` y `operational_authorizations`, y se añadieron las entidades `drivers` y `vehicle_assignments`. |
+| 0.8.0 | 2026-09-18 | Juan Manuel Santos | Incorporación del wireframe del Landing Page (4.3.1), con las diez secciones de la página en versión Desktop. |
+| 0.8.1 | 2026-09-18 | Juan Manuel Santos | Incorporación del mock-up del Landing Page (4.3.2), con las diez secciones de la página en versión Desktop. |
+| 0.9.0 | 2026-09-18 | Alejandro Espino | **Corrección por autocrítica del equipo.** Los diagramas C4 y el diagrama de clases quedaron desactualizados respecto del modelo de datos corregido en la versión 0.7.0. Se migraron los tres diagramas C4 de PlantUML a **Structurizr**, la herramienta indicada por el enunciado, manteniendo el modelo como código en el archivo `workspace.dsl`. |
+| 0.9.1 | 2026-09-18 | Alejandro Espino | Ampliación de la sección 4.6.4, que contenía un único diagrama de componentes de los tres containers de software exigidos. Se añadieron los diagramas del Landing Page y de la Web Application, y se reorganizaron los componentes del Backend RESTful API **por bounded context en lugar de por capa técnica**, en coherencia con el diseño orientado al dominio de la sección 4.6. |
+| 0.9.2 | 2026-09-18 | Alejandro Espino | Reescritura de la sección 4.7.1, que presentaba un diagrama de clases consolidado con nomenclatura contradictoria respecto de la sección 4.8. Se dividió en **seis diagramas por bounded context**, se corrigieron los nombres (`InspectionItemCatalog` → `InspectionItem`, `Company.ruc` → `Company.taxId`) y se incorporaron las clases `Driver`, `VehicleAssignment` y `OperationalAuthorization`, sin las cuales la Estrategia 2 de la sección 2.1.2 carecía de sustento en el diseño. |
 
 <hr>
 
@@ -1600,9 +1603,6 @@ Además de los criterios establecidos en la sección 4.1.1, se aplican las sigui
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
 
-<a id="42-information-architecture"></a>
-## 4.2. Information Architecture.
-
 La arquitectura de información de FleetSafe define cómo se organiza, etiqueta, estructura y navega el contenido de la Landing Page y de la Web Application, con el fin de que los usuarios de los tres segmentos objetivo —empresas de transporte de carga, supervisores de flota y conductores— encuentren la información y ejecuten las tareas que les corresponden según su rol.
 
 Las decisiones que se presentan en esta sección se derivan de las siguientes fuentes:
@@ -2554,41 +2554,51 @@ Paso 10: Separamos por BOUNDED CONTEXT en los cuales algunos tienen un cierto ti
 
 El Context Diagram es el primer nivel del modelo C4 y muestra el sistema como un recuadro central, rodeado por sus usuarios y otros sistemas con los que interactúa. Para FleetSafe, este diagrama permite visualizar los actores externos y las relaciones principales con la plataforma.
 
-A continuación se presenta el diagrama de contexto de FleetSafe utilizando PlantUML con la sintaxis de C4:
+El diagrama se ha elaborado con **Structurizr**, la herramienta indicada para el modelo C4. El modelo completo se mantiene como código en el archivo [`workspace.dsl`](workspace.dsl) de este repositorio, de modo que los tres niveles del modelo se generan a partir de una única fuente y no pueden quedar desincronizados entre sí. A continuación se presenta el diagrama de contexto de FleetSafe:
 
-```plantuml
-@startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+<img src="img/c4/01-context.png" alt="Diagrama de contexto de FleetSafe" width="900">
 
-title Context Diagram - FleetSafe
+<details>
+<summary>Structurizr DSL — vista de contexto</summary>
 
-Person(admin, "Administrator", "User responsible for managing users and roles on the platform.")
-Person(supervisor, "Fleet Supervisor", "User responsible for supervising vehicle status, managing incidents and verifying operational authorization.")
-Person(driver, "Driver", "User who performs pre-operational inspections of assigned vehicles.")
-
-System(fleetsafe, "FleetSafe", "Web platform for vehicle safety and preventive control that allows digital pre-operational inspections, condition evaluation and determination of operational authorization for cargo transport vehicles.")
-
-System_Ext(emailSystem, "Email System", "External service used for sending notifications and communications.")
-System_Ext(storageSystem, "Storage Service", "External service used for storing photographic evidence.")
-
-Rel(admin, fleetsafe, "Manages users and roles", "HTTPS")
-Rel(supervisor, fleetsafe, "Supervises vehicles and manages incidents", "HTTPS")
-Rel(driver, fleetsafe, "Performs pre-operational inspections", "HTTPS")
-Rel(fleetsafe, emailSystem, "Sends notifications", "SMTP")
-Rel(fleetsafe, storageSystem, "Stores photographic evidence", "HTTPS")
-
-@enduml
 ```
+administrator = person "Administrator" "Manages users, roles, inspection item catalogs and evaluation rules for the company."
+supervisor = person "Fleet Supervisor" "Supervises vehicle condition, manages incidents and authorizes exceptions over blocked vehicles."
+driver = person "Driver" "Performs the pre-operational inspection of the assigned vehicle before starting an operation."
+visitor = person "Visitor" "Prospective customer who evaluates FleetSafe before creating an account."
+
+emailSystem = softwareSystem "Email System" "External service used to notify supervisors about blocked vehicles, open incidents and expiring documents." "External"
+storageService = softwareSystem "Storage Service" "External object storage service used to keep the photographic evidence attached to an observation." "External"
+
+fleetsafe = softwareSystem "FleetSafe" "Registers pre-operational inspections, evaluates their results against the rules defined by the company and determines whether a vehicle is authorized to operate."
+
+administrator -> fleetsafe "Manages users, catalogs and evaluation rules" "HTTPS"
+supervisor -> fleetsafe "Supervises vehicles, manages incidents and authorizes exceptions" "HTTPS"
+driver -> fleetsafe "Performs pre-operational inspections" "HTTPS"
+visitor -> fleetsafe "Evaluates the value proposition" "HTTPS"
+fleetsafe -> emailSystem "Sends notifications" "SMTP"
+fleetsafe -> storageService "Stores photographic evidence" "HTTPS"
+
+systemContext fleetsafe "Context" {
+    include *
+    autolayout lr
+}
+```
+
+</details>
 
 **Explicación del diagrama:**
 
-El diagrama de contexto de FleetSafe muestra los tres actores principales que interactúan con la plataforma:
+El diagrama de contexto de FleetSafe muestra los actores que interactúan con la plataforma:
 
-- **Administrator:** responsable de la gestión de usuarios y roles dentro de la plataforma.
-- **Fleet Supervisor:** responsable de supervisar el estado de los vehículos, gestionar incidencias y verificar la habilitación operativa de las unidades.
-- **Driver:** responsable de realizar las inspecciones preoperacionales de los vehículos asignados.
+- **Administrator:** responsable de la gestión de usuarios y roles, del catálogo de elementos de inspección y de las reglas de evaluación de su empresa.
+- **Fleet Supervisor:** responsable de supervisar la condición de los vehículos, gestionar las incidencias y autorizar las excepciones sobre vehículos bloqueados.
+- **Driver:** responsable de realizar la inspección preoperacional del vehículo asignado antes de iniciar una operación.
+- **Visitor:** cliente potencial que evalúa la propuesta de valor de FleetSafe en el Landing Page antes de crear una cuenta. Se incorpora como actor porque es el rol base de las User Stories del Landing Page descritas en la sección 3.1.
 
-El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento para las evidencias fotográficas registradas durante las inspecciones.
+El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento de objetos para las evidencias fotográficas registradas durante las inspecciones.
+
+> **Pendiente de decisión.** El servicio externo de terceros que consumirá la plataforma se encuentra en evaluación. Los dos sistemas externos representados corresponden a capacidades de infraestructura ya identificadas; una vez seleccionado el proveedor concreto, el diagrama se actualizará con su nombre y el protocolo de integración correspondiente.
 
 ---
 
@@ -2601,47 +2611,45 @@ Para FleetSafe se han identificado los siguientes containers:
 
 | Container | Tecnología | Responsabilidad |
 |:----------|:-----------|:----------------|
-| **Landing Page** | HTML5, CSS3, JavaScript | Sitio web estático de presentación de FleetSafe. |
-| **Web Application** | Angular | Aplicación web que permite a los usuarios interactuar con las funcionalidades de la plataforma según su rol. |
-| **Backend RESTful API** | Spring Boot (Java) | API RESTful que expone la lógica de negocio de FleetSafe. |
+| **Landing Page** | HTML5, CSS3, JavaScript | Sitio web estático que presenta la propuesta de valor y dirige a cada segmento objetivo a la vista correspondiente de la Web Application. |
+| **Web Application** | Angular, Angular Material, TypeScript | Aplicación web que permite a cada usuario operar la plataforma según el rol concedido a su cuenta. |
+| **Backend RESTful API** | Spring Boot, Spring Data JPA, Java | API RESTful que expone la lógica de negocio de FleetSafe, documentada con OpenAPI. |
 | **Database** | PostgreSQL | Base de datos relacional que almacena la información de la plataforma. |
-| **File Storage** | Servicio de almacenamiento de objetos | Almacenamiento de evidencias fotográficas. |
 
-A continuación se presenta el diagrama de contenedores de FleetSafe:
+**El Storage Service y el Email System no son containers**, sino sistemas externos. Un container es una unidad de despliegue que el equipo construye y despliega; ambos servicios son contratados a terceros y la plataforma únicamente los consume, por lo que se representan fuera de la frontera del sistema.
 
-```plantuml
-@startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+A continuación se presenta el diagrama de contenedores de FleetSafe, generado a partir del mismo modelo de Structurizr:
 
-title Container Diagram - FleetSafe
+<img src="img/c4/02-containers.png" alt="Diagrama de contenedores de FleetSafe" width="1000">
 
-Person(admin, "Administrator", "Manages users and roles.")
-Person(supervisor, "Fleet Supervisor", "Supervises vehicles and manages incidents.")
-Person(driver, "Driver", "Performs pre-operational inspections.")
+<details>
+<summary>Structurizr DSL — vista de contenedores</summary>
 
-System_Boundary(fleetsafe, "FleetSafe") {
-    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static presentation website for FleetSafe.")
-    Container(webapp, "Web Application", "Angular", "Web application that allows users to interact with the platform features according to their role.")
-    Container(api, "Backend RESTful API", "Spring Boot (Java)", "RESTful API that exposes the business logic of FleetSafe.")
-    ContainerDb(db, "Database", "PostgreSQL", "Stores information about users, vehicles, inspections, evaluations, incidents and documents.")
+```
+fleetsafe = softwareSystem "FleetSafe" {
+    landing  = container "Landing Page" "Static site that presents the value proposition and directs each target segment to the corresponding view of the web application." "HTML5, CSS3, JavaScript"
+    webapp   = container "Web Application" "Allows each user to operate the platform according to the role granted to their account." "Angular, Angular Material, TypeScript"
+    api      = container "Backend RESTful API" "Exposes the business logic of FleetSafe, documented with OpenAPI." "Spring Boot, Spring Data JPA, Java"
+    database = container "Database" "Stores users, fleet assets, documents, inspections, evaluations, authorizations and incidents." "PostgreSQL" "Database"
 }
 
-System_Ext(storage, "Storage Service", "Stores photographic evidence.")
-System_Ext(email, "Email System", "Sends notifications.")
+visitor -> landing "Evaluates the value proposition" "HTTPS"
+landingSegmentCta -> webapp "Directs each segment to its corresponding view" "HTTPS"
+administrator -> webapp "Manages users, catalogs and evaluation rules" "HTTPS"
+supervisor -> webapp "Supervises vehicles, manages incidents and authorizes exceptions" "HTTPS"
+driver -> webapp "Performs pre-operational inspections" "HTTPS"
+webapp -> api "Consumes services" "JSON/HTTPS"
+api -> database "Reads and writes" "JDBC"
+api -> storageService "Stores and retrieves evidence" "HTTPS"
+api -> emailSystem "Sends notifications" "SMTP"
 
-Rel(admin, webapp, "Uses", "HTTPS")
-Rel(supervisor, webapp, "Uses", "HTTPS")
-Rel(driver, webapp, "Uses", "HTTPS")
-Rel(admin, landing, "Visits", "HTTPS")
-Rel(supervisor, landing, "Visits", "HTTPS")
-Rel(driver, landing, "Visits", "HTTPS")
-Rel(webapp, api, "Consumes services", "JSON/HTTPS")
-Rel(api, db, "Reads and writes", "JDBC")
-Rel(api, storage, "Stores and retrieves evidence", "HTTPS")
-Rel(api, email, "Sends notifications", "SMTP")
-
-@enduml
+container fleetsafe "Containers" {
+    include *
+    autolayout lr
+}
 ```
+
+</details>
 
 **Explicación del diagrama:**
 
@@ -2661,392 +2669,796 @@ Las relaciones entre los containers muestran que los usuarios acceden a la Landi
 <a id="464-software-architecture-components-diagrams"></a>
 ### 4.6.4. Software Architecture Components Diagrams.
 
-Los Component Diagrams son el tercer nivel del modelo C4 y muestran la descomposición de cada container en componentes, sus responsabilidades e interacciones. A continuación se presenta el diagrama de componentes para el container Backend RESTful API de FleetSafe.
+Los Component Diagrams son el tercer nivel del modelo C4 y descomponen cada container en los componentes que lo forman, indicando su responsabilidad, la tecnología con la que se implementa y las relaciones entre ellos. Se presenta **un diagrama por cada container de software**: Landing Page, Web Application y Backend RESTful API.
+
+El container **Database** no cuenta con un diagrama de componentes propio porque no es una unidad de software descomponible en componentes, sino un almacén de datos; su estructura interna se documenta en la sección [4.8. Database Design](#48-database-design).
+
+**Criterio de descomposición.** Los componentes del Backend RESTful API se agrupan **por bounded context y no por capa técnica**. Agruparlos por capa —todos los controllers juntos, todos los services juntos— produciría un diagrama que no refleja el diseño orientado al dominio descrito en la sección 4.6 y que contradiría la organización por contextos del modelo de datos de la sección 4.8. Cada grupo del diagrama corresponde a uno de los seis bounded contexts y se traduce directamente en un paquete del proyecto Spring Boot, con sus propias capas en el interior.
+
+---
+
+#### Component Diagram: Landing Page
+
+<img src="img/c4/03-components-landing.png" alt="Diagrama de componentes del Landing Page" width="900">
+
+<details>
+<summary>Structurizr DSL — componentes del Landing Page</summary>
+
+```
+landing = container "Landing Page" "..." "HTML5, CSS3, JavaScript" {
+    landingNavigation = component "Navigation Bar" "Provides access to the content sections and to the sign-in and sign-up entry points." "HTML, CSS"
+    landingContent    = component "Content Sections" "Presents the problem, the platform, the process, the profiles and the frequently asked questions." "HTML, CSS"
+    landingSegmentCta = component "Segment Call to Action" "Directs each target segment to the view of the web application that corresponds to its role." "HTML, JavaScript"
+    landingLegal      = component "Legal Pages" "Presents the terms and conditions and the privacy policy, linked from the footer." "HTML, CSS"
+    landingI18n       = component "Language Switcher" "Switches the content between en_US and es_419 and sets the corresponding language attribute." "JavaScript"
+}
+
+visitor -> landing "Evaluates the value proposition" "HTTPS"
+landingSegmentCta -> webapp "Directs each segment to its corresponding view" "HTTPS"
+
+component landing "ComponentsLanding" {
+    include *
+    autolayout lr
+}
+```
+
+</details>
+
+| Componente | Tecnología | Responsabilidad |
+|:-----------|:-----------|:----------------|
+| **Navigation Bar** | HTML, CSS | Da acceso a las secciones de contenido y a los puntos de entrada de inicio de sesión y registro. |
+| **Content Sections** | HTML, CSS | Presenta la problemática, la plataforma, el proceso, los perfiles y las preguntas frecuentes. |
+| **Segment Call to Action** | HTML, JavaScript | Dirige a cada segmento objetivo a la vista de la Web Application que corresponde a su rol. |
+| **Legal Pages** | HTML, CSS | Presenta los términos y condiciones y la política de privacidad, enlazados desde el pie de página. |
+| **Language Switcher** | JavaScript | Alterna el contenido entre `en_US` y `es_419` y establece el atributo de idioma correspondiente. |
+
+**Explicación del diagrama.** El Landing Page es un sitio estático, por lo que sus componentes son secciones de contenido y no unidades de lógica de negocio. El componente con responsabilidad arquitectónica propia es **Segment Call to Action**: es el que materializa la relación entre el Landing Page y la Web Application, dirigiendo a cada segmento objetivo a la vista que le corresponde según su rol. **Language Switcher** y **Legal Pages** se representan de forma explícita porque implementan dos requisitos transversales del producto —la internacionalización en `en_US` y `es_419`, y el enlace a los documentos legales desde el pie de página— cuya ausencia afectaría al cumplimiento del producto con independencia del contenido presentado.
+
+---
+
+#### Component Diagram: Web Application
+
+<img src="img/c4/04-components-webapp.png" alt="Diagrama de componentes de la Web Application" width="1000">
+
+<details>
+<summary>Structurizr DSL — componentes de la Web Application</summary>
+
+```
+webapp = container "Web Application" "..." "Angular, Angular Material, TypeScript" {
+    webAuth            = component "Authentication Feature" "Presents the sign-in view and keeps the session of the authenticated user." "Angular Feature Module"
+    webInspection      = component "Inspection Feature" "Presents the pre-operational inspection to the driver and registers the result of each inspection item, its observations and its evidence." "Angular Feature Module"
+    webFleet           = component "Fleet Feature" "Presents the fleet, the vehicles, the drivers and the assignments between them." "Angular Feature Module"
+    webDocumentation   = component "Documentation Feature" "Presents the documents of each vehicle and their expiration status." "Angular Feature Module"
+    webAuthorization   = component "Authorization Feature" "Presents the operational condition of each vehicle and allows the supervisor to register the lifting of a block." "Angular Feature Module"
+    webIncident        = component "Incident Feature" "Presents the incidents of the fleet, their corrective actions, their repairs and their follow-ups." "Angular Feature Module"
+    webApiClient       = component "API Client" "Centralizes the requests to the backend RESTful API." "Angular HttpClient"
+    webAuthInterceptor = component "Authentication Interceptor" "Attaches the authentication token to every outgoing request and handles expired sessions." "Angular HTTP Interceptor"
+    webRoleGuard       = component "Role Guard" "Restricts access to each route according to the role of the authenticated user." "Angular Route Guard"
+    webI18n            = component "Translation Service" "Resolves the interface texts for en_US and es_419." "ngx-translate"
+    webSharedUi        = component "Shared UI Components" "Provides the components of the design system, with the ARIA attributes required for accessibility." "Angular Material"
+}
+
+webAuthInterceptor -> api "Consumes services" "JSON/HTTPS"
+
+component webapp "ComponentsWebApp" {
+    include *
+    autolayout tb
+}
+```
+
+</details>
+
+| Componente | Tecnología | Responsabilidad | Bounded context |
+|:-----------|:-----------|:----------------|:----------------|
+| **Authentication Feature** | Angular Feature Module | Presenta la vista de inicio de sesión y mantiene la sesión del usuario autenticado. | Identity and Access |
+| **Inspection Feature** | Angular Feature Module | Presenta la inspección preoperacional al conductor y registra el resultado de cada elemento, sus observaciones y sus evidencias. | Pre-Operational Inspection |
+| **Fleet Feature** | Angular Feature Module | Presenta la flota, los vehículos, los conductores y las asignaciones entre ellos. | Fleet Management |
+| **Documentation Feature** | Angular Feature Module | Presenta los documentos de cada vehículo y su condición de vigencia. | Vehicle Documentation |
+| **Authorization Feature** | Angular Feature Module | Presenta la condición operativa de cada vehículo y permite al supervisor registrar el levantamiento de un bloqueo. | Evaluation and Authorization |
+| **Incident Feature** | Angular Feature Module | Presenta las incidencias de la flota, sus acciones correctivas, sus reparaciones y sus seguimientos. | Incident Management |
+| **API Client** | Angular HttpClient | Centraliza las peticiones al Backend RESTful API. | transversal |
+| **Authentication Interceptor** | Angular HTTP Interceptor | Adjunta el token de autenticación a cada petición saliente y gestiona las sesiones vencidas. | transversal |
+| **Role Guard** | Angular Route Guard | Restringe el acceso a cada ruta según el rol del usuario autenticado. | transversal |
+| **Translation Service** | ngx-translate | Resuelve los textos de la interfaz para `en_US` y `es_419`. | transversal |
+| **Shared UI Components** | Angular Material | Provee los componentes del design system, con los atributos ARIA necesarios para la accesibilidad. | transversal |
+
+**Explicación del diagrama.** La Web Application se descompone en seis módulos de funcionalidad, uno por cada bounded context, de forma que la estructura del frontend refleja la misma división del dominio que el backend y el modelo de datos. Cada módulo presenta sus vistas y delega toda comunicación en **API Client**, que concentra las peticiones al Backend RESTful API en un único punto.
+
+Los cinco componentes transversales resuelven preocupaciones que no pertenecen a ningún contexto concreto. **Authentication Interceptor** y **Role Guard** implementan el control de acceso en el lado del cliente: el primero adjunta el token a cada petición, y el segundo impide que un usuario alcance una ruta que su rol no admite. Conviene señalar que **esta restricción es de experiencia de usuario, no de seguridad**: la autorización efectiva se resuelve en el Security Filter del Backend RESTful API, porque un control implementado únicamente en el navegador puede ser eludido. **Translation Service** y **Shared UI Components** concentran respectivamente la internacionalización y los componentes del design system con sus atributos ARIA, de modo que ambos requisitos se cumplen de forma homogénea en todas las vistas en lugar de resolverse módulo a módulo.
+
+---
 
 #### Component Diagram: Backend RESTful API
 
-```plantuml
-@startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+<img src="img/c4/05-components-api.png" alt="Diagrama de componentes del Backend RESTful API" width="1000">
 
-title Component Diagram - Backend RESTful API
+<details>
+<summary>Structurizr DSL — componentes del Backend RESTful API</summary>
 
-Container_Boundary(api, "Backend RESTful API") {
-    Component(authController, "Auth Controller", "Spring REST Controller", "Handles authentication and token issuance requests.")
-    Component(userController, "User Controller", "Spring REST Controller", "Handles requests related to users and roles.")
-    Component(vehicleController, "Vehicle Controller", "Spring REST Controller", "Handles requests related to vehicles.")
-    Component(inspectionController, "Inspection Controller", "Spring REST Controller", "Handles requests related to pre-operational inspections.")
-    Component(evaluationController, "Evaluation Controller", "Spring REST Controller", "Handles requests related to vehicle evaluation and authorization.")
-    Component(incidentController, "Incident Controller", "Spring REST Controller", "Handles requests related to incidents.")
-    Component(documentController, "Document Controller", "Spring REST Controller", "Handles requests related to vehicle documentation.")
-    Component(reportController, "Report Controller", "Spring REST Controller", "Handles requests related to history and reports.")
+```
+api = container "Backend RESTful API" "..." "Spring Boot, Spring Data JPA, Java" {
 
-    Component(authService, "Auth Service", "Spring Service", "Implements authentication and authorization logic.")
-    Component(userService, "User Service", "Spring Service", "Implements user and role management logic.")
-    Component(vehicleService, "Vehicle Service", "Spring Service", "Implements vehicle management logic.")
-    Component(inspectionService, "Inspection Service", "Spring Service", "Implements pre-operational inspection logic.")
-    Component(evaluationService, "Evaluation Service", "Spring Service", "Implements evaluation and vehicle status determination logic.")
-    Component(incidentService, "Incident Service", "Spring Service", "Implements incident management logic.")
-    Component(documentService, "Document Service", "Spring Service", "Implements vehicle documentation logic.")
-    Component(reportService, "Report Service", "Spring Service", "Implements report generation and history logic.")
+    group "Identity and Access" {
+        identityController    = component "Identity Controller" "Exposes the sign-in, sign-up and user administration endpoints." "Spring REST Controller"
+        authenticationService = component "Authentication Service" "Validates credentials, issues and verifies the authentication token and resolves the role of the user." "Spring Service"
+        userRepository        = component "User Repository" "Persists and retrieves the users of the platform." "Spring Data JPA"
+    }
 
-    Component(authRepository, "Auth Repository", "Spring Data JPA", "Data access for authentication.")
-    Component(userRepository, "User Repository", "Spring Data JPA", "Data access for users.")
-    Component(vehicleRepository, "Vehicle Repository", "Spring Data JPA", "Data access for vehicles.")
-    Component(inspectionRepository, "Inspection Repository", "Spring Data JPA", "Data access for inspections.")
-    Component(evaluationRepository, "Evaluation Repository", "Spring Data JPA", "Data access for evaluations.")
-    Component(incidentRepository, "Incident Repository", "Spring Data JPA", "Data access for incidents.")
-    Component(documentRepository, "Document Repository", "Spring Data JPA", "Data access for documents.")
+    group "Fleet Management" {
+        fleetController = component "Fleet Controller" "Exposes the endpoints for companies, fleets, vehicles, drivers and vehicle assignments." "Spring REST Controller"
+        fleetService    = component "Fleet Service" "Manages the assets of the fleet and keeps the current status of each vehicle synchronized with its latest operational authorization." "Spring Service"
+        fleetRepository = component "Fleet Repository" "Persists and retrieves companies, fleets, vehicles, drivers and assignments." "Spring Data JPA"
+    }
 
-    Component(storageClient, "Storage Client", "HTTP Client", "Client for the evidence storage service.")
-    Component(emailClient, "Email Client", "SMTP Client", "Client for sending email notifications.")
+    group "Vehicle Documentation" {
+        documentController = component "Document Controller" "Exposes the endpoints for the document types and the documents of each vehicle." "Spring REST Controller"
+        documentService    = component "Document Service" "Manages the documents of each vehicle and derives their status from the expiration date." "Spring Service"
+        documentScheduler  = component "Document Expiration Scheduler" "Recalculates the status of the documents on a scheduled basis and requests the notification of the ones about to expire." "Spring Scheduled Task"
+        documentRepository = component "Document Repository" "Persists and retrieves document types and vehicle documents." "Spring Data JPA"
+    }
+
+    group "Pre-Operational Inspection" {
+        inspectionController = component "Inspection Controller" "Exposes the endpoints for the inspection item catalog and for the inspections performed." "Spring REST Controller"
+        inspectionService    = component "Inspection Service" "Registers the inspection, the result of each item, its observations and the evidence that supports them, and copies the name and category of the item at the moment of the inspection." "Spring Service"
+        evidenceService      = component "Evidence Service" "Uploads the evidence files and resolves the reference stored with the observation." "Spring Service"
+        inspectionRepository = component "Inspection Repository" "Persists and retrieves inspection items, inspections, results, observations and evidence." "Spring Data JPA"
+    }
+
+    group "Evaluation and Authorization" {
+        evaluationController = component "Evaluation Controller" "Exposes the endpoints for the evaluation rules, the evaluations performed and the operational authorizations." "Spring REST Controller"
+        evaluationEngine     = component "Evaluation Engine" "Applies the active rules to the results of a completed inspection and determines the resulting condition from the most restrictive impact obtained." "Spring Service"
+        authorizationService = component "Authorization Service" "Registers the operational authorization produced by an evaluation and the lifting of a block, requiring its reason and the user responsible for it." "Spring Service"
+        evaluationRepository = component "Evaluation Repository" "Persists and retrieves rules, evaluations, evaluation details and operational authorizations." "Spring Data JPA"
+    }
+
+    group "Incident Management" {
+        incidentController = component "Incident Controller" "Exposes the endpoints for the incidents, their corrective actions, their repairs and their follow-ups." "Spring REST Controller"
+        incidentService    = component "Incident Service" "Registers and tracks the incidents detected during an inspection or during the operation of the vehicle." "Spring Service"
+        incidentRepository = component "Incident Repository" "Persists and retrieves incident types, incidents, corrective actions, repairs and follow-ups." "Spring Data JPA"
+    }
+
+    group "Shared" {
+        securityFilter      = component "Security Filter" "Verifies the authentication token of every request and resolves the permissions of the role." "Spring Security Filter"
+        localizationService = component "Localization Service" "Resolves the messages returned by the API for en_US and es_419." "Spring MessageSource"
+        storageClient       = component "Storage Client" "Communicates with the external object storage service." "HTTP Client"
+        emailClient         = component "Email Client" "Communicates with the external email service." "SMTP Client"
+    }
 }
 
-ContainerDb(db, "Database", "PostgreSQL", "Stores platform information.")
-System_Ext(storage, "Storage Service", "Stores evidence.")
-System_Ext(email, "Email System", "Sends notifications.")
-
-Rel(authController, authService, "Uses")
-Rel(userController, userService, "Uses")
-Rel(vehicleController, vehicleService, "Uses")
-Rel(inspectionController, inspectionService, "Uses")
-Rel(evaluationController, evaluationService, "Uses")
-Rel(incidentController, incidentService, "Uses")
-Rel(documentController, documentService, "Uses")
-Rel(reportController, reportService, "Uses")
-
-Rel(authService, authRepository, "Uses")
-Rel(userService, userRepository, "Uses")
-Rel(vehicleService, vehicleRepository, "Uses")
-Rel(inspectionService, inspectionRepository, "Uses")
-Rel(evaluationService, evaluationRepository, "Uses")
-Rel(incidentService, incidentRepository, "Uses")
-Rel(documentService, documentRepository, "Uses")
-
-Rel(authRepository, db, "Reads and writes", "JDBC")
-Rel(userRepository, db, "Reads and writes", "JDBC")
-Rel(vehicleRepository, db, "Reads and writes", "JDBC")
-Rel(inspectionRepository, db, "Reads and writes", "JDBC")
-Rel(evaluationRepository, db, "Reads and writes", "JDBC")
-Rel(incidentRepository, db, "Reads and writes", "JDBC")
-Rel(documentRepository, db, "Reads and writes", "JDBC")
-
-Rel(inspectionService, storageClient, "Uses")
-Rel(storageClient, storage, "Stores evidence", "HTTPS")
-Rel(incidentService, emailClient, "Uses")
-Rel(emailClient, email, "Sends notifications", "SMTP")
-
-@enduml
+component api "ComponentsApi" {
+    include *
+    autolayout tb
+}
 ```
 
-**Explicación del diagrama:**
+</details>
 
-El diagrama de componentes del Backend RESTful API muestra la descomposición del container en los siguientes grupos de componentes:
+| Bounded context | Componente | Tecnología | Responsabilidad |
+|:----------------|:-----------|:-----------|:----------------|
+| **Identity and Access** | Identity Controller | Spring REST Controller | Expone los endpoints de inicio de sesión, registro y administración de usuarios. |
+| | Authentication Service | Spring Service | Valida las credenciales, emite y verifica el token de autenticación y resuelve el rol del usuario. |
+| | User Repository | Spring Data JPA | Persiste y recupera los usuarios de la plataforma. |
+| **Fleet Management** | Fleet Controller | Spring REST Controller | Expone los endpoints de empresas, flotas, vehículos, conductores y asignaciones. |
+| | Fleet Service | Spring Service | Gestiona los activos de la flota y mantiene la condición actual de cada vehículo sincronizada con su última habilitación operativa. |
+| | Fleet Repository | Spring Data JPA | Persiste y recupera empresas, flotas, vehículos, conductores y asignaciones. |
+| **Vehicle Documentation** | Document Controller | Spring REST Controller | Expone los endpoints de tipos de documento y de documentos de cada vehículo. |
+| | Document Service | Spring Service | Gestiona los documentos de cada vehículo y deriva su condición a partir de la fecha de vencimiento. |
+| | Document Expiration Scheduler | Spring Scheduled Task | Recalcula de forma programada la condición de los documentos y solicita la notificación de los próximos a vencer. |
+| | Document Repository | Spring Data JPA | Persiste y recupera tipos de documento y documentos vehiculares. |
+| **Pre-Operational Inspection** | Inspection Controller | Spring REST Controller | Expone los endpoints del catálogo de elementos de inspección y de las inspecciones realizadas. |
+| | Inspection Service | Spring Service | Registra la inspección, el resultado de cada elemento, sus observaciones y las evidencias que las respaldan, y copia el nombre y la categoría del elemento en el momento de la inspección. |
+| | Evidence Service | Spring Service | Carga los archivos de evidencia y resuelve la referencia que se almacena junto a la observación. |
+| | Inspection Repository | Spring Data JPA | Persiste y recupera elementos de inspección, inspecciones, resultados, observaciones y evidencias. |
+| **Evaluation and Authorization** | Evaluation Controller | Spring REST Controller | Expone los endpoints de reglas de evaluación, evaluaciones realizadas y habilitaciones operativas. |
+| | Evaluation Engine | Spring Service | Aplica las reglas activas a los resultados de una inspección completada y determina la condición resultante a partir del impacto más restrictivo obtenido. |
+| | Authorization Service | Spring Service | Registra la habilitación operativa producida por una evaluación y el levantamiento de un bloqueo, exigiendo su justificación y el usuario responsable. |
+| | Evaluation Repository | Spring Data JPA | Persiste y recupera reglas, evaluaciones, detalles de evaluación y habilitaciones operativas. |
+| **Incident Management** | Incident Controller | Spring REST Controller | Expone los endpoints de incidencias, acciones correctivas, reparaciones y seguimientos. |
+| | Incident Service | Spring Service | Registra y da seguimiento a las incidencias detectadas durante una inspección o durante la operación del vehículo. |
+| | Incident Repository | Spring Data JPA | Persiste y recupera tipos de incidencia, incidencias, acciones correctivas, reparaciones y seguimientos. |
+| **Shared** | Security Filter | Spring Security Filter | Verifica el token de autenticación de cada petición y resuelve los permisos del rol. |
+| | Localization Service | Spring MessageSource | Resuelve los mensajes que devuelve la API para `en_US` y `es_419`. |
+| | Storage Client | HTTP Client | Se comunica con el servicio externo de almacenamiento de objetos. |
+| | Email Client | SMTP Client | Se comunica con el servicio externo de correo electrónico. |
 
-- **Controllers:** componentes que exponen los endpoints RESTful y gestionan las solicitudes HTTP. Se han identificado controllers para autenticación, usuarios, vehículos, inspecciones, evaluaciones, incidencias, documentación y reportes.
-- **Services:** componentes que implementan la lógica de negocio de cada área funcional.
-- **Repositories:** componentes que gestionan el acceso a datos mediante Spring Data JPA.
-- **Clients:** componentes que gestionan la comunicación con servicios externos, como el almacenamiento de evidencias y el envío de notificaciones por correo.
+**Explicación del diagrama.** Toda petición entra por **Security Filter**, que verifica el token y resuelve los permisos del rol antes de que la petición alcance cualquier controller. A partir de ahí, cada bounded context expone su propio controller, que delega en los servicios de aplicación de su contexto y estos en sus repositorios.
 
-Las relaciones muestran el flujo de dependencias desde los controllers hacia los services, y desde estos hacia los repositories y clients.
+El recorrido que sostiene el núcleo del producto atraviesa dos contextos. **Inspection Service** registra la inspección y, al completarse, solicita su evaluación a **Evaluation Engine**. Este lee los resultados, aplica las reglas activas y determina la condición resultante a partir del impacto más restrictivo obtenido; después solicita a **Authorization Service** el registro de la habilitación operativa. **Authorization Service** es además el único componente autorizado a pedir a **Fleet Service** la actualización de la condición actual del vehículo, de forma coherente con la decisión de diseño de la sección 4.8 según la cual `vehicles.current_status` es un valor derivado y no la fuente de verdad.
 
+Las referencias entre contextos siguen la misma regla que el modelo de datos: **dentro de un contexto se accede al repositorio propio; cruzando la frontera, se consulta al servicio o al repositorio del otro contexto únicamente para verificar la existencia del elemento referenciado**. Así, `Inspection Service` consulta a `Fleet Repository` para resolver el vehículo asignado al conductor, pero no gestiona vehículos.
+
+Los cuatro componentes de **Shared** concentran las preocupaciones transversales. **Localization Service** es el que permite que los mensajes devueltos por los Web Services cumplan el requisito de internacionalización en `en_US` y `es_419`, exigido no solo en el Landing Page y la Web Application sino también en la API. **Storage Client** y **Email Client** aíslan la comunicación con los dos sistemas externos, de modo que la elección definitiva del proveedor no afecte a los servicios de cada contexto.
 
 <a id="47-software-object-oriented-design"></a>
 ## 4.7. Software Object-Oriented Design.
 
+En esta sección se presenta el diseño orientado a objetos de FleetSafe, que detalla cómo se implementan los componentes identificados en la sección 4.6.4. Si el diagrama de componentes responde a *qué bloques forman cada container*, el diseño orientado a objetos responde a *qué clases forman cada bloque y cómo se relacionan entre sí*.
+
+Las características principales que se consideran en los diagramas son cuatro:
+
+- **La organización es por bounded context**, la misma de las secciones 4.6 y 4.8, de modo que los tres niveles del diseño —componentes, clases y tablas— describen la misma división del dominio.
+- **La nomenclatura procede del Ubiquitous Language** de la sección 2.5. Ninguna clase introduce un sinónimo de un término ya definido allí.
+- **Las fronteras entre contextos se representan de forma explícita**: una referencia que cruza un bounded context se modela como un atributo identificador y nunca como una asociación entre clases.
+- **El nivel de detalle incluye el scope de cada miembro** —`private` y `public`— y la multiplicidad y el nombre de cada relación, conforme a UML.
+
 <a id="471-class-diagrams"></a>
 ### 4.7.1. Class Diagrams.
 
-El Class Diagram es una representación de la estructura estática del sistema, mostrando las clases, interfaces, enumeraciones, sus atributos, métodos y las relaciones entre ellos. A continuación se presenta el diagrama de clases consolidado de FleetSafe, que integra las entidades de todos los bounded contexts identificados.
+El Class Diagram representa la estructura estática del software: las clases que lo componen, sus atributos y métodos con el scope correspondiente, las interfaces y enumeraciones que utilizan, y las relaciones entre ellas con su nombre y multiplicidad.
 
-```plantuml
-@startuml
-title Class Diagram - FleetSafe
+Siguiendo el mismo criterio aplicado en las secciones 4.6.4 y 4.8, se presenta **un diagrama por cada bounded context** en lugar de un único diagrama consolidado. Un diagrama consolidado de las veintidós clases del dominio resultaría ilegible y, sobre todo, ocultaría precisamente lo que el diseño orientado al dominio busca hacer explícito: dónde está la frontera de cada contexto y qué lo comunica con los demás.
 
-class Company {
-    - id: UUID
-    - name: String
-    - ruc: String
-    - address: String
-    - phone: String
-    - email: String
-    - createdAt: DateTime
-    + addUser(user: User): void
-    + removeUser(userId: UUID): void
-    + getUsers(): List<User>
-}
+Los diagramas corresponden al **Backend RESTful API**, que es el producto de software donde reside el modelo de dominio de FleetSafe. El Landing Page no posee modelo de dominio por tratarse de un sitio estático, y la Web Application consume el modelo a través de la API sin reimplementarlo, por lo que su estructura se documenta en el diagrama de componentes de la sección 4.6.4.
 
-class User {
-    - id: UUID
-    - companyId: UUID
-    - email: String
-    - password: String
-    - firstName: String
-    - lastName: String
-    - role: UserRole
-    - isActive: boolean
-    - createdAt: DateTime
-    - updatedAt: DateTime
-    + authenticate(password: String): boolean
-    + changeRole(role: UserRole): void
-    + activate(): void
-    + deactivate(): void
-    + getFullName(): String
-}
-
-class Fleet {
-    - id: UUID
-    - name: String
-    - companyId: UUID
-    - createdAt: DateTime
-    + addVehicle(vehicle: Vehicle): void
-    + removeVehicle(vehicleId: UUID): void
-    + getVehicles(): List<Vehicle>
-}
-
-class Vehicle {
-    - id: UUID
-    - plate: String
-    - brand: String
-    - model: String
-    - year: Integer
-    - type: String
-    - capacity: Double
-    - status: VehicleStatus
-    - fleetId: UUID
-    - createdAt: DateTime
-    - updatedAt: DateTime
-    + updateInfo(info: VehicleInfo): void
-    + changeStatus(status: VehicleStatus): void
-    + assignToDriver(driverId: UUID): void
-    + unassignDriver(): void
-}
-
-class Inspection {
-    - id: UUID
-    - vehicleId: UUID
-    - driverId: UUID
-    - status: InspectionStatus
-    - startedAt: DateTime
-    - completedAt: DateTime
-    - createdAt: DateTime
-    - updatedAt: DateTime
-    + start(): void
-    + complete(): void
-    + addItem(item: InspectionItem): void
-    + removeItem(itemId: UUID): void
-    + getItems(): List<InspectionItem>
-    + isCompleted(): boolean
-}
-
-class InspectionItem {
-    - id: UUID
-    - inspectionId: UUID
-    - itemId: UUID
-    - result: InspectionResult
-    - observation: String
-    - evidenceUrl: String
-    - createdAt: DateTime
-    + registerResult(result: InspectionResult): void
-    + addObservation(observation: String): void
-    + attachEvidence(url: String): void
-}
-
-class InspectionItemCatalog {
-    - id: UUID
-    - name: String
-    - description: String
-    - category: String
-    - isSafetyComponent: boolean
-    - isActive: boolean
-    + activate(): void
-    + deactivate(): void
-}
-
-class Evaluation {
-    - id: UUID
-    - inspectionId: UUID
-    - vehicleId: UUID
-    - status: VehicleStatus
-    - evaluatedAt: DateTime
-    - evaluatedBy: UUID
-    - createdAt: DateTime
-    + evaluate(): VehicleStatus
-    + reevaluate(): VehicleStatus
-    + getDetails(): List<EvaluationDetail>
-}
-
-class EvaluationDetail {
-    - id: UUID
-    - evaluationId: UUID
-    - inspectionItemId: UUID
-    - ruleId: UUID
-    - result: String
-    - impact: String
-}
-
-class EvaluationRule {
-    - id: UUID
-    - name: String
-    - description: String
-    - condition: String
-    - impact: RuleImpact
-    - isActive: boolean
-    + activate(): void
-    + deactivate(): void
-    + evaluate(itemResult: InspectionResult): RuleImpact
-}
-
-class Incident {
-    - id: UUID
-    - vehicleId: UUID
-    - inspectionId: UUID
-    - reportedBy: UUID
-    - type: IncidentType
-    - description: String
-    - status: IncidentStatus
-    - createdAt: DateTime
-    - updatedAt: DateTime
-    + updateStatus(status: IncidentStatus): void
-    + addCorrectiveAction(action: CorrectiveAction): void
-    + resolve(): void
-    + isResolved(): boolean
-}
-
-class CorrectiveAction {
-    - id: UUID
-    - incidentId: UUID
-    - description: String
-    - performedBy: UUID
-    - performedAt: DateTime
-    - evidenceUrl: String
-}
-
-class VehicleDocument {
-    - id: UUID
-    - vehicleId: UUID
-    - type: DocumentType
-    - number: String
-    - issueDate: Date
-    - expirationDate: Date
-    - status: DocumentStatus
-    - fileUrl: String
-    - createdAt: DateTime
-    - updatedAt: DateTime
-    + updateExpiration(date: Date): void
-    + isExpired(): boolean
-    + isExpiringSoon(days: Integer): boolean
-}
-
-enum UserRole {
-    ADMIN
-    FLEET_SUPERVISOR
-    DRIVER
-}
-
-enum VehicleStatus {
-    ENABLED
-    OBSERVED
-    NOT_ENABLED
-    MAINTENANCE
-}
-
-enum InspectionStatus {
-    IN_PROGRESS
-    COMPLETED
-    CANCELLED
-}
-
-enum InspectionResult {
-    CONFORMING
-    NON_CONFORMING
-    NOT_APPLICABLE
-}
-
-enum RuleImpact {
-    ENABLES
-    OBSERVES
-    DISABLES
-}
-
-enum IncidentType {
-    MECHANICAL
-    ELECTRICAL
-    DOCUMENTATION
-    SAFETY_EQUIPMENT
-    OTHER
-}
-
-enum IncidentStatus {
-    REGISTERED
-    IN_REVIEW
-    RESOLVED
-    CLOSED
-}
-
-enum DocumentType {
-    SOAT
-    TECHNICAL_REVIEW
-    CIRCULATION_PERMIT
-    INSURANCE
-    OTHER
-}
-
-enum DocumentStatus {
-    VALID
-    EXPIRING_SOON
-    EXPIRED
-}
-
-Company *-- User
-Company *-- Fleet
-Fleet *-- Vehicle
-Vehicle *-- Inspection
-Vehicle *-- Incident
-Vehicle *-- VehicleDocument
-User *-- Inspection
-Inspection *-- InspectionItem
-InspectionItem --> InspectionItemCatalog
-Inspection --> Evaluation
-Evaluation *-- EvaluationDetail
-EvaluationDetail --> EvaluationRule
-Incident *-- CorrectiveAction
-
-User --> UserRole
-Vehicle --> VehicleStatus
-Inspection --> InspectionStatus
-InspectionItem --> InspectionResult
-EvaluationRule --> RuleImpact
-Incident --> IncidentType
-Incident --> IncidentStatus
-VehicleDocument --> DocumentType
-VehicleDocument --> DocumentStatus
-
-@enduml
-```
-
-**Explicación del diagrama:**
-
-El diagrama de clases consolidado de FleetSafe integra las entidades de todos los bounded contexts identificados:
-
-- **Company:** representa la empresa de transporte de carga. Contiene usuarios y flotas.
-- **User:** representa a los usuarios de la plataforma (administrador, supervisor de flota y conductor). El enum `UserRole` define los roles posibles.
-- **Fleet:** representa la flota de vehículos de una empresa.
-- **Vehicle:** representa un vehículo de transporte de carga. El enum `VehicleStatus` define sus estados posibles.
-- **Inspection:** representa una inspección preoperacional. Contiene una colección de `InspectionItem`.
-- **InspectionItem:** representa el resultado de un elemento inspeccionado. El enum `InspectionResult` define los resultados posibles.
-- **InspectionItemCatalog:** representa el catálogo de elementos que pueden ser inspeccionados.
-- **Evaluation:** representa la evaluación de una inspección que determina el estado del vehículo.
-- **EvaluationDetail:** representa el detalle de la evaluación por cada elemento de inspección.
-- **EvaluationRule:** representa las reglas de evaluación. El enum `RuleImpact` define el impacto de cada regla.
-- **Incident:** representa una incidencia detectada en un vehículo. Los enums `IncidentType` e `IncidentStatus` definen sus tipos y estados.
-- **CorrectiveAction:** representa las acciones correctivas aplicadas a una incidencia.
-- **VehicleDocument:** representa los documentos asociados a un vehículo. Los enums `DocumentType` y `DocumentStatus` definen sus tipos y estados.
-
-Las relaciones entre las clases reflejan la estructura del dominio de FleetSafe, incluyendo composiciones, asociaciones y multiplicidades.
+**Convenciones aplicadas en los seis diagramas.** Los atributos y métodos indican su scope mediante los símbolos `-` para `private` y `+` para `public`. Las relaciones internas de cada contexto se representan como asociaciones o composiciones con su multiplicidad. Las referencias que **cruzan la frontera de un bounded context** no se representan como asociación entre clases, sino como un atributo de tipo `UUID` con el sufijo `Id`, en coherencia con la regla establecida en la sección 4.8: dentro de un contexto se utiliza clave foránea, y cruzando la frontera únicamente el identificador, siendo la capa de aplicación la responsable de validar su existencia.
 
 ---
 
+#### Class Diagram: Identity and Access
+
+```mermaid
+classDiagram
+    class User {
+        -UUID id
+        -UUID companyId
+        -String email
+        -String passwordHash
+        -String firstName
+        -String lastName
+        -UserRole role
+        -boolean isActive
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +getFullName() String
+        +hasRole(role UserRole) boolean
+        +changePassword(newHash String) void
+        +activate() void
+        +deactivate() void
+    }
+
+    class UserRole {
+        <<enumeration>>
+        ADMINISTRATOR
+        FLEET_SUPERVISOR
+        DRIVER
+    }
+
+    class UserRepository {
+        <<interface>>
+        +findById(id UUID) Optional~User~
+        +findByEmail(email String) Optional~User~
+        +findAllByCompanyId(companyId UUID) List~User~
+        +save(user User) User
+    }
+
+    class AuthenticationService {
+        -UserRepository userRepository
+        -PasswordEncoder passwordEncoder
+        +signIn(email String, password String) AuthenticatedUser
+        +issueToken(user User) String
+        +verifyToken(token String) AuthenticatedUser
+    }
+
+    User "1" --> "1" UserRole : tiene asignado
+    UserRepository ..> User : gestiona
+    AuthenticationService --> "1" UserRepository : consulta
+```
+
+**Explicación del diagrama.** Este contexto contiene una única entidad de dominio, `User`, junto con la enumeración `UserRole` que define los tres roles del producto descritos en la sección 1.1.1. El atributo `companyId` es de tipo `UUID` y no una asociación a la clase `Company`, porque `Company` pertenece al contexto **Fleet Management**; es la aplicación de la regla de referencias entre contextos.
+
+`AuthenticationService` es el servicio de aplicación que valida las credenciales y emite el token, y `UserRepository` la interfaz de persistencia. La contraseña nunca se almacena ni se expone en claro: la clase conserva únicamente `passwordHash` y el método `changePassword` recibe ya el valor cifrado.
+
+---
+
+#### Class Diagram: Fleet Management
+
+```mermaid
+classDiagram
+    class Company {
+        -UUID id
+        -String name
+        -String taxId
+        -String address
+        -String phone
+        -String email
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +addFleet(fleet Fleet) void
+        +getFleets() List~Fleet~
+    }
+
+    class Fleet {
+        -UUID id
+        -UUID companyId
+        -String name
+        -String description
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +addVehicle(vehicle Vehicle) void
+        +getVehicles() List~Vehicle~
+        +countByStatus(status VehicleStatus) int
+    }
+
+    class Vehicle {
+        -UUID id
+        -UUID fleetId
+        -String plate
+        -String brand
+        -String model
+        -int year
+        -String type
+        -BigDecimal capacity
+        -VehicleStatus currentStatus
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +applyAuthorizationResult(status VehicleStatus) void
+        +isOperational() boolean
+        +getActiveAssignment() Optional~VehicleAssignment~
+    }
+
+    class Driver {
+        -UUID id
+        -UUID userId
+        -String licenseNumber
+        -LocalDate licenseExpirationDate
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +hasValidLicense(onDate LocalDate) boolean
+        +getActiveAssignment() Optional~VehicleAssignment~
+    }
+
+    class VehicleAssignment {
+        -UUID id
+        -UUID vehicleId
+        -UUID driverId
+        -LocalDate assignedFrom
+        -LocalDate assignedTo
+        -boolean isActive
+        -LocalDateTime createdAt
+        +isActiveOn(date LocalDate) boolean
+        +close(endDate LocalDate) void
+    }
+
+    class VehicleStatus {
+        <<enumeration>>
+        ENABLED
+        OBSERVED
+        NOT_ENABLED
+    }
+
+    class FleetService {
+        -FleetRepository fleetRepository
+        +registerVehicle(fleetId UUID, vehicle Vehicle) Vehicle
+        +assignDriver(vehicleId UUID, driverId UUID, from LocalDate) VehicleAssignment
+        +updateCurrentStatus(vehicleId UUID, status VehicleStatus) void
+        +findVehicleAssignedTo(driverId UUID) Optional~Vehicle~
+    }
+
+    Company "1" *-- "0..*" Fleet : organiza
+    Fleet "1" *-- "0..*" Vehicle : agrupa
+    Vehicle "1" --> "0..*" VehicleAssignment : es asignado en
+    Driver "1" --> "0..*" VehicleAssignment : recibe
+    Vehicle "1" --> "1" VehicleStatus : presenta
+    FleetService ..> Vehicle : gestiona
+    FleetService ..> VehicleAssignment : gestiona
+```
+
+**Explicación del diagrama.** Este contexto agrupa los activos sobre los que opera la plataforma. `Company` y `Fleet` mantienen una composición, al igual que `Fleet` y `Vehicle`: una flota no existe fuera de su empresa, ni un vehículo fuera de su flota.
+
+`VehicleAssignment` es la clase que resuelve la relación entre `Vehicle` y `Driver`, que no es una asociación directa sino una asociación con atributos propios —el periodo de vigencia— y con historial. Es la clase que permite determinar cuál es el vehículo asignado a un conductor en el momento de iniciar una inspección preoperacional, lo que constituye la premisa del producto.
+
+El método `applyAuthorizationResult` de `Vehicle` es el único que modifica `currentStatus`, y solo puede invocarse como consecuencia de una habilitación operativa registrada en el contexto **Evaluation and Authorization**. No existe un método público que permita establecer el estado directamente, porque `currentStatus` es un valor derivado y no la fuente de verdad, conforme a la decisión de diseño de la sección 4.8.
+
+`Driver.userId` referencia al usuario del contexto **Identity and Access** por identificador, ya que la identidad de la persona y sus datos como conductor pertenecen a contextos distintos.
+
+---
+
+#### Class Diagram: Vehicle Documentation
+
+```mermaid
+classDiagram
+    class DocumentType {
+        -UUID id
+        -String code
+        -String name
+        -String description
+        -boolean isRequired
+        -boolean isActive
+        +isMandatoryForOperation() boolean
+    }
+
+    class VehicleDocument {
+        -UUID id
+        -UUID vehicleId
+        -UUID documentTypeId
+        -String number
+        -LocalDate issueDate
+        -LocalDate expirationDate
+        -DocumentStatus status
+        -String fileUrl
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +recalculateStatus(today LocalDate) DocumentStatus
+        +isExpired(today LocalDate) boolean
+        +daysUntilExpiration(today LocalDate) long
+    }
+
+    class DocumentStatus {
+        <<enumeration>>
+        VALID
+        EXPIRING
+        EXPIRED
+    }
+
+    class DocumentService {
+        -DocumentRepository documentRepository
+        +registerDocument(vehicleId UUID, document VehicleDocument) VehicleDocument
+        +recalculateAll(today LocalDate) int
+        +findExpiringSoon(vehicleId UUID, days int) List~VehicleDocument~
+    }
+
+    DocumentType "1" --> "0..*" VehicleDocument : clasifica
+    VehicleDocument "1" --> "1" DocumentStatus : presenta
+    DocumentService ..> VehicleDocument : gestiona
+```
+
+**Explicación del diagrama.** `DocumentType` actúa como catálogo y `VehicleDocument` como el documento concreto asociado a un vehículo. El atributo `vehicleId` es de nuevo una referencia por identificador al contexto **Fleet Management**.
+
+El método `recalculateStatus` concentra la derivación del estado a partir de `expirationDate`, de modo que la regla que distingue `VALID`, `EXPIRING` y `EXPIRED` reside en un único lugar. `DocumentService.recalculateAll` es el método que invoca la tarea programada descrita en el diagrama de componentes de la sección 4.6.4.
+
+---
+
+#### Class Diagram: Pre-Operational Inspection
+
+```mermaid
+classDiagram
+    class InspectionItem {
+        -UUID id
+        -String code
+        -String name
+        -String description
+        -ItemCategory category
+        -boolean isSafetyComponent
+        -boolean requiresEvidence
+        -int displayOrder
+        -boolean isActive
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +demandsEvidence() boolean
+        +deactivate() void
+    }
+
+    class Inspection {
+        -UUID id
+        -UUID vehicleId
+        -UUID driverId
+        -InspectionStatus status
+        -int odometer
+        -LocalDateTime startedAt
+        -LocalDateTime completedAt
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +addResult(result InspectionResultEntry) void
+        +complete(completedAt LocalDateTime) void
+        +isComplete() boolean
+        +getResults() List~InspectionResultEntry~
+    }
+
+    class InspectionResultEntry {
+        -UUID id
+        -UUID inspectionId
+        -UUID inspectionItemId
+        -String itemName
+        -String itemCategory
+        -ResultValue result
+        -LocalDateTime createdAt
+        +addObservation(observation Observation) void
+        +requiresObservation() boolean
+    }
+
+    class Observation {
+        -UUID id
+        -UUID inspectionResultId
+        -String description
+        -UUID createdBy
+        -LocalDateTime createdAt
+        +addEvidence(evidence Evidence) void
+        +hasEvidence() boolean
+    }
+
+    class Evidence {
+        -UUID id
+        -UUID observationId
+        -String fileUrl
+        -String mediaType
+        -LocalDateTime uploadedAt
+    }
+
+    class ItemCategory {
+        <<enumeration>>
+        COMPONENT
+        SAFETY_COMPONENT
+        DOCUMENTATION
+    }
+
+    class InspectionStatus {
+        <<enumeration>>
+        IN_PROGRESS
+        COMPLETED
+    }
+
+    class ResultValue {
+        <<enumeration>>
+        OK
+        OBSERVED
+        FAIL
+    }
+
+    class InspectionService {
+        -InspectionRepository inspectionRepository
+        +startInspection(driverId UUID, odometer int) Inspection
+        +registerResult(inspectionId UUID, itemId UUID, value ResultValue) InspectionResultEntry
+        +completeInspection(inspectionId UUID) Inspection
+    }
+
+    Inspection "1" *-- "1..*" InspectionResultEntry : contiene
+    InspectionItem "1" --> "0..*" InspectionResultEntry : es verificado en
+    InspectionResultEntry "1" *-- "0..*" Observation : puede registrar
+    Observation "1" *-- "0..*" Evidence : es respaldada por
+    InspectionItem "1" --> "1" ItemCategory : pertenece a
+    Inspection "1" --> "1" InspectionStatus : presenta
+    InspectionResultEntry "1" --> "1" ResultValue : obtiene
+    InspectionService ..> Inspection : gestiona
+```
+
+**Explicación del diagrama.** Este es el contexto núcleo del producto. `Inspection` es la raíz del agregado y mantiene una composición con `InspectionResultEntry`: los resultados no existen fuera de la inspección que los contiene. La cadena continúa con `Observation` y `Evidence`, ambas también en composición, reflejando la decisión de diseño de la sección 4.8 según la cual una evidencia siempre respalda una observación concreta y no la inspección en su conjunto.
+
+La clase se denomina `InspectionResultEntry` y no `InspectionResult` para evitar la colisión con la enumeración de valores posibles, que se denomina `ResultValue`. Ambos nombres corresponden a los términos *Inspection Result* del Ubiquitous Language de la sección 2.5.
+
+Los atributos `itemName` e `itemCategory` de `InspectionResultEntry` no son redundantes respecto de `InspectionItem`: conservan el nombre y la categoría que el elemento del catálogo tenía **en el momento de realizarse la inspección**, de modo que el historial no pueda alterarse de forma retroactiva si el administrador modifica o desactiva ese elemento posteriormente.
+
+`InspectionItem.demandsEvidence` expone el atributo `requiresEvidence`, que permite exigir fotografía en los elementos críticos y constituye la mitigación parcial de la debilidad declarada en el SWOT de la sección 2.1.1: la inspección es autorreportada.
+
+---
+
+#### Class Diagram: Evaluation and Authorization
+
+```mermaid
+classDiagram
+    class EvaluationRule {
+        -UUID id
+        -UUID inspectionItemId
+        -String name
+        -ResultValue foundResult
+        -RuleImpact resultingImpact
+        -String description
+        -boolean isActive
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +appliesTo(itemId UUID, value ResultValue) boolean
+        +getImpact() RuleImpact
+    }
+
+    class Evaluation {
+        -UUID id
+        -UUID inspectionId
+        -LocalDateTime evaluatedAt
+        -UUID evaluatedBy
+        -LocalDateTime createdAt
+        +addDetail(detail EvaluationDetail) void
+        +resolveMostRestrictiveImpact() RuleImpact
+        +isAutomatic() boolean
+    }
+
+    class EvaluationDetail {
+        -UUID id
+        -UUID evaluationId
+        -UUID inspectionResultId
+        -UUID evaluationRuleId
+        -RuleImpact appliedImpact
+    }
+
+    class OperationalAuthorization {
+        -UUID id
+        -UUID evaluationId
+        -UUID vehicleId
+        -AuthorizationStatus status
+        -boolean isOverride
+        -String overrideReason
+        -UUID authorizedBy
+        -LocalDateTime authorizedAt
+        -LocalDateTime validUntil
+        -LocalDateTime createdAt
+        +isValidOn(moment LocalDateTime) boolean
+        +liftsBlock() boolean
+    }
+
+    class RuleImpact {
+        <<enumeration>>
+        NONE
+        OBSERVED
+        BLOCKING
+    }
+
+    class AuthorizationStatus {
+        <<enumeration>>
+        ENABLED
+        OBSERVED
+        NOT_ENABLED
+    }
+
+    class EvaluationEngine {
+        -EvaluationRepository evaluationRepository
+        +evaluate(inspectionId UUID) Evaluation
+        +findApplicableRules(itemId UUID, value ResultValue) List~EvaluationRule~
+    }
+
+    class AuthorizationService {
+        -EvaluationRepository evaluationRepository
+        +authorize(evaluation Evaluation) OperationalAuthorization
+        +liftBlock(vehicleId UUID, reason String, authorizedBy UUID) OperationalAuthorization
+        +findCurrentAuthorization(vehicleId UUID) Optional~OperationalAuthorization~
+    }
+
+    Evaluation "1" *-- "1..*" EvaluationDetail : se descompone en
+    EvaluationRule "1" --> "0..*" EvaluationDetail : es aplicada en
+    Evaluation "1" --> "1" OperationalAuthorization : produce
+    EvaluationDetail "1" --> "1" RuleImpact : aplica
+    OperationalAuthorization "1" --> "1" AuthorizationStatus : determina
+    EvaluationEngine ..> Evaluation : produce
+    EvaluationEngine ..> AuthorizationService : solicita el registro de la habilitación
+    AuthorizationService ..> OperationalAuthorization : gestiona
+```
+
+**Explicación del diagrama.** Este es el segundo contexto núcleo. `EvaluationRule` expresa una regla legible de la forma *"si el elemento X presenta el resultado Y, el impacto sobre el vehículo es Z"*, y el método `appliesTo` es el que permite al motor determinar qué reglas corresponden a cada resultado. La condición es estructurada y no texto libre, precisamente para poder evaluarse de forma determinista y auditarse después.
+
+`Evaluation` y `OperationalAuthorization` se mantienen como clases distintas y con relación `1 --> 1`, porque representan dos cosas diferentes: la evaluación es el proceso de aplicar las reglas, y la habilitación es la decisión resultante con su vigencia. El método `resolveMostRestrictiveImpact` de `Evaluation` implementa la regla según la cual un solo impacto `BLOCKING` produce el estado `NOT_ENABLED`.
+
+El atributo `evaluatedBy` admite valor nulo porque la evaluación se ejecuta de forma automática al completarse la inspección; `isAutomatic` expone esa distinción.
+
+`OperationalAuthorization` es la **fuente de verdad de la condición operativa del vehículo**. Los atributos `isOverride`, `overrideReason` y `authorizedBy` registran el levantamiento de un bloqueo: el método `liftBlock` de `AuthorizationService` exige la justificación y el responsable, de modo que la excepción se permite pero deja rastro. Esta estructura es la que sostiene la Estrategia 2 planteada en la sección 2.1.2.
+
+---
+
+#### Class Diagram: Incident Management
+
+```mermaid
+classDiagram
+    class IncidentType {
+        -UUID id
+        -String code
+        -String name
+        -String description
+        -boolean isActive
+    }
+
+    class Incident {
+        -UUID id
+        -UUID vehicleId
+        -UUID incidentTypeId
+        -UUID inspectionId
+        -IncidentOrigin origin
+        -String description
+        -IncidentSeverity severity
+        -IncidentStatus status
+        -UUID reportedBy
+        -LocalDateTime reportedAt
+        -String resolutionType
+        -LocalDateTime resolvedAt
+        -LocalDateTime createdAt
+        -LocalDateTime updatedAt
+        +addCorrectiveAction(action CorrectiveAction) void
+        +addFollowUp(followUp IncidentFollowUp) void
+        +resolve(resolutionType String, moment LocalDateTime) void
+        +isCritical() boolean
+        +comesFromInspection() boolean
+    }
+
+    class CorrectiveAction {
+        -UUID id
+        -UUID incidentId
+        -String description
+        -UUID performedBy
+        -LocalDateTime performedAt
+        -String evidenceUrl
+    }
+
+    class Repair {
+        -UUID id
+        -UUID incidentId
+        -String workshop
+        -BigDecimal cost
+        -LocalDate startedAt
+        -LocalDate finishedAt
+        -RepairStatus status
+        +isFinished() boolean
+        +durationInDays() long
+    }
+
+    class IncidentFollowUp {
+        -UUID id
+        -UUID incidentId
+        -String note
+        -UUID createdBy
+        -LocalDateTime createdAt
+    }
+
+    class IncidentOrigin {
+        <<enumeration>>
+        INSPECTION
+        OPERATION
+    }
+
+    class IncidentSeverity {
+        <<enumeration>>
+        LOW
+        MEDIUM
+        HIGH
+        CRITICAL
+    }
+
+    class IncidentStatus {
+        <<enumeration>>
+        OPEN
+        IN_PROGRESS
+        RESOLVED
+        CLOSED
+    }
+
+    class RepairStatus {
+        <<enumeration>>
+        SCHEDULED
+        IN_PROGRESS
+        COMPLETED
+    }
+
+    class IncidentService {
+        -IncidentRepository incidentRepository
+        +reportIncident(vehicleId UUID, incident Incident) Incident
+        +registerCorrectiveAction(incidentId UUID, action CorrectiveAction) CorrectiveAction
+        +scheduleRepair(incidentId UUID, repair Repair) Repair
+        +findOpenByVehicle(vehicleId UUID) List~Incident~
+    }
+
+    IncidentType "1" --> "0..*" Incident : clasifica
+    Incident "1" *-- "0..*" CorrectiveAction : es atendida mediante
+    Incident "1" *-- "0..*" Repair : puede requerir
+    Incident "1" *-- "0..*" IncidentFollowUp : es seguida mediante
+    Incident "1" --> "1" IncidentOrigin : procede de
+    Incident "1" --> "1" IncidentSeverity : presenta
+    Incident "1" --> "1" IncidentStatus : se encuentra en
+    Repair "1" --> "1" RepairStatus : se encuentra en
+    IncidentService ..> Incident : gestiona
+```
+
+**Explicación del diagrama.** `Incident` es la raíz del agregado y mantiene composiciones con `CorrectiveAction`, `Repair` e `IncidentFollowUp`, ya que ninguna de las tres tiene sentido fuera de la incidencia que las origina.
+
+El atributo `inspectionId` admite valor nulo y se acompaña de la enumeración `IncidentOrigin`, porque el Ubiquitous Language define la incidencia como un problema detectado en un vehículo durante una inspección **o durante su operación**. El método `comesFromInspection` expone esa distinción. Si la referencia a la inspección fuera obligatoria, las incidencias surgidas durante la operación no podrían registrarse.
+
+---
+
+#### Resumen de referencias entre bounded contexts
+
+Las referencias que cruzan la frontera de un contexto se implementan como atributos de tipo `UUID` y no como asociaciones entre clases. El cuadro siguiente las recoge:
+
+| Clase | Atributo | Contexto referenciado |
+|:------|:---------|:----------------------|
+| `User` | `companyId` | Fleet Management |
+| `Driver` | `userId` | Identity and Access |
+| `VehicleDocument` | `vehicleId` | Fleet Management |
+| `Inspection` | `vehicleId`, `driverId` | Fleet Management |
+| `Observation` | `createdBy` | Identity and Access |
+| `EvaluationRule` | `inspectionItemId` | Pre-Operational Inspection |
+| `Evaluation` | `inspectionId`, `evaluatedBy` | Pre-Operational Inspection · Identity and Access |
+| `EvaluationDetail` | `inspectionResultId` | Pre-Operational Inspection |
+| `OperationalAuthorization` | `vehicleId`, `authorizedBy` | Fleet Management · Identity and Access |
+| `Incident` | `vehicleId`, `inspectionId`, `reportedBy` | Fleet Management · Pre-Operational Inspection · Identity and Access |
+| `CorrectiveAction` | `performedBy` | Identity and Access |
+| `IncidentFollowUp` | `createdBy` | Identity and Access |
+
+La validación de la existencia del elemento referenciado es responsabilidad del servicio de aplicación del contexto que realiza la referencia, tal como se refleja en las relaciones del diagrama de componentes de la sección 4.6.4.
+
+---
 
 <a id="48-database-design"></a>
 ## 4.8. Database Design.
