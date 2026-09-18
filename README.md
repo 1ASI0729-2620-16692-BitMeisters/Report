@@ -2549,6 +2549,85 @@ Paso 10: Separamos por BOUNDED CONTEXT en los cuales algunos tienen un cierto ti
 
 <img src="img/designLevelEventStorming/designlevel-eventstorming10.png" alt=" paso 10 del designlevelES" width="800">
 
+---
+
+#### Consolidación del modelo: Aggregates, Commands, Domain Events y Queries
+
+Las capturas anteriores recogen el resultado de la sesión. A continuación se consolida por escrito lo identificado en ella, agrupado por los seis bounded contexts de la sección 4.6, de modo que cada elemento del EventStorming pueda rastrearse hasta su clase en la sección 4.7.1 y hasta su tabla en la sección 4.8.
+
+**Notación.** El *aggregate* es la entidad que garantiza la consistencia de un grupo de objetos y es la única puerta de entrada a ellos. El *command* es la intención de un actor de cambiar el estado del sistema. El *domain event* es el hecho consumado, redactado en pasado, que se produce cuando un command se ejecuta con éxito. La *query* es una consulta que no modifica el estado.
+
+##### Identity and Access
+
+| | |
+|:---|:---|
+| **Aggregate** | `User` |
+| **Commands** | `SignIn` · `RegisterUser` · `ChangeUserRole` · `DeactivateUser` |
+| **Domain Events** | `UserSignedIn` · `UserRegistered` · `UserRoleChanged` · `UserDeactivated` |
+| **Queries** | `GetUserById` · `GetUsersByCompany` · `GetAuthenticatedUserProfile` |
+
+##### Fleet Management
+
+| | |
+|:---|:---|
+| **Aggregates** | `Company` · `Fleet` · `Vehicle` · `Driver` |
+| **Commands** | `RegisterVehicle` · `UpdateVehicle` · `RegisterDriver` · `AssignVehicleToDriver` · `CloseVehicleAssignment` · `ApplyAuthorizationResult` |
+| **Domain Events** | `VehicleRegistered` · `VehicleUpdated` · `DriverRegistered` · `VehicleAssignedToDriver` · `VehicleAssignmentClosed` · `VehicleCurrentStatusChanged` |
+| **Queries** | `GetVehicleById` · `GetVehiclesByFleet` · `GetVehiclesByStatus` · `GetVehicleAssignedToDriver` · `GetFleetSummary` |
+
+El command `ApplyAuthorizationResult` no lo origina un actor humano: lo desencadena la *policy* descrita en el contexto Evaluation and Authorization, y es la única vía por la que `vehicles.current_status` puede modificarse.
+
+##### Vehicle Documentation
+
+| | |
+|:---|:---|
+| **Aggregates** | `DocumentType` · `VehicleDocument` |
+| **Commands** | `RegisterVehicleDocument` · `UpdateVehicleDocument` · `RecalculateDocumentStatus` |
+| **Domain Events** | `VehicleDocumentRegistered` · `VehicleDocumentUpdated` · `VehicleDocumentExpiringSoon` · `VehicleDocumentExpired` |
+| **Queries** | `GetDocumentsByVehicle` · `GetExpiringDocuments` · `GetDocumentTypes` |
+
+##### Pre-Operational Inspection
+
+| | |
+|:---|:---|
+| **Aggregates** | `Inspection` · `InspectionItem` |
+| **Commands** | `StartInspection` · `RegisterInspectionResult` · `AddObservation` · `AttachEvidence` · `CompleteInspection` |
+| **Domain Events** | `InspectionStarted` · `InspectionResultRegistered` · `ObservationAdded` · `EvidenceAttached` · **`InspectionCompleted`** |
+| **Queries** | `GetInspectionById` · `GetInspectionsByVehicle` · `GetInspectionsByDriver` · `GetActiveInspectionItems` |
+
+`InspectionCompleted` es el **pivotal event** del dominio: es el hecho a partir del cual se dispara toda la cadena de evaluación y habilitación, y el que separa los dos contextos núcleo.
+
+##### Evaluation and Authorization
+
+| | |
+|:---|:---|
+| **Aggregates** | `Evaluation` · `OperationalAuthorization` · `EvaluationRule` |
+| **Commands** | `EvaluateInspection` · `IssueOperationalAuthorization` · `LiftBlock` · `DefineEvaluationRule` · `DeactivateEvaluationRule` |
+| **Domain Events** | `InspectionEvaluated` · `VehicleEnabled` · `VehicleObserved` · `VehicleNotEnabled` · `BlockLifted` · `EvaluationRuleDefined` |
+| **Queries** | `GetCurrentAuthorization` · `GetAuthorizationHistoryByVehicle` · `GetEvaluationDetail` · `GetActiveEvaluationRules` · `GetOverridesByPeriod` |
+
+##### Incident Management
+
+| | |
+|:---|:---|
+| **Aggregates** | `Incident` · `IncidentType` |
+| **Commands** | `ReportIncident` · `RegisterCorrectiveAction` · `ScheduleRepair` · `CompleteRepair` · `AddIncidentFollowUp` · `ResolveIncident` |
+| **Domain Events** | `IncidentReported` · `CorrectiveActionRegistered` · `RepairScheduled` · `RepairCompleted` · `IncidentFollowUpAdded` · `IncidentResolved` |
+| **Queries** | `GetIncidentById` · `GetOpenIncidentsByVehicle` · `GetIncidentsBySeverity` · `GetIncidentHistory` |
+
+##### Policies entre contextos
+
+Las *policies* son las reglas que conectan un domain event de un contexto con un command de otro. Son las tres que cruzan fronteras y explican cómo se comunican los contextos sin acoplarse:
+
+| Cuando ocurre | La política establece que | Y ejecuta el command |
+|:--------------|:--------------------------|:---------------------|
+| `InspectionCompleted` | toda inspección completada debe evaluarse de forma automática | `EvaluateInspection` |
+| `InspectionEvaluated` | el resultado de la evaluación determina la habilitación del vehículo | `IssueOperationalAuthorization` |
+| `VehicleNotEnabled` · `VehicleObserved` | la condición operativa resultante debe reflejarse en el vehículo y notificarse al supervisor | `ApplyAuthorizationResult` |
+
+Esta cadena es la que se traduce, en la sección 4.6.4, en las relaciones `Inspection Service → Evaluation Engine → Authorization Service → Fleet Service`.
+
+
 <a id="462-software-architecture-context-diagram"></a>
 ### 4.6.2. Software Architecture Context Diagram.
 
