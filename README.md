@@ -1199,6 +1199,225 @@ A continuación se presenta el Product Backlog consolidado:
 <a id="411-general-style-guidelines"></a>
 ### 4.1.1. General Style Guidelines.
 
+En esta sección, el equipo establece las bases visuales y comunicativas de FleetSafe con el fin de contar con un repositorio central y organizado de uso común para todos los integrantes. Esto permite mantener una presentación consistente y enfocada en los tres productos que conforman la solución: la Landing Page, la Web Application y el Backend RESTful API.
+
+Las decisiones que se presentan a continuación se derivan de tres fuentes: el **Ubiquitous Language** definido en la sección 2.5, los **segmentos objetivo** descritos en la sección 1.3 y las **estrategias competitivas** planteadas en la sección 2.1.2. En particular, la Estrategia 5 —localización y acompañamiento local— determina que toda la terminología de la interfaz debe emplear el español latinoamericano y los términos del dominio definidos por el equipo.
+
+---
+
+#### Branding
+
+FleetSafe es una plataforma de seguridad y control preventivo vehicular. Su identidad visual debe comunicar **confiabilidad, control y prevención**, y no velocidad, modernidad o innovación tecnológica por sí mismas. El usuario de FleetSafe —un supervisor de flota o un conductor de vehículo de carga— debe percibir que la plataforma es una herramienta de trabajo seria, no un producto experimental.
+
+| Elemento | Definición |
+|:---------|:-----------|
+| **Nombre del producto** | FleetSafe |
+| **Startup** | BitMeisters |
+| **Concepto de marca** | La unión de los conceptos *fleet* (flota) y *safe* (seguro) sintetiza la propuesta de valor: una flota que opera de forma segura porque su condición ha sido verificada antes de operar. |
+| **Logotipo** | Compuesto por el isotipo —una marca de verificación integrada a la silueta de un vehículo— y el logotipo tipográfico "FleetSafe" en una sola palabra, con la "F" y la "S" en mayúscula. |
+| **Isotipo** | La marca de verificación representa el resultado de la inspección preoperacional: el vehículo ha sido verificado y se encuentra habilitado. |
+| **Versión monocromática** | El logotipo debe contar con una versión en un solo color para su uso sobre fondos de color pleno o fotografías. |
+| **Área de resguardo** | El logotipo debe mantener un margen libre equivalente a la altura de la letra "F" en todos sus lados. |
+| **Tamaño mínimo** | 24 px de alto en interfaces digitales. |
+| **Usos incorrectos** | No se debe deformar, rotar, aplicar sombras, degradados ni contornos al logotipo. No se debe alterar la relación entre el isotipo y el logotipo tipográfico. |
+
+> **Pendiente:** incorporar el archivo del logotipo y del isotipo en `img/brand/` y referenciarlo desde esta sección.
+
+---
+
+#### Tono de comunicación y lenguaje
+
+El tono de FleetSafe se define a partir de la naturaleza del dominio: se trata de una herramienta de control preventivo cuyas decisiones afectan la seguridad de las personas y la continuidad operativa de una empresa. Esto determina un tono **serio, formal y respetuoso**, pero **no distante ni burocrático**.
+
+| Dimensión | Posición adoptada | Sustento |
+|:----------|:------------------|:---------|
+| Divertido / **Serio** | Serio | La plataforma interviene en decisiones sobre seguridad vehicular. Un tono liviano resultaría inapropiado. |
+| **Formal** / Casual | Formal | El usuario principal es un supervisor de flota que reporta a una empresa y cuyas decisiones pueden ser auditadas. |
+| **Respetuoso** / Irreverente | Respetuoso | El conductor es el usuario que ejecuta la inspección y no debe sentirse fiscalizado por el sistema. |
+| Entusiasta / **Sereno** | Sereno | El sistema comunica estados y consecuencias; la exaltación genera desconfianza en un contexto de control. |
+
+**Principios de redacción aplicados a la interfaz:**
+
+- **Claridad sobre brevedad.** Los mensajes deben indicar qué ocurrió y qué debe hacer el usuario. Ejemplo: *"El vehículo no se encuentra habilitado para operar. Registre una acción correctiva o solicite una autorización de excepción."*
+- **Terminología del dominio.** La interfaz emplea los términos del Ubiquitous Language (sección 2.5) y no sinónimos técnicos. Se dice *inspección preoperacional*, no *checklist*; se dice *habilitado*, no *activo*; se dice *incidencia*, no *ticket*.
+- **Voz activa y segunda persona.** El sistema se dirige al usuario de forma directa: *"Registre el estado del elemento"*, no *"El estado del elemento debe ser registrado"*.
+- **Neutralidad ante el error del usuario.** Los mensajes de error describen la causa y la corrección, sin calificar la acción: *"La placa ya se encuentra registrada"*, no *"Ingresó una placa inválida"*.
+- **Sin lenguaje promocional dentro de la aplicación.** Los calificativos como *fácil*, *rápido* o *intuitivo* se reservan para la Landing Page y no se emplean en la Web Application.
+
+**Idioma.** El español latinoamericano es el idioma principal de la solución. El inglés se mantiene como idioma secundario y como idioma de la nomenclatura técnica del modelo de dominio, conforme a lo establecido en la sección 2.5.
+
+---
+
+#### Tipografía
+
+Se adopta **Inter** como familia tipográfica principal y **JetBrains Mono** como familia secundaria para datos técnicos.
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Familia principal** | Inter |
+| **Familia secundaria** | JetBrains Mono, para identificadores, placas vehiculares, códigos y valores numéricos |
+| **Sustento de la elección** | Inter es una familia de código abierto, optimizada para interfaces digitales y con alta legibilidad en tamaños pequeños, lo que resulta determinante porque el conductor realiza la inspección desde el navegador de un teléfono móvil. JetBrains Mono se emplea donde la distinción entre caracteres similares —`0` y `O`, `1` y `l`— es crítica, como en placas vehiculares y códigos de elemento. |
+| **Alternativas de respaldo** | `system-ui`, `-apple-system`, `Segoe UI`, `Roboto`, `sans-serif` |
+
+**Escala tipográfica**
+
+| Token | Tamaño | Altura de línea | Peso | Uso |
+|:------|:-------|:----------------|:-----|:----|
+| `display` | 40 px | 48 px | 700 | Título principal de la Landing Page |
+| `heading-1` | 32 px | 40 px | 700 | Título de sección en la Landing Page |
+| `heading-2` | 24 px | 32 px | 600 | Encabezado de módulo en la Web Application |
+| `heading-3` | 20 px | 28 px | 600 | Encabezado de tarjeta o panel |
+| `body-large` | 18 px | 28 px | 400 | Texto introductorio |
+| `body` | 16 px | 24 px | 400 | Texto general de la interfaz |
+| `body-small` | 14 px | 20 px | 400 | Texto secundario, descripciones de campo |
+| `caption` | 12 px | 16 px | 500 | Etiquetas, metadatos, marcas de tiempo |
+| `mono-data` | 16 px | 24 px | 500 | Placas, códigos e identificadores |
+
+**Reglas de aplicación:**
+
+- No se emplean más de tres niveles tipográficos en una misma vista.
+- Los textos en mayúsculas se reservan para etiquetas cortas y nunca para párrafos completos.
+- El peso `700` se reserva para títulos; el peso `600` para encabezados de componente.
+- En la Web Application, el tamaño mínimo de texto es `14 px`, con excepción de las etiquetas `caption`.
+
+---
+
+#### Colores
+
+La paleta se construye sobre un **azul profundo** como color primario, que comunica confiabilidad y control, y un **verde** como color de confirmación, asociado directamente al estado *habilitado* del vehículo. Los colores de estado se derivan directamente de los tres valores del término *Vehicle Status* del Ubiquitous Language.
+
+**Colores de marca**
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `color-primary-900` | `#0B2545` | Fondo de encabezados, texto de máximo contraste |
+| `color-primary-700` | `#13315C` | Color primario de la marca, botones principales |
+| `color-primary-500` | `#1D4E89` | Estados hover de elementos primarios |
+| `color-primary-100` | `#D6E4F0` | Fondos de énfasis suave, filas seleccionadas |
+| `color-accent-500` | `#F4A261` | Llamadas a la acción secundarias en la Landing Page |
+
+**Colores de estado del vehículo**
+
+| Estado | Token | Valor | Uso |
+|:-------|:------|:------|:----|
+| **Habilitado** | `color-status-enabled` | `#2A9D8F` | Indicador de vehículo habilitado para operar |
+| **Observado** | `color-status-observed` | `#E9C46A` | Indicador de vehículo que requiere atención o seguimiento |
+| **No habilitado** | `color-status-not-enabled` | `#E76F51` | Indicador de vehículo que no puede operar |
+
+**Colores de resultado de inspección**
+
+| Resultado | Token | Valor |
+|:----------|:------|:------|
+| Conforme (`OK`) | `color-result-ok` | `#2A9D8F` |
+| Observado (`OBSERVED`) | `color-result-observed` | `#E9C46A` |
+| No conforme (`FAIL`) | `color-result-fail` | `#E76F51` |
+| No aplica (`N/A`) | `color-result-na` | `#8D99AE` |
+
+**Colores neutros y semánticos**
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `color-neutral-900` | `#1A1A1A` | Texto principal |
+| `color-neutral-700` | `#4A4A4A` | Texto secundario |
+| `color-neutral-400` | `#9E9E9E` | Texto deshabilitado, bordes suaves |
+| `color-neutral-200` | `#E0E0E0` | Bordes y separadores |
+| `color-neutral-050` | `#F7F8FA` | Fondo general de la aplicación |
+| `color-surface` | `#FFFFFF` | Fondo de tarjetas y paneles |
+| `color-info` | `#3A86FF` | Mensajes informativos |
+| `color-success` | `#2A9D8F` | Confirmación de operación exitosa |
+| `color-warning` | `#E9C46A` | Advertencia que no impide continuar |
+| `color-error` | `#E76F51` | Error que impide completar la operación |
+
+**Reglas de aplicación:**
+
+- El color nunca es el único portador de significado. Todo indicador de estado debe acompañarse de texto o de un ícono, para no depender exclusivamente de la percepción cromática del usuario.
+- Los colores de estado del vehículo (`enabled`, `observed`, `not-enabled`) se aplican de forma consistente en todas las vistas: listados, tarjetas, detalle e historial.
+- El color `color-error` se reserva para errores que impiden completar una operación y no se emplea como color decorativo.
+
+---
+
+#### Espaciado
+
+Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consistente y facilita la adaptación a distintas densidades de pantalla.
+
+| Token | Valor | Uso típico |
+|:------|:------|:-----------|
+| `space-1` | 4 px | Separación entre ícono y etiqueta |
+| `space-2` | 8 px | Separación interna de un componente |
+| `space-3` | 12 px | Separación entre campos de un formulario |
+| `space-4` | 16 px | Padding interno de tarjetas |
+| `space-5` | 24 px | Separación entre bloques de una vista |
+| `space-6` | 32 px | Separación entre secciones |
+| `space-7` | 48 px | Separación entre secciones de la Landing Page |
+| `space-8` | 64 px | Margen superior e inferior de bloques de la Landing Page |
+
+**Reglas de aplicación:**
+
+- El espaciado entre secciones siempre es mayor que el espaciado entre componentes de una misma sección.
+- Las tarjetas emplean `space-4` como padding interno y `space-5` como separación entre ellas.
+- En la Web Application, la densidad de espaciado es mayor que en la Landing Page, porque el usuario debe poder revisar varios elementos sin desplazarse.
+
+---
+
+#### Radios, bordes y elevación
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `radius-sm` | 4 px | Campos de formulario, etiquetas |
+| `radius-md` | 8 px | Botones, tarjetas |
+| `radius-lg` | 16 px | Paneles y modales |
+| `border-width` | 1 px | Bordes de campos y separadores |
+| `shadow-sm` | `0 1px 2px rgba(0,0,0,0.06)` | Tarjetas en reposo |
+| `shadow-md` | `0 4px 8px rgba(0,0,0,0.08)` | Tarjetas en hover, menús desplegables |
+| `shadow-lg` | `0 8px 24px rgba(0,0,0,0.12)` | Modales y paneles flotantes |
+
+---
+
+#### Iconografía
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Set seleccionado** | Lucide Icons |
+| **Sustento** | Es un set de código abierto, con trazo uniforme, que mantiene coherencia visual con la familia Inter y no requiere licencia. |
+| **Tamaños** | 16 px (en línea con texto), 20 px (en botones), 24 px (en encabezados) |
+| **Grosor de trazo** | 1.5 px, constante en todos los tamaños |
+| **Regla** | Los íconos acompañan al texto y no lo reemplazan. Ningún ícono debe ser el único medio para identificar una acción. |
+
+---
+
+#### Accesibilidad
+
+Las decisiones anteriores se complementan con los siguientes criterios mínimos, considerando que la inspección se realiza frecuentemente desde el navegador de un teléfono móvil, en exteriores y bajo luz solar directa.
+
+| Criterio | Definición |
+|:---------|:-----------|
+| **Contraste** | Todo texto debe alcanzar una relación de contraste mínima de 4.5:1 sobre su fondo, conforme al nivel AA de WCAG 2.1. |
+| **Área táctil** | Los elementos interactivos deben tener un área mínima de 44 × 44 px, para su uso con guantes o con una sola mano. |
+| **Foco visible** | Todo elemento interactivo debe presentar un indicador de foco perceptible para la navegación por teclado. |
+| **Independencia del color** | Ningún estado se comunica exclusivamente mediante color, según lo establecido en la sección de colores. |
+| **Tamaño de texto** | El tamaño mínimo de texto en la Web Application es de 14 px, con excepción de las etiquetas `caption`. |
+| **Movimiento** | Las animaciones son breves y no interfieren con la ejecución de una tarea. |
+
+---
+
+#### Repositorio de assets
+
+Los recursos visuales del proyecto se organizan de la siguiente manera dentro del repositorio, en coherencia con la estructura de archivos presentada al inicio de este informe:
+
+| Ruta | Contenido |
+|:-----|:----------|
+| `img/UPC.png` | Logotipo institucional, empleado en la portada del informe |
+| `img/team-members/` | Fotografías de los integrantes del equipo |
+| `img/bigPictureEventStorming/` | Imágenes del Big Picture EventStorming (sección 2.4) |
+| `img/designLevelEventStorming/` | Imágenes del Design-level Event Storming (sección 4.6.1) |
+| `img/competitors/` | Logotipos de los competidores analizados en la sección 2.1 |
+| `img/brand/` | *(Pendiente)* Logotipo, isotipo y versiones monocromáticas de FleetSafe |
+| `img/landing/` | *(Pendiente)* Wireframes y mock-ups de la Landing Page (sección 4.3) |
+| `img/webapp/` | *(Pendiente)* Wireframes y mock-ups de la Web Application (sección 4.4) |
+
+---
+
+
 <a id="412-web-style-guidelines"></a>
 ### 4.1.2. Web Style Guidelines.
 
