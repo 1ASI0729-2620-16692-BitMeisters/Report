@@ -2508,10 +2508,8 @@ Esta comprobación tiene además una función de **diseño inclusivo**. La condi
 | **Sign in** | **My assigned vehicle** | **Inspection checklist** |
 | <img src="img/webapp/wireframes/04-observation-evidence-mobile.png" alt="Wireframe del registro de observación y evidencia en móvil" width="260"> | <img src="img/webapp/wireframes/05-summary-mobile.png" alt="Wireframe del resumen de la inspección en móvil" width="260"> | <img src="img/webapp/wireframes/06-result-mobile.png" alt="Wireframe del resultado de la inspección en móvil" width="260"> |
 | **Observation and evidence** | **Summary** | **Result** |
-| <img src="img/webapp/wireframes/12-fleet-mobile.png" alt="Wireframe del listado de flota en móvil" width="260"> | | |
-| **Fleet** (supervisor, móvil) | | |
 
-La vista **Fleet** en móvil muestra la adaptación declarada en la sección 4.1.2: el listado que en escritorio es una tabla con columnas ordenables se convierte en tarjetas apiladas, una por vehículo, porque una tabla de seis columnas no es operable a 390 px.
+Las seis vistas cubren el recorrido completo de la inspección preoperacional, de principio a fin.
 
 #### Flujo del supervisor — Desktop 1280 px
 
@@ -2542,6 +2540,12 @@ La vista **Fleet** en móvil muestra la adaptación declarada en la sección 4.1
 <img src="img/webapp/wireframes/14-incidents-desktop.png" alt="Wireframe de la vista de incidencias en escritorio" width="1000">
 
 **Incidents.** Seguimiento de las incidencias detectadas, con el detalle de la acción correctiva y la reparación programada bajo el listado.
+
+#### Vista del supervisor adaptada a Mobile
+
+<img src="img/webapp/wireframes/12-fleet-mobile.png" alt="Wireframe del listado de flota adaptado a móvil" width="300">
+
+**Fleet.** Muestra la adaptación declarada en la sección 4.1.2: el listado que en escritorio es una tabla con columnas ordenables se convierte en tarjetas apiladas, una por vehículo, porque una tabla de seis columnas no resulta operable a 390 px. La navegación lateral se sustituye por una barra inferior de cuatro destinos.
 
 <a id="442-web-applications-wireflow-diagrams"></a>
 ### 4.4.2. Web Applications Wireflow Diagrams.
