@@ -1208,16 +1208,16 @@ A continuación se presenta el Product Backlog consolidado:
 
 <a id="431-landing-page-wireframe"></a>
 ### 4.3.1. Landing Page Wireframe.
-<img src="img/wireframe/01-navegacion.png" width="500">
-<img src="img/wireframe/02-hero.png" width="500">
-<img src="img/wireframe/03-problema.png" width="500">
-<img src="img/wireframe/04-plataforma.png" width="500">
-<img src="img/wireframe/05-proceso.png" width="500">
-<img src="img/wireframe/06-perfiles.png" width="500">
-<img src="img/wireframe/07-equipo.png" width="500">
-<img src="img/wireframe/08-preguntas.png" width="500">
-<img src="img/wireframe/09-llamada-accion.png" width="500">
-<img src="img/wireframe/10-footer.png" width="500">
+<img src="img/wireframe/01-navegacion.png" width="1000">
+<img src="img/wireframe/02-hero.png" width="1000">
+<img src="img/wireframe/03-problema.png" width="1000">
+<img src="img/wireframe/04-plataforma.png" width="1000">
+<img src="img/wireframe/05-proceso.png" width="1000">
+<img src="img/wireframe/06-perfiles.png" width="1000">
+<img src="img/wireframe/07-equipo.png" width="1000">
+<img src="img/wireframe/08-preguntas.png" width="1000">
+<img src="img/wireframe/09-llamada-accion.png" width="1000">
+<img src="img/wireframe/10-footer.png" width="1000">
 
 
 <a id="432-landing-page-mock-up"></a>
