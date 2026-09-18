@@ -30,22 +30,19 @@
 <a id="registro-de-versiones-del-informe"></a>
 # **Registro de Versiones del Informe**
 
-| Versión | Fecha | Autor | Descripción de modificación |
-|:--------|:------|:------|:----------------------------|
-| 0.1.0 | 2026-09-03 | Gerardo Palacin | Estructura inicial del informe a partir de la plantilla del curso: carátula, tabla de contenido de cuatro niveles y encabezados de los cinco capítulos. |
-| 0.2.0 | 2026-09-05 | Gerardo Palacin | Redacción del Capítulo I —Startup Profile, Solution Profile con 5W+2H, Lean UX y segmentos objetivo— y del inicio del Capítulo II. |
-| 0.3.0 | 2026-09-07 | Gerardo Palacin | Incorporación del Ubiquitous Language de la sección 2.5, con treinta términos del dominio agrupados en cinco familias. |
-| 0.4.0 | 2026-09-10 | Rodrigo Aguilar | Incorporación de las User Stories con criterios de aceptación en Gherkin (3.1) y del Product Backlog priorizado con Story Points (3.3). |
-| 0.5.0 | 2026-09-10 | Rodrigo Aguilar | Primera versión de la arquitectura: diagramas C4 de contexto, contenedores y componentes (4.6), diagrama de clases consolidado (4.7) y diagrama de base de datos consolidado (4.8). |
-| 0.6.0 | 2026-09-11 | Alejandro Espino | **Corrección por autocrítica del equipo.** Se verificó el comportamiento real de los competidores y se comprobó que la ventaja competitiva declarada era falsa: Whip Around y Fleetio también retienen el vehículo ante un defecto. Se reconstruyó el análisis competitivo (2.1) sobre datos verificados, se incorporó el competidor latinoamericano Vehicheck y los competidores indirectos peruanos, y se replanteó la ventaja competitiva como estrategia de enfoque en el marco normativo peruano. |
-| 0.6.1 | 2026-09-11 | Alejandro Espino | **Corrección de formato.** El Competitive Analysis Landscape no seguía la plantilla del enunciado: el SWOT estaba en fichas separadas, los nombres de fila no eran los literales exigidos y la pregunta del análisis quedaba fuera del cuadro. Se reestructuró en una sola tabla conforme al formato oficial. |
-| 0.6.2 | 2026-09-11 | Alejandro Espino | Redacción de la sección Bibliografía, que se encontraba vacía, con catorce referencias en formato APA correspondientes al análisis competitivo. |
-| 0.7.0 | 2026-09-11 | Alejandro Espino | **Corrección por autocrítica del equipo.** El diseño de base de datos era un único diagrama consolidado, cuando el enunciado exige uno por bounded context, y el modelo presentaba huecos que impedían implementar el motor de evaluación. Se dividió en seis diagramas por contexto más el consolidado, se renombraron las entidades según el glosario de 2.5, se incorporaron `observations`, `evidences` y `operational_authorizations`, y se añadieron las entidades `drivers` y `vehicle_assignments`. |
-| 0.8.0 | 2026-09-18 | Juan Manuel Santos | Incorporación del wireframe del Landing Page (4.3.1), con las diez secciones de la página en versión Desktop. |
-| 0.8.1 | 2026-09-18 | Juan Manuel Santos | Incorporación del mock-up del Landing Page (4.3.2), con las diez secciones de la página en versión Desktop. |
-| 0.9.0 | 2026-09-18 | Alejandro Espino | **Corrección por autocrítica del equipo.** Los diagramas C4 y el diagrama de clases quedaron desactualizados respecto del modelo de datos corregido en la versión 0.7.0. Se migraron los tres diagramas C4 de PlantUML a **Structurizr**, la herramienta indicada por el enunciado, manteniendo el modelo como código en el archivo `workspace.dsl`. |
-| 0.9.1 | 2026-09-18 | Alejandro Espino | Ampliación de la sección 4.6.4, que contenía un único diagrama de componentes de los tres containers de software exigidos. Se añadieron los diagramas del Landing Page y de la Web Application, y se reorganizaron los componentes del Backend RESTful API **por bounded context en lugar de por capa técnica**, en coherencia con el diseño orientado al dominio de la sección 4.6. |
-| 0.9.2 | 2026-09-18 | Alejandro Espino | Reescritura de la sección 4.7.1, que presentaba un diagrama de clases consolidado con nomenclatura contradictoria respecto de la sección 4.8. Se dividió en **seis diagramas por bounded context**, se corrigieron los nombres (`InspectionItemCatalog` → `InspectionItem`, `Company.ruc` → `Company.taxId`) y se incorporaron las clases `Driver`, `VehicleAssignment` y `OperationalAuthorization`, sin las cuales la Estrategia 2 de la sección 2.1.2 carecía de sustento en el diseño. |
+| Versión | Fecha      | Autor                              | Descripción de modificación                                                                                                                        |
+|:--------|:-----------|:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0     | 2026-09-01 | Gerardo Valentin Palacin Lazo      | Creación del informe a partir de la plantilla del curso, con la carátula, el índice y la estructura de capítulos.                                  |
+| 1.1     | 2026-09-02 | Alejandro Espino Flores            | Redacción del Capítulo I, incluyendo el Startup Profile, el Solution Profile con el análisis 5W y 2H, el Lean UX Process y los segmentos objetivo. |
+| 1.2     | 2026-09-02 | Alejandro Espino Flores            | Redacción del Capítulo II con el análisis competitivo, las estrategias frente a competidores y el diseño de entrevistas por segmento.              |
+| 1.3     | 2026-09-04 | Elizabeth Noelia Apaza Bocanegra   | Redacción del Capítulo III con las Epics, User Stories, Technical Stories y el Product Backlog priorizado.                                         |
+| 1.4     | 2026-09-07 | Rodrigo Fabrizio Aguilar Untiveros | Redacción de las secciones 4.1 Style Guidelines y 4.2 Information Architecture del Capítulo IV.                                                    |
+| 1.5     | 2026-09-08 | Juan Manuel Santos Torres          | Desarrollo de la primera versión de la landing page y sus respectivos Wireframes y Mock-ups.                                                       |
+| 1.6     | 2026-09-10 | Gerardo Valentin Palacin Lazo      | Redacción de la sección 5.1 Software Configuration Management del Capítulo V.                                                                      |
+| 1.7     | 2026-09-01 |                                    |                                                                                                                                                    |
+| 1.8     | 2026-09-01 |                                    |                                                                                                                                                    |
+| 1.9     | 2026-09-01 |                                    |                                                                                                                                                    |
+
 
 <hr>
 
@@ -238,21 +235,21 @@ FleetSafe no tiene como objetivo principal gestionar rutas, puntos de entrega o 
 
 A continuación se presenta la ficha de cada integrante del equipo, indicando su código de estudiante, la carrera que cursa y un resumen de los principales conocimientos técnicos y habilidades que aporta al equipo.
 
-| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                                  |
-| :------------------------ |:----------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20211C201                                                                                                      |
-| **Carrera**               | Ingeniería de Software                                                                                          |
-| **Descripción**            | _Pendiente de redacción por el integrante._                                                                     |
-| **Foto**                  | <img src="img/team-members/gerardo-palacin.jpeg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
+| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                          |
+|:--------------------------|:--------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U20211C201                                                                                              |
+| **Carrera**               | Ingeniería de Software                                                                                  |
+| **Descripción**           | _Pendiente de redacción por el integrante._                                                             |
+| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
 
 ---
 
-| **Integrante**            | Rodrigo Fabrizio Aguilar Untiveros                                                                                |
-|:--------------------------|:------------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U202318309                                                                                                        |
-| **Carrera**               | Ingeniería de Software                                                                                            |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                       |
-| **Foto**                  | <img src="img/team-members/angel-crispin.jpg" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
+| **Integrante**            | Rodrigo Fabrizio Aguilar Untiveros                                                                             |
+|:--------------------------|:---------------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U202318309                                                                                                     |
+| **Carrera**               | Ingeniería de Software                                                                                         |
+| **Descripción**           | _Pendiente de redacción por el integrante._                                                                    |
+| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
 
@@ -274,12 +271,12 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 
 ---
 
-| **Integrante**            | Juan Manuel Santos Torres                                                                               |
-|:--------------------------|:--------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20221a371                                                                                              |
-| **Carrera**               | Ingeniería de Software                                                                                  |
-| **Descripción**           | _Pendiente de redacción por la integrante._                                                             |
-| **Foto**                  | <img src="img/team-members/juan-santos.jpeg" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
+| **Integrante**            | Juan Manuel Santos Torres                                                                             |
+|:--------------------------|:------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U20221a371                                                                                            |
+| **Carrera**               | Ingeniería de Software                                                                                |
+| **Descripción**           | _Pendiente de redacción por la integrante._                                                           |
+| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
 
 ---
 
@@ -967,6 +964,25 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="24-big-picture-eventstorming"></a>
 ## 2.4. Big Picture EventStorming.
 
+Big Picture Event Storming es una técnica colaborativa que nos permitirá comprender el funcionamiento global de FLEETSAFE. Se basará en visualizar eventos clave del dominio(domain events), fomentar el diálogo entre roles (actores) diversos y detectar oportunidades de mejora. El proceso se divide en tres fases principales:
+
+**Primera Etapa: OPEN**
+Aqui colocamos todos los eventos de dominio que se nos ocurra
+
+<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+
+**Segunda Etapa: EXPLORE**
+Identificamos actores y pain points que luego cuestionamos, y lo más importante crear una secuencia entre los eventos de dominio.
+
+<img src="img/bigPictureEventStorming/explore1-eventstorming.png" alt="Explore EventStorming de FleetSafe - Parte 1" width="800">
+
+<img src="img/bigPictureEventStorming/explore2-eventstorming.png" alt="Explore EventStorming de FleetSafe - Parte 2" width="800">
+
+**Tercera Etapa: CLOSE**
+Identificamos problemas que hayamos encontrado, temas a investigar más a fondo y declaramos que esta fuera de nuestro alcance actual.
+
+<img src="img/bigPictureEventStorming/close-eventstorming.png" alt="Close EventStorming de FleetSafe" width="800">
+
 <a id="25-ubiquitous-language"></a>
 ## 2.5. Ubiquitous Language.
 
@@ -1190,357 +1206,1230 @@ A continuación se presenta el Product Backlog consolidado:
 <a id="41-style-guidelines"></a>
 ## 4.1. Style Guidelines.
 
-Las Style Guidelines reúnen las decisiones visuales y de lenguaje que deben aplicarse de forma idéntica en el Landing Page y en la Web Application, de modo que ambos productos se perciban como la misma plataforma. El lenguaje de diseño adoptado es **Material Design 3**, y la biblioteca de componentes de interfaz es **Angular Material**, conforme a la tecnología establecida para el proyecto.
-
-El criterio que ordena todas las decisiones que siguen es el contexto de uso real del producto. FleetSafe se utiliza en dos situaciones muy distintas: un conductor de pie junto a su vehículo, a las cinco de la mañana, con una sola mano libre y con prisa; y un supervisor sentado ante un monitor revisando una flota completa. Las decisiones de tipografía, tamaño de los elementos accionables y jerarquía visual se toman a partir de la primera situación, que es la más exigente, y se adaptan a la segunda.
-
 <a id="411-general-style-guidelines"></a>
 ### 4.1.1. General Style Guidelines.
 
+En esta sección, el equipo establece las bases visuales y comunicativas de FleetSafe con el fin de contar con un repositorio central y organizado de uso común para todos los integrantes. Esto permite mantener una presentación consistente y enfocada en los tres productos que conforman la solución: la Landing Page, la Web Application y el Backend RESTful API.
+
+Las decisiones que se presentan a continuación se derivan de tres fuentes: el **Ubiquitous Language** definido en la sección 2.5, los **segmentos objetivo** descritos en la sección 1.3 y las **estrategias competitivas** planteadas en la sección 2.1.2. En particular, la Estrategia 5 —localización y acompañamiento local— determina que toda la terminología de la interfaz debe emplear el español latinoamericano y los términos del dominio definidos por el equipo.
+
+---
+
 #### Branding
 
-El nombre del producto es **FleetSafe** y la startup que lo desarrolla es **BitMeisters**. El nombre se compone de *fleet* y *safe*, y enuncia la promesa del producto sin necesidad de explicación: la flota opera de forma segura.
+FleetSafe es una plataforma de seguridad y control preventivo vehicular. Su identidad visual debe comunicar **confiabilidad, control y prevención**, y no velocidad, modernidad o innovación tecnológica por sí mismas. El usuario de FleetSafe —un supervisor de flota o un conductor de vehículo de carga— debe percibir que la plataforma es una herramienta de trabajo seria, no un producto experimental.
 
 | Elemento | Definición |
 |:---------|:-----------|
-| Nombre del producto | FleetSafe, escrito siempre en una sola palabra y con ambas iniciales en mayúscula |
-| Símbolo | La letra `F` en blanco sobre un círculo de color primario |
-| Logotipo | El símbolo seguido del nombre en Roboto 700 |
-| Área de protección | Un espacio libre equivalente al diámetro del símbolo alrededor del logotipo |
-| Uso incorrecto | Deformar las proporciones, aplicar sombras, traducir el nombre o usar el símbolo sobre fondos de color de estado operativo |
+| **Nombre del producto** | FleetSafe |
+| **Startup** | BitMeisters |
+| **Concepto de marca** | La unión de los conceptos *fleet* (flota) y *safe* (seguro) sintetiza la propuesta de valor: una flota que opera de forma segura porque su condición ha sido verificada antes de operar. |
+| **Logotipo** | Compuesto por el isotipo —una marca de verificación integrada a la silueta de un vehículo— y el logotipo tipográfico "FleetSafe" en una sola palabra, con la "F" y la "S" en mayúscula. |
+| **Isotipo** | La marca de verificación representa el resultado de la inspección preoperacional: el vehículo ha sido verificado y se encuentra habilitado. |
+| **Versión monocromática** | El logotipo debe contar con una versión en un solo color para su uso sobre fondos de color pleno o fotografías. |
+| **Área de resguardo** | El logotipo debe mantener un margen libre equivalente a la altura de la letra "F" en todos sus lados. |
+| **Tamaño mínimo** | 24 px de alto en interfaces digitales. |
+| **Usos incorrectos** | No se debe deformar, rotar, aplicar sombras, degradados ni contornos al logotipo. No se debe alterar la relación entre el isotipo y el logotipo tipográfico. |
 
-#### Colors
+> **Pendiente:** incorporar el archivo del logotipo y del isotipo en `img/brand/` y referenciarlo desde esta sección.
 
-La paleta se organiza en tres familias con funciones distintas y que no deben mezclarse.
-
-**Colores de marca.** Heredados del Landing Page v1. El color primario es `brand-600`, que se emplea en las acciones principales, los elementos activos de navegación y la barra superior.
-
-| Token | Valor | Uso |
-|:------|:------|:----|
-| `brand-50` | `#eff6ff` | fondos de realce muy suaves |
-| `brand-100` | `#dbeafe` | fondos de elementos seleccionados |
-| `brand-500` | `#3b82f6` | estados *hover* de elementos primarios |
-| **`brand-600`** | **`#2563eb`** | **color primario: acciones, enlaces, barra superior** |
-| `brand-700` | `#1d4ed8` | estado *pressed* de elementos primarios |
-| `brand-900` | `#1e3a8a` | titulares sobre fondos claros de marca |
-
-**Colores de estado operativo.** Comunican la condición del vehículo, que es la información central del producto. Cada estado tiene dos valores: uno **saturado**, para rellenos y elementos no textuales, y uno **oscuro**, obligatorio siempre que el color acompañe a un texto.
-
-| Estado | Saturado | Oscuro (texto) | Fondo | Contraste del texto sobre su fondo |
-|:-------|:---------|:---------------|:------|:-----------------------------------|
-| `Enabled` | `#16a34a` | `#15803d` | `#dcfce7` | 4.57:1 — AA |
-| `Observed` | `#d97706` | `#b45309` | `#fef3c7` | 4.51:1 — AA |
-| `Not Enabled` | `#dc2626` | `#b91c1c` | `#fee2e2` | 5.30:1 — AA |
-
-**Neutros.** Estructuran la interfaz sin competir con los dos anteriores.
-
-| Token | Valor | Uso | Contraste sobre blanco |
-|:------|:------|:----|:-----------------------|
-| `n-0` | `#ffffff` | fondo de superficies | — |
-| `n-50` | `#f8fafc` | fondo de la aplicación | — |
-| `n-100` | `#f1f5f9` | cabeceras de tabla | — |
-| `n-200` | `#e2e8f0` | bordes y separadores | — |
-| `n-400` | `#94a3b8` | bordes de campos, iconografía decorativa | 2.56:1 — **no apto para texto** |
-| `n-600` | `#475569` | texto secundario y etiquetas | 7.58:1 — AAA |
-| `n-900` | `#0f172a` | texto principal | 17.85:1 — AAA |
-
-**Decisión de diseño: el color nunca comunica por sí solo.** Un elemento que indique la condición operativa de un vehículo lleva siempre una etiqueta de texto junto al color —`Enabled`, `Observed`, `Not Enabled`— y, cuando se presenta en una tabla, también una forma distinguible. La razón es doble. La primera es de diseño inclusivo: aproximadamente uno de cada doce hombres presenta alguna deficiencia en la percepción del color, y la combinación verde–ámbar–rojo es precisamente la que se ve afectada; dado que el segmento de conductores de transporte de carga es mayoritariamente masculino, el riesgo no es teórico. La segunda es de negocio: confundir un vehículo observado con uno habilitado es exactamente el error que el producto existe para evitar.
-
-Por ese mismo motivo se descartó el valor `#94a3b8` para cualquier texto, incluidos los textos de ayuda de los campos, que pasan a usar `n-600`.
-
-#### Typography
-
-La familia tipográfica es **Roboto**, la propia de Material Design, con `Segoe UI` y la tipografía del sistema como alternativas. Se eligió por su legibilidad en tamaños pequeños y sobre pantallas de gama baja, que son las que utiliza el segmento de conductores.
-
-| Estilo | Tamaño / peso | Uso |
-|:-------|:--------------|:----|
-| Display | 28 / 700 | titular de una vista o de una sección del Landing |
-| Título | 20 / 600 | encabezado de tarjeta o de bloque |
-| Subtítulo | 16 / 600 | encabezado de grupo dentro de una tarjeta |
-| Cuerpo | 14 / 400 | texto general, celdas de tabla, descripciones |
-| Etiqueta | 12 / 400 | etiquetas de campo, marcas de tiempo, texto de apoyo |
-
-La escala se detiene en 12 px: ningún texto del producto baja de ese tamaño. En la vista de inspección del conductor, el nombre del elemento que se está revisando se presenta en Subtítulo y no en Cuerpo, porque es el texto que debe leerse de un vistazo y con el dispositivo en movimiento.
-
-#### Spacing
-
-El sistema de espaciado tiene una **base de 4 px**, y todos los márgenes, rellenos y separaciones son múltiplos de esa unidad. Disponer de una base única evita las decisiones arbitrarias y hace que dos vistas construidas por integrantes distintos se vean iguales.
-
-| Token | Valor | Uso habitual |
-|:------|:------|:-------------|
-| `s-1` | 4 px | separación entre una etiqueta y su valor |
-| `s-2` | 8 px | separación entre elementos de un mismo grupo |
-| `s-3` | 12 px | relleno interno de elementos de lista |
-| `s-4` | 16 px | relleno de tarjetas y margen lateral en móvil |
-| `s-6` | 24 px | separación entre bloques |
-| `s-8` | 32 px | relleno de secciones y márgenes de página |
-
-Los radios de borde son **8 px** para elementos pequeños, **12 px** para tarjetas, **16 px** para contenedores destacados y **completo** para botones y chips de estado.
-
-#### Componentes base
-
-| Componente | Definición |
-|:-----------|:-----------|
-| Botón principal | Relleno `brand-600`, texto blanco, radio completo, relleno 12×24 px |
-| Botón secundario | Fondo transparente, borde y texto `brand-600` |
-| Botón destructivo | Relleno `#b91c1c`, reservado a acciones que interrumpen la operación |
-| Chip de estado | Radio completo, fondo y texto según la familia de estado operativo, siempre con etiqueta |
-| Campo de texto | Borde `n-400`, radio 8 px, etiqueta en Etiqueta / `n-600` sobre el campo |
-| Elemento de checklist | Nombre del elemento en Subtítulo y selector segmentado `OK · Obs. · Falla` a la derecha |
+---
 
 #### Tono de comunicación y lenguaje
 
-El tono se define en las cuatro dimensiones exigidas, y la posición de cada una responde al contexto de uso descrito al inicio de la sección.
+El tono de FleetSafe se define a partir de la naturaleza del dominio: se trata de una herramienta de control preventivo cuyas decisiones afectan la seguridad de las personas y la continuidad operativa de una empresa. Esto determina un tono **serio, formal y respetuoso**, pero **no distante ni burocrático**.
 
-| Dimensión | Posición | Sustento |
-|:----------|:---------|:---------|
-| Divertido ↔ **Serio** | Serio | El producto determina si un vehículo puede circular. La seguridad de las personas no admite ligereza en el lenguaje. |
-| Formal ↔ Casual | **Neutro, cercano al formal** | Los mismos textos los lee un gerente de operaciones y un conductor. Un registro demasiado formal resultaría burocrático para el segundo; uno demasiado casual restaría credibilidad ante el primero. |
-| **Respetuoso** ↔ Irreverente | Respetuoso | El conductor es quien registra los defectos. Si percibe el sistema como una acusación, dejará de reportarlos y el producto pierde su función. Los mensajes describen la condición del vehículo, nunca evalúan a la persona. |
-| Entusiasta ↔ **Sereno** | Sereno | Un vehículo no habilitado se comunica con claridad y sin dramatismo. Las alertas informan y explican qué hacer a continuación; no alarman. |
+| Dimensión | Posición adoptada | Sustento |
+|:----------|:------------------|:---------|
+| Divertido / **Serio** | Serio | La plataforma interviene en decisiones sobre seguridad vehicular. Un tono liviano resultaría inapropiado. |
+| **Formal** / Casual | Formal | El usuario principal es un supervisor de flota que reporta a una empresa y cuyas decisiones pueden ser auditadas. |
+| **Respetuoso** / Irreverente | Respetuoso | El conductor es el usuario que ejecuta la inspección y no debe sentirse fiscalizado por el sistema. |
+| Entusiasta / **Sereno** | Sereno | El sistema comunica estados y consecuencias; la exaltación genera desconfianza en un contexto de control. |
 
-La aplicación concreta de estas cuatro posiciones se comprueba en los mensajes de estado. Ante un bloqueo, el producto no dice *"¡Atención! Has reportado una falla crítica"*, sino **"El vehículo no está habilitado para operar. Comunícate con tu supervisor."**: describe la condición, no culpa a nadie, y ofrece el paso siguiente.
+**Principios de redacción aplicados a la interfaz:**
 
-#### Sustento de principios y elementos de diseño
+- **Claridad sobre brevedad.** Los mensajes deben indicar qué ocurrió y qué debe hacer el usuario. Ejemplo: *"El vehículo no se encuentra habilitado para operar. Registre una acción correctiva o solicite una autorización de excepción."*
+- **Terminología del dominio.** La interfaz emplea los términos del Ubiquitous Language (sección 2.5) y no sinónimos técnicos. Se dice *inspección preoperacional*, no *checklist*; se dice *habilitado*, no *activo*; se dice *incidencia*, no *ticket*.
+- **Voz activa y segunda persona.** El sistema se dirige al usuario de forma directa: *"Registre el estado del elemento"*, no *"El estado del elemento debe ser registrado"*.
+- **Neutralidad ante el error del usuario.** Los mensajes de error describen la causa y la corrección, sin calificar la acción: *"La placa ya se encuentra registrada"*, no *"Ingresó una placa inválida"*.
+- **Sin lenguaje promocional dentro de la aplicación.** Los calificativos como *fácil*, *rápido* o *intuitivo* se reservan para la Landing Page y no se emplean en la Web Application.
 
-Las decisiones anteriores se apoyan en cuatro principios, cada uno con su traducción concreta:
+**Idioma.** El español latinoamericano es el idioma principal de la solución. El inglés se mantiene como idioma secundario y como idioma de la nomenclatura técnica del modelo de dominio, conforme a lo establecido en la sección 2.5.
 
-- **Jerarquía visual.** En cada vista existe un único elemento dominante. En la del conductor es el estado del vehículo y la acción de iniciar la inspección; todo lo demás se presenta en Cuerpo o Etiqueta y en neutros.
-- **Contraste.** Se emplea para dirigir la atención, no para decorar: el color de marca aparece únicamente en lo accionable, de modo que un elemento azul siempre significa que se puede pulsar.
-- **Consistencia.** Un mismo concepto se representa siempre igual. La condición operativa se muestra siempre como chip con etiqueta, tanto en el listado de la flota como en el detalle de un vehículo o en el historial.
-- **Realimentación.** Toda acción que modifica el estado del sistema confirma su resultado, y las que son irreversibles —como el levantamiento de un bloqueo— exigen confirmación explícita y justificación escrita.
+---
 
-Los elementos de diseño empleados son el **color**, con las tres familias descritas; la **tipografía**, con una escala de cinco niveles; el **espacio**, con la retícula de 4 px; y la **forma**, mediante los radios que distinguen los elementos accionables (radio completo) de los contenedores (radios de 8 a 16 px).
+#### Tipografía
+
+Se adopta **Inter** como familia tipográfica principal y **JetBrains Mono** como familia secundaria para datos técnicos.
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Familia principal** | Inter |
+| **Familia secundaria** | JetBrains Mono, para identificadores, placas vehiculares, códigos y valores numéricos |
+| **Sustento de la elección** | Inter es una familia de código abierto, optimizada para interfaces digitales y con alta legibilidad en tamaños pequeños, lo que resulta determinante porque el conductor realiza la inspección desde el navegador de un teléfono móvil. JetBrains Mono se emplea donde la distinción entre caracteres similares —`0` y `O`, `1` y `l`— es crítica, como en placas vehiculares y códigos de elemento. |
+| **Alternativas de respaldo** | `system-ui`, `-apple-system`, `Segoe UI`, `Roboto`, `sans-serif` |
+
+**Escala tipográfica**
+
+| Token | Tamaño | Altura de línea | Peso | Uso |
+|:------|:-------|:----------------|:-----|:----|
+| `display` | 40 px | 48 px | 700 | Título principal de la Landing Page |
+| `heading-1` | 32 px | 40 px | 700 | Título de sección en la Landing Page |
+| `heading-2` | 24 px | 32 px | 600 | Encabezado de módulo en la Web Application |
+| `heading-3` | 20 px | 28 px | 600 | Encabezado de tarjeta o panel |
+| `body-large` | 18 px | 28 px | 400 | Texto introductorio |
+| `body` | 16 px | 24 px | 400 | Texto general de la interfaz |
+| `body-small` | 14 px | 20 px | 400 | Texto secundario, descripciones de campo |
+| `caption` | 12 px | 16 px | 500 | Etiquetas, metadatos, marcas de tiempo |
+| `mono-data` | 16 px | 24 px | 500 | Placas, códigos e identificadores |
+
+**Reglas de aplicación:**
+
+- No se emplean más de tres niveles tipográficos en una misma vista.
+- Los textos en mayúsculas se reservan para etiquetas cortas y nunca para párrafos completos.
+- El peso `700` se reserva para títulos; el peso `600` para encabezados de componente.
+- En la Web Application, el tamaño mínimo de texto es `14 px`, con excepción de las etiquetas `caption`.
+
+---
+
+#### Colores
+
+La paleta se construye sobre un **azul profundo** como color primario, que comunica confiabilidad y control, y un **verde** como color de confirmación, asociado directamente al estado *habilitado* del vehículo. Los colores de estado se derivan directamente de los tres valores del término *Vehicle Status* del Ubiquitous Language.
+
+**Colores de marca**
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `color-primary-900` | `#0B2545` | Fondo de encabezados, texto de máximo contraste |
+| `color-primary-700` | `#13315C` | Color primario de la marca, botones principales |
+| `color-primary-500` | `#1D4E89` | Estados hover de elementos primarios |
+| `color-primary-100` | `#D6E4F0` | Fondos de énfasis suave, filas seleccionadas |
+| `color-accent-500` | `#F4A261` | Llamadas a la acción secundarias en la Landing Page |
+
+**Colores de estado del vehículo**
+
+| Estado | Token | Valor | Uso |
+|:-------|:------|:------|:----|
+| **Habilitado** | `color-status-enabled` | `#2A9D8F` | Indicador de vehículo habilitado para operar |
+| **Observado** | `color-status-observed` | `#E9C46A` | Indicador de vehículo que requiere atención o seguimiento |
+| **No habilitado** | `color-status-not-enabled` | `#E76F51` | Indicador de vehículo que no puede operar |
+
+**Colores de resultado de inspección**
+
+| Resultado | Token | Valor |
+|:----------|:------|:------|
+| Conforme (`OK`) | `color-result-ok` | `#2A9D8F` |
+| Observado (`OBSERVED`) | `color-result-observed` | `#E9C46A` |
+| No conforme (`FAIL`) | `color-result-fail` | `#E76F51` |
+| No aplica (`N/A`) | `color-result-na` | `#8D99AE` |
+
+**Colores neutros y semánticos**
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `color-neutral-900` | `#1A1A1A` | Texto principal |
+| `color-neutral-700` | `#4A4A4A` | Texto secundario |
+| `color-neutral-400` | `#9E9E9E` | Texto deshabilitado, bordes suaves |
+| `color-neutral-200` | `#E0E0E0` | Bordes y separadores |
+| `color-neutral-050` | `#F7F8FA` | Fondo general de la aplicación |
+| `color-surface` | `#FFFFFF` | Fondo de tarjetas y paneles |
+| `color-info` | `#3A86FF` | Mensajes informativos |
+| `color-success` | `#2A9D8F` | Confirmación de operación exitosa |
+| `color-warning` | `#E9C46A` | Advertencia que no impide continuar |
+| `color-error` | `#E76F51` | Error que impide completar la operación |
+
+**Reglas de aplicación:**
+
+- El color nunca es el único portador de significado. Todo indicador de estado debe acompañarse de texto o de un ícono, para no depender exclusivamente de la percepción cromática del usuario.
+- Los colores de estado del vehículo (`enabled`, `observed`, `not-enabled`) se aplican de forma consistente en todas las vistas: listados, tarjetas, detalle e historial.
+- El color `color-error` se reserva para errores que impiden completar una operación y no se emplea como color decorativo.
+
+---
+
+#### Espaciado
+
+Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consistente y facilita la adaptación a distintas densidades de pantalla.
+
+| Token | Valor | Uso típico |
+|:------|:------|:-----------|
+| `space-1` | 4 px | Separación entre ícono y etiqueta |
+| `space-2` | 8 px | Separación interna de un componente |
+| `space-3` | 12 px | Separación entre campos de un formulario |
+| `space-4` | 16 px | Padding interno de tarjetas |
+| `space-5` | 24 px | Separación entre bloques de una vista |
+| `space-6` | 32 px | Separación entre secciones |
+| `space-7` | 48 px | Separación entre secciones de la Landing Page |
+| `space-8` | 64 px | Margen superior e inferior de bloques de la Landing Page |
+
+**Reglas de aplicación:**
+
+- El espaciado entre secciones siempre es mayor que el espaciado entre componentes de una misma sección.
+- Las tarjetas emplean `space-4` como padding interno y `space-5` como separación entre ellas.
+- En la Web Application, la densidad de espaciado es mayor que en la Landing Page, porque el usuario debe poder revisar varios elementos sin desplazarse.
+
+---
+
+#### Radios, bordes y elevación
+
+| Token | Valor | Uso |
+|:------|:------|:----|
+| `radius-sm` | 4 px | Campos de formulario, etiquetas |
+| `radius-md` | 8 px | Botones, tarjetas |
+| `radius-lg` | 16 px | Paneles y modales |
+| `border-width` | 1 px | Bordes de campos y separadores |
+| `shadow-sm` | `0 1px 2px rgba(0,0,0,0.06)` | Tarjetas en reposo |
+| `shadow-md` | `0 4px 8px rgba(0,0,0,0.08)` | Tarjetas en hover, menús desplegables |
+| `shadow-lg` | `0 8px 24px rgba(0,0,0,0.12)` | Modales y paneles flotantes |
+
+---
+
+#### Iconografía
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Set seleccionado** | Lucide Icons |
+| **Sustento** | Es un set de código abierto, con trazo uniforme, que mantiene coherencia visual con la familia Inter y no requiere licencia. |
+| **Tamaños** | 16 px (en línea con texto), 20 px (en botones), 24 px (en encabezados) |
+| **Grosor de trazo** | 1.5 px, constante en todos los tamaños |
+| **Regla** | Los íconos acompañan al texto y no lo reemplazan. Ningún ícono debe ser el único medio para identificar una acción. |
+
+---
+
+#### Accesibilidad
+
+Las decisiones anteriores se complementan con los siguientes criterios mínimos, considerando que la inspección se realiza frecuentemente desde el navegador de un teléfono móvil, en exteriores y bajo luz solar directa.
+
+| Criterio | Definición |
+|:---------|:-----------|
+| **Contraste** | Todo texto debe alcanzar una relación de contraste mínima de 4.5:1 sobre su fondo, conforme al nivel AA de WCAG 2.1. |
+| **Área táctil** | Los elementos interactivos deben tener un área mínima de 44 × 44 px, para su uso con guantes o con una sola mano. |
+| **Foco visible** | Todo elemento interactivo debe presentar un indicador de foco perceptible para la navegación por teclado. |
+| **Independencia del color** | Ningún estado se comunica exclusivamente mediante color, según lo establecido en la sección de colores. |
+| **Tamaño de texto** | El tamaño mínimo de texto en la Web Application es de 14 px, con excepción de las etiquetas `caption`. |
+| **Movimiento** | Las animaciones son breves y no interfieren con la ejecución de una tarea. |
+
+---
+
+#### Repositorio de assets
+
+Los recursos visuales del proyecto se organizan de la siguiente manera dentro del repositorio, en coherencia con la estructura de archivos presentada al inicio de este informe:
+
+| Ruta | Contenido |
+|:-----|:----------|
+| `img/UPC.png` | Logotipo institucional, empleado en la portada del informe |
+| `img/team-members/` | Fotografías de los integrantes del equipo |
+| `img/bigPictureEventStorming/` | Imágenes del Big Picture EventStorming (sección 2.4) |
+| `img/designLevelEventStorming/` | Imágenes del Design-level Event Storming (sección 4.6.1) |
+| `img/competitors/` | Logotipos de los competidores analizados en la sección 2.1 |
+| `img/brand/` | *(Pendiente)* Logotipo, isotipo y versiones monocromáticas de FleetSafe |
+| `img/landing/` | *(Pendiente)* Wireframes y mock-ups de la Landing Page (sección 4.3) |
+| `img/webapp/` | *(Pendiente)* Wireframes y mock-ups de la Web Application (sección 4.4) |
+
+---
+
 
 <a id="412-web-style-guidelines"></a>
 ### 4.1.2. Web Style Guidelines.
 
-Estas directrices aplican las decisiones generales a interfaces web adaptables, y rigen tanto para el Landing Page como para la Web Application.
-
-#### Retícula y puntos de quiebre
-
-| Punto de quiebre | Ancho | Retícula | Márgenes laterales |
-|:-----------------|:------|:---------|:-------------------|
-| Mobile | < 600 px | 4 columnas | 16 px |
-| Tablet | 600 – 1023 px | 8 columnas | 24 px |
-| Desktop | ≥ 1024 px | 12 columnas | 32 px, con contenido limitado a 1280 px |
-
-El diseño se elabora **partiendo del móvil**. La razón no es una convención: el conductor —que es quien más veces al día usa el producto— lo hace siempre desde un teléfono y de pie junto al vehículo. El supervisor, en cambio, trabaja desde un escritorio. Por eso la vista de inspección se diseña primero para 390 px de ancho y el tablero de flota primero para 1280 px, y cada una se adapta después al otro extremo.
-
-#### Adaptación de los patrones
-
-| Patrón | Mobile | Desktop |
-|:-------|:-------|:--------|
-| Navegación de la aplicación | barra inferior o menú desplegable | barra lateral permanente de 220 px |
-| Listado de flota | tarjetas apiladas, una por vehículo | tabla con columnas ordenables |
-| Acción principal | botón de ancho completo fijado al borde inferior | botón alineado al contenido |
-| Diálogo | hoja que asciende desde el borde inferior | ventana centrada de 520 px sobre velo |
-| Formulario | una columna | dos columnas cuando los campos son breves |
-
-#### Interacción
-
-- **Los elementos accionables miden 48 × 48 px como mínimo**, la medida recomendada por Material Design. En la vista de inspección esto es determinante: el conductor pulsa `OK`, `Obs.` o `Falla` cuarenta y dos veces seguidas, con guantes y sin detenerse a mirar.
-- **Todo estado interactivo es visible**: reposo, *hover*, foco, pulsado y deshabilitado. El foco se representa con un contorno de 2 px en `brand-600`, y **nunca se suprime**, porque es el único indicador disponible para quien navega con el teclado.
-- **Las operaciones que tardan muestran su progreso** en el propio elemento que las originó, no mediante un velo que bloquee la pantalla completa.
-- **Los errores se muestran junto al campo** que los causa y explican cómo corregirlos.
-
-#### Accesibilidad
-
-La accesibilidad es un requisito del producto y se concreta así:
-
-- Estructura semántica con `header`, `nav`, `main` y `footer`, y un único `h1` por vista.
-- Atributos **ARIA** en todos los componentes interactivos: `aria-label` en los controles que solo muestran icono, `aria-live` en las regiones que anuncian el resultado de una evaluación, `aria-current` en el elemento activo de la navegación y `role` en los componentes construidos a medida.
-- Todo elemento accionable es alcanzable y operable con el teclado, en un orden de tabulación que sigue el orden visual.
-- Las imágenes llevan texto alternativo, y las decorativas se marcan con `alt=""`.
-- Contraste mínimo **4.5:1** para texto normal y **3:1** para elementos de interfaz, conforme a WCAG 2.1 nivel AA. Los valores concretos de la paleta están verificados en la sección 4.1.1.
-- La interfaz soporta un aumento del tamaño de texto hasta el 200 % sin pérdida de contenido ni de funcionalidad.
-
-#### Internacionalización
-
-El idioma por defecto del producto es el **inglés (`en_US`)**, con **español latinoamericano (`es_419`)** como segundo idioma. Ninguna cadena de texto se escribe directamente en el marcado: todas se resuelven mediante los archivos de traducción. El selector de idioma está disponible en el pie del Landing Page y en la barra superior de la Web Application, y el atributo `lang` del documento se actualiza al cambiarlo. Los diseños reservan un **30 % adicional de ancho** en etiquetas y botones, porque la traducción al español es sistemáticamente más larga que el original en inglés.
+Esta sección define los estándares visuales y de interacción aplicables a las interfaces web responsive de FleetSafe: la Landing Page y la Web Application. Los lineamientos aquí establecidos complementan los General Style Guidelines de la sección 4.1.1 y se aplican de forma diferenciada según el producto, en coherencia con la distinción entre ambos establecida en la sección 1.1.1.
 
 ---
+
+#### Principios de diseño responsive
+
+La solución se ejecuta íntegramente en el navegador, sin requerir instalación ni hardware, conforme a la Estrategia 3 planteada en la sección 2.1.2. Esto determina que la interfaz debe adaptarse correctamente a los siguientes contextos de uso:
+
+| Contexto | Producto | Dispositivo típico | Condición de uso |
+|:---------|:---------|:-------------------|:-----------------|
+| Presentación | Landing Page | Computadora de escritorio, laptop, tablet | El visitante evalúa la propuesta de valor en un entorno controlado. |
+| Supervisión | Web Application | Computadora de escritorio, laptop | El supervisor revisa estados, gestiona incidencias y consulta historial. |
+| Inspección | Web Application | Teléfono móvil | El conductor realiza la inspección junto al vehículo, frecuentemente en exteriores y bajo luz solar directa. |
+
+El tercer contexto es el más restrictivo y es el que condiciona las decisiones de esta sección: la inspección preoperacional debe poder completarse desde el navegador de un teléfono móvil, con una sola mano y en condiciones de luz adversas.
+
+---
+
+#### Breakpoints
+
+Se adopta un enfoque **mobile-first** para la Web Application y un enfoque **desktop-first** para la Landing Page, dado que los contextos de uso de cada producto son distintos.
+
+| Token | Rango | Aplicación |
+|:------|:------|:-----------|
+| `bp-mobile` | 320 px – 639 px | Web Application: inspección preoperacional |
+| `bp-tablet` | 640 px – 1023 px | Web Application: supervisión en tablet |
+| `bp-desktop` | 1024 px – 1439 px | Landing Page y Web Application: supervisión |
+| `bp-wide` | 1440 px en adelante | Landing Page: presentación |
+
+---
+
+#### Grilla y layout
+
+| Aspecto | Landing Page | Web Application |
+|:--------|:-------------|:----------------|
+| **Columnas** | 12 columnas | 12 columnas |
+| **Ancho máximo de contenido** | 1200 px | 1440 px |
+| **Gutter** | `space-5` (24 px) | `space-4` (16 px) |
+| **Margen lateral** | `space-7` (48 px) en desktop, `space-4` en móvil | `space-4` en todas las resoluciones |
+| **Estructura** | Secciones apiladas verticalmente, cada una de ancho completo | Barra lateral de navegación fija más área de contenido |
+
+**Estructura de la Web Application**
+
+En resoluciones de escritorio, la Web Application emplea una barra lateral de navegación fija de 240 px y un área de contenido que ocupa el resto del ancho. En resoluciones móviles, la barra lateral se reemplaza por un menú colapsable, y el área de contenido ocupa el ancho completo, dado que el conductor debe concentrarse en la inspección y no en la navegación.
+
+---
+
+#### Componentes de interfaz
+
+Los componentes que se describen a continuación se emplean de forma consistente en toda la Web Application, en correspondencia con las funcionalidades definidas en las User Stories de la sección 3.1.
+
+**Botones**
+
+| Variante | Uso | Ejemplo de aplicación |
+|:---------|:----|:----------------------|
+| `primary` | Acción principal de una vista | Finalizar inspección (US21) |
+| `secondary` | Acción alternativa | Cancelar, volver |
+| `danger` | Acción destructiva o de bloqueo | Marcar vehículo como no habilitado |
+| `ghost` | Acción terciaria o dentro de una tabla | Consultar detalle (US14) |
+
+**Campos de formulario**
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Altura** | 44 px en móvil, 40 px en escritorio |
+| **Borde** | `1 px solid color-neutral-200`, con `radius-sm` |
+| **Estado de foco** | Borde `color-primary-500` con anillo de foco perceptible |
+| **Estado de error** | Borde `color-error` acompañado de mensaje de texto descriptivo |
+| **Validación** | Se ejecuta al perder el foco y al enviar el formulario, nunca mientras el usuario escribe |
+| **Etiquetas** | Siempre visibles sobre el campo, nunca como *placeholder* únicamente |
+
+**Indicadores de estado del vehículo**
+
+El estado del vehículo es la información más relevante de la interfaz, porque responde a la pregunta principal de FleetSafe: *¿este vehículo cumple las condiciones necesarias para operar?* Por ello, todo indicador de estado debe presentarse como una etiqueta que combine color, ícono y texto.
+
+| Estado | Presentación |
+|:-------|:-------------|
+| **Habilitado** | Fondo `color-status-enabled` al 10 %, texto e ícono en `color-status-enabled`, etiqueta "Habilitado" |
+| **Observado** | Fondo `color-status-observed` al 10 %, texto e ícono en `color-status-observed`, etiqueta "Observado" |
+| **No habilitado** | Fondo `color-status-not-enabled` al 10 %, texto e ícono en `color-status-not-enabled`, etiqueta "No habilitado" |
+
+**Tarjetas de elemento de inspección**
+
+Cada elemento del catálogo de inspección se presenta al conductor como una tarjeta que contiene el nombre del elemento, su categoría y tres opciones de resultado: Conforme, Observado y No conforme. Cuando el conductor selecciona Observado o No conforme, la tarjeta se expande y solicita la observación y, si corresponde, la evidencia fotográfica, conforme a los criterios de aceptación de US18, US19 y US20.
+
+**Tablas de datos**
+
+Las vistas de supervisión —listado de vehículos, incidencias e historial— emplean tablas con las siguientes características:
+
+- Encabezado fijo al desplazarse verticalmente.
+- Filtros por estado y por vehículo, conforme a US13, US25 y US28.
+- Paginación cuando el número de filas supera las 20.
+- En resoluciones móviles, la tabla se transforma en una lista de tarjetas apiladas.
+
+---
+
+#### Estados de la interfaz
+
+Toda vista que consulte datos debe contemplar los siguientes estados, con el fin de evitar que el usuario interprete una ausencia de información como un error del sistema.
+
+| Estado | Presentación | Ejemplo |
+|:-------|:-------------|:--------|
+| **Carga** | Indicador de progreso o esqueleto de la estructura | Consulta del listado de vehículos (US13) |
+| **Vacío** | Mensaje descriptivo que indica la ausencia de datos y, cuando corresponde, la acción para generarlos | "El vehículo no tiene inspecciones registradas" (US14) |
+| **Error** | Mensaje que describe la causa y ofrece una acción de recuperación | Fallo al cargar el listado de incidencias (US28) |
+| **Éxito** | Confirmación breve de la operación realizada | "Inspección finalizada. El vehículo ha sido evaluado." (US21) |
+
+---
+
+#### Interacción y retroalimentación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Transiciones** | Entre 150 ms y 250 ms, con curva de aceleración suave |
+| **Confirmación de acciones destructivas** | Toda acción irreversible requiere confirmación explícita del usuario |
+| **Mensajes de validación** | Se presentan junto al campo que originó el error, no en un bloque global |
+| **Notificaciones** | Se emplean únicamente para informar el resultado de una operación, nunca para promociones ni mensajes ajenos a la tarea |
+| **Autoguardado** | La inspección en progreso se conserva localmente para evitar pérdida de información ante una interrupción de conectividad |
+
+El último aspecto es determinante para el conductor: una inspección puede realizarse en una zona con conectividad limitada, y la pérdida de los resultados registrados obligaría a repetir el proceso completo.
+
+---
+
+#### Formato de datos
+
+| Tipo de dato | Formato | Ejemplo |
+|:-------------|:--------|:--------|
+| Fecha | `DD/MM/AAAA` | 11/09/2026 |
+| Fecha y hora | `DD/MM/AAAA HH:mm` | 11/09/2026 14:30 |
+| Placa vehicular | Mayúsculas, sin separadores, en `mono-data` | ABC123 |
+| Identificador | UUID truncado en vistas de listado | a3f2…9c1b |
+| Estado | Etiqueta con color, ícono y texto | Habilitado |
+
+El formato de fecha `DD/MM/AAAA` se adopta por corresponder a la convención empleada en el Perú y en el resto de la región, conforme a la Estrategia 5 de la sección 2.1.2.
+
+---
+
+#### Accesibilidad en la web
+
+Además de los criterios establecidos en la sección 4.1.1, se aplican las siguientes consideraciones específicas de la interfaz web.
+
+| Criterio | Definición |
+|:---------|:-----------|
+| **Navegación por teclado** | Toda funcionalidad debe ser accesible mediante teclado, sin excepción |
+| **Orden de tabulación** | Debe seguir el orden lógico de lectura de la interfaz |
+| **Estructura semántica** | Uso correcto de `header`, `nav`, `main`, `section`, `article` y `footer` |
+| **Etiquetas ARIA** | Se emplean cuando el elemento nativo no comunica adecuadamente su propósito |
+| **Textos alternativos** | Toda imagen informativa debe incluir texto alternativo |
+| **Zoom** | La interfaz debe permanecer funcional con un zoom del 200 % |
+
+---
+
+#### Convenciones de implementación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Unidades** | `rem` para tipografía y espaciado, `px` para bordes y radios |
+| **Metodología CSS** | BEM (Block, Element, Modifier) para la nomenclatura de clases |
+| **Tokens** | Los valores definidos en la sección 4.1.1 se implementan como variables CSS |
+| **Nomenclatura de componentes** | PascalCase para componentes, kebab-case para archivos |
+| **Framework** | Angular, conforme a lo establecido en la sección 4.6.3 |
+| **Responsive** | Media queries basadas en los breakpoints definidos en esta sección |
+
+---
+
 
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
 
-La arquitectura de información define cómo se organiza, etiqueta, busca y recorre el contenido de los dos productos con interfaz de usuario. El criterio que la ordena es que **cada usuario encuentre lo que necesita en el menor número de pasos posible, y que ese número sea menor cuanto más frecuente sea la tarea**. La tarea más frecuente del producto —la inspección preoperacional diaria del conductor— se alcanza en un solo paso desde el inicio de sesión.
+<a id="42-information-architecture"></a>
+## 4.2. Information Architecture.
+
+La arquitectura de información de FleetSafe define cómo se organiza, etiqueta, estructura y navega el contenido de la Landing Page y de la Web Application, con el fin de que los usuarios de los tres segmentos objetivo —empresas de transporte de carga, supervisores de flota y conductores— encuentren la información y ejecuten las tareas que les corresponden según su rol.
+
+Las decisiones que se presentan en esta sección se derivan de las siguientes fuentes:
+
+- Los **segmentos objetivo** definidos en la sección 1.3.
+- Los **roles de la plataforma** establecidos en la sección 1.1.1: Administrador, Supervisor de flota y Conductor.
+- Las **Epics y User Stories** definidas en la sección 3.1, que determinan las funcionalidades que cada rol debe poder ejecutar.
+- El **Ubiquitous Language** definido en la sección 2.5, que establece la terminología que debe emplearse en las etiquetas de la interfaz.
+- Las **Web Style Guidelines** establecidas en la sección 4.1.2, que condicionan la presentación de la información según el dispositivo.
+
+**Estructura general de la solución**
+
+FleetSafe está compuesta por tres productos, cada uno con una arquitectura de información diferenciada:
+
+| Producto | Audiencia | Propósito | Enfoque de arquitectura |
+|:---------|:----------|:----------|:------------------------|
+| **Landing Page** | Visitantes externos | Presentar la propuesta de valor y captar contactos | Secuencial, orientado a la narrativa de presentación |
+| **Web Application** | Usuarios autenticados | Ejecutar las funcionalidades según el rol | Jerárquico, orientado a tareas por rol |
+| **Backend RESTful API** | Desarrolladores | Exponer la lógica de negocio | Recursos RESTful, orientado a endpoints |
+
+Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.x.6.
+
+---
 
 <a id="421-organization-systems"></a>
 ### 4.2.1. Organization Systems.
 
-El contenido se organiza mediante tres estructuras, cada una aplicada donde corresponde a la naturaleza de la información.
+Los sistemas de organización determinan cómo se estructura y presenta la información a los usuarios. Para FleetSafe se emplean distintos esquemas según el producto y el tipo de contenido, en coherencia con las tareas que cada rol debe ejecutar.
 
-#### Organización jerárquica
+---
 
-Se aplica donde el usuario necesita descender desde una visión general hacia el detalle. Es la estructura del Landing Page y la del área del supervisor.
+#### Esquemas de organización aplicados
 
-```
-Landing Page                      Web Application · Fleet Supervisor
-├── Hero                          └── Fleet
-├── Problem                           └── Vehicle
-├── Platform                              ├── Inspection history
-├── Process                               │   └── Inspection detail
-├── Profiles                              │       └── Observation and evidence
-├── Team                                  ├── Documents
-├── FAQ                                   └── Incidents
-├── Call to action                            └── Corrective actions · Repairs · Follow-ups
-└── Footer
-```
+Se emplean los siguientes esquemas, cada uno sustentado en la naturaleza del contenido que organiza y en la tarea que el usuario debe realizar sobre él.
 
-La jerarquía del Landing Page reproduce el orden de un argumento: primero el problema que el visitante reconoce como propio, después la solución, después cómo funciona, y solo entonces la llamada a la acción. La de la Web Application reproduce la del dominio, y coincide con la composición de los agregados descrita en la sección 4.7.1.
+| Esquema | Producto | Contenido al que se aplica | Sustento |
+|:--------|:---------|:---------------------------|:---------|
+| **Jerárquico** | Web Application | Navegación principal por módulos según el rol del usuario | Cada rol accede únicamente a las funcionalidades que le corresponden, conforme a los roles definidos en la sección 1.1.1 y a las User Stories de la sección 3.1. |
+| **Secuencial** | Web Application | Flujo de inspección preoperacional | La inspección es un proceso ordenado que debe completarse paso a paso: iniciar (US17), registrar elementos (US18), registrar observaciones (US19), adjuntar evidencia (US20) y finalizar (US21). |
+| **Secuencial** | Landing Page | Narrativa de presentación | La Landing Page presenta la propuesta de valor en un orden progresivo: inicio (US01), funcionalidades (US02), beneficios por segmento (US03) y contacto (US04). |
+| **Por audiencia** | Landing Page | Sección de beneficios | Los beneficios se presentan diferenciados por segmento —empresas, supervisores y conductores— conforme a US03. |
+| **Por tarea** | Web Application | Vistas de supervisión | El supervisor accede a las vistas en función de la tarea que debe ejecutar: registrar vehículo (US12), consultar estado (US25), gestionar incidencias (US28), consultar historial (US35). |
+| **Por estado** | Web Application | Listado de vehículos | Los vehículos se agrupan por estado operativo —habilitado, observado, no habilitado— conforme a US25, dado que el estado es la información que determina la decisión del supervisor. |
+| **Cronológico** | Web Application | Historial de inspecciones, incidencias y estados | El historial se presenta en orden cronológico descendente, conforme a US31, US35 y US37, porque el usuario necesita conocer primero lo más reciente. |
+| **Alfabético** | Web Application | Catálogo de elementos de inspección | El catálogo se presenta en el orden definido por `display_order` y, en su defecto, alfabéticamente, para facilitar la localización de un elemento durante la inspección. |
 
-#### Organización secuencial
+---
 
-Se aplica donde existe un procedimiento con un orden obligatorio y un final definido. Es la estructura de la inspección preoperacional:
+#### Organización por rol
 
-```
-Vehículo asignado → Checklist de elementos → Observación y evidencia → Resumen → Resultado
-```
+La Web Application organiza su contenido principal según el rol del usuario autenticado. Cada rol accede a un conjunto diferenciado de módulos, conforme a las User Stories definidas en la sección 3.1.
 
-Durante la secuencia la navegación general se retira de la pantalla y se muestra un indicador de avance. La razón es que una inspección a medias no tiene valor: si el conductor la abandona, el vehículo no queda evaluado y el registro pierde su función de evidencia. La interfaz evita, por tanto, ofrecer salidas que no sean deliberadas.
+| Rol | Módulos accesibles | User Stories relacionadas |
+|:----|:-------------------|:--------------------------|
+| **Administrador** | Usuarios y roles, configuración del catálogo de inspección, reglas de evaluación | US07, US08, US11 |
+| **Supervisor de flota** | Vehículos y flota, inspecciones, evaluación y habilitación, incidencias, documentación vehicular, historial y reportes | US12–US16, US25, US26, US28–US37 |
+| **Conductor** | Inspección preoperacional, incidencias propias, consulta de sus inspecciones | US17–US22, US27 |
 
-#### Organización matricial
+Esta organización jerárquica por rol tiene dos consecuencias directas sobre la interfaz:
 
-Se aplica donde el usuario necesita comparar muchos elementos según varios criterios a la vez, y elegir él mismo cuál gobierna la vista. Es la estructura del tablero de flota y de los historiales: un mismo conjunto de vehículos puede recorrerse por condición operativa, por flota, por conductor asignado o por fecha de la última inspección, sin que ninguno de esos ejes sea el principal.
+- El conductor accede únicamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2, que busca reducir al mínimo los pasos necesarios para completar una inspección.
+- El supervisor no visualiza las funcionalidades administrativas, porque su tarea se concentra en el control preventivo y no en la configuración de la plataforma.
 
-#### Esquemas de categorización
+---
 
-| Esquema | Dónde se aplica | Por qué |
-|:--------|:----------------|:--------|
-| **Por tópicos** | Secciones del Landing Page; agrupación de los elementos de inspección por categoría (`COMPONENT`, `SAFETY_COMPONENT`, `DOCUMENTATION`) | El conductor revisa el vehículo por zonas, y agrupar el checklist igual reduce el desplazamiento físico alrededor de la unidad |
-| **Por audiencia** | Llamadas a la acción del Landing Page, una por segmento objetivo; vistas de la Web Application según el rol | Cada segmento tiene una pregunta distinta, y la respuesta pertinente es distinta |
-| **Cronológico** | Historial de inspecciones, seguimiento de incidencias, registro de habilitaciones | Su valor es precisamente la secuencia temporal: sirven como evidencia de qué se sabía y cuándo |
-| **Alfabético** | Listados administrativos del catálogo de elementos de inspección y de tipos de documento | Son catálogos extensos y estables en los que el administrador busca un nombre que ya conoce |
+#### Organización del flujo de inspección
+
+El flujo de inspección preoperacional constituye el núcleo del dominio de FleetSafe y se organiza de forma estrictamente secuencial, porque cada paso depende del anterior y el sistema no debe permitir que la inspección se finalice sin haber completado todos los elementos.
+
+| Paso | Acción del conductor | User Story | Condición para avanzar |
+|:-----|:---------------------|:-----------|:-----------------------|
+| 1 | Iniciar la inspección del vehículo asignado | US17 | No debe existir otra inspección en progreso para el mismo vehículo |
+| 2 | Registrar el estado de cada elemento del catálogo | US18 | Todos los elementos deben tener un resultado registrado |
+| 3 | Registrar observaciones en los elementos no conformes | US19 | La observación no puede estar vacía |
+| 4 | Adjuntar evidencia fotográfica cuando corresponda | US20 | El archivo debe tener un formato permitido |
+| 5 | Finalizar la inspección | US21 | Todos los elementos deben estar completos |
+
+Al finalizar el paso 5, el sistema inicia automáticamente la evaluación del vehículo, conforme a US23 y US24, y determina su condición operativa.
+
+---
+
+#### Organización del contenido de la Landing Page
+
+La Landing Page organiza su contenido de forma secuencial, siguiendo el recorrido natural de un visitante que evalúa la propuesta de valor de FleetSafe.
+
+| Sección | Contenido | User Story |
+|:--------|:----------|:-----------|
+| 1. Encabezado | Nombre, propuesta de valor y llamada a la acción principal | US01 |
+| 2. Funcionalidades | Inspección preoperacional, evaluación de condiciones, habilitación operativa y gestión de incidencias | US02 |
+| 3. Beneficios por segmento | Beneficios diferenciados para empresas, supervisores y conductores | US03 |
+| 4. Contacto | Formulario de solicitud de demostración | US04 |
+| 5. Pie de página | Información de contacto y redes sociales | US06 |
+
+La sección de beneficios se organiza **por audiencia**, dado que cada segmento objetivo tiene necesidades distintas respecto de la plataforma, conforme a lo establecido en la sección 1.3.
+
+---
+
+#### Estructura de navegación por producto
+
+| Producto | Tipo de navegación | Niveles de profundidad | Sustento |
+|:---------|:-------------------|:-----------------------|:---------|
+| **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | 1 nivel | El visitante no requiere autenticación ni recorridos profundos. |
+| **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | 3 niveles: módulo, listado, detalle | El supervisor y el conductor requieren acceder a vistas específicas dentro de cada módulo. |
+
+**Estructura de la Web Application**
+
+En la Web Application, los tres niveles de profundidad corresponden a:
+
+- **Nivel 1 — Módulo:** agrupación funcional (por ejemplo, *Vehículos*).
+- **Nivel 2 — Listado:** vista consolidada de los objetos del módulo (por ejemplo, listado de vehículos con filtros por estado).
+- **Nivel 3 — Detalle:** vista específica de un objeto (por ejemplo, detalle de un vehículo con su historial e incidencias).
+
+Este esquema coincide con la estructura de User Stories de la sección 3.1, donde cada módulo presenta una historia de listado y una historia de detalle.
+
+---
+
+#### Correspondencia con los bounded contexts
+
+La organización de la información en la interfaz guarda correspondencia con los sub-dominios y bounded contexts identificados en la sección 4.6, lo que permite mantener coherencia entre el modelo de dominio y la estructura de navegación.
+
+| Módulo de la interfaz | Bounded context asociado (sección 4.8.1) |
+|:----------------------|:-----------------------------------------|
+| Usuarios y roles | Identity and Access |
+| Vehículos y flota | Fleet Management |
+| Inspección preoperacional | Pre-Operational Inspection |
+| Evaluación y habilitación | Evaluation and Authorization |
+| Incidencias | Incident Management |
+| Documentación vehicular | Vehicle Documentation |
+
+---
 
 <a id="422-labeling-systems"></a>
 ### 4.2.2. Labeling Systems.
 
-Las etiquetas emplean el **mínimo número de palabras** y proceden del Ubiquitous Language de la sección 2.5, de modo que el término que ve el usuario en la interfaz es el mismo que aparece en la documentación de la API y en el modelo de datos. El idioma por defecto es el inglés, con su equivalente en `es_419`.
+Los sistemas de etiquetado definen los términos que se emplean en la interfaz para nombrar las secciones, los módulos, las acciones y los estados que el usuario encuentra durante su recorrido por FleetSafe. Su propósito es que el usuario reconozca de inmediato qué hace cada elemento y qué información contiene cada vista, sin necesidad de interpretar términos técnicos ni de aprender una nomenclatura ajena a su actividad.
 
-| Etiqueta (`en_US`) | Equivalente (`es_419`) | Asociación que crea en el usuario |
-|:-------------------|:-----------------------|:----------------------------------|
-| `Inspection` | Inspección | El acto de revisar el vehículo antes de salir; no un trámite administrativo |
-| `My vehicle` | Mi vehículo | Pertenencia y responsabilidad: es la unidad de la que el conductor responde hoy |
-| `Enabled` | Habilitado | Permiso para operar concedido, no una simple ausencia de defectos |
-| `Observed` | Observado | Puede operar, pero hay algo registrado que alguien debe atender |
-| `Not Enabled` | No habilitado | Prohibición de salir. Se evita *"Rechazado"* o *"Bloqueado"*, que suenan a sanción sobre el conductor |
-| `Lift block` | Levantar bloqueo | Acción excepcional y deliberada, que deja constancia de quién la autorizó |
-| `Observation` | Observación | Descripción de una condición detectada, no una queja |
-| `Evidence` | Evidencia | Respaldo verificable de la observación |
-| `Incident` | Incidencia | Problema que requiere seguimiento hasta su cierre |
-| `Fleet` | Flota | Conjunto de vehículos bajo una misma supervisión |
+Las etiquetas que se definen en esta sección se derivan directamente del **Ubiquitous Language** establecido en la sección 2.5, conforme al principio de redacción formulado en la sección 4.1.1, según el cual la interfaz emplea los términos del dominio y no sinónimos técnicos.
 
-Tres reglas gobiernan la redacción de etiquetas:
+---
 
-- **Los botones nombran la acción, no la confirman.** `Start inspection`, no `OK`; `Lift block`, no `Continue`. Quien lee un botón debe saber qué ocurrirá al pulsarlo sin leer el texto que lo rodea.
-- **No se emplean abreviaturas** salvo las que el dominio ya usa, como la placa del vehículo.
-- **Una etiqueta significa lo mismo en todas partes.** `Not Enabled` no se convierte en `Bloqueado` en otra vista, aunque en la conversación diaria ambos términos se usen indistintamente.
+#### Principios de etiquetado
+
+| Principio | Definición | Ejemplo |
+|:----------|:-----------|:--------|
+| **Terminología del dominio** | Se emplean los términos del Ubiquitous Language y no sinónimos técnicos. | Se emplea *inspección preoperacional*, no *checklist* ni *formulario*. |
+| **Orientación a la tarea** | Las etiquetas describen lo que el usuario hace, no la estructura interna del sistema. | Se emplea *Registrar vehículo*, no *Crear entidad de vehículo*. |
+| **Consistencia** | Un mismo concepto se nombra siempre con la misma etiqueta en toda la interfaz. | *Habilitado*, *Observado* y *No habilitado* se emplean de forma uniforme en listados, tarjetas y detalles. |
+| **Precisión sobre brevedad** | Cuando abreviar introduce ambigüedad, se prefiere la etiqueta completa. | Se emplea *Elementos de inspección*, no *Elementos*. |
+| **Idioma del usuario** | Las etiquetas se redactan en español latinoamericano, conforme a la sección 4.1.1. | Se emplea *Conductor*, no *Driver* ni *Chofer*. |
+| **Voz activa en acciones** | Las acciones se expresan en infinitivo o en imperativo según el contexto. | *Registrar incidencia* (menú), *Registrar incidencia* (botón). |
+
+---
+
+#### Etiquetas de navegación principal
+
+La navegación principal de la Web Application se organiza por módulos, en correspondencia con los esquemas jerárquicos definidos en la sección 4.2.1 y con los bounded contexts identificados en la sección 4.8.1.
+
+| Etiqueta en la interfaz | Módulo | Bounded context (sección 4.8.1) | Roles con acceso |
+|:------------------------|:-------|:--------------------------------|:-----------------|
+| **Panel** | Vista inicial con indicadores de estado de la flota | — | Administrador, Supervisor |
+| **Usuarios** | Gestión de usuarios y roles | Identity and Access | Administrador |
+| **Vehículos** | Registro y consulta de vehículos de la flota | Fleet Management | Administrador, Supervisor |
+| **Inspecciones** | Registro y consulta de inspecciones preoperacionales | Pre-Operational Inspection | Supervisor, Conductor |
+| **Habilitación** | Estados de habilitación operativa de los vehículos | Evaluation and Authorization | Supervisor |
+| **Incidencias** | Registro y seguimiento de incidencias | Incident Management | Supervisor, Conductor |
+| **Documentación** | Control de documentos vehiculares y vencimientos | Vehicle Documentation | Supervisor |
+| **Reportes** | Historial y reportes de control preventivo | — | Supervisor |
+
+Las etiquetas **Panel** y **Reportes** no corresponden a un bounded context específico, dado que agregan información proveniente de varios de ellos.
+
+---
+
+#### Etiquetas de estados del vehículo
+
+Los tres estados del vehículo constituyen la información más relevante de la interfaz, porque responden a la pregunta principal de FleetSafe planteada en la sección 1.2: *¿este vehículo cumple las condiciones necesarias para operar?* Por esta razón, sus etiquetas deben ser inequívocas y emplearse de forma uniforme en todas las vistas.
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Habilitado** | `ENABLED` | El vehículo cumple las condiciones necesarias para operar. |
+| **Observado** | `OBSERVED` | El vehículo presenta condiciones que requieren atención o seguimiento, pero no impiden necesariamente su operación. |
+| **No habilitado** | `NOT_ENABLED` | El vehículo presenta una condición que impide que sea considerado apto para operar. |
+
+Estas etiquetas se emplean de forma idéntica en listados, tarjetas, vistas de detalle, historial y reportes. No se emplean variantes como *Apto*, *En observación* o *Bloqueado*, porque introducirían ambigüedad respecto de los valores del dominio.
+
+---
+
+#### Etiquetas de estados de la inspección
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **En progreso** | `IN_PROGRESS` | La inspección ha sido iniciada y aún no ha sido finalizada. |
+| **Completada** | `COMPLETED` | La inspección ha sido finalizada y el sistema ha iniciado su evaluación. |
+| **Cancelada** | `CANCELLED` | La inspección fue interrumpida y no será considerada en la evaluación. |
+
+---
+
+#### Etiquetas de resultados de inspección
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Conforme** | `OK` | El elemento revisado se encuentra en condiciones adecuadas. |
+| **Observado** | `OBSERVED` | El elemento revisado presenta una condición que requiere atención. |
+| **No conforme** | `FAIL` | El elemento revisado presenta una condición que impide su uso o afecta la seguridad. |
+| **No aplica** | `NOT_APPLICABLE` | El elemento no corresponde al vehículo inspeccionado. |
+
+Se emplea **No conforme** en lugar de *Fallido* o *Falla*, porque describe la condición encontrada y no anticipa su causa, conforme al principio de neutralidad formulado en la sección 4.1.1.
+
+---
+
+#### Etiquetas de estados de la incidencia
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Registrada** | `REGISTERED` | La incidencia ha sido registrada y aún no ha sido revisada. |
+| **En revisión** | `IN_REVIEW` | El supervisor se encuentra revisando la incidencia. |
+| **Resuelta** | `RESOLVED` | Se ha registrado la acción correctiva que soluciona el problema. |
+| **Cerrada** | `CLOSED` | La incidencia ha sido verificada y no admite nuevas actualizaciones. |
+
+---
+
+#### Etiquetas de estados de la documentación vehicular
+
+| Etiqueta en la interfaz | Valor en el dominio | Descripción |
+|:------------------------|:--------------------|:------------|
+| **Vigente** | `VALID` | El documento se encuentra dentro de su periodo de vigencia. |
+| **Próximo a vencer** | `EXPIRING` | El documento se encuentra dentro del umbral de alerta previo a su vencimiento. |
+| **Vencido** | `EXPIRED` | El documento ha superado su fecha de vencimiento. |
+
+---
+
+#### Etiquetas de acciones
+
+Las acciones se expresan mediante verbos en infinitivo cuando aparecen en menús o encabezados de vista, y en imperativo cuando constituyen la etiqueta de un botón que el usuario ejecuta en el momento.
+
+| Etiqueta en la interfaz | Acción | User Story |
+|:------------------------|:-------|:-----------|
+| **Iniciar inspección** | Crea una nueva inspección preoperacional en estado en progreso | US17 |
+| **Registrar resultado** | Almacena el resultado de un elemento de inspección | US18 |
+| **Agregar observación** | Registra una observación asociada a un elemento no conforme | US19 |
+| **Adjuntar evidencia** | Incorpora una fotografía que respalda la condición detectada | US20 |
+| **Finalizar inspección** | Cierra la inspección e inicia la evaluación del vehículo | US21 |
+| **Registrar vehículo** | Incorpora un nuevo vehículo a la flota | US12 |
+| **Asignar conductor** | Vincula un vehículo a un conductor para la inspección | US16 |
+| **Registrar incidencia** | Crea una incidencia asociada a un vehículo | US27 |
+| **Registrar acción correctiva** | Documenta la acción aplicada a una incidencia | US30 |
+| **Solicitar excepción** | Registra el levantamiento de un bloqueo, con responsable y justificación | Estrategia 2 (sección 2.1.2) |
+
+La etiqueta **Solicitar excepción** se incorpora de forma deliberada y no se denomina *Desbloquear vehículo*, porque el dominio exige que el levantamiento de un bloqueo quede registrado con responsable y justificación, conforme a la decisión de diseño establecida en la sección 4.8.1 para la tabla `operational_authorizations`.
+
+---
+
+#### Etiquetas de campos de formulario
+
+| Etiqueta en la interfaz | Campo del modelo (sección 4.7.1) | Observación |
+|:------------------------|:---------------------------------|:------------|
+| **Placa** | `Vehicle.plate` | Se presenta en mayúsculas y con tipografía `mono-data`. |
+| **Marca** | `Vehicle.brand` | — |
+| **Modelo** | `Vehicle.model` | — |
+| **Año** | `Vehicle.year` | — |
+| **Capacidad** | `Vehicle.capacity` | Se indica la unidad de medida en el propio campo. |
+| **Número de licencia** | `Driver.licenseNumber` | Se presenta en `mono-data`. |
+| **Vencimiento de licencia** | `Driver.licenseExpirationDate` | Formato `DD/MM/AAAA`. |
+| **Fecha de vencimiento** | `VehicleDocument.expirationDate` | Formato `DD/MM/AAAA`. |
+| **Odómetro** | `Inspection.odometer` | Se indica la unidad de medida en el propio campo. |
+
+---
+
+#### Etiquetas de la Landing Page
+
+| Etiqueta | Sección | User Story |
+|:---------|:--------|:-----------|
+| **Inicio** | Encabezado con la propuesta de valor | US01 |
+| **Funcionalidades** | Descripción de las capacidades de la plataforma | US02 |
+| **Beneficios** | Beneficios diferenciados por segmento | US03 |
+| **Contacto** | Formulario de solicitud de demostración | US04 |
+| **Solicitar demostración** | Botón de llamada a la acción principal | US04 |
+| **Conocer más** | Botón de llamada a la acción secundaria | US02 |
+
+---
+
+#### Términos que se evitan
+
+Con el fin de mantener la coherencia entre el modelo de dominio y la interfaz, se evitan de forma deliberada los siguientes términos.
+
+| Término evitado | Término adoptado | Motivo |
+|:----------------|:-----------------|:-------|
+| Checklist | Inspección preoperacional | Anglicismo ajeno al Ubiquitous Language. |
+| Formulario | Inspección preoperacional | Describe el soporte, no la actividad del dominio. |
+| Activo | Vehículo | Término genérico que diluye el objeto del dominio. |
+| Ticket | Incidencia | Anglicismo ajeno al Ubiquitous Language. |
+| Bloqueado | No habilitado | Introduce una connotación distinta a la del estado del dominio. |
+| Apto | Habilitado | Introduce una valoración que el dominio no establece. |
+| Chofer | Conductor | Regionalismo; el Ubiquitous Language adopta *Driver* (Conductor). |
+| Usuario final | Conductor, Supervisor de flota | No distingue el rol, que es determinante en FleetSafe. |
+
+---
+
+#### Correspondencia entre etiquetas y User Stories
+
+El siguiente cuadro permite verificar que cada etiqueta definida en esta sección se corresponde con una funcionalidad efectivamente definida en la sección 3.1.
+
+| Grupo de etiquetas | User Stories relacionadas |
+|:-------------------|:--------------------------|
+| Navegación principal | US07–US37 |
+| Estados del vehículo | US24, US25, US26, US37 |
+| Estados de la inspección | US17, US21, US22 |
+| Resultados de inspección | US18, US19, US20 |
+| Estados de la incidencia | US27, US29, US30, US31 |
+| Estados de la documentación | US32, US33, US34 |
+| Acciones | US12, US16, US17–US21, US27, US30 |
+| Campos de formulario | US12, US15, US32, US34 |
+| Landing Page | US01–US06 |
+
+---
 
 <a id="423-seo-tags-and-meta-tags"></a>
 ### 4.2.3. SEO Tags and Meta Tags.
 
-Los valores se definen en inglés, idioma por defecto del producto, y se declaran también en `es_419` mediante `hreflang`.
+Los SEO Tags y Meta Tags son los elementos del código HTML que describen el contenido de cada página a los motores de búsqueda y a los navegadores. Su correcta definición determina que un visitante que busca una solución de control preventivo vehicular encuentre FleetSafe, y que al encontrarla reciba una descripción precisa de lo que la plataforma ofrece.
 
-#### Landing Page
+Las etiquetas definidas en esta sección se aplican a la **Landing Page**, dado que es el único producto de FleetSafe expuesto públicamente. La Web Application se encuentra detrás de autenticación y se excluye de la indexación conforme a la sección de directivas de rastreo.
 
-```html
-<title>FleetSafe — Pre-Operational Vehicle Inspection for Cargo Fleets</title>
-<meta name="description" content="FleetSafe digitizes the pre-operational inspection of cargo vehicles, evaluates its results against your own rules and determines whether each unit is authorized to operate.">
-<meta name="keywords" content="pre-operational inspection, fleet safety, cargo transport, vehicle authorization, preventive control, fleet management, Peru">
-<meta name="author" content="BitMeisters">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://fleetsafe.pe/">
-<link rel="alternate" hreflang="en-US" href="https://fleetsafe.pe/en/">
-<link rel="alternate" hreflang="es-419" href="https://fleetsafe.pe/es/">
+---
 
-<meta property="og:title" content="FleetSafe — Pre-Operational Vehicle Inspection for Cargo Fleets">
-<meta property="og:description" content="Know which of your vehicles is authorized to operate, and why.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="es_419">
+#### Objetivo del etiquetado SEO
+
+El etiquetado de la Landing Page persigue tres objetivos concretos, en coherencia con los segmentos objetivo definidos en la sección 1.3 y con las estrategias competitivas planteadas en la sección 2.1.2:
+
+| Objetivo | Descripción |
+|:---------|:------------|
+| **Visibilidad ante búsquedas del dominio** | Que la Landing Page aparezca cuando un responsable de flota busque términos relacionados con inspección preoperacional, control preventivo vehicular o habilitación operativa en el contexto peruano. |
+| **Descripción precisa en resultados** | Que el título y la descripción que aparecen en los resultados de búsqueda comuniquen con exactitud qué hace FleetSafe y a quién se dirige. |
+| **Coherencia terminológica** | Que los términos empleados en las etiquetas coincidan con el Ubiquitous Language de la sección 2.5 y con las etiquetas de la sección 4.2.2, evitando sinónimos que diluyan el posicionamiento. |
+
+El tercer objetivo es determinante para la Estrategia 1 planteada en la sección 2.1.2: si FleetSafe se posiciona como la solución construida sobre el marco de cumplimiento peruano, la terminología de sus etiquetas debe reflejarlo de forma explícita.
+
+---
+
+#### Meta Tags generales
+
+Estas etiquetas se incorporan en el `<head>` del documento HTML y se aplican a toda la Landing Page.
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<title>` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título que aparece en la pestaña del navegador y en los resultados de búsqueda. |
+| `<meta charset="UTF-8">` | `UTF-8` | Codificación de caracteres, necesaria para el correcto uso del español. |
+| `<meta name="viewport">` | `width=device-width, initial-scale=1.0` | Configuración de la vista responsive, conforme a los breakpoints de la sección 4.1.2. |
+| `<meta name="description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga. Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción que aparece bajo el título en los resultados de búsqueda. Longitud aproximada: 155 caracteres. |
+| `<meta name="keywords">` | `inspección preoperacional, control preventivo vehicular, habilitación operativa, gestión de flotas, seguridad vehicular, transporte de carga, Perú` | Términos que describen el contenido. Su peso en el posicionamiento es limitado en la actualidad, pero se mantiene por completitud. |
+| `<meta name="author">` | `BitMeisters` | Identifica a la startup responsable del producto. |
+| `<meta name="robots">` | `index, follow` | Indica a los motores de búsqueda que indexen la página y sigan sus enlaces. |
+| `<meta name="language">` | `es-PE` | Declara el idioma y la variante regional, en coherencia con la sección 4.1.1. |
+| `<link rel="canonical">` | `https://fleetsafe.bitmeisters.com/` | Establece la URL canónica de la Landing Page. |
+
+---
+
+#### Open Graph Tags
+
+Las Open Graph Tags determinan cómo se presenta la Landing Page cuando se comparte en redes sociales y aplicaciones de mensajería. Su correcta definición es relevante porque los segmentos objetivo —supervisores de flota y responsables de empresas de transporte— reciben recomendaciones por canales informales.
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta property="og:type">` | `website` | Tipo de contenido. |
+| `<meta property="og:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado al compartir el enlace. |
+| `<meta property="og:description">` | `Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción mostrada al compartir el enlace. |
+| `<meta property="og:url">` | `https://fleetsafe.bitmeisters.com/` | URL canónica del contenido. |
+| `<meta property="og:image">` | `https://fleetsafe.bitmeisters.com/img/brand/og-image.png` | Imagen representativa de la plataforma. Dimensiones recomendadas: 1200 × 630 px. |
+| `<meta property="og:image:alt">` | `Interfaz de FleetSafe mostrando el estado de habilitación de una flota de vehículos de carga` | Texto alternativo de la imagen. |
+| `<meta property="og:locale">` | `es_PE` | Idioma y variante regional del contenido. |
+| `<meta property="og:site_name">` | `FleetSafe` | Nombre del sitio. |
+
+---
+
+#### Twitter Card Tags
+
+Complementan las Open Graph Tags para la presentación del enlace en la plataforma X (anteriormente Twitter).
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta name="twitter:card">` | `summary_large_image` | Formato de la tarjeta: imagen grande con título y descripción. |
+| `<meta name="twitter:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado en la tarjeta. |
+| `<meta name="twitter:description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga.` | Descripción mostrada en la tarjeta. |
+| `<meta name="twitter:image">` | `https://fleetsafe.bitmeisters.com/img/brand/og-image.png` | Imagen mostrada en la tarjeta. |
+| `<meta name="twitter:image:alt">` | `Interfaz de FleetSafe mostrando el estado de habilitación de una flota de vehículos de carga` | Texto alternativo de la imagen. |
+
+---
+
+#### Directivas para la Web Application
+
+La Web Application no debe ser indexada por los motores de búsqueda, dado que su contenido requiere autenticación y expone información operativa de la empresa. Por ello, todas sus vistas incorporan la siguiente directiva:
+
+| Etiqueta | Valor | Propósito |
+|:---------|:------|:----------|
+| `<meta name="robots">` | `noindex, nofollow` | Impide la indexación de las vistas autenticadas y el seguimiento de sus enlaces. |
+
+Adicionalmente, se configura un archivo `robots.txt` en la raíz del dominio que restringe el rastreo de las rutas de la Web Application:
+
+```text
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /api/
 ```
 
-#### Web Application
+El archivo `sitemap.xml` incluye únicamente las secciones públicas de la Landing Page.
 
-| Vista | `Title` | `Description` | `Robots` |
-|:------|:--------|:--------------|:---------|
-| Sign in | `Sign in — FleetSafe` | `Access your FleetSafe account to register inspections and supervise the operational condition of your fleet.` | `index, follow` |
-| My vehicle | `My assigned vehicle — FleetSafe` | `Consult the vehicle assigned to you and start its pre-operational inspection.` | `noindex, nofollow` |
-| Inspection | `Pre-operational inspection — FleetSafe` | `Register the condition of each inspection item of the assigned vehicle.` | `noindex, nofollow` |
-| Fleet | `Fleet — FleetSafe` | `Consult the operational condition of every vehicle of the fleet.` | `noindex, nofollow` |
-| Vehicle detail | `Vehicle {plate} — FleetSafe` | `Inspection history, documents and incidents of the vehicle.` | `noindex, nofollow` |
-| Incidents | `Incidents — FleetSafe` | `Track the incidents detected in the vehicles of the fleet.` | `noindex, nofollow` |
+---
 
-`Author` es `BitMeisters` en todas las vistas.
+#### Etiquetas por sección de la Landing Page
 
-**Decisión de diseño: las vistas autenticadas se marcan `noindex`.** Solo el Landing Page y la vista de inicio de sesión deben ser indexables. Las vistas internas contienen información de flotas de clientes, y aunque exijan autenticación, declararlo de forma explícita evita que sus direcciones aparezcan en los resultados de búsqueda.
+La Landing Page es un sitio de una sola página con desplazamiento entre secciones. Dado que las secciones no constituyen URLs independientes, se emplean **etiquetas de encabezado semánticas** (`<h1>`, `<h2>`, `<h3>`) y **atributos de anclaje** (`id`) para que los motores de búsqueda identifiquen la estructura del contenido.
+
+| Sección | Encabezado | Anclaje | User Story |
+|:--------|:-----------|:--------|:-----------|
+| Inicio | `<h1>Control preventivo y habilitación operativa de su flota</h1>` | `#inicio` | US01 |
+| Funcionalidades | `<h2>Funcionalidades de FleetSafe</h2>` | `#funcionalidades` | US02 |
+| Beneficios | `<h2>Beneficios para su organización</h2>` | `#beneficios` | US03 |
+| Contacto | `<h2>Solicite una demostración</h2>` | `#contacto` | US04 |
+
+**Regla de encabezados:** cada página debe contener exactamente un `<h1>`, y los niveles `<h2>` y `<h3>` deben respetar la jerarquía sin saltos, conforme a las buenas prácticas de accesibilidad establecidas en la sección 4.1.2.
+
+---
+
+#### Datos estructurados
+
+Se incorpora un bloque de datos estructurados en formato JSON-LD que describe la organización y el producto, con el fin de que los motores de búsqueda presenten información enriquecida en los resultados.
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FleetSafe",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Plataforma web de control preventivo vehicular para empresas de transporte de carga. Permite realizar inspecciones preoperacionales digitales y determinar si un vehículo se encuentra habilitado para operar.",
+  "inLanguage": "es-PE",
+  "author": {
+    "@type": "Organization",
+    "name": "BitMeisters"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PEN",
+    "description": "Periodo de prueba"
+  }
+}
+```
+
+> **Nota:** los valores de `offers` son provisionales, dado que el modelo de negocio de FleetSafe se encuentra pendiente de definición conforme a lo establecido en la sección 1.1.1.
+
+---
+
+#### Palabras clave por segmento
+
+Las palabras clave se seleccionan a partir de los segmentos objetivo definidos en la sección 1.3 y de los términos del Ubiquitous Language de la sección 2.5.
+
+| Segmento | Palabras clave principales |
+|:---------|:---------------------------|
+| **Empresas de transporte de carga** | control preventivo vehicular, seguridad de flota, habilitación operativa, gestión de flotas Perú, cumplimiento normativo transporte |
+| **Supervisores de flota** | inspección preoperacional digital, control de vehículos, estado de flota, gestión de incidencias vehiculares, historial de inspecciones |
+| **Conductores de vehículos de carga** | inspección de vehículo, revisión preoperacional, reporte de fallas, checklist digital de vehículo |
+
+---
+
+#### Relación con las estrategias competitivas
+
+El etiquetado definido en esta sección sustenta directamente dos de las estrategias planteadas en la sección 2.1.2:
+
+| Estrategia | Relación con el etiquetado |
+|:-----------|:---------------------------|
+| **Estrategia 1: Especialización en el marco de cumplimiento peruano** | Las palabras clave incorporan la referencia geográfica y las etiquetas mencionan el contexto peruano, lo que permite diferenciar a FleetSafe de soluciones construidas sobre marcos normativos de otros países. |
+| **Estrategia 5: Localización y acompañamiento local** | El idioma declarado es `es-PE`, y la terminología empleada en las etiquetas corresponde al español latinoamericano establecido en la sección 4.1.1. |
+
+---
 
 <a id="424-searching-systems"></a>
 ### 4.2.4. Searching Systems.
 
-El **Landing Page no incorpora búsqueda**. Es una página única de extensión acotada, en la que un buscador añadiría un control sin utilidad; su recorrido se resuelve mediante la navegación por anclas descrita en 4.2.5.
+Los sistemas de búsqueda definen los mecanismos mediante los cuales el usuario localiza información específica dentro de FleetSafe. Su diseño responde a una condición propia del dominio: el supervisor de flota consulta información operativa con frecuencia y bajo presión de tiempo, mientras que el conductor necesita encontrar el vehículo y los elementos de inspección que le corresponden sin distraerse del proceso.
 
-La **Web Application** ofrece búsqueda y filtrado en las vistas que presentan colecciones. La regla general es que la búsqueda por texto resuelve *"sé cuál busco"* y los filtros resuelven *"quiero ver los que cumplen una condición"*.
+Las decisiones que se presentan en esta sección se derivan de los esquemas de organización establecidos en la sección 4.2.1 y de las etiquetas definidas en la sección 4.2.2.
 
-| Vista | Búsqueda por texto | Filtros | Orden |
-|:------|:-------------------|:--------|:------|
-| Fleet | placa, marca, modelo | condición operativa · flota · conductor asignado · con documentos por vencer | placa · última inspección · condición |
-| Inspection history | placa, nombre del conductor | rango de fechas · resultado · conductor | fecha, descendente por defecto |
-| Incidents | descripción, placa | severidad · estado · tipo · origen (inspección u operación) | fecha de reporte · severidad |
-| Documents | número de documento, placa | tipo de documento · condición de vigencia · rango de vencimiento | fecha de vencimiento, ascendente |
-| Users | nombre, correo | rol · estado de la cuenta | nombre |
+---
 
-#### Comportamiento de la búsqueda
+#### Principios de búsqueda
 
-- La búsqueda es **incremental**: los resultados se actualizan conforme se escribe, a partir del tercer carácter.
-- Es **insensible a mayúsculas y a los separadores de la placa**: `abc-123`, `ABC123` y `abc 123` devuelven el mismo vehículo.
-- Los filtros son **acumulativos** y se muestran como chips eliminables sobre los resultados, con una acción para descartarlos todos.
-- El estado de búsqueda y filtros **se refleja en la dirección**, de modo que un supervisor pueda compartir con otro el enlace de *"los vehículos no habilitados de la flota norte"*.
+| Principio | Definición | Sustento |
+|:----------|:-----------|:---------|
+| **Búsqueda contextual** | Los filtros disponibles en cada vista corresponden al tipo de información que esa vista presenta. | Un listado de vehículos no ofrece filtro por tipo de incidencia. |
+| **Filtros sobre búsqueda libre** | Se priorizan filtros estructurados sobre campos de texto libre, porque la mayoría de las consultas del dominio se resuelven por estado, por fecha o por vehículo. | Las User Stories US13, US25 y US28 definen filtros, no búsqueda por texto. |
+| **Combinación de criterios** | Los filtros se pueden combinar entre sí, y el sistema aplica la intersección de los criterios seleccionados. | US13 y US28 establecen filtros acumulables. |
+| **Resultados visibles sin desplazamiento** | Los resultados se presentan en el menor número de pantallas posible, con paginación cuando el volumen lo exige. | Sección 4.1.2, componente de tablas de datos. |
+| **Persistencia de filtros** | Los filtros aplicados se conservan mientras el usuario permanece en la vista, y se restablecen al salir de ella. | Evita que el usuario reconstruya el contexto de consulta tras revisar un detalle. |
 
-#### Presentación de los resultados
+---
 
-Los resultados se muestran en la misma estructura que el listado completo —tabla en escritorio, tarjetas en móvil— con estas diferencias:
+#### Mecanismos de búsqueda por vista
 
-- Una línea de resumen indica cuántos elementos se encontraron y sobre qué total.
-- El término buscado aparece resaltado en la celda que lo contiene.
-- La **condición operativa se presenta siempre como chip con etiqueta**, nunca como color solo, conforme a lo establecido en 4.1.1.
-- Cuando no hay coincidencias, se muestra un estado vacío que indica qué se buscó y ofrece descartar los filtros, en lugar de una tabla en blanco.
-- Los listados extensos se paginan de 25 en 25, y la posición se conserva al volver desde el detalle de un elemento.
+A continuación se detallan los mecanismos disponibles en cada vista de la Web Application, en correspondencia con las User Stories de la sección 3.1.
+
+| Vista | Mecanismo | Criterios disponibles | User Story |
+|:------|:----------|:----------------------|:-----------|
+| **Listado de vehículos** | Filtros estructurados | Estado, flota, marca, año | US13 |
+| **Listado de vehículos por estado** | Filtros estructurados y agrupación | Estado (habilitado, observado, no habilitado) | US25 |
+| **Listado de usuarios** | Filtros estructurados | Rol, estado de la cuenta | US11 |
+| **Listado de inspecciones** | Filtros estructurados y rango de fechas | Vehículo, conductor, estado, rango de fechas | US22, US35 |
+| **Listado de incidencias** | Filtros estructurados y búsqueda por texto | Estado, vehículo, tipo de incidencia, severidad, rango de fechas | US28 |
+| **Historial de incidencias por vehículo** | Filtros estructurados | Estado, tipo, rango de fechas | US31 |
+| **Listado de documentos vehiculares** | Filtros estructurados | Tipo de documento, estado de vigencia, rango de fechas | US33 |
+| **Historial de estados del vehículo** | Filtro por rango de fechas | Rango de fechas | US37 |
+| **Catálogo de elementos de inspección** | Búsqueda por texto y orden predefinido | Nombre, código, categoría | US18 |
+| **Reporte de estado de flota** | Filtros estructurados | Rango de fechas, flota, estado | US36 |
+
+---
+
+#### Búsqueda por texto libre
+
+La búsqueda por texto libre se emplea únicamente donde los criterios estructurados no permiten resolver la consulta, conforme al principio de filtros sobre búsqueda libre. Se aplica en tres casos concretos:
+
+| Vista | Campo de búsqueda | Campos consultados | User Story |
+|:------|:------------------|:-------------------|:-----------|
+| **Listado de incidencias** | Descripción de la incidencia | Descripción, observaciones asociadas | US28 |
+| **Catálogo de elementos de inspección** | Nombre o código del elemento | Nombre, código, descripción | US18 |
+| **Listado de vehículos** | Placa del vehículo | Placa | US13 |
+
+**Reglas de aplicación:**
+
+- La búsqueda por texto libre no distingue mayúsculas de minúsculas.
+- La búsqueda por texto libre se ejecuta a partir de tres caracteres ingresados.
+- Los resultados se presentan en orden de relevancia y se acompañan del criterio de coincidencia aplicado.
+- La búsqueda por placa normaliza el texto ingresado: convierte a mayúsculas y elimina guiones y espacios, conforme al formato de datos establecido en la sección 4.1.2.
+
+---
+
+#### Ordenamiento de resultados
+
+Toda vista que presente un listado ofrece ordenamiento por al menos una columna, con un orden predeterminado que responde a la necesidad más frecuente del usuario.
+
+| Vista | Orden predeterminado | Criterios de ordenamiento disponibles |
+|:------|:---------------------|:--------------------------------------|
+| Listado de vehículos | Placa (ascendente) | Placa, estado, marca, año |
+| Listado de inspecciones | Fecha de realización (descendente) | Fecha, vehículo, estado |
+| Listado de incidencias | Fecha de registro (descendente) | Fecha, severidad, estado |
+| Historial de incidencias | Fecha de registro (descendente) | Fecha, tipo |
+| Listado de documentos | Fecha de vencimiento (ascendente) | Vencimiento, tipo, estado |
+| Historial de estados | Fecha del cambio (descendente) | Fecha |
+| Reporte de estado de flota | Estado (habilitado, observado, no habilitado) | Estado, placa |
+
+El orden predeterminado del listado de documentos se establece como fecha de vencimiento ascendente porque la tarea del supervisor es anticipar los vencimientos próximos, conforme a US33.
+
+---
+
+#### Paginación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Tamaño de página** | 20 elementos en resoluciones de escritorio, 10 en resoluciones móviles |
+| **Navegación** | Anterior, siguiente y número de página |
+| **Indicador** | Se muestra el número total de resultados y el rango visible |
+| **Persistencia** | El tamaño de página seleccionado por el usuario se conserva durante la sesión |
+
+---
+
+#### Búsqueda dentro del flujo de inspección
+
+El flujo de inspección preoperacional no requiere búsqueda, dado que el conductor accede directamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2. Sin embargo, sí se aplican dos mecanismos de localización dentro de la inspección:
+
+| Mecanismo | Propósito | Sustento |
+|:----------|:----------|:---------|
+| **Orden predefinido del catálogo** | Los elementos de inspección se presentan en el orden establecido por `display_order`, conforme a la sección 4.8.1. | El conductor no necesita buscar; el sistema le presenta los elementos en el orden correcto. |
+| **Filtro por categoría** | El conductor puede filtrar los elementos por categoría (componente, elemento de seguridad, documentación). | Permite concentrarse en un grupo de elementos cuando la inspección se realiza por etapas. |
+
+Este diseño responde a la condición de uso del conductor: la inspección se realiza junto al vehículo, frecuentemente con una sola mano y en exteriores. Incorporar un campo de búsqueda añadiría complejidad sin aportar valor, dado que el conjunto de elementos es acotado y conocido.
+
+---
+
+#### Ausencia de resultados
+
+Toda búsqueda o filtro que no arroje resultados debe presentar un mensaje que explique la situación y, cuando corresponda, ofrezca una acción para revertirla, conforme al estado vacío definido en la sección 4.1.2.
+
+| Situación | Mensaje | Acción ofrecida |
+|:----------|:--------|:----------------|
+| Filtro sin coincidencias | "No se encontraron vehículos que cumplan los criterios seleccionados." | Restablecer filtros |
+| Búsqueda por texto sin coincidencias | "No se encontraron incidencias que coincidan con la búsqueda." | Limpiar búsqueda |
+| Historial sin registros | "El vehículo no tiene inspecciones registradas." | Registrar inspección (según rol) |
+| Documentos sin resultados | "No hay documentos que cumplan los criterios seleccionados." | Restablecer filtros |
+
+---
+
+#### Correspondencia con las User Stories
+
+| Mecanismo | User Stories relacionadas |
+|:----------|:--------------------------|
+| Filtros por estado | US13, US25, US28, US33, US36 |
+| Filtros por vehículo | US28, US31 |
+| Filtros por tipo | US28, US31, US33 |
+| Filtros por rango de fechas | US28, US31, US33, US35, US36, US37 |
+| Búsqueda por texto libre | US13, US18, US28 |
+| Ordenamiento | US13, US22, US28, US31, US33, US35, US37 |
+| Paginación | US11, US13, US22, US28, US31, US33, US35 |
+
+---
 
 <a id="425-navigation-systems"></a>
 ### 4.2.5. Navigation Systems.
 
-La navegación se resuelve de forma distinta en cada producto, porque en uno el usuario explora y en el otro ejecuta una tarea conocida.
+Los sistemas de navegación definen cómo el usuario se desplaza entre las distintas vistas de FleetSafe, cómo reconoce en qué parte de la aplicación se encuentra y cómo regresa a un punto anterior. Su diseño responde a dos condiciones propias del dominio: el supervisor de flota alterna con frecuencia entre módulos para tomar decisiones, y el conductor debe poder completar la inspección sin desviarse del flujo establecido.
 
-#### Landing Page
+Las decisiones que se presentan en esta sección se derivan de la estructura jerárquica por rol establecida en la sección 4.2.1, de las etiquetas definidas en la sección 4.2.2 y de los componentes de interfaz descritos en la sección 4.1.2.
 
-| Técnica | Descripción |
-|:--------|:------------|
-| Barra superior fija | Permanece visible durante el desplazamiento y da acceso directo a cada sección mediante anclas |
-| Desplazamiento suave | El salto entre secciones se anima, de modo que el visitante conserva la noción de dónde está |
-| Llamadas a la acción por segmento | Cada segmento objetivo dispone de su propia llamada a la acción, que conduce a la vista de la Web Application correspondiente a su rol |
-| Pie de página | Reúne los enlaces legales —términos y condiciones, política de privacidad—, el contacto y el selector de idioma |
-| Retorno al inicio | Botón que aparece tras el primer desplazamiento |
+---
 
-#### Web Application
+#### Principios de navegación
 
-| Técnica | Descripción |
-|:--------|:------------|
-| Barra lateral permanente | En escritorio, con los apartados que corresponden al rol de la cuenta; el elemento activo se marca con `brand-600` y `aria-current` |
-| Navegación inferior | En móvil sustituye a la barra lateral, con un máximo de cuatro destinos |
-| Barra superior | Título de la vista, selector de idioma y menú de la cuenta |
-| Migas de pan | En los recorridos de más de dos niveles: `Fleet › ABC-123 › Inspection of 15/09/2026` |
-| Acción principal contextual | Una sola por vista, destacada: `Start inspection` para el conductor, `Lift block` en el detalle de un vehículo no habilitado |
-| Retorno explícito | Toda vista de detalle ofrece regreso al listado conservando los filtros aplicados |
+| Principio | Definición | Sustento |
+|:----------|:-----------|:---------|
+| **Navegación por rol** | Cada usuario accede únicamente a los módulos que corresponden a su rol. | Sección 4.2.1, organización jerárquica por rol. |
+| **Orientación permanente** | El usuario debe poder reconocer en todo momento en qué módulo y en qué nivel de profundidad se encuentra. | Se emplean migas de pan y resaltado del elemento activo. |
+| **Profundidad acotada** | La navegación no excede los tres niveles: módulo, listado y detalle. | Sección 4.2.1, estructura de navegación. |
+| **Retorno predecible** | Toda vista de detalle permite regresar al listado del que proviene, conservando los filtros aplicados. | Sección 4.2.4, persistencia de filtros. |
+| **Consistencia** | La posición de la navegación principal y de las acciones es la misma en todas las vistas. | Sección 4.1.2, grilla y layout. |
 
-**Decisión de diseño: la navegación visible depende del rol.** Un conductor no ve los apartados de administración ni el tablero de flota completo, no porque le estén prohibidos en la interfaz, sino porque no forman parte de su tarea y mostrarlos añadiría ruido a un recorrido que debe completarse en minutos. Conviene señalar que **esta restricción es de experiencia de usuario y no de seguridad**: el control efectivo se aplica en el Security Filter del Backend RESTful API, según lo descrito en la sección 4.6.4.
+---
 
-| Rol | Apartados visibles |
-|:----|:-------------------|
-| `Driver` | My vehicle · My inspections |
-| `Fleet Supervisor` | Fleet · Inspections · Incidents · Documents |
-| `Administrator` | Fleet · Inspections · Incidents · Documents · Users · Inspection items · Evaluation rules |
+#### Estructura de navegación por producto
+
+| Producto | Tipo de navegación | Elementos | Niveles de profundidad |
+|:---------|:-------------------|:----------|:-----------------------|
+| **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | Encabezado fijo con menú de anclas y pie de página | 1 nivel |
+| **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | Barra lateral, migas de pan y barra superior | 3 niveles |
+
+---
+
+#### Navegación de la Landing Page
+
+La Landing Page es un sitio de una sola página con desplazamiento entre secciones, conforme a la estructura establecida en la sección 4.2.1. La navegación se resuelve mediante un encabezado fijo y anclas internas.
+
+**Encabezado fijo**
+
+| Elemento | Posición | Comportamiento |
+|:---------|:---------|:---------------|
+| Logotipo FleetSafe | Extremo izquierdo | Regresa al inicio de la página (`#inicio`) |
+| Menú de anclas | Centro | Desplaza la vista hacia la sección seleccionada |
+| Botón "Solicitar demostración" | Extremo derecho | Desplaza la vista hacia el formulario de contacto (`#contacto`) |
+
+**Menú de anclas**
+
+| Etiqueta | Anclaje | User Story |
+|:---------|:--------|:-----------|
+| Inicio | `#inicio` | US01 |
+| Funcionalidades | `#funcionalidades` | US02 |
+| Beneficios | `#beneficios` | US03 |
+| Contacto | `#contacto` | US04 |
+
+**Comportamiento del encabezado**
+
+- El encabezado permanece fijo en la parte superior durante el desplazamiento, conforme a la sección 4.1.2.
+- Al desplazarse hacia abajo, el encabezado reduce su altura para liberar espacio de contenido.
+- En resoluciones móviles, el menú de anclas se reemplaza por un menú colapsable, conforme a US05.
+
+**Pie de página**
+
+| Elemento | Contenido |
+|:---------|:----------|
+| Información de contacto | Correo electrónico, teléfono y dirección |
+| Redes sociales | Enlaces a los perfiles oficiales de FleetSafe |
+| Enlaces internos | Anclas a las secciones de la página |
+| Aviso legal | Derechos de autor y año |
+
+El pie de página se documenta conforme a US06.
+
+---
+
+#### Navegación de la Web Application
+
+La Web Application emplea una navegación jerárquica de tres niveles, en correspondencia con la estructura establecida en la sección 4.2.1.
+
+**Nivel 1 — Módulo**
+
+El primer nivel corresponde a los módulos funcionales de la aplicación. El usuario accede a ellos mediante la barra lateral de navegación, cuya visibilidad depende del rol autenticado.
+
+| Etiqueta | Ruta | Roles con acceso | User Stories relacionadas |
+|:---------|:-----|:-----------------|:--------------------------|
+| Panel | `/app/dashboard` | Administrador, Supervisor | — |
+| Usuarios | `/app/users` | Administrador | US07, US08, US11 |
+| Vehículos | `/app/vehicles` | Administrador, Supervisor | US12–US16 |
+| Inspecciones | `/app/inspections` | Supervisor, Conductor | US17–US22, US35 |
+| Habilitación | `/app/authorizations` | Supervisor | US25, US26, US37 |
+| Incidencias | `/app/incidents` | Supervisor, Conductor | US27–US31 |
+| Documentación | `/app/documents` | Supervisor | US32–US34 |
+| Reportes | `/app/reports` | Supervisor | US36 |
+
+**Nivel 2 — Listado**
+
+El segundo nivel corresponde a la vista consolidada de los objetos del módulo. Se accede desde la barra lateral y presenta los mecanismos de búsqueda y ordenamiento definidos en la sección 4.2.4.
+
+| Vista | Ruta | Filtros disponibles | User Story |
+|:------|:-----|:--------------------|:-----------|
+| Listado de usuarios | `/app/users` | Rol, estado de la cuenta | US11 |
+| Listado de vehículos | `/app/vehicles` | Estado, flota, marca, año, placa | US13 |
+| Listado de inspecciones | `/app/inspections` | Vehículo, conductor, estado, rango de fechas | US22, US35 |
+| Listado de incidencias | `/app/incidents` | Estado, vehículo, tipo, severidad, rango de fechas | US28 |
+| Listado de documentos | `/app/documents` | Tipo, estado de vigencia, rango de fechas | US33 |
+| Reporte de estado de flota | `/app/reports/fleet-status` | Rango de fechas, flota, estado | US36 |
+
+**Nivel 3 — Detalle**
+
+El tercer nivel corresponde a la vista específica de un objeto. Se accede desde el listado y permite consultar su información completa, su historial y las acciones disponibles.
+
+| Vista | Ruta | Contenido | User Story |
+|:------|:-----|:----------|:-----------|
+| Detalle de vehículo | `/app/vehicles/{id}` | Información, estado actual, historial de inspecciones, incidencias y documentos | US14 |
+| Detalle de inspección | `/app/inspections/{id}` | Resultados por elemento, observaciones y evidencias | US22 |
+| Detalle de incidencia | `/app/incidents/{id}` | Descripción, acciones correctivas, reparaciones y seguimiento | US29, US30, US31 |
+| Detalle de documento | `/app/documents/{id}` | Información del documento y estado de vigencia | US34 |
+| Historial de estados | `/app/vehicles/{id}/status-history` | Evolución del estado del vehículo | US37 |
+| Ejecución de inspección | `/app/inspections/{id}/execute` | Registro de resultados, observaciones y evidencias | US17–US21 |
+
+---
+
+#### Componentes de navegación
+
+**Barra lateral de navegación**
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| Ancho | 240 px en resoluciones de escritorio |
+| Visibilidad | Permanente en escritorio; colapsable en móvil, conforme a la sección 4.1.2 |
+| Contenido | Logotipo, módulos habilitados según el rol, datos del usuario autenticado |
+| Indicador de ubicación | El módulo activo se resalta con `color-primary-100` como fondo y `color-primary-700` como texto |
+| Acceso en móvil | Se abre mediante un botón de menú en la barra superior |
+
+**Barra superior**
+
+| Elemento | Posición | Comportamiento |
+|:---------|:---------|:---------------|
+| Botón de menú | Extremo izquierdo, solo en móvil | Abre la barra lateral |
+| Migas de pan | Centro-izquierda | Indica la ubicación actual dentro de la jerarquía |
+| Acciones rápidas | Extremo derecho | Notificaciones y menú del usuario |
+
+**Migas de pan**
+
+Las migas de pan reflejan la ruta de navegación en los tres niveles y permiten regresar a cualquier nivel anterior mediante un clic.
+
+Ejemplo para el detalle de una inspección:
+
+```
+Panel > Inspecciones > Inspección #INS-2026-0042
+```
+
+Ejemplo para el detalle de una incidencia:
+
+```
+Panel > Incidencias > Incidencia #INC-2026-0117
+```
+
+**Menú de usuario**
+
+| Opción | Comportamiento | User Story |
+|:-------|:---------------|:-----------|
+| Ver perfil | Muestra los datos del usuario autenticado | — |
+| Cerrar sesión | Finaliza la sesión y redirige a la pantalla de inicio de sesión | US10 |
+
+---
+
+#### Navegación dentro del flujo de inspección
+
+El flujo de inspección preoperacional se organiza de forma secuencial, conforme a la sección 4.2.1, y su navegación refleja esa secuencia. El conductor no navega libremente entre módulos durante la inspección; avanza paso a paso por el flujo y solo puede retroceder para corregir un elemento ya registrado.
+
+**Flujo de navegación del conductor**
+
+| Paso | Vista | Acciones disponibles | Restricción de avance |
+|:-----|:------|:---------------------|:-----------------------|
+| 1 | Selección de vehículo asignado | Iniciar inspección | Debe existir un vehículo asignado y no debe haber otra inspección en progreso |
+| 2 | Registro de elementos de inspección | Registrar resultado, agregar observación, adjuntar evidencia, retroceder | Ninguna, hasta completar el paso 5 |
+| 3 | Revisión previa | Revisar resultados registrados, corregir un elemento, cancelar | Ninguna |
+| 4 | Confirmación de finalización | Finalizar inspección, volver a la revisión | Todos los elementos deben estar completos |
+| 5 | Resultado de la evaluación | Consultar el estado determinado, regresar al panel | Ninguna |
+
+**Reglas de navegación en el flujo**
+
+- El conductor no puede acceder directamente a los módulos de supervisión durante la inspección.
+- El conductor puede abandonar la inspección en cualquier momento; en ese caso, la inspección permanece en estado *en progreso* y puede retomarse.
+- Al finalizar la inspección, el sistema determina el estado del vehículo y presenta el resultado al conductor antes de devolverlo al panel.
+
+---
+
+#### Navegación desde el panel
+
+El panel es la vista inicial de la Web Application tras la autenticación. Su función es orientar al usuario hacia la tarea que debe ejecutar, y no reemplazar la navegación principal.
+
+| Elemento del panel | Comportamiento | Rol |
+|:-------------------|:---------------|:----|
+| Indicadores de estado de flota | Enlaza al listado de vehículos filtrado por estado | Supervisor |
+| Inspecciones recientes | Enlaza al detalle de la inspección seleccionada | Supervisor |
+| Incidencias abiertas | Enlaza al listado de incidencias filtrado por estado | Supervisor |
+| Documentos próximos a vencer | Enlaza al listado de documentos filtrado por estado | Supervisor |
+| Vehículo asignado | Enlaza al inicio de la inspección | Conductor |
+
+---
+
+#### Estados de la navegación
+
+| Estado | Comportamiento |
+|:-------|:---------------|
+| Módulo activo | Se resalta en la barra lateral con `color-primary-100` como fondo y `color-primary-700` como texto |
+| Nivel actual | Se refleja en las migas de pan |
+| Ruta protegida | Si el usuario no está autenticado, el sistema redirige a la pantalla de inicio de sesión, conforme a US09 |
+| Ruta no autorizada | Si el usuario autenticado no tiene el rol requerido, el sistema redirige al panel y muestra un mensaje informativo |
+| Ruta no encontrada | El sistema muestra una vista de error con un enlace de regreso al panel |
+
+---
+
+#### Correspondencia con las User Stories
+
+| Elemento de navegación | User Stories relacionadas |
+|:-----------------------|:--------------------------|
+| Encabezado fijo de la Landing Page | US05 |
+| Menú de anclas | US05 |
+| Pie de página | US06 |
+| Barra lateral | US07–US37 |
+| Migas de pan | US14, US22, US29, US35, US37 |
+| Menú de usuario y cierre de sesión | US09, US10 |
+| Flujo de inspección | US17–US21 |
+| Redirección por falta de autenticación | US09 |
+| Redirección por falta de autorización | US07, US08 |
 
 ---
 
@@ -1613,56 +2502,93 @@ A partir del Ubiquitous Language y del proceso de Big Picture EventStorming, se 
 <a id="461-design-level-event-storming"></a>
 ### 4.6.1. Design-level Event Storming.
 
+Proceso del Design-Level event storming
+
+Paso 1: Partimos del Big Picture Event Storming como base.
+
+<br>**Unstructure Exploration**
+<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+
+Paso 2: Ordenamos los domain events
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming2.png" alt=" paso 2 del designlevelES" width="800">
+
+Paso 3: Se colocó dudas/posibles problemas a futuro sobre el dominio en algunas partes del flujo.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming3.png" alt=" paso 3 del designlevelES" width="800">
+
+Paso 4: Exploramos que "pivotal events" pueden identificarse.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming4.png" alt=" paso 4 del designlevelES" width="800">
+
+Paso 5: Se añadió comandos que desencadenen eventos y tambien agregamos sus actores
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming5.1.png" alt=" paso 5 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming5.2.png" alt=" paso 5 del designlevelES" width="800">
+
+Paso 6: Se equipo añadió 'policies' o reglas de negocio que hacen que se ejecuten eventos de dominio
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming6.1.png" alt=" paso 6 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming6.2.png" alt=" paso 6 del designlevelES" width="800">
+
+Paso 7: Se añadió read models, son la vista de datos o 'views' que ayudarán al usuario con la ejecución de comandos
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming7.1.png" alt=" paso 7 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming7.2.png" alt=" paso 7 del designlevelES" width="800">
+
+Paso 8: Se identifico sistemas externos, tales como el servicio de guardado de imagenes en la nube, por ahora va como "Cloud Storage"
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.0.png" alt=" paso 8 del designlevelES" width="800">
+
+Paso 9: Se agregan los aggregates
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.1.png" alt=" paso 9 del designlevelES" width="800">
+<img src="img/designLevelEventStorming/designlevel-eventstorming8.2.png" alt=" paso 9 del designlevelES" width="800">
+
+Paso 10: Separamos por BOUNDED CONTEXT en los cuales algunos tienen un cierto tipo de relación medianto comando y domain.
+
+<img src="img/designLevelEventStorming/designlevel-eventstorming10.png" alt=" paso 10 del designlevelES" width="800">
+
 <a id="462-software-architecture-context-diagram"></a>
 ### 4.6.2. Software Architecture Context Diagram.
 
 El Context Diagram es el primer nivel del modelo C4 y muestra el sistema como un recuadro central, rodeado por sus usuarios y otros sistemas con los que interactúa. Para FleetSafe, este diagrama permite visualizar los actores externos y las relaciones principales con la plataforma.
 
-El diagrama se ha elaborado con **Structurizr**, la herramienta indicada para el modelo C4. El modelo completo se mantiene como código en el archivo [`workspace.dsl`](workspace.dsl) de este repositorio, de modo que los tres niveles del modelo se generan a partir de una única fuente y no pueden quedar desincronizados entre sí. A continuación se presenta el diagrama de contexto de FleetSafe:
+A continuación se presenta el diagrama de contexto de FleetSafe utilizando PlantUML con la sintaxis de C4:
 
-<img src="img/c4/01-context.png" alt="Diagrama de contexto de FleetSafe" width="900">
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
-<details>
-<summary>Structurizr DSL — vista de contexto</summary>
+title Context Diagram - FleetSafe
 
+Person(admin, "Administrator", "User responsible for managing users and roles on the platform.")
+Person(supervisor, "Fleet Supervisor", "User responsible for supervising vehicle status, managing incidents and verifying operational authorization.")
+Person(driver, "Driver", "User who performs pre-operational inspections of assigned vehicles.")
+
+System(fleetsafe, "FleetSafe", "Web platform for vehicle safety and preventive control that allows digital pre-operational inspections, condition evaluation and determination of operational authorization for cargo transport vehicles.")
+
+System_Ext(emailSystem, "Email System", "External service used for sending notifications and communications.")
+System_Ext(storageSystem, "Storage Service", "External service used for storing photographic evidence.")
+
+Rel(admin, fleetsafe, "Manages users and roles", "HTTPS")
+Rel(supervisor, fleetsafe, "Supervises vehicles and manages incidents", "HTTPS")
+Rel(driver, fleetsafe, "Performs pre-operational inspections", "HTTPS")
+Rel(fleetsafe, emailSystem, "Sends notifications", "SMTP")
+Rel(fleetsafe, storageSystem, "Stores photographic evidence", "HTTPS")
+
+@enduml
 ```
-administrator = person "Administrator" "Manages users, roles, inspection item catalogs and evaluation rules for the company."
-supervisor = person "Fleet Supervisor" "Supervises vehicle condition, manages incidents and authorizes exceptions over blocked vehicles."
-driver = person "Driver" "Performs the pre-operational inspection of the assigned vehicle before starting an operation."
-visitor = person "Visitor" "Prospective customer who evaluates FleetSafe before creating an account."
-
-emailSystem = softwareSystem "Email System" "External service used to notify supervisors about blocked vehicles, open incidents and expiring documents." "External"
-storageService = softwareSystem "Storage Service" "External object storage service used to keep the photographic evidence attached to an observation." "External"
-
-fleetsafe = softwareSystem "FleetSafe" "Registers pre-operational inspections, evaluates their results against the rules defined by the company and determines whether a vehicle is authorized to operate."
-
-administrator -> fleetsafe "Manages users, catalogs and evaluation rules" "HTTPS"
-supervisor -> fleetsafe "Supervises vehicles, manages incidents and authorizes exceptions" "HTTPS"
-driver -> fleetsafe "Performs pre-operational inspections" "HTTPS"
-visitor -> fleetsafe "Evaluates the value proposition" "HTTPS"
-fleetsafe -> emailSystem "Sends notifications" "SMTP"
-fleetsafe -> storageService "Stores photographic evidence" "HTTPS"
-
-systemContext fleetsafe "Context" {
-    include *
-    autolayout lr
-}
-```
-
-</details>
 
 **Explicación del diagrama:**
 
-El diagrama de contexto de FleetSafe muestra los actores que interactúan con la plataforma:
+El diagrama de contexto de FleetSafe muestra los tres actores principales que interactúan con la plataforma:
 
-- **Administrator:** responsable de la gestión de usuarios y roles, del catálogo de elementos de inspección y de las reglas de evaluación de su empresa.
-- **Fleet Supervisor:** responsable de supervisar la condición de los vehículos, gestionar las incidencias y autorizar las excepciones sobre vehículos bloqueados.
-- **Driver:** responsable de realizar la inspección preoperacional del vehículo asignado antes de iniciar una operación.
-- **Visitor:** cliente potencial que evalúa la propuesta de valor de FleetSafe en el Landing Page antes de crear una cuenta. Se incorpora como actor porque es el rol base de las User Stories del Landing Page descritas en la sección 3.1.
+- **Administrator:** responsable de la gestión de usuarios y roles dentro de la plataforma.
+- **Fleet Supervisor:** responsable de supervisar el estado de los vehículos, gestionar incidencias y verificar la habilitación operativa de las unidades.
+- **Driver:** responsable de realizar las inspecciones preoperacionales de los vehículos asignados.
 
-El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento de objetos para las evidencias fotográficas registradas durante las inspecciones.
-
-> **Pendiente de decisión.** El servicio externo de terceros que consumirá la plataforma se encuentra en evaluación. Los dos sistemas externos representados corresponden a capacidades de infraestructura ya identificadas; una vez seleccionado el proveedor concreto, el diagrama se actualizará con su nombre y el protocolo de integración correspondiente.
+El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento para las evidencias fotográficas registradas durante las inspecciones.
 
 ---
 
@@ -1675,45 +2601,47 @@ Para FleetSafe se han identificado los siguientes containers:
 
 | Container | Tecnología | Responsabilidad |
 |:----------|:-----------|:----------------|
-| **Landing Page** | HTML5, CSS3, JavaScript | Sitio web estático que presenta la propuesta de valor y dirige a cada segmento objetivo a la vista correspondiente de la Web Application. |
-| **Web Application** | Angular, Angular Material, TypeScript | Aplicación web que permite a cada usuario operar la plataforma según el rol concedido a su cuenta. |
-| **Backend RESTful API** | Spring Boot, Spring Data JPA, Java | API RESTful que expone la lógica de negocio de FleetSafe, documentada con OpenAPI. |
+| **Landing Page** | HTML5, CSS3, JavaScript | Sitio web estático de presentación de FleetSafe. |
+| **Web Application** | Angular | Aplicación web que permite a los usuarios interactuar con las funcionalidades de la plataforma según su rol. |
+| **Backend RESTful API** | Spring Boot (Java) | API RESTful que expone la lógica de negocio de FleetSafe. |
 | **Database** | PostgreSQL | Base de datos relacional que almacena la información de la plataforma. |
+| **File Storage** | Servicio de almacenamiento de objetos | Almacenamiento de evidencias fotográficas. |
 
-**El Storage Service y el Email System no son containers**, sino sistemas externos. Un container es una unidad de despliegue que el equipo construye y despliega; ambos servicios son contratados a terceros y la plataforma únicamente los consume, por lo que se representan fuera de la frontera del sistema.
+A continuación se presenta el diagrama de contenedores de FleetSafe:
 
-A continuación se presenta el diagrama de contenedores de FleetSafe, generado a partir del mismo modelo de Structurizr:
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
-<img src="img/c4/02-containers.png" alt="Diagrama de contenedores de FleetSafe" width="1000">
+title Container Diagram - FleetSafe
 
-<details>
-<summary>Structurizr DSL — vista de contenedores</summary>
+Person(admin, "Administrator", "Manages users and roles.")
+Person(supervisor, "Fleet Supervisor", "Supervises vehicles and manages incidents.")
+Person(driver, "Driver", "Performs pre-operational inspections.")
 
-```
-fleetsafe = softwareSystem "FleetSafe" {
-    landing  = container "Landing Page" "Static site that presents the value proposition and directs each target segment to the corresponding view of the web application." "HTML5, CSS3, JavaScript"
-    webapp   = container "Web Application" "Allows each user to operate the platform according to the role granted to their account." "Angular, Angular Material, TypeScript"
-    api      = container "Backend RESTful API" "Exposes the business logic of FleetSafe, documented with OpenAPI." "Spring Boot, Spring Data JPA, Java"
-    database = container "Database" "Stores users, fleet assets, documents, inspections, evaluations, authorizations and incidents." "PostgreSQL" "Database"
+System_Boundary(fleetsafe, "FleetSafe") {
+    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static presentation website for FleetSafe.")
+    Container(webapp, "Web Application", "Angular", "Web application that allows users to interact with the platform features according to their role.")
+    Container(api, "Backend RESTful API", "Spring Boot (Java)", "RESTful API that exposes the business logic of FleetSafe.")
+    ContainerDb(db, "Database", "PostgreSQL", "Stores information about users, vehicles, inspections, evaluations, incidents and documents.")
 }
 
-visitor -> landing "Evaluates the value proposition" "HTTPS"
-landingSegmentCta -> webapp "Directs each segment to its corresponding view" "HTTPS"
-administrator -> webapp "Manages users, catalogs and evaluation rules" "HTTPS"
-supervisor -> webapp "Supervises vehicles, manages incidents and authorizes exceptions" "HTTPS"
-driver -> webapp "Performs pre-operational inspections" "HTTPS"
-webapp -> api "Consumes services" "JSON/HTTPS"
-api -> database "Reads and writes" "JDBC"
-api -> storageService "Stores and retrieves evidence" "HTTPS"
-api -> emailSystem "Sends notifications" "SMTP"
+System_Ext(storage, "Storage Service", "Stores photographic evidence.")
+System_Ext(email, "Email System", "Sends notifications.")
 
-container fleetsafe "Containers" {
-    include *
-    autolayout lr
-}
+Rel(admin, webapp, "Uses", "HTTPS")
+Rel(supervisor, webapp, "Uses", "HTTPS")
+Rel(driver, webapp, "Uses", "HTTPS")
+Rel(admin, landing, "Visits", "HTTPS")
+Rel(supervisor, landing, "Visits", "HTTPS")
+Rel(driver, landing, "Visits", "HTTPS")
+Rel(webapp, api, "Consumes services", "JSON/HTTPS")
+Rel(api, db, "Reads and writes", "JDBC")
+Rel(api, storage, "Stores and retrieves evidence", "HTTPS")
+Rel(api, email, "Sends notifications", "SMTP")
+
+@enduml
 ```
-
-</details>
 
 **Explicación del diagrama:**
 
@@ -1733,796 +2661,392 @@ Las relaciones entre los containers muestran que los usuarios acceden a la Landi
 <a id="464-software-architecture-components-diagrams"></a>
 ### 4.6.4. Software Architecture Components Diagrams.
 
-Los Component Diagrams son el tercer nivel del modelo C4 y descomponen cada container en los componentes que lo forman, indicando su responsabilidad, la tecnología con la que se implementa y las relaciones entre ellos. Se presenta **un diagrama por cada container de software**: Landing Page, Web Application y Backend RESTful API.
-
-El container **Database** no cuenta con un diagrama de componentes propio porque no es una unidad de software descomponible en componentes, sino un almacén de datos; su estructura interna se documenta en la sección [4.8. Database Design](#48-database-design).
-
-**Criterio de descomposición.** Los componentes del Backend RESTful API se agrupan **por bounded context y no por capa técnica**. Agruparlos por capa —todos los controllers juntos, todos los services juntos— produciría un diagrama que no refleja el diseño orientado al dominio descrito en la sección 4.6 y que contradiría la organización por contextos del modelo de datos de la sección 4.8. Cada grupo del diagrama corresponde a uno de los seis bounded contexts y se traduce directamente en un paquete del proyecto Spring Boot, con sus propias capas en el interior.
-
----
-
-#### Component Diagram: Landing Page
-
-<img src="img/c4/03-components-landing.png" alt="Diagrama de componentes del Landing Page" width="900">
-
-<details>
-<summary>Structurizr DSL — componentes del Landing Page</summary>
-
-```
-landing = container "Landing Page" "..." "HTML5, CSS3, JavaScript" {
-    landingNavigation = component "Navigation Bar" "Provides access to the content sections and to the sign-in and sign-up entry points." "HTML, CSS"
-    landingContent    = component "Content Sections" "Presents the problem, the platform, the process, the profiles and the frequently asked questions." "HTML, CSS"
-    landingSegmentCta = component "Segment Call to Action" "Directs each target segment to the view of the web application that corresponds to its role." "HTML, JavaScript"
-    landingLegal      = component "Legal Pages" "Presents the terms and conditions and the privacy policy, linked from the footer." "HTML, CSS"
-    landingI18n       = component "Language Switcher" "Switches the content between en_US and es_419 and sets the corresponding language attribute." "JavaScript"
-}
-
-visitor -> landing "Evaluates the value proposition" "HTTPS"
-landingSegmentCta -> webapp "Directs each segment to its corresponding view" "HTTPS"
-
-component landing "ComponentsLanding" {
-    include *
-    autolayout lr
-}
-```
-
-</details>
-
-| Componente | Tecnología | Responsabilidad |
-|:-----------|:-----------|:----------------|
-| **Navigation Bar** | HTML, CSS | Da acceso a las secciones de contenido y a los puntos de entrada de inicio de sesión y registro. |
-| **Content Sections** | HTML, CSS | Presenta la problemática, la plataforma, el proceso, los perfiles y las preguntas frecuentes. |
-| **Segment Call to Action** | HTML, JavaScript | Dirige a cada segmento objetivo a la vista de la Web Application que corresponde a su rol. |
-| **Legal Pages** | HTML, CSS | Presenta los términos y condiciones y la política de privacidad, enlazados desde el pie de página. |
-| **Language Switcher** | JavaScript | Alterna el contenido entre `en_US` y `es_419` y establece el atributo de idioma correspondiente. |
-
-**Explicación del diagrama.** El Landing Page es un sitio estático, por lo que sus componentes son secciones de contenido y no unidades de lógica de negocio. El componente con responsabilidad arquitectónica propia es **Segment Call to Action**: es el que materializa la relación entre el Landing Page y la Web Application, dirigiendo a cada segmento objetivo a la vista que le corresponde según su rol. **Language Switcher** y **Legal Pages** se representan de forma explícita porque implementan dos requisitos transversales del producto —la internacionalización en `en_US` y `es_419`, y el enlace a los documentos legales desde el pie de página— cuya ausencia afectaría al cumplimiento del producto con independencia del contenido presentado.
-
----
-
-#### Component Diagram: Web Application
-
-<img src="img/c4/04-components-webapp.png" alt="Diagrama de componentes de la Web Application" width="1000">
-
-<details>
-<summary>Structurizr DSL — componentes de la Web Application</summary>
-
-```
-webapp = container "Web Application" "..." "Angular, Angular Material, TypeScript" {
-    webAuth            = component "Authentication Feature" "Presents the sign-in view and keeps the session of the authenticated user." "Angular Feature Module"
-    webInspection      = component "Inspection Feature" "Presents the pre-operational inspection to the driver and registers the result of each inspection item, its observations and its evidence." "Angular Feature Module"
-    webFleet           = component "Fleet Feature" "Presents the fleet, the vehicles, the drivers and the assignments between them." "Angular Feature Module"
-    webDocumentation   = component "Documentation Feature" "Presents the documents of each vehicle and their expiration status." "Angular Feature Module"
-    webAuthorization   = component "Authorization Feature" "Presents the operational condition of each vehicle and allows the supervisor to register the lifting of a block." "Angular Feature Module"
-    webIncident        = component "Incident Feature" "Presents the incidents of the fleet, their corrective actions, their repairs and their follow-ups." "Angular Feature Module"
-    webApiClient       = component "API Client" "Centralizes the requests to the backend RESTful API." "Angular HttpClient"
-    webAuthInterceptor = component "Authentication Interceptor" "Attaches the authentication token to every outgoing request and handles expired sessions." "Angular HTTP Interceptor"
-    webRoleGuard       = component "Role Guard" "Restricts access to each route according to the role of the authenticated user." "Angular Route Guard"
-    webI18n            = component "Translation Service" "Resolves the interface texts for en_US and es_419." "ngx-translate"
-    webSharedUi        = component "Shared UI Components" "Provides the components of the design system, with the ARIA attributes required for accessibility." "Angular Material"
-}
-
-webAuthInterceptor -> api "Consumes services" "JSON/HTTPS"
-
-component webapp "ComponentsWebApp" {
-    include *
-    autolayout tb
-}
-```
-
-</details>
-
-| Componente | Tecnología | Responsabilidad | Bounded context |
-|:-----------|:-----------|:----------------|:----------------|
-| **Authentication Feature** | Angular Feature Module | Presenta la vista de inicio de sesión y mantiene la sesión del usuario autenticado. | Identity and Access |
-| **Inspection Feature** | Angular Feature Module | Presenta la inspección preoperacional al conductor y registra el resultado de cada elemento, sus observaciones y sus evidencias. | Pre-Operational Inspection |
-| **Fleet Feature** | Angular Feature Module | Presenta la flota, los vehículos, los conductores y las asignaciones entre ellos. | Fleet Management |
-| **Documentation Feature** | Angular Feature Module | Presenta los documentos de cada vehículo y su condición de vigencia. | Vehicle Documentation |
-| **Authorization Feature** | Angular Feature Module | Presenta la condición operativa de cada vehículo y permite al supervisor registrar el levantamiento de un bloqueo. | Evaluation and Authorization |
-| **Incident Feature** | Angular Feature Module | Presenta las incidencias de la flota, sus acciones correctivas, sus reparaciones y sus seguimientos. | Incident Management |
-| **API Client** | Angular HttpClient | Centraliza las peticiones al Backend RESTful API. | transversal |
-| **Authentication Interceptor** | Angular HTTP Interceptor | Adjunta el token de autenticación a cada petición saliente y gestiona las sesiones vencidas. | transversal |
-| **Role Guard** | Angular Route Guard | Restringe el acceso a cada ruta según el rol del usuario autenticado. | transversal |
-| **Translation Service** | ngx-translate | Resuelve los textos de la interfaz para `en_US` y `es_419`. | transversal |
-| **Shared UI Components** | Angular Material | Provee los componentes del design system, con los atributos ARIA necesarios para la accesibilidad. | transversal |
-
-**Explicación del diagrama.** La Web Application se descompone en seis módulos de funcionalidad, uno por cada bounded context, de forma que la estructura del frontend refleja la misma división del dominio que el backend y el modelo de datos. Cada módulo presenta sus vistas y delega toda comunicación en **API Client**, que concentra las peticiones al Backend RESTful API en un único punto.
-
-Los cinco componentes transversales resuelven preocupaciones que no pertenecen a ningún contexto concreto. **Authentication Interceptor** y **Role Guard** implementan el control de acceso en el lado del cliente: el primero adjunta el token a cada petición, y el segundo impide que un usuario alcance una ruta que su rol no admite. Conviene señalar que **esta restricción es de experiencia de usuario, no de seguridad**: la autorización efectiva se resuelve en el Security Filter del Backend RESTful API, porque un control implementado únicamente en el navegador puede ser eludido. **Translation Service** y **Shared UI Components** concentran respectivamente la internacionalización y los componentes del design system con sus atributos ARIA, de modo que ambos requisitos se cumplen de forma homogénea en todas las vistas en lugar de resolverse módulo a módulo.
-
----
+Los Component Diagrams son el tercer nivel del modelo C4 y muestran la descomposición de cada container en componentes, sus responsabilidades e interacciones. A continuación se presenta el diagrama de componentes para el container Backend RESTful API de FleetSafe.
 
 #### Component Diagram: Backend RESTful API
 
-<img src="img/c4/05-components-api.png" alt="Diagrama de componentes del Backend RESTful API" width="1000">
+```plantuml
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
-<details>
-<summary>Structurizr DSL — componentes del Backend RESTful API</summary>
+title Component Diagram - Backend RESTful API
 
-```
-api = container "Backend RESTful API" "..." "Spring Boot, Spring Data JPA, Java" {
+Container_Boundary(api, "Backend RESTful API") {
+    Component(authController, "Auth Controller", "Spring REST Controller", "Handles authentication and token issuance requests.")
+    Component(userController, "User Controller", "Spring REST Controller", "Handles requests related to users and roles.")
+    Component(vehicleController, "Vehicle Controller", "Spring REST Controller", "Handles requests related to vehicles.")
+    Component(inspectionController, "Inspection Controller", "Spring REST Controller", "Handles requests related to pre-operational inspections.")
+    Component(evaluationController, "Evaluation Controller", "Spring REST Controller", "Handles requests related to vehicle evaluation and authorization.")
+    Component(incidentController, "Incident Controller", "Spring REST Controller", "Handles requests related to incidents.")
+    Component(documentController, "Document Controller", "Spring REST Controller", "Handles requests related to vehicle documentation.")
+    Component(reportController, "Report Controller", "Spring REST Controller", "Handles requests related to history and reports.")
 
-    group "Identity and Access" {
-        identityController    = component "Identity Controller" "Exposes the sign-in, sign-up and user administration endpoints." "Spring REST Controller"
-        authenticationService = component "Authentication Service" "Validates credentials, issues and verifies the authentication token and resolves the role of the user." "Spring Service"
-        userRepository        = component "User Repository" "Persists and retrieves the users of the platform." "Spring Data JPA"
-    }
+    Component(authService, "Auth Service", "Spring Service", "Implements authentication and authorization logic.")
+    Component(userService, "User Service", "Spring Service", "Implements user and role management logic.")
+    Component(vehicleService, "Vehicle Service", "Spring Service", "Implements vehicle management logic.")
+    Component(inspectionService, "Inspection Service", "Spring Service", "Implements pre-operational inspection logic.")
+    Component(evaluationService, "Evaluation Service", "Spring Service", "Implements evaluation and vehicle status determination logic.")
+    Component(incidentService, "Incident Service", "Spring Service", "Implements incident management logic.")
+    Component(documentService, "Document Service", "Spring Service", "Implements vehicle documentation logic.")
+    Component(reportService, "Report Service", "Spring Service", "Implements report generation and history logic.")
 
-    group "Fleet Management" {
-        fleetController = component "Fleet Controller" "Exposes the endpoints for companies, fleets, vehicles, drivers and vehicle assignments." "Spring REST Controller"
-        fleetService    = component "Fleet Service" "Manages the assets of the fleet and keeps the current status of each vehicle synchronized with its latest operational authorization." "Spring Service"
-        fleetRepository = component "Fleet Repository" "Persists and retrieves companies, fleets, vehicles, drivers and assignments." "Spring Data JPA"
-    }
+    Component(authRepository, "Auth Repository", "Spring Data JPA", "Data access for authentication.")
+    Component(userRepository, "User Repository", "Spring Data JPA", "Data access for users.")
+    Component(vehicleRepository, "Vehicle Repository", "Spring Data JPA", "Data access for vehicles.")
+    Component(inspectionRepository, "Inspection Repository", "Spring Data JPA", "Data access for inspections.")
+    Component(evaluationRepository, "Evaluation Repository", "Spring Data JPA", "Data access for evaluations.")
+    Component(incidentRepository, "Incident Repository", "Spring Data JPA", "Data access for incidents.")
+    Component(documentRepository, "Document Repository", "Spring Data JPA", "Data access for documents.")
 
-    group "Vehicle Documentation" {
-        documentController = component "Document Controller" "Exposes the endpoints for the document types and the documents of each vehicle." "Spring REST Controller"
-        documentService    = component "Document Service" "Manages the documents of each vehicle and derives their status from the expiration date." "Spring Service"
-        documentScheduler  = component "Document Expiration Scheduler" "Recalculates the status of the documents on a scheduled basis and requests the notification of the ones about to expire." "Spring Scheduled Task"
-        documentRepository = component "Document Repository" "Persists and retrieves document types and vehicle documents." "Spring Data JPA"
-    }
-
-    group "Pre-Operational Inspection" {
-        inspectionController = component "Inspection Controller" "Exposes the endpoints for the inspection item catalog and for the inspections performed." "Spring REST Controller"
-        inspectionService    = component "Inspection Service" "Registers the inspection, the result of each item, its observations and the evidence that supports them, and copies the name and category of the item at the moment of the inspection." "Spring Service"
-        evidenceService      = component "Evidence Service" "Uploads the evidence files and resolves the reference stored with the observation." "Spring Service"
-        inspectionRepository = component "Inspection Repository" "Persists and retrieves inspection items, inspections, results, observations and evidence." "Spring Data JPA"
-    }
-
-    group "Evaluation and Authorization" {
-        evaluationController = component "Evaluation Controller" "Exposes the endpoints for the evaluation rules, the evaluations performed and the operational authorizations." "Spring REST Controller"
-        evaluationEngine     = component "Evaluation Engine" "Applies the active rules to the results of a completed inspection and determines the resulting condition from the most restrictive impact obtained." "Spring Service"
-        authorizationService = component "Authorization Service" "Registers the operational authorization produced by an evaluation and the lifting of a block, requiring its reason and the user responsible for it." "Spring Service"
-        evaluationRepository = component "Evaluation Repository" "Persists and retrieves rules, evaluations, evaluation details and operational authorizations." "Spring Data JPA"
-    }
-
-    group "Incident Management" {
-        incidentController = component "Incident Controller" "Exposes the endpoints for the incidents, their corrective actions, their repairs and their follow-ups." "Spring REST Controller"
-        incidentService    = component "Incident Service" "Registers and tracks the incidents detected during an inspection or during the operation of the vehicle." "Spring Service"
-        incidentRepository = component "Incident Repository" "Persists and retrieves incident types, incidents, corrective actions, repairs and follow-ups." "Spring Data JPA"
-    }
-
-    group "Shared" {
-        securityFilter      = component "Security Filter" "Verifies the authentication token of every request and resolves the permissions of the role." "Spring Security Filter"
-        localizationService = component "Localization Service" "Resolves the messages returned by the API for en_US and es_419." "Spring MessageSource"
-        storageClient       = component "Storage Client" "Communicates with the external object storage service." "HTTP Client"
-        emailClient         = component "Email Client" "Communicates with the external email service." "SMTP Client"
-    }
+    Component(storageClient, "Storage Client", "HTTP Client", "Client for the evidence storage service.")
+    Component(emailClient, "Email Client", "SMTP Client", "Client for sending email notifications.")
 }
 
-component api "ComponentsApi" {
-    include *
-    autolayout tb
-}
+ContainerDb(db, "Database", "PostgreSQL", "Stores platform information.")
+System_Ext(storage, "Storage Service", "Stores evidence.")
+System_Ext(email, "Email System", "Sends notifications.")
+
+Rel(authController, authService, "Uses")
+Rel(userController, userService, "Uses")
+Rel(vehicleController, vehicleService, "Uses")
+Rel(inspectionController, inspectionService, "Uses")
+Rel(evaluationController, evaluationService, "Uses")
+Rel(incidentController, incidentService, "Uses")
+Rel(documentController, documentService, "Uses")
+Rel(reportController, reportService, "Uses")
+
+Rel(authService, authRepository, "Uses")
+Rel(userService, userRepository, "Uses")
+Rel(vehicleService, vehicleRepository, "Uses")
+Rel(inspectionService, inspectionRepository, "Uses")
+Rel(evaluationService, evaluationRepository, "Uses")
+Rel(incidentService, incidentRepository, "Uses")
+Rel(documentService, documentRepository, "Uses")
+
+Rel(authRepository, db, "Reads and writes", "JDBC")
+Rel(userRepository, db, "Reads and writes", "JDBC")
+Rel(vehicleRepository, db, "Reads and writes", "JDBC")
+Rel(inspectionRepository, db, "Reads and writes", "JDBC")
+Rel(evaluationRepository, db, "Reads and writes", "JDBC")
+Rel(incidentRepository, db, "Reads and writes", "JDBC")
+Rel(documentRepository, db, "Reads and writes", "JDBC")
+
+Rel(inspectionService, storageClient, "Uses")
+Rel(storageClient, storage, "Stores evidence", "HTTPS")
+Rel(incidentService, emailClient, "Uses")
+Rel(emailClient, email, "Sends notifications", "SMTP")
+
+@enduml
 ```
 
-</details>
+**Explicación del diagrama:**
 
-| Bounded context | Componente | Tecnología | Responsabilidad |
-|:----------------|:-----------|:-----------|:----------------|
-| **Identity and Access** | Identity Controller | Spring REST Controller | Expone los endpoints de inicio de sesión, registro y administración de usuarios. |
-| | Authentication Service | Spring Service | Valida las credenciales, emite y verifica el token de autenticación y resuelve el rol del usuario. |
-| | User Repository | Spring Data JPA | Persiste y recupera los usuarios de la plataforma. |
-| **Fleet Management** | Fleet Controller | Spring REST Controller | Expone los endpoints de empresas, flotas, vehículos, conductores y asignaciones. |
-| | Fleet Service | Spring Service | Gestiona los activos de la flota y mantiene la condición actual de cada vehículo sincronizada con su última habilitación operativa. |
-| | Fleet Repository | Spring Data JPA | Persiste y recupera empresas, flotas, vehículos, conductores y asignaciones. |
-| **Vehicle Documentation** | Document Controller | Spring REST Controller | Expone los endpoints de tipos de documento y de documentos de cada vehículo. |
-| | Document Service | Spring Service | Gestiona los documentos de cada vehículo y deriva su condición a partir de la fecha de vencimiento. |
-| | Document Expiration Scheduler | Spring Scheduled Task | Recalcula de forma programada la condición de los documentos y solicita la notificación de los próximos a vencer. |
-| | Document Repository | Spring Data JPA | Persiste y recupera tipos de documento y documentos vehiculares. |
-| **Pre-Operational Inspection** | Inspection Controller | Spring REST Controller | Expone los endpoints del catálogo de elementos de inspección y de las inspecciones realizadas. |
-| | Inspection Service | Spring Service | Registra la inspección, el resultado de cada elemento, sus observaciones y las evidencias que las respaldan, y copia el nombre y la categoría del elemento en el momento de la inspección. |
-| | Evidence Service | Spring Service | Carga los archivos de evidencia y resuelve la referencia que se almacena junto a la observación. |
-| | Inspection Repository | Spring Data JPA | Persiste y recupera elementos de inspección, inspecciones, resultados, observaciones y evidencias. |
-| **Evaluation and Authorization** | Evaluation Controller | Spring REST Controller | Expone los endpoints de reglas de evaluación, evaluaciones realizadas y habilitaciones operativas. |
-| | Evaluation Engine | Spring Service | Aplica las reglas activas a los resultados de una inspección completada y determina la condición resultante a partir del impacto más restrictivo obtenido. |
-| | Authorization Service | Spring Service | Registra la habilitación operativa producida por una evaluación y el levantamiento de un bloqueo, exigiendo su justificación y el usuario responsable. |
-| | Evaluation Repository | Spring Data JPA | Persiste y recupera reglas, evaluaciones, detalles de evaluación y habilitaciones operativas. |
-| **Incident Management** | Incident Controller | Spring REST Controller | Expone los endpoints de incidencias, acciones correctivas, reparaciones y seguimientos. |
-| | Incident Service | Spring Service | Registra y da seguimiento a las incidencias detectadas durante una inspección o durante la operación del vehículo. |
-| | Incident Repository | Spring Data JPA | Persiste y recupera tipos de incidencia, incidencias, acciones correctivas, reparaciones y seguimientos. |
-| **Shared** | Security Filter | Spring Security Filter | Verifica el token de autenticación de cada petición y resuelve los permisos del rol. |
-| | Localization Service | Spring MessageSource | Resuelve los mensajes que devuelve la API para `en_US` y `es_419`. |
-| | Storage Client | HTTP Client | Se comunica con el servicio externo de almacenamiento de objetos. |
-| | Email Client | SMTP Client | Se comunica con el servicio externo de correo electrónico. |
+El diagrama de componentes del Backend RESTful API muestra la descomposición del container en los siguientes grupos de componentes:
 
-**Explicación del diagrama.** Toda petición entra por **Security Filter**, que verifica el token y resuelve los permisos del rol antes de que la petición alcance cualquier controller. A partir de ahí, cada bounded context expone su propio controller, que delega en los servicios de aplicación de su contexto y estos en sus repositorios.
+- **Controllers:** componentes que exponen los endpoints RESTful y gestionan las solicitudes HTTP. Se han identificado controllers para autenticación, usuarios, vehículos, inspecciones, evaluaciones, incidencias, documentación y reportes.
+- **Services:** componentes que implementan la lógica de negocio de cada área funcional.
+- **Repositories:** componentes que gestionan el acceso a datos mediante Spring Data JPA.
+- **Clients:** componentes que gestionan la comunicación con servicios externos, como el almacenamiento de evidencias y el envío de notificaciones por correo.
 
-El recorrido que sostiene el núcleo del producto atraviesa dos contextos. **Inspection Service** registra la inspección y, al completarse, solicita su evaluación a **Evaluation Engine**. Este lee los resultados, aplica las reglas activas y determina la condición resultante a partir del impacto más restrictivo obtenido; después solicita a **Authorization Service** el registro de la habilitación operativa. **Authorization Service** es además el único componente autorizado a pedir a **Fleet Service** la actualización de la condición actual del vehículo, de forma coherente con la decisión de diseño de la sección 4.8 según la cual `vehicles.current_status` es un valor derivado y no la fuente de verdad.
+Las relaciones muestran el flujo de dependencias desde los controllers hacia los services, y desde estos hacia los repositories y clients.
 
-Las referencias entre contextos siguen la misma regla que el modelo de datos: **dentro de un contexto se accede al repositorio propio; cruzando la frontera, se consulta al servicio o al repositorio del otro contexto únicamente para verificar la existencia del elemento referenciado**. Así, `Inspection Service` consulta a `Fleet Repository` para resolver el vehículo asignado al conductor, pero no gestiona vehículos.
-
-Los cuatro componentes de **Shared** concentran las preocupaciones transversales. **Localization Service** es el que permite que los mensajes devueltos por los Web Services cumplan el requisito de internacionalización en `en_US` y `es_419`, exigido no solo en el Landing Page y la Web Application sino también en la API. **Storage Client** y **Email Client** aíslan la comunicación con los dos sistemas externos, de modo que la elección definitiva del proveedor no afecte a los servicios de cada contexto.
 
 <a id="47-software-object-oriented-design"></a>
 ## 4.7. Software Object-Oriented Design.
 
-En esta sección se presenta el diseño orientado a objetos de FleetSafe, que detalla cómo se implementan los componentes identificados en la sección 4.6.4. Si el diagrama de componentes responde a *qué bloques forman cada container*, el diseño orientado a objetos responde a *qué clases forman cada bloque y cómo se relacionan entre sí*.
-
-Las características principales que se consideran en los diagramas son cuatro:
-
-- **La organización es por bounded context**, la misma de las secciones 4.6 y 4.8, de modo que los tres niveles del diseño —componentes, clases y tablas— describen la misma división del dominio.
-- **La nomenclatura procede del Ubiquitous Language** de la sección 2.5. Ninguna clase introduce un sinónimo de un término ya definido allí.
-- **Las fronteras entre contextos se representan de forma explícita**: una referencia que cruza un bounded context se modela como un atributo identificador y nunca como una asociación entre clases.
-- **El nivel de detalle incluye el scope de cada miembro** —`private` y `public`— y la multiplicidad y el nombre de cada relación, conforme a UML.
-
 <a id="471-class-diagrams"></a>
 ### 4.7.1. Class Diagrams.
 
-El Class Diagram representa la estructura estática del software: las clases que lo componen, sus atributos y métodos con el scope correspondiente, las interfaces y enumeraciones que utilizan, y las relaciones entre ellas con su nombre y multiplicidad.
+El Class Diagram es una representación de la estructura estática del sistema, mostrando las clases, interfaces, enumeraciones, sus atributos, métodos y las relaciones entre ellos. A continuación se presenta el diagrama de clases consolidado de FleetSafe, que integra las entidades de todos los bounded contexts identificados.
 
-Siguiendo el mismo criterio aplicado en las secciones 4.6.4 y 4.8, se presenta **un diagrama por cada bounded context** en lugar de un único diagrama consolidado. Un diagrama consolidado de las veintidós clases del dominio resultaría ilegible y, sobre todo, ocultaría precisamente lo que el diseño orientado al dominio busca hacer explícito: dónde está la frontera de cada contexto y qué lo comunica con los demás.
+```plantuml
+@startuml
+title Class Diagram - FleetSafe
 
-Los diagramas corresponden al **Backend RESTful API**, que es el producto de software donde reside el modelo de dominio de FleetSafe. El Landing Page no posee modelo de dominio por tratarse de un sitio estático, y la Web Application consume el modelo a través de la API sin reimplementarlo, por lo que su estructura se documenta en el diagrama de componentes de la sección 4.6.4.
+class Company {
+    - id: UUID
+    - name: String
+    - ruc: String
+    - address: String
+    - phone: String
+    - email: String
+    - createdAt: DateTime
+    + addUser(user: User): void
+    + removeUser(userId: UUID): void
+    + getUsers(): List<User>
+}
 
-**Convenciones aplicadas en los seis diagramas.** Los atributos y métodos indican su scope mediante los símbolos `-` para `private` y `+` para `public`. Las relaciones internas de cada contexto se representan como asociaciones o composiciones con su multiplicidad. Las referencias que **cruzan la frontera de un bounded context** no se representan como asociación entre clases, sino como un atributo de tipo `UUID` con el sufijo `Id`, en coherencia con la regla establecida en la sección 4.8: dentro de un contexto se utiliza clave foránea, y cruzando la frontera únicamente el identificador, siendo la capa de aplicación la responsable de validar su existencia.
+class User {
+    - id: UUID
+    - companyId: UUID
+    - email: String
+    - password: String
+    - firstName: String
+    - lastName: String
+    - role: UserRole
+    - isActive: boolean
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + authenticate(password: String): boolean
+    + changeRole(role: UserRole): void
+    + activate(): void
+    + deactivate(): void
+    + getFullName(): String
+}
 
----
+class Fleet {
+    - id: UUID
+    - name: String
+    - companyId: UUID
+    - createdAt: DateTime
+    + addVehicle(vehicle: Vehicle): void
+    + removeVehicle(vehicleId: UUID): void
+    + getVehicles(): List<Vehicle>
+}
 
-#### Class Diagram: Identity and Access
+class Vehicle {
+    - id: UUID
+    - plate: String
+    - brand: String
+    - model: String
+    - year: Integer
+    - type: String
+    - capacity: Double
+    - status: VehicleStatus
+    - fleetId: UUID
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + updateInfo(info: VehicleInfo): void
+    + changeStatus(status: VehicleStatus): void
+    + assignToDriver(driverId: UUID): void
+    + unassignDriver(): void
+}
 
-```mermaid
-classDiagram
-    class User {
-        -UUID id
-        -UUID companyId
-        -String email
-        -String passwordHash
-        -String firstName
-        -String lastName
-        -UserRole role
-        -boolean isActive
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +getFullName() String
-        +hasRole(role UserRole) boolean
-        +changePassword(newHash String) void
-        +activate() void
-        +deactivate() void
-    }
+class Inspection {
+    - id: UUID
+    - vehicleId: UUID
+    - driverId: UUID
+    - status: InspectionStatus
+    - startedAt: DateTime
+    - completedAt: DateTime
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + start(): void
+    + complete(): void
+    + addItem(item: InspectionItem): void
+    + removeItem(itemId: UUID): void
+    + getItems(): List<InspectionItem>
+    + isCompleted(): boolean
+}
 
-    class UserRole {
-        <<enumeration>>
-        ADMINISTRATOR
-        FLEET_SUPERVISOR
-        DRIVER
-    }
+class InspectionItem {
+    - id: UUID
+    - inspectionId: UUID
+    - itemId: UUID
+    - result: InspectionResult
+    - observation: String
+    - evidenceUrl: String
+    - createdAt: DateTime
+    + registerResult(result: InspectionResult): void
+    + addObservation(observation: String): void
+    + attachEvidence(url: String): void
+}
 
-    class UserRepository {
-        <<interface>>
-        +findById(id UUID) Optional~User~
-        +findByEmail(email String) Optional~User~
-        +findAllByCompanyId(companyId UUID) List~User~
-        +save(user User) User
-    }
+class InspectionItemCatalog {
+    - id: UUID
+    - name: String
+    - description: String
+    - category: String
+    - isSafetyComponent: boolean
+    - isActive: boolean
+    + activate(): void
+    + deactivate(): void
+}
 
-    class AuthenticationService {
-        -UserRepository userRepository
-        -PasswordEncoder passwordEncoder
-        +signIn(email String, password String) AuthenticatedUser
-        +issueToken(user User) String
-        +verifyToken(token String) AuthenticatedUser
-    }
+class Evaluation {
+    - id: UUID
+    - inspectionId: UUID
+    - vehicleId: UUID
+    - status: VehicleStatus
+    - evaluatedAt: DateTime
+    - evaluatedBy: UUID
+    - createdAt: DateTime
+    + evaluate(): VehicleStatus
+    + reevaluate(): VehicleStatus
+    + getDetails(): List<EvaluationDetail>
+}
 
-    User "1" --> "1" UserRole : tiene asignado
-    UserRepository ..> User : gestiona
-    AuthenticationService --> "1" UserRepository : consulta
+class EvaluationDetail {
+    - id: UUID
+    - evaluationId: UUID
+    - inspectionItemId: UUID
+    - ruleId: UUID
+    - result: String
+    - impact: String
+}
+
+class EvaluationRule {
+    - id: UUID
+    - name: String
+    - description: String
+    - condition: String
+    - impact: RuleImpact
+    - isActive: boolean
+    + activate(): void
+    + deactivate(): void
+    + evaluate(itemResult: InspectionResult): RuleImpact
+}
+
+class Incident {
+    - id: UUID
+    - vehicleId: UUID
+    - inspectionId: UUID
+    - reportedBy: UUID
+    - type: IncidentType
+    - description: String
+    - status: IncidentStatus
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + updateStatus(status: IncidentStatus): void
+    + addCorrectiveAction(action: CorrectiveAction): void
+    + resolve(): void
+    + isResolved(): boolean
+}
+
+class CorrectiveAction {
+    - id: UUID
+    - incidentId: UUID
+    - description: String
+    - performedBy: UUID
+    - performedAt: DateTime
+    - evidenceUrl: String
+}
+
+class VehicleDocument {
+    - id: UUID
+    - vehicleId: UUID
+    - type: DocumentType
+    - number: String
+    - issueDate: Date
+    - expirationDate: Date
+    - status: DocumentStatus
+    - fileUrl: String
+    - createdAt: DateTime
+    - updatedAt: DateTime
+    + updateExpiration(date: Date): void
+    + isExpired(): boolean
+    + isExpiringSoon(days: Integer): boolean
+}
+
+enum UserRole {
+    ADMIN
+    FLEET_SUPERVISOR
+    DRIVER
+}
+
+enum VehicleStatus {
+    ENABLED
+    OBSERVED
+    NOT_ENABLED
+    MAINTENANCE
+}
+
+enum InspectionStatus {
+    IN_PROGRESS
+    COMPLETED
+    CANCELLED
+}
+
+enum InspectionResult {
+    CONFORMING
+    NON_CONFORMING
+    NOT_APPLICABLE
+}
+
+enum RuleImpact {
+    ENABLES
+    OBSERVES
+    DISABLES
+}
+
+enum IncidentType {
+    MECHANICAL
+    ELECTRICAL
+    DOCUMENTATION
+    SAFETY_EQUIPMENT
+    OTHER
+}
+
+enum IncidentStatus {
+    REGISTERED
+    IN_REVIEW
+    RESOLVED
+    CLOSED
+}
+
+enum DocumentType {
+    SOAT
+    TECHNICAL_REVIEW
+    CIRCULATION_PERMIT
+    INSURANCE
+    OTHER
+}
+
+enum DocumentStatus {
+    VALID
+    EXPIRING_SOON
+    EXPIRED
+}
+
+Company *-- User
+Company *-- Fleet
+Fleet *-- Vehicle
+Vehicle *-- Inspection
+Vehicle *-- Incident
+Vehicle *-- VehicleDocument
+User *-- Inspection
+Inspection *-- InspectionItem
+InspectionItem --> InspectionItemCatalog
+Inspection --> Evaluation
+Evaluation *-- EvaluationDetail
+EvaluationDetail --> EvaluationRule
+Incident *-- CorrectiveAction
+
+User --> UserRole
+Vehicle --> VehicleStatus
+Inspection --> InspectionStatus
+InspectionItem --> InspectionResult
+EvaluationRule --> RuleImpact
+Incident --> IncidentType
+Incident --> IncidentStatus
+VehicleDocument --> DocumentType
+VehicleDocument --> DocumentStatus
+
+@enduml
 ```
 
-**Explicación del diagrama.** Este contexto contiene una única entidad de dominio, `User`, junto con la enumeración `UserRole` que define los tres roles del producto descritos en la sección 1.1.1. El atributo `companyId` es de tipo `UUID` y no una asociación a la clase `Company`, porque `Company` pertenece al contexto **Fleet Management**; es la aplicación de la regla de referencias entre contextos.
+**Explicación del diagrama:**
 
-`AuthenticationService` es el servicio de aplicación que valida las credenciales y emite el token, y `UserRepository` la interfaz de persistencia. La contraseña nunca se almacena ni se expone en claro: la clase conserva únicamente `passwordHash` y el método `changePassword` recibe ya el valor cifrado.
+El diagrama de clases consolidado de FleetSafe integra las entidades de todos los bounded contexts identificados:
 
----
+- **Company:** representa la empresa de transporte de carga. Contiene usuarios y flotas.
+- **User:** representa a los usuarios de la plataforma (administrador, supervisor de flota y conductor). El enum `UserRole` define los roles posibles.
+- **Fleet:** representa la flota de vehículos de una empresa.
+- **Vehicle:** representa un vehículo de transporte de carga. El enum `VehicleStatus` define sus estados posibles.
+- **Inspection:** representa una inspección preoperacional. Contiene una colección de `InspectionItem`.
+- **InspectionItem:** representa el resultado de un elemento inspeccionado. El enum `InspectionResult` define los resultados posibles.
+- **InspectionItemCatalog:** representa el catálogo de elementos que pueden ser inspeccionados.
+- **Evaluation:** representa la evaluación de una inspección que determina el estado del vehículo.
+- **EvaluationDetail:** representa el detalle de la evaluación por cada elemento de inspección.
+- **EvaluationRule:** representa las reglas de evaluación. El enum `RuleImpact` define el impacto de cada regla.
+- **Incident:** representa una incidencia detectada en un vehículo. Los enums `IncidentType` e `IncidentStatus` definen sus tipos y estados.
+- **CorrectiveAction:** representa las acciones correctivas aplicadas a una incidencia.
+- **VehicleDocument:** representa los documentos asociados a un vehículo. Los enums `DocumentType` y `DocumentStatus` definen sus tipos y estados.
 
-#### Class Diagram: Fleet Management
-
-```mermaid
-classDiagram
-    class Company {
-        -UUID id
-        -String name
-        -String taxId
-        -String address
-        -String phone
-        -String email
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +addFleet(fleet Fleet) void
-        +getFleets() List~Fleet~
-    }
-
-    class Fleet {
-        -UUID id
-        -UUID companyId
-        -String name
-        -String description
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +addVehicle(vehicle Vehicle) void
-        +getVehicles() List~Vehicle~
-        +countByStatus(status VehicleStatus) int
-    }
-
-    class Vehicle {
-        -UUID id
-        -UUID fleetId
-        -String plate
-        -String brand
-        -String model
-        -int year
-        -String type
-        -BigDecimal capacity
-        -VehicleStatus currentStatus
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +applyAuthorizationResult(status VehicleStatus) void
-        +isOperational() boolean
-        +getActiveAssignment() Optional~VehicleAssignment~
-    }
-
-    class Driver {
-        -UUID id
-        -UUID userId
-        -String licenseNumber
-        -LocalDate licenseExpirationDate
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +hasValidLicense(onDate LocalDate) boolean
-        +getActiveAssignment() Optional~VehicleAssignment~
-    }
-
-    class VehicleAssignment {
-        -UUID id
-        -UUID vehicleId
-        -UUID driverId
-        -LocalDate assignedFrom
-        -LocalDate assignedTo
-        -boolean isActive
-        -LocalDateTime createdAt
-        +isActiveOn(date LocalDate) boolean
-        +close(endDate LocalDate) void
-    }
-
-    class VehicleStatus {
-        <<enumeration>>
-        ENABLED
-        OBSERVED
-        NOT_ENABLED
-    }
-
-    class FleetService {
-        -FleetRepository fleetRepository
-        +registerVehicle(fleetId UUID, vehicle Vehicle) Vehicle
-        +assignDriver(vehicleId UUID, driverId UUID, from LocalDate) VehicleAssignment
-        +updateCurrentStatus(vehicleId UUID, status VehicleStatus) void
-        +findVehicleAssignedTo(driverId UUID) Optional~Vehicle~
-    }
-
-    Company "1" *-- "0..*" Fleet : organiza
-    Fleet "1" *-- "0..*" Vehicle : agrupa
-    Vehicle "1" --> "0..*" VehicleAssignment : es asignado en
-    Driver "1" --> "0..*" VehicleAssignment : recibe
-    Vehicle "1" --> "1" VehicleStatus : presenta
-    FleetService ..> Vehicle : gestiona
-    FleetService ..> VehicleAssignment : gestiona
-```
-
-**Explicación del diagrama.** Este contexto agrupa los activos sobre los que opera la plataforma. `Company` y `Fleet` mantienen una composición, al igual que `Fleet` y `Vehicle`: una flota no existe fuera de su empresa, ni un vehículo fuera de su flota.
-
-`VehicleAssignment` es la clase que resuelve la relación entre `Vehicle` y `Driver`, que no es una asociación directa sino una asociación con atributos propios —el periodo de vigencia— y con historial. Es la clase que permite determinar cuál es el vehículo asignado a un conductor en el momento de iniciar una inspección preoperacional, lo que constituye la premisa del producto.
-
-El método `applyAuthorizationResult` de `Vehicle` es el único que modifica `currentStatus`, y solo puede invocarse como consecuencia de una habilitación operativa registrada en el contexto **Evaluation and Authorization**. No existe un método público que permita establecer el estado directamente, porque `currentStatus` es un valor derivado y no la fuente de verdad, conforme a la decisión de diseño de la sección 4.8.
-
-`Driver.userId` referencia al usuario del contexto **Identity and Access** por identificador, ya que la identidad de la persona y sus datos como conductor pertenecen a contextos distintos.
+Las relaciones entre las clases reflejan la estructura del dominio de FleetSafe, incluyendo composiciones, asociaciones y multiplicidades.
 
 ---
 
-#### Class Diagram: Vehicle Documentation
-
-```mermaid
-classDiagram
-    class DocumentType {
-        -UUID id
-        -String code
-        -String name
-        -String description
-        -boolean isRequired
-        -boolean isActive
-        +isMandatoryForOperation() boolean
-    }
-
-    class VehicleDocument {
-        -UUID id
-        -UUID vehicleId
-        -UUID documentTypeId
-        -String number
-        -LocalDate issueDate
-        -LocalDate expirationDate
-        -DocumentStatus status
-        -String fileUrl
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +recalculateStatus(today LocalDate) DocumentStatus
-        +isExpired(today LocalDate) boolean
-        +daysUntilExpiration(today LocalDate) long
-    }
-
-    class DocumentStatus {
-        <<enumeration>>
-        VALID
-        EXPIRING
-        EXPIRED
-    }
-
-    class DocumentService {
-        -DocumentRepository documentRepository
-        +registerDocument(vehicleId UUID, document VehicleDocument) VehicleDocument
-        +recalculateAll(today LocalDate) int
-        +findExpiringSoon(vehicleId UUID, days int) List~VehicleDocument~
-    }
-
-    DocumentType "1" --> "0..*" VehicleDocument : clasifica
-    VehicleDocument "1" --> "1" DocumentStatus : presenta
-    DocumentService ..> VehicleDocument : gestiona
-```
-
-**Explicación del diagrama.** `DocumentType` actúa como catálogo y `VehicleDocument` como el documento concreto asociado a un vehículo. El atributo `vehicleId` es de nuevo una referencia por identificador al contexto **Fleet Management**.
-
-El método `recalculateStatus` concentra la derivación del estado a partir de `expirationDate`, de modo que la regla que distingue `VALID`, `EXPIRING` y `EXPIRED` reside en un único lugar. `DocumentService.recalculateAll` es el método que invoca la tarea programada descrita en el diagrama de componentes de la sección 4.6.4.
-
----
-
-#### Class Diagram: Pre-Operational Inspection
-
-```mermaid
-classDiagram
-    class InspectionItem {
-        -UUID id
-        -String code
-        -String name
-        -String description
-        -ItemCategory category
-        -boolean isSafetyComponent
-        -boolean requiresEvidence
-        -int displayOrder
-        -boolean isActive
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +demandsEvidence() boolean
-        +deactivate() void
-    }
-
-    class Inspection {
-        -UUID id
-        -UUID vehicleId
-        -UUID driverId
-        -InspectionStatus status
-        -int odometer
-        -LocalDateTime startedAt
-        -LocalDateTime completedAt
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +addResult(result InspectionResultEntry) void
-        +complete(completedAt LocalDateTime) void
-        +isComplete() boolean
-        +getResults() List~InspectionResultEntry~
-    }
-
-    class InspectionResultEntry {
-        -UUID id
-        -UUID inspectionId
-        -UUID inspectionItemId
-        -String itemName
-        -String itemCategory
-        -ResultValue result
-        -LocalDateTime createdAt
-        +addObservation(observation Observation) void
-        +requiresObservation() boolean
-    }
-
-    class Observation {
-        -UUID id
-        -UUID inspectionResultId
-        -String description
-        -UUID createdBy
-        -LocalDateTime createdAt
-        +addEvidence(evidence Evidence) void
-        +hasEvidence() boolean
-    }
-
-    class Evidence {
-        -UUID id
-        -UUID observationId
-        -String fileUrl
-        -String mediaType
-        -LocalDateTime uploadedAt
-    }
-
-    class ItemCategory {
-        <<enumeration>>
-        COMPONENT
-        SAFETY_COMPONENT
-        DOCUMENTATION
-    }
-
-    class InspectionStatus {
-        <<enumeration>>
-        IN_PROGRESS
-        COMPLETED
-    }
-
-    class ResultValue {
-        <<enumeration>>
-        OK
-        OBSERVED
-        FAIL
-    }
-
-    class InspectionService {
-        -InspectionRepository inspectionRepository
-        +startInspection(driverId UUID, odometer int) Inspection
-        +registerResult(inspectionId UUID, itemId UUID, value ResultValue) InspectionResultEntry
-        +completeInspection(inspectionId UUID) Inspection
-    }
-
-    Inspection "1" *-- "1..*" InspectionResultEntry : contiene
-    InspectionItem "1" --> "0..*" InspectionResultEntry : es verificado en
-    InspectionResultEntry "1" *-- "0..*" Observation : puede registrar
-    Observation "1" *-- "0..*" Evidence : es respaldada por
-    InspectionItem "1" --> "1" ItemCategory : pertenece a
-    Inspection "1" --> "1" InspectionStatus : presenta
-    InspectionResultEntry "1" --> "1" ResultValue : obtiene
-    InspectionService ..> Inspection : gestiona
-```
-
-**Explicación del diagrama.** Este es el contexto núcleo del producto. `Inspection` es la raíz del agregado y mantiene una composición con `InspectionResultEntry`: los resultados no existen fuera de la inspección que los contiene. La cadena continúa con `Observation` y `Evidence`, ambas también en composición, reflejando la decisión de diseño de la sección 4.8 según la cual una evidencia siempre respalda una observación concreta y no la inspección en su conjunto.
-
-La clase se denomina `InspectionResultEntry` y no `InspectionResult` para evitar la colisión con la enumeración de valores posibles, que se denomina `ResultValue`. Ambos nombres corresponden a los términos *Inspection Result* del Ubiquitous Language de la sección 2.5.
-
-Los atributos `itemName` e `itemCategory` de `InspectionResultEntry` no son redundantes respecto de `InspectionItem`: conservan el nombre y la categoría que el elemento del catálogo tenía **en el momento de realizarse la inspección**, de modo que el historial no pueda alterarse de forma retroactiva si el administrador modifica o desactiva ese elemento posteriormente.
-
-`InspectionItem.demandsEvidence` expone el atributo `requiresEvidence`, que permite exigir fotografía en los elementos críticos y constituye la mitigación parcial de la debilidad declarada en el SWOT de la sección 2.1.1: la inspección es autorreportada.
-
----
-
-#### Class Diagram: Evaluation and Authorization
-
-```mermaid
-classDiagram
-    class EvaluationRule {
-        -UUID id
-        -UUID inspectionItemId
-        -String name
-        -ResultValue foundResult
-        -RuleImpact resultingImpact
-        -String description
-        -boolean isActive
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +appliesTo(itemId UUID, value ResultValue) boolean
-        +getImpact() RuleImpact
-    }
-
-    class Evaluation {
-        -UUID id
-        -UUID inspectionId
-        -LocalDateTime evaluatedAt
-        -UUID evaluatedBy
-        -LocalDateTime createdAt
-        +addDetail(detail EvaluationDetail) void
-        +resolveMostRestrictiveImpact() RuleImpact
-        +isAutomatic() boolean
-    }
-
-    class EvaluationDetail {
-        -UUID id
-        -UUID evaluationId
-        -UUID inspectionResultId
-        -UUID evaluationRuleId
-        -RuleImpact appliedImpact
-    }
-
-    class OperationalAuthorization {
-        -UUID id
-        -UUID evaluationId
-        -UUID vehicleId
-        -AuthorizationStatus status
-        -boolean isOverride
-        -String overrideReason
-        -UUID authorizedBy
-        -LocalDateTime authorizedAt
-        -LocalDateTime validUntil
-        -LocalDateTime createdAt
-        +isValidOn(moment LocalDateTime) boolean
-        +liftsBlock() boolean
-    }
-
-    class RuleImpact {
-        <<enumeration>>
-        NONE
-        OBSERVED
-        BLOCKING
-    }
-
-    class AuthorizationStatus {
-        <<enumeration>>
-        ENABLED
-        OBSERVED
-        NOT_ENABLED
-    }
-
-    class EvaluationEngine {
-        -EvaluationRepository evaluationRepository
-        +evaluate(inspectionId UUID) Evaluation
-        +findApplicableRules(itemId UUID, value ResultValue) List~EvaluationRule~
-    }
-
-    class AuthorizationService {
-        -EvaluationRepository evaluationRepository
-        +authorize(evaluation Evaluation) OperationalAuthorization
-        +liftBlock(vehicleId UUID, reason String, authorizedBy UUID) OperationalAuthorization
-        +findCurrentAuthorization(vehicleId UUID) Optional~OperationalAuthorization~
-    }
-
-    Evaluation "1" *-- "1..*" EvaluationDetail : se descompone en
-    EvaluationRule "1" --> "0..*" EvaluationDetail : es aplicada en
-    Evaluation "1" --> "1" OperationalAuthorization : produce
-    EvaluationDetail "1" --> "1" RuleImpact : aplica
-    OperationalAuthorization "1" --> "1" AuthorizationStatus : determina
-    EvaluationEngine ..> Evaluation : produce
-    EvaluationEngine ..> AuthorizationService : solicita el registro de la habilitación
-    AuthorizationService ..> OperationalAuthorization : gestiona
-```
-
-**Explicación del diagrama.** Este es el segundo contexto núcleo. `EvaluationRule` expresa una regla legible de la forma *"si el elemento X presenta el resultado Y, el impacto sobre el vehículo es Z"*, y el método `appliesTo` es el que permite al motor determinar qué reglas corresponden a cada resultado. La condición es estructurada y no texto libre, precisamente para poder evaluarse de forma determinista y auditarse después.
-
-`Evaluation` y `OperationalAuthorization` se mantienen como clases distintas y con relación `1 --> 1`, porque representan dos cosas diferentes: la evaluación es el proceso de aplicar las reglas, y la habilitación es la decisión resultante con su vigencia. El método `resolveMostRestrictiveImpact` de `Evaluation` implementa la regla según la cual un solo impacto `BLOCKING` produce el estado `NOT_ENABLED`.
-
-El atributo `evaluatedBy` admite valor nulo porque la evaluación se ejecuta de forma automática al completarse la inspección; `isAutomatic` expone esa distinción.
-
-`OperationalAuthorization` es la **fuente de verdad de la condición operativa del vehículo**. Los atributos `isOverride`, `overrideReason` y `authorizedBy` registran el levantamiento de un bloqueo: el método `liftBlock` de `AuthorizationService` exige la justificación y el responsable, de modo que la excepción se permite pero deja rastro. Esta estructura es la que sostiene la Estrategia 2 planteada en la sección 2.1.2.
-
----
-
-#### Class Diagram: Incident Management
-
-```mermaid
-classDiagram
-    class IncidentType {
-        -UUID id
-        -String code
-        -String name
-        -String description
-        -boolean isActive
-    }
-
-    class Incident {
-        -UUID id
-        -UUID vehicleId
-        -UUID incidentTypeId
-        -UUID inspectionId
-        -IncidentOrigin origin
-        -String description
-        -IncidentSeverity severity
-        -IncidentStatus status
-        -UUID reportedBy
-        -LocalDateTime reportedAt
-        -String resolutionType
-        -LocalDateTime resolvedAt
-        -LocalDateTime createdAt
-        -LocalDateTime updatedAt
-        +addCorrectiveAction(action CorrectiveAction) void
-        +addFollowUp(followUp IncidentFollowUp) void
-        +resolve(resolutionType String, moment LocalDateTime) void
-        +isCritical() boolean
-        +comesFromInspection() boolean
-    }
-
-    class CorrectiveAction {
-        -UUID id
-        -UUID incidentId
-        -String description
-        -UUID performedBy
-        -LocalDateTime performedAt
-        -String evidenceUrl
-    }
-
-    class Repair {
-        -UUID id
-        -UUID incidentId
-        -String workshop
-        -BigDecimal cost
-        -LocalDate startedAt
-        -LocalDate finishedAt
-        -RepairStatus status
-        +isFinished() boolean
-        +durationInDays() long
-    }
-
-    class IncidentFollowUp {
-        -UUID id
-        -UUID incidentId
-        -String note
-        -UUID createdBy
-        -LocalDateTime createdAt
-    }
-
-    class IncidentOrigin {
-        <<enumeration>>
-        INSPECTION
-        OPERATION
-    }
-
-    class IncidentSeverity {
-        <<enumeration>>
-        LOW
-        MEDIUM
-        HIGH
-        CRITICAL
-    }
-
-    class IncidentStatus {
-        <<enumeration>>
-        OPEN
-        IN_PROGRESS
-        RESOLVED
-        CLOSED
-    }
-
-    class RepairStatus {
-        <<enumeration>>
-        SCHEDULED
-        IN_PROGRESS
-        COMPLETED
-    }
-
-    class IncidentService {
-        -IncidentRepository incidentRepository
-        +reportIncident(vehicleId UUID, incident Incident) Incident
-        +registerCorrectiveAction(incidentId UUID, action CorrectiveAction) CorrectiveAction
-        +scheduleRepair(incidentId UUID, repair Repair) Repair
-        +findOpenByVehicle(vehicleId UUID) List~Incident~
-    }
-
-    IncidentType "1" --> "0..*" Incident : clasifica
-    Incident "1" *-- "0..*" CorrectiveAction : es atendida mediante
-    Incident "1" *-- "0..*" Repair : puede requerir
-    Incident "1" *-- "0..*" IncidentFollowUp : es seguida mediante
-    Incident "1" --> "1" IncidentOrigin : procede de
-    Incident "1" --> "1" IncidentSeverity : presenta
-    Incident "1" --> "1" IncidentStatus : se encuentra en
-    Repair "1" --> "1" RepairStatus : se encuentra en
-    IncidentService ..> Incident : gestiona
-```
-
-**Explicación del diagrama.** `Incident` es la raíz del agregado y mantiene composiciones con `CorrectiveAction`, `Repair` e `IncidentFollowUp`, ya que ninguna de las tres tiene sentido fuera de la incidencia que las origina.
-
-El atributo `inspectionId` admite valor nulo y se acompaña de la enumeración `IncidentOrigin`, porque el Ubiquitous Language define la incidencia como un problema detectado en un vehículo durante una inspección **o durante su operación**. El método `comesFromInspection` expone esa distinción. Si la referencia a la inspección fuera obligatoria, las incidencias surgidas durante la operación no podrían registrarse.
-
----
-
-#### Resumen de referencias entre bounded contexts
-
-Las referencias que cruzan la frontera de un contexto se implementan como atributos de tipo `UUID` y no como asociaciones entre clases. El cuadro siguiente las recoge:
-
-| Clase | Atributo | Contexto referenciado |
-|:------|:---------|:----------------------|
-| `User` | `companyId` | Fleet Management |
-| `Driver` | `userId` | Identity and Access |
-| `VehicleDocument` | `vehicleId` | Fleet Management |
-| `Inspection` | `vehicleId`, `driverId` | Fleet Management |
-| `Observation` | `createdBy` | Identity and Access |
-| `EvaluationRule` | `inspectionItemId` | Pre-Operational Inspection |
-| `Evaluation` | `inspectionId`, `evaluatedBy` | Pre-Operational Inspection · Identity and Access |
-| `EvaluationDetail` | `inspectionResultId` | Pre-Operational Inspection |
-| `OperationalAuthorization` | `vehicleId`, `authorizedBy` | Fleet Management · Identity and Access |
-| `Incident` | `vehicleId`, `inspectionId`, `reportedBy` | Fleet Management · Pre-Operational Inspection · Identity and Access |
-| `CorrectiveAction` | `performedBy` | Identity and Access |
-| `IncidentFollowUp` | `createdBy` | Identity and Access |
-
-La validación de la existencia del elemento referenciado es responsabilidad del servicio de aplicación del contexto que realiza la referencia, tal como se refleja en las relaciones del diagrama de componentes de la sección 4.6.4.
-
----
 
 <a id="48-database-design"></a>
 ## 4.8. Database Design.
