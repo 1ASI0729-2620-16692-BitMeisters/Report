@@ -2072,6 +2072,131 @@ El etiquetado definido en esta sección sustenta directamente dos de las estrate
 <a id="424-searching-systems"></a>
 ### 4.2.4. Searching Systems.
 
+Los sistemas de búsqueda definen los mecanismos mediante los cuales el usuario localiza información específica dentro de FleetSafe. Su diseño responde a una condición propia del dominio: el supervisor de flota consulta información operativa con frecuencia y bajo presión de tiempo, mientras que el conductor necesita encontrar el vehículo y los elementos de inspección que le corresponden sin distraerse del proceso.
+
+Las decisiones que se presentan en esta sección se derivan de los esquemas de organización establecidos en la sección 4.2.1 y de las etiquetas definidas en la sección 4.2.2.
+
+---
+
+#### Principios de búsqueda
+
+| Principio | Definición | Sustento |
+|:----------|:-----------|:---------|
+| **Búsqueda contextual** | Los filtros disponibles en cada vista corresponden al tipo de información que esa vista presenta. | Un listado de vehículos no ofrece filtro por tipo de incidencia. |
+| **Filtros sobre búsqueda libre** | Se priorizan filtros estructurados sobre campos de texto libre, porque la mayoría de las consultas del dominio se resuelven por estado, por fecha o por vehículo. | Las User Stories US13, US25 y US28 definen filtros, no búsqueda por texto. |
+| **Combinación de criterios** | Los filtros se pueden combinar entre sí, y el sistema aplica la intersección de los criterios seleccionados. | US13 y US28 establecen filtros acumulables. |
+| **Resultados visibles sin desplazamiento** | Los resultados se presentan en el menor número de pantallas posible, con paginación cuando el volumen lo exige. | Sección 4.1.2, componente de tablas de datos. |
+| **Persistencia de filtros** | Los filtros aplicados se conservan mientras el usuario permanece en la vista, y se restablecen al salir de ella. | Evita que el usuario reconstruya el contexto de consulta tras revisar un detalle. |
+
+---
+
+#### Mecanismos de búsqueda por vista
+
+A continuación se detallan los mecanismos disponibles en cada vista de la Web Application, en correspondencia con las User Stories de la sección 3.1.
+
+| Vista | Mecanismo | Criterios disponibles | User Story |
+|:------|:----------|:----------------------|:-----------|
+| **Listado de vehículos** | Filtros estructurados | Estado, flota, marca, año | US13 |
+| **Listado de vehículos por estado** | Filtros estructurados y agrupación | Estado (habilitado, observado, no habilitado) | US25 |
+| **Listado de usuarios** | Filtros estructurados | Rol, estado de la cuenta | US11 |
+| **Listado de inspecciones** | Filtros estructurados y rango de fechas | Vehículo, conductor, estado, rango de fechas | US22, US35 |
+| **Listado de incidencias** | Filtros estructurados y búsqueda por texto | Estado, vehículo, tipo de incidencia, severidad, rango de fechas | US28 |
+| **Historial de incidencias por vehículo** | Filtros estructurados | Estado, tipo, rango de fechas | US31 |
+| **Listado de documentos vehiculares** | Filtros estructurados | Tipo de documento, estado de vigencia, rango de fechas | US33 |
+| **Historial de estados del vehículo** | Filtro por rango de fechas | Rango de fechas | US37 |
+| **Catálogo de elementos de inspección** | Búsqueda por texto y orden predefinido | Nombre, código, categoría | US18 |
+| **Reporte de estado de flota** | Filtros estructurados | Rango de fechas, flota, estado | US36 |
+
+---
+
+#### Búsqueda por texto libre
+
+La búsqueda por texto libre se emplea únicamente donde los criterios estructurados no permiten resolver la consulta, conforme al principio de filtros sobre búsqueda libre. Se aplica en tres casos concretos:
+
+| Vista | Campo de búsqueda | Campos consultados | User Story |
+|:------|:------------------|:-------------------|:-----------|
+| **Listado de incidencias** | Descripción de la incidencia | Descripción, observaciones asociadas | US28 |
+| **Catálogo de elementos de inspección** | Nombre o código del elemento | Nombre, código, descripción | US18 |
+| **Listado de vehículos** | Placa del vehículo | Placa | US13 |
+
+**Reglas de aplicación:**
+
+- La búsqueda por texto libre no distingue mayúsculas de minúsculas.
+- La búsqueda por texto libre se ejecuta a partir de tres caracteres ingresados.
+- Los resultados se presentan en orden de relevancia y se acompañan del criterio de coincidencia aplicado.
+- La búsqueda por placa normaliza el texto ingresado: convierte a mayúsculas y elimina guiones y espacios, conforme al formato de datos establecido en la sección 4.1.2.
+
+---
+
+#### Ordenamiento de resultados
+
+Toda vista que presente un listado ofrece ordenamiento por al menos una columna, con un orden predeterminado que responde a la necesidad más frecuente del usuario.
+
+| Vista | Orden predeterminado | Criterios de ordenamiento disponibles |
+|:------|:---------------------|:--------------------------------------|
+| Listado de vehículos | Placa (ascendente) | Placa, estado, marca, año |
+| Listado de inspecciones | Fecha de realización (descendente) | Fecha, vehículo, estado |
+| Listado de incidencias | Fecha de registro (descendente) | Fecha, severidad, estado |
+| Historial de incidencias | Fecha de registro (descendente) | Fecha, tipo |
+| Listado de documentos | Fecha de vencimiento (ascendente) | Vencimiento, tipo, estado |
+| Historial de estados | Fecha del cambio (descendente) | Fecha |
+| Reporte de estado de flota | Estado (habilitado, observado, no habilitado) | Estado, placa |
+
+El orden predeterminado del listado de documentos se establece como fecha de vencimiento ascendente porque la tarea del supervisor es anticipar los vencimientos próximos, conforme a US33.
+
+---
+
+#### Paginación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Tamaño de página** | 20 elementos en resoluciones de escritorio, 10 en resoluciones móviles |
+| **Navegación** | Anterior, siguiente y número de página |
+| **Indicador** | Se muestra el número total de resultados y el rango visible |
+| **Persistencia** | El tamaño de página seleccionado por el usuario se conserva durante la sesión |
+
+---
+
+#### Búsqueda dentro del flujo de inspección
+
+El flujo de inspección preoperacional no requiere búsqueda, dado que el conductor accede directamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2. Sin embargo, sí se aplican dos mecanismos de localización dentro de la inspección:
+
+| Mecanismo | Propósito | Sustento |
+|:----------|:----------|:---------|
+| **Orden predefinido del catálogo** | Los elementos de inspección se presentan en el orden establecido por `display_order`, conforme a la sección 4.8.1. | El conductor no necesita buscar; el sistema le presenta los elementos en el orden correcto. |
+| **Filtro por categoría** | El conductor puede filtrar los elementos por categoría (componente, elemento de seguridad, documentación). | Permite concentrarse en un grupo de elementos cuando la inspección se realiza por etapas. |
+
+Este diseño responde a la condición de uso del conductor: la inspección se realiza junto al vehículo, frecuentemente con una sola mano y en exteriores. Incorporar un campo de búsqueda añadiría complejidad sin aportar valor, dado que el conjunto de elementos es acotado y conocido.
+
+---
+
+#### Ausencia de resultados
+
+Toda búsqueda o filtro que no arroje resultados debe presentar un mensaje que explique la situación y, cuando corresponda, ofrezca una acción para revertirla, conforme al estado vacío definido en la sección 4.1.2.
+
+| Situación | Mensaje | Acción ofrecida |
+|:----------|:--------|:----------------|
+| Filtro sin coincidencias | "No se encontraron vehículos que cumplan los criterios seleccionados." | Restablecer filtros |
+| Búsqueda por texto sin coincidencias | "No se encontraron incidencias que coincidan con la búsqueda." | Limpiar búsqueda |
+| Historial sin registros | "El vehículo no tiene inspecciones registradas." | Registrar inspección (según rol) |
+| Documentos sin resultados | "No hay documentos que cumplan los criterios seleccionados." | Restablecer filtros |
+
+---
+
+#### Correspondencia con las User Stories
+
+| Mecanismo | User Stories relacionadas |
+|:----------|:--------------------------|
+| Filtros por estado | US13, US25, US28, US33, US36 |
+| Filtros por vehículo | US28, US31 |
+| Filtros por tipo | US28, US31, US33 |
+| Filtros por rango de fechas | US28, US31, US33, US35, US36, US37 |
+| Búsqueda por texto libre | US13, US18, US28 |
+| Ordenamiento | US13, US22, US28, US31, US33, US35, US37 |
+| Paginación | US11, US13, US22, US28, US31, US33, US35 |
+
+---
+
 <a id="425-navigation-systems"></a>
 ### 4.2.5. Navigation Systems.
 
