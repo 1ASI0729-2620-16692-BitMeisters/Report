@@ -1364,20 +1364,185 @@ El idioma por defecto del producto es el **inglés (`en_US`)**, con **español l
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
 
+La arquitectura de información define cómo se organiza, etiqueta, busca y recorre el contenido de los dos productos con interfaz de usuario. El criterio que la ordena es que **cada usuario encuentre lo que necesita en el menor número de pasos posible, y que ese número sea menor cuanto más frecuente sea la tarea**. La tarea más frecuente del producto —la inspección preoperacional diaria del conductor— se alcanza en un solo paso desde el inicio de sesión.
+
 <a id="421-organization-systems"></a>
 ### 4.2.1. Organization Systems.
+
+El contenido se organiza mediante tres estructuras, cada una aplicada donde corresponde a la naturaleza de la información.
+
+#### Organización jerárquica
+
+Se aplica donde el usuario necesita descender desde una visión general hacia el detalle. Es la estructura del Landing Page y la del área del supervisor.
+
+```
+Landing Page                      Web Application · Fleet Supervisor
+├── Hero                          └── Fleet
+├── Problem                           └── Vehicle
+├── Platform                              ├── Inspection history
+├── Process                               │   └── Inspection detail
+├── Profiles                              │       └── Observation and evidence
+├── Team                                  ├── Documents
+├── FAQ                                   └── Incidents
+├── Call to action                            └── Corrective actions · Repairs · Follow-ups
+└── Footer
+```
+
+La jerarquía del Landing Page reproduce el orden de un argumento: primero el problema que el visitante reconoce como propio, después la solución, después cómo funciona, y solo entonces la llamada a la acción. La de la Web Application reproduce la del dominio, y coincide con la composición de los agregados descrita en la sección 4.7.1.
+
+#### Organización secuencial
+
+Se aplica donde existe un procedimiento con un orden obligatorio y un final definido. Es la estructura de la inspección preoperacional:
+
+```
+Vehículo asignado → Checklist de elementos → Observación y evidencia → Resumen → Resultado
+```
+
+Durante la secuencia la navegación general se retira de la pantalla y se muestra un indicador de avance. La razón es que una inspección a medias no tiene valor: si el conductor la abandona, el vehículo no queda evaluado y el registro pierde su función de evidencia. La interfaz evita, por tanto, ofrecer salidas que no sean deliberadas.
+
+#### Organización matricial
+
+Se aplica donde el usuario necesita comparar muchos elementos según varios criterios a la vez, y elegir él mismo cuál gobierna la vista. Es la estructura del tablero de flota y de los historiales: un mismo conjunto de vehículos puede recorrerse por condición operativa, por flota, por conductor asignado o por fecha de la última inspección, sin que ninguno de esos ejes sea el principal.
+
+#### Esquemas de categorización
+
+| Esquema | Dónde se aplica | Por qué |
+|:--------|:----------------|:--------|
+| **Por tópicos** | Secciones del Landing Page; agrupación de los elementos de inspección por categoría (`COMPONENT`, `SAFETY_COMPONENT`, `DOCUMENTATION`) | El conductor revisa el vehículo por zonas, y agrupar el checklist igual reduce el desplazamiento físico alrededor de la unidad |
+| **Por audiencia** | Llamadas a la acción del Landing Page, una por segmento objetivo; vistas de la Web Application según el rol | Cada segmento tiene una pregunta distinta, y la respuesta pertinente es distinta |
+| **Cronológico** | Historial de inspecciones, seguimiento de incidencias, registro de habilitaciones | Su valor es precisamente la secuencia temporal: sirven como evidencia de qué se sabía y cuándo |
+| **Alfabético** | Listados administrativos del catálogo de elementos de inspección y de tipos de documento | Son catálogos extensos y estables en los que el administrador busca un nombre que ya conoce |
 
 <a id="422-labeling-systems"></a>
 ### 4.2.2. Labeling Systems.
 
+Las etiquetas emplean el **mínimo número de palabras** y proceden del Ubiquitous Language de la sección 2.5, de modo que el término que ve el usuario en la interfaz es el mismo que aparece en la documentación de la API y en el modelo de datos. El idioma por defecto es el inglés, con su equivalente en `es_419`.
+
+| Etiqueta (`en_US`) | Equivalente (`es_419`) | Asociación que crea en el usuario |
+|:-------------------|:-----------------------|:----------------------------------|
+| `Inspection` | Inspección | El acto de revisar el vehículo antes de salir; no un trámite administrativo |
+| `My vehicle` | Mi vehículo | Pertenencia y responsabilidad: es la unidad de la que el conductor responde hoy |
+| `Enabled` | Habilitado | Permiso para operar concedido, no una simple ausencia de defectos |
+| `Observed` | Observado | Puede operar, pero hay algo registrado que alguien debe atender |
+| `Not Enabled` | No habilitado | Prohibición de salir. Se evita *"Rechazado"* o *"Bloqueado"*, que suenan a sanción sobre el conductor |
+| `Lift block` | Levantar bloqueo | Acción excepcional y deliberada, que deja constancia de quién la autorizó |
+| `Observation` | Observación | Descripción de una condición detectada, no una queja |
+| `Evidence` | Evidencia | Respaldo verificable de la observación |
+| `Incident` | Incidencia | Problema que requiere seguimiento hasta su cierre |
+| `Fleet` | Flota | Conjunto de vehículos bajo una misma supervisión |
+
+Tres reglas gobiernan la redacción de etiquetas:
+
+- **Los botones nombran la acción, no la confirman.** `Start inspection`, no `OK`; `Lift block`, no `Continue`. Quien lee un botón debe saber qué ocurrirá al pulsarlo sin leer el texto que lo rodea.
+- **No se emplean abreviaturas** salvo las que el dominio ya usa, como la placa del vehículo.
+- **Una etiqueta significa lo mismo en todas partes.** `Not Enabled` no se convierte en `Bloqueado` en otra vista, aunque en la conversación diaria ambos términos se usen indistintamente.
+
 <a id="423-seo-tags-and-meta-tags"></a>
 ### 4.2.3. SEO Tags and Meta Tags.
+
+Los valores se definen en inglés, idioma por defecto del producto, y se declaran también en `es_419` mediante `hreflang`.
+
+#### Landing Page
+
+```html
+<title>FleetSafe — Pre-Operational Vehicle Inspection for Cargo Fleets</title>
+<meta name="description" content="FleetSafe digitizes the pre-operational inspection of cargo vehicles, evaluates its results against your own rules and determines whether each unit is authorized to operate.">
+<meta name="keywords" content="pre-operational inspection, fleet safety, cargo transport, vehicle authorization, preventive control, fleet management, Peru">
+<meta name="author" content="BitMeisters">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fleetsafe.pe/">
+<link rel="alternate" hreflang="en-US" href="https://fleetsafe.pe/en/">
+<link rel="alternate" hreflang="es-419" href="https://fleetsafe.pe/es/">
+
+<meta property="og:title" content="FleetSafe — Pre-Operational Vehicle Inspection for Cargo Fleets">
+<meta property="og:description" content="Know which of your vehicles is authorized to operate, and why.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_419">
+```
+
+#### Web Application
+
+| Vista | `Title` | `Description` | `Robots` |
+|:------|:--------|:--------------|:---------|
+| Sign in | `Sign in — FleetSafe` | `Access your FleetSafe account to register inspections and supervise the operational condition of your fleet.` | `index, follow` |
+| My vehicle | `My assigned vehicle — FleetSafe` | `Consult the vehicle assigned to you and start its pre-operational inspection.` | `noindex, nofollow` |
+| Inspection | `Pre-operational inspection — FleetSafe` | `Register the condition of each inspection item of the assigned vehicle.` | `noindex, nofollow` |
+| Fleet | `Fleet — FleetSafe` | `Consult the operational condition of every vehicle of the fleet.` | `noindex, nofollow` |
+| Vehicle detail | `Vehicle {plate} — FleetSafe` | `Inspection history, documents and incidents of the vehicle.` | `noindex, nofollow` |
+| Incidents | `Incidents — FleetSafe` | `Track the incidents detected in the vehicles of the fleet.` | `noindex, nofollow` |
+
+`Author` es `BitMeisters` en todas las vistas.
+
+**Decisión de diseño: las vistas autenticadas se marcan `noindex`.** Solo el Landing Page y la vista de inicio de sesión deben ser indexables. Las vistas internas contienen información de flotas de clientes, y aunque exijan autenticación, declararlo de forma explícita evita que sus direcciones aparezcan en los resultados de búsqueda.
 
 <a id="424-searching-systems"></a>
 ### 4.2.4. Searching Systems.
 
+El **Landing Page no incorpora búsqueda**. Es una página única de extensión acotada, en la que un buscador añadiría un control sin utilidad; su recorrido se resuelve mediante la navegación por anclas descrita en 4.2.5.
+
+La **Web Application** ofrece búsqueda y filtrado en las vistas que presentan colecciones. La regla general es que la búsqueda por texto resuelve *"sé cuál busco"* y los filtros resuelven *"quiero ver los que cumplen una condición"*.
+
+| Vista | Búsqueda por texto | Filtros | Orden |
+|:------|:-------------------|:--------|:------|
+| Fleet | placa, marca, modelo | condición operativa · flota · conductor asignado · con documentos por vencer | placa · última inspección · condición |
+| Inspection history | placa, nombre del conductor | rango de fechas · resultado · conductor | fecha, descendente por defecto |
+| Incidents | descripción, placa | severidad · estado · tipo · origen (inspección u operación) | fecha de reporte · severidad |
+| Documents | número de documento, placa | tipo de documento · condición de vigencia · rango de vencimiento | fecha de vencimiento, ascendente |
+| Users | nombre, correo | rol · estado de la cuenta | nombre |
+
+#### Comportamiento de la búsqueda
+
+- La búsqueda es **incremental**: los resultados se actualizan conforme se escribe, a partir del tercer carácter.
+- Es **insensible a mayúsculas y a los separadores de la placa**: `abc-123`, `ABC123` y `abc 123` devuelven el mismo vehículo.
+- Los filtros son **acumulativos** y se muestran como chips eliminables sobre los resultados, con una acción para descartarlos todos.
+- El estado de búsqueda y filtros **se refleja en la dirección**, de modo que un supervisor pueda compartir con otro el enlace de *"los vehículos no habilitados de la flota norte"*.
+
+#### Presentación de los resultados
+
+Los resultados se muestran en la misma estructura que el listado completo —tabla en escritorio, tarjetas en móvil— con estas diferencias:
+
+- Una línea de resumen indica cuántos elementos se encontraron y sobre qué total.
+- El término buscado aparece resaltado en la celda que lo contiene.
+- La **condición operativa se presenta siempre como chip con etiqueta**, nunca como color solo, conforme a lo establecido en 4.1.1.
+- Cuando no hay coincidencias, se muestra un estado vacío que indica qué se buscó y ofrece descartar los filtros, en lugar de una tabla en blanco.
+- Los listados extensos se paginan de 25 en 25, y la posición se conserva al volver desde el detalle de un elemento.
+
 <a id="425-navigation-systems"></a>
 ### 4.2.5. Navigation Systems.
+
+La navegación se resuelve de forma distinta en cada producto, porque en uno el usuario explora y en el otro ejecuta una tarea conocida.
+
+#### Landing Page
+
+| Técnica | Descripción |
+|:--------|:------------|
+| Barra superior fija | Permanece visible durante el desplazamiento y da acceso directo a cada sección mediante anclas |
+| Desplazamiento suave | El salto entre secciones se anima, de modo que el visitante conserva la noción de dónde está |
+| Llamadas a la acción por segmento | Cada segmento objetivo dispone de su propia llamada a la acción, que conduce a la vista de la Web Application correspondiente a su rol |
+| Pie de página | Reúne los enlaces legales —términos y condiciones, política de privacidad—, el contacto y el selector de idioma |
+| Retorno al inicio | Botón que aparece tras el primer desplazamiento |
+
+#### Web Application
+
+| Técnica | Descripción |
+|:--------|:------------|
+| Barra lateral permanente | En escritorio, con los apartados que corresponden al rol de la cuenta; el elemento activo se marca con `brand-600` y `aria-current` |
+| Navegación inferior | En móvil sustituye a la barra lateral, con un máximo de cuatro destinos |
+| Barra superior | Título de la vista, selector de idioma y menú de la cuenta |
+| Migas de pan | En los recorridos de más de dos niveles: `Fleet › ABC-123 › Inspection of 15/09/2026` |
+| Acción principal contextual | Una sola por vista, destacada: `Start inspection` para el conductor, `Lift block` en el detalle de un vehículo no habilitado |
+| Retorno explícito | Toda vista de detalle ofrece regreso al listado conservando los filtros aplicados |
+
+**Decisión de diseño: la navegación visible depende del rol.** Un conductor no ve los apartados de administración ni el tablero de flota completo, no porque le estén prohibidos en la interfaz, sino porque no forman parte de su tarea y mostrarlos añadiría ruido a un recorrido que debe completarse en minutos. Conviene señalar que **esta restricción es de experiencia de usuario y no de seguridad**: el control efectivo se aplica en el Security Filter del Backend RESTful API, según lo descrito en la sección 4.6.4.
+
+| Rol | Apartados visibles |
+|:----|:-------------------|
+| `Driver` | My vehicle · My inspections |
+| `Fleet Supervisor` | Fleet · Inspections · Incidents · Documents |
+| `Administrator` | Fleet · Inspections · Incidents · Documents · Users · Inspection items · Evaluation rules |
+
+---
 
 
 <a id="43-landing-page-ui-design"></a>
