@@ -1607,6 +1607,15 @@ Los cuatro componentes de **Shared** concentran las preocupaciones transversales
 <a id="47-software-object-oriented-design"></a>
 ## 4.7. Software Object-Oriented Design.
 
+En esta sección se presenta el diseño orientado a objetos de FleetSafe, que detalla cómo se implementan los componentes identificados en la sección 4.6.4. Si el diagrama de componentes responde a *qué bloques forman cada container*, el diseño orientado a objetos responde a *qué clases forman cada bloque y cómo se relacionan entre sí*.
+
+Las características principales que se consideran en los diagramas son cuatro:
+
+- **La organización es por bounded context**, la misma de las secciones 4.6 y 4.8, de modo que los tres niveles del diseño —componentes, clases y tablas— describen la misma división del dominio.
+- **La nomenclatura procede del Ubiquitous Language** de la sección 2.5. Ninguna clase introduce un sinónimo de un término ya definido allí.
+- **Las fronteras entre contextos se representan de forma explícita**: una referencia que cruza un bounded context se modela como un atributo identificador y nunca como una asociación entre clases.
+- **El nivel de detalle incluye el scope de cada miembro** —`private` y `public`— y la multiplicidad y el nombre de cada relación, conforme a UML.
+
 <a id="471-class-diagrams"></a>
 ### 4.7.1. Class Diagrams.
 
