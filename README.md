@@ -135,15 +135,15 @@
         - <a href="#513-source-code-style-guide-and-conventions">5.1.3. Source Code Style Guide and Conventions.</a>
         - <a href="#514-software-deployment-configuration">5.1.4. Software Deployment Configuration.</a>
     - <a href="#52-landing-page-services-applications-implementation">5.2. Landing Page, Services & Applications Implementation.</a>
-        - <a href="#52x-sprint-n">5.2.x. Sprint n</a>
-            - <a href="#52x1-sprint-planning-n">5.2.x.1. Sprint Planning n.</a>
-            - <a href="#52x2-aspect-leader-and-colaborators">5.2.x.2. Aspect Leader and Colaborators.</a>
-            - <a href="#52x3-sprint-backlog-n">5.2.x.3. Sprint Backlog n.</a>
-            - <a href="#52x4-development-evidence-for-sprint-review">5.2.x.4. Development Evidence for Sprint Review.</a>
-            - <a href="#52x5-execution-evidence-for-sprint-review">5.2.x.5. Execution Evidence for Sprint Review.</a>
-            - <a href="#52x6-services-documentation-evidence-for-sprint-review">5.2.x.6. Services Documentation Evidence for Sprint Review.</a>
-            - <a href="#52x7-software-deployment-evidence-for-sprint-review">5.2.x.7. Software Deployment Evidence for Sprint Review.</a>
-            - <a href="#52x8-team-colaboration-insights-during-sprint">5.2.x.8. Team Colaboration Insights during Sprint.</a>
+        - <a href="#521-sprint-1">5.2.1. Sprint 1</a>
+            - <a href="#5211-sprint-planning-1">5.2.1.1. Sprint Planning 1.</a>
+            - <a href="#5212-aspect-leader-and-colaborators">5.2.1.2. Aspect Leader and Colaborators.</a>
+            - <a href="#5213-sprint-backlog-1">5.2.1.3. Sprint Backlog 1.</a>
+            - <a href="#5214-development-evidence-for-sprint-review">5.2.1.4. Development Evidence for Sprint Review.</a>
+            - <a href="#5215-execution-evidence-for-sprint-review">5.2.1.5. Execution Evidence for Sprint Review.</a>
+            - <a href="#5216-services-documentation-evidence-for-sprint-review">5.2.1.6. Services Documentation Evidence for Sprint Review.</a>
+            - <a href="#5217-software-deployment-evidence-for-sprint-review">5.2.1.7. Software Deployment Evidence for Sprint Review.</a>
+            - <a href="#5218-team-colaboration-insights-during-sprint">5.2.1.8. Team Colaboration Insights during Sprint.</a>
     - <a href="#53-validation-interviews">5.3. Validation Interviews.</a>
         - <a href="#531-diseno-de-entrevistas">5.3.1. Diseño de Entrevistas.</a>
         - <a href="#532-registro-de-entrevistas">5.3.2. Registro de Entrevistas.</a>
@@ -1641,7 +1641,7 @@ FleetSafe está compuesta por tres productos, cada uno con una arquitectura de i
 | **Web Application** | Usuarios autenticados | Ejecutar las funcionalidades según el rol | Jerárquico, orientado a tareas por rol |
 | **Backend RESTful API** | Desarrolladores | Exponer la lógica de negocio | Recursos RESTful, orientado a endpoints |
 
-Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.x.6.
+Esta sección se concentra en los dos primeros productos, dado que el tercero se documenta en la sección 5.2.1.6.
 
 ---
 
@@ -4386,32 +4386,32 @@ El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable mediante `
 <a id="52-landing-page-services-applications-implementation"></a>
 ## 5.2. Landing Page, Services & Applications Implementation.
 
-<a id="52x-sprint-n"></a>
-### 5.2.x. Sprint n
+<a id="521-sprint-1"></a>
+### 5.2.1. Sprint 1
 
-<a id="52x1-sprint-planning-n"></a>
-#### 5.2.x.1. Sprint Planning n.
+<a id="5211-sprint-planning-1"></a>
+#### 5.2.1.1. Sprint Planning 1.
 
-<a id="52x2-aspect-leader-and-colaborators"></a>
-#### 5.2.x.2. Aspect Leader and Colaborators.
+<a id="5212-aspect-leader-and-colaborators"></a>
+#### 5.2.1.2. Aspect Leader and Colaborators.
 
-<a id="52x3-sprint-backlog-n"></a>
-#### 5.2.x.3. Sprint Backlog n.
+<a id="5213-sprint-backlog-1"></a>
+#### 5.2.1.3. Sprint Backlog 1.
 
-<a id="52x4-development-evidence-for-sprint-review"></a>
-#### 5.2.x.4. Development Evidence for Sprint Review.
+<a id="5214-development-evidence-for-sprint-review"></a>
+#### 5.2.1.4. Development Evidence for Sprint Review.
 
-<a id="52x5-execution-evidence-for-sprint-review"></a>
-#### 5.2.x.5. Execution Evidence for Sprint Review.
+<a id="5215-execution-evidence-for-sprint-review"></a>
+#### 5.2.1.5. Execution Evidence for Sprint Review.
 
-<a id="52x6-services-documentation-evidence-for-sprint-review"></a>
-#### 5.2.x.6. Services Documentation Evidence for Sprint Review.
+<a id="5216-services-documentation-evidence-for-sprint-review"></a>
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review.
 
-<a id="52x7-software-deployment-evidence-for-sprint-review"></a>
-#### 5.2.x.7. Software Deployment Evidence for Sprint Review.
+<a id="5217-software-deployment-evidence-for-sprint-review"></a>
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review.
 
-<a id="52x8-team-colaboration-insights-during-sprint"></a>
-#### 5.2.x.8. Team Colaboration Insights during Sprint.
+<a id="5218-team-colaboration-insights-during-sprint"></a>
+#### 5.2.1.8. Team Colaboration Insights during Sprint.
 
 
 <a id="53-validation-interviews"></a>
