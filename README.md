@@ -1199,6 +1199,23 @@ A continuación se presenta el Product Backlog consolidado:
 | 43 | US37 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | 3 |
 | 44 | US45 | API de historial y reportes | Como developer, se desea exponer endpoints para la consulta de historial y generación de reportes. | 5 |
 
+El Product Backlog se gestiona en **Trello**, conforme a las herramientas indicadas en el enunciado. El tablero es **público** y puede consultarse en la siguiente dirección:
+
+**https://trello.com/b/LnAD1sH3/fleetsafe-product-backlog**
+
+<img src="img/backlog/product-backlog-trello.png" alt="Tablero del Product Backlog de FleetSafe en Trello, con 44 User Stories en la lista Product Backlog" width="1000">
+
+El tablero se organiza en cuatro listas que reflejan el estado de avance de cada User Story:
+
+| Lista | Contenido |
+|:------|:----------|
+| **Product Backlog** | Las 44 User Stories del cuadro anterior, en el mismo orden de priorización |
+| **Sprint Backlog 1** | Las User Stories seleccionadas para el Sprint 1 |
+| **In Progress** | Las User Stories en desarrollo durante el sprint en curso |
+| **Done** | Las User Stories que cumplen la definición de terminado |
+
+Cada tarjeta conserva el identificador de la User Story, su título, sus Story Points y la descripción en formato *"Como… deseo… para…"*, además del bounded context al que pertenece, de modo que el tablero y la sección 3.1 del informe se mantengan consistentes entre sí.
+
 
 <hr>
 
