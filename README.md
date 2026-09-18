@@ -1276,41 +1276,51 @@ A partir del Ubiquitous Language y del proceso de Big Picture EventStorming, se 
 
 El Context Diagram es el primer nivel del modelo C4 y muestra el sistema como un recuadro central, rodeado por sus usuarios y otros sistemas con los que interactúa. Para FleetSafe, este diagrama permite visualizar los actores externos y las relaciones principales con la plataforma.
 
-A continuación se presenta el diagrama de contexto de FleetSafe utilizando PlantUML con la sintaxis de C4:
+El diagrama se ha elaborado con **Structurizr**, la herramienta indicada para el modelo C4. El modelo completo se mantiene como código en el archivo [`workspace.dsl`](workspace.dsl) de este repositorio, de modo que los tres niveles del modelo se generan a partir de una única fuente y no pueden quedar desincronizados entre sí. A continuación se presenta el diagrama de contexto de FleetSafe:
 
-```plantuml
-@startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+<img src="img/c4/01-context.png" alt="Diagrama de contexto de FleetSafe" width="900">
 
-title Context Diagram - FleetSafe
+<details>
+<summary>Structurizr DSL — vista de contexto</summary>
 
-Person(admin, "Administrator", "User responsible for managing users and roles on the platform.")
-Person(supervisor, "Fleet Supervisor", "User responsible for supervising vehicle status, managing incidents and verifying operational authorization.")
-Person(driver, "Driver", "User who performs pre-operational inspections of assigned vehicles.")
-
-System(fleetsafe, "FleetSafe", "Web platform for vehicle safety and preventive control that allows digital pre-operational inspections, condition evaluation and determination of operational authorization for cargo transport vehicles.")
-
-System_Ext(emailSystem, "Email System", "External service used for sending notifications and communications.")
-System_Ext(storageSystem, "Storage Service", "External service used for storing photographic evidence.")
-
-Rel(admin, fleetsafe, "Manages users and roles", "HTTPS")
-Rel(supervisor, fleetsafe, "Supervises vehicles and manages incidents", "HTTPS")
-Rel(driver, fleetsafe, "Performs pre-operational inspections", "HTTPS")
-Rel(fleetsafe, emailSystem, "Sends notifications", "SMTP")
-Rel(fleetsafe, storageSystem, "Stores photographic evidence", "HTTPS")
-
-@enduml
 ```
+administrator = person "Administrator" "Manages users, roles, inspection item catalogs and evaluation rules for the company."
+supervisor = person "Fleet Supervisor" "Supervises vehicle condition, manages incidents and authorizes exceptions over blocked vehicles."
+driver = person "Driver" "Performs the pre-operational inspection of the assigned vehicle before starting an operation."
+visitor = person "Visitor" "Prospective customer who evaluates FleetSafe before creating an account."
+
+emailSystem = softwareSystem "Email System" "External service used to notify supervisors about blocked vehicles, open incidents and expiring documents." "External"
+storageService = softwareSystem "Storage Service" "External object storage service used to keep the photographic evidence attached to an observation." "External"
+
+fleetsafe = softwareSystem "FleetSafe" "Registers pre-operational inspections, evaluates their results against the rules defined by the company and determines whether a vehicle is authorized to operate."
+
+administrator -> fleetsafe "Manages users, catalogs and evaluation rules" "HTTPS"
+supervisor -> fleetsafe "Supervises vehicles, manages incidents and authorizes exceptions" "HTTPS"
+driver -> fleetsafe "Performs pre-operational inspections" "HTTPS"
+visitor -> fleetsafe "Evaluates the value proposition" "HTTPS"
+fleetsafe -> emailSystem "Sends notifications" "SMTP"
+fleetsafe -> storageService "Stores photographic evidence" "HTTPS"
+
+systemContext fleetsafe "Context" {
+    include *
+    autolayout lr
+}
+```
+
+</details>
 
 **Explicación del diagrama:**
 
-El diagrama de contexto de FleetSafe muestra los tres actores principales que interactúan con la plataforma:
+El diagrama de contexto de FleetSafe muestra los actores que interactúan con la plataforma:
 
-- **Administrator:** responsable de la gestión de usuarios y roles dentro de la plataforma.
-- **Fleet Supervisor:** responsable de supervisar el estado de los vehículos, gestionar incidencias y verificar la habilitación operativa de las unidades.
-- **Driver:** responsable de realizar las inspecciones preoperacionales de los vehículos asignados.
+- **Administrator:** responsable de la gestión de usuarios y roles, del catálogo de elementos de inspección y de las reglas de evaluación de su empresa.
+- **Fleet Supervisor:** responsable de supervisar la condición de los vehículos, gestionar las incidencias y autorizar las excepciones sobre vehículos bloqueados.
+- **Driver:** responsable de realizar la inspección preoperacional del vehículo asignado antes de iniciar una operación.
+- **Visitor:** cliente potencial que evalúa la propuesta de valor de FleetSafe en el Landing Page antes de crear una cuenta. Se incorpora como actor porque es el rol base de las User Stories del Landing Page descritas en la sección 3.1.
 
-El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento para las evidencias fotográficas registradas durante las inspecciones.
+El sistema FleetSafe se representa como el recuadro central, y se identifican dos sistemas externos con los que interactúa: un sistema de correo electrónico para el envío de notificaciones y un servicio de almacenamiento de objetos para las evidencias fotográficas registradas durante las inspecciones.
+
+> **Pendiente de decisión.** El servicio externo de terceros que consumirá la plataforma se encuentra en evaluación. Los dos sistemas externos representados corresponden a capacidades de infraestructura ya identificadas; una vez seleccionado el proveedor concreto, el diagrama se actualizará con su nombre y el protocolo de integración correspondiente.
 
 ---
 
@@ -1329,41 +1339,38 @@ Para FleetSafe se han identificado los siguientes containers:
 | **Database** | PostgreSQL | Base de datos relacional que almacena la información de la plataforma. |
 | **File Storage** | Servicio de almacenamiento de objetos | Almacenamiento de evidencias fotográficas. |
 
-A continuación se presenta el diagrama de contenedores de FleetSafe:
+A continuación se presenta el diagrama de contenedores de FleetSafe, generado a partir del mismo modelo de Structurizr:
 
-```plantuml
-@startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+<img src="img/c4/02-containers.png" alt="Diagrama de contenedores de FleetSafe" width="1000">
 
-title Container Diagram - FleetSafe
+<details>
+<summary>Structurizr DSL — vista de contenedores</summary>
 
-Person(admin, "Administrator", "Manages users and roles.")
-Person(supervisor, "Fleet Supervisor", "Supervises vehicles and manages incidents.")
-Person(driver, "Driver", "Performs pre-operational inspections.")
-
-System_Boundary(fleetsafe, "FleetSafe") {
-    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static presentation website for FleetSafe.")
-    Container(webapp, "Web Application", "Angular", "Web application that allows users to interact with the platform features according to their role.")
-    Container(api, "Backend RESTful API", "Spring Boot (Java)", "RESTful API that exposes the business logic of FleetSafe.")
-    ContainerDb(db, "Database", "PostgreSQL", "Stores information about users, vehicles, inspections, evaluations, incidents and documents.")
+```
+fleetsafe = softwareSystem "FleetSafe" {
+    landing  = container "Landing Page" "Static site that presents the value proposition and directs each target segment to the corresponding view of the web application." "HTML5, CSS3, JavaScript"
+    webapp   = container "Web Application" "Allows each user to operate the platform according to the role granted to their account." "Angular, Angular Material, TypeScript"
+    api      = container "Backend RESTful API" "Exposes the business logic of FleetSafe, documented with OpenAPI." "Spring Boot, Spring Data JPA, Java"
+    database = container "Database" "Stores users, fleet assets, documents, inspections, evaluations, authorizations and incidents." "PostgreSQL" "Database"
 }
 
-System_Ext(storage, "Storage Service", "Stores photographic evidence.")
-System_Ext(email, "Email System", "Sends notifications.")
+visitor -> landing "Evaluates the value proposition" "HTTPS"
+landingSegmentCta -> webapp "Directs each segment to its corresponding view" "HTTPS"
+administrator -> webapp "Manages users, catalogs and evaluation rules" "HTTPS"
+supervisor -> webapp "Supervises vehicles, manages incidents and authorizes exceptions" "HTTPS"
+driver -> webapp "Performs pre-operational inspections" "HTTPS"
+webapp -> api "Consumes services" "JSON/HTTPS"
+api -> database "Reads and writes" "JDBC"
+api -> storageService "Stores and retrieves evidence" "HTTPS"
+api -> emailSystem "Sends notifications" "SMTP"
 
-Rel(admin, webapp, "Uses", "HTTPS")
-Rel(supervisor, webapp, "Uses", "HTTPS")
-Rel(driver, webapp, "Uses", "HTTPS")
-Rel(admin, landing, "Visits", "HTTPS")
-Rel(supervisor, landing, "Visits", "HTTPS")
-Rel(driver, landing, "Visits", "HTTPS")
-Rel(webapp, api, "Consumes services", "JSON/HTTPS")
-Rel(api, db, "Reads and writes", "JDBC")
-Rel(api, storage, "Stores and retrieves evidence", "HTTPS")
-Rel(api, email, "Sends notifications", "SMTP")
-
-@enduml
+container fleetsafe "Containers" {
+    include *
+    autolayout lr
+}
 ```
+
+</details>
 
 **Explicación del diagrama:**
 
@@ -1383,98 +1390,56 @@ Las relaciones entre los containers muestran que los usuarios acceden a la Landi
 <a id="464-software-architecture-components-diagrams"></a>
 ### 4.6.4. Software Architecture Components Diagrams.
 
-Los Component Diagrams son el tercer nivel del modelo C4 y muestran la descomposición de cada container en componentes, sus responsabilidades e interacciones. A continuación se presenta el diagrama de componentes para el container Backend RESTful API de FleetSafe.
+Los Component Diagrams son el tercer nivel del modelo C4 y descomponen cada container en los componentes que lo forman, indicando su responsabilidad, la tecnología con la que se implementa y las relaciones entre ellos. Se presenta **un diagrama por cada container de software**: Landing Page, Web Application y Backend RESTful API.
 
-#### Component Diagram: Backend RESTful API
+El container **Database** no cuenta con un diagrama de componentes propio porque no es una unidad de software descomponible en componentes, sino un almacén de datos; su estructura interna se documenta en la sección [4.8. Database Design](#48-database-design).
 
-```plantuml
-@startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+**Criterio de descomposición.** Los componentes del Backend RESTful API se agrupan **por bounded context y no por capa técnica**. Agruparlos por capa —todos los controllers juntos, todos los services juntos— produciría un diagrama que no refleja el diseño orientado al dominio descrito en la sección 4.6 y que contradiría la organización por contextos del modelo de datos de la sección 4.8. Cada grupo del diagrama corresponde a uno de los seis bounded contexts y se traduce directamente en un paquete del proyecto Spring Boot, con sus propias capas en el interior.
 
-title Component Diagram - Backend RESTful API
+---
 
-Container_Boundary(api, "Backend RESTful API") {
-    Component(authController, "Auth Controller", "Spring REST Controller", "Handles authentication and token issuance requests.")
-    Component(userController, "User Controller", "Spring REST Controller", "Handles requests related to users and roles.")
-    Component(vehicleController, "Vehicle Controller", "Spring REST Controller", "Handles requests related to vehicles.")
-    Component(inspectionController, "Inspection Controller", "Spring REST Controller", "Handles requests related to pre-operational inspections.")
-    Component(evaluationController, "Evaluation Controller", "Spring REST Controller", "Handles requests related to vehicle evaluation and authorization.")
-    Component(incidentController, "Incident Controller", "Spring REST Controller", "Handles requests related to incidents.")
-    Component(documentController, "Document Controller", "Spring REST Controller", "Handles requests related to vehicle documentation.")
-    Component(reportController, "Report Controller", "Spring REST Controller", "Handles requests related to history and reports.")
+#### Component Diagram: Landing Page
 
-    Component(authService, "Auth Service", "Spring Service", "Implements authentication and authorization logic.")
-    Component(userService, "User Service", "Spring Service", "Implements user and role management logic.")
-    Component(vehicleService, "Vehicle Service", "Spring Service", "Implements vehicle management logic.")
-    Component(inspectionService, "Inspection Service", "Spring Service", "Implements pre-operational inspection logic.")
-    Component(evaluationService, "Evaluation Service", "Spring Service", "Implements evaluation and vehicle status determination logic.")
-    Component(incidentService, "Incident Service", "Spring Service", "Implements incident management logic.")
-    Component(documentService, "Document Service", "Spring Service", "Implements vehicle documentation logic.")
-    Component(reportService, "Report Service", "Spring Service", "Implements report generation and history logic.")
+<img src="img/c4/03-components-landing.png" alt="Diagrama de componentes del Landing Page" width="900">
 
-    Component(authRepository, "Auth Repository", "Spring Data JPA", "Data access for authentication.")
-    Component(userRepository, "User Repository", "Spring Data JPA", "Data access for users.")
-    Component(vehicleRepository, "Vehicle Repository", "Spring Data JPA", "Data access for vehicles.")
-    Component(inspectionRepository, "Inspection Repository", "Spring Data JPA", "Data access for inspections.")
-    Component(evaluationRepository, "Evaluation Repository", "Spring Data JPA", "Data access for evaluations.")
-    Component(incidentRepository, "Incident Repository", "Spring Data JPA", "Data access for incidents.")
-    Component(documentRepository, "Document Repository", "Spring Data JPA", "Data access for documents.")
+<details>
+<summary>Structurizr DSL — componentes del Landing Page</summary>
 
-    Component(storageClient, "Storage Client", "HTTP Client", "Client for the evidence storage service.")
-    Component(emailClient, "Email Client", "SMTP Client", "Client for sending email notifications.")
+```
+landing = container "Landing Page" "..." "HTML5, CSS3, JavaScript" {
+    landingNavigation = component "Navigation Bar" "Provides access to the content sections and to the sign-in and sign-up entry points." "HTML, CSS"
+    landingContent    = component "Content Sections" "Presents the problem, the platform, the process, the profiles and the frequently asked questions." "HTML, CSS"
+    landingSegmentCta = component "Segment Call to Action" "Directs each target segment to the view of the web application that corresponds to its role." "HTML, JavaScript"
+    landingLegal      = component "Legal Pages" "Presents the terms and conditions and the privacy policy, linked from the footer." "HTML, CSS"
+    landingI18n       = component "Language Switcher" "Switches the content between en_US and es_419 and sets the corresponding language attribute." "JavaScript"
 }
 
-ContainerDb(db, "Database", "PostgreSQL", "Stores platform information.")
-System_Ext(storage, "Storage Service", "Stores evidence.")
-System_Ext(email, "Email System", "Sends notifications.")
+visitor -> landing "Evaluates the value proposition" "HTTPS"
+landingSegmentCta -> webapp "Directs each segment to its corresponding view" "HTTPS"
 
-Rel(authController, authService, "Uses")
-Rel(userController, userService, "Uses")
-Rel(vehicleController, vehicleService, "Uses")
-Rel(inspectionController, inspectionService, "Uses")
-Rel(evaluationController, evaluationService, "Uses")
-Rel(incidentController, incidentService, "Uses")
-Rel(documentController, documentService, "Uses")
-Rel(reportController, reportService, "Uses")
-
-Rel(authService, authRepository, "Uses")
-Rel(userService, userRepository, "Uses")
-Rel(vehicleService, vehicleRepository, "Uses")
-Rel(inspectionService, inspectionRepository, "Uses")
-Rel(evaluationService, evaluationRepository, "Uses")
-Rel(incidentService, incidentRepository, "Uses")
-Rel(documentService, documentRepository, "Uses")
-
-Rel(authRepository, db, "Reads and writes", "JDBC")
-Rel(userRepository, db, "Reads and writes", "JDBC")
-Rel(vehicleRepository, db, "Reads and writes", "JDBC")
-Rel(inspectionRepository, db, "Reads and writes", "JDBC")
-Rel(evaluationRepository, db, "Reads and writes", "JDBC")
-Rel(incidentRepository, db, "Reads and writes", "JDBC")
-Rel(documentRepository, db, "Reads and writes", "JDBC")
-
-Rel(inspectionService, storageClient, "Uses")
-Rel(storageClient, storage, "Stores evidence", "HTTPS")
-Rel(incidentService, emailClient, "Uses")
-Rel(emailClient, email, "Sends notifications", "SMTP")
-
-@enduml
+component landing "ComponentsLanding" {
+    include *
+    autolayout lr
+}
 ```
 
-**Explicación del diagrama:**
+</details>
 
-El diagrama de componentes del Backend RESTful API muestra la descomposición del container en los siguientes grupos de componentes:
+| Componente | Tecnología | Responsabilidad |
+|:-----------|:-----------|:----------------|
+| **Navigation Bar** | HTML, CSS | Da acceso a las secciones de contenido y a los puntos de entrada de inicio de sesión y registro. |
+| **Content Sections** | HTML, CSS | Presenta la problemática, la plataforma, el proceso, los perfiles y las preguntas frecuentes. |
+| **Segment Call to Action** | HTML, JavaScript | Dirige a cada segmento objetivo a la vista de la Web Application que corresponde a su rol. |
+| **Legal Pages** | HTML, CSS | Presenta los términos y condiciones y la política de privacidad, enlazados desde el pie de página. |
+| **Language Switcher** | JavaScript | Alterna el contenido entre `en_US` y `es_419` y establece el atributo de idioma correspondiente. |
 
-- **Controllers:** componentes que exponen los endpoints RESTful y gestionan las solicitudes HTTP. Se han identificado controllers para autenticación, usuarios, vehículos, inspecciones, evaluaciones, incidencias, documentación y reportes.
-- **Services:** componentes que implementan la lógica de negocio de cada área funcional.
-- **Repositories:** componentes que gestionan el acceso a datos mediante Spring Data JPA.
-- **Clients:** componentes que gestionan la comunicación con servicios externos, como el almacenamiento de evidencias y el envío de notificaciones por correo.
+**Explicación del diagrama.** El Landing Page es un sitio estático, por lo que sus componentes son secciones de contenido y no unidades de lógica de negocio. El componente con responsabilidad arquitectónica propia es **Segment Call to Action**: es el que materializa la relación entre el Landing Page y la Web Application, dirigiendo a cada segmento objetivo a la vista que le corresponde según su rol. **Language Switcher** y **Legal Pages** se representan de forma explícita porque implementan dos requisitos transversales del producto —la internacionalización en `en_US` y `es_419`, y el enlace a los documentos legales desde el pie de página— cuya ausencia afectaría al cumplimiento del producto con independencia del contenido presentado.
 
-Las relaciones muestran el flujo de dependencias desde los controllers hacia los services, y desde estos hacia los repositories y clients.
+---
 
+#### Component Diagram: Web Application
 
-<a id="47-software-object-oriented-design"></a>
-## 4.7. Software Object-Oriented Design.
+<img src="img/c4/04-components-webapp.png" alt="Diagrama de componentes de la Web Application" width="1000">
 
 <a id="471-class-diagrams"></a>
 ### 4.7.1. Class Diagrams.
