@@ -2487,14 +2487,134 @@ El panel es la vista inicial de la Web Application tras la autenticación. Su fu
 <a id="44-web-applications-uxui-design"></a>
 ## 4.4. Web Applications UX/UI Design.
 
+En esta sección se presenta el diseño de la Frontend Web Application de FleetSafe. El punto de partida son las decisiones establecidas en las secciones 4.1 y 4.2: el design system, la retícula de 4 px, la paleta de estado operativo y los sistemas de organización y navegación definidos para cada rol.
+
+**Criterio de diseño: cada producto se diseña primero en el dispositivo desde el que se usa.** La Web Application tiene dos audiencias con contextos de uso opuestos. El **conductor** la utiliza de pie junto al vehículo, de madrugada, con una sola mano libre y con prisa; sus vistas se diseñan primero para **Mobile 390 px**. El **supervisor de flota** trabaja sentado ante un monitor revisando una flota completa; sus vistas se diseñan primero para **Desktop 1280 px**. Cada una se adapta después al otro extremo, conforme a los patrones establecidos en la sección 4.1.2.
+
+Se han diseñado **catorce vistas** que cubren los recorridos completos de ambos roles, además de la administración de documentos e incidencias.
+
 <a id="441-web-applications-wireframes"></a>
 ### 4.4.1. Web Applications Wireframes.
+
+Se presentan las **catorce vistas** en baja fidelidad. Los wireframes establecen la estructura, la jerarquía visual y la disposición de los elementos de cada vista **sin recurrir al color de marca ni al color semántico**. Trabajar primero en baja fidelidad permite verificar que la información se ordena correctamente por sí sola: si una vista se entiende en escala de grises, se entenderá también con color.
+
+Esta comprobación tiene además una función de **diseño inclusivo**. La condición operativa del vehículo —`Enabled`, `Observed`, `Not Enabled`— es la información más importante del producto, y en los wireframes se lee únicamente por su etiqueta de texto. Eso confirma que un usuario con deficiencia en la percepción del color puede operar la plataforma sin pérdida de información, requisito que la sección 4.1.1 establece como decisión de diseño.
+
+#### Flujo del conductor — Mobile 390 px
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="img/webapp/wireframes/01-sign-in-mobile.png" alt="Wireframe de la vista de inicio de sesión en móvil" width="260"> | <img src="img/webapp/wireframes/02-assigned-vehicle-mobile.png" alt="Wireframe de la vista del vehículo asignado en móvil" width="260"> | <img src="img/webapp/wireframes/03-inspection-checklist-mobile.png" alt="Wireframe del checklist de inspección en móvil" width="260"> |
+| **Sign in** | **My assigned vehicle** | **Inspection checklist** |
+| <img src="img/webapp/wireframes/04-observation-evidence-mobile.png" alt="Wireframe del registro de observación y evidencia en móvil" width="260"> | <img src="img/webapp/wireframes/05-summary-mobile.png" alt="Wireframe del resumen de la inspección en móvil" width="260"> | <img src="img/webapp/wireframes/06-result-mobile.png" alt="Wireframe del resultado de la inspección en móvil" width="260"> |
+| **Observation and evidence** | **Summary** | **Result** |
+| <img src="img/webapp/wireframes/12-fleet-mobile.png" alt="Wireframe del listado de flota en móvil" width="260"> | | |
+| **Fleet** (supervisor, móvil) | | |
+
+La vista **Fleet** en móvil muestra la adaptación declarada en la sección 4.1.2: el listado que en escritorio es una tabla con columnas ordenables se convierte en tarjetas apiladas, una por vehículo, porque una tabla de seis columnas no es operable a 390 px.
+
+#### Flujo del supervisor — Desktop 1280 px
+
+<img src="img/webapp/wireframes/07-fleet-dashboard-desktop.png" alt="Wireframe del tablero de flota en escritorio" width="1000">
+
+**Fleet dashboard.** La jerarquía sitúa primero el resumen por condición operativa y después el detalle por vehículo, conforme al principio de *surfacing the summary before the detail* establecido en 4.1.1.
+
+<img src="img/webapp/wireframes/08-vehicle-detail-desktop.png" alt="Wireframe del detalle de vehículo en escritorio" width="1000">
+
+**Vehicle detail.** Presenta la ficha del vehículo, su conductor asignado y el estado de sus documentos, con el historial de inspecciones organizado en pestañas.
+
+<img src="img/webapp/wireframes/09-inspection-detail-desktop.png" alt="Wireframe del detalle de una inspección en escritorio" width="1000">
+
+**Inspection detail.** El bloque superior explica **por qué** el vehículo no está habilitado, citando la regla concreta que se aplicó.
+
+<img src="img/webapp/wireframes/10-lift-block-desktop.png" alt="Wireframe del diálogo de levantamiento de bloqueo" width="1000">
+
+**Lift block.** Diálogo modal sobre velo, con la justificación como campo obligatorio.
+
+<img src="img/webapp/wireframes/11-inspection-history-desktop.png" alt="Wireframe del historial de inspecciones en escritorio" width="1000">
+
+**Inspection history.** Vista de auditoría, con filtros acumulativos y el recuento de excepciones autorizadas.
+
+<img src="img/webapp/wireframes/13-documents-desktop.png" alt="Wireframe de la vista de documentos vehiculares en escritorio" width="1000">
+
+**Documents.** Control de vigencia documental, ordenado por proximidad al vencimiento.
+
+<img src="img/webapp/wireframes/14-incidents-desktop.png" alt="Wireframe de la vista de incidencias en escritorio" width="1000">
+
+**Incidents.** Seguimiento de las incidencias detectadas, con el detalle de la acción correctiva y la reparación programada bajo el listado.
 
 <a id="442-web-applications-wireflow-diagrams"></a>
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
+Los wireflows muestran el recorrido que sigue el usuario para alcanzar un User goal, representando **cada cambio de pantalla como un paso con el wireframe del nuevo estado**. La flecha entre dos pasos nombra la acción que provoca la transición.
+
+Los wireframes empleados son exactamente los mismos de la sección 4.4.1, de modo que ambos artefactos no pueden divergir: una modificación en una vista se refleja en los dos.
+
+#### Wireflow 1 — Driver: realizar la inspección preoperacional
+
+**User goal.** Como conductor, deseo registrar el estado del vehículo asignado antes de iniciar la operación. Corresponde a las User Stories US17 a US21.
+
+<img src="img/webapp/wireflows/01-driver-inspection.png" alt="Wireflow del recorrido de inspección preoperacional del conductor, en seis pasos" width="1000">
+
+El recorrido recoge el caso **más exigente**, no el más favorable: el conductor detecta una falla en el sistema de frenos, el sistema le exige observación y evidencia fotográfica antes de continuar, y la inspección termina con el vehículo no habilitado. El paso 4 regresa al checklist, lo que evidencia que el registro de una observación no interrumpe la secuencia.
+
+#### Wireflow 2 — Fleet Supervisor: saber qué vehículos pueden operar
+
+**User goal.** Como supervisor, deseo identificar qué unidades pueden operar y conocer el motivo cuando alguna no puede. Corresponde a US25 y US35.
+
+<img src="img/webapp/wireflows/02-supervisor-fleet-status.png" alt="Wireflow del recorrido de consulta de la condición de la flota, en tres pasos" width="1000">
+
+Tres pasos bastan para pasar de la visión general de la flota a la regla concreta que bloqueó un vehículo. Esa brevedad es deliberada: es la consulta que el supervisor realiza a primera hora, todos los días.
+
+#### Wireflow 3 — Fleet Supervisor: levantar el bloqueo de un vehículo
+
+**User goal.** Como supervisor, deseo autorizar la salida de un vehículo no habilitado cuando la operación no puede esperar, dejando constancia. Sostiene la Estrategia 2 de la sección 2.1.2.
+
+<img src="img/webapp/wireflows/03-supervisor-lift-block.png" alt="Wireflow del recorrido de levantamiento de bloqueo, en tres pasos" width="1000">
+
+El tercer paso no es decorativo: cierra el recorrido mostrando la excepción ya registrada en el historial de auditoría. Es la contrapartida que hace aceptable permitir la excepción, y el usuario la ve antes de autorizar.
+
 <a id="443-web-applications-mock-ups"></a>
 ### 4.4.3. Web Applications Mock-ups.
+
+Los mock-ups aplican sobre los wireframes anteriores el **design system** definido en la sección 4.1: la paleta de marca, los colores de estado operativo verificados contra WCAG 2.1 AA, la escala tipográfica de Roboto, la retícula de espaciado de 4 px y los componentes de Angular Material.
+
+Se incorporan además dos elementos que los wireframes no representan: el **selector de idioma** `EN · ES` en la barra superior, conforme al sistema de navegación de la sección 4.2.5, y la **codificación cromática del estado operativo**, que acompaña siempre a la etiqueta de texto y nunca la sustituye.
+
+#### Flujo del conductor — Mobile 390 px
+
+| | | |
+|:---:|:---:|:---:|
+| <img src="img/webapp/mockups/01-sign-in-mobile.png" alt="Mock-up de la vista de inicio de sesión en móvil" width="260"> | <img src="img/webapp/mockups/02-assigned-vehicle-mobile.png" alt="Mock-up de la vista del vehículo asignado en móvil" width="260"> | <img src="img/webapp/mockups/03-inspection-checklist-mobile.png" alt="Mock-up del checklist de inspección en móvil" width="260"> |
+| **Sign in** | **My assigned vehicle** | **Inspection checklist** |
+| <img src="img/webapp/mockups/04-observation-evidence-mobile.png" alt="Mock-up del registro de observación y evidencia en móvil" width="260"> | <img src="img/webapp/mockups/05-summary-mobile.png" alt="Mock-up del resumen de la inspección en móvil" width="260"> | <img src="img/webapp/mockups/06-result-mobile.png" alt="Mock-up del resultado de la inspección en móvil" width="260"> |
+| **Observation and evidence** | **Summary** | **Result** |
+
+En el **checklist** el selector segmentado `OK · Obs. · Fail` mide 48 × 48 px, la medida mínima que establece la sección 4.1.2. No es un detalle menor: el conductor lo pulsa cuarenta y dos veces seguidas, con guantes y sin detenerse a mirar.
+
+La vista **Result** emplea el tono definido en 4.1.1 —serio, respetuoso y sereno—: describe la condición del vehículo, no evalúa al conductor, y explica el paso siguiente en lugar de alarmar.
+
+#### Flujo del supervisor — Desktop 1280 px
+
+<img src="img/webapp/mockups/07-fleet-dashboard-desktop.png" alt="Mock-up del tablero de flota en escritorio" width="1000">
+
+<img src="img/webapp/mockups/08-vehicle-detail-desktop.png" alt="Mock-up del detalle de vehículo en escritorio" width="1000">
+
+<img src="img/webapp/mockups/09-inspection-detail-desktop.png" alt="Mock-up del detalle de una inspección en escritorio" width="1000">
+
+<img src="img/webapp/mockups/10-lift-block-desktop.png" alt="Mock-up del diálogo de levantamiento de bloqueo" width="1000">
+
+<img src="img/webapp/mockups/11-inspection-history-desktop.png" alt="Mock-up del historial de inspecciones en escritorio" width="1000">
+
+<img src="img/webapp/mockups/13-documents-desktop.png" alt="Mock-up de la vista de documentos vehiculares en escritorio" width="1000">
+
+<img src="img/webapp/mockups/14-incidents-desktop.png" alt="Mock-up de la vista de incidencias en escritorio" width="1000">
+
+#### Vistas del supervisor adaptadas a Mobile
+
+<img src="img/webapp/mockups/12-fleet-mobile.png" alt="Mock-up del listado de flota adaptado a móvil" width="300">
+
+El botón **Authorize departure** del diálogo de levantamiento de bloqueo es el único elemento del producto que emplea el color destructivo. Esa excepción es deliberada: señala que la acción interrumpe el control preventivo y quedará registrada con el nombre de quien la autoriza.
 
 <a id="444-web-applications-user-flow-diagrams"></a>
 ### 4.4.4. Web Applications User Flow Diagrams.
