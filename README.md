@@ -1219,10 +1219,9 @@ A continuación se presenta el Product Backlog consolidado:
 <img src="img/wireframe/09-llamada-accion.png" width="1000">
 <img src="img/wireframe/10-footer.png" width="1000">
 
-
 <a id="432-landing-page-mock-up"></a>
 ### 4.3.2. Landing Page Mock-up.
-
+<img src="img/mockup/01-navegacion.png" width="1000">
 
 <a id="44-web-applications-uxui-design"></a>
 ## 4.4. Web Applications UX/UI Design.
