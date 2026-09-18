@@ -1209,6 +1209,8 @@ A continuación se presenta el Product Backlog consolidado:
 <a id="431-landing-page-wireframe"></a>
 ### 4.3.1. Landing Page Wireframe.
 <img src="img/wireframe/01-navegacion.png" width="500">
+<img src="img/wireframe/02-hero.png" width="500">
+
 <a id="432-landing-page-mock-up"></a>
 ### 4.3.2. Landing Page Mock-up.
 
