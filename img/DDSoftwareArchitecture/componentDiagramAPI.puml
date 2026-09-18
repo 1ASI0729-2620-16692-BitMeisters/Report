@@ -1,0 +1,71 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - Backend RESTful API
+
+Container_Boundary(api, "Backend RESTful API") {
+    Component(authController, "Auth Controller", "Spring REST Controller", "Handles authentication and token issuance requests.")
+    Component(userController, "User Controller", "Spring REST Controller", "Handles requests related to users and roles.")
+    Component(vehicleController, "Vehicle Controller", "Spring REST Controller", "Handles requests related to vehicles.")
+    Component(inspectionController, "Inspection Controller", "Spring REST Controller", "Handles requests related to pre-operational inspections.")
+    Component(evaluationController, "Evaluation Controller", "Spring REST Controller", "Handles requests related to vehicle evaluation and authorization.")
+    Component(incidentController, "Incident Controller", "Spring REST Controller", "Handles requests related to incidents.")
+    Component(documentController, "Document Controller", "Spring REST Controller", "Handles requests related to vehicle documentation.")
+    Component(reportController, "Report Controller", "Spring REST Controller", "Handles requests related to history and reports.")
+
+    Component(authService, "Auth Service", "Spring Service", "Implements authentication and authorization logic.")
+    Component(userService, "User Service", "Spring Service", "Implements user and role management logic.")
+    Component(vehicleService, "Vehicle Service", "Spring Service", "Implements vehicle management logic.")
+    Component(inspectionService, "Inspection Service", "Spring Service", "Implements pre-operational inspection logic.")
+    Component(evaluationService, "Evaluation Service", "Spring Service", "Implements evaluation and vehicle status determination logic.")
+    Component(incidentService, "Incident Service", "Spring Service", "Implements incident management logic.")
+    Component(documentService, "Document Service", "Spring Service", "Implements vehicle documentation logic.")
+    Component(reportService, "Report Service", "Spring Service", "Implements report generation and history logic.")
+
+    Component(authRepository, "Auth Repository", "Spring Data JPA", "Data access for authentication.")
+    Component(userRepository, "User Repository", "Spring Data JPA", "Data access for users.")
+    Component(vehicleRepository, "Vehicle Repository", "Spring Data JPA", "Data access for vehicles.")
+    Component(inspectionRepository, "Inspection Repository", "Spring Data JPA", "Data access for inspections.")
+    Component(evaluationRepository, "Evaluation Repository", "Spring Data JPA", "Data access for evaluations.")
+    Component(incidentRepository, "Incident Repository", "Spring Data JPA", "Data access for incidents.")
+    Component(documentRepository, "Document Repository", "Spring Data JPA", "Data access for documents.")
+
+    Component(storageClient, "Storage Client", "HTTP Client", "Client for the evidence storage service.")
+    Component(emailClient, "Email Client", "SMTP Client", "Client for sending email notifications.")
+}
+
+ContainerDb(db, "Database", "PostgreSQL", "Stores platform information.")
+System_Ext(storage, "Storage Service", "Stores evidence.")
+System_Ext(email, "Email System", "Sends notifications.")
+
+Rel(authController, authService, "Uses")
+Rel(userController, userService, "Uses")
+Rel(vehicleController, vehicleService, "Uses")
+Rel(inspectionController, inspectionService, "Uses")
+Rel(evaluationController, evaluationService, "Uses")
+Rel(incidentController, incidentService, "Uses")
+Rel(documentController, documentService, "Uses")
+Rel(reportController, reportService, "Uses")
+
+Rel(authService, authRepository, "Uses")
+Rel(userService, userRepository, "Uses")
+Rel(vehicleService, vehicleRepository, "Uses")
+Rel(inspectionService, inspectionRepository, "Uses")
+Rel(evaluationService, evaluationRepository, "Uses")
+Rel(incidentService, incidentRepository, "Uses")
+Rel(documentService, documentRepository, "Uses")
+
+Rel(authRepository, db, "Reads and writes", "JDBC")
+Rel(userRepository, db, "Reads and writes", "JDBC")
+Rel(vehicleRepository, db, "Reads and writes", "JDBC")
+Rel(inspectionRepository, db, "Reads and writes", "JDBC")
+Rel(evaluationRepository, db, "Reads and writes", "JDBC")
+Rel(incidentRepository, db, "Reads and writes", "JDBC")
+Rel(documentRepository, db, "Reads and writes", "JDBC")
+
+Rel(inspectionService, storageClient, "Uses")
+Rel(storageClient, storage, "Stores evidence", "HTTPS")
+Rel(incidentService, emailClient, "Uses")
+Rel(emailClient, email, "Sends notifications", "SMTP")
+
+@enduml

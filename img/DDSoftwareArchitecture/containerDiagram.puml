@@ -1,0 +1,31 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Container Diagram - FleetSafe
+
+Person(admin, "Administrator", "Manages users and roles.")
+Person(supervisor, "Fleet Supervisor", "Supervises vehicles and manages incidents.")
+Person(driver, "Driver", "Performs pre-operational inspections.")
+
+System_Boundary(fleetsafe, "FleetSafe") {
+    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static presentation website for FleetSafe.")
+    Container(webapp, "Web Application", "Angular", "Web application that allows users to interact with the platform features according to their role.")
+    Container(api, "Backend RESTful API", "Spring Boot (Java)", "RESTful API that exposes the business logic of FleetSafe.")
+    ContainerDb(db, "Database", "PostgreSQL", "Stores information about users, vehicles, inspections, evaluations, incidents and documents.")
+}
+
+System_Ext(storage, "Storage Service", "Stores photographic evidence.")
+System_Ext(email, "Email System", "Sends notifications.")
+
+Rel(admin, webapp, "Uses", "HTTPS")
+Rel(supervisor, webapp, "Uses", "HTTPS")
+Rel(driver, webapp, "Uses", "HTTPS")
+Rel(admin, landing, "Visits", "HTTPS")
+Rel(supervisor, landing, "Visits", "HTTPS")
+Rel(driver, landing, "Visits", "HTTPS")
+Rel(webapp, api, "Consumes services", "JSON/HTTPS")
+Rel(api, db, "Reads and writes", "JDBC")
+Rel(api, storage, "Stores and retrieves evidence", "HTTPS")
+Rel(api, email, "Sends notifications", "SMTP")
+
+@enduml
