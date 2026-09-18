@@ -1421,6 +1421,171 @@ Los recursos visuales del proyecto se organizan de la siguiente manera dentro de
 <a id="412-web-style-guidelines"></a>
 ### 4.1.2. Web Style Guidelines.
 
+Esta sección define los estándares visuales y de interacción aplicables a las interfaces web responsive de FleetSafe: la Landing Page y la Web Application. Los lineamientos aquí establecidos complementan los General Style Guidelines de la sección 4.1.1 y se aplican de forma diferenciada según el producto, en coherencia con la distinción entre ambos establecida en la sección 1.1.1.
+
+---
+
+#### Principios de diseño responsive
+
+La solución se ejecuta íntegramente en el navegador, sin requerir instalación ni hardware, conforme a la Estrategia 3 planteada en la sección 2.1.2. Esto determina que la interfaz debe adaptarse correctamente a los siguientes contextos de uso:
+
+| Contexto | Producto | Dispositivo típico | Condición de uso |
+|:---------|:---------|:-------------------|:-----------------|
+| Presentación | Landing Page | Computadora de escritorio, laptop, tablet | El visitante evalúa la propuesta de valor en un entorno controlado. |
+| Supervisión | Web Application | Computadora de escritorio, laptop | El supervisor revisa estados, gestiona incidencias y consulta historial. |
+| Inspección | Web Application | Teléfono móvil | El conductor realiza la inspección junto al vehículo, frecuentemente en exteriores y bajo luz solar directa. |
+
+El tercer contexto es el más restrictivo y es el que condiciona las decisiones de esta sección: la inspección preoperacional debe poder completarse desde el navegador de un teléfono móvil, con una sola mano y en condiciones de luz adversas.
+
+---
+
+#### Breakpoints
+
+Se adopta un enfoque **mobile-first** para la Web Application y un enfoque **desktop-first** para la Landing Page, dado que los contextos de uso de cada producto son distintos.
+
+| Token | Rango | Aplicación |
+|:------|:------|:-----------|
+| `bp-mobile` | 320 px – 639 px | Web Application: inspección preoperacional |
+| `bp-tablet` | 640 px – 1023 px | Web Application: supervisión en tablet |
+| `bp-desktop` | 1024 px – 1439 px | Landing Page y Web Application: supervisión |
+| `bp-wide` | 1440 px en adelante | Landing Page: presentación |
+
+---
+
+#### Grilla y layout
+
+| Aspecto | Landing Page | Web Application |
+|:--------|:-------------|:----------------|
+| **Columnas** | 12 columnas | 12 columnas |
+| **Ancho máximo de contenido** | 1200 px | 1440 px |
+| **Gutter** | `space-5` (24 px) | `space-4` (16 px) |
+| **Margen lateral** | `space-7` (48 px) en desktop, `space-4` en móvil | `space-4` en todas las resoluciones |
+| **Estructura** | Secciones apiladas verticalmente, cada una de ancho completo | Barra lateral de navegación fija más área de contenido |
+
+**Estructura de la Web Application**
+
+En resoluciones de escritorio, la Web Application emplea una barra lateral de navegación fija de 240 px y un área de contenido que ocupa el resto del ancho. En resoluciones móviles, la barra lateral se reemplaza por un menú colapsable, y el área de contenido ocupa el ancho completo, dado que el conductor debe concentrarse en la inspección y no en la navegación.
+
+---
+
+#### Componentes de interfaz
+
+Los componentes que se describen a continuación se emplean de forma consistente en toda la Web Application, en correspondencia con las funcionalidades definidas en las User Stories de la sección 3.1.
+
+**Botones**
+
+| Variante | Uso | Ejemplo de aplicación |
+|:---------|:----|:----------------------|
+| `primary` | Acción principal de una vista | Finalizar inspección (US21) |
+| `secondary` | Acción alternativa | Cancelar, volver |
+| `danger` | Acción destructiva o de bloqueo | Marcar vehículo como no habilitado |
+| `ghost` | Acción terciaria o dentro de una tabla | Consultar detalle (US14) |
+
+**Campos de formulario**
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Altura** | 44 px en móvil, 40 px en escritorio |
+| **Borde** | `1 px solid color-neutral-200`, con `radius-sm` |
+| **Estado de foco** | Borde `color-primary-500` con anillo de foco perceptible |
+| **Estado de error** | Borde `color-error` acompañado de mensaje de texto descriptivo |
+| **Validación** | Se ejecuta al perder el foco y al enviar el formulario, nunca mientras el usuario escribe |
+| **Etiquetas** | Siempre visibles sobre el campo, nunca como *placeholder* únicamente |
+
+**Indicadores de estado del vehículo**
+
+El estado del vehículo es la información más relevante de la interfaz, porque responde a la pregunta principal de FleetSafe: *¿este vehículo cumple las condiciones necesarias para operar?* Por ello, todo indicador de estado debe presentarse como una etiqueta que combine color, ícono y texto.
+
+| Estado | Presentación |
+|:-------|:-------------|
+| **Habilitado** | Fondo `color-status-enabled` al 10 %, texto e ícono en `color-status-enabled`, etiqueta "Habilitado" |
+| **Observado** | Fondo `color-status-observed` al 10 %, texto e ícono en `color-status-observed`, etiqueta "Observado" |
+| **No habilitado** | Fondo `color-status-not-enabled` al 10 %, texto e ícono en `color-status-not-enabled`, etiqueta "No habilitado" |
+
+**Tarjetas de elemento de inspección**
+
+Cada elemento del catálogo de inspección se presenta al conductor como una tarjeta que contiene el nombre del elemento, su categoría y tres opciones de resultado: Conforme, Observado y No conforme. Cuando el conductor selecciona Observado o No conforme, la tarjeta se expande y solicita la observación y, si corresponde, la evidencia fotográfica, conforme a los criterios de aceptación de US18, US19 y US20.
+
+**Tablas de datos**
+
+Las vistas de supervisión —listado de vehículos, incidencias e historial— emplean tablas con las siguientes características:
+
+- Encabezado fijo al desplazarse verticalmente.
+- Filtros por estado y por vehículo, conforme a US13, US25 y US28.
+- Paginación cuando el número de filas supera las 20.
+- En resoluciones móviles, la tabla se transforma en una lista de tarjetas apiladas.
+
+---
+
+#### Estados de la interfaz
+
+Toda vista que consulte datos debe contemplar los siguientes estados, con el fin de evitar que el usuario interprete una ausencia de información como un error del sistema.
+
+| Estado | Presentación | Ejemplo |
+|:-------|:-------------|:--------|
+| **Carga** | Indicador de progreso o esqueleto de la estructura | Consulta del listado de vehículos (US13) |
+| **Vacío** | Mensaje descriptivo que indica la ausencia de datos y, cuando corresponde, la acción para generarlos | "El vehículo no tiene inspecciones registradas" (US14) |
+| **Error** | Mensaje que describe la causa y ofrece una acción de recuperación | Fallo al cargar el listado de incidencias (US28) |
+| **Éxito** | Confirmación breve de la operación realizada | "Inspección finalizada. El vehículo ha sido evaluado." (US21) |
+
+---
+
+#### Interacción y retroalimentación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Transiciones** | Entre 150 ms y 250 ms, con curva de aceleración suave |
+| **Confirmación de acciones destructivas** | Toda acción irreversible requiere confirmación explícita del usuario |
+| **Mensajes de validación** | Se presentan junto al campo que originó el error, no en un bloque global |
+| **Notificaciones** | Se emplean únicamente para informar el resultado de una operación, nunca para promociones ni mensajes ajenos a la tarea |
+| **Autoguardado** | La inspección en progreso se conserva localmente para evitar pérdida de información ante una interrupción de conectividad |
+
+El último aspecto es determinante para el conductor: una inspección puede realizarse en una zona con conectividad limitada, y la pérdida de los resultados registrados obligaría a repetir el proceso completo.
+
+---
+
+#### Formato de datos
+
+| Tipo de dato | Formato | Ejemplo |
+|:-------------|:--------|:--------|
+| Fecha | `DD/MM/AAAA` | 11/09/2026 |
+| Fecha y hora | `DD/MM/AAAA HH:mm` | 11/09/2026 14:30 |
+| Placa vehicular | Mayúsculas, sin separadores, en `mono-data` | ABC123 |
+| Identificador | UUID truncado en vistas de listado | a3f2…9c1b |
+| Estado | Etiqueta con color, ícono y texto | Habilitado |
+
+El formato de fecha `DD/MM/AAAA` se adopta por corresponder a la convención empleada en el Perú y en el resto de la región, conforme a la Estrategia 5 de la sección 2.1.2.
+
+---
+
+#### Accesibilidad en la web
+
+Además de los criterios establecidos en la sección 4.1.1, se aplican las siguientes consideraciones específicas de la interfaz web.
+
+| Criterio | Definición |
+|:---------|:-----------|
+| **Navegación por teclado** | Toda funcionalidad debe ser accesible mediante teclado, sin excepción |
+| **Orden de tabulación** | Debe seguir el orden lógico de lectura de la interfaz |
+| **Estructura semántica** | Uso correcto de `header`, `nav`, `main`, `section`, `article` y `footer` |
+| **Etiquetas ARIA** | Se emplean cuando el elemento nativo no comunica adecuadamente su propósito |
+| **Textos alternativos** | Toda imagen informativa debe incluir texto alternativo |
+| **Zoom** | La interfaz debe permanecer funcional con un zoom del 200 % |
+
+---
+
+#### Convenciones de implementación
+
+| Aspecto | Definición |
+|:--------|:-----------|
+| **Unidades** | `rem` para tipografía y espaciado, `px` para bordes y radios |
+| **Metodología CSS** | BEM (Block, Element, Modifier) para la nomenclatura de clases |
+| **Tokens** | Los valores definidos en la sección 4.1.1 se implementan como variables CSS |
+| **Nomenclatura de componentes** | PascalCase para componentes, kebab-case para archivos |
+| **Framework** | Angular, conforme a lo establecido en la sección 4.6.3 |
+| **Responsive** | Media queries basadas en los breakpoints definidos en esta sección |
+
+---
+
 
 <a id="42-information-architecture"></a>
 ## 4.2. Information Architecture.
