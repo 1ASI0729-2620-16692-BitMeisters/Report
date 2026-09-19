@@ -955,18 +955,77 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="23-needfinding"></a>
 ## 2.3. Needfinding.
 
+**Segmento objetivo #1: Empresas de transporte de carga**
+
+Buscan centralizar y visualizar el estado de su flota para tomar decisiones preventivas y reducir riesgos durante las operaciones.
+
+**Segmento objetivo #2: Supervisores de flota**
+
+Necesitan controlar las inspecciones, identificar problemas y dar seguimiento a las incidencias para mantener los vehículos aptos para operar.
+
+**Segmento objetivo #3: Conductores de vehículos de carga**
+
+Necesitan realizar inspecciones pre-operacionales de forma rápida, registrar evidencias y reportar problemas antes de iniciar sus recorridos.
+
 <a id="231-user-personas"></a>
 ### 2.3.1. User Personas.
+
+![userp1](img/needFinding/userPersonas/José%20Ramirez.png)
+![userp2](img/needFinding/userPersonas/Alessandra%20Nova.png)
+![userp3](img/needFinding/userPersonas/Álvaro%20Torres.png)
 
 <a id="232-user-task-matrix"></a>
 ### 2.3.2. User Task Matrix.
 
+En esta sección se presenta la User Task Matrix, herramienta centrada en los segmentos objetivo que permitirá identificar las tareas y objetivos clave de los usuarios de FleetSafe.
+
+| **USER TASK** | **José Ramírez** |  | **Alessandra Nova** |  | **Álvaro Torres** |  |
+|---|---|---|---|---|---|---|
+| | **Frequency** | **Importance** | **Frequency** | **Importance** | **Frequency** | **Importance** |
+| Consultar el estado de la flota | Often | High | Always | High | Sometimes | Medium |
+| Revisar información de los vehículos | Often | High | Always | High | Sometimes | Medium |
+| Revisar resultados de inspecciones | Sometimes | High | Always | High | Always | High |
+| Realizar inspección pre-operacional | Rarely | Medium | Sometimes | High | Always | High |
+| Registrar resultados de inspección | Rarely | Medium | Sometimes | High | Always | High |
+| Reportar condiciones inseguras o problemas | Sometimes | High | Often | High | Always | High |
+| Adjuntar evidencia fotográfica | Rarely | Medium | Often | High | Often | High |
+| Consultar el estado de autorización del vehículo | Often | High | Always | High | Always | High |
+| Gestionar y dar seguimiento a incidencias | Often | High | Always | High | Sometimes | High |
+| Consultar historial de inspecciones e incidencias | Sometimes | Medium | Often | High | Rarely | Medium |
+| Consultar documentación de los vehículos | Often | High | Often | High | Sometimes | Medium |
+| Dar seguimiento a acciones correctivas | Often | High | Always | High | Sometimes | Medium |
+| Recibir notificaciones sobre problemas o incidencias | Always | High | Always | High | Always | High |
+| Generar o consultar reportes de la flota | Often | High | Often | High | Rarely | Low |
+
 <a id="233-user-journey-mapping"></a>
 ### 2.3.3. User Journey Mapping.
+
+**Segmento 1**
+
+![ujm1](img/needFinding/userJourneyMapping/José%20Ramirez%20-%20User%20Journey%20Map.png)
+
+**Segmento 2**
+
+![ujm2](img/needFinding/userJourneyMapping/Alessandra%20Nova%20-%20User%20Journey%20Map.png)
+
+**Segmento 3**
+
+![ujm3](img/needFinding/userJourneyMapping/Álvaro%20Torres%20-%20User%20Journey%20Map.png)
 
 <a id="234-empathy-mapping"></a>
 ### 2.3.4. Empathy Mapping.
 
+**Segmento 1**
+
+![em1](img/needFinding/empathyMapping/Empathy%20map%20-%20José%20Ramirez.png)
+
+**Segmento 2**
+
+![em2](img/needFinding/empathyMapping/Empathy%20map%20-%20Alessandra%20Nova.png)
+
+**Segmento 3**
+
+![em3](img/needFinding/empathyMapping/Empathy%20map%20-%20Álvaro%20Torres.png)
 
 <a id="24-big-picture-eventstorming"></a>
 ## 2.4. Big Picture EventStorming.
@@ -1143,6 +1202,19 @@ A continuación se presenta el cuadro consolidado de Epics y User Stories:
 
 <a id="32-impact-mapping"></a>
 ## 3.2. Impact Mapping.
+
+**Impact Map Segmento 1**
+
+![im1](img/impactMapping/Impact%20map%20-%20José%20Ramirez.png)
+
+**Impact Map Segmento 2**
+
+![im2](img/impactMapping/Impact%20map%20-%20Alessandra%20Nova.png)
+
+**Impact Map Segmento 3**
+
+![im3](img/impactMapping/Impact%20map%20-%20Álvaro%20Toress.png)
+
 
 <a id="33-product-backlog"></a>
 ## 3.3. Product Backlog.
