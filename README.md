@@ -255,7 +255,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:---------------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U202318309                                                                                                     |
 | **Carrera**               | Ingeniería de Software                                                                                         |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                    |
+| **Descripción**           | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. Aporto conocimientos en Java con Spring Boot, C# con .NET, Python, JavaScript y TypeScript, además de bases de datos relacionales con PostgreSQL y MySQL, y no relacionales con MongoDB. Manejo control de versiones con Git y GitFlow, modelado con UML y C4, y contenedores con Docker. Procuro que lo que se afirma se pueda comprobar: verifico el comportamiento real de cada herramienta o producto en sus fuentes oficiales antes de darlo por cierto, y corrijo lo que no coincide con la evidencia. |
 | **Foto**                  | <img src="img/team-members/RodrigoAguilar.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
