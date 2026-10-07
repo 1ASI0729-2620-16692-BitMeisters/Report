@@ -1261,25 +1261,38 @@ Necesitan realizar inspecciones pre-operacionales de forma rápida, registrar ev
 <a id="232-user-task-matrix"></a>
 ### 2.3.2. User Task Matrix.
 
-En esta sección se presenta la User Task Matrix, herramienta centrada en los segmentos objetivo que permitirá identificar las tareas y objetivos clave de los usuarios de FleetSafe.
+<a id="232-user-task-matrix"></a>
+### 2.3.2. User Task Matrix.
 
-| **USER TASK** | **José Ramírez** |  | **Alessandra Nova** |  | **Álvaro Torres** |  |
-|---|---|---|---|---|---|---|
+La User Task Matrix mapea las tareas operativas cotidianas que los usuarios representativos de los tres segmentos objetivo realizan en el mundo real dentro del proceso de control preventivo y despacho de carga, **independientemente de la existencia de una solución de software**. Para cada tarea se evalúa la frecuencia de ejecución (*Always*, *Often*, *Sometimes*, *Rarely*, *Never*) y su nivel de criticidad o importancia (*High*, *Medium*, *Low*):
+
+| **USER TASK (Actividades del Negocio)** | **José Ramírez**<br>*(Gerente / Dueño)* | | **Alessandra Nova**<br>*(Supervisora SST)* | | **Álvaro Torres**<br>*(Conductor de Carga)* | |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
 | | **Frequency** | **Importance** | **Frequency** | **Importance** | **Frequency** | **Importance** |
-| Consultar el estado de la flota | Often | High | Always | High | Sometimes | Medium |
-| Revisar información de los vehículos | Often | High | Always | High | Sometimes | Medium |
-| Revisar resultados de inspecciones | Sometimes | High | Always | High | Always | High |
-| Realizar inspección pre-operacional | Rarely | Medium | Sometimes | High | Always | High |
-| Registrar resultados de inspección | Rarely | Medium | Sometimes | High | Always | High |
-| Reportar condiciones inseguras o problemas | Sometimes | High | Often | High | Always | High |
-| Adjuntar evidencia fotográfica | Rarely | Medium | Often | High | Often | High |
-| Consultar el estado de autorización del vehículo | Often | High | Always | High | Always | High |
-| Gestionar y dar seguimiento a incidencias | Often | High | Always | High | Sometimes | High |
-| Consultar historial de inspecciones e incidencias | Sometimes | Medium | Often | High | Rarely | Medium |
-| Consultar documentación de los vehículos | Often | High | Often | High | Sometimes | Medium |
-| Dar seguimiento a acciones correctivas | Often | High | Always | High | Sometimes | Medium |
-| Recibir notificaciones sobre problemas o incidencias | Always | High | Always | High | Always | High |
-| Generar o consultar reportes de la flota | Often | High | Often | High | Rarely | Low |
+| Inspeccionar visualmente el estado exterior de la carrocería y luces | Rarely | Low | Often | High | Always | High |
+| Medir presión y profundidad de cocada de neumáticos con manómetro físico | Never | Low | Sometimes | High | Always | High |
+| Verificar niveles de fluidos de motor (aceite, refrigerante, frenos) con varilla | Never | Low | Rarely | Medium | Always | High |
+| Constatar presencia y vigencia de equipos de emergencia (extintor, conos, botiquín) | Never | Low | Often | High | Always | High |
+| Llenar la hoja de checklist preoperacional en papel físico o talonario de garita | Never | Low | Sometimes | High | Always | High |
+| Redactar observaciones mecánicas o anomalías detectadas en la libreta de ruta | Never | Low | Often | High | Always | High |
+| Tomar fotografías con el teléfono personal para evidenciar averías preexistentes | Rarely | Medium | Often | High | Often | High |
+| Entregar el formato físico firmado al despachador en la caseta de control de patio | Never | Low | Often | High | Always | High |
+| Digitar manualmente los reportes de papel en hojas de cálculo (Excel) | Rarely | Medium | Always | High | Never | Low |
+| Verificar vigencia física de documentos en cabina (SOAT, CITV, tarjeta de propiedad) | Sometimes | High | Always | High | Often | High |
+| Autorizar verbalmente la salida en ruta de una unidad con fallas no críticas | Often | High | Often | High | Never | Low |
+| Coordinar el ingreso de vehículos con desperfectos mecánicos al taller interno | Often | High | Always | High | Sometimes | Medium |
+| Consolidar el estatus matutino de vehículos disponibles vs. inmovilizados para despacho | Always | High | Always | High | Never | Low |
+| Presentar carpetas físicas de mantenimiento e inspecciones ante auditorías de clientes | Often | High | Often | High | Never | Low |
+
+#### Análisis de la User Task Matrix
+
+El análisis de la matriz evidencia una clara división de responsabilidades operativas entre los tres arquetipos y fundamenta los requerimientos funcionales de FleetSafe:
+
+1. **Tareas críticas del Conductor (Álvaro Torres):** Su rutina diaria se concentra en la revisión física directa de los sistemas de seguridad del camión (neumáticos, fluidos, luces y extintores) y en el llenado manual del checklist en papel con frecuencia *Always* y criticidad *High*. La entrega física de la hoja y la necesidad de tomar fotos personales demuestran que el conductor asume un esfuerzo manual duplicado para protegerse ante sanciones por averías que él no provocó.
+2. **Cuello de botella de la Supervisora (Alessandra Nova):** Su tarea más demandante (*Always* / *High*) es la digitación de planillas de papel a Excel y el control de vigencia documental. Esta carga burocrática le consume tiempo valioso que debería dedicar a la inspección aleatoria en patio y a la gestión del taller mecánico. Asimismo, la tarea de autorizar excepciones verbales refleja el conflicto operativo entre seguridad y presión por despachar.
+3. **Visión estratégica del Gerente (José Ramírez):** No interviene en la revisión mecánica de patio, pero requiere con frecuencia diaria (*Always* / *High*) la consolidación del estatus de flota para asignar viajes y responder comercialmente ante clientes y fiscalizaciones de SUTRAN.
+
+---
 
 <a id="233-user-journey-mapping"></a>
 ### 2.3.3. User Journey Mapping.
