@@ -988,25 +988,25 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 
 #### Segmento 1: Empresas de transporte de carga
 
-##### Entrevista 1 — Carlos Mendoza Paredes
+##### Entrevista 1 — Lucho Palacin Lope
 * **Segmento:** Empresas de transporte de carga
 * **Cargo / Ocupación:** Gerente de Operaciones
-* **Empresa / Flota:** Transportes San José S.A.C. (Flota de 22 tractocamiones y semirremolques)
-* **Edad:** 48 años
-* **Distrito de residencia:** Ate Vitarte, Lima
-* **Tiempo en la actividad:** 16 años en el sector logístico de carga pesada
+* **Empresa / Flota:** Transportes San Valentin S.A.C. (Flota de 5 tractocamiones y 2 semirremolques)
+* **Edad:** 52 años
+* **Distrito de residencia:** Santa Anita, Lima
+* **Tiempo en la actividad:** 20 años en el sector logístico de carga pesada
 * **Dispositivos y marcas:** Laptop Dell Vostro 15 (Windows 11), Smartphone Samsung Galaxy S21 (Android 14)
-* **Aplicaciones y herramientas habituales:** Microsoft Excel, WhatsApp Business, Gmail, ERP contable local y plataforma GPS de telemática vehicular
+* **Aplicaciones y herramientas habituales:** Microsoft Excel, WhatsApp Business, Gmail, ERP contable local y plataforma  Frotcom GPS de telemática vehicular
 * **Fecha y hora:** 18 de septiembre de 2026 — 10:30 h
-* **Duración:** 16 minutos con 45 segundos
-* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:45`)
+* **Duración:** 10 minutos con 41 segundos
+* **URL de la grabación:** [Link de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20211c201_upc_edu_pe/IQCJleaXrBM_QZ0QqnURlQFRAT_Ipzg_Y2VJIaNpfJOwU6c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=S93Wea) (Timestamp: `00:01 - 10:37`)
 * **Evidencia de la sesión:**
-  <img src="img/interviews/entrevista-1.png" alt="Captura de la entrevista 1 — Carlos Mendoza" width="600">
+  <img src="img/chapter2/luisP_entrevista.png" alt="Entrevista - Luis Palacin">
 
 * **Resumen de respuestas clave:**
-  * *Control preventivo actual:* Se realiza mediante un formato impreso de checklist que el chofer entrega firmado antes de salir del almacén central.
-  * *Punto de dolor crítico:* Los papeles suelen llegar manchados de grasa, ilegibles o se acumulan en archivadores físicos sin ser revisados a tiempo. Cuando SUTRAN o un cliente minero audita la flota en carretera, no tienen forma de corroborar inmediatamente si la unidad salió con las luces o neumáticos en regla.
-  * *Gestión de fallas y excepciones:* Si una unidad tiene un foco quemado o una llanta con desgaste irregular pero la carga tiene penalidad de entrega, el supervisor autoriza la salida por llamada telefónica ("de palabra"), sin que quede ningún registro auditable de la excepción.
+  <br>
+  El entrevistado, Luis Palacín López, de 51 años, residente en Santa Anita y con 20 años de experiencia. Durante su trabajo coordina principalmente con auxiliares y clientes y utiliza celular, laptop, PC y monitores. Está familiarizado con herramientas digitales y utiliza Frotcom para monitorear la flota en tiempo real.
+  Actualmente, los conductores realizan un checklist diario de seguridad, cuyos resultados se registran en formatos físicos y posteriormente se digitalizan en Excel. El seguimiento de fallas se realiza mediante comunicación con supervisores y talleres externos, registrando posteriormente los mantenimientos y eventos. Identifica el checklist como una de las actividades que más tiempo consume y manifiesta interés en contar con un mantenimiento más predictivo que permita prevenir fallas y evitar interrupciones en las operaciones.
 
 ---
 
