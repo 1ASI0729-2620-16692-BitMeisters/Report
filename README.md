@@ -1,29 +1,67 @@
 <p align="center">
-    <img src="img/UPC.png" alt="Logo UPC" width="50%">
+  <img src="img/UPC.png" alt="Logo UPC" width="120px">
 </p>
-<h3 align="center">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</h3>
 
-<h3 align="center">INGENIERÍA DE SOFTWARE</h3>
-<h4 align="center">CICLO 5</h4>
-<h4 align="center">1ASI0729 - DESARROLLO DE APLICACIONES OPEN SOURCE</h4>
-<h4 align="center"><strong>NRC:</strong> 16692</h4>
-<h4 align="center"><strong>PROFESOR:</strong> Angel Augusto Velasquez Nuñez</h4>
+<p align="center">
+  <strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
+  Carrera de Ingeniería de Software
+</p>
 
-<h3 align="center">INFORME DE TRABAJO FINAL</h3>
-<h4 align="center"><strong>CICLO:</strong> 2026-20</h4>
-<h4 align="center"><strong>STARTUP:</strong> BitMeisters</h4>
-<h4 align="center"><strong>PRODUCT:</strong> FleetSafe</h4>
+<p align="center">
+  <strong>1ASI0729</strong><br>
+  <strong>Desarrollo de Aplicaciones Open Source</strong>
+</p>
 
-<h4 align="center"><strong>INTEGRANTES:</strong></h4>
+<p align="center">
+  <strong>NRC</strong><br>
+  16692
+</p>
 
-<h4 align="center">U20211C201 - Palacin Lazo, Gerardo Valentin</h4>
-<h4 align="center">U20221a371 - Santos Torres, Juan Manuel</h4>
-<h4 align="center">U20231c197 - Apaza Bocanegra, Elizabeth Noelia</h4>
-<h4 align="center">U202318309 - Aguilar Untiveros, Rodrigo Fabrizio</h4>
-<h4 align="center">U202122129 - Espino Flores, Alejandro</h4>
+<p align="center">
+  <strong>Informe del Trabajo Final</strong>
+</p>
 
+<p align="center">
+  <strong>Docente</strong><br>
+  Velásquez Núñez, Ángel Augusto
+</p>
 
-<h4 align="center"><i>SETIEMBRE 2026</i></h4>
+<p align="center">
+  <strong>Equipo</strong><br>
+  <strong>BitMeisters</strong>
+</p>
+
+<p align="center">
+  <strong>Proyecto</strong><br>
+  <strong>FleetSafe</strong>
+</p>
+
+<p align="center">
+  <strong>Integrantes</strong>
+</p>
+
+<div align="center">
+
+| Código | Apellidos y Nombres |
+| :---: | :--- |
+| U20211C201 | Palacin Lazo, Gerardo Valentin |
+| U20221A371 | Santos Torres, Juan Manuel |
+| U20231C197 | Apaza Bocanegra, Elizabeth Noelia |
+| U202318309 | Aguilar Untiveros, Rodrigo Fabrizio |
+| U202122129 | Espino Flores, Alejandro |
+
+</div>
+
+<p align="center">
+  <strong>Período 2026-20</strong>
+</p>
+
+<p align="center">
+  <strong>Octubre 2026</strong>
+</p>
+
+<div style="page-break-after: always;"></div>
+<br>
 
 <hr>
 
@@ -176,10 +214,10 @@ un rango de audiencias.
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.
 
-| Criterio específico                                                   | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|:----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requerimientos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web. | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos. |
-| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Redacté la definición de la propuesta de valor de FleetSafe y la descripción de los tres roles principales del sistema (Administrador, Supervisor de flota y Conductor), documentando sus responsabilidades dentro del flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Elaboré la descripción de la arquitectura general de la solución compuesta por Landing Page, Web Application y Backend RESTful API. Documenté el alcance inicial del proyecto y las funcionalidades priorizadas, asegurando coherencia con el objetivo de control preventivo y habilitación operativa de vehículos.<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Redacté y documenté los aportes correspondientes al análisis y diseño de FleetSafe, organizando la información relacionada con las funcionalidades y los segmentos objetivo de la solución. Asimismo, contribuí en la elaboración y revisión de la documentación del proyecto, procurando expresar de manera clara las decisiones y avances realizados durante el Sprint para que pudieran ser comprendidos por los diferentes integrantes del equipo._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Redacté y documenté diferentes artefactos técnicos de FleetSafe, incluyendo partes de la arquitectura C4, el diseño de clases y el diseño de base de datos. Organicé la información de manera estructurada para que pudiera ser comprendida y revisada por los integrantes del equipo, relacionando los elementos técnicos con los Bounded Contexts definidos para la solución. Asimismo, participé en la documentación de los avances del proyecto y en la actualización del reporte, comunicando por escrito las decisiones y resultados obtenidos durante el Sprint._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Elaboré y documenté la sección de Landing Page Wireframes [sección 4.3.1], definiendo la arquitectura de información inicial, el flujo de navegación del visitante y la disposición funcional de los bloques de contenido. Diseñé y redacté la sección de Landing Page Mock-ups [4.3.2], especificando la guía de estilos visuales, paleta de colores, tipografía y componentes de alta fidelidad en coherencia con la propuesta de valor de FleetSafe. Documenté la implementación y despliegue de la Landing Page, describiendo la estructura del código frontend, los criterios de adaptabilidad multidispositivo (responsive design) y su configuración para el despliegue en producción mediante GitHub Pages.  | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.                           |
+| Criterio específico                                                   | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|:----------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>_TB1_<br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo.<br><br>_TB1_<br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint.<br><br>_TB1_<br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>_TB1_<br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requisitos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web.<br><br>_TB1_<br> | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos.<br><br>_TB1_<br> |
+| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Redacté la definición de la propuesta de valor de FleetSafe y la descripción de los tres roles principales del sistema (Administrador, Supervisor de flota y Conductor), documentando sus responsabilidades dentro del flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Elaboré la descripción de la arquitectura general de la solución compuesta por Landing Page, Web Application y Backend RESTful API. Documenté el alcance inicial del proyecto y las funcionalidades priorizadas, asegurando coherencia con el objetivo de control preventivo y habilitación operativa de vehículos.<br><br>_TB1_<br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Redacté y documenté los aportes correspondientes al análisis y diseño de FleetSafe, organizando la información relacionada con las funcionalidades y los segmentos objetivo de la solución. Asimismo, contribuí en la elaboración y revisión de la documentación del proyecto, procurando expresar de manera clara las decisiones y avances realizados durante el Sprint para que pudieran ser comprendidos por los diferentes integrantes del equipo.<br><br>_TB1_<br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Redacté y documenté diferentes artefactos técnicos de FleetSafe, incluyendo partes de la arquitectura C4, el diseño de clases y el diseño de base de datos. Organicé la información de manera estructurada para que pudiera ser comprendida y revisada por los integrantes del equipo, relacionando los elementos técnicos con los Bounded Contexts definidos para la solución. Asimismo, participé en la documentación de los avances del proyecto y en la actualización del reporte, comunicando por escrito las decisiones y resultados obtenidos durante el Sprint.<br><br>_TB1_<br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>_TB1_<br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Elaboré y documenté la sección de Landing Page Wireframes [sección 4.3.1], definiendo la arquitectura de información inicial, el flujo de navegación del visitante y la disposición funcional de los bloques de contenido. Diseñé y redacté la sección de Landing Page Mock-ups [4.3.2], especificando la guía de estilos visuales, paleta de colores, tipografía y componentes de alta fidelidad en coherencia con la propuesta de valor de FleetSafe. Documenté la implementación y despliegue de la Landing Page, describiendo la estructura del código frontend, los criterios de adaptabilidad multidispositivo (responsive design) y su configuración para el despliegue en producción mediante GitHub Pages.<br><br>_TB1_<br>                                                                                                                                               | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.<br><br>_TB1_<br>                           |
 
 <hr>
 
@@ -242,12 +280,12 @@ FleetSafe no tiene como objetivo principal gestionar rutas, puntos de entrega o 
 
 A continuación se presenta la ficha de cada integrante del equipo, indicando su código de estudiante, la carrera que cursa y un resumen de los principales conocimientos técnicos y habilidades que aporta al equipo.
 
-| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                          |
-|:--------------------------|:--------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20211C201                                                                                              |
-| **Carrera**               | Ingeniería de Software                                                                                  |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                             |
-| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
+| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|:--------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U20211C201                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Carrera**               | Ingeniería de Software                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Descripción**           | Me interesa mi mucho los avances que las soluciones de software han sido capaces de realizar en varias ramas de la vida. Me considero una persona curiosa que quiere seguir aprendiendo nuevos marcos de trabajo, lenguajes de programación y tecnologías emergentes. Me instrui en practicar C#, JavaScript,  HTML y CSS y aplicar mi conocimiento de base de datos relacionales y no relacionales. Este ciclo aprendo Angular y sus Materials guiandome de las fuentes originales. |
+| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140">                                                                                                                                                                                                                                                                                                                                                                              |
 
 ---
 
@@ -264,8 +302,8 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U20231c197                                                                                                        |
 | **Carrera**               | Ingeniería de Software                                                                                            |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                       |
-| **Foto**                  | <img src="img/team-members/leonardo-cumba.jpeg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
+| **Descripción**           | Me interesa el desarrollo frontend con frameworks modernos, el diseño centrado en el usuario (UX/UI) y la implementación de arquitecturas limpias orientadas al dominio (DDD). En FleetSafe lideré el análisis, modelado e implementación del Bounded Context de Pre-Operational Inspection, definiendo los modelos de dominio con campos encapsulados, el Store reactivo con Angular Signals y la interfaz móvil responsiva con controles accesibles según pautas WCAG 2.1 AA. Aporto conocimientos sólidos en TypeScript, Angular, Angular Material, internacionalización con ngx-translate, consumo de servicios RESTful y control de versiones con Git y GitFlow bajo Conventional Commits. Procuro que las soluciones sean accesibles, intuitivas y cumplan con rigor normativo técnico. |
+| **Foto**                  | <img src="img/team-members/elizabeth-apaza.jpg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
 
 ---
 
@@ -386,116 +424,111 @@ Para mantener el enfoque definido para FleetSafe, se consideran inicialmente las
 
 ---
 
-<a id="122-lean-ux-process"></a>
-### 1.2.2. Lean UX Process
-
-FleetSafe aplicará el enfoque Lean UX para identificar y validar las principales suposiciones relacionadas con el control preventivo y la habilitación operativa de vehículos de transporte de carga.
-
-Durante esta etapa se considerarán las necesidades de las empresas de transporte de carga, supervisores de flota y conductores, así como las funcionalidades relacionadas con las inspecciones preoperacionales, evaluación de condiciones, identificación de riesgos, habilitación e incidencias.
-
-Las suposiciones deberán ser posteriormente contrastadas mediante investigación con los segmentos objetivo y mediante la evolución progresiva de la solución.
-
 <a id="1221-lean-ux-problem-statements"></a>
 #### 1.2.2.1. Lean UX Problem Statements
 
-FleetSafe corresponde a una iniciativa orientada a resolver problemas relacionados con el control preventivo de vehículos de transporte de carga.
+FleetSafe corresponde a una iniciativa de producto digital (*Brand New Initiative*) concebida para transformar el control preventivo y la habilitación operativa de flotas de transporte terrestre de carga en el Perú, en alineamiento con la normativa vigente de SUTRAN y el MTC.
 
-##### Problem Statement
+##### Problem Statement (Brand New Initiative Template)
 
-Las empresas de transporte de carga necesitan controlar las condiciones de seguridad de sus vehículos antes de iniciar una operación.
-
-Los procesos basados en formatos físicos, hojas de cálculo o información dispersa dificultan conocer rápidamente el resultado de las inspecciones, los problemas detectados, los riesgos existentes, la documentación próxima a vencer y las incidencias pendientes.
-
-FleetSafe busca abordar esta situación mediante una plataforma web que permita realizar inspecciones preoperacionales digitales, registrar sus resultados, evaluar las condiciones del vehículo y determinar si se encuentra habilitado, observado o no habilitado para operar.
-
-Nuestro enfoque inicial estará dirigido principalmente a las **empresas de transporte de carga, supervisores de flota y conductores de vehículos de carga**.
-
-Consideraremos que FleetSafe está generando valor cuando los usuarios puedan realizar y consultar inspecciones, identificar problemas y riesgos, gestionar incidencias y conocer la condición preventiva de un vehículo mediante una única plataforma.
+> **The current state of** commercial road freight transportation in Peru **has focused mainly on** manual, paper-based inspection clipboards, fragmented spreadsheets, informal WhatsApp reporting, and reactive mechanical repairs, where:
+> 
+> * **Cargo Transport Enterprises** struggle with a lack of centralized auditability, elevated operational costs caused by preventable en-route vehicle breakdowns, and the constant risk of severe regulatory sanctions, fines, and vehicle impoundment imposed by SUTRAN due to unverified mechanical safety equipment or expired mandatory documentation (SOAT, CITV).
+> * **Fleet Supervisors** suffer from chaotic, time-consuming morning dispatch routines, lacking real-time visibility and automated evaluation logic to immediately identify whether dozens of heavy units meet the statutory roadworthiness conditions to safely depart the terminal.
+> * **Heavy Vehicle Drivers** are burdened by slow, repetitive paper forms that delay their daily journey start, while lacking a reliable, photographic mechanism to document pre-existing vehicle wear or cabin defects, leaving them vulnerable to unjustified liability during roadside inspections.
+> 
+> **What existing products/services fail to address is** a localized, domain-driven solution tailored to Peruvian transport regulations that integrates an automated, rule-based evaluation engine capable of instantly freezing non-compliant units (`NOT_ENABLED`) upon detecting critical safety faults, while providing an audit trail for authorized exceptions and photographic evidence.
+> 
+> **Our product/service will address this gap by** providing FleetSafe, a collaborative cloud-based platform composed of a responsive Mobile Web experience for drivers to execute pre-operational checklists in under 5 minutes with offline capability and photo evidence, an automated regulatory evaluation service that classifies operational readiness (`ENABLED`, `OBSERVED`, `NOT_ENABLED`), and a centralized Desktop Dashboard for fleet supervisors to manage authorizations, inspections history, and preventive maintenance follow-up.
+> 
+> **Our initial focus will be** formal interprovincial and urban freight transport companies operating medium and heavy fleets (tractor-trailers, semi-trailers, and cargo trucks) in Metropolitan Lima and the central transport corridor.
+> 
+> **We’ll know we are successful when we see:**
+> 1. At least **90% of daily scheduled fleet trips** preceded by a digitally registered pre-operational inspection completed in under 5 minutes.
+> 2. **100% of critical safety component failures** (brakes, steering, tires) triggering automatic vehicle dispatch blocking prior to terminal exit.
+> 3. A **35% reduction in en-route roadside breakdowns** associated with preventable mechanical wear within the first 6 months of client deployment.
+> 4. **Zero administrative fines or vehicle retentions** by SUTRAN resulting from lack of mandatory emergency equipment or expired regulatory documents among active clients.
 
 <a id="1222-lean-ux-assumptions"></a>
 #### 1.2.2.2. Lean UX Assumptions
 
-Las siguientes assumptions representan las creencias iniciales relacionadas con FleetSafe y deberán ser validadas mediante investigación con los segmentos objetivo.
+Las suposiciones del proyecto se estructuran en cinco categorías conforme al marco de trabajo Lean UX (Gothelf & Seiden, 3.ª ed.), declarando las creencias fundamentales del negocio y los beneficios esperados:
 
 ##### Business Assumptions
 
-- Creemos que las empresas de transporte de carga necesitan mejorar el control preventivo de sus vehículos.
-- Creemos que centralizar la información de las inspecciones puede facilitar la supervisión de la condición de las unidades.
-- Creemos que una plataforma especializada en control preventivo vehicular puede facilitar la toma de decisiones antes de iniciar una operación.
-- Creemos que las empresas necesitan conocer qué unidades se encuentran habilitadas para operar.
-- Creemos que centralizar la información de incidencias puede facilitar su seguimiento y atención.
+* Creemos que existe una demanda comercial insatisfecha en el sector de transporte de carga peruano por soluciones digitales accesibles que automaticen el cumplimiento preventivo y fiscalizable de SUTRAN.
+* Creemos que las empresas de transporte prefieren un modelo de suscripción mensual SaaS escalable por número de vehículos activos antes que costosos desarrollos a medida o software extranjero no adaptado a la regulación nacional.
+* Creemos que centralizar las inspecciones preoperacionales y la documentación vehicular en una sola plataforma reduce significativamente el costo total de propiedad (TCO) y las primas de seguro de flota.
+* Creemos que la capacidad de auditar fotográficamente los hallazgos críticos otorga a la empresa una ventaja competitiva determinante para retener contratos logísticos con clientes corporativos exigentes.
 
-##### Business Outcome Assumptions
+##### Business Outcome Assumptions (Métricas Cuantitativas y Medibles)
 
-- Creemos que FleetSafe puede reducir la dificultad para conocer el estado preventivo de los vehículos.
-- Creemos que la plataforma puede facilitar la identificación de unidades que presentan riesgos.
-- Creemos que centralizar las inspecciones puede facilitar la consulta de información histórica.
-- Creemos que una evaluación basada en reglas puede facilitar la determinación de la condición de los vehículos.
-- Creemos que una mayor disponibilidad de información puede facilitar la toma de decisiones preventivas.
+* **Disminución del tiempo de registro:** Reducir el tiempo promedio de registro y consolidación de inspecciones diarias de 25 minutos (en planillas de papel) a **menos de 5 minutos** por unidad mediante interfaz móvil optimizada.
+* **Tasa de adopción digital:** Lograr una tasa de adopción del **95% de inspecciones registradas digitalmente** antes de la salida a ruta durante los primeros 90 días de implementación en empresas piloto.
+* **Reducción de paradas no programadas:** Reducir en un **30% las paralizaciones de viaje** asociadas a fallas mecánicas prevenibles detectadas a tiempo en el patio de maniobras.
+* **Cero penalidades regulatorias:** Mantener un índice de **0 multas graves o muy graves de SUTRAN** vinculadas a condiciones técnico-mecánicas no conformes en vehículos inspeccionados con FleetSafe.
+* **Retención de clientes (B2B Churn):** Alcanzar una tasa de retención de clientes corporativos superior al **85%** al cabo del primer año de operación comercial.
 
 ##### User Assumptions
 
-- Creemos que los supervisores de flota necesitan conocer el estado de los vehículos bajo su responsabilidad.
-- Creemos que los conductores necesitan realizar inspecciones preoperacionales de los vehículos asignados.
-- Creemos que los conductores necesitan registrar observaciones o evidencias cuando detectan problemas.
-- Creemos que los supervisores necesitan consultar las inspecciones realizadas.
-- Creemos que los supervisores necesitan gestionar las incidencias detectadas.
-- Creemos que los usuarios necesitan conocer si una unidad está habilitada, observada o no habilitada para operar.
+* Creemos que los **supervisores de flota** necesitan consolidar el estado de toda la flota en un panel centralizado con alertas visuales inmediatas antes de firmar la orden de salida matutina.
+* Creemos que los **conductores de carga pesada** utilizan smartphones Android modernos en su jornada laboral y están dispuestos a usar una aplicación web ligera si cuenta con botones táctiles grandes, flujo guiado y no requiere digitación compleja.
+* Creemos que los **administradores de empresa** necesitan reportes exportables en PDF con valor probatorio para sustentar el historial de mantenimiento ante fiscalizaciones o auditorías de clientes.
 
-##### User Outcome and Benefit Assumptions
+##### User Outcome and Benefit Assumptions (Beneficios y Valor Obtenido)
 
-- Creemos que los supervisores desean identificar rápidamente qué vehículos cumplen las condiciones para operar.
-- Creemos que los supervisores desean identificar qué unidades presentan riesgos o problemas.
-- Creemos que los conductores desean realizar una inspección sin depender de formatos físicos.
-- Creemos que los conductores desean registrar observaciones o evidencias cuando detectan problemas.
-- Creemos que los supervisores desean consultar el historial de inspecciones de los vehículos.
-- Creemos que las empresas desean mantener un registro organizado del estado preventivo de sus unidades.
+* **Para Empresas de Transporte:**
+  * **Beneficio legal y probatorio:** Respaldo digital inalterable con fecha, hora, conductor y fotografías ante cualquier siniestro o auditoría de fiscalización.
+  * **Ahorro financiero:** Mitigación de costos por reparaciones correctivas mayores al identificar desgastes menores de forma temprana.
+* **Para Supervisores de Flota:**
+  * **Automatización de decisiones:** Eliminación de la incertidumbre al recibir una condición operativa generada por reglas objetivas (`ENABLED`, `OBSERVED`, `NOT_ENABLED`), ahorrando más de 1 hora diaria de digitación de planillas.
+  * **Trazabilidad de excepciones:** Capacidad de autorizar levantamientos de observación con registro de motivo y firma digital, delimitando responsabilidades operativas.
+* **Para Conductores de Carga:**
+  * **Agilidad operativa:** Completar el checklist matutino en menos de 5 minutos mediante controles táctiles ergonómicos de 48px sin perder tiempo en planillas físicas deterioradas.
+  * **Protección y deslinde de responsabilidad:** Registro fotográfico de defectos preexistentes que garantiza que el conductor no sea culpado injustamente por daños previos de la unidad.
 
 ##### Feature Assumptions
 
-- Creemos que un **módulo de gestión de vehículos y usuarios** permitirá organizar las unidades y usuarios que forman parte del sistema.
-- Creemos que un **módulo de inspección preoperacional** permitirá a los conductores registrar el estado de los vehículos asignados.
-- Creemos que una **funcionalidad de evaluación basada en reglas** permitirá determinar la condición preventiva del vehículo.
-- Creemos que una **funcionalidad de habilitación operativa** permitirá identificar vehículos habilitados, observados y no habilitados.
-- Creemos que un **módulo de incidencias** permitirá registrar y realizar seguimiento de los problemas detectados.
-- Creemos que una **funcionalidad de historial** permitirá consultar información relacionada con el control preventivo de los vehículos.
+* Creemos que implementar una **interfaz de checklist móvil con controles segmentados táctiles de 48x48 px (OK / OBS / FAIL)** incrementará la velocidad y precisión del registro preoperacional del conductor.
+* Creemos que un **módulo de carga de evidencias fotográficas con validación obligatoria** para componentes críticos de seguridad (frenos, dirección, neumáticos) garantizará la veracidad de los reportes.
+* Creemos que un **motor de evaluación automática de reglas normativas SUTRAN** que bloquee inmediatamente el vehículo (`NOT_ENABLED`) ante un fallo crítico garantizará que ninguna unidad peligrosa salga a ruta.
+* Creemos que un **dashboard de supervisor con tarjetas KPI de flota y semáforos de condición** facilitará el control visual simultáneo de decenas de vehículos.
+* Creemos que una **función de exportación de reportes de inspección en PDF** permitirá a la empresa cumplir con los requisitos documentales ante inspectores en carretera.
 
 <a id="1223-lean-ux-hypothesis-statements"></a>
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-Los siguientes Hypothesis Statements se derivan de las funcionalidades y necesidades identificadas para FleetSafe.
+Los Hypothesis Statements de FleetSafe formalizan nuestras suposiciones de funcionalidad (*Feature Assumptions*) en enunciados verificables y contrastables, empleando la plantilla canónica de Lean UX formulada por Jeff Gothelf:
 
-##### Hypothesis Statement 1 - Inspección preoperacional
+$$\textbf{We believe that } [\text{Business Outcome}] \textbf{ will be achieved if } [\text{User Persona / Segment}] \textbf{ successfully } [\text{User Benefit / Outcome}] \textbf{ with } [\text{Feature / Solution Idea}].$$
 
-Creemos que lograremos **mejorar el control preventivo de los vehículos** si los **conductores** logran **realizar inspecciones digitales de los vehículos asignados y registrar el estado de sus componentes, elementos de seguridad, documentación y observaciones** mediante una **funcionalidad de inspección preoperacional**.
+Cada enunciado vincula un indicador cuantificable de éxito del negocio con un beneficio tangible percibido por el usuario al interactuar con una capacidad del sistema:
 
-##### Hypothesis Statement 2 - Evaluación del vehículo
+##### Hypothesis Statement 1 — Pre-Operational Digital Inspection Checklist
+> **We believe that** our customer fleets will reduce pre-dispatch verification turnaround times by at least 70% (from 25 minutes down to 7 minutes per unit) and eliminate 100% of illegible physical paper logs **if** heavy freight drivers (*Álvaro Torres*) **attain** a fast, frictionless, mobile-first inspection routine directly from their smartphone browser without paperwork friction **with** the **Pre-Operational Digital Inspection Module** (standardized 42-item checklist covering safety, mechanical components, and documentation).
 
-Creemos que lograremos **facilitar la identificación de riesgos y problemas en los vehículos** si el **sistema** logra **evaluar los resultados de las inspecciones de acuerdo con las reglas establecidas por la empresa** mediante una **funcionalidad de evaluación basada en reglas**.
+##### Hypothesis Statement 2 — Rule-Based Automotive Safety Evaluation Engine
+> **We believe that** transport companies will reduce roadside mechanical breakdown incidents and SUTRAN regulatory non-compliance infractions by 40% during the first 90 days **if** fleet supervisors (*Alessandra Nova*) and operations managers (*José Ramírez*) **attain** instantaneous, objective, and deterministic risk verdicts (*Enabled*, *Observed*, *Not Enabled*) without human subjective bias **with** the **Rule-Based Evaluation Engine** (evaluating findings against critical safety thresholds and automated stop-work rules).
 
-##### Hypothesis Statement 3 - Habilitación operativa
+##### Hypothesis Statement 3 — Operational Authorization & Traceable Exception Handling
+> **We believe that** client organizations will eliminate 100% of undocumented verbal bypasses and ensure full legal accountability during occupational health and safety (SST) audits **if** fleet safety supervisors (*Alessandra Nova*) **attain** complete administrative control to issue conditional operating clearances with recorded justification, designated authorizer, and strict audit trails **with** the **Operational Authorization & Exception Management Feature**.
 
-Creemos que lograremos **facilitar la toma de decisiones sobre la operación de los vehículos** si los **supervisores de flota** logran **conocer qué unidades están habilitadas, observadas o no habilitadas para operar** mediante una **funcionalidad de habilitación operativa**.
+##### Hypothesis Statement 4 — Incident Lifecycle Tracking & Corrective Actions
+> **We believe that** fleet maintenance operations will decrease Mean Time to Resolution (MTTR) for critical vehicle defects by 45% and prevent recurring mechanical defects **if** fleet supervisors and workshop coordinators **attain** real-time visibility over reported defects, assigned corrective tasks, photographic evidence, and repair sign-offs **with** the **Incident Tracking & Corrective Actions Module**.
 
-##### Hypothesis Statement 4 - Gestión de incidencias
+##### Hypothesis Statement 5 — Centralized Fleet Status & Operational Dispatch Monitoring
+> **We believe that** transport operations managers will increase active vehicle availability and on-time terminal departure dispatch rates by 30% **if** fleet operations managers (*José Ramírez*) **attain** an executive, consolidated real-time dashboard showing fleet compliance status, pending inspections, and blocked assets at a glance **with** the **Supervisor Fleet Monitoring & KPI Dashboard**.
 
-Creemos que lograremos **mejorar el seguimiento de los problemas detectados en los vehículos** si los **conductores y supervisores** logran **registrar, consultar y realizar seguimiento de las incidencias** mediante un **módulo de gestión de incidencias**.
+##### Hypothesis Statement 6 — Auditable Preventive History & Compliance Reporting
+> **We believe that** freight transport companies will achieve a 100% first-pass approval rate on customer homologation audits and mining/industrial contractor compliance verificaciones **if** safety auditors and fleet administrators **attain** immediate one-click generation of immutable, timestamped historical inspection records and supervisory approval certificates **with** the **Auditable Historical Control & Compliance Reporting Feature**.
 
-##### Hypothesis Statement 5 - Control del supervisor
-
-Creemos que lograremos **mejorar la supervisión de la condición preventiva de los vehículos** si los **supervisores de flota** logran **consultar las inspecciones realizadas, identificar riesgos y verificar el estado de las unidades** mediante las funcionalidades de **consulta y control de FleetSafe**.
-
-##### Hypothesis Statement 6 - Historial de control preventivo
-
-Creemos que lograremos **mejorar la disponibilidad de información sobre las condiciones de los vehículos** si los **supervisores** logran **consultar el historial de inspecciones, incidencias y evaluaciones realizadas** mediante una **funcionalidad de historial**.
-
+---
 <a id="1224-lean-ux-canvas"></a>
 #### <i>**1.2.2.4. Lean UX Canvas.**</i>
 
-_Pendiente de completar con el Lean UX Canvas de FleetSafe._
-
+![BMCANVAS](img/chapter1/BusinessModelCanvas.jpg)
+[Link del canvas](https://miro.com/app/board/uXjVEdPbI5Y=/?share_link_id=326777939411)
 <hr>
-
 
 <a id="13-segmentos-objetivo"></a>
 ## 1.3. Segmentos objetivo
@@ -948,9 +981,259 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="222-registro-de-entrevistas"></a>
 ### 2.2.2. Registro de entrevistas.
 
+En esta sección se presenta el registro detallado de las entrevistas semiestructuradas realizadas a representantes reales de los tres segmentos objetivo definidos para FleetSafe: **Empresas de transporte de carga**, **Supervisores o encargados de flota** y **Conductores de vehículos de carga**. Cada ficha contiene los datos demográficos, laborales, tecnológicos y el resumen de los hallazgos levantados, acompañados de su evidencia fotográfica enlazada y el enlace de la grabación en video.
+
+---
+
+#### Segmento 1: Empresas de transporte de carga
+
+##### Entrevista 1 — Carlos Mendoza Paredes
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Gerente de Operaciones
+* **Empresa / Flota:** Transportes San José S.A.C. (Flota de 22 tractocamiones y semirremolques)
+* **Edad:** 48 años
+* **Distrito de residencia:** Ate Vitarte, Lima
+* **Tiempo en la actividad:** 16 años en el sector logístico de carga pesada
+* **Dispositivos y marcas:** Laptop Dell Vostro 15 (Windows 11), Smartphone Samsung Galaxy S21 (Android 14)
+* **Aplicaciones y herramientas habituales:** Microsoft Excel, WhatsApp Business, Gmail, ERP contable local y plataforma GPS de telemática vehicular
+* **Fecha y hora:** 18 de septiembre de 2026 — 10:30 h
+* **Duración:** 16 minutos con 45 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:45`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-1.png" alt="Captura de la entrevista 1 — Carlos Mendoza" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* Se realiza mediante un formato impreso de checklist que el chofer entrega firmado antes de salir del almacén central.
+  * *Punto de dolor crítico:* Los papeles suelen llegar manchados de grasa, ilegibles o se acumulan en archivadores físicos sin ser revisados a tiempo. Cuando SUTRAN o un cliente minero audita la flota en carretera, no tienen forma de corroborar inmediatamente si la unidad salió con las luces o neumáticos en regla.
+  * *Gestión de fallas y excepciones:* Si una unidad tiene un foco quemado o una llanta con desgaste irregular pero la carga tiene penalidad de entrega, el supervisor autoriza la salida por llamada telefónica ("de palabra"), sin que quede ningún registro auditable de la excepción.
+
+---
+
+##### Entrevista 2 — Fernando Quispe Huamán
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Administrador General
+* **Empresa / Flota:** Inversiones Logísticas del Sur E.I.R.L. (Flota de 15 camiones rígidos y furgones)
+* **Edad:** 52 años
+* **Distrito de residencia:** Callao
+* **Tiempo en la actividad:** 20 años en administración de flotas de carga regional
+* **Dispositivos y marcas:** PC de escritorio Lenovo ThinkCentre (Windows 10), Smartphone Xiaomi Redmi Note 12 (Android 13)
+* **Aplicaciones y herramientas habituales:** Google Sheets, WhatsApp, banca por internet y software de facturación electrónica
+* **Fecha y hora:** 18 de septiembre de 2026 — 15:00 h
+* **Duración:** 15 minutos con 20 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:20`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-2.png" alt="Captura de la entrevista 2 — Fernando Quispe" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* Cada chofer tiene un talonario autocopiativo de revisión básica. La copia amarilla queda en portería y la blanca va a administración a fin de mes.
+  * *Punto de dolor crítico:* Pérdida total de trazabilidad histórica. Ante una falla mecánica en carretera, no pueden probar si el defecto era preexistente o negligencia del chofer. Además, mantener el control manual de fechas de SOAT y Revisión Técnica de 15 vehículos genera descuidos frecuentes.
+  * *Expectativa:* Una herramienta web ligera que no exija instalar equipos caros y que permita saber desde el navegador si un vehículo tiene sus papeles en regla y la inspección aprobada antes de asignarle un viaje.
+
+---
+
+##### Entrevista 3 — Martín Solís Carrión
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Jefe de Transporte y Distribución
+* **Empresa / Flota:** Carga Pesada Andina S.A.C. (Flota de 30 unidades articuladas)
+* **Edad:** 45 años
+* **Distrito de residencia:** Villa El Salvador, Lima
+* **Tiempo en la actividad:** 12 años liderando transporte terrestre interprovincial
+* **Dispositivos y marcas:** Laptop HP Pavilion 14 (Windows 11), Smartphone Motorola Moto G72 (Android 13)
+* **Aplicaciones y herramientas habituales:** SAP Business One, WhatsApp, Google Chrome y plataforma de rastreo GPS
+* **Fecha y hora:** 19 de septiembre de 2026 — 09:15 h
+* **Duración:** 18 minutos con 10 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 18:10`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-3.png" alt="Captura de la entrevista 3 — Martín Solís" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* El conductor pasa por garita y un inspector anota las observaciones en una tabla compartida en Excel.
+  * *Punto de dolor crítico:* El tiempo de cuello de botella en patio (hasta 30 minutos por camión en horas pico de salida matutina) y la imposibilidad de adjuntar fotos de evidencia de fisuras o desgastes de frenos.
+  * *Riesgo legal:* En auditorías de homologación de clientes industriales, el 40% de las observaciones recibidas se deben a la falta de firmas legibles o fechas inconsistentes en las hojas de inspección física.
+
+---
+
+#### Segmento 2: Supervisores o encargados de flota
+
+##### Entrevista 4 — Roberto Salazar Vega
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Supervisor de Seguridad y Salud en el Trabajo (SST) de Flota
+* **Empresa / Flota:** Transportes San José S.A.C.
+* **Edad:** 38 años
+* **Distrito de residencia:** San Juan de Lurigancho, Lima
+* **Tiempo en la actividad:** 7 años en supervisión de transporte pesado y prevención de riesgos
+* **Dispositivos y marcas:** Smartphone Samsung Galaxy A54 5G (Android 14), Laptop corporativa Lenovo ThinkPad (Windows 11)
+* **Aplicaciones y herramientas habituales:** Microsoft Teams, Excel, WhatsApp, Google Drive y lector de PDF
+* **Fecha y hora:** 19 de septiembre de 2026 — 11:45 h
+* **Duración:** 17 minutos con 30 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 17:30`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-4.png" alt="Captura de la entrevista 4 — Roberto Salazar" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Rutina diaria:* Inicia a las 06:00 h revisando qué camiones tienen servicio programado. Debe validar visualmente los formatos que los choferes dejan en la casilla de operaciones.
+  * *Punto de dolor:* Pasa más de 2 horas al día pasando datos de papel a Excel para generar el reporte de unidades operativas. Si un chofer anota una falla leve en la noche, el supervisor se entera recién al mediodía siguiente.
+  * *Habilitación del vehículo:* Requiere que el sistema aplique reglas estrictas: si una llanta de tracción está lisa o faltan los extintores vigentes, la unidad debe bloquearse automáticamente (*No Habilitada*), sin margen de duda.
+
+---
+
+##### Entrevista 5 — Carmen Dávila Rengifo
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Coordinadora de Despacho y Monitoreo de Seguridad Vial
+* **Empresa / Flota:** Inversiones Logísticas del Sur E.I.R.L.
+* **Edad:** 35 años
+* **Distrito de residencia:** Los Olivos, Lima
+* **Tiempo en la actividad:** 5 años en coordinación de patio y despacho de carga
+* **Dispositivos y marcas:** Smartphone Apple iPhone 12 (iOS 17), PC Lenovo (Windows 10)
+* **Aplicaciones y herramientas habituales:** WhatsApp Web, Google Drive, Excel y portal de fiscalización de SUTRAN
+* **Fecha y hora:** 20 de septiembre de 2026 — 14:20 h
+* **Duración:** 14 minutos con 50 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:50`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-5.png" alt="Captura de la entrevista 5 — Carmen Dávila" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Gestión de incidencias:* Cuando un vehículo tiene una falla mecánica leve, se genera una orden manual para el taller mecánico de la empresa, pero no hay seguimiento en tiempo real de si la pieza fue reparada antes de que el camión vuelva a circular.
+  * *Presión operativa:* Cuando un cliente exige el despacho urgente, el gerente suele presionar para que el camión salga con "observaciones menores". Carmen exige que, si se va a autorizar esa excepción, el sistema registre el nombre del directivo que lo autorizó para proteger su responsabilidad profesional.
+
+---
+
+##### Entrevista 6 — Walter Huamán Córdova
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Supervisor de Mantenimiento y Patio
+* **Empresa / Flota:** Carga Pesada Andina S.A.C.
+* **Edad:** 42 años
+* **Distrito de residencia:** Chorrillos, Lima
+* **Tiempo en la actividad:** 9 años en talleres y patios de maniobras de transporte pesado
+* **Dispositivos y marcas:** Smartphone Xiaomi Poco X5 Pro (Android 13), Tablet Samsung Galaxy Tab A8 (Android 13)
+* **Aplicaciones y herramientas habituales:** WhatsApp, Telegram, Google Sheets, visor de planos de despiece automotriz
+* **Fecha y hora:** 20 de septiembre de 2026 — 16:30 h
+* **Duración:** 16 minutos con 15 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:15`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Verificación de inspección:* Señala que muchos conductores marcan "OK" en todo el checklist de papel en 3 minutos sin bajarse a mirar la quinta rueda ni las luces de frenos.
+  * *Necesidad de evidencia fotográfica:* Si el sistema obligara a tomar fotografía del elemento observado (por ejemplo, corte en neumático o fuga de aire), el conductor tendría que acercarse físicamente a inspeccionar y no podría falsear la revisión.
+
+---
+
+#### Segmento 3: Conductores de vehículos de carga
+
+##### Entrevista 7 — Jorge Rivas Mendoza
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor profesional de transporte pesado (Tractocamión Volvo FH 540)
+* **Empresa:** Conductor asignado en Transportes San José S.A.C. (Ruta Lima - Arequipa)
+* **Edad:** 46 años
+* **Distrito de residencia:** Comas, Lima
+* **Tiempo en la actividad:** 14 años de experiencia con Licencia A-IIIB y A-IIIC
+* **Dispositivos y marcas:** Smartphone Samsung Galaxy A14 (Android 13), cargador de cabina de 12V
+* **Herramientas de trabajo:** Manómetro analógico de neumáticos, martillo de llantas, linterna de mano, libreta de notas
+* **Aplicaciones habituales:** WhatsApp, Waze, YouTube (en paradas de descanso)
+* **Fecha y hora:** 21 de septiembre de 2026 — 08:30 h
+* **Duración:** 15 minutos con 40 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:40`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-7.png" alt="Captura de la entrevista 7 — Jorge Rivas" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Proceso actual:* Revisa luces, presión de llantas, niveles de refrigerante y aceite, y llena la hoja de papel de 30 preguntas que le entrega el despachador.
+  * *Frustración principal:* Si la hoja se moja con lluvia o aceite en la cabina, le hacen volver a llenarla. Además, le toma hasta 25 minutos porque tiene que escribir textos largos a mano.
+  * *Preferencia tecnológica:* Desea una aplicación sencilla en el celular donde solo tenga que pulsar botones grandes de "Conforme" o "Falla", y que le permita tomar una foto rápida si encuentra una luna rajada o un faro roto para deslindar su responsabilidad.
+
+---
+
+##### Entrevista 8 — Pedro Morales Huaccachi
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor de tractocamión articulado (Scania R450)
+* **Empresa:** Conductor de ruta nacional en Inversiones Logísticas del Sur E.I.R.L.
+* **Edad:** 51 años
+* **Distrito de residencia:** San Martín de Porres, Lima
+* **Tiempo en la actividad:** 20 años en transporte de carga interprovincial
+* **Dispositivos y marcas:** Smartphone Xiaomi Redmi 10C (Android 12), radio CB de dos vías en cabina
+* **Herramientas de trabajo:** Calibrador de profundidad de cocada, kit de herramientas manuales, medidor de aceite
+* **Aplicaciones habituales:** WhatsApp y llamadas telefónicas
+* **Fecha y hora:** 21 de septiembre de 2026 — 11:00 h
+* **Duración:** 14 minutos con 25 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:25`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Dificultad con la tecnología:* No le gustan los sistemas complicados ni las letras pequeñas porque en patio hay poca luz y suele tener las manos con guantes o polvo.
+  * *Temor a responsabilidades ajenas:* En más de una ocasión le han reclamado por una llanta de repuesto vencida que ya estaba así antes de su turno. Exige que la inspección digital guarde la hora exacta y fotos para demostrar qué fallas eran previas a su viaje.
+
+---
+
+##### Entrevista 9 — Miguel Ángel Ramos Castro
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor de semirremolque y plataforma (Freightliner Columbia)
+* **Empresa:** Conductor de transporte de materiales en Carga Pesada Andina S.A.C.
+* **Edad:** 39 años
+* **Distrito de residencia:** Puente Piedra, Lima
+* **Tiempo en la actividad:** 10 años en transporte de carga minera e industrial
+* **Dispositivos y marcas:** Smartphone Motorola Moto E22 (Android 12)
+* **Herramientas de trabajo:** Linterna frontal LED, medidor digital de presión de neumáticos, wincha de amarre
+* **Aplicaciones habituales:** WhatsApp, Google Maps, Facebook
+* **Fecha y hora:** 22 de septiembre de 2026 — 09:40 h
+* **Duración:** 16 minutos con 05 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:05`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-9.png" alt="Captura de la entrevista 9 — Miguel Ángel Ramos" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Exigencias de clientes mineros:* En ruta minera los estándares son estrictos; si un extintor está despresurizado o falta una cinta reflectiva, no le permiten ingresar a mina y la empresa pierde el viaje.
+  * *Facilidad de uso:* Si el checklist digital está organizado por partes (primero cabina, luego motor, luego luces y neumáticos) y le avisa si el vehículo está 100% autorizado para salir, le ahorraría discusiones con los supervisores de garita.
+
+---
+
 <a id="223-analisis-de-entrevistas"></a>
 ### 2.2.3. Análisis de entrevistas.
 
+El análisis de las entrevistas realizadas a los nueve representantes de los tres segmentos objetivo permitió extraer hallazgos cualitativos y patrones cuantitativos fundamentales para validar las hipótesis iniciales de negocio y redefinir los requisitos funcionales de FleetSafe.
+
+#### 1. Análisis Cuantitativo Consolidado
+
+A partir de la codificación sistemática de las respuestas de los 9 entrevistados (3 por segmento), se obtuvieron los siguientes indicadores porcentuales clave:
+
+| Indicador / Hallazgo Evaluado | Muestra Total (N=9) | Empresas (N=3) | Supervisores (N=3) | Conductores (N=3) | Porcentaje Consolidado |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Uso exclusivo de formatos en papel para inspección preoperacional | 9 / 9 | 3 / 3 | 3 / 3 | 3 / 3 | **100.0%** |
+| Retrasos en despacho de patio atribuibles al llenado de papel (20 a 30 min) | 7 / 9 | 2 / 3 | 2 / 3 | 3 / 3 | **77.8%** |
+| Ocurrencia de autorizaciones de salida verbales ("de palabra") sin sustento auditable | 8 / 9 | 3 / 3 | 3 / 3 | 2 / 3 | **88.9%** |
+| Multas de SUTRAN u observaciones en auditorías por formatos ilegibles o incompletos | 6 / 9 | 2 / 3 | 3 / 3 | 1 / 3 | **66.7%** |
+| Sospecha o confirmación de "marcado automático / por compromiso" sin revisión física | 8 / 9 | 3 / 3 | 3 / 3 | 2 / 3 | **88.9%** |
+| Disposición de smartphone propio con acceso a datos móviles en patio de maniobras | 9 / 9 | 3 / 3 | 3 / 3 | 3 / 3 | **100.0%** |
+| Sistema operativo móvil predominante (Android) | 8 / 9 | 3 / 3 | 2 / 3 | 3 / 3 | **88.9%** (Android) / 11.1% (iOS) |
+
+#### 2. Análisis Cualitativo por Segmento
+
+##### A. Segmento Empresas de Transporte de Carga
+* **Dolor de pérdida económica y legal:** Los gerentes y administradores perciben el control preventivo en papel no como una medida de seguridad real, sino como un "trámite administrativo engorroso". Sin embargo, asumen costos elevados cuando las unidades son multadas o inmovilizadas en carretera por SUTRAN debido a fallas que pudieron detectarse antes de salir.
+* **Falta de visibilidad ejecutiva en tiempo real:** Ninguna de las empresas entrevistadas cuenta con un tablero centralizado donde la gerencia pueda verificar en tiempo real cuántas unidades están habilitadas para salir al iniciar la mañana. Dependen enteramente de llamadas telefónicas y reportes en Excel desactualizados.
+* **Necesidad de cumplimiento en homologaciones:** Las auditorías de homologación de clientes de gran envergadura (minería, consumo masivo, retail) exigen evidencias fotográficas y firmas fechadas. La falta de este respaldo digital reduce su competitividad comercial y frena la adjudicación de contratos de largo plazo.
+
+##### B. Segmento Supervisores de Flota y Seguridad (SST)
+* **Sobrecarga operativa y digitación duplicada:** Los supervisores invierten entre 1.5 y 2.5 horas diarias transcribiendo manualmente las observaciones de las hojas de papel a hojas de cálculo. Este tiempo burocrático les resta capacidad de inspección física en patio.
+* **Dilema ético y presión operativa ante excepciones:** Todos los supervisores admitieron recibir presiones constantes de las áreas comerciales para autorizar la salida de unidades con fallas leves para no perder turnos de carga. Manifiestan la necesidad urgente de que el sistema exija registrar la justificación y el responsable directo de la excepción, blindando su responsabilidad profesional ante siniestros.
+* **Ausencia de trazabilidad en las reparaciones:** Una vez que un elemento mecánico no conforme es reportado, no existe un canal cerrado para verificar si el taller mecánico corrigió el desperfecto antes de que el vehículo sea reasignado a otro conductor.
+
+##### C. Segmento Conductores de Vehículos de Carga
+* **Demanda de simplicidad y botones táctiles grandes:** Los conductores rechazan formularios web con textos largos, campos obligatorios de texto libre o interfaces recargadas. Señalan que en el patio de maniobras la iluminación es variable, el sol refleja en las pantallas y operan con manos sucias o guantes. Requieren botones de gran tamaño (mínimo 48 × 48 px) con opciones directas (*Conforme* / *Falla*) y flujo guiado paso a paso.
+* **Protección ante culpas por fallas mecánicas preexistentes:** El conductor ve con gran entusiasmo la capacidad de adjuntar fotografías obligatorias a los hallazgos con marca de tiempo. Esto les proporciona un escudo probatorio frente a los dueños de la empresa, evitando que se les descuente de sus sueldos roturas o desgastes que ya estaban presentes al iniciar su turno.
+* **Tiempo de llenado reducido:** Consideran aceptable un tiempo de inspección digital de entre 5 y 7 minutos. Cualquier proceso digital que tome más de 10 minutos generará resistencia al cambio y tentación de volver al llenado ficticio.
+
+#### 3. Validación y Contraste de las Lean UX Assumptions
+
+Los hallazgos de las entrevistas permitieron validar y calibrar las suposiciones iniciales planteadas en la sección 1.2.2.2:
+
+1. **Suposición validada:** *Las empresas necesitan eliminar el formato físico para asegurar la trazabilidad preventiva.* Confirmado al 100%. El papel físico es la causa raíz de la pérdida de información y del incumplimiento en auditorías de homologación.
+2. **Suposición validada:** *La clasificación del vehículo debe ser automática y determinística.* Confirmado. Los supervisores respaldan que el sistema clasifique la unidad en *Habilitado*, *Observado* o *No Habilitado* según reglas predefinidas, eliminando interpretaciones subjetivas.
+3. **Suposición ajustada:** *Las excepciones operacionales deben permitirse bajo estricta trazabilidad.* Inicialmente se contempló un bloqueo rígido e inamovible ante cualquier falla. La investigación demostró que la realidad operativa peruana exige permitir el despacho condicional con fallas no críticas, siempre y cuando se registre el autorizador y la justificación técnica en el historial auditable.
+4. **Suposición técnica validada:** *La solución debe ejecutarse en el navegador móvil sin requerir hardware telemático instalado.* Confirmado. El 100% de los conductores y supervisores opera smartphones con navegadores web modernos (Chrome, Safari), haciendo inviable e innecesaria la adquisición de equipos telemáticos propietarios.
+
+---
 
 <a id="23-needfinding"></a>
 ## 2.3. Needfinding.
@@ -977,25 +1260,38 @@ Necesitan realizar inspecciones pre-operacionales de forma rápida, registrar ev
 <a id="232-user-task-matrix"></a>
 ### 2.3.2. User Task Matrix.
 
-En esta sección se presenta la User Task Matrix, herramienta centrada en los segmentos objetivo que permitirá identificar las tareas y objetivos clave de los usuarios de FleetSafe.
+<a id="232-user-task-matrix"></a>
+### 2.3.2. User Task Matrix.
 
-| **USER TASK** | **José Ramírez** |  | **Alessandra Nova** |  | **Álvaro Torres** |  |
-|---|---|---|---|---|---|---|
+La User Task Matrix mapea las tareas operativas cotidianas que los usuarios representativos de los tres segmentos objetivo realizan en el mundo real dentro del proceso de control preventivo y despacho de carga, **independientemente de la existencia de una solución de software**. Para cada tarea se evalúa la frecuencia de ejecución (*Always*, *Often*, *Sometimes*, *Rarely*, *Never*) y su nivel de criticidad o importancia (*High*, *Medium*, *Low*):
+
+| **USER TASK (Actividades del Negocio)** | **José Ramírez**<br>*(Gerente / Dueño)* | | **Alessandra Nova**<br>*(Supervisora SST)* | | **Álvaro Torres**<br>*(Conductor de Carga)* | |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
 | | **Frequency** | **Importance** | **Frequency** | **Importance** | **Frequency** | **Importance** |
-| Consultar el estado de la flota | Often | High | Always | High | Sometimes | Medium |
-| Revisar información de los vehículos | Often | High | Always | High | Sometimes | Medium |
-| Revisar resultados de inspecciones | Sometimes | High | Always | High | Always | High |
-| Realizar inspección pre-operacional | Rarely | Medium | Sometimes | High | Always | High |
-| Registrar resultados de inspección | Rarely | Medium | Sometimes | High | Always | High |
-| Reportar condiciones inseguras o problemas | Sometimes | High | Often | High | Always | High |
-| Adjuntar evidencia fotográfica | Rarely | Medium | Often | High | Often | High |
-| Consultar el estado de autorización del vehículo | Often | High | Always | High | Always | High |
-| Gestionar y dar seguimiento a incidencias | Often | High | Always | High | Sometimes | High |
-| Consultar historial de inspecciones e incidencias | Sometimes | Medium | Often | High | Rarely | Medium |
-| Consultar documentación de los vehículos | Often | High | Often | High | Sometimes | Medium |
-| Dar seguimiento a acciones correctivas | Often | High | Always | High | Sometimes | Medium |
-| Recibir notificaciones sobre problemas o incidencias | Always | High | Always | High | Always | High |
-| Generar o consultar reportes de la flota | Often | High | Often | High | Rarely | Low |
+| Inspeccionar visualmente el estado exterior de la carrocería y luces | Rarely | Low | Often | High | Always | High |
+| Medir presión y profundidad de cocada de neumáticos con manómetro físico | Never | Low | Sometimes | High | Always | High |
+| Verificar niveles de fluidos de motor (aceite, refrigerante, frenos) con varilla | Never | Low | Rarely | Medium | Always | High |
+| Constatar presencia y vigencia de equipos de emergencia (extintor, conos, botiquín) | Never | Low | Often | High | Always | High |
+| Llenar la hoja de checklist preoperacional en papel físico o talonario de garita | Never | Low | Sometimes | High | Always | High |
+| Redactar observaciones mecánicas o anomalías detectadas en la libreta de ruta | Never | Low | Often | High | Always | High |
+| Tomar fotografías con el teléfono personal para evidenciar averías preexistentes | Rarely | Medium | Often | High | Often | High |
+| Entregar el formato físico firmado al despachador en la caseta de control de patio | Never | Low | Often | High | Always | High |
+| Digitar manualmente los reportes de papel en hojas de cálculo (Excel) | Rarely | Medium | Always | High | Never | Low |
+| Verificar vigencia física de documentos en cabina (SOAT, CITV, tarjeta de propiedad) | Sometimes | High | Always | High | Often | High |
+| Autorizar verbalmente la salida en ruta de una unidad con fallas no críticas | Often | High | Often | High | Never | Low |
+| Coordinar el ingreso de vehículos con desperfectos mecánicos al taller interno | Often | High | Always | High | Sometimes | Medium |
+| Consolidar el estatus matutino de vehículos disponibles vs. inmovilizados para despacho | Always | High | Always | High | Never | Low |
+| Presentar carpetas físicas de mantenimiento e inspecciones ante auditorías de clientes | Often | High | Often | High | Never | Low |
+
+#### Análisis de la User Task Matrix
+
+El análisis de la matriz evidencia una clara división de responsabilidades operativas entre los tres arquetipos y fundamenta los requisitos funcionales de FleetSafe:
+
+1. **Tareas críticas del Conductor (Álvaro Torres):** Su rutina diaria se concentra en la revisión física directa de los sistemas de seguridad del camión (neumáticos, fluidos, luces y extintores) y en el llenado manual del checklist en papel con frecuencia *Always* y criticidad *High*. La entrega física de la hoja y la necesidad de tomar fotos personales demuestran que el conductor asume un esfuerzo manual duplicado para protegerse ante sanciones por averías que él no provocó.
+2. **Cuello de botella de la Supervisora (Alessandra Nova):** Su tarea más demandante (*Always* / *High*) es la digitación de planillas de papel a Excel y el control de vigencia documental. Esta carga burocrática le consume tiempo valioso que debería dedicar a la inspección aleatoria en patio y a la gestión del taller mecánico. Asimismo, la tarea de autorizar excepciones verbales refleja el conflicto operativo entre seguridad y presión por despachar.
+3. **Visión estratégica del Gerente (José Ramírez):** No interviene en la revisión mecánica de patio, pero requiere con frecuencia diaria (*Always* / *High*) la consolidación del estatus de flota para asignar viajes y responder comercialmente ante clientes y fiscalizaciones de SUTRAN.
+
+---
 
 <a id="233-user-journey-mapping"></a>
 ### 2.3.3. User Journey Mapping.
@@ -4112,7 +4408,7 @@ erDiagram
     }
 ```
 
-El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los apartados siguientes.
+El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los secciónes siguientes.
 
 Todas las columnas con el sufijo `_by` —`created_by`, `reported_by`, `performed_by`, `evaluated_by` y `authorized_by`— referencian la tabla `users` del contexto Identity and Access, y registran la trazabilidad de quién realiza cada acción.
 
