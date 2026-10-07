@@ -302,8 +302,8 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U20231c197                                                                                                        |
 | **Carrera**               | Ingeniería de Software                                                                                            |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                       |
-| **Foto**                  | <img src="img/team-members/leonardo-cumba.jpeg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
+| **Descripción**           | Me interesa el desarrollo frontend con frameworks modernos, el diseño centrado en el usuario (UX/UI) y la implementación de arquitecturas limpias orientadas al dominio (DDD). En FleetSafe lideré el análisis, modelado e implementación del Bounded Context de Pre-Operational Inspection, definiendo los modelos de dominio con campos encapsulados, el Store reactivo con Angular Signals y la interfaz móvil responsiva con controles accesibles según pautas WCAG 2.1 AA. Aporto conocimientos sólidos en TypeScript, Angular, Angular Material, internacionalización con ngx-translate, consumo de servicios RESTful y control de versiones con Git y GitFlow bajo Conventional Commits. Procuro que las soluciones sean accesibles, intuitivas y cumplan con rigor normativo técnico. |
+| **Foto**                  | <img src="img/team-members/elizabeth-apaza.jpeg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
 
 ---
 
@@ -424,79 +424,76 @@ Para mantener el enfoque definido para FleetSafe, se consideran inicialmente las
 
 ---
 
-<a id="122-lean-ux-process"></a>
-### 1.2.2. Lean UX Process
-
-FleetSafe aplicará el enfoque Lean UX para identificar y validar las principales suposiciones relacionadas con el control preventivo y la habilitación operativa de vehículos de transporte de carga.
-
-Durante esta etapa se considerarán las necesidades de las empresas de transporte de carga, supervisores de flota y conductores, así como las funcionalidades relacionadas con las inspecciones preoperacionales, evaluación de condiciones, identificación de riesgos, habilitación e incidencias.
-
-Las suposiciones deberán ser posteriormente contrastadas mediante investigación con los segmentos objetivo y mediante la evolución progresiva de la solución.
-
 <a id="1221-lean-ux-problem-statements"></a>
 #### 1.2.2.1. Lean UX Problem Statements
 
-FleetSafe corresponde a una iniciativa orientada a resolver problemas relacionados con el control preventivo de vehículos de transporte de carga.
+FleetSafe corresponde a una iniciativa de producto digital (*Brand New Initiative*) concebida para transformar el control preventivo y la habilitación operativa de flotas de transporte terrestre de carga en el Perú, en alineamiento con la normativa vigente de SUTRAN y el MTC.
 
-##### Problem Statement
+##### Problem Statement (Brand New Initiative Template)
 
-Las empresas de transporte de carga necesitan controlar las condiciones de seguridad de sus vehículos antes de iniciar una operación.
-
-Los procesos basados en formatos físicos, hojas de cálculo o información dispersa dificultan conocer rápidamente el resultado de las inspecciones, los problemas detectados, los riesgos existentes, la documentación próxima a vencer y las incidencias pendientes.
-
-FleetSafe busca abordar esta situación mediante una plataforma web que permita realizar inspecciones preoperacionales digitales, registrar sus resultados, evaluar las condiciones del vehículo y determinar si se encuentra habilitado, observado o no habilitado para operar.
-
-Nuestro enfoque inicial estará dirigido principalmente a las **empresas de transporte de carga, supervisores de flota y conductores de vehículos de carga**.
-
-Consideraremos que FleetSafe está generando valor cuando los usuarios puedan realizar y consultar inspecciones, identificar problemas y riesgos, gestionar incidencias y conocer la condición preventiva de un vehículo mediante una única plataforma.
+> **The current state of** commercial road freight transportation in Peru **has focused mainly on** manual, paper-based inspection clipboards, fragmented spreadsheets, informal WhatsApp reporting, and reactive mechanical repairs, where:
+> 
+> * **Cargo Transport Enterprises** struggle with a lack of centralized auditability, elevated operational costs caused by preventable en-route vehicle breakdowns, and the constant risk of severe regulatory sanctions, fines, and vehicle impoundment imposed by SUTRAN due to unverified mechanical safety equipment or expired mandatory documentation (SOAT, CITV).
+> * **Fleet Supervisors** suffer from chaotic, time-consuming morning dispatch routines, lacking real-time visibility and automated evaluation logic to immediately identify whether dozens of heavy units meet the statutory roadworthiness conditions to safely depart the terminal.
+> * **Heavy Vehicle Drivers** are burdened by slow, repetitive paper forms that delay their daily journey start, while lacking a reliable, photographic mechanism to document pre-existing vehicle wear or cabin defects, leaving them vulnerable to unjustified liability during roadside inspections.
+> 
+> **What existing products/services fail to address is** a localized, domain-driven solution tailored to Peruvian transport regulations that integrates an automated, rule-based evaluation engine capable of instantly freezing non-compliant units (`NOT_ENABLED`) upon detecting critical safety faults, while providing an audit trail for authorized exceptions and photographic evidence.
+> 
+> **Our product/service will address this gap by** providing FleetSafe, a collaborative cloud-based platform composed of a responsive Mobile Web experience for drivers to execute pre-operational checklists in under 5 minutes with offline capability and photo evidence, an automated regulatory evaluation service that classifies operational readiness (`ENABLED`, `OBSERVED`, `NOT_ENABLED`), and a centralized Desktop Dashboard for fleet supervisors to manage authorizations, inspections history, and preventive maintenance follow-up.
+> 
+> **Our initial focus will be** formal interprovincial and urban freight transport companies operating medium and heavy fleets (tractor-trailers, semi-trailers, and cargo trucks) in Metropolitan Lima and the central transport corridor.
+> 
+> **We’ll know we are successful when we see:**
+> 1. At least **90% of daily scheduled fleet trips** preceded by a digitally registered pre-operational inspection completed in under 5 minutes.
+> 2. **100% of critical safety component failures** (brakes, steering, tires) triggering automatic vehicle dispatch blocking prior to terminal exit.
+> 3. A **35% reduction in en-route roadside breakdowns** associated with preventable mechanical wear within the first 6 months of client deployment.
+> 4. **Zero administrative fines or vehicle retentions** by SUTRAN resulting from lack of mandatory emergency equipment or expired regulatory documents among active clients.
 
 <a id="1222-lean-ux-assumptions"></a>
 #### 1.2.2.2. Lean UX Assumptions
 
-Las siguientes assumptions representan las creencias iniciales relacionadas con FleetSafe y deberán ser validadas mediante investigación con los segmentos objetivo.
+Las suposiciones del proyecto se estructuran en cinco categorías conforme al marco de trabajo Lean UX (Gothelf & Seiden, 3.ª ed.), declarando las creencias fundamentales del negocio y los beneficios esperados:
 
 ##### Business Assumptions
 
-- Creemos que las empresas de transporte de carga necesitan mejorar el control preventivo de sus vehículos.
-- Creemos que centralizar la información de las inspecciones puede facilitar la supervisión de la condición de las unidades.
-- Creemos que una plataforma especializada en control preventivo vehicular puede facilitar la toma de decisiones antes de iniciar una operación.
-- Creemos que las empresas necesitan conocer qué unidades se encuentran habilitadas para operar.
-- Creemos que centralizar la información de incidencias puede facilitar su seguimiento y atención.
+* Creemos que existe una demanda comercial insatisfecha en el sector de transporte de carga peruano por soluciones digitales accesibles que automaticen el cumplimiento preventivo y fiscalizable de SUTRAN.
+* Creemos que las empresas de transporte prefieren un modelo de suscripción mensual SaaS escalable por número de vehículos activos antes que costosos desarrollos a medida o software extranjero no adaptado a la regulación nacional.
+* Creemos que centralizar las inspecciones preoperacionales y la documentación vehicular en una sola plataforma reduce significativamente el costo total de propiedad (TCO) y las primas de seguro de flota.
+* Creemos que la capacidad de auditar fotográficamente los hallazgos críticos otorga a la empresa una ventaja competitiva determinante para retener contratos logísticos con clientes corporativos exigentes.
 
-##### Business Outcome Assumptions
+##### Business Outcome Assumptions (Métricas Cuantitativas y Medibles)
 
-- Creemos que FleetSafe puede reducir la dificultad para conocer el estado preventivo de los vehículos.
-- Creemos que la plataforma puede facilitar la identificación de unidades que presentan riesgos.
-- Creemos que centralizar las inspecciones puede facilitar la consulta de información histórica.
-- Creemos que una evaluación basada en reglas puede facilitar la determinación de la condición de los vehículos.
-- Creemos que una mayor disponibilidad de información puede facilitar la toma de decisiones preventivas.
+* **Disminución del tiempo de registro:** Reducir el tiempo promedio de registro y consolidación de inspecciones diarias de 25 minutos (en planillas de papel) a **menos de 5 minutos** por unidad mediante interfaz móvil optimizada.
+* **Tasa de adopción digital:** Lograr una tasa de adopción del **95% de inspecciones registradas digitalmente** antes de la salida a ruta durante los primeros 90 días de implementación en empresas piloto.
+* **Reducción de paradas no programadas:** Reducir en un **30% las paralizaciones de viaje** asociadas a fallas mecánicas prevenibles detectadas a tiempo en el patio de maniobras.
+* **Cero penalidades regulatorias:** Mantener un índice de **0 multas graves o muy graves de SUTRAN** vinculadas a condiciones técnico-mecánicas no conformes en vehículos inspeccionados con FleetSafe.
+* **Retención de clientes (B2B Churn):** Alcanzar una tasa de retención de clientes corporativos superior al **85%** al cabo del primer año de operación comercial.
 
 ##### User Assumptions
 
-- Creemos que los supervisores de flota necesitan conocer el estado de los vehículos bajo su responsabilidad.
-- Creemos que los conductores necesitan realizar inspecciones preoperacionales de los vehículos asignados.
-- Creemos que los conductores necesitan registrar observaciones o evidencias cuando detectan problemas.
-- Creemos que los supervisores necesitan consultar las inspecciones realizadas.
-- Creemos que los supervisores necesitan gestionar las incidencias detectadas.
-- Creemos que los usuarios necesitan conocer si una unidad está habilitada, observada o no habilitada para operar.
+* Creemos que los **supervisores de flota** necesitan consolidar el estado de toda la flota en un panel centralizado con alertas visuales inmediatas antes de firmar la orden de salida matutina.
+* Creemos que los **conductores de carga pesada** utilizan smartphones Android modernos en su jornada laboral y están dispuestos a usar una aplicación web ligera si cuenta con botones táctiles grandes, flujo guiado y no requiere digitación compleja.
+* Creemos que los **administradores de empresa** necesitan reportes exportables en PDF con valor probatorio para sustentar el historial de mantenimiento ante fiscalizaciones o auditorías de clientes.
 
-##### User Outcome and Benefit Assumptions
+##### User Outcome and Benefit Assumptions (Beneficios y Valor Obtenido)
 
-- Creemos que los supervisores desean identificar rápidamente qué vehículos cumplen las condiciones para operar.
-- Creemos que los supervisores desean identificar qué unidades presentan riesgos o problemas.
-- Creemos que los conductores desean realizar una inspección sin depender de formatos físicos.
-- Creemos que los conductores desean registrar observaciones o evidencias cuando detectan problemas.
-- Creemos que los supervisores desean consultar el historial de inspecciones de los vehículos.
-- Creemos que las empresas desean mantener un registro organizado del estado preventivo de sus unidades.
+* **Para Empresas de Transporte:**
+  * **Beneficio legal y probatorio:** Respaldo digital inalterable con fecha, hora, conductor y fotografías ante cualquier siniestro o auditoría de fiscalización.
+  * **Ahorro financiero:** Mitigación de costos por reparaciones correctivas mayores al identificar desgastes menores de forma temprana.
+* **Para Supervisores de Flota:**
+  * **Automatización de decisiones:** Eliminación de la incertidumbre al recibir una condición operativa generada por reglas objetivas (`ENABLED`, `OBSERVED`, `NOT_ENABLED`), ahorrando más de 1 hora diaria de digitación de planillas.
+  * **Trazabilidad de excepciones:** Capacidad de autorizar levantamientos de observación con registro de motivo y firma digital, delimitando responsabilidades operativas.
+* **Para Conductores de Carga:**
+  * **Agilidad operativa:** Completar el checklist matutino en menos de 5 minutos mediante controles táctiles ergonómicos de 48px sin perder tiempo en planillas físicas deterioradas.
+  * **Protección y deslinde de responsabilidad:** Registro fotográfico de defectos preexistentes que garantiza que el conductor no sea culpado injustamente por daños previos de la unidad.
 
 ##### Feature Assumptions
 
-- Creemos que un **módulo de gestión de vehículos y usuarios** permitirá organizar las unidades y usuarios que forman parte del sistema.
-- Creemos que un **módulo de inspección preoperacional** permitirá a los conductores registrar el estado de los vehículos asignados.
-- Creemos que una **funcionalidad de evaluación basada en reglas** permitirá determinar la condición preventiva del vehículo.
-- Creemos que una **funcionalidad de habilitación operativa** permitirá identificar vehículos habilitados, observados y no habilitados.
-- Creemos que un **módulo de incidencias** permitirá registrar y realizar seguimiento de los problemas detectados.
-- Creemos que una **funcionalidad de historial** permitirá consultar información relacionada con el control preventivo de los vehículos.
+* Creemos que implementar una **interfaz de checklist móvil con controles segmentados táctiles de 48x48 px (OK / OBS / FAIL)** incrementará la velocidad y precisión del registro preoperacional del conductor.
+* Creemos que un **módulo de carga de evidencias fotográficas con validación obligatoria** para componentes críticos de seguridad (frenos, dirección, neumáticos) garantizará la veracidad de los reportes.
+* Creemos que un **motor de evaluación automática de reglas normativas SUTRAN** que bloquee inmediatamente el vehículo (`NOT_ENABLED`) ante un fallo crítico garantizará que ninguna unidad peligrosa salga a ruta.
+* Creemos que un **dashboard de supervisor con tarjetas KPI de flota y semáforos de condición** facilitará el control visual simultáneo de decenas de vehículos.
+* Creemos que una **función de exportación de reportes de inspección en PDF** permitirá a la empresa cumplir con los requerimientos documentales ante inspectores en carretera.
 
 <a id="1223-lean-ux-hypothesis-statements"></a>
 #### 1.2.2.3. Lean UX Hypothesis Statements
