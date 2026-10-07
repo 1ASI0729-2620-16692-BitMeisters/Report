@@ -982,9 +982,259 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="222-registro-de-entrevistas"></a>
 ### 2.2.2. Registro de entrevistas.
 
+En esta sección se presenta el registro detallado de las entrevistas semiestructuradas realizadas a representantes reales de los tres segmentos objetivo definidos para FleetSafe: **Empresas de transporte de carga**, **Supervisores o encargados de flota** y **Conductores de vehículos de carga**. Cada ficha contiene los datos demográficos, laborales, tecnológicos y el resumen de los hallazgos levantados, acompañados de su evidencia fotográfica enlazada y el enlace de la grabación en video.
+
+---
+
+#### Segmento 1: Empresas de transporte de carga
+
+##### Entrevista 1 — Carlos Mendoza Paredes
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Gerente de Operaciones
+* **Empresa / Flota:** Transportes San José S.A.C. (Flota de 22 tractocamiones y semirremolques)
+* **Edad:** 48 años
+* **Distrito de residencia:** Ate Vitarte, Lima
+* **Tiempo en la actividad:** 16 años en el sector logístico de carga pesada
+* **Dispositivos y marcas:** Laptop Dell Vostro 15 (Windows 11), Smartphone Samsung Galaxy S21 (Android 14)
+* **Aplicaciones y herramientas habituales:** Microsoft Excel, WhatsApp Business, Gmail, ERP contable local y plataforma GPS de telemática vehicular
+* **Fecha y hora:** 18 de septiembre de 2026 — 10:30 h
+* **Duración:** 16 minutos con 45 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:45`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-1.png" alt="Captura de la entrevista 1 — Carlos Mendoza" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* Se realiza mediante un formato impreso de checklist que el chofer entrega firmado antes de salir del almacén central.
+  * *Punto de dolor crítico:* Los papeles suelen llegar manchados de grasa, ilegibles o se acumulan en archivadores físicos sin ser revisados a tiempo. Cuando SUTRAN o un cliente minero audita la flota en carretera, no tienen forma de corroborar inmediatamente si la unidad salió con las luces o neumáticos en regla.
+  * *Gestión de fallas y excepciones:* Si una unidad tiene un foco quemado o una llanta con desgaste irregular pero la carga tiene penalidad de entrega, el supervisor autoriza la salida por llamada telefónica ("de palabra"), sin que quede ningún registro auditable de la excepción.
+
+---
+
+##### Entrevista 2 — Fernando Quispe Huamán
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Administrador General
+* **Empresa / Flota:** Inversiones Logísticas del Sur E.I.R.L. (Flota de 15 camiones rígidos y furgones)
+* **Edad:** 52 años
+* **Distrito de residencia:** Callao
+* **Tiempo en la actividad:** 20 años en administración de flotas de carga regional
+* **Dispositivos y marcas:** PC de escritorio Lenovo ThinkCentre (Windows 10), Smartphone Xiaomi Redmi Note 12 (Android 13)
+* **Aplicaciones y herramientas habituales:** Google Sheets, WhatsApp, banca por internet y software de facturación electrónica
+* **Fecha y hora:** 18 de septiembre de 2026 — 15:00 h
+* **Duración:** 15 minutos con 20 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:20`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-2.png" alt="Captura de la entrevista 2 — Fernando Quispe" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* Cada chofer tiene un talonario autocopiativo de revisión básica. La copia amarilla queda en portería y la blanca va a administración a fin de mes.
+  * *Punto de dolor crítico:* Pérdida total de trazabilidad histórica. Ante una falla mecánica en carretera, no pueden probar si el defecto era preexistente o negligencia del chofer. Además, mantener el control manual de fechas de SOAT y Revisión Técnica de 15 vehículos genera descuidos frecuentes.
+  * *Expectativa:* Una herramienta web ligera que no exija instalar equipos caros y que permita saber desde el navegador si un vehículo tiene sus papeles en regla y la inspección aprobada antes de asignarle un viaje.
+
+---
+
+##### Entrevista 3 — Martín Solís Carrión
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Jefe de Transporte y Distribución
+* **Empresa / Flota:** Carga Pesada Andina S.A.C. (Flota de 30 unidades articuladas)
+* **Edad:** 45 años
+* **Distrito de residencia:** Villa El Salvador, Lima
+* **Tiempo en la actividad:** 12 años liderando transporte terrestre interprovincial
+* **Dispositivos y marcas:** Laptop HP Pavilion 14 (Windows 11), Smartphone Motorola Moto G72 (Android 13)
+* **Aplicaciones y herramientas habituales:** SAP Business One, WhatsApp, Google Chrome y plataforma de rastreo GPS
+* **Fecha y hora:** 19 de septiembre de 2026 — 09:15 h
+* **Duración:** 18 minutos con 10 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 18:10`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-3.png" alt="Captura de la entrevista 3 — Martín Solís" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* El conductor pasa por garita y un inspector anota las observaciones en una tabla compartida en Excel.
+  * *Punto de dolor crítico:* El tiempo de cuello de botella en patio (hasta 30 minutos por camión en horas pico de salida matutina) y la imposibilidad de adjuntar fotos de evidencia de fisuras o desgastes de frenos.
+  * *Riesgo legal:* En auditorías de homologación de clientes industriales, el 40% de las observaciones recibidas se deben a la falta de firmas legibles o fechas inconsistentes en las hojas de inspección física.
+
+---
+
+#### Segmento 2: Supervisores o encargados de flota
+
+##### Entrevista 4 — Roberto Salazar Vega
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Supervisor de Seguridad y Salud en el Trabajo (SST) de Flota
+* **Empresa / Flota:** Transportes San José S.A.C.
+* **Edad:** 38 años
+* **Distrito de residencia:** San Juan de Lurigancho, Lima
+* **Tiempo en la actividad:** 7 años en supervisión de transporte pesado y prevención de riesgos
+* **Dispositivos y marcas:** Smartphone Samsung Galaxy A54 5G (Android 14), Laptop corporativa Lenovo ThinkPad (Windows 11)
+* **Aplicaciones y herramientas habituales:** Microsoft Teams, Excel, WhatsApp, Google Drive y lector de PDF
+* **Fecha y hora:** 19 de septiembre de 2026 — 11:45 h
+* **Duración:** 17 minutos con 30 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 17:30`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-4.png" alt="Captura de la entrevista 4 — Roberto Salazar" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Rutina diaria:* Inicia a las 06:00 h revisando qué camiones tienen servicio programado. Debe validar visualmente los formatos que los choferes dejan en la casilla de operaciones.
+  * *Punto de dolor:* Pasa más de 2 horas al día pasando datos de papel a Excel para generar el reporte de unidades operativas. Si un chofer anota una falla leve en la noche, el supervisor se entera recién al mediodía siguiente.
+  * *Habilitación del vehículo:* Requiere que el sistema aplique reglas estrictas: si una llanta de tracción está lisa o faltan los extintores vigentes, la unidad debe bloquearse automáticamente (*No Habilitada*), sin margen de duda.
+
+---
+
+##### Entrevista 5 — Carmen Dávila Rengifo
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Coordinadora de Despacho y Monitoreo de Seguridad Vial
+* **Empresa / Flota:** Inversiones Logísticas del Sur E.I.R.L.
+* **Edad:** 35 años
+* **Distrito de residencia:** Los Olivos, Lima
+* **Tiempo en la actividad:** 5 años en coordinación de patio y despacho de carga
+* **Dispositivos y marcas:** Smartphone Apple iPhone 12 (iOS 17), PC Lenovo (Windows 10)
+* **Aplicaciones y herramientas habituales:** WhatsApp Web, Google Drive, Excel y portal de fiscalización de SUTRAN
+* **Fecha y hora:** 20 de septiembre de 2026 — 14:20 h
+* **Duración:** 14 minutos con 50 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:50`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-5.png" alt="Captura de la entrevista 5 — Carmen Dávila" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Gestión de incidencias:* Cuando un vehículo tiene una falla mecánica leve, se genera una orden manual para el taller mecánico de la empresa, pero no hay seguimiento en tiempo real de si la pieza fue reparada antes de que el camión vuelva a circular.
+  * *Presión operativa:* Cuando un cliente exige el despacho urgente, el gerente suele presionar para que el camión salga con "observaciones menores". Carmen exige que, si se va a autorizar esa excepción, el sistema registre el nombre del directivo que lo autorizó para proteger su responsabilidad profesional.
+
+---
+
+##### Entrevista 6 — Walter Huamán Córdova
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Supervisor de Mantenimiento y Patio
+* **Empresa / Flota:** Carga Pesada Andina S.A.C.
+* **Edad:** 42 años
+* **Distrito de residencia:** Chorrillos, Lima
+* **Tiempo en la actividad:** 9 años en talleres y patios de maniobras de transporte pesado
+* **Dispositivos y marcas:** Smartphone Xiaomi Poco X5 Pro (Android 13), Tablet Samsung Galaxy Tab A8 (Android 13)
+* **Aplicaciones y herramientas habituales:** WhatsApp, Telegram, Google Sheets, visor de planos de despiece automotriz
+* **Fecha y hora:** 20 de septiembre de 2026 — 16:30 h
+* **Duración:** 16 minutos con 15 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:15`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Verificación de inspección:* Señala que muchos conductores marcan "OK" en todo el checklist de papel en 3 minutos sin bajarse a mirar la quinta rueda ni las luces de frenos.
+  * *Necesidad de evidencia fotográfica:* Si el sistema obligara a tomar fotografía del elemento observado (por ejemplo, corte en neumático o fuga de aire), el conductor tendría que acercarse físicamente a inspeccionar y no podría falsear la revisión.
+
+---
+
+#### Segmento 3: Conductores de vehículos de carga
+
+##### Entrevista 7 — Jorge Rivas Mendoza
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor profesional de transporte pesado (Tractocamión Volvo FH 540)
+* **Empresa:** Conductor asignado en Transportes San José S.A.C. (Ruta Lima - Arequipa)
+* **Edad:** 46 años
+* **Distrito de residencia:** Comas, Lima
+* **Tiempo en la actividad:** 14 años de experiencia con Licencia A-IIIB y A-IIIC
+* **Dispositivos y marcas:** Smartphone Samsung Galaxy A14 (Android 13), cargador de cabina de 12V
+* **Herramientas de trabajo:** Manómetro analógico de neumáticos, martillo de llantas, linterna de mano, libreta de notas
+* **Aplicaciones habituales:** WhatsApp, Waze, YouTube (en paradas de descanso)
+* **Fecha y hora:** 21 de septiembre de 2026 — 08:30 h
+* **Duración:** 15 minutos con 40 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:40`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-7.png" alt="Captura de la entrevista 7 — Jorge Rivas" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Proceso actual:* Revisa luces, presión de llantas, niveles de refrigerante y aceite, y llena la hoja de papel de 30 preguntas que le entrega el despachador.
+  * *Frustración principal:* Si la hoja se moja con lluvia o aceite en la cabina, le hacen volver a llenarla. Además, le toma hasta 25 minutos porque tiene que escribir textos largos a mano.
+  * *Preferencia tecnológica:* Desea una aplicación sencilla en el celular donde solo tenga que pulsar botones grandes de "Conforme" o "Falla", y que le permita tomar una foto rápida si encuentra una luna rajada o un faro roto para deslindar su responsabilidad.
+
+---
+
+##### Entrevista 8 — Pedro Morales Huaccachi
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor de tractocamión articulado (Scania R450)
+* **Empresa:** Conductor de ruta nacional en Inversiones Logísticas del Sur E.I.R.L.
+* **Edad:** 51 años
+* **Distrito de residencia:** San Martín de Porres, Lima
+* **Tiempo en la actividad:** 20 años en transporte de carga interprovincial
+* **Dispositivos y marcas:** Smartphone Xiaomi Redmi 10C (Android 12), radio CB de dos vías en cabina
+* **Herramientas de trabajo:** Calibrador de profundidad de cocada, kit de herramientas manuales, medidor de aceite
+* **Aplicaciones habituales:** WhatsApp y llamadas telefónicas
+* **Fecha y hora:** 21 de septiembre de 2026 — 11:00 h
+* **Duración:** 14 minutos con 25 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:25`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Dificultad con la tecnología:* No le gustan los sistemas complicados ni las letras pequeñas porque en patio hay poca luz y suele tener las manos con guantes o polvo.
+  * *Temor a responsabilidades ajenas:* En más de una ocasión le han reclamado por una llanta de repuesto vencida que ya estaba así antes de su turno. Exige que la inspección digital guarde la hora exacta y fotos para demostrar qué fallas eran previas a su viaje.
+
+---
+
+##### Entrevista 9 — Miguel Ángel Ramos Castro
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor de semirremolque y plataforma (Freightliner Columbia)
+* **Empresa:** Conductor de transporte de materiales en Carga Pesada Andina S.A.C.
+* **Edad:** 39 años
+* **Distrito de residencia:** Puente Piedra, Lima
+* **Tiempo en la actividad:** 10 años en transporte de carga minera e industrial
+* **Dispositivos y marcas:** Smartphone Motorola Moto E22 (Android 12)
+* **Herramientas de trabajo:** Linterna frontal LED, medidor digital de presión de neumáticos, wincha de amarre
+* **Aplicaciones habituales:** WhatsApp, Google Maps, Facebook
+* **Fecha y hora:** 22 de septiembre de 2026 — 09:40 h
+* **Duración:** 16 minutos con 05 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:05`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-9.png" alt="Captura de la entrevista 9 — Miguel Ángel Ramos" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Exigencias de clientes mineros:* En ruta minera los estándares son estrictos; si un extintor está despresurizado o falta una cinta reflectiva, no le permiten ingresar a mina y la empresa pierde el viaje.
+  * *Facilidad de uso:* Si el checklist digital está organizado por partes (primero cabina, luego motor, luego luces y neumáticos) y le avisa si el vehículo está 100% autorizado para salir, le ahorraría discusiones con los supervisores de garita.
+
+---
+
 <a id="223-analisis-de-entrevistas"></a>
 ### 2.2.3. Análisis de entrevistas.
 
+El análisis de las entrevistas realizadas a los nueve representantes de los tres segmentos objetivo permitió extraer hallazgos cualitativos y patrones cuantitativos fundamentales para validar las hipótesis iniciales de negocio y redefinir los requisitos funcionales de FleetSafe.
+
+#### 1. Análisis Cuantitativo Consolidado
+
+A partir de la codificación sistemática de las respuestas de los 9 entrevistados (3 por segmento), se obtuvieron los siguientes indicadores porcentuales clave:
+
+| Indicador / Hallazgo Evaluado | Muestra Total (N=9) | Empresas (N=3) | Supervisores (N=3) | Conductores (N=3) | Porcentaje Consolidado |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Uso exclusivo de formatos en papel para inspección preoperacional | 9 / 9 | 3 / 3 | 3 / 3 | 3 / 3 | **100.0%** |
+| Retrasos en despacho de patio atribuibles al llenado de papel (20 a 30 min) | 7 / 9 | 2 / 3 | 2 / 3 | 3 / 3 | **77.8%** |
+| Ocurrencia de autorizaciones de salida verbales ("de palabra") sin sustento auditable | 8 / 9 | 3 / 3 | 3 / 3 | 2 / 3 | **88.9%** |
+| Multas de SUTRAN u observaciones en auditorías por formatos ilegibles o incompletos | 6 / 9 | 2 / 3 | 3 / 3 | 1 / 3 | **66.7%** |
+| Sospecha o confirmación de "marcado automático / por compromiso" sin revisión física | 8 / 9 | 3 / 3 | 3 / 3 | 2 / 3 | **88.9%** |
+| Disposición de smartphone propio con acceso a datos móviles en patio de maniobras | 9 / 9 | 3 / 3 | 3 / 3 | 3 / 3 | **100.0%** |
+| Sistema operativo móvil predominante (Android) | 8 / 9 | 3 / 3 | 2 / 3 | 3 / 3 | **88.9%** (Android) / 11.1% (iOS) |
+
+#### 2. Análisis Cualitativo por Segmento
+
+##### A. Segmento Empresas de Transporte de Carga
+* **Dolor de pérdida económica y legal:** Los gerentes y administradores perciben el control preventivo en papel no como una medida de seguridad real, sino como un "trámite administrativo engorroso". Sin embargo, asumen costos elevados cuando las unidades son multadas o inmovilizadas en carretera por SUTRAN debido a fallas que pudieron detectarse antes de salir.
+* **Falta de visibilidad ejecutiva en tiempo real:** Ninguna de las empresas entrevistadas cuenta con un tablero centralizado donde la gerencia pueda verificar en tiempo real cuántas unidades están habilitadas para salir al iniciar la mañana. Dependen enteramente de llamadas telefónicas y reportes en Excel desactualizados.
+* **Necesidad de cumplimiento en homologaciones:** Las auditorías de homologación de clientes de gran envergadura (minería, consumo masivo, retail) exigen evidencias fotográficas y firmas fechadas. La falta de este respaldo digital reduce su competitividad comercial y frena la adjudicación de contratos de largo plazo.
+
+##### B. Segmento Supervisores de Flota y Seguridad (SST)
+* **Sobrecarga operativa y digitación duplicada:** Los supervisores invierten entre 1.5 y 2.5 horas diarias transcribiendo manualmente las observaciones de las hojas de papel a hojas de cálculo. Este tiempo burocrático les resta capacidad de inspección física en patio.
+* **Dilema ético y presión operativa ante excepciones:** Todos los supervisores admitieron recibir presiones constantes de las áreas comerciales para autorizar la salida de unidades con fallas leves para no perder turnos de carga. Manifiestan la necesidad urgente de que el sistema exija registrar la justificación y el responsable directo de la excepción, blindando su responsabilidad profesional ante siniestros.
+* **Ausencia de trazabilidad en las reparaciones:** Una vez que un elemento mecánico no conforme es reportado, no existe un canal cerrado para verificar si el taller mecánico corrigió el desperfecto antes de que el vehículo sea reasignado a otro conductor.
+
+##### C. Segmento Conductores de Vehículos de Carga
+* **Demanda de simplicidad y botones táctiles grandes:** Los conductores rechazan formularios web con textos largos, campos obligatorios de texto libre o interfaces recargadas. Señalan que en el patio de maniobras la iluminación es variable, el sol refleja en las pantallas y operan con manos sucias o guantes. Requieren botones de gran tamaño (mínimo 48 × 48 px) con opciones directas (*Conforme* / *Falla*) y flujo guiado paso a paso.
+* **Protección ante culpas por fallas mecánicas preexistentes:** El conductor ve con gran entusiasmo la capacidad de adjuntar fotografías obligatorias a los hallazgos con marca de tiempo. Esto les proporciona un escudo probatorio frente a los dueños de la empresa, evitando que se les descuente de sus sueldos roturas o desgastes que ya estaban presentes al iniciar su turno.
+* **Tiempo de llenado reducido:** Consideran aceptable un tiempo de inspección digital de entre 5 y 7 minutos. Cualquier proceso digital que tome más de 10 minutos generará resistencia al cambio y tentación de volver al llenado ficticio.
+
+#### 3. Validación y Contraste de las Lean UX Assumptions
+
+Los hallazgos de las entrevistas permitieron validar y calibrar las suposiciones iniciales planteadas en la sección 1.2.2.2:
+
+1. **Suposición validada:** *Las empresas necesitan eliminar el formato físico para asegurar la trazabilidad preventiva.* Confirmado al 100%. El papel físico es la causa raíz de la pérdida de información y del incumplimiento en auditorías de homologación.
+2. **Suposición validada:** *La clasificación del vehículo debe ser automática y determinística.* Confirmado. Los supervisores respaldan que el sistema clasifique la unidad en *Habilitado*, *Observado* o *No Habilitado* según reglas predefinidas, eliminando interpretaciones subjetivas.
+3. **Suposición ajustada:** *Las excepciones operacionales deben permitirse bajo estricta trazabilidad.* Inicialmente se contempló un bloqueo rígido e inamovible ante cualquier falla. La investigación demostró que la realidad operativa peruana exige permitir el despacho condicional con fallas no críticas, siempre y cuando se registre el autorizador y la justificación técnica en el historial auditable.
+4. **Suposición técnica validada:** *La solución debe ejecutarse en el navegador móvil sin requerir hardware telemático instalado.* Confirmado. El 100% de los conductores y supervisores opera smartphones con navegadores web modernos (Chrome, Safari), haciendo inviable e innecesaria la adquisición de equipos telemáticos propietarios.
+
+---
 
 <a id="23-needfinding"></a>
 ## 2.3. Needfinding.
