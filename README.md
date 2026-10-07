@@ -1,29 +1,67 @@
 <p align="center">
-    <img src="img/UPC.png" alt="Logo UPC" width="50%">
+  <img src="img/UPC.png" alt="Logo UPC" width="120px">
 </p>
-<h3 align="center">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</h3>
 
-<h3 align="center">INGENIERÍA DE SOFTWARE</h3>
-<h4 align="center">CICLO 5</h4>
-<h4 align="center">1ASI0729 - DESARROLLO DE APLICACIONES OPEN SOURCE</h4>
-<h4 align="center"><strong>NRC:</strong> 16692</h4>
-<h4 align="center"><strong>PROFESOR:</strong> Angel Augusto Velasquez Nuñez</h4>
+<p align="center">
+  <strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
+  Carrera de Ingeniería de Software
+</p>
 
-<h3 align="center">INFORME DE TRABAJO FINAL</h3>
-<h4 align="center"><strong>CICLO:</strong> 2026-20</h4>
-<h4 align="center"><strong>STARTUP:</strong> BitMeisters</h4>
-<h4 align="center"><strong>PRODUCT:</strong> FleetSafe</h4>
+<p align="center">
+  <strong>1ASI0729</strong><br>
+  <strong>Desarrollo de Aplicaciones Open Source</strong>
+</p>
 
-<h4 align="center"><strong>INTEGRANTES:</strong></h4>
+<p align="center">
+  <strong>NRC</strong><br>
+  16692
+</p>
 
-<h4 align="center">U20211C201 - Palacin Lazo, Gerardo Valentin</h4>
-<h4 align="center">U20221a371 - Santos Torres, Juan Manuel</h4>
-<h4 align="center">U20231c197 - Apaza Bocanegra, Elizabeth Noelia</h4>
-<h4 align="center">U202318309 - Aguilar Untiveros, Rodrigo Fabrizio</h4>
-<h4 align="center">U202122129 - Espino Flores, Alejandro</h4>
+<p align="center">
+  <strong>Informe del Trabajo Final</strong>
+</p>
 
+<p align="center">
+  <strong>Docente</strong><br>
+  Velásquez Núñez, Ángel Augusto
+</p>
 
-<h4 align="center"><i>SETIEMBRE 2026</i></h4>
+<p align="center">
+  <strong>Equipo</strong><br>
+  <strong>BitMeisters</strong>
+</p>
+
+<p align="center">
+  <strong>Proyecto</strong><br>
+  <strong>FleetSafe</strong>
+</p>
+
+<p align="center">
+  <strong>Integrantes</strong>
+</p>
+
+<div align="center">
+
+| Código | Apellidos y Nombres |
+| :---: | :--- |
+| U20211C201 | Palacin Lazo, Gerardo Valentin |
+| U20221A371 | Santos Torres, Juan Manuel |
+| U20231C197 | Apaza Bocanegra, Elizabeth Noelia |
+| U202318309 | Aguilar Untiveros, Rodrigo Fabrizio |
+| U202122129 | Espino Flores, Alejandro |
+
+</div>
+
+<p align="center">
+  <strong>Período 2026-20</strong>
+</p>
+
+<p align="center">
+  <strong>Octubre 2026</strong>
+</p>
+
+<div style="page-break-after: always;"></div>
+<br>
 
 <hr>
 
