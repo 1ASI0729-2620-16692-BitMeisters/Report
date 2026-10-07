@@ -303,7 +303,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 | **Código del Estudiante** | U20231c197                                                                                                        |
 | **Carrera**               | Ingeniería de Software                                                                                            |
 | **Descripción**           | Me interesa el desarrollo frontend con frameworks modernos, el diseño centrado en el usuario (UX/UI) y la implementación de arquitecturas limpias orientadas al dominio (DDD). En FleetSafe lideré el análisis, modelado e implementación del Bounded Context de Pre-Operational Inspection, definiendo los modelos de dominio con campos encapsulados, el Store reactivo con Angular Signals y la interfaz móvil responsiva con controles accesibles según pautas WCAG 2.1 AA. Aporto conocimientos sólidos en TypeScript, Angular, Angular Material, internacionalización con ngx-translate, consumo de servicios RESTful y control de versiones con Git y GitFlow bajo Conventional Commits. Procuro que las soluciones sean accesibles, intuitivas y cumplan con rigor normativo técnico. |
-| **Foto**                  | <img src="img/team-members/elizabeth-apaza.jpeg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
+| **Foto**                  | <img src="img/team-members/elizabeth-apaza.jpg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
 
 ---
 
