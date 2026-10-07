@@ -178,8 +178,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico                                                   | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>_Pendiente de completar por la integrante._ | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos. |
-| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Pendiente de completar por la integrante._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>_Pendiente de completar por la integrante._  | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.                           |
+| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requerimientos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web. | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos. |
+| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Redacté la definición de la propuesta de valor de FleetSafe y la descripción de los tres roles principales del sistema (Administrador, Supervisor de flota y Conductor), documentando sus responsabilidades dentro del flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Elaboré la descripción de la arquitectura general de la solución compuesta por Landing Page, Web Application y Backend RESTful API. Documenté el alcance inicial del proyecto y las funcionalidades priorizadas, asegurando coherencia con el objetivo de control preventivo y habilitación operativa de vehículos.<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Redacté y documenté los aportes correspondientes al análisis y diseño de FleetSafe, organizando la información relacionada con las funcionalidades y los segmentos objetivo de la solución. Asimismo, contribuí en la elaboración y revisión de la documentación del proyecto, procurando expresar de manera clara las decisiones y avances realizados durante el Sprint para que pudieran ser comprendidos por los diferentes integrantes del equipo._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Redacté y documenté diferentes artefactos técnicos de FleetSafe, incluyendo partes de la arquitectura C4, el diseño de clases y el diseño de base de datos. Organicé la información de manera estructurada para que pudiera ser comprendida y revisada por los integrantes del equipo, relacionando los elementos técnicos con los Bounded Contexts definidos para la solución. Asimismo, participé en la documentación de los avances del proyecto y en la actualización del reporte, comunicando por escrito las decisiones y resultados obtenidos durante el Sprint._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Elaboré y documenté la sección de Landing Page Wireframes [sección 4.3.1], definiendo la arquitectura de información inicial, el flujo de navegación del visitante y la disposición funcional de los bloques de contenido. Diseñé y redacté la sección de Landing Page Mock-ups [4.3.2], especificando la guía de estilos visuales, paleta de colores, tipografía y componentes de alta fidelidad en coherencia con la propuesta de valor de FleetSafe. Documenté la implementación y despliegue de la Landing Page, describiendo la estructura del código frontend, los criterios de adaptabilidad multidispositivo (responsive design) y su configuración para el despliegue en producción mediante GitHub Pages.  | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.                           |
 
 <hr>
 
@@ -255,7 +255,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:---------------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U202318309                                                                                                     |
 | **Carrera**               | Ingeniería de Software                                                                                         |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                    |
+| **Descripción**           | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. Aporto conocimientos en Java con Spring Boot, C# con .NET, Python, JavaScript y TypeScript, además de bases de datos relacionales con PostgreSQL y MySQL, y no relacionales con MongoDB. Manejo control de versiones con Git y GitFlow, modelado con UML y C4, y contenedores con Docker. Procuro que lo que se afirma se pueda comprobar: verifico el comportamiento real de cada herramienta o producto en sus fuentes oficiales antes de darlo por cierto, y corrijo lo que no coincide con la evidencia. |
 | **Foto**                  | <img src="img/team-members/RodrigoAguilar.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
@@ -282,7 +282,7 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U20221a371                                                                                            |
 | **Carrera**               | Ingeniería de Software                                                                                |
-| **Descripción**           | _Pendiente de redacción por la integrante._                                                           |
+| **Descripción**           | Me interesa el desarrollo frontend, el diseño de experiencia de usuario (UX/UI) y la construcción de interfaces web intuitivas y de alto rendimiento. En FleetSafe asumí la concepción visual y el desarrollo web inicial de la solución: estructuré el flujo de navegación y la arquitectura de información mediante wireframes de baja fidelidad, diseñé los mockups de alta fidelidad definiendo la identidad visual y guía de componentes, y programé la Landing Page responsiva orientada a la propuesta de valor y captación de clientes del sector transporte. Aporto conocimientos en maquetación y desarrollo web con HTML5 semántico, CSS3, Tailwind CSS y JavaScript, además de lenguajes como Python, C++ y Java, control de versiones con Git/GitFlow y despliegue continuo en GitHub Pages. Procuro que cada interfaz mantenga coherencia estética, accesibilidad y una implementación técnica limpia que asegure una navegación fluida en cualquier dispositivo.                                                         |
 | **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
 
 ---
@@ -955,18 +955,77 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="23-needfinding"></a>
 ## 2.3. Needfinding.
 
+**Segmento objetivo #1: Empresas de transporte de carga**
+
+Buscan centralizar y visualizar el estado de su flota para tomar decisiones preventivas y reducir riesgos durante las operaciones.
+
+**Segmento objetivo #2: Supervisores de flota**
+
+Necesitan controlar las inspecciones, identificar problemas y dar seguimiento a las incidencias para mantener los vehículos aptos para operar.
+
+**Segmento objetivo #3: Conductores de vehículos de carga**
+
+Necesitan realizar inspecciones pre-operacionales de forma rápida, registrar evidencias y reportar problemas antes de iniciar sus recorridos.
+
 <a id="231-user-personas"></a>
 ### 2.3.1. User Personas.
+
+![userp1](img/needFinding/userPersonas/José%20Ramirez.png)
+![userp2](img/needFinding/userPersonas/Alessandra%20Nova.png)
+![userp3](img/needFinding/userPersonas/Álvaro%20Torres.png)
 
 <a id="232-user-task-matrix"></a>
 ### 2.3.2. User Task Matrix.
 
+En esta sección se presenta la User Task Matrix, herramienta centrada en los segmentos objetivo que permitirá identificar las tareas y objetivos clave de los usuarios de FleetSafe.
+
+| **USER TASK** | **José Ramírez** |  | **Alessandra Nova** |  | **Álvaro Torres** |  |
+|---|---|---|---|---|---|---|
+| | **Frequency** | **Importance** | **Frequency** | **Importance** | **Frequency** | **Importance** |
+| Consultar el estado de la flota | Often | High | Always | High | Sometimes | Medium |
+| Revisar información de los vehículos | Often | High | Always | High | Sometimes | Medium |
+| Revisar resultados de inspecciones | Sometimes | High | Always | High | Always | High |
+| Realizar inspección pre-operacional | Rarely | Medium | Sometimes | High | Always | High |
+| Registrar resultados de inspección | Rarely | Medium | Sometimes | High | Always | High |
+| Reportar condiciones inseguras o problemas | Sometimes | High | Often | High | Always | High |
+| Adjuntar evidencia fotográfica | Rarely | Medium | Often | High | Often | High |
+| Consultar el estado de autorización del vehículo | Often | High | Always | High | Always | High |
+| Gestionar y dar seguimiento a incidencias | Often | High | Always | High | Sometimes | High |
+| Consultar historial de inspecciones e incidencias | Sometimes | Medium | Often | High | Rarely | Medium |
+| Consultar documentación de los vehículos | Often | High | Often | High | Sometimes | Medium |
+| Dar seguimiento a acciones correctivas | Often | High | Always | High | Sometimes | Medium |
+| Recibir notificaciones sobre problemas o incidencias | Always | High | Always | High | Always | High |
+| Generar o consultar reportes de la flota | Often | High | Often | High | Rarely | Low |
+
 <a id="233-user-journey-mapping"></a>
 ### 2.3.3. User Journey Mapping.
+
+**Segmento 1**
+
+![ujm1](img/needFinding/userJourneyMapping/José%20Ramirez%20-%20User%20Journey%20Map.png)
+
+**Segmento 2**
+
+![ujm2](img/needFinding/userJourneyMapping/Alessandra%20Nova%20-%20User%20Journey%20Map.png)
+
+**Segmento 3**
+
+![ujm3](img/needFinding/userJourneyMapping/Álvaro%20Torres%20-%20User%20Journey%20Map.png)
 
 <a id="234-empathy-mapping"></a>
 ### 2.3.4. Empathy Mapping.
 
+**Segmento 1**
+
+![em1](img/needFinding/empathyMapping/Empathy%20map%20-%20José%20Ramirez.png)
+
+**Segmento 2**
+
+![em2](img/needFinding/empathyMapping/Empathy%20map%20-%20Alessandra%20Nova.png)
+
+**Segmento 3**
+
+![em3](img/needFinding/empathyMapping/Empathy%20map%20-%20Álvaro%20Torres.png)
 
 <a id="24-big-picture-eventstorming"></a>
 ## 2.4. Big Picture EventStorming.
@@ -1143,6 +1202,19 @@ A continuación se presenta el cuadro consolidado de Epics y User Stories:
 
 <a id="32-impact-mapping"></a>
 ## 3.2. Impact Mapping.
+
+**Impact Map Segmento 1**
+
+![im1](img/impactMapping/Impact%20map%20-%20José%20Ramirez.png)
+
+**Impact Map Segmento 2**
+
+![im2](img/impactMapping/Impact%20map%20-%20Alessandra%20Nova.png)
+
+**Impact Map Segmento 3**
+
+![im3](img/impactMapping/Impact%20map%20-%20Álvaro%20Toress.png)
+
 
 <a id="33-product-backlog"></a>
 ## 3.3. Product Backlog.
@@ -4688,27 +4760,114 @@ El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publi
 <a id="5211-sprint-planning-1"></a>
 #### 5.2.1.1. Sprint Planning 1.
 
+| Sprint 1                           | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint Planning Background**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Date**                           | 2026-09-18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Time**                           | 11:00 pm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Location**                       | Via discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Prepared By**                    | Palacin Lazo, Gerardo Valentin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Attendees to planning meeting**  | Palacin Lazo, Gerardo Valentin; Santos Torres, Juan Manuel; Apaza Bocanegra, Elizabeth Noelia; Aguilar Untiveros, Rodrigo Fabrizio; Espino Flores, Alejandro                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Sprint 1 Review Summary**        | Durante este sprint el equipo avanzó en la construcción de la base del producto FleetSafe. Se completó la documentación de arquitectura y diseño, incluyendo los diagramas C4 de contexto, contenedores y componentes, los diagramas de clases organizados por bounded context y los diagramas de base de datos correspondientes a los contextos del dominio. Asimismo, se desarrolló el wireframe y el mock-up de alta fidelidad de la Landing Page, definiendo sus diez secciones en versión Desktop. La Landing Page fue implementada como parte del producto y se documentó su configuración para el despliegue mediante GitHub Pages. |
+| **Sprint 1 Retrospective Summary** | Durante la retrospectiva el equipo identificó que una parte importante del tiempo del sprint se concentró en completar y corregir la documentación técnica y el diseño del producto. A partir de la autocrítica realizada, se corrigieron aspectos del análisis competitivo, del diseño de base de datos, de la arquitectura C4 y del diseño orientado a objetos. También se identificó la necesidad de cerrar previamente el diseño de las funcionalidades antes de iniciar su implementación, así como considerar el esfuerzo de documentación dentro de la estimación del trabajo del sprint.                                           |
+| **Sprint Goal & User Stories**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Sprint 1 Goal**                  | Establecer una base sólida para el desarrollo de FleetSafe mediante la definición de la arquitectura, el diseño orientado a objetos, el diseño de base de datos y la construcción de la Landing Page, dejando preparados los artefactos necesarios para continuar con la implementación de las funcionalidades principales de la plataforma.                                                                                                                                                                                                                                                                                               |
+| **Sprint 1 Velocity**              | 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Sum of Story Points**            | 27                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
 <a id="5212-aspect-leader-and-colaborators"></a>
 #### 5.2.1.2. Aspect Leader and Colaborators.
+
+Durante este sprint, el equipo BitMeisters se enfocó principalmente en consolidar la propuesta de FleetSafe, priorizando la resolución de errores y observaciones identificadas en los avances previos, el fortalecimiento de la arquitectura y el diseño del producto, así como el refinamiento de las funcionalidades planteadas para la plataforma.
+
+Con el objetivo de optimizar la organización y la colaboración del equipo, se actualizó la matriz de Liderazgo y Colaboración (LACX), la cual asigna responsabilidades y roles específicos a cada miembro del equipo en relación con los aspectos abordados durante este sprint.
+
+| Team Member (Last Name, First Name) | Github Username  | Resolución de errores de sprints previos Leader (L) / Collaborator (C) | Arquitectura, diseño y optimización de FleetSafe Leader (L) / Collaborator (C) | Refinamiento de funcionalidades y ajustes finales Leader (L) / Collaborator (C) |
+|-------------------------------------|------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Palacin Lazo, Gerardo Valentin      | GerardoPalacin03 | C                                                                      | C                                                                              | L                                                                               |
+| Santos Torres, Juan Manuel          | Por completar    | L                                                                      | L                                                                              | C                                                                               |
+| Apaza Bocanegra, Elizabeth Noelia   | Por completar    | C                                                                      | C                                                                              | L                                                                               |
+| Aguilar Untiveros, Rodrigo Fabrizio | Por completar    | L                                                                      | L                                                                              | C                                                                               |
+| Espino Flores, Alejandro            | Por completar    | C                                                                      | L                                                                              | C                                                                               |
+
 
 <a id="5213-sprint-backlog-1"></a>
 #### 5.2.1.3. Sprint Backlog 1.
 
+#### 5.2.1.3. Sprint Backlog 1.
+
+| Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
+|---|---|---|---|---|---:|---|---|
+| US-01 | Visualizar página de inicio | UT-01 | Diseñar wireframe de la página de inicio | Diseñar la estructura inicial de la Landing Page de FleetSafe, definiendo la distribución de sus principales secciones. | 3 | Gerardo Palacin | Done |
+| US-01 | Visualizar página de inicio | UT-02 | Diseñar mock-up de alta fidelidad | Elaborar en Figma el diseño visual de alta fidelidad de la página de inicio de FleetSafe. | 4 | Gerardo Palacin | Done |
+| US-01 | Visualizar página de inicio | UT-03 | Implementar Landing Page | Implementar la Landing Page de FleetSafe a partir del diseño aprobado, incluyendo su estructura y navegación. | 5 | Juan Manuel | Done |
+| US-02 | Conocer las funcionalidades de nuestro producto | UT-01 | Diseñar sección de funcionalidades | Diseñar la sección de la Landing Page que presenta las principales funcionalidades ofrecidas por FleetSafe. | 3 | Elizabeth Noelia | Done |
+| US-02 | Conocer las funcionalidades de nuestro producto | UT-02 | Implementar sección de funcionalidades | Implementar las tarjetas y elementos visuales que presentan las funcionalidades principales de FleetSafe. | 3 | Juan Manuel | Done |
+| US-03 | Conocer beneficio por segmento | UT-01 | Diseñar sección de segmentos objetivo | Diseñar las secciones orientadas a los segmentos objetivo de FleetSafe, mostrando los beneficios de la solución para cada uno. | 3 | Rodrigo Fabrizio | Done |
+| US-03 | Conocer beneficio por segmento | UT-02 | Implementar beneficios por segmento | Implementar en la Landing Page la presentación de los beneficios de FleetSafe según cada segmento objetivo. | 3 | Juan Manuel | Done |
+| US-04 | Solicitar contacto o demostración | UT-01 | Diseñar sección de contacto | Diseñar la sección de contacto de la Landing Page para permitir al visitante solicitar información o una demostración de FleetSafe. | 2 | Alejandro | Done |
+| US-04 | Solicitar contacto o demostración | UT-02 | Implementar llamada a la acción | Implementar los botones y elementos de llamada a la acción que permitan al visitante solicitar contacto o una demostración. | 2 | Juan Manuel | Done |
+| US-08 | Asignar rol a usuario | UT-01 | Diseñar selector de rol | Diseñar en Figma el componente que permite seleccionar el rol correspondiente al usuario dentro de FleetSafe. | 2 | Gerardo Palacin | Done |
+| US-08 | Asignar rol a usuario | UT-02 | Definir roles del sistema | Definir la representación de los roles de usuario y su relación con las funcionalidades de la plataforma. | 2 | Elizabeth Noelia | Done |
+| US-09 | Iniciar sesión | UT-01 | Diseñar pantalla de inicio de sesión | Diseñar en Figma la pantalla de inicio de sesión de FleetSafe, incluyendo los campos y elementos necesarios para la autenticación. | 2 | Gerardo Palacin | Done |
+| US-09 | Iniciar sesión | UT-02 | Definir flujo de autenticación | Definir el flujo de acceso del usuario desde el formulario de inicio de sesión hacia la plataforma. | 2 | Rodrigo Fabrizio | Done |
+| US-10 | Cerrar sesión | UT-01 | Diseñar opción de cierre de sesión | Diseñar la opción de cierre de sesión dentro de la interfaz de FleetSafe. | 1 | Alejandro | Done |
+| US-10 | Cerrar sesión | UT-02 | Definir flujo de cierre de sesión | Definir el comportamiento esperado al finalizar la sesión activa del usuario. | 1 | Elizabeth Noelia | Done |
+| US-07 | Registrar nuevo usuario | UT-01 | Diseñar pantalla de registro de usuario | Diseñar en Figma el formulario para registrar nuevos usuarios dentro de una empresa. | 3 | Rodrigo Fabrizio | Done |
+| US-07 | Registrar nuevo usuario | UT-02 | Definir datos del usuario | Definir los datos necesarios para el registro de un nuevo usuario y su relación con la empresa. | 2 | Alejandro | Done |
+| US-06 | Visualizar información de contacto y redes | UT-01 | Diseñar sección de contacto y redes | Diseñar la sección de la Landing Page que presenta la información de contacto y las redes sociales de FleetSafe. | 2 | Alejandro | Done |
+| US-06 | Visualizar información de contacto y redes | UT-02 | Implementar enlaces de contacto y redes | Implementar los elementos visuales y enlaces correspondientes a los canales de contacto y redes sociales de FleetSafe. | 2 | Juan Manuel | Done |
+
+link: https://trello.com/invite/b/6aadf6a6e6949ba68c504edf/ATTI9ae2353a166b688a7c7b163c68cf7fedE24284AE/sprint-1-fleetsafe
+
 <a id="5214-development-evidence-for-sprint-review"></a>
 #### 5.2.1.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 1, el desarrollo se concentró en la implementación de la Landing Page de FleetSafe. La Web Application y los Web Services no fueron implementados durante este Sprint, por encontrarse fuera del alcance de desarrollo establecido para esta iteración.
 
 <a id="5215-execution-evidence-for-sprint-review"></a>
 #### 5.2.1.5. Execution Evidence for Sprint Review.
 
+Se evidencia el avance del primer sprint por medio del desarrollo del los capitulos del reporte asi tambien como la creación de un landing page que evidencia nos de a conocer y el modelo de negocio. Por medio de este enlace:
+https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/
+
 <a id="5216-services-documentation-evidence-for-sprint-review"></a>
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review.
+
+En el primer Sprint solamente se ha desarrollado la Landing Page por lo que no se ha hecho uso de servicios web.
 
 <a id="5217-software-deployment-evidence-for-sprint-review"></a>
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review.
 
+Durante el Sprint 1 se realizó el proceso de implementación y despliegue de la primera versión funcional de la Landing Page de FleetSafe, correspondiente al alcance definido para este sprint. De acuerdo con el alcance establecido, durante esta iteración se priorizó contar con una versión publicada y accesible de la Landing Page.
+
+Para el despliegue se utilizó GitHub Pages, aprovechando el repositorio destinado al desarrollo de la Landing Page. La publicación permitió disponer de una versión accesible mediante una URL pública, facilitando la revisión de la solución y la validación de la navegación y el contenido implementado.
+
+El proceso realizado durante el Sprint comprendió las siguientes actividades:
+
+1. Desarrollo y organización de los archivos correspondientes a la Landing Page de FleetSafe.
+2. Integración de la estructura, contenido y estilos definidos para la primera versión.
+3. Implementación de las principales secciones de la Landing Page de FleetSafe.
+4. Verificación de la navegación entre las principales secciones de la Landing Page.
+5. Revisión de la visualización en diferentes dimensiones de pantalla, considerando el enfoque responsive.
+6. Configuración del repositorio para la publicación mediante GitHub Pages.
+7. Publicación de la versión desarrollada en la rama configurada para el despliegue.
+8. Verificación del acceso mediante la URL pública de la Landing Page.
+9. Comprobación final de las principales secciones y llamadas a la acción disponibles en la versión desplegada.
+
+**Información del despliegue**
+
+| Producto | Repositorio / Plataforma | Tecnología | Plataforma de Deployment | Estado | URL |
+|---|---|---|---|---|---|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | HTML5, CSS3 y JavaScript | GitHub Pages | Desplegado | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
+
+La Landing Page fue desarrollada utilizando HTML5, CSS3 y JavaScript, tecnologías establecidas para la implementación de la primera versión del producto. Asimismo, el uso de GitHub Pages permitió centralizar el proceso de publicación y disponer de una versión accesible de la Landing Page para su revisión durante el Sprint Review.
+
+
 <a id="5218-team-colaboration-insights-during-sprint"></a>
 #### 5.2.1.8. Team Colaboration Insights during Sprint.
 
+![S1TCI](img/teamCollaborationInsights/sprint1-teamCollaborationInsights.png)
 
 <a id="53-validation-interviews"></a>
 ## 5.3. Validation Interviews.
@@ -4725,15 +4884,40 @@ El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publi
 
 <a id="54-video-about-the-product"></a>
 ## 5.4. Video About-the-Product.
-
 <hr>
 
 
 <a id="conclusiones"></a>
 # Conclusiones
+<hr>
+
 
 <a id="conclusiones-y-recomendaciones"></a>
 ## Conclusiones y recomendaciones.
+
+### Conclusiones
+
+1. La participación en el Sprint 1 permitió consolidar la propuesta de FleetSafe mediante la definición de los principales artefactos de arquitectura, diseño y documentación. El trabajo realizado permitió establecer una base para continuar con la implementación progresiva de las funcionalidades de la plataforma.
+
+2. El trabajo realizado durante el Sprint permitió avanzar en la implementación y organización de la Landing Page de FleetSafe, contribuyendo a transformar los diseños definidos por el equipo en una primera versión funcional y accesible del producto.
+
+3. La participación en el sprint permitió contribuir al refinamiento de la propuesta funcional de FleetSafe y a la definición de elementos necesarios para representar las funcionalidades y segmentos objetivo del producto. Esto ayudó a mantener alineado el diseño con las necesidades identificadas durante el análisis del dominio.
+
+4. El desarrollo del Sprint 1 permitió contribuir a la consolidación de la arquitectura y del diseño de FleetSafe, especialmente en la organización de los elementos del dominio y en la preparación de los artefactos necesarios para continuar con el desarrollo de la solución.
+
+5. La participación durante el Sprint 1 permitió contribuir al desarrollo y refinamiento de los artefactos de diseño y de la Landing Page, ayudando a establecer una primera versión de la interfaz y a preparar la solución para las siguientes etapas de implementación.
+
+### Recomendaciones
+
+1. Para los siguientes sprints, se recomienda mantener una coordinación temprana entre arquitectura, diseño e implementación, de manera que los cambios realizados en un artefacto puedan reflejarse oportunamente en los demás y se reduzca el retrabajo.
+
+2. Se recomienda continuar priorizando la integración entre los diseños aprobados y su implementación, realizando validaciones frecuentes de la Landing Page y de las futuras funcionalidades para asegurar que el resultado desarrollado mantenga correspondencia con los diseños establecidos.
+
+3. Se recomienda continuar refinando las User Stories antes de iniciar su implementación, verificando que cada historia tenga claramente definido su objetivo, alcance y criterios necesarios para su desarrollo.
+
+4. Se recomienda mantener actualizados los diagramas de arquitectura y diseño conforme evolucione FleetSafe, especialmente cuando se incorporen nuevas funcionalidades o se realicen modificaciones en los Bounded Contexts definidos.
+
+5. Se recomienda realizar revisiones periódicas de las interfaces y flujos diseñados antes de iniciar su implementación, con el objetivo de detectar inconsistencias de navegación o diseño y reducir modificaciones durante las etapas posteriores del desarrollo.
 
 <a id="video-about-the-team"></a>
 ## Video About-the-Team.
