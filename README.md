@@ -4408,7 +4408,7 @@ erDiagram
     }
 ```
 
-El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los apartados siguientes.
+El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los secciónes siguientes.
 
 Todas las columnas con el sufijo `_by` —`created_by`, `reported_by`, `performed_by`, `evaluated_by` y `authorized_by`— referencian la tabla `users` del contexto Identity and Access, y registran la trazabilidad de quién realiza cada acción.
 
