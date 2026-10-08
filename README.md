@@ -1253,10 +1253,20 @@ Necesitan realizar inspecciones pre-operacionales de forma rápida, registrar ev
 
 <a id="231-user-personas"></a>
 ### 2.3.1. User Personas.
+*User Persona Segmento 1:*
+José Ramirez, de 37 años, es empresario y administrador de una empresa de transporte de carga en Huancayo, con 10 años de experiencia en el rubro. Es responsable de supervisar que su flota se encuentre en condiciones adecuadas y necesita tener una visión clara y centralizada del estado de los vehículos para tomar decisiones rápidas, reducir riesgos y evitar que unidades con problemas inicien una operación.
+![userp1](img/needFinding/userPersonas/JoseRamirez.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/p/NrqyE?tagId=nXgEG
 
-![userp1](img/needFinding/userPersonas/José%20Ramirez.png)
-![userp2](img/needFinding/userPersonas/Alessandra%20Nova.png)
-![userp3](img/needFinding/userPersonas/Álvaro%20Torres.png)
+*User Persona Segmento 2:*
+Alessandra Nova, de 35 años, es supervisora de operaciones y encargada de flota en Lima, con 8 años de experiencia. Su trabajo consiste en revisar las inspecciones, verificar el estado de los vehículos y realizar seguimiento a las incidencias hasta su resolución. Utiliza herramientas como Excel, WhatsApp y Google Drive, pero necesita reducir el trabajo manual y contar con información actualizada para identificar rápidamente qué vehículos están habilitados y cuáles requieren atención.
+![userp2](img/needFinding/userPersonas/AlessandraNova.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/p/6hEDO?tagId=nXgEG
+
+*User Persona Segmento 3:*
+Álvaro Torres, de 45 años, es conductor de transporte de carga en Tacna, con 3 años de experiencia en rutas nacionales. Antes de iniciar una operación verifica las condiciones del vehículo y comunica cualquier falla o condición insegura. Utiliza principalmente smartphone y herramientas de comunicación como WhatsApp, y necesita realizar inspecciones de manera sencilla, registrar evidencias y conocer el estado del vehículo sin depender de procesos manuales o poco claros.
+![userp3](img/needFinding/userPersonas/AlvaroTorres.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/p/rnMBZ?tagId=nXgEG
 
 <a id="232-user-task-matrix"></a>
 ### 2.3.2. User Task Matrix.
@@ -1298,31 +1308,39 @@ El análisis de la matriz evidencia una clara división de responsabilidades ope
 ### 2.3.3. User Journey Mapping.
 
 **Segmento 1**
+José inicia su recorrido planificando las operaciones y verificando la disponibilidad de la flota. Luego revisa las condiciones de seguridad y los resultados de las inspecciones para identificar vehículos que presentan problemas o requieren atención. Finalmente, utiliza esta información para decidir qué unidades pueden operar y cuáles deben ser atendidas. Durante el proceso, la información dispersa y la falta de actualización generan preocupación y dificultad para tomar decisiones oportunas.
 
-![ujm1](img/needFinding/userJourneyMapping/José%20Ramirez%20-%20User%20Journey%20Map.png)
+![ujm1](img/needFinding/userJourneyMapping/JoseRamirez-UserJourneyMap.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/m/f6aJG?tagId=nXgEG
 
 **Segmento 2**
+Alessandra comienza revisando las operaciones y el estado de los vehículos, para luego verificar los resultados de las inspecciones y determinar qué unidades están habilitadas. Cuando encuentra incidencias, registra y realiza seguimiento de los problemas hasta su resolución. Finalmente, consulta el historial y los cambios realizados en los vehículos. Sus principales dificultades son el trabajo manual, la información dispersa y la falta de trazabilidad, por lo que necesita información centralizada y actualizada.
 
-![ujm2](img/needFinding/userJourneyMapping/Alessandra%20Nova%20-%20User%20Journey%20Map.png)
+![ujm2](img/needFinding/userJourneyMapping/AlessandraNova-UserJourneyMap.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/m/etpoc?tagId=nXgEG
 
 **Segmento 3**
+Álvaro inicia su jornada realizando la inspección preoperacional y revisando las condiciones de seguridad del vehículo. Luego registra cualquier problema encontrado y adjunta evidencias cuando es necesario. Al finalizar, necesita conocer si el vehículo está habilitado para operar y posteriormente consultar qué ocurrió con los problemas que reportó. Sus principales dificultades son realizar inspecciones manuales, registrar evidencias rápidamente y no conocer inmediatamente el resultado o seguimiento de sus reportes.
 
-![ujm3](img/needFinding/userJourneyMapping/Álvaro%20Torres%20-%20User%20Journey%20Map.png)
+![ujm3](img/needFinding/userJourneyMapping/AlvaroTorres-UserJourneyMap.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/m/YmOSO?tagId=nXgEG
 
 <a id="234-empathy-mapping"></a>
 ### 2.3.4. Empathy Mapping.
 
 **Segmento 1**
-
+José necesita conocer el estado actualizado de su flota para identificar riesgos y decidir qué vehículos pueden operar. Su principal frustración es la información dispersa y la dificultad para detectar problemas a tiempo.
 ![em1](img/needFinding/empathyMapping/Empathy%20map%20-%20José%20Ramirez.png)
-
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/p/QRFhq?tagId=nXgEG
 **Segmento 2**
-
+Alessandra necesita revisar inspecciones, identificar vehículos con problemas y dar seguimiento a las incidencias. Le preocupa no detectar problemas a tiempo y valora contar con información centralizada y actualizada.
 ![em2](img/needFinding/empathyMapping/Empathy%20map%20-%20Alessandra%20Nova.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/p/W05Q5?tagId=nXgEG
 
 **Segmento 3**
-
+Álvaro necesita realizar inspecciones rápidas, registrar problemas y saber si su vehículo está listo para operar. Sus principales frustraciones son los procesos manuales, la dificultad para registrar evidencias y no conocer inmediatamente el resultado de la inspección.
 ![em3](img/needFinding/empathyMapping/Empathy%20map%20-%20Álvaro%20Torres.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/p/mnJos?tagId=nXgEG
 
 <a id="24-big-picture-eventstorming"></a>
 ## 2.4. Big Picture EventStorming.
