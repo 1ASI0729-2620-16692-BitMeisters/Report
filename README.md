@@ -1124,9 +1124,9 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 * **Aplicaciones y herramientas habituales:** WhatsApp, Telegram, Google Sheets, visor de planos de despiece automotriz
 * **Fecha y hora:** 20 de septiembre de 2026 — 16:30 h
 * **Duración:** 16 minutos con 15 segundos
-* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:15`)
+* **URL de la grabación:** https://shorturl.at/pkaow
 * **Evidencia de la sesión:**
-  <img src="img/interviews/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
+  <img src="img/charapter2/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
 
 * **Resumen de respuestas clave:**
   * *Verificación de inspección:* Señala que muchos conductores marcan "OK" en todo el checklist de papel en 3 minutos sin bajarse a mirar la quinta rueda ni las luces de frenos.
@@ -1171,9 +1171,9 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 * **Aplicaciones habituales:** WhatsApp y llamadas telefónicas
 * **Fecha y hora:** 21 de septiembre de 2026 — 11:00 h
 * **Duración:** 14 minutos con 25 segundos
-* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:25`)
+* **URL de la grabación:** https://shorturl.at/lUVY6
 * **Evidencia de la sesión:**
-  <img src="img/interviews/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
+  <img src="img/charapter2/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
 
 * **Resumen de respuestas clave:**
   * *Dificultad con la tecnología:* No le gustan los sistemas complicados ni las letras pequeñas porque en patio hay poca luz y suele tener las manos con guantes o polvo.
