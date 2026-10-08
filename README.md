@@ -5444,6 +5444,12 @@ La tabla recoge los commits del sprint, sin los commits de merge, en orden crono
 | Frontend-Web-Application | release/0.2.5 | 5d86b85 | chore(release): prepare version 0.2.5 | — | 2026-10-08 |
 | Frontend-Web-Application | fix/result-selector-narrow | 463eac8 | fix(inspection): fit the result selector on narrow checklist cards | — | 2026-10-08 |
 | Frontend-Web-Application | release/0.2.6 | fd94877 | chore(release): prepare version 0.2.6 | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 0d3823f | fix(shared): point incident sidebar link to the real route | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 8eadff4 | style(incident): center form layout and align action buttons | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 155e819 | style(incident): use mat-flat-button for the primary form action | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 878790e | style(shared): tune button hover, focus and pressed state opacities | — | 2026-10-08 |
+| Frontend-Web-Application | fix/fleet-assignments-mock | 7645d69 | fix(fleet): serve the vehicle assignments under the path the fleet api requests | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.7 | cb4416f | chore(release): prepare version 0.2.7 | — | 2026-10-08 |
 | Web-Services | develop | 38aec67 | chore: initialize repository | — | 2026-09-29 |
 | Web-Services | feature/openapi-contracts | 7a49570 | feat(api): add the shared components and the root document of the contract | — | 2026-10-06 |
 | Web-Services | feature/openapi-contracts | 3c0a8b0 | feat(iam): add the identity and access contract | — | 2026-10-06 |
@@ -5455,7 +5461,7 @@ La tabla recoge los commits del sprint, sin los commits de merge, en orden crono
 <a id="5225-execution-evidence-for-sprint-review"></a>
 #### 5.2.2.5. Execution Evidence for Sprint Review.
 
-Al cierre del Sprint 2, la Web Application está desplegada en https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ en su versión 0.2.6. El conductor puede consultar su vehículo asignado, iniciar una inspección preoperacional registrando el odómetro y recorrer el checklist de 42 elementos agrupados en ocho sistemas, marcando cada uno como Conforme, Observado o Falla; la interfaz señala que los elementos no conformes requieren una observación, cuyo registro se implementa en el Sprint 3. El supervisor de flota puede registrar incidencias, consultar su detalle con las acciones correctivas, reparaciones y seguimientos, controlar la vigencia de la documentación vehicular y consultar el resumen de su flota. Toda la interfaz está disponible en inglés y en español, y se adapta a pantallas de escritorio y de teléfono.
+Al cierre del Sprint 2, la Web Application está desplegada en https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ en su versión 0.2.7. El conductor puede consultar su vehículo asignado, iniciar una inspección preoperacional registrando el odómetro y recorrer el checklist de 42 elementos agrupados en ocho sistemas, marcando cada uno como Conforme, Observado o Falla; la interfaz señala que los elementos no conformes requieren una observación, cuyo registro se implementa en el Sprint 3. El supervisor de flota puede registrar incidencias, consultar su detalle con las acciones correctivas, reparaciones y seguimientos, controlar la vigencia de la documentación vehicular y consultar el resumen de su flota. Toda la interfaz está disponible en inglés y en español, y se adapta a pantallas de escritorio y de teléfono.
 
 **Flujo del conductor — inspección preoperacional (teléfono)**
 
@@ -5547,7 +5553,7 @@ En el Sprint 2 se desplegaron la Frontend Web Application y la API simulada que 
 | Producto | Repositorio | Plataforma | Estado | URL |
 |---|---|---|---|---|
 | Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado (Sprint 1) | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
-| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado, versión 0.2.6 | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado, versión 0.2.7 | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
 | API simulada (json-server) | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | Render | Desplegado | https://fleetsafe-api.onrender.com/api/v1 |
 | Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure App Service | Contrato publicado; despliegue en el Sprint 3 | — |
 
@@ -5587,17 +5593,18 @@ En el Sprint 2 se desplegaron la Frontend Web Application y la API simulada que 
 | v0.2.4 | Reescritura de rutas de la API simulada para las consultas por identificador. |
 | v0.2.5 | Menú lateral en pantallas pequeñas y etiquetas de incidencias. |
 | v0.2.6 | Selector de resultados de inspección en pantallas estrechas. |
+| v0.2.7 | Asignaciones de vehículos en la API simulada, formulario de incidencias y estados de los botones. |
 
 <a id="5228-team-collaboration-insights-during-sprint"></a>
 #### 5.2.2.8. Team Collaboration Insights during Sprint.
 
-Cada integrante desarrolló su bounded context en una rama propia a partir de `develop`. Antes de integrar los contextos, la base compartida se alineó con el proyecto de referencia del curso, y cada rama se integró después en `develop` mediante su Pull Request, conservando la autoría de cada commit. Durante el sprint se registraron 153 commits sin contar los de merge: 146 en el repositorio de la Web Application y 7 en el de Web Services.
+Cada integrante desarrolló su bounded context en una rama propia a partir de `develop`. Antes de integrar los contextos, la base compartida se alineó con el proyecto de referencia del curso, y cada rama se integró después en `develop` mediante su Pull Request, conservando la autoría de cada commit. Durante el sprint se registraron 159 commits sin contar los de merge: 152 en el repositorio de la Web Application y 7 en el de Web Services.
 
 | Integrante | GitHub Username | Commits en la Web Application | Aporte principal |
 |---|---|---:|---|
-| Espino Flores, Alejandro | CafecitoSKR | 67 | Base compartida, Pre-Operational Inspection, API simulada, despliegue y contrato OpenAPI |
+| Espino Flores, Alejandro | CafecitoSKR | 69 | Base compartida, Pre-Operational Inspection, API simulada, despliegue y contrato OpenAPI |
 | Palacin Lazo, Gerardo Valentin | GeraldP03 | 46 | Fleet Management |
-| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | 21 | Incident Management y rediseño del layout |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | 25 | Incident Management y rediseño del layout |
 | Santos Torres, Juan Manuel | JuanManuel312 | 9 | Vehicle Documentation |
 | Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | 3 | Catálogo de elementos de inspección |
 
