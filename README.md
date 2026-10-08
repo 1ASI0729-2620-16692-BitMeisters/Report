@@ -5508,6 +5508,22 @@ El Backend RESTful API se implementa a partir del Sprint 3. En este sprint se pu
 | `/document-types` | Consultar los tipos de documento | GET | `GET /api/v1/document-types` | — | `200` con `[{ "id", "code": "SOAT", "name": "SOAT", "isRequired": true }, …]` |
 | `/fleets` · `/vehicles` · `/drivers` | Consultar la flota, sus vehículos y conductores | GET | `GET /api/v1/fleets` · `GET /api/v1/vehicles` · `GET /api/v1/drivers` | — | `200` con la lista de cada recurso. |
 
+Contrato publicado, visualizado con Swagger UI a partir del archivo `openapi.yaml` del repositorio:
+
+![Contrato OpenAPI de FleetSafe con las operaciones de Identity and Access, Fleet Management y Pre-Operational Inspection](img/sprint2/services-openapi-overview.png)
+
+Operación de consulta del catálogo de elementos de inspección, con sus parámetros y el ejemplo de respuesta:
+
+![Operación GET /inspection-items documentada con sus parámetros y ejemplos de respuesta](img/sprint2/services-openapi-inspection-items.png)
+
+Operación para iniciar una inspección, con el cuerpo de la petición, la respuesta `201` y las respuestas de error con datos de muestra:
+
+![Operación POST /inspections documentada con el cuerpo de la petición y sus respuestas](img/sprint2/services-openapi-start-inspection.png)
+
+Operación de consulta de la asignación activa del conductor:
+
+![Operación GET /drivers/me/vehicle-assignment documentada con su respuesta](img/sprint2/services-openapi-vehicle-assignment.png)
+
 Respuesta de la API simulada desplegada al consultar el catálogo de elementos de inspección:
 
 ![Respuesta JSON del catálogo de elementos de inspección en la API simulada](img/sprint2/deployment-mock-api-response.png)
