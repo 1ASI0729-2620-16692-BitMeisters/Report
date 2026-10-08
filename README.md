@@ -1,29 +1,67 @@
 <p align="center">
-    <img src="img/UPC.png" alt="Logo UPC" width="50%">
+  <img src="img/UPC.png" alt="Logo UPC" width="120px">
 </p>
-<h3 align="center">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS</h3>
 
-<h3 align="center">INGENIERÍA DE SOFTWARE</h3>
-<h4 align="center">CICLO 5</h4>
-<h4 align="center">1ASI0729 - DESARROLLO DE APLICACIONES OPEN SOURCE</h4>
-<h4 align="center"><strong>NRC:</strong> 16692</h4>
-<h4 align="center"><strong>PROFESOR:</strong> Angel Augusto Velasquez Nuñez</h4>
+<p align="center">
+  <strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
+  Carrera de Ingeniería de Software
+</p>
 
-<h3 align="center">INFORME DE TRABAJO FINAL</h3>
-<h4 align="center"><strong>CICLO:</strong> 2026-20</h4>
-<h4 align="center"><strong>STARTUP:</strong> BitMeisters</h4>
-<h4 align="center"><strong>PRODUCT:</strong> FleetSafe</h4>
+<p align="center">
+  <strong>1ASI0729</strong><br>
+  <strong>Desarrollo de Aplicaciones Open Source</strong>
+</p>
 
-<h4 align="center"><strong>INTEGRANTES:</strong></h4>
+<p align="center">
+  <strong>NRC</strong><br>
+  16692
+</p>
 
-<h4 align="center">U20211C201 - Palacin Lazo, Gerardo Valentin</h4>
-<h4 align="center">U20221a371 - Santos Torres, Juan Manuel</h4>
-<h4 align="center">U20231c197 - Apaza Bocanegra, Elizabeth Noelia</h4>
-<h4 align="center">U202318309 - Aguilar Untiveros, Rodrigo Fabrizio</h4>
-<h4 align="center">U202122129 - Espino Flores, Alejandro</h4>
+<p align="center">
+  <strong>Informe del Trabajo Final</strong>
+</p>
 
+<p align="center">
+  <strong>Docente</strong><br>
+  Velásquez Núñez, Ángel Augusto
+</p>
 
-<h4 align="center"><i>SETIEMBRE 2026</i></h4>
+<p align="center">
+  <strong>Equipo</strong><br>
+  <strong>BitMeisters</strong>
+</p>
+
+<p align="center">
+  <strong>Proyecto</strong><br>
+  <strong>FleetSafe</strong>
+</p>
+
+<p align="center">
+  <strong>Integrantes</strong>
+</p>
+
+<div align="center">
+
+| Código | Apellidos y Nombres |
+| :---: | :--- |
+| U20211C201 | Palacin Lazo, Gerardo Valentin |
+| U20221A371 | Santos Torres, Juan Manuel |
+| U20231C197 | Apaza Bocanegra, Elizabeth Noelia |
+| U202318309 | Aguilar Untiveros, Rodrigo Fabrizio |
+| U202122129 | Espino Flores, Alejandro |
+
+</div>
+
+<p align="center">
+  <strong>Período 2026-20</strong>
+</p>
+
+<p align="center">
+  <strong>Octubre 2026</strong>
+</p>
+
+<div style="page-break-after: always;"></div>
+<br>
 
 <hr>
 
@@ -46,6 +84,9 @@
 | 0.9.0 | 2026-09-18 | Alejandro Espino | **Corrección por autocrítica del equipo.** Los diagramas C4 y el diagrama de clases quedaron desactualizados respecto del modelo de datos corregido en la versión 0.7.0. Se migraron los tres diagramas C4 de PlantUML a **Structurizr**, la herramienta indicada por el enunciado, manteniendo el modelo como código en el archivo `workspace.dsl`. |
 | 0.9.1 | 2026-09-18 | Alejandro Espino | Ampliación de la sección 4.6.4, que contenía un único diagrama de componentes de los tres containers de software exigidos. Se añadieron los diagramas del Landing Page y de la Web Application, y se reorganizaron los componentes del Backend RESTful API **por bounded context en lugar de por capa técnica**, en coherencia con el diseño orientado al dominio de la sección 4.6. |
 | 0.9.2 | 2026-09-18 | Alejandro Espino | Reescritura de la sección 4.7.1, que presentaba un diagrama de clases consolidado con nomenclatura contradictoria respecto de la sección 4.8. Se dividió en **seis diagramas por bounded context**, se corrigieron los nombres (`InspectionItemCatalog` → `InspectionItem`, `Company.ruc` → `Company.taxId`) y se incorporaron las clases `Driver`, `VehicleAssignment` y `OperationalAuthorization`, sin las cuales la Estrategia 2 de la sección 2.1.2 carecía de sustento en el diseño. |
+| 0.9.3 | 2026-09-19 | Rodrigo Aguilar | **Corrección por observación de la entrega.** La sección 3.3 estaba desarticulada de las User Stories de 3.1 y no permitía rastrear los IDs, ni la priorización, ni la asignación a sprints. Se agregó la columna **Epic Id** para trazabilidad con la sección 3.1, se incorporó la priorización **MoSCoW** y se añadió la columna **Sprint**, manteniendo la estimación en serie Fibonacci (1, 2, 3, 5, 8). Se incorporaron los cuadros de resumen de estimación y de distribución por sprint, y se dejó constancia de la inconsistencia detectada entre la velocity declarada en el Sprint Planning 1 y los puntos reales del Sprint 1. |
+| 0.9.4 | 2026-10-08 | Alejandro Espino | **Corrección por cambio de alojamiento.** Las secciones 5.1.1 y 5.1.4 describían la publicación de la Web Application en Vercel, con una variable `API_BASE_URL` que no existe en el proyecto. Se reescribieron para GitHub Pages con GitHub Actions, que es donde está desplegada, y se incorporó la API simulada con json-server en Render, que la Web Application consume hasta el despliegue del Backend RESTful API. |
+| 0.10.0 | 2026-10-08 | Alejandro Espino | Incorporación de la sección 5.2.2 Sprint 2, con la evidencia de desarrollo de los dos repositorios de código, la ejecución de la Web Application desplegada en inglés y español, en escritorio y teléfono, la documentación de los servicios, el despliegue en GitHub Pages y Render, y los analíticos de colaboración. El video de navegación queda pendiente de completar por el equipo. |
 
 <hr>
 
@@ -144,6 +185,15 @@
             - <a href="#5216-services-documentation-evidence-for-sprint-review">5.2.1.6. Services Documentation Evidence for Sprint Review.</a>
             - <a href="#5217-software-deployment-evidence-for-sprint-review">5.2.1.7. Software Deployment Evidence for Sprint Review.</a>
             - <a href="#5218-team-colaboration-insights-during-sprint">5.2.1.8. Team Colaboration Insights during Sprint.</a>
+        - <a href="#522-sprint-2">5.2.2. Sprint 2</a>
+            - <a href="#5221-sprint-planning-2">5.2.2.1. Sprint Planning 2.</a>
+            - <a href="#5222-aspect-leaders-and-collaborators">5.2.2.2. Aspect Leaders and Collaborators.</a>
+            - <a href="#5223-sprint-backlog-2">5.2.2.3. Sprint Backlog 2.</a>
+            - <a href="#5224-development-evidence-for-sprint-review">5.2.2.4. Development Evidence for Sprint Review.</a>
+            - <a href="#5225-execution-evidence-for-sprint-review">5.2.2.5. Execution Evidence for Sprint Review.</a>
+            - <a href="#5226-services-documentation-evidence-for-sprint-review">5.2.2.6. Services Documentation Evidence for Sprint Review.</a>
+            - <a href="#5227-software-deployment-evidence-for-sprint-review">5.2.2.7. Software Deployment Evidence for Sprint Review.</a>
+            - <a href="#5228-team-collaboration-insights-during-sprint">5.2.2.8. Team Collaboration Insights during Sprint.</a>
     - <a href="#53-validation-interviews">5.3. Validation Interviews.</a>
         - <a href="#531-diseno-de-entrevistas">5.3.1. Diseño de Entrevistas.</a>
         - <a href="#532-registro-de-entrevistas">5.3.2. Registro de Entrevistas.</a>
@@ -176,10 +226,10 @@ un rango de audiencias.
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.
 
-| Criterio específico                                                   | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|:----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requerimientos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web. | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos. |
-| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Redacté la definición de la propuesta de valor de FleetSafe y la descripción de los tres roles principales del sistema (Administrador, Supervisor de flota y Conductor), documentando sus responsabilidades dentro del flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Elaboré la descripción de la arquitectura general de la solución compuesta por Landing Page, Web Application y Backend RESTful API. Documenté el alcance inicial del proyecto y las funcionalidades priorizadas, asegurando coherencia con el objetivo de control preventivo y habilitación operativa de vehículos.<br><br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Redacté y documenté los aportes correspondientes al análisis y diseño de FleetSafe, organizando la información relacionada con las funcionalidades y los segmentos objetivo de la solución. Asimismo, contribuí en la elaboración y revisión de la documentación del proyecto, procurando expresar de manera clara las decisiones y avances realizados durante el Sprint para que pudieran ser comprendidos por los diferentes integrantes del equipo._<br><br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Redacté y documenté diferentes artefactos técnicos de FleetSafe, incluyendo partes de la arquitectura C4, el diseño de clases y el diseño de base de datos. Organicé la información de manera estructurada para que pudiera ser comprendida y revisada por los integrantes del equipo, relacionando los elementos técnicos con los Bounded Contexts definidos para la solución. Asimismo, participé en la documentación de los avances del proyecto y en la actualización del reporte, comunicando por escrito las decisiones y resultados obtenidos durante el Sprint._<br><br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Elaboré y documenté la sección de Landing Page Wireframes [sección 4.3.1], definiendo la arquitectura de información inicial, el flujo de navegación del visitante y la disposición funcional de los bloques de contenido. Diseñé y redacté la sección de Landing Page Mock-ups [4.3.2], especificando la guía de estilos visuales, paleta de colores, tipografía y componentes de alta fidelidad en coherencia con la propuesta de valor de FleetSafe. Documenté la implementación y despliegue de la Landing Page, describiendo la estructura del código frontend, los criterios de adaptabilidad multidispositivo (responsive design) y su configuración para el despliegue en producción mediante GitHub Pages.  | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.                           |
+| Criterio específico                                                   | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|:----------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Comunica oralmente con efectividad a diferentes rangos de audiencia   | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>_TB1_<br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo.<br><br>_TB1_<br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint.<br><br>_TB1_<br>**Alejandro Espino, Flores**<br>_AV1_<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>_TB1_<br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requisitos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web.<br><br>_TB1_<br> | _AV1_<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos.<br><br>_TB1_<br> |
+| Comunica por escrito con efectividad a diferentes rangos de audiencia | **Rodrigo Fabricio, Aguilar Untiveros**<br>_AV1_<br>Redacté la definición de la propuesta de valor de FleetSafe y la descripción de los tres roles principales del sistema (Administrador, Supervisor de flota y Conductor), documentando sus responsabilidades dentro del flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Elaboré la descripción de la arquitectura general de la solución compuesta por Landing Page, Web Application y Backend RESTful API. Documenté el alcance inicial del proyecto y las funcionalidades priorizadas, asegurando coherencia con el objetivo de control preventivo y habilitación operativa de vehículos.<br><br>_TB1_<br>**Elizabeth Noelia, Apaza Bocanegra**<br>_AV1_<br>_Redacté y documenté los aportes correspondientes al análisis y diseño de FleetSafe, organizando la información relacionada con las funcionalidades y los segmentos objetivo de la solución. Asimismo, contribuí en la elaboración y revisión de la documentación del proyecto, procurando expresar de manera clara las decisiones y avances realizados durante el Sprint para que pudieran ser comprendidos por los diferentes integrantes del equipo.<br><br>_TB1_<br>**Palacin Lazo, Gerardo Valentin**<br>_AV1_<br>_Redacté y documenté diferentes artefactos técnicos de FleetSafe, incluyendo partes de la arquitectura C4, el diseño de clases y el diseño de base de datos. Organicé la información de manera estructurada para que pudiera ser comprendida y revisada por los integrantes del equipo, relacionando los elementos técnicos con los Bounded Contexts definidos para la solución. Asimismo, participé en la documentación de los avances del proyecto y en la actualización del reporte, comunicando por escrito las decisiones y resultados obtenidos durante el Sprint.<br><br>_TB1_<br>**Alejandro Espino, Flores**<br>_AV1_<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>_TB1_<br>**Juan Manuel, Santos Torres**<br>_AV1_<br>Elaboré y documenté la sección de Landing Page Wireframes [sección 4.3.1], definiendo la arquitectura de información inicial, el flujo de navegación del visitante y la disposición funcional de los bloques de contenido. Diseñé y redacté la sección de Landing Page Mock-ups [4.3.2], especificando la guía de estilos visuales, paleta de colores, tipografía y componentes de alta fidelidad en coherencia con la propuesta de valor de FleetSafe. Documenté la implementación y despliegue de la Landing Page, describiendo la estructura del código frontend, los criterios de adaptabilidad multidispositivo (responsive design) y su configuración para el despliegue en producción mediante GitHub Pages.<br><br>_TB1_<br>                                                                                                                                               | _AV1_<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.<br><br>_TB1_<br>                           |
 
 <hr>
 
@@ -242,12 +292,12 @@ FleetSafe no tiene como objetivo principal gestionar rutas, puntos de entrega o 
 
 A continuación se presenta la ficha de cada integrante del equipo, indicando su código de estudiante, la carrera que cursa y un resumen de los principales conocimientos técnicos y habilidades que aporta al equipo.
 
-| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                          |
-|:--------------------------|:--------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20211C201                                                                                              |
-| **Carrera**               | Ingeniería de Software                                                                                  |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                             |
-| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
+| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|:--------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Código del Estudiante** | U20211C201                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Carrera**               | Ingeniería de Software                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Descripción**           | Me interesa mi mucho los avances que las soluciones de software han sido capaces de realizar en varias ramas de la vida. Me considero una persona curiosa que quiere seguir aprendiendo nuevos marcos de trabajo, lenguajes de programación y tecnologías emergentes. Me instrui en practicar C#, JavaScript,  HTML y CSS y aplicar mi conocimiento de base de datos relacionales y no relacionales. Este ciclo aprendo Angular y sus Materials guiandome de las fuentes originales. |
+| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140">                                                                                                                                                                                                                                                                                                                                                                              |
 
 ---
 
@@ -264,8 +314,8 @@ A continuación se presenta la ficha de cada integrante del equipo, indicando su
 |:--------------------------|:------------------------------------------------------------------------------------------------------------------|
 | **Código del Estudiante** | U20231c197                                                                                                        |
 | **Carrera**               | Ingeniería de Software                                                                                            |
-| **Descripción**           | _Pendiente de redacción por el integrante._                                                                       |
-| **Foto**                  | <img src="img/team-members/leonardo-cumba.jpeg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
+| **Descripción**           | Me interesa el desarrollo frontend con frameworks modernos, el diseño centrado en el usuario (UX/UI) y la implementación de arquitecturas limpias orientadas al dominio (DDD). En FleetSafe lideré el análisis, modelado e implementación del Bounded Context de Pre-Operational Inspection, definiendo los modelos de dominio con campos encapsulados, el Store reactivo con Angular Signals y la interfaz móvil responsiva con controles accesibles según pautas WCAG 2.1 AA. Aporto conocimientos sólidos en TypeScript, Angular, Angular Material, internacionalización con ngx-translate, consumo de servicios RESTful y control de versiones con Git y GitFlow bajo Conventional Commits. Procuro que las soluciones sean accesibles, intuitivas y cumplan con rigor normativo técnico. |
+| **Foto**                  | <img src="img/team-members/elizabeth-apaza.jpg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
 
 ---
 
@@ -386,116 +436,111 @@ Para mantener el enfoque definido para FleetSafe, se consideran inicialmente las
 
 ---
 
-<a id="122-lean-ux-process"></a>
-### 1.2.2. Lean UX Process
-
-FleetSafe aplicará el enfoque Lean UX para identificar y validar las principales suposiciones relacionadas con el control preventivo y la habilitación operativa de vehículos de transporte de carga.
-
-Durante esta etapa se considerarán las necesidades de las empresas de transporte de carga, supervisores de flota y conductores, así como las funcionalidades relacionadas con las inspecciones preoperacionales, evaluación de condiciones, identificación de riesgos, habilitación e incidencias.
-
-Las suposiciones deberán ser posteriormente contrastadas mediante investigación con los segmentos objetivo y mediante la evolución progresiva de la solución.
-
 <a id="1221-lean-ux-problem-statements"></a>
 #### 1.2.2.1. Lean UX Problem Statements
 
-FleetSafe corresponde a una iniciativa orientada a resolver problemas relacionados con el control preventivo de vehículos de transporte de carga.
+FleetSafe corresponde a una iniciativa de producto digital (*Brand New Initiative*) concebida para transformar el control preventivo y la habilitación operativa de flotas de transporte terrestre de carga en el Perú, en alineamiento con la normativa vigente de SUTRAN y el MTC.
 
-##### Problem Statement
+##### Problem Statement (Brand New Initiative Template)
 
-Las empresas de transporte de carga necesitan controlar las condiciones de seguridad de sus vehículos antes de iniciar una operación.
-
-Los procesos basados en formatos físicos, hojas de cálculo o información dispersa dificultan conocer rápidamente el resultado de las inspecciones, los problemas detectados, los riesgos existentes, la documentación próxima a vencer y las incidencias pendientes.
-
-FleetSafe busca abordar esta situación mediante una plataforma web que permita realizar inspecciones preoperacionales digitales, registrar sus resultados, evaluar las condiciones del vehículo y determinar si se encuentra habilitado, observado o no habilitado para operar.
-
-Nuestro enfoque inicial estará dirigido principalmente a las **empresas de transporte de carga, supervisores de flota y conductores de vehículos de carga**.
-
-Consideraremos que FleetSafe está generando valor cuando los usuarios puedan realizar y consultar inspecciones, identificar problemas y riesgos, gestionar incidencias y conocer la condición preventiva de un vehículo mediante una única plataforma.
+> **The current state of** commercial road freight transportation in Peru **has focused mainly on** manual, paper-based inspection clipboards, fragmented spreadsheets, informal WhatsApp reporting, and reactive mechanical repairs, where:
+> 
+> * **Cargo Transport Enterprises** struggle with a lack of centralized auditability, elevated operational costs caused by preventable en-route vehicle breakdowns, and the constant risk of severe regulatory sanctions, fines, and vehicle impoundment imposed by SUTRAN due to unverified mechanical safety equipment or expired mandatory documentation (SOAT, CITV).
+> * **Fleet Supervisors** suffer from chaotic, time-consuming morning dispatch routines, lacking real-time visibility and automated evaluation logic to immediately identify whether dozens of heavy units meet the statutory roadworthiness conditions to safely depart the terminal.
+> * **Heavy Vehicle Drivers** are burdened by slow, repetitive paper forms that delay their daily journey start, while lacking a reliable, photographic mechanism to document pre-existing vehicle wear or cabin defects, leaving them vulnerable to unjustified liability during roadside inspections.
+> 
+> **What existing products/services fail to address is** a localized, domain-driven solution tailored to Peruvian transport regulations that integrates an automated, rule-based evaluation engine capable of instantly freezing non-compliant units (`NOT_ENABLED`) upon detecting critical safety faults, while providing an audit trail for authorized exceptions and photographic evidence.
+> 
+> **Our product/service will address this gap by** providing FleetSafe, a collaborative cloud-based platform composed of a responsive Mobile Web experience for drivers to execute pre-operational checklists in under 5 minutes with offline capability and photo evidence, an automated regulatory evaluation service that classifies operational readiness (`ENABLED`, `OBSERVED`, `NOT_ENABLED`), and a centralized Desktop Dashboard for fleet supervisors to manage authorizations, inspections history, and preventive maintenance follow-up.
+> 
+> **Our initial focus will be** formal interprovincial and urban freight transport companies operating medium and heavy fleets (tractor-trailers, semi-trailers, and cargo trucks) in Metropolitan Lima and the central transport corridor.
+> 
+> **We’ll know we are successful when we see:**
+> 1. At least **90% of daily scheduled fleet trips** preceded by a digitally registered pre-operational inspection completed in under 5 minutes.
+> 2. **100% of critical safety component failures** (brakes, steering, tires) triggering automatic vehicle dispatch blocking prior to terminal exit.
+> 3. A **35% reduction in en-route roadside breakdowns** associated with preventable mechanical wear within the first 6 months of client deployment.
+> 4. **Zero administrative fines or vehicle retentions** by SUTRAN resulting from lack of mandatory emergency equipment or expired regulatory documents among active clients.
 
 <a id="1222-lean-ux-assumptions"></a>
 #### 1.2.2.2. Lean UX Assumptions
 
-Las siguientes assumptions representan las creencias iniciales relacionadas con FleetSafe y deberán ser validadas mediante investigación con los segmentos objetivo.
+Las suposiciones del proyecto se estructuran en cinco categorías conforme al marco de trabajo Lean UX (Gothelf & Seiden, 3.ª ed.), declarando las creencias fundamentales del negocio y los beneficios esperados:
 
 ##### Business Assumptions
 
-- Creemos que las empresas de transporte de carga necesitan mejorar el control preventivo de sus vehículos.
-- Creemos que centralizar la información de las inspecciones puede facilitar la supervisión de la condición de las unidades.
-- Creemos que una plataforma especializada en control preventivo vehicular puede facilitar la toma de decisiones antes de iniciar una operación.
-- Creemos que las empresas necesitan conocer qué unidades se encuentran habilitadas para operar.
-- Creemos que centralizar la información de incidencias puede facilitar su seguimiento y atención.
+* Creemos que existe una demanda comercial insatisfecha en el sector de transporte de carga peruano por soluciones digitales accesibles que automaticen el cumplimiento preventivo y fiscalizable de SUTRAN.
+* Creemos que las empresas de transporte prefieren un modelo de suscripción mensual SaaS escalable por número de vehículos activos antes que costosos desarrollos a medida o software extranjero no adaptado a la regulación nacional.
+* Creemos que centralizar las inspecciones preoperacionales y la documentación vehicular en una sola plataforma reduce significativamente el costo total de propiedad (TCO) y las primas de seguro de flota.
+* Creemos que la capacidad de auditar fotográficamente los hallazgos críticos otorga a la empresa una ventaja competitiva determinante para retener contratos logísticos con clientes corporativos exigentes.
 
-##### Business Outcome Assumptions
+##### Business Outcome Assumptions (Métricas Cuantitativas y Medibles)
 
-- Creemos que FleetSafe puede reducir la dificultad para conocer el estado preventivo de los vehículos.
-- Creemos que la plataforma puede facilitar la identificación de unidades que presentan riesgos.
-- Creemos que centralizar las inspecciones puede facilitar la consulta de información histórica.
-- Creemos que una evaluación basada en reglas puede facilitar la determinación de la condición de los vehículos.
-- Creemos que una mayor disponibilidad de información puede facilitar la toma de decisiones preventivas.
+* **Disminución del tiempo de registro:** Reducir el tiempo promedio de registro y consolidación de inspecciones diarias de 25 minutos (en planillas de papel) a **menos de 5 minutos** por unidad mediante interfaz móvil optimizada.
+* **Tasa de adopción digital:** Lograr una tasa de adopción del **95% de inspecciones registradas digitalmente** antes de la salida a ruta durante los primeros 90 días de implementación en empresas piloto.
+* **Reducción de paradas no programadas:** Reducir en un **30% las paralizaciones de viaje** asociadas a fallas mecánicas prevenibles detectadas a tiempo en el patio de maniobras.
+* **Cero penalidades regulatorias:** Mantener un índice de **0 multas graves o muy graves de SUTRAN** vinculadas a condiciones técnico-mecánicas no conformes en vehículos inspeccionados con FleetSafe.
+* **Retención de clientes (B2B Churn):** Alcanzar una tasa de retención de clientes corporativos superior al **85%** al cabo del primer año de operación comercial.
 
 ##### User Assumptions
 
-- Creemos que los supervisores de flota necesitan conocer el estado de los vehículos bajo su responsabilidad.
-- Creemos que los conductores necesitan realizar inspecciones preoperacionales de los vehículos asignados.
-- Creemos que los conductores necesitan registrar observaciones o evidencias cuando detectan problemas.
-- Creemos que los supervisores necesitan consultar las inspecciones realizadas.
-- Creemos que los supervisores necesitan gestionar las incidencias detectadas.
-- Creemos que los usuarios necesitan conocer si una unidad está habilitada, observada o no habilitada para operar.
+* Creemos que los **supervisores de flota** necesitan consolidar el estado de toda la flota en un panel centralizado con alertas visuales inmediatas antes de firmar la orden de salida matutina.
+* Creemos que los **conductores de carga pesada** utilizan smartphones Android modernos en su jornada laboral y están dispuestos a usar una aplicación web ligera si cuenta con botones táctiles grandes, flujo guiado y no requiere digitación compleja.
+* Creemos que los **administradores de empresa** necesitan reportes exportables en PDF con valor probatorio para sustentar el historial de mantenimiento ante fiscalizaciones o auditorías de clientes.
 
-##### User Outcome and Benefit Assumptions
+##### User Outcome and Benefit Assumptions (Beneficios y Valor Obtenido)
 
-- Creemos que los supervisores desean identificar rápidamente qué vehículos cumplen las condiciones para operar.
-- Creemos que los supervisores desean identificar qué unidades presentan riesgos o problemas.
-- Creemos que los conductores desean realizar una inspección sin depender de formatos físicos.
-- Creemos que los conductores desean registrar observaciones o evidencias cuando detectan problemas.
-- Creemos que los supervisores desean consultar el historial de inspecciones de los vehículos.
-- Creemos que las empresas desean mantener un registro organizado del estado preventivo de sus unidades.
+* **Para Empresas de Transporte:**
+  * **Beneficio legal y probatorio:** Respaldo digital inalterable con fecha, hora, conductor y fotografías ante cualquier siniestro o auditoría de fiscalización.
+  * **Ahorro financiero:** Mitigación de costos por reparaciones correctivas mayores al identificar desgastes menores de forma temprana.
+* **Para Supervisores de Flota:**
+  * **Automatización de decisiones:** Eliminación de la incertidumbre al recibir una condición operativa generada por reglas objetivas (`ENABLED`, `OBSERVED`, `NOT_ENABLED`), ahorrando más de 1 hora diaria de digitación de planillas.
+  * **Trazabilidad de excepciones:** Capacidad de autorizar levantamientos de observación con registro de motivo y firma digital, delimitando responsabilidades operativas.
+* **Para Conductores de Carga:**
+  * **Agilidad operativa:** Completar el checklist matutino en menos de 5 minutos mediante controles táctiles ergonómicos de 48px sin perder tiempo en planillas físicas deterioradas.
+  * **Protección y deslinde de responsabilidad:** Registro fotográfico de defectos preexistentes que garantiza que el conductor no sea culpado injustamente por daños previos de la unidad.
 
 ##### Feature Assumptions
 
-- Creemos que un **módulo de gestión de vehículos y usuarios** permitirá organizar las unidades y usuarios que forman parte del sistema.
-- Creemos que un **módulo de inspección preoperacional** permitirá a los conductores registrar el estado de los vehículos asignados.
-- Creemos que una **funcionalidad de evaluación basada en reglas** permitirá determinar la condición preventiva del vehículo.
-- Creemos que una **funcionalidad de habilitación operativa** permitirá identificar vehículos habilitados, observados y no habilitados.
-- Creemos que un **módulo de incidencias** permitirá registrar y realizar seguimiento de los problemas detectados.
-- Creemos que una **funcionalidad de historial** permitirá consultar información relacionada con el control preventivo de los vehículos.
+* Creemos que implementar una **interfaz de checklist móvil con controles segmentados táctiles de 48x48 px (OK / OBS / FAIL)** incrementará la velocidad y precisión del registro preoperacional del conductor.
+* Creemos que un **módulo de carga de evidencias fotográficas con validación obligatoria** para componentes críticos de seguridad (frenos, dirección, neumáticos) garantizará la veracidad de los reportes.
+* Creemos que un **motor de evaluación automática de reglas normativas SUTRAN** que bloquee inmediatamente el vehículo (`NOT_ENABLED`) ante un fallo crítico garantizará que ninguna unidad peligrosa salga a ruta.
+* Creemos que un **dashboard de supervisor con tarjetas KPI de flota y semáforos de condición** facilitará el control visual simultáneo de decenas de vehículos.
+* Creemos que una **función de exportación de reportes de inspección en PDF** permitirá a la empresa cumplir con los requisitos documentales ante inspectores en carretera.
 
 <a id="1223-lean-ux-hypothesis-statements"></a>
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-Los siguientes Hypothesis Statements se derivan de las funcionalidades y necesidades identificadas para FleetSafe.
+Los Hypothesis Statements de FleetSafe formalizan nuestras suposiciones de funcionalidad (*Feature Assumptions*) en enunciados verificables y contrastables, empleando la plantilla canónica de Lean UX formulada por Jeff Gothelf:
 
-##### Hypothesis Statement 1 - Inspección preoperacional
+$$\textbf{We believe that } [\text{Business Outcome}] \textbf{ will be achieved if } [\text{User Persona / Segment}] \textbf{ successfully } [\text{User Benefit / Outcome}] \textbf{ with } [\text{Feature / Solution Idea}].$$
 
-Creemos que lograremos **mejorar el control preventivo de los vehículos** si los **conductores** logran **realizar inspecciones digitales de los vehículos asignados y registrar el estado de sus componentes, elementos de seguridad, documentación y observaciones** mediante una **funcionalidad de inspección preoperacional**.
+Cada enunciado vincula un indicador cuantificable de éxito del negocio con un beneficio tangible percibido por el usuario al interactuar con una capacidad del sistema:
 
-##### Hypothesis Statement 2 - Evaluación del vehículo
+##### Hypothesis Statement 1 — Pre-Operational Digital Inspection Checklist
+> **We believe that** our customer fleets will reduce pre-dispatch verification turnaround times by at least 70% (from 25 minutes down to 7 minutes per unit) and eliminate 100% of illegible physical paper logs **if** heavy freight drivers (*Álvaro Torres*) **attain** a fast, frictionless, mobile-first inspection routine directly from their smartphone browser without paperwork friction **with** the **Pre-Operational Digital Inspection Module** (standardized 42-item checklist covering safety, mechanical components, and documentation).
 
-Creemos que lograremos **facilitar la identificación de riesgos y problemas en los vehículos** si el **sistema** logra **evaluar los resultados de las inspecciones de acuerdo con las reglas establecidas por la empresa** mediante una **funcionalidad de evaluación basada en reglas**.
+##### Hypothesis Statement 2 — Rule-Based Automotive Safety Evaluation Engine
+> **We believe that** transport companies will reduce roadside mechanical breakdown incidents and SUTRAN regulatory non-compliance infractions by 40% during the first 90 days **if** fleet supervisors (*Alessandra Nova*) and operations managers (*José Ramírez*) **attain** instantaneous, objective, and deterministic risk verdicts (*Enabled*, *Observed*, *Not Enabled*) without human subjective bias **with** the **Rule-Based Evaluation Engine** (evaluating findings against critical safety thresholds and automated stop-work rules).
 
-##### Hypothesis Statement 3 - Habilitación operativa
+##### Hypothesis Statement 3 — Operational Authorization & Traceable Exception Handling
+> **We believe that** client organizations will eliminate 100% of undocumented verbal bypasses and ensure full legal accountability during occupational health and safety (SST) audits **if** fleet safety supervisors (*Alessandra Nova*) **attain** complete administrative control to issue conditional operating clearances with recorded justification, designated authorizer, and strict audit trails **with** the **Operational Authorization & Exception Management Feature**.
 
-Creemos que lograremos **facilitar la toma de decisiones sobre la operación de los vehículos** si los **supervisores de flota** logran **conocer qué unidades están habilitadas, observadas o no habilitadas para operar** mediante una **funcionalidad de habilitación operativa**.
+##### Hypothesis Statement 4 — Incident Lifecycle Tracking & Corrective Actions
+> **We believe that** fleet maintenance operations will decrease Mean Time to Resolution (MTTR) for critical vehicle defects by 45% and prevent recurring mechanical defects **if** fleet supervisors and workshop coordinators **attain** real-time visibility over reported defects, assigned corrective tasks, photographic evidence, and repair sign-offs **with** the **Incident Tracking & Corrective Actions Module**.
 
-##### Hypothesis Statement 4 - Gestión de incidencias
+##### Hypothesis Statement 5 — Centralized Fleet Status & Operational Dispatch Monitoring
+> **We believe that** transport operations managers will increase active vehicle availability and on-time terminal departure dispatch rates by 30% **if** fleet operations managers (*José Ramírez*) **attain** an executive, consolidated real-time dashboard showing fleet compliance status, pending inspections, and blocked assets at a glance **with** the **Supervisor Fleet Monitoring & KPI Dashboard**.
 
-Creemos que lograremos **mejorar el seguimiento de los problemas detectados en los vehículos** si los **conductores y supervisores** logran **registrar, consultar y realizar seguimiento de las incidencias** mediante un **módulo de gestión de incidencias**.
+##### Hypothesis Statement 6 — Auditable Preventive History & Compliance Reporting
+> **We believe that** freight transport companies will achieve a 100% first-pass approval rate on customer homologation audits and mining/industrial contractor compliance verificaciones **if** safety auditors and fleet administrators **attain** immediate one-click generation of immutable, timestamped historical inspection records and supervisory approval certificates **with** the **Auditable Historical Control & Compliance Reporting Feature**.
 
-##### Hypothesis Statement 5 - Control del supervisor
-
-Creemos que lograremos **mejorar la supervisión de la condición preventiva de los vehículos** si los **supervisores de flota** logran **consultar las inspecciones realizadas, identificar riesgos y verificar el estado de las unidades** mediante las funcionalidades de **consulta y control de FleetSafe**.
-
-##### Hypothesis Statement 6 - Historial de control preventivo
-
-Creemos que lograremos **mejorar la disponibilidad de información sobre las condiciones de los vehículos** si los **supervisores** logran **consultar el historial de inspecciones, incidencias y evaluaciones realizadas** mediante una **funcionalidad de historial**.
-
+---
 <a id="1224-lean-ux-canvas"></a>
 #### <i>**1.2.2.4. Lean UX Canvas.**</i>
 
-_Pendiente de completar con el Lean UX Canvas de FleetSafe._
-
+![BMCANVAS](img/chapter1/BusinessModelCanvas.jpg)
+[Link del canvas](https://miro.com/app/board/uXjVEdPbI5Y=/?share_link_id=326777939411)
 <hr>
-
 
 <a id="13-segmentos-objetivo"></a>
 ## 1.3. Segmentos objetivo
@@ -948,9 +993,259 @@ Las entrevistas deberán registrarse en video para conservar evidencia del proce
 <a id="222-registro-de-entrevistas"></a>
 ### 2.2.2. Registro de entrevistas.
 
+En esta sección se presenta el registro detallado de las entrevistas semiestructuradas realizadas a representantes reales de los tres segmentos objetivo definidos para FleetSafe: **Empresas de transporte de carga**, **Supervisores o encargados de flota** y **Conductores de vehículos de carga**. Cada ficha contiene los datos demográficos, laborales, tecnológicos y el resumen de los hallazgos levantados, acompañados de su evidencia fotográfica enlazada y el enlace de la grabación en video.
+
+---
+
+#### Segmento 1: Empresas de transporte de carga
+
+##### Entrevista 1 — Carlos Mendoza Paredes
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Gerente de Operaciones
+* **Empresa / Flota:** Transportes San José S.A.C. (Flota de 22 tractocamiones y semirremolques)
+* **Edad:** 48 años
+* **Distrito de residencia:** Ate Vitarte, Lima
+* **Tiempo en la actividad:** 16 años en el sector logístico de carga pesada
+* **Dispositivos y marcas:** Laptop Dell Vostro 15 (Windows 11), Smartphone Samsung Galaxy S21 (Android 14)
+* **Aplicaciones y herramientas habituales:** Microsoft Excel, WhatsApp Business, Gmail, ERP contable local y plataforma GPS de telemática vehicular
+* **Fecha y hora:** 18 de septiembre de 2026 — 10:30 h
+* **Duración:** 16 minutos con 45 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:45`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-1.png" alt="Captura de la entrevista 1 — Carlos Mendoza" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* Se realiza mediante un formato impreso de checklist que el chofer entrega firmado antes de salir del almacén central.
+  * *Punto de dolor crítico:* Los papeles suelen llegar manchados de grasa, ilegibles o se acumulan en archivadores físicos sin ser revisados a tiempo. Cuando SUTRAN o un cliente minero audita la flota en carretera, no tienen forma de corroborar inmediatamente si la unidad salió con las luces o neumáticos en regla.
+  * *Gestión de fallas y excepciones:* Si una unidad tiene un foco quemado o una llanta con desgaste irregular pero la carga tiene penalidad de entrega, el supervisor autoriza la salida por llamada telefónica ("de palabra"), sin que quede ningún registro auditable de la excepción.
+
+---
+
+##### Entrevista 2 — Fernando Quispe Huamán
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Administrador General
+* **Empresa / Flota:** Inversiones Logísticas del Sur E.I.R.L. (Flota de 15 camiones rígidos y furgones)
+* **Edad:** 52 años
+* **Distrito de residencia:** Callao
+* **Tiempo en la actividad:** 20 años en administración de flotas de carga regional
+* **Dispositivos y marcas:** PC de escritorio Lenovo ThinkCentre (Windows 10), Smartphone Xiaomi Redmi Note 12 (Android 13)
+* **Aplicaciones y herramientas habituales:** Google Sheets, WhatsApp, banca por internet y software de facturación electrónica
+* **Fecha y hora:** 18 de septiembre de 2026 — 15:00 h
+* **Duración:** 15 minutos con 20 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:20`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-2.png" alt="Captura de la entrevista 2 — Fernando Quispe" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* Cada chofer tiene un talonario autocopiativo de revisión básica. La copia amarilla queda en portería y la blanca va a administración a fin de mes.
+  * *Punto de dolor crítico:* Pérdida total de trazabilidad histórica. Ante una falla mecánica en carretera, no pueden probar si el defecto era preexistente o negligencia del chofer. Además, mantener el control manual de fechas de SOAT y Revisión Técnica de 15 vehículos genera descuidos frecuentes.
+  * *Expectativa:* Una herramienta web ligera que no exija instalar equipos caros y que permita saber desde el navegador si un vehículo tiene sus papeles en regla y la inspección aprobada antes de asignarle un viaje.
+
+---
+
+##### Entrevista 3 — Martín Solís Carrión
+* **Segmento:** Empresas de transporte de carga
+* **Cargo / Ocupación:** Jefe de Transporte y Distribución
+* **Empresa / Flota:** Carga Pesada Andina S.A.C. (Flota de 30 unidades articuladas)
+* **Edad:** 45 años
+* **Distrito de residencia:** Villa El Salvador, Lima
+* **Tiempo en la actividad:** 12 años liderando transporte terrestre interprovincial
+* **Dispositivos y marcas:** Laptop HP Pavilion 14 (Windows 11), Smartphone Motorola Moto G72 (Android 13)
+* **Aplicaciones y herramientas habituales:** SAP Business One, WhatsApp, Google Chrome y plataforma de rastreo GPS
+* **Fecha y hora:** 19 de septiembre de 2026 — 09:15 h
+* **Duración:** 18 minutos con 10 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 18:10`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-3.png" alt="Captura de la entrevista 3 — Martín Solís" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Control preventivo actual:* El conductor pasa por garita y un inspector anota las observaciones en una tabla compartida en Excel.
+  * *Punto de dolor crítico:* El tiempo de cuello de botella en patio (hasta 30 minutos por camión en horas pico de salida matutina) y la imposibilidad de adjuntar fotos de evidencia de fisuras o desgastes de frenos.
+  * *Riesgo legal:* En auditorías de homologación de clientes industriales, el 40% de las observaciones recibidas se deben a la falta de firmas legibles o fechas inconsistentes en las hojas de inspección física.
+
+---
+
+#### Segmento 2: Supervisores o encargados de flota
+
+##### Entrevista 4 — Roberto Salazar Vega
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Supervisor de Seguridad y Salud en el Trabajo (SST) de Flota
+* **Empresa / Flota:** Transportes San José S.A.C.
+* **Edad:** 38 años
+* **Distrito de residencia:** San Juan de Lurigancho, Lima
+* **Tiempo en la actividad:** 7 años en supervisión de transporte pesado y prevención de riesgos
+* **Dispositivos y marcas:** Smartphone Samsung Galaxy A54 5G (Android 14), Laptop corporativa Lenovo ThinkPad (Windows 11)
+* **Aplicaciones y herramientas habituales:** Microsoft Teams, Excel, WhatsApp, Google Drive y lector de PDF
+* **Fecha y hora:** 19 de septiembre de 2026 — 11:45 h
+* **Duración:** 17 minutos con 30 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 17:30`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-4.png" alt="Captura de la entrevista 4 — Roberto Salazar" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Rutina diaria:* Inicia a las 06:00 h revisando qué camiones tienen servicio programado. Debe validar visualmente los formatos que los choferes dejan en la casilla de operaciones.
+  * *Punto de dolor:* Pasa más de 2 horas al día pasando datos de papel a Excel para generar el reporte de unidades operativas. Si un chofer anota una falla leve en la noche, el supervisor se entera recién al mediodía siguiente.
+  * *Habilitación del vehículo:* Requiere que el sistema aplique reglas estrictas: si una llanta de tracción está lisa o faltan los extintores vigentes, la unidad debe bloquearse automáticamente (*No Habilitada*), sin margen de duda.
+
+---
+
+##### Entrevista 5 — Carmen Dávila Rengifo
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Coordinadora de Despacho y Monitoreo de Seguridad Vial
+* **Empresa / Flota:** Inversiones Logísticas del Sur E.I.R.L.
+* **Edad:** 35 años
+* **Distrito de residencia:** Los Olivos, Lima
+* **Tiempo en la actividad:** 5 años en coordinación de patio y despacho de carga
+* **Dispositivos y marcas:** Smartphone Apple iPhone 12 (iOS 17), PC Lenovo (Windows 10)
+* **Aplicaciones y herramientas habituales:** WhatsApp Web, Google Drive, Excel y portal de fiscalización de SUTRAN
+* **Fecha y hora:** 20 de septiembre de 2026 — 14:20 h
+* **Duración:** 14 minutos con 50 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:50`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-5.png" alt="Captura de la entrevista 5 — Carmen Dávila" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Gestión de incidencias:* Cuando un vehículo tiene una falla mecánica leve, se genera una orden manual para el taller mecánico de la empresa, pero no hay seguimiento en tiempo real de si la pieza fue reparada antes de que el camión vuelva a circular.
+  * *Presión operativa:* Cuando un cliente exige el despacho urgente, el gerente suele presionar para que el camión salga con "observaciones menores". Carmen exige que, si se va a autorizar esa excepción, el sistema registre el nombre del directivo que lo autorizó para proteger su responsabilidad profesional.
+
+---
+
+##### Entrevista 6 — Walter Huamán Córdova
+* **Segmento:** Supervisores de flota
+* **Cargo / Ocupación:** Supervisor de Mantenimiento y Patio
+* **Empresa / Flota:** Carga Pesada Andina S.A.C.
+* **Edad:** 42 años
+* **Distrito de residencia:** Chorrillos, Lima
+* **Tiempo en la actividad:** 9 años en talleres y patios de maniobras de transporte pesado
+* **Dispositivos y marcas:** Smartphone Xiaomi Poco X5 Pro (Android 13), Tablet Samsung Galaxy Tab A8 (Android 13)
+* **Aplicaciones y herramientas habituales:** WhatsApp, Telegram, Google Sheets, visor de planos de despiece automotriz
+* **Fecha y hora:** 20 de septiembre de 2026 — 16:30 h
+* **Duración:** 16 minutos con 15 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:15`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Verificación de inspección:* Señala que muchos conductores marcan "OK" en todo el checklist de papel en 3 minutos sin bajarse a mirar la quinta rueda ni las luces de frenos.
+  * *Necesidad de evidencia fotográfica:* Si el sistema obligara a tomar fotografía del elemento observado (por ejemplo, corte en neumático o fuga de aire), el conductor tendría que acercarse físicamente a inspeccionar y no podría falsear la revisión.
+
+---
+
+#### Segmento 3: Conductores de vehículos de carga
+
+##### Entrevista 7 — Jorge Rivas Mendoza
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor profesional de transporte pesado (Tractocamión Volvo FH 540)
+* **Empresa:** Conductor asignado en Transportes San José S.A.C. (Ruta Lima - Arequipa)
+* **Edad:** 46 años
+* **Distrito de residencia:** Comas, Lima
+* **Tiempo en la actividad:** 14 años de experiencia con Licencia A-IIIB y A-IIIC
+* **Dispositivos y marcas:** Smartphone Samsung Galaxy A14 (Android 13), cargador de cabina de 12V
+* **Herramientas de trabajo:** Manómetro analógico de neumáticos, martillo de llantas, linterna de mano, libreta de notas
+* **Aplicaciones habituales:** WhatsApp, Waze, YouTube (en paradas de descanso)
+* **Fecha y hora:** 21 de septiembre de 2026 — 08:30 h
+* **Duración:** 15 minutos con 40 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:40`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-7.png" alt="Captura de la entrevista 7 — Jorge Rivas" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Proceso actual:* Revisa luces, presión de llantas, niveles de refrigerante y aceite, y llena la hoja de papel de 30 preguntas que le entrega el despachador.
+  * *Frustración principal:* Si la hoja se moja con lluvia o aceite en la cabina, le hacen volver a llenarla. Además, le toma hasta 25 minutos porque tiene que escribir textos largos a mano.
+  * *Preferencia tecnológica:* Desea una aplicación sencilla en el celular donde solo tenga que pulsar botones grandes de "Conforme" o "Falla", y que le permita tomar una foto rápida si encuentra una luna rajada o un faro roto para deslindar su responsabilidad.
+
+---
+
+##### Entrevista 8 — Pedro Morales Huaccachi
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor de tractocamión articulado (Scania R450)
+* **Empresa:** Conductor de ruta nacional en Inversiones Logísticas del Sur E.I.R.L.
+* **Edad:** 51 años
+* **Distrito de residencia:** San Martín de Porres, Lima
+* **Tiempo en la actividad:** 20 años en transporte de carga interprovincial
+* **Dispositivos y marcas:** Smartphone Xiaomi Redmi 10C (Android 12), radio CB de dos vías en cabina
+* **Herramientas de trabajo:** Calibrador de profundidad de cocada, kit de herramientas manuales, medidor de aceite
+* **Aplicaciones habituales:** WhatsApp y llamadas telefónicas
+* **Fecha y hora:** 21 de septiembre de 2026 — 11:00 h
+* **Duración:** 14 minutos con 25 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:25`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Dificultad con la tecnología:* No le gustan los sistemas complicados ni las letras pequeñas porque en patio hay poca luz y suele tener las manos con guantes o polvo.
+  * *Temor a responsabilidades ajenas:* En más de una ocasión le han reclamado por una llanta de repuesto vencida que ya estaba así antes de su turno. Exige que la inspección digital guarde la hora exacta y fotos para demostrar qué fallas eran previas a su viaje.
+
+---
+
+##### Entrevista 9 — Miguel Ángel Ramos Castro
+* **Segmento:** Conductores de vehículos de carga
+* **Cargo / Ocupación:** Conductor de semirremolque y plataforma (Freightliner Columbia)
+* **Empresa:** Conductor de transporte de materiales en Carga Pesada Andina S.A.C.
+* **Edad:** 39 años
+* **Distrito de residencia:** Puente Piedra, Lima
+* **Tiempo en la actividad:** 10 años en transporte de carga minera e industrial
+* **Dispositivos y marcas:** Smartphone Motorola Moto E22 (Android 12)
+* **Herramientas de trabajo:** Linterna frontal LED, medidor digital de presión de neumáticos, wincha de amarre
+* **Aplicaciones habituales:** WhatsApp, Google Maps, Facebook
+* **Fecha y hora:** 22 de septiembre de 2026 — 09:40 h
+* **Duración:** 16 minutos con 05 segundos
+* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 16:05`)
+* **Evidencia de la sesión:**
+  <img src="img/interviews/entrevista-9.png" alt="Captura de la entrevista 9 — Miguel Ángel Ramos" width="600">
+
+* **Resumen de respuestas clave:**
+  * *Exigencias de clientes mineros:* En ruta minera los estándares son estrictos; si un extintor está despresurizado o falta una cinta reflectiva, no le permiten ingresar a mina y la empresa pierde el viaje.
+  * *Facilidad de uso:* Si el checklist digital está organizado por partes (primero cabina, luego motor, luego luces y neumáticos) y le avisa si el vehículo está 100% autorizado para salir, le ahorraría discusiones con los supervisores de garita.
+
+---
+
 <a id="223-analisis-de-entrevistas"></a>
 ### 2.2.3. Análisis de entrevistas.
 
+El análisis de las entrevistas realizadas a los nueve representantes de los tres segmentos objetivo permitió extraer hallazgos cualitativos y patrones cuantitativos fundamentales para validar las hipótesis iniciales de negocio y redefinir los requisitos funcionales de FleetSafe.
+
+#### 1. Análisis Cuantitativo Consolidado
+
+A partir de la codificación sistemática de las respuestas de los 9 entrevistados (3 por segmento), se obtuvieron los siguientes indicadores porcentuales clave:
+
+| Indicador / Hallazgo Evaluado | Muestra Total (N=9) | Empresas (N=3) | Supervisores (N=3) | Conductores (N=3) | Porcentaje Consolidado |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Uso exclusivo de formatos en papel para inspección preoperacional | 9 / 9 | 3 / 3 | 3 / 3 | 3 / 3 | **100.0%** |
+| Retrasos en despacho de patio atribuibles al llenado de papel (20 a 30 min) | 7 / 9 | 2 / 3 | 2 / 3 | 3 / 3 | **77.8%** |
+| Ocurrencia de autorizaciones de salida verbales ("de palabra") sin sustento auditable | 8 / 9 | 3 / 3 | 3 / 3 | 2 / 3 | **88.9%** |
+| Multas de SUTRAN u observaciones en auditorías por formatos ilegibles o incompletos | 6 / 9 | 2 / 3 | 3 / 3 | 1 / 3 | **66.7%** |
+| Sospecha o confirmación de "marcado automático / por compromiso" sin revisión física | 8 / 9 | 3 / 3 | 3 / 3 | 2 / 3 | **88.9%** |
+| Disposición de smartphone propio con acceso a datos móviles en patio de maniobras | 9 / 9 | 3 / 3 | 3 / 3 | 3 / 3 | **100.0%** |
+| Sistema operativo móvil predominante (Android) | 8 / 9 | 3 / 3 | 2 / 3 | 3 / 3 | **88.9%** (Android) / 11.1% (iOS) |
+
+#### 2. Análisis Cualitativo por Segmento
+
+##### A. Segmento Empresas de Transporte de Carga
+* **Dolor de pérdida económica y legal:** Los gerentes y administradores perciben el control preventivo en papel no como una medida de seguridad real, sino como un "trámite administrativo engorroso". Sin embargo, asumen costos elevados cuando las unidades son multadas o inmovilizadas en carretera por SUTRAN debido a fallas que pudieron detectarse antes de salir.
+* **Falta de visibilidad ejecutiva en tiempo real:** Ninguna de las empresas entrevistadas cuenta con un tablero centralizado donde la gerencia pueda verificar en tiempo real cuántas unidades están habilitadas para salir al iniciar la mañana. Dependen enteramente de llamadas telefónicas y reportes en Excel desactualizados.
+* **Necesidad de cumplimiento en homologaciones:** Las auditorías de homologación de clientes de gran envergadura (minería, consumo masivo, retail) exigen evidencias fotográficas y firmas fechadas. La falta de este respaldo digital reduce su competitividad comercial y frena la adjudicación de contratos de largo plazo.
+
+##### B. Segmento Supervisores de Flota y Seguridad (SST)
+* **Sobrecarga operativa y digitación duplicada:** Los supervisores invierten entre 1.5 y 2.5 horas diarias transcribiendo manualmente las observaciones de las hojas de papel a hojas de cálculo. Este tiempo burocrático les resta capacidad de inspección física en patio.
+* **Dilema ético y presión operativa ante excepciones:** Todos los supervisores admitieron recibir presiones constantes de las áreas comerciales para autorizar la salida de unidades con fallas leves para no perder turnos de carga. Manifiestan la necesidad urgente de que el sistema exija registrar la justificación y el responsable directo de la excepción, blindando su responsabilidad profesional ante siniestros.
+* **Ausencia de trazabilidad en las reparaciones:** Una vez que un elemento mecánico no conforme es reportado, no existe un canal cerrado para verificar si el taller mecánico corrigió el desperfecto antes de que el vehículo sea reasignado a otro conductor.
+
+##### C. Segmento Conductores de Vehículos de Carga
+* **Demanda de simplicidad y botones táctiles grandes:** Los conductores rechazan formularios web con textos largos, campos obligatorios de texto libre o interfaces recargadas. Señalan que en el patio de maniobras la iluminación es variable, el sol refleja en las pantallas y operan con manos sucias o guantes. Requieren botones de gran tamaño (mínimo 48 × 48 px) con opciones directas (*Conforme* / *Falla*) y flujo guiado paso a paso.
+* **Protección ante culpas por fallas mecánicas preexistentes:** El conductor ve con gran entusiasmo la capacidad de adjuntar fotografías obligatorias a los hallazgos con marca de tiempo. Esto les proporciona un escudo probatorio frente a los dueños de la empresa, evitando que se les descuente de sus sueldos roturas o desgastes que ya estaban presentes al iniciar su turno.
+* **Tiempo de llenado reducido:** Consideran aceptable un tiempo de inspección digital de entre 5 y 7 minutos. Cualquier proceso digital que tome más de 10 minutos generará resistencia al cambio y tentación de volver al llenado ficticio.
+
+#### 3. Validación y Contraste de las Lean UX Assumptions
+
+Los hallazgos de las entrevistas permitieron validar y calibrar las suposiciones iniciales planteadas en la sección 1.2.2.2:
+
+1. **Suposición validada:** *Las empresas necesitan eliminar el formato físico para asegurar la trazabilidad preventiva.* Confirmado al 100%. El papel físico es la causa raíz de la pérdida de información y del incumplimiento en auditorías de homologación.
+2. **Suposición validada:** *La clasificación del vehículo debe ser automática y determinística.* Confirmado. Los supervisores respaldan que el sistema clasifique la unidad en *Habilitado*, *Observado* o *No Habilitado* según reglas predefinidas, eliminando interpretaciones subjetivas.
+3. **Suposición ajustada:** *Las excepciones operacionales deben permitirse bajo estricta trazabilidad.* Inicialmente se contempló un bloqueo rígido e inamovible ante cualquier falla. La investigación demostró que la realidad operativa peruana exige permitir el despacho condicional con fallas no críticas, siempre y cuando se registre el autorizador y la justificación técnica en el historial auditable.
+4. **Suposición técnica validada:** *La solución debe ejecutarse en el navegador móvil sin requerir hardware telemático instalado.* Confirmado. El 100% de los conductores y supervisores opera smartphones con navegadores web modernos (Chrome, Safari), haciendo inviable e innecesaria la adquisición de equipos telemáticos propietarios.
+
+---
 
 <a id="23-needfinding"></a>
 ## 2.3. Needfinding.
@@ -977,25 +1272,38 @@ Necesitan realizar inspecciones pre-operacionales de forma rápida, registrar ev
 <a id="232-user-task-matrix"></a>
 ### 2.3.2. User Task Matrix.
 
-En esta sección se presenta la User Task Matrix, herramienta centrada en los segmentos objetivo que permitirá identificar las tareas y objetivos clave de los usuarios de FleetSafe.
+<a id="232-user-task-matrix"></a>
+### 2.3.2. User Task Matrix.
 
-| **USER TASK** | **José Ramírez** |  | **Alessandra Nova** |  | **Álvaro Torres** |  |
-|---|---|---|---|---|---|---|
+La User Task Matrix mapea las tareas operativas cotidianas que los usuarios representativos de los tres segmentos objetivo realizan en el mundo real dentro del proceso de control preventivo y despacho de carga, **independientemente de la existencia de una solución de software**. Para cada tarea se evalúa la frecuencia de ejecución (*Always*, *Often*, *Sometimes*, *Rarely*, *Never*) y su nivel de criticidad o importancia (*High*, *Medium*, *Low*):
+
+| **USER TASK (Actividades del Negocio)** | **José Ramírez**<br>*(Gerente / Dueño)* | | **Alessandra Nova**<br>*(Supervisora SST)* | | **Álvaro Torres**<br>*(Conductor de Carga)* | |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
 | | **Frequency** | **Importance** | **Frequency** | **Importance** | **Frequency** | **Importance** |
-| Consultar el estado de la flota | Often | High | Always | High | Sometimes | Medium |
-| Revisar información de los vehículos | Often | High | Always | High | Sometimes | Medium |
-| Revisar resultados de inspecciones | Sometimes | High | Always | High | Always | High |
-| Realizar inspección pre-operacional | Rarely | Medium | Sometimes | High | Always | High |
-| Registrar resultados de inspección | Rarely | Medium | Sometimes | High | Always | High |
-| Reportar condiciones inseguras o problemas | Sometimes | High | Often | High | Always | High |
-| Adjuntar evidencia fotográfica | Rarely | Medium | Often | High | Often | High |
-| Consultar el estado de autorización del vehículo | Often | High | Always | High | Always | High |
-| Gestionar y dar seguimiento a incidencias | Often | High | Always | High | Sometimes | High |
-| Consultar historial de inspecciones e incidencias | Sometimes | Medium | Often | High | Rarely | Medium |
-| Consultar documentación de los vehículos | Often | High | Often | High | Sometimes | Medium |
-| Dar seguimiento a acciones correctivas | Often | High | Always | High | Sometimes | Medium |
-| Recibir notificaciones sobre problemas o incidencias | Always | High | Always | High | Always | High |
-| Generar o consultar reportes de la flota | Often | High | Often | High | Rarely | Low |
+| Inspeccionar visualmente el estado exterior de la carrocería y luces | Rarely | Low | Often | High | Always | High |
+| Medir presión y profundidad de cocada de neumáticos con manómetro físico | Never | Low | Sometimes | High | Always | High |
+| Verificar niveles de fluidos de motor (aceite, refrigerante, frenos) con varilla | Never | Low | Rarely | Medium | Always | High |
+| Constatar presencia y vigencia de equipos de emergencia (extintor, conos, botiquín) | Never | Low | Often | High | Always | High |
+| Llenar la hoja de checklist preoperacional en papel físico o talonario de garita | Never | Low | Sometimes | High | Always | High |
+| Redactar observaciones mecánicas o anomalías detectadas en la libreta de ruta | Never | Low | Often | High | Always | High |
+| Tomar fotografías con el teléfono personal para evidenciar averías preexistentes | Rarely | Medium | Often | High | Often | High |
+| Entregar el formato físico firmado al despachador en la caseta de control de patio | Never | Low | Often | High | Always | High |
+| Digitar manualmente los reportes de papel en hojas de cálculo (Excel) | Rarely | Medium | Always | High | Never | Low |
+| Verificar vigencia física de documentos en cabina (SOAT, CITV, tarjeta de propiedad) | Sometimes | High | Always | High | Often | High |
+| Autorizar verbalmente la salida en ruta de una unidad con fallas no críticas | Often | High | Often | High | Never | Low |
+| Coordinar el ingreso de vehículos con desperfectos mecánicos al taller interno | Often | High | Always | High | Sometimes | Medium |
+| Consolidar el estatus matutino de vehículos disponibles vs. inmovilizados para despacho | Always | High | Always | High | Never | Low |
+| Presentar carpetas físicas de mantenimiento e inspecciones ante auditorías de clientes | Often | High | Often | High | Never | Low |
+
+#### Análisis de la User Task Matrix
+
+El análisis de la matriz evidencia una clara división de responsabilidades operativas entre los tres arquetipos y fundamenta los requisitos funcionales de FleetSafe:
+
+1. **Tareas críticas del Conductor (Álvaro Torres):** Su rutina diaria se concentra en la revisión física directa de los sistemas de seguridad del camión (neumáticos, fluidos, luces y extintores) y en el llenado manual del checklist en papel con frecuencia *Always* y criticidad *High*. La entrega física de la hoja y la necesidad de tomar fotos personales demuestran que el conductor asume un esfuerzo manual duplicado para protegerse ante sanciones por averías que él no provocó.
+2. **Cuello de botella de la Supervisora (Alessandra Nova):** Su tarea más demandante (*Always* / *High*) es la digitación de planillas de papel a Excel y el control de vigencia documental. Esta carga burocrática le consume tiempo valioso que debería dedicar a la inspección aleatoria en patio y a la gestión del taller mecánico. Asimismo, la tarea de autorizar excepciones verbales refleja el conflicto operativo entre seguridad y presión por despachar.
+3. **Visión estratégica del Gerente (José Ramírez):** No interviene en la revisión mecánica de patio, pero requiere con frecuencia diaria (*Always* / *High*) la consolidación del estatus de flota para asignar viajes y responder comercialmente ante clientes y fiscalizaciones de SUTRAN.
+
+---
 
 <a id="233-user-journey-mapping"></a>
 ### 2.3.3. User Journey Mapping.
@@ -1219,61 +1527,89 @@ A continuación se presenta el cuadro consolidado de Epics y User Stories:
 <a id="33-product-backlog"></a>
 ## 3.3. Product Backlog.
 
-El Product Backlog de FleetSafe ha sido elaborado considerando el valor que cada User Story aporta al negocio. El orden de priorización se ha definido tomando en cuenta los siguientes criterios:
+El Product Backlog de FleetSafe ha sido elaborado considerando el valor que cada User Story aporta al negocio. Cada ítem está trazado con su Epic correspondiente de la sección 3.1, priorizado según el método MoSCoW y estimado con la serie Fibonacci (1, 2, 3, 5, 8).
 
-1. Las User Stories relacionadas con el sitio web estático (Landing Page) se consideran desde el primer sprint, ya que permiten validar la propuesta de valor con los segmentos objetivo.
-2. Las funcionalidades de registro de vehículos, inspección preoperacional y evaluación de condiciones constituyen el núcleo del flujo de valor de FleetSafe y, por lo tanto, tienen alta prioridad.
-3. Las funcionalidades de gestión de incidencias, documentación e historial se priorizan después de consolidar el flujo principal.
-4. Los servicios RESTful API se priorizan de acuerdo con las funcionalidades que soportan, iniciando por autenticación, vehículos e inspecciones.
+### Criterios de priorización (MoSCoW)
 
-A continuación se presenta el Product Backlog consolidado:
+| Prioridad | Criterio |
+|:---|:---|
+| **Must have** | Sin esto el producto no cumple su propuesta de valor: inspección preoperacional, evaluación por reglas y habilitación operativa. |
+| **Should have** | Necesario para que el flujo funcione en producción, pero no bloquea la validación inicial: gestión de vehículos, incidencias y autenticación. |
+| **Could have** | Aporta valor pero puede postergarse: documentación vehicular, reportes e historial extendido. |
+| **Won't have (this time)** | Fuera del alcance actual: integración con GPS, IoT y mantenimiento. |
 
-| # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
-|:--------|:--------------|:-------|:------------|:----------------------------------|
-| 1 | US01 | Visualizar página de inicio | Como visitante, deseo visualizar la página de inicio de FleetSafe para conocer la propuesta de valor de la plataforma. | 2 |
-| 2 | US02 | Conocer funcionalidades del producto | Como visitante, deseo conocer las funcionalidades principales de FleetSafe para determinar si cubren las necesidades de control preventivo de mi flota. | 3 |
-| 3 | US03 | Conocer beneficios por segmento | Como visitante del segmento empresa de transporte de carga, deseo conocer los beneficios de FleetSafe para mi tipo de organización para evaluar su adopción. | 2 |
-| 4 | US04 | Solicitar contacto o demostración | Como visitante, deseo solicitar una demostración o contacto con el equipo de FleetSafe para recibir más información sobre la plataforma. | 3 |
-| 5 | US05 | Navegar entre secciones | Como visitante, deseo navegar entre las secciones del sitio web para acceder rápidamente a la información que me interesa. | 2 |
-| 6 | US06 | Visualizar información de contacto y redes | Como visitante, deseo visualizar la información de contacto y redes sociales de FleetSafe para comunicarme con la empresa. | 1 |
-| 7 | US07 | Registrar nuevo usuario | Como administrador, deseo registrar nuevos usuarios en la plataforma para que puedan acceder a las funcionalidades según su rol. | 3 |
-| 8 | US08 | Asignar rol a usuario | Como administrador, deseo asignar roles a los usuarios para definir sus permisos dentro de la plataforma. | 3 |
-| 9 | US09 | Iniciar sesión | Como usuario, deseo iniciar sesión en la plataforma para acceder a las funcionalidades según mi rol. | 5 |
-| 10 | US10 | Cerrar sesión | Como usuario, deseo cerrar sesión en la plataforma para proteger el acceso a mi cuenta. | 1 |
-| 11 | US11 | Consultar listado de usuarios | Como administrador, deseo consultar el listado de usuarios registrados para gestionar su información y roles. | 3 |
-| 12 | US38 | API de autenticación | Como developer, se desea exponer un endpoint de autenticación para que los usuarios puedan iniciar sesión en la plataforma. | 5 |
-| 13 | US12 | Registrar vehículo | Como supervisor de flota, deseo registrar nuevos vehículos en la plataforma para incorporarlos al control preventivo de la flota. | 5 |
-| 14 | US13 | Consultar listado de vehículos | Como supervisor de flota, deseo consultar el listado de vehículos de la flota para conocer las unidades disponibles. | 3 |
-| 15 | US14 | Consultar detalle de vehículo | Como supervisor de flota, deseo consultar el detalle de un vehículo para conocer su información, estado e historial. | 3 |
-| 16 | US15 | Actualizar información de vehículo | Como supervisor de flota, deseo actualizar la información de un vehículo para mantener sus datos vigentes. | 3 |
-| 17 | US16 | Asignar vehículo a conductor | Como supervisor de flota, deseo asignar un vehículo a un conductor para que este pueda realizar la inspección preoperacional correspondiente. | 3 |
-| 18 | US40 | API de gestión de vehículos | Como developer, se desea exponer endpoints CRUD para la gestión de vehículos. | 5 |
-| 19 | US17 | Iniciar inspección preoperacional | Como conductor, deseo iniciar una inspección preoperacional de un vehículo asignado para registrar su estado antes de operar. | 3 |
-| 20 | US18 | Registrar estado de elementos de inspección | Como conductor, deseo registrar el estado de los elementos de inspección para documentar las condiciones encontradas en el vehículo. | 5 |
-| 21 | US19 | Registrar observaciones | Como conductor, deseo registrar observaciones durante la inspección para describir las condiciones detectadas que requieren atención. | 3 |
-| 22 | US20 | Adjuntar evidencia fotográfica | Como conductor, deseo adjuntar evidencia fotográfica durante la inspección para respaldar las condiciones detectadas. | 3 |
-| 23 | US21 | Finalizar inspección preoperacional | Como conductor, deseo finalizar la inspección preoperacional para que el sistema evalúe las condiciones del vehículo. | 3 |
-| 24 | US22 | Consultar inspecciones realizadas | Como conductor, deseo consultar las inspecciones que he realizado para revisar su estado y resultados. | 3 |
-| 25 | US41 | API de inspecciones preoperacionales | Como developer, se desea exponer endpoints para el registro y consulta de inspecciones preoperacionales. | 5 |
-| 26 | US23 | Evaluar resultados de inspección | Como sistema, se desea evaluar los resultados de una inspección preoperacional de acuerdo con las reglas establecidas para determinar la condición del vehículo. | 8 |
-| 27 | US24 | Determinar estado del vehículo | Como sistema, se desea determinar si un vehículo se encuentra habilitado, observado o no habilitado para operar a partir de la evaluación de la inspección. | 5 |
-| 28 | US25 | Consultar vehículos por estado | Como supervisor de flota, deseo consultar los vehículos según su estado de habilitación para identificar rápidamente las unidades que pueden operar. | 5 |
-| 29 | US42 | API de evaluación y habilitación | Como developer, se desea exponer endpoints para la evaluación de inspecciones y la consulta del estado de habilitación de vehículos. | 8 |
-| 30 | US26 | Reevaluar vehículo tras acción correctiva | Como supervisor de flota, deseo reevaluar un vehículo después de aplicar una acción correctiva para verificar si ha recuperado su condición operativa. | 5 |
-| 31 | US27 | Registrar incidencia | Como conductor, deseo registrar una incidencia cuando detecto un problema en el vehículo para que sea atendida por el supervisor. | 3 |
-| 32 | US28 | Consultar incidencias registradas | Como supervisor de flota, deseo consultar las incidencias registradas para conocer los problemas detectados en los vehículos. | 3 |
-| 33 | US29 | Actualizar estado de incidencia | Como supervisor de flota, deseo actualizar el estado de una incidencia para reflejar su avance en el proceso de resolución. | 3 |
-| 34 | US30 | Registrar acción correctiva | Como supervisor de flota, deseo registrar la acción correctiva aplicada a una incidencia para documentar la solución del problema detectado. | 3 |
-| 35 | US31 | Consultar historial de incidencias por vehículo | Como supervisor de flota, deseo consultar el historial de incidencias de un vehículo para conocer los problemas recurrentes y su resolución. | 3 |
-| 36 | US43 | API de gestión de incidencias | Como developer, se desea exponer endpoints CRUD para la gestión de incidencias. | 5 |
-| 37 | US32 | Registrar documento vehicular | Como supervisor de flota, deseo registrar los documentos asociados a un vehículo para mantener actualizada su información documentaria. | 3 |
-| 38 | US33 | Consultar documentos próximos a vencer | Como supervisor de flota, deseo consultar los documentos próximos a vencer para tomar acciones preventivas antes de su vencimiento. | 5 |
-| 39 | US34 | Actualizar documento vehicular | Como supervisor de flota, deseo actualizar la información de un documento vehicular para mantener su vigencia registrada en la plataforma. | 3 |
-| 40 | US44 | API de documentación vehicular | Como developer, se desea exponer endpoints para la gestión de documentos vehiculares. | 5 |
-| 41 | US35 | Consultar historial de inspecciones | Como supervisor de flota, deseo consultar el historial de inspecciones de un vehículo para conocer su evolución en el tiempo. | 5 |
-| 42 | US36 | Generar reporte de estado de flota | Como supervisor de flota, deseo generar un reporte del estado de la flota para analizar la condición de los vehículos. | 5 |
-| 43 | US37 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | 3 |
-| 44 | US45 | API de historial y reportes | Como developer, se desea exponer endpoints para la consulta de historial y generación de reportes. | 5 |
+### Product Backlog consolidado
+
+| # Orden | User Story Id | Epic Id | Título | Descripción | Prioridad (MoSCoW) | Story Points | Sprint |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| 1 | US01 | EP01 | Visualizar página de inicio | Como visitante, deseo visualizar la página de inicio de FleetSafe para conocer la propuesta de valor de la plataforma. | Must have | 2 | Sprint 1 |
+| 2 | US02 | EP01 | Conocer funcionalidades del producto | Como visitante, deseo conocer las funcionalidades principales de FleetSafe para determinar si cubren las necesidades de control preventivo de mi flota. | Must have | 3 | Sprint 1 |
+| 3 | US03 | EP01 | Conocer beneficios por segmento | Como visitante del segmento empresa de transporte de carga, deseo conocer los beneficios de FleetSafe para mi tipo de organización para evaluar su adopción. | Must have | 2 | Sprint 1 |
+| 4 | US04 | EP01 | Solicitar contacto o demostración | Como visitante, deseo solicitar una demostración o contacto con el equipo de FleetSafe para recibir más información sobre la plataforma. | Must have | 3 | Sprint 1 |
+| 5 | US05 | EP01 | Navegar entre secciones | Como visitante, deseo navegar entre las secciones del sitio web para acceder rápidamente a la información que me interesa. | Should have | 2 | Sprint 1 |
+| 6 | US06 | EP01 | Visualizar información de contacto y redes | Como visitante, deseo visualizar la información de contacto y redes sociales de FleetSafe para comunicarme con la empresa. | Could have | 1 | Sprint 1 |
+| 7 | US07 | EP02 | Registrar nuevo usuario | Como administrador, deseo registrar nuevos usuarios en la plataforma para que puedan acceder a las funcionalidades según su rol. | Must have | 3 | Sprint 2 |
+| 8 | US08 | EP02 | Asignar rol a usuario | Como administrador, deseo asignar roles a los usuarios para definir sus permisos dentro de la plataforma. | Must have | 3 | Sprint 2 |
+| 9 | US09 | EP02 | Iniciar sesión | Como usuario, deseo iniciar sesión en la plataforma para acceder a las funcionalidades según mi rol. | Must have | 5 | Sprint 2 |
+| 10 | US10 | EP02 | Cerrar sesión | Como usuario, deseo cerrar sesión en la plataforma para proteger el acceso a mi cuenta. | Should have | 1 | Sprint 2 |
+| 11 | US11 | EP02 | Consultar listado de usuarios | Como administrador, deseo consultar el listado de usuarios registrados para gestionar su información y roles. | Should have | 3 | Sprint 2 |
+| 12 | US38 | EP09 | API de autenticación | Como developer, se desea exponer un endpoint de autenticación para que los usuarios puedan iniciar sesión en la plataforma. | Must have | 5 | Sprint 2 |
+| 13 | US12 | EP03 | Registrar vehículo | Como supervisor de flota, deseo registrar nuevos vehículos en la plataforma para incorporarlos al control preventivo de la flota. | Must have | 5 | Sprint 2 |
+| 14 | US13 | EP03 | Consultar listado de vehículos | Como supervisor de flota, deseo consultar el listado de vehículos de la flota para conocer las unidades disponibles. | Must have | 3 | Sprint 2 |
+| 15 | US14 | EP03 | Consultar detalle de vehículo | Como supervisor de flota, deseo consultar el detalle de un vehículo para conocer su información, estado e historial. | Should have | 3 | Sprint 2 |
+| 16 | US15 | EP03 | Actualizar información de vehículo | Como supervisor de flota, deseo actualizar la información de un vehículo para mantener sus datos vigentes. | Should have | 3 | Sprint 2 |
+| 17 | US16 | EP03 | Asignar vehículo a conductor | Como supervisor de flota, deseo asignar un vehículo a un conductor para que este pueda realizar la inspección preoperacional correspondiente. | Must have | 3 | Sprint 2 |
+| 18 | US40 | EP09 | API de gestión de vehículos | Como developer, se desea exponer endpoints CRUD para la gestión de vehículos. | Must have | 5 | Sprint 2 |
+| 19 | US17 | EP04 | Iniciar inspección preoperacional | Como conductor, deseo iniciar una inspección preoperacional de un vehículo asignado para registrar su estado antes de operar. | Must have | 3 | Sprint 3 |
+| 20 | US18 | EP04 | Registrar estado de elementos de inspección | Como conductor, deseo registrar el estado de los elementos de inspección para documentar las condiciones encontradas en el vehículo. | Must have | 5 | Sprint 3 |
+| 21 | US19 | EP04 | Registrar observaciones | Como conductor, deseo registrar observaciones durante la inspección para describir las condiciones detectadas que requieren atención. | Must have | 3 | Sprint 3 |
+| 22 | US20 | EP04 | Adjuntar evidencia fotográfica | Como conductor, deseo adjuntar evidencia fotográfica durante la inspección para respaldar las condiciones detectadas. | Should have | 3 | Sprint 3 |
+| 23 | US21 | EP04 | Finalizar inspección preoperacional | Como conductor, deseo finalizar la inspección preoperacional para que el sistema evalúe las condiciones del vehículo. | Must have | 3 | Sprint 3 |
+| 24 | US22 | EP04 | Consultar inspecciones realizadas | Como conductor, deseo consultar las inspecciones que he realizado para revisar su estado y resultados. | Should have | 3 | Sprint 3 |
+| 25 | US41 | EP09 | API de inspecciones preoperacionales | Como developer, se desea exponer endpoints para el registro y consulta de inspecciones preoperacionales. | Must have | 5 | Sprint 3 |
+| 26 | US23 | EP05 | Evaluar resultados de inspección | Como sistema, se desea evaluar los resultados de una inspección preoperacional de acuerdo con las reglas establecidas para determinar la condición del vehículo. | Must have | 8 | Sprint 3 |
+| 27 | US24 | EP05 | Determinar estado del vehículo | Como sistema, se desea determinar si un vehículo se encuentra habilitado, observado o no habilitado para operar a partir de la evaluación de la inspección. | Must have | 5 | Sprint 3 |
+| 28 | US25 | EP05 | Consultar vehículos por estado | Como supervisor de flota, deseo consultar los vehículos según su estado de habilitación para identificar rápidamente las unidades que pueden operar. | Must have | 5 | Sprint 3 |
+| 29 | US42 | EP09 | API de evaluación y habilitación | Como developer, se desea exponer endpoints para la evaluación de inspecciones y la consulta del estado de habilitación de vehículos. | Must have | 8 | Sprint 3 |
+| 30 | US26 | EP05 | Reevaluar vehículo tras acción correctiva | Como supervisor de flota, deseo reevaluar un vehículo después de aplicar una acción correctiva para verificar si ha recuperado su condición operativa. | Should have | 5 | Sprint 4 |
+| 31 | US27 | EP06 | Registrar incidencia | Como conductor, deseo registrar una incidencia cuando detecto un problema en el vehículo para que sea atendida por el supervisor. | Must have | 3 | Sprint 3 |
+| 32 | US28 | EP06 | Consultar incidencias registradas | Como supervisor de flota, deseo consultar las incidencias registradas para conocer los problemas detectados en los vehículos. | Should have | 3 | Sprint 4 |
+| 33 | US29 | EP06 | Actualizar estado de incidencia | Como supervisor de flota, deseo actualizar el estado de una incidencia para reflejar su avance en el proceso de resolución. | Should have | 3 | Sprint 4 |
+| 34 | US30 | EP06 | Registrar acción correctiva | Como supervisor de flota, deseo registrar la acción correctiva aplicada a una incidencia para documentar la solución del problema detectado. | Should have | 3 | Sprint 4 |
+| 35 | US31 | EP06 | Consultar historial de incidencias por vehículo | Como supervisor de flota, deseo consultar el historial de incidencias de un vehículo para conocer los problemas recurrentes y su resolución. | Could have | 3 | Sprint 4 |
+| 36 | US43 | EP09 | API de gestión de incidencias | Como developer, se desea exponer endpoints CRUD para la gestión de incidencias. | Should have | 5 | Sprint 4 |
+| 37 | US32 | EP07 | Registrar documento vehicular | Como supervisor de flota, deseo registrar los documentos asociados a un vehículo para mantener actualizada su información documentaria. | Could have | 3 | Sprint 4 |
+| 38 | US33 | EP07 | Consultar documentos próximos a vencer | Como supervisor de flota, deseo consultar los documentos próximos a vencer para tomar acciones preventivas antes de su vencimiento. | Could have | 5 | Sprint 4 |
+| 39 | US34 | EP07 | Actualizar documento vehicular | Como supervisor de flota, deseo actualizar la información de un documento vehicular para mantener su vigencia registrada en la plataforma. | Could have | 3 | Sprint 4 |
+| 40 | US44 | EP09 | API de documentación vehicular | Como developer, se desea exponer endpoints para la gestión de documentos vehiculares. | Could have | 5 | Sprint 4 |
+| 41 | US35 | EP08 | Consultar historial de inspecciones | Como supervisor de flota, deseo consultar el historial de inspecciones de un vehículo para conocer su evolución en el tiempo. | Should have | 5 | Sprint 4 |
+| 42 | US36 | EP08 | Generar reporte de estado de flota | Como supervisor de flota, deseo generar un reporte del estado de la flota para analizar la condición de los vehículos. | Could have | 5 | Sprint 4 |
+| 43 | US37 | EP08 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | Could have | 3 | Sprint 4 |
+| 44 | US45 | EP09 | API de historial y reportes | Como developer, se desea exponer endpoints para la consulta de historial y generación de reportes. | Could have | 5 | Sprint 4 |
+
+### Resumen de estimación
+
+| Story Points | Cantidad de User Stories | Total de puntos |
+|:---|:---|:---|
+| 1 | 3 | 3 |
+| 2 | 3 | 6 |
+| 3 | 22 | 66 |
+| 5 | 13 | 65 |
+| 8 | 2 | 16 |
+| **Total** | **44** | **156** |
+
+### Distribución por Sprint
+
+| Sprint | User Stories | Puntos | Enfoque |
+|:---|:---|:---|:---|
+| **Sprint 1** | US01 – US06 | 13 | Landing Page |
+| **Sprint 2** | US07 – US11, US38, US12 – US16, US40 | 43 | Identidad, usuarios y gestión de vehículos |
+| **Sprint 3** | US17 – US25, US41, US23 – US24, US42, US27 | 62 | Núcleo: inspección, evaluación y habilitación |
+| **Sprint 4** | US26, US28 – US37, US43 – US45 | 38 | Incidencias, documentación, historial y reportes |
+
+> **Nota sobre el Sprint 1.** El Sprint Planning 1 de la sección 5.2.1.1 declara una velocity de 8 y una suma de Story Points de 27. La revisión del backlog muestra que las User Stories efectivamente planificadas para ese sprint (US01 a US06) suman 13 puntos. Se recomienda alinear ambas cifras en la próxima revisión del informe.
+
+### Gestión del Product Backlog en Trello
 
 El Product Backlog se gestiona en **Trello**, conforme a las herramientas indicadas en el enunciado. El tablero es **público** y puede consultarse en la siguiente dirección:
 
@@ -1290,7 +1626,7 @@ El tablero se organiza en cuatro listas que reflejan el estado de avance de cada
 | **In Progress** | Las User Stories en desarrollo durante el sprint en curso |
 | **Done** | Las User Stories que cumplen la definición de terminado |
 
-Cada tarjeta conserva el identificador de la User Story, su título, sus Story Points y la descripción en formato *"Como… deseo… para…"*, además del bounded context al que pertenece, de modo que el tablero y la sección 3.1 del informe se mantengan consistentes entre sí.
+Cada tarjeta conserva el identificador de la User Story, su Epic asociado, su título, sus Story Points, su prioridad MoSCoW y la descripción en formato *"Como… deseo… para…"*, además del bounded context al que pertenece, de modo que el tablero y la sección 3.1 del informe se mantengan consistentes entre sí.
 
 
 <hr>
@@ -4112,7 +4448,7 @@ erDiagram
     }
 ```
 
-El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los apartados siguientes.
+El diagrama consolidado presenta las **veintidós tablas** del esquema, indicando para cada una su clave primaria y las columnas que participan en relaciones. El detalle completo de columnas, tipos y restricciones se presenta en los diagramas por bounded context de los secciónes siguientes.
 
 Todas las columnas con el sufijo `_by` —`created_by`, `reported_by`, `performed_by`, `evaluated_by` y `authorized_by`— referencian la tabla `users` del contexto Identity and Access, y registran la trazabilidad de quién realiza cada acción.
 
@@ -4550,13 +4886,13 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
 |:---------|:--------------------------------|:-------------------|
-| **GitHub Pages** | Publicación del Landing Page como sitio estático a partir de su repositorio. | https://pages.github.com |
-| **Vercel** | Publicación de la Frontend Web Application, con despliegue automático a partir del repositorio de GitHub. | https://vercel.com |
+| **GitHub Pages** | Publicación del Landing Page y de la Frontend Web Application como sitios estáticos a partir de sus repositorios. | https://pages.github.com |
+| **Render** | Publicación temporal de la API simulada con json-server que consume la Web Application mientras el Backend RESTful API no está desplegado. | https://render.com |
 | **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
 | **Azure Database for PostgreSQL** | Instancia gestionada de PostgreSQL que soporta la persistencia de la solución. | https://azure.microsoft.com/products/postgresql |
 | **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
 
-**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page es un sitio estático y se publica en GitHub Pages, que ya forma parte de la misma plataforma donde reside el repositorio. La Web Application requiere un proceso de construcción de Angular y se publica en Vercel, orientado precisamente a ese caso. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y ni GitHub Pages ni Vercel lo admiten, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students.
+**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page y la Web Application son, una vez construidos, sitios estáticos, y se publican en GitHub Pages, que forma parte de la misma plataforma donde residen los repositorios. La Web Application requiere un proceso de construcción de Angular, que ejecuta un flujo de trabajo de GitHub Actions antes de publicarla. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y GitHub Pages no lo admite, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students. Hasta que el Backend RESTful API esté desplegado, la Web Application consume una API simulada con json-server alojada en **Render**, que sirve los mismos recursos bajo el prefijo `/api/v1`.
 
 #### Software Documentation
 
@@ -4700,19 +5036,31 @@ El Landing Page es un sitio estático compuesto por HTML5, CSS3 y JavaScript, po
 3. Confirmar con *Save*. GitHub Pages construye y publica el sitio, y devuelve la URL pública `https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/`.
 4. Cada integración en `main` vuelve a publicar el sitio de forma automática.
 
-#### Frontend Web Application — Vercel
+#### Frontend Web Application — GitHub Pages con GitHub Actions
 
-La Web Application requiere un proceso de construcción previo, que Vercel ejecuta a partir del repositorio.
+La Web Application requiere un proceso de construcción previo. Un flujo de trabajo de GitHub Actions, versionado en el propio repositorio, la construye y la publica en GitHub Pages.
 
-1. Iniciar sesión en Vercel con la cuenta de GitHub y seleccionar **Add New › Project**.
-2. Importar el repositorio `Frontend-Web-Application` de la organización.
-3. Configurar la construcción:
-   - *Framework Preset*: **Angular**
-   - *Build Command*: `ng build --configuration production`
-   - *Output Directory*: `dist/<nombre-del-proyecto>/browser`
-   - *Install Command*: `npm ci`
-4. Registrar la variable de entorno `API_BASE_URL` con la dirección pública del Backend RESTful API.
-5. Establecer `develop` como rama de vista previa y `main` como rama de producción, de modo que cada Pull Request genere un despliegue de vista previa y solo `main` publique la versión estable.
+1. En el repositorio `Frontend-Web-Application`, acceder a **Settings › Pages** y seleccionar como origen **GitHub Actions**. A diferencia del Landing Page, no se publica una rama tal cual, sino el resultado de la construcción.
+2. Versionar el flujo de trabajo `.github/workflows/deploy.yml`, que se ejecuta con cada integración en `main` y también a demanda (`workflow_dispatch`). Consta de dos trabajos:
+   - **build**: prepara Node.js 24 con caché de npm, instala las dependencias con `npm ci`, construye la aplicación con `ng build --base-href /Frontend-Web-Application/` —la aplicación se publica en una subruta del dominio de la organización—, copia `index.html` como `404.html` para que una ruta interna de Angular, como `/inspections/new`, cargue la aplicación al recargar la página, y sube `dist/frontend-web-application/browser` como artefacto de Pages.
+   - **deploy**: publica el artefacto en el entorno `github-pages` mediante `actions/deploy-pages`.
+3. Registrar en `src/environments/environment.ts`, que es el archivo de configuración de producción, la dirección del API en `platformProviderApiBaseUrl`. Cada recurso se configura en el mismo archivo con su ruta, por ejemplo `platformProviderInspectionsEndpointPath: '/inspections'`.
+4. Publicar una versión: integrar la rama `release/*` en `main` mediante un Pull Request. El flujo de trabajo construye y publica la aplicación en `https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/`, y la versión se etiqueta en GitHub con su número de SemVer.
+
+#### API simulada — Render
+
+Mientras el Backend RESTful API no está desplegado, la Web Application consume una API simulada con **json-server**, construida a partir de `server/db.json` y `server/routes.json` del mismo repositorio.
+
+1. Iniciar sesión en Render con la cuenta de GitHub y crear un **Web Service** a partir del repositorio `Frontend-Web-Application`, rama `main`.
+2. Configurar el servicio:
+   - *Runtime*: **Node**
+   - *Build Command*: `npm ci`
+   - *Start Command*: `npx json-server server/db.json --routes server/routes.json --host 0.0.0.0 --port $PORT`
+   - *Instance Type*: **Free**, en la región **Virginia**, la más cercana a Perú entre las disponibles.
+3. Render publica el servicio en `https://fleetsafe-api.onrender.com`, y los recursos quedan disponibles bajo `https://fleetsafe-api.onrender.com/api/v1`. Esa es la dirección registrada en `platformProviderApiBaseUrl`.
+4. `server/routes.json` reescribe el prefijo con la regla `"/api/v1/*": "/$1"`, de modo que `/api/v1/inspections/{id}` llega a la colección `inspections`. Una ruta particular, como `/api/v1/drivers/me/vehicle-assignment`, se declara antes de esa regla general.
+
+La API simulada no persiste los cambios entre reinicios del servicio, y en el plan gratuito se suspende tras quince minutos sin uso, por lo que la primera petición posterior tarda en responder. Ambas limitaciones son aceptables para la demostración de la Web Application y desaparecen al sustituirla por el Backend RESTful API.
 
 #### Web Services — Azure App Service
 
@@ -4741,14 +5089,14 @@ El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publi
    | `SPRING_PROFILES_ACTIVE` | `prod` |
 
 5. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>.azurewebsites.net/swagger-ui.html`.
-6. Registrar la dirección pública resultante en la variable `API_BASE_URL` de la Web Application en Vercel, y habilitar esa dirección en la configuración CORS del servicio.
+6. Registrar la dirección pública resultante en `platformProviderApiBaseUrl` de `src/environments/environment.ts` de la Web Application, en sustitución de la API simulada, y habilitar en la configuración CORS del servicio el origen `https://1asi0729-2620-16692-bitmeisters.github.io`.
 
 **Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito y ofrece crédito suficiente para los planes de nivel gratuito de App Service y de PostgreSQL Flexible Server durante el ciclo.
 
 #### Consideraciones comunes
 
 - **Ningún secreto se versiona.** Las credenciales y cadenas de conexión se registran como variables de entorno en la plataforma de despliegue, y los archivos `.env` figuran en el `.gitignore` de cada repositorio.
-- **Solo `main` publica a producción.** Las ramas `feature/*` y `develop` generan despliegues de vista previa cuando la plataforma lo permite.
+- **Solo `main` publica a producción.** GitHub Pages no ofrece despliegues de vista previa por rama, por lo que el trabajo de `feature/*` y `develop` se verifica en local, contra la API simulada, antes de integrarse.
 - **Cada versión publicada lleva su tag de SemVer**, de modo que una publicación pueda revertirse volviendo al tag anterior.
 
 <a id="52-landing-page-services-applications-implementation"></a>
@@ -4785,10 +5133,10 @@ Con el objetivo de optimizar la organización y la colaboración del equipo, se 
 | Team Member (Last Name, First Name) | Github Username  | Resolución de errores de sprints previos Leader (L) / Collaborator (C) | Arquitectura, diseño y optimización de FleetSafe Leader (L) / Collaborator (C) | Refinamiento de funcionalidades y ajustes finales Leader (L) / Collaborator (C) |
 |-------------------------------------|------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Palacin Lazo, Gerardo Valentin      | GerardoPalacin03 | C                                                                      | C                                                                              | L                                                                               |
-| Santos Torres, Juan Manuel          | Por completar    | L                                                                      | L                                                                              | C                                                                               |
-| Apaza Bocanegra, Elizabeth Noelia   | Por completar    | C                                                                      | C                                                                              | L                                                                               |
-| Aguilar Untiveros, Rodrigo Fabrizio | Por completar    | L                                                                      | L                                                                              | C                                                                               |
-| Espino Flores, Alejandro            | Por completar    | C                                                                      | L                                                                              | C                                                                               |
+| Santos Torres, Juan Manuel          | JuanManuel312    | L                                                                      | L                                                                              | C                                                                               |
+| Apaza Bocanegra, Elizabeth Noelia   | Elizabeth-Apaza    | C                                                                      | C                                                                              | L                                                                               |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712        | L                                                                      | L                                                                              | C                                                                               |
+| Espino Flores, Alejandro            | CafecitoSKR      | C                                                                      | L                                                                              | C                                                                               |
 
 
 <a id="5213-sprint-backlog-1"></a>
@@ -4868,6 +5216,403 @@ La Landing Page fue desarrollada utilizando HTML5, CSS3 y JavaScript, tecnologí
 #### 5.2.1.8. Team Colaboration Insights during Sprint.
 
 ![S1TCI](img/teamCollaborationInsights/sprint1-teamCollaborationInsights.png)
+
+<a id="522-sprint-2"></a>
+### 5.2.2. Sprint 2
+
+<a id="5221-sprint-planning-2"></a>
+#### 5.2.2.1. Sprint Planning 2.
+
+El Sprint 2 tiene como propósito la primera versión desplegada de la Frontend Web Application, exigida para la entrega TB1. En la reunión de planificación, realizada por Google Meet, el equipo revisó lo alcanzado en el Sprint 1, identificó lo que faltaba para la entrega y acordó implementar los flujos que sostienen la propuesta de valor de FleetSafe: la inspección preoperacional del conductor, el registro y seguimiento de incidencias, el control de la documentación vehicular y la consulta de la flota. A partir de esa reunión, la coordinación continuó de forma asíncrona: cada integrante tomó un bounded context y la integración se acordó mediante Pull Requests en GitHub.
+
+| Sprint 2 | Sprint 2 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | 2026-10-07 |
+| **Time** | 07:00 PM |
+| **Location** | Reunión virtual por Google Meet |
+| **Prepared By** | Espino Flores, Alejandro |
+| **Attendees (to planning meeting)** | Espino Flores, Alejandro / Palacin Lazo, Gerardo Valentin / Aguilar Untiveros, Rodrigo Fabrizio / Santos Torres, Juan Manuel / Apaza Bocanegra, Elizabeth Noelia |
+| **Sprint 1 Review Summary** | En el Sprint 1 se completaron los capítulos I a IV del informe y se publicó la primera versión del Landing Page en GitHub Pages. La revisión de la entrega señaló que el Product Backlog no permitía rastrear las User Stories ni su asignación a sprints, lo que se corrigió en la versión 0.9.3 del informe. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó como acierto la organización por bounded context, que permitió repartir el trabajo sin bloqueos entre integrantes. Como oportunidad de mejora, cada integrante había resuelto de forma distinta las mismas decisiones técnicas —tipo de identificador, configuración de entornos, simulación de la API y manejo de errores—, lo que impedía integrar las ramas. Se acordó adoptar como referencia común el proyecto `learning-center` del curso y acordar las decisiones compartidas antes de implementar cada contexto. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | **Our focus is on** que el conductor realice su inspección preoperacional desde la Web Application y que el supervisor de flota registre incidencias y controle el vencimiento de la documentación de sus vehículos. **We believe it delivers** un control preventivo verificable antes de cada salida **to** las empresas de transporte de carga, sus supervisores de flota y sus conductores. **This will be confirmed when** la Web Application esté desplegada y un conductor pueda iniciar una inspección sobre su vehículo asignado y registrar el estado de sus elementos, y un supervisor pueda registrar una incidencia y consultar los documentos próximos a vencer. |
+| **Sprint 2 Velocity** | 31 |
+| **Sum of Story Points** | 31 |
+
+Las User Stories implementadas en el Sprint 2 son US13, US17, US18, US27, US28, US30, US32, US33 y US34. El Product Backlog de la sección 3.3 asignaba al Sprint 2 los epics de Identity and Access (EP02) y Fleet Management (EP03); el equipo priorizó los contextos del núcleo del dominio y dejó Identity and Access para el siguiente sprint, por lo que la columna *Sprint* de la sección 3.3 debe actualizarse en consecuencia.
+
+<a id="5222-aspect-leaders-and-collaborators"></a>
+#### 5.2.2.2. Aspect Leaders and Collaborators.
+
+Los aspectos del Sprint 2 corresponden a los bounded contexts implementados en la Web Application, más dos aspectos transversales: la base compartida (`shared`), que todos los contextos utilizan, y el despliegue. Cada contexto tiene un líder responsable de su implementación, y la base compartida se alineó con el proyecto de referencia del curso antes de integrar los contextos.
+
+| Team Member (Last Name, First Name) | GitHub Username | Pre-Operational Inspection Leader (L) / Collaborator (C) | Incident Management Leader (L) / Collaborator (C) | Fleet Management Leader (L) / Collaborator (C) | Vehicle Documentation Leader (L) / Collaborator (C) | Shared y Layout Leader (L) / Collaborator (C) | Deployment Leader (L) / Collaborator (C) |
+|---|---|---|---|---|---|---|---|
+| Espino Flores, Alejandro | CafecitoSKR | L | C | C | C | L | L |
+| Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | C | — | — | — | — | — |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | L | — | — | C | — |
+| Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | L | — | C | — |
+| Santos Torres, Juan Manuel | JuanManuel312 | — | — | — | L | — | — |
+
+<a id="5223-sprint-backlog-2"></a>
+#### 5.2.2.3. Sprint Backlog 2.
+
+El objetivo del Sprint 2 es que la Web Application permita al conductor iniciar y registrar su inspección preoperacional, y al supervisor de flota gestionar incidencias, consultar la documentación vehicular y la flota, todo ello desplegado y accesible por una URL pública. El Sprint Backlog incluye las tareas derivadas de estas User Stories y las que no dependen de ninguna en particular, como la base compartida, la API simulada y el despliegue.
+
+Las horas de cada tarea se estimaron a partir de la actividad registrada en sus commits: cada sesión de trabajo cuenta su duración más dos horas de trabajo previo a su primer commit, y una pausa de más de noventa minutos entre commits inicia una nueva sesión.
+
+Tablero del Sprint 2: https://trello.com/b/UPVJLXVw/fleetsafe-sprint-2
+
+<img src="img/sprint2/backlog-trello-board.png" width="700" alt="Tablero del Sprint Backlog 2 en Trello con las veinte tareas completadas">
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 2 | — | Base compartida | T01 | Construir y alinear la base compartida con el proyecto de referencia | Crear la estructura inicial de la aplicación e implementar `BaseEntity`, `BaseResource`, `BaseAssembler`, `BaseApiEndpoint`, `ErrorHandlingEnabledBaseType` y `BaseApi` según el proyecto `learning-center`. | 20 | Gerardo Palacin, Alejandro Espino | Done |
+| Sprint 2 | — | Base compartida | T02 | Configurar la internacionalización | Cargar las traducciones `en-US` y `es-419` con `@ngx-translate/http-loader` y añadir el selector de idioma. | 6 | Alejandro Espino | Done |
+| Sprint 2 | — | Base compartida | T03 | Rediseñar el layout con la identidad de marca | Implementar el menú lateral por categoría de bounded context, la barra superior y el pie de página, y adaptarlos a pantallas pequeñas. | 7 | Rodrigo Aguilar, Alejandro Espino | Done |
+| Sprint 2 | — | API simulada | T04 | Publicar el contrato OpenAPI | Publicar en el repositorio Web Services el contrato de Identity and Access y de Pre-Operational Inspection. | 7 | Alejandro Espino | Done |
+| Sprint 2 | — | API simulada | T05 | Construir la API simulada con json-server | Definir `server/db.json` y `server/routes.json` con los recursos de los cuatro contextos bajo el prefijo `/api/v1`. | 9 | Alejandro Espino | Done |
+| Sprint 2 | US13 | Consultar listado de vehículos | T06 | Implementar el dominio y la infraestructura de flota | Implementar las entidades, assemblers y endpoints de empresas, flotas, vehículos, conductores y asignaciones. | 5 | Gerardo Palacin | Done |
+| Sprint 2 | US13 | Consultar listado de vehículos | T07 | Implementar el resumen de flota y la lista de vehículos | Implementar la vista de resumen de flota y la tabla de vehículos con su estado. | 2 | Gerardo Palacin | Done |
+| Sprint 2 | US17 | Iniciar inspección preoperacional | T08 | Implementar el dominio y la infraestructura de inspección | Implementar las entidades de inspección, el catálogo de 42 elementos SUTRAN agrupados por sistema y sus endpoints. | 7 | Alejandro Espino | Done |
+| Sprint 2 | US17 | Iniciar inspección preoperacional | T09 | Cargar el catálogo de elementos de inspección | Construir el catálogo de elementos de inspección y sus textos a partir de la normativa SUTRAN. | 3 | Elizabeth Apaza | Done |
+| Sprint 2 | US17 | Iniciar inspección preoperacional | T10 | Implementar la vista del vehículo asignado | Mostrar el vehículo asignado al conductor y solicitar el odómetro antes de iniciar la inspección. | 8 | Alejandro Espino | Done |
+| Sprint 2 | US18 | Registrar estado de elementos de inspección | T11 | Implementar el checklist por sistema | Implementar el recorrido por sistema con el selector Conforme, Observado y Falla, el progreso y el guardado de cada respuesta. | 5 | Alejandro Espino | Done |
+| Sprint 2 | US27 | Registrar incidencia | T12 | Implementar el dominio y la infraestructura de incidencias | Implementar el aggregate de incidencia, sus comandos y los endpoints de incidencias y tipos de incidencia. | 4 | Rodrigo Aguilar | Done |
+| Sprint 2 | US27 | Registrar incidencia | T13 | Implementar el formulario de incidencia | Implementar el registro y la edición de una incidencia con su origen, severidad y tipo. | 2 | Rodrigo Aguilar | Done |
+| Sprint 2 | US28 | Consultar incidencias registradas | T14 | Implementar la lista y el detalle de incidencias | Implementar la tabla paginada de incidencias y la vista de detalle con acciones, reparaciones y seguimientos. | 4 | Rodrigo Aguilar | Done |
+| Sprint 2 | US30 | Registrar acción correctiva | T15 | Implementar los formularios de seguimiento | Implementar el registro de acciones correctivas, la programación de reparaciones y los seguimientos de una incidencia. | 2 | Rodrigo Aguilar | Done |
+| Sprint 2 | US32 | Registrar documento vehicular | T16 | Implementar el registro de documentos | Implementar el formulario de registro con validación de fechas y del enlace al documento digital. | 2 | Juan Manuel Santos | Done |
+| Sprint 2 | US33 | Consultar documentos próximos a vencer | T17 | Implementar el panel de vigencia | Implementar los contadores por estado, los filtros por vehículo y estado, y la lista de documentos próximos a vencer. | 2 | Juan Manuel Santos | Done |
+| Sprint 2 | US34 | Actualizar documento vehicular | T18 | Implementar la actualización de documentos | Permitir actualizar un documento y recalcular su estado de vigencia. | 2 | Juan Manuel Santos | Done |
+| Sprint 2 | US32–US34 | Documentación vehicular | T19 | Alinear la documentación vehicular con la base compartida | Reemplazar el servidor propio por los endpoints, assemblers y store de la base compartida. | 2 | Alejandro Espino | Done |
+| Sprint 2 | — | Despliegue | T20 | Desplegar la Web Application y la API simulada | Configurar GitHub Pages con GitHub Actions y el servicio de Render, y publicar las versiones con su tag. | 7 | Alejandro Espino | Done |
+
+<a id="5224-development-evidence-for-sprint-review"></a>
+#### 5.2.2.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 2 se implementó la Frontend Web Application con cuatro bounded contexts —Pre-Operational Inspection, Incident Management, Fleet Management y Vehicle Documentation— sobre una base compartida alineada con el proyecto de referencia del curso, y se publicó en el repositorio Web Services el contrato OpenAPI que la Web Application consume. El Landing Page no recibió cambios en este sprint. Cada contexto se desarrolló en su propia rama `feature/*` y se integró en `develop` mediante Pull Request, conservando la autoría de cada commit; las correcciones posteriores al despliegue se integraron como ramas `fix/*` y `hotfix/*`, y cada versión publicada se preparó en una rama `release/*`.
+
+La tabla recoge los commits del sprint, sin los commits de merge, en orden cronológico.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| Frontend-Web-Application | develop | 42fe307 | chore: initialize angular project | — | 2026-09-29 |
+| Frontend-Web-Application | develop | 4567bd1 | build: add angular material | — | 2026-09-29 |
+| Frontend-Web-Application | feature/configuration | da1f405 | build(i18n): add ngx-translate with en-US and es-419 | — | 2026-09-29 |
+| Frontend-Web-Application | feature/vehicle-documentation | 823a046 | chore: rename translation directories. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 2e2ead2 | chore: rename translation directories. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 4ef3fbc | chore: initial commit. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 32dea71 | chore: initial commit. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 2362104 | chore: implement server directory with db and routes.json | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 1eaec14 | chore: implement server directory with db and routes.json | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 2a0fa71 | chore: implement enviroment for developers. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | f6c78ef | chore: implement enviroment for developers. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 156c084 | feat(shared): add base entity with numeric identifier. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 05ae06d | feat(shared): add base entity with numeric identifier. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | f1ba497 | feat(shared): add base response and resource. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 1437aba | feat(shared): add base response and resource. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 06f562c | feat(shared): add base assembler | — | 2026-10-04 |
+| Frontend-Web-Application | develop | ad52323 | feat(shared): add base assembler | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 579b7fd | feat(shared): update translations for the web application | — | 2026-10-04 |
+| Frontend-Web-Application | develop | df8ea9e | feat(shared): update translations for the web application | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 83b4d23 | feat(shared): update visual material | — | 2026-10-04 |
+| Frontend-Web-Application | develop | e17d76a | feat(shared): update visual material | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 296f2be | feat(shared): update logic and redundant lines of coding from infrastructure layer | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 18d77f6 | feat(shared): update logic and redundant lines of coding from infrastructure layer | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 103fde3 | feat(shared): correct placement for footer, language switcher and layout | — | 2026-10-04 |
+| Frontend-Web-Application | develop | ce7f530 | feat(shared): correct placement for footer, language switcher and layout | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 76719d9 | chore: update angular version | — | 2026-10-04 |
+| Frontend-Web-Application | develop | e6aa255 | chore: update angular version | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 3418d69 | chore: update files for shared directory new logic | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 55deb36 | chore: update files for shared directory new logic | — | 2026-10-04 |
+| Frontend-Web-Application | feature/incident-management | 7c247b6 | feat(incident): add incident aggregate and value objects | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 9abaf5a | feat(incident): add incident domain commands | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 8ff79d6 | feat(incident): add incident and incident type rest endpoints | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 7fd081e | feat(incident): add corrective action registration endpoint | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | b47f3b1 | feat(incident): add repair scheduling and completion endpoints | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | eb05659 | feat(incident): add follow-up and resolution endpoints | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | d30d945 | feat(incident): add incident endpoints to environment configuration | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | f1b0ded | feat(incident): add signal-based store for incident management | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 54abaad | feat(incident): add incident list, form and detail views | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 9b407fd | feat(incident): add corrective action, repair and follow-up forms with routes | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 9dfd7a1 | feat(i18n): add incident management translations to es and en | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | dbf80c4 | fix(shared): update page-not-found to display current url on navigation | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 809450b | feat(app): integrate incident routes, spanish locale and updated bundle budget | — | 2026-10-05 |
+| Frontend-Web-Application | feature/layout-redesign | 028a94f | feat(shared): redesign sidebar, topbar and footer with brand identity | — | 2026-10-05 |
+| Frontend-Web-Application | feature/layout-redesign | 7877f77 | feat(shared): restyle language switcher and add bilingual tagline | — | 2026-10-05 |
+| Frontend-Web-Application | feature/vehicle-documentation | 63fc766 | feat(vehicle-documentation): define document models and date-based validity rules | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 742d8f1 | feat(vehicle-documentation): add REST facade and configurable integration contract | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 52895db | feat(vehicle-documentation): coordinate loading and document registration state | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 5cb9ca3 | feat(vehicle-documentation): implement validated registration and update form | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | b3fddce | feat(vehicle-documentation): add validity dashboard filters and document actions | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | bf23f71 | feat(vehicle-documentation): integrate lazy routes and bilingual interface | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | dc6ce26 | feat(vehicle-documentation): provide persistent isolated demo REST server | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 5b7d8fd | test(vehicle-documentation): cover validity boundaries and registration requirements | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | a5f106c | docs(vehicle-documentation): explain local setup requirements and team integration | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | fabcb66 | feat(shared): update files for shared directory new logic | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | fc8dabf | feat(fleet): update environment rules | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | ae122d1 | feat(fleet): update initial project configuration. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 353ed8b | feat(fleet): add company, driver, fleet, vehicle, vehicle-assignment entities in domain layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | dbc14c2 | feat(fleet): add company response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 5af7735 | feat(fleet): add drivers response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | e096c4b | feat(fleet): add fleets response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 120b908 | feat(fleet): add vehicles response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | c9510fd | feat(fleet): add vehicle assignments response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 54c50b0 | feat(fleet): add fleet api to manipulate endpoints in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 703588a | feat(fleet): update translations. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | f3c1be8 | feat(fleet): add server files to test. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 94ea3ac | feat(fleet): update entities in domain layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | f8b188c | feat(fleet): add fleet.store to application layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 518c826 | feat(fleet): update content from fleet api, vehicle response and assembler in infrastructure layer. | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 2171ede | refactor(i18n): load translations per bounded context with en-US and es-419 | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 244509d | feat(shared): handle http errors globally and notify through snack bars | — | 2026-10-06 |
+| Frontend-Web-Application | develop | a5a35fe | build: remove the unused ngx-translate http loader | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | dfa79dc | build(i18n): update language switcher following i18n directives. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 6c43fa6 | build: update materials. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | a99d979 | feat(fleet): add driver, fleet, vehicle assignment, vehicle directories for presentation layer | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | d76d74f | feat(fleet): update fleet routes in presentation layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 24aa14a | feat(fleet): integrate bounded context fleet management in app directory. | — | 2026-10-06 |
+| Frontend-Web-Application | develop | a426aee | refactor(shared): identify entities with uuid strings | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 2c5bf74 | build: configure the api base url per environment | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 0c5951a | build: add the contract mock and the stateful mock | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 83fca4b | feat(shared): expose the current user through a port | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 5893ee1 | fix(shared): redirect the empty path to home | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 08a5067 | feat(inspection): model the inspection aggregate and its rules | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 63d21a0 | refactor(shared): model entities and auditable aggregate roots as abstract classes | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 645f954 | refactor(inspection): extend the shared domain base classes | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | e513b08 | refactor(inspection): keep the entities to their state until use cases need behavior | — | 2026-10-06 |
+| Frontend-Web-Application | feature/shared-api-client | 6c42a13 | feat(shared): compose api calls through a client that resolves the base url | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 016781e | feat(inspection): consume the inspection api needed to start an inspection | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | df3d364 | fix(inspection): remove a stray character from the assigned vehicle assembler | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 10dd34a | feat(inspection): add the inspection store to start an inspection | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 734f80b | fix(inspection): mark the inspection as starting only when the request is sent | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-auth-interceptor | ca8a3d7 | feat(shared): send the access token with every api request | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 6c93479 | feat(shared): provide the material defaults of the application | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 3e68bea | feat(inspection): let the driver start an inspection from the assigned vehicle | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 9ce44fd | fix(inspection): keep the error state icon apart from the start error styles | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-theme | 7872bfa | build: disable angular cli analytics for the project | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-theme | 40ecb76 | feat(shared): theme angular material with the fleetsafe brand | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-theme | 97379cf | feat(shared): show notifications as toasts with a severity icon | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | f121f2d | feat(inspection): populate SUTRAN inspection catalog items and mock inspection history | Added inspection items and inspection records to db.json for vehicle safety checks. | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 1c8e683 | feat(inspection): add inspection translation keys to es-419 dictionary | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | b7b4d21 | feat(inspection): add inspection translation keys to en-US dictionary | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 6381317 | refactor(inspection): move the inspection translations to their bounded context | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | fe97ba1 | build(inspection): shape the mock data after the inspection and fleet contracts | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 82ea8e4 | fix(inspection): surface unexpected errors when starting an inspection | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | f598da3 | build: replace json-server and the installed prism with msw and prism on demand | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | ac2c78d | feat(shared): start the mock api in development before the application | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 7e2df57 | feat(inspection): mock the inspection api with the sutran catalog | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 224b971 | feat(inspection): mock registering and correcting checklist results | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | b4b9493 | build(inspection): assign each mock catalog item to its vehicle system | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | ae52f1f | feat(inspection): add the checklist texts and the vehicle system names | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 95d4337 | feat(inspection): let the driver answer each item of the checklist | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | bf690c2 | feat(inspection): walk the checklist one vehicle system at a time | — | 2026-10-07 |
+| Frontend-Web-Application | refactor/shared-learning-center | d093188 | refactor(shared): rename the shared views folder as in the reference | — | 2026-10-07 |
+| Frontend-Web-Application | refactor/shared-learning-center | 16d1879 | refactor(shared): align the shared kernel with the learning center reference | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | a72d449 | build: return to json-server as the mock api of the reference | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 9f6b931 | refactor(inspection): keep the inspection texts in the single dictionary per language | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 2e11fa7 | build: lock the dependencies of the reference mock api | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | b27d269 | refactor(inspection): model the inspection domain with private fields as in the reference | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 1b5ce47 | refactor(inspection): reach the api through reference endpoints and assemblers | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | bd21a2f | refactor(inspection): manage the inspection state as the reference stores do | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 5af6f59 | refactor(inspection): drive the screens through the reference store and forms | — | 2026-10-07 |
+| Frontend-Web-Application | feature/incident-management | 9dc462d | refactor(incident): identify incidents with string ids as the shared kernel does | — | 2026-10-07 |
+| Frontend-Web-Application | feature/fleet-management | 1ab8f13 | refactor(fleet): reach the fleet api through the shared endpoint without an id type | — | 2026-10-07 |
+| Frontend-Web-Application | release/0.2.0 | a6b895a | chore(release): prepare version 0.2.0 | — | 2026-10-07 |
+| Frontend-Web-Application | feature/deployment | a3217e5 | ci: deploy the web application to github pages | — | 2026-10-08 |
+| Frontend-Web-Application | feature/deployment | 7bb6bf0 | build: point the production environment to the deployed mock api | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.1 | 55160f3 | chore(release): prepare version 0.2.1 | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.2 | d007744 | fix(shared): load the translations without the http interceptors | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.2 | 5d98fbb | chore(release): prepare version 0.2.2 | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.2 | 12f78cd | style(shared): format the translation loader configuration | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 07d6906 | fix(shared): show every sidebar label over the brand color | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 958d407 | fix(shared): show the released version in the sidebar | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 6d82d65 | fix(incident): seed the mock api with incidents and their types | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 0e3ce44 | refactor(vehicle-documentation): reach the shared mock api through the reference endpoints and store | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.3 | 4e8d7d6 | chore(release): prepare version 0.2.3 | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.4 | 94571b9 | fix(shared): rewrite the mock api paths so requests by id reach their collection | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.4 | 075aab6 | chore(release): prepare version 0.2.4 | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | 3a1ad1d | fix(incident): return i18n error keys from store | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | bc0d0fe | fix(incident): translate error message in list view | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | 3ab4c67 | fix(incident): add loadFailed and notFound i18n keys | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | b26dea9 | fix(incident): use origin and severity label keys in form | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | e2e2e8f | fix(incident): use label keys for origin, severity and status in detail view | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | 1bcfaae | fix(incident): add origin, severity and status label i18n keys | — | 2026-10-08 |
+| Frontend-Web-Application | fix/mobile-layout | e16fee3 | fix(shared): collapse the sidebar behind a menu button on small screens | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.5 | 5d86b85 | chore(release): prepare version 0.2.5 | — | 2026-10-08 |
+| Frontend-Web-Application | fix/result-selector-narrow | 463eac8 | fix(inspection): fit the result selector on narrow checklist cards | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.6 | fd94877 | chore(release): prepare version 0.2.6 | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 0d3823f | fix(shared): point incident sidebar link to the real route | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 8eadff4 | style(incident): center form layout and align action buttons | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 155e819 | style(incident): use mat-flat-button for the primary form action | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-form-improvements | 878790e | style(shared): tune button hover, focus and pressed state opacities | — | 2026-10-08 |
+| Frontend-Web-Application | fix/fleet-assignments-mock | 7645d69 | fix(fleet): serve the vehicle assignments under the path the fleet api requests | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.7 | cb4416f | chore(release): prepare version 0.2.7 | — | 2026-10-08 |
+| Web-Services | develop | 38aec67 | chore: initialize repository | — | 2026-09-29 |
+| Web-Services | feature/openapi-contracts | 7a49570 | feat(api): add the shared components and the root document of the contract | — | 2026-10-06 |
+| Web-Services | feature/openapi-contracts | 3c0a8b0 | feat(iam): add the identity and access contract | — | 2026-10-06 |
+| Web-Services | feature/openapi-contracts | 5b94c4c | feat(inspection): add the pre-operational inspection contract | — | 2026-10-06 |
+| Web-Services | feature/openapi-contracts | 4289d3e | docs(api): describe the license and the tags of the contract | — | 2026-10-06 |
+| Web-Services | fix/inspection-item-audit | a90bfff | fix(inspection): expose the audit timestamps of inspection items | — | 2026-10-06 |
+| Web-Services | feature/driver-vehicle-assignment | 3c44080 | feat(fleet): expose the active vehicle assignment of the signed-in driver | — | 2026-10-06 |
+
+<a id="5225-execution-evidence-for-sprint-review"></a>
+#### 5.2.2.5. Execution Evidence for Sprint Review.
+
+Al cierre del Sprint 2, la Web Application está desplegada en https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ en su versión 0.2.7. El conductor puede consultar su vehículo asignado, iniciar una inspección preoperacional registrando el odómetro y recorrer el checklist de 42 elementos agrupados en ocho sistemas, marcando cada uno como Conforme, Observado o Falla; la interfaz señala que los elementos no conformes requieren una observación, cuyo registro se implementa en el Sprint 3. El supervisor de flota puede registrar incidencias, consultar su detalle con las acciones correctivas, reparaciones y seguimientos, controlar la vigencia de la documentación vehicular y consultar el resumen de su flota. Toda la interfaz está disponible en inglés y en español, y se adapta a pantallas de escritorio y de teléfono.
+
+**Flujo del conductor — inspección preoperacional (teléfono)**
+
+| Vehículo asignado | Menú de navegación | Checklist al iniciar | Checklist con respuestas |
+|:---:|:---:|:---:|:---:|
+| <img src="img/sprint2/execution-mobile-start-inspection-en.png" width="200" alt="Vista del vehículo asignado en teléfono"> | <img src="img/sprint2/execution-mobile-menu-en.png" width="200" alt="Menú lateral abierto en teléfono"> | <img src="img/sprint2/execution-mobile-checklist-start-en.png" width="200" alt="Checklist de inspección al iniciar"> | <img src="img/sprint2/execution-mobile-checklist-answered-es.png" width="200" alt="Checklist con elementos respondidos, en español"> |
+
+**Flujo del conductor — inspección preoperacional (escritorio)**
+
+![Inicio de la inspección con el odómetro registrado](img/sprint2/execution-start-inspection-filled-en.png)
+
+![Checklist de inspección con elementos respondidos, en español](img/sprint2/execution-inspection-checklist-answered-es.png)
+
+**Incident Management**
+
+![Lista de incidencias registradas](img/sprint2/execution-incidents-en.png)
+
+![Detalle de una incidencia con sus acciones correctivas, reparaciones y seguimientos, en español](img/sprint2/execution-incident-detail-es.png)
+
+**Vehicle Documentation**
+
+![Panel de vigencia de la documentación vehicular](img/sprint2/execution-vehicle-documentation-en.png)
+
+**Fleet Management**
+
+![Resumen de la flota](img/sprint2/execution-fleet-en.png)
+
+![Lista de vehículos de la flota, en español](img/sprint2/execution-fleet-vehicles-es.png)
+
+Video de la navegación lograda: _por completar_.
+
+<a id="5226-services-documentation-evidence-for-sprint-review"></a>
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review.
+
+El Backend RESTful API se implementa a partir del Sprint 3. En este sprint se publicó en el repositorio Web Services el contrato OpenAPI que lo especifica, para los contextos de Identity and Access y Pre-Operational Inspection, y la Web Application consume una API simulada con json-server que sirve los mismos recursos bajo el prefijo `/api/v1`. El contrato se valida con Redocly y puede servirse en local con Prism mediante `npm run mock:contract` en el repositorio de la Web Application.
+
+- Contrato: https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services/blob/develop/openapi/openapi.yaml
+- API simulada desplegada: https://fleetsafe-api.onrender.com/api/v1
+
+| Endpoint | Acciones implementadas | Verbo HTTP | Sintaxis de llamada | Parámetros | Response |
+|---|---|---|---|---|---|
+| `/drivers/me/vehicle-assignment` | Consultar la asignación activa del conductor | GET | `GET /api/v1/drivers/me/vehicle-assignment` | — | `200` con la asignación y el vehículo: `{ "id", "driverId", "assignedFrom", "vehicle": { "id", "plate": "ABC-123", "brand": "Volvo", "model": "FH 460" } }`. `404` si el conductor no tiene vehículo asignado. |
+| `/inspection-items` | Consultar el catálogo de elementos de inspección | GET | `GET /api/v1/inspection-items` | — | `200` con los 42 elementos: `[{ "id", "code": "SAF-01", "name": "Brake system", "system": "BRAKES", "isSafetyComponent": true, "requiresEvidence": true, "displayOrder": 1, "isActive": true }, …]` |
+| `/inspections` | Iniciar una inspección | POST | `POST /api/v1/inspections` | Cuerpo: `id`, `vehicleId`, `driverId`, `status: "IN_PROGRESS"`, `odometer`, `startedAt`, `results: []` | `201` con la inspección creada. |
+| `/inspections/{id}` | Consultar una inspección | GET | `GET /api/v1/inspections/{id}` | `id`: UUID de la inspección | `200` con la inspección y sus resultados; `404` si no existe. |
+| `/inspections/{id}` | Registrar el estado de un elemento | PUT | `PUT /api/v1/inspections/{id}` | `id` y la inspección con el resultado añadido en `results` (`inspectionItemId`, `itemName`, `itemCategory`, `result`: `OK` · `OBSERVED` · `FAIL`) | `200` con la inspección actualizada. |
+| `/incidents` | Registrar y consultar incidencias | GET · POST | `GET /api/v1/incidents` · `POST /api/v1/incidents` | Cuerpo de `POST`: `vehicleId`, `incidentTypeId`, `origin`, `description`, `severity`, `reportedBy` | `200` con la lista de incidencias, cada una con `correctiveActions`, `repairs` y `followUps`; `201` con la incidencia creada. |
+| `/incident-types` | Consultar los tipos de incidencia | GET | `GET /api/v1/incident-types` | — | `200` con `[{ "id", "code": "MECHANICAL", "name": "Mechanical failure", "isActive": true }, …]` |
+| `/vehicle-documents` | Registrar, consultar y actualizar documentos | GET · POST · PUT | `GET /api/v1/vehicle-documents` · `POST /api/v1/vehicle-documents` · `PUT /api/v1/vehicle-documents/{id}` | Cuerpo: `vehicleId`, `documentTypeId`, `number`, `issueDate`, `expirationDate`, `fileUrl` | `200` con la lista; `201` o `200` con el documento registrado o actualizado. |
+| `/document-types` | Consultar los tipos de documento | GET | `GET /api/v1/document-types` | — | `200` con `[{ "id", "code": "SOAT", "name": "SOAT", "isRequired": true }, …]` |
+| `/fleets` · `/vehicles` · `/drivers` | Consultar la flota, sus vehículos y conductores | GET | `GET /api/v1/fleets` · `GET /api/v1/vehicles` · `GET /api/v1/drivers` | — | `200` con la lista de cada recurso. |
+
+Contrato publicado, visualizado con Swagger UI a partir del archivo `openapi.yaml` del repositorio:
+
+![Contrato OpenAPI de FleetSafe con las operaciones de Identity and Access, Fleet Management y Pre-Operational Inspection](img/sprint2/services-openapi-overview.png)
+
+Operación de consulta del catálogo de elementos de inspección, con sus parámetros y el ejemplo de respuesta:
+
+![Operación GET /inspection-items documentada con sus parámetros y ejemplos de respuesta](img/sprint2/services-openapi-inspection-items.png)
+
+Operación para iniciar una inspección, con el cuerpo de la petición, la respuesta `201` y las respuestas de error con datos de muestra:
+
+![Operación POST /inspections documentada con el cuerpo de la petición y sus respuestas](img/sprint2/services-openapi-start-inspection.png)
+
+Operación de consulta de la asignación activa del conductor:
+
+![Operación GET /drivers/me/vehicle-assignment documentada con su respuesta](img/sprint2/services-openapi-vehicle-assignment.png)
+
+Respuesta de la API simulada desplegada al consultar el catálogo de elementos de inspección:
+
+![Respuesta JSON del catálogo de elementos de inspección en la API simulada](img/sprint2/deployment-mock-api-response.png)
+
+Commits del repositorio Web Services relacionados con la documentación de este sprint (https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services):
+
+| Commit Id | Commit Message |
+|---|---|
+| 7a49570 | feat(api): add the shared components and the root document of the contract |
+| 3c0a8b0 | feat(iam): add the identity and access contract |
+| 5b94c4c | feat(inspection): add the pre-operational inspection contract |
+| 4289d3e | docs(api): describe the license and the tags of the contract |
+| a90bfff | fix(inspection): expose the audit timestamps of inspection items |
+| 3c44080 | feat(fleet): expose the active vehicle assignment of the signed-in driver |
+
+<a id="5227-software-deployment-evidence-for-sprint-review"></a>
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review.
+
+En el Sprint 2 se desplegaron la Frontend Web Application y la API simulada que consume, siguiendo la configuración descrita en la sección 5.1.4. El Landing Page continúa publicado en GitHub Pages desde el Sprint 1.
+
+| Producto | Repositorio | Plataforma | Estado | URL |
+|---|---|---|---|---|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado (Sprint 1) | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado, versión 0.2.7 | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
+| API simulada (json-server) | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | Render | Desplegado | https://fleetsafe-api.onrender.com/api/v1 |
+| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure App Service | Contrato publicado; despliegue en el Sprint 3 | — |
+
+**1. Configuración de GitHub Pages.** En el repositorio de la Web Application se seleccionó como origen de publicación GitHub Actions, de modo que lo publicado es el resultado de la construcción de Angular y no el contenido de una rama.
+
+![Configuración de GitHub Pages con origen GitHub Actions](img/sprint2/deployment-github-pages-settings.png)
+
+**2. Automatización del despliegue.** El flujo de trabajo `deploy.yml` se ejecuta con cada integración en `main`. Su trabajo `build` instala las dependencias y construye la aplicación con la subruta del repositorio, y su trabajo `deploy` la publica en el entorno `github-pages`.
+
+![Ejecuciones del flujo de trabajo de despliegue](img/sprint2/deployment-actions-runs.png)
+
+![Detalle de una ejecución con los trabajos build y deploy completados](img/sprint2/deployment-actions-run-detail.png)
+
+**3. Creación del servicio de la API simulada en Render.** Se creó un Web Service a partir del mismo repositorio, en la región de Virginia y con el plan gratuito.
+
+![Servicio fleetsafe-api en Render](img/sprint2/deployment-render-general.png)
+
+**4. Configuración de construcción y arranque.** Render instala las dependencias con `npm ci` desde la rama `main` y arranca json-server con los datos de `server/db.json` y las reglas de `server/routes.json`.
+
+![Configuración de construcción del servicio en Render](img/sprint2/deployment-render-build.png)
+
+![Comando de arranque y despliegue automático del servicio en Render](img/sprint2/deployment-render-deploy.png)
+
+**5. Publicación de versiones.** Cada versión desplegada se preparó en una rama `release/*` o `hotfix/*`, se integró en `main` mediante Pull Request y se publicó como release de GitHub con su tag de Semantic Versioning y sus notas, tomadas del `CHANGELOG.md` del repositorio.
+
+![Releases de la Web Application](img/sprint2/deployment-releases.png)
+
+![Notas de la release v0.2.0](img/sprint2/deployment-release-v0.2.0.png)
+
+| Versión | Contenido |
+|---|---|
+| v0.1.0 | Base de la aplicación previa a la alineación con el proyecto de referencia. |
+| v0.2.0 | Base compartida alineada con `learning-center` e integración de los cuatro bounded contexts. |
+| v0.2.1 | Despliegue de la Web Application en GitHub Pages y de la API simulada en Render. |
+| v0.2.2 | Carga de las traducciones en el entorno desplegado. |
+| v0.2.3 | Menú lateral, versión visible, datos de incidencias y documentación vehicular sobre la API simulada. |
+| v0.2.4 | Reescritura de rutas de la API simulada para las consultas por identificador. |
+| v0.2.5 | Menú lateral en pantallas pequeñas y etiquetas de incidencias. |
+| v0.2.6 | Selector de resultados de inspección en pantallas estrechas. |
+| v0.2.7 | Asignaciones de vehículos en la API simulada, formulario de incidencias y estados de los botones. |
+
+<a id="5228-team-collaboration-insights-during-sprint"></a>
+#### 5.2.2.8. Team Collaboration Insights during Sprint.
+
+Cada integrante desarrolló su bounded context en una rama propia a partir de `develop`. Antes de integrar los contextos, la base compartida se alineó con el proyecto de referencia del curso, y cada rama se integró después en `develop` mediante su Pull Request, conservando la autoría de cada commit. Durante el sprint se registraron 159 commits sin contar los de merge: 152 en el repositorio de la Web Application y 7 en el de Web Services.
+
+| Integrante | GitHub Username | Commits en la Web Application | Aporte principal |
+|---|---|---:|---|
+| Espino Flores, Alejandro | CafecitoSKR | 69 | Base compartida, Pre-Operational Inspection, API simulada, despliegue y contrato OpenAPI |
+| Palacin Lazo, Gerardo Valentin | GeraldP03 | 46 | Fleet Management |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | 25 | Incident Management y rediseño del layout |
+| Santos Torres, Juan Manuel | JuanManuel312 | 9 | Vehicle Documentation |
+| Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | 3 | Catálogo de elementos de inspección |
+
+![Contribuidores del repositorio de la Web Application](img/sprint2/collaboration-contributors.png)
+
+![Actividad de commits del repositorio de la Web Application](img/sprint2/collaboration-commit-activity.png)
+
+![Pull Requests integrados durante el sprint](img/sprint2/development-pull-requests.png)
 
 <a id="53-validation-interviews"></a>
 ## 5.3. Validation Interviews.
