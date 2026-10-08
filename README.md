@@ -1126,17 +1126,17 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 * **Segmento:** Conductores de vehículos de carga
 * **Cargo / Ocupación:** Conductor profesional de transporte pesado (Tractocamión Volvo FH 540)
 * **Empresa:** Conductor asignado en Transportes San José S.A.C. (Ruta Lima - Arequipa)
-* **Edad:** 46 años
+* **Edad:** 37 años
 * **Distrito de residencia:** Comas, Lima
 * **Tiempo en la actividad:** 14 años de experiencia con Licencia A-IIIB y A-IIIC
 * **Dispositivos y marcas:** Smartphone Samsung Galaxy A14 (Android 13), cargador de cabina de 12V
 * **Herramientas de trabajo:** Manómetro analógico de neumáticos, martillo de llantas, linterna de mano, libreta de notas
 * **Aplicaciones habituales:** WhatsApp, Waze, YouTube (en paradas de descanso)
 * **Fecha y hora:** 21 de septiembre de 2026 — 08:30 h
-* **Duración:** 15 minutos con 40 segundos
-* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 15:40`)
+* **Duración:** 6 minutos con 11 segundos
+* **URL de la grabación:** https://youtu.be/RmQbap_IL3E (Timestamp: `00:00 - 06:11`)
 * **Evidencia de la sesión:**
-  <img src="img/interviews/entrevista-7.png" alt="Captura de la entrevista 7 — Jorge Rivas" width="600">
+  <img src="img/chapter2/entrevista-7.png" alt="Captura de la entrevista 7 — Jorge Rivas" width="600">
 
 * **Resumen de respuestas clave:**
   * *Proceso actual:* Revisa luces, presión de llantas, niveles de refrigerante y aceite, y llena la hoja de papel de 30 preguntas que le entrega el despachador.
