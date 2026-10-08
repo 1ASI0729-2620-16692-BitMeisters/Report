@@ -86,7 +86,7 @@
 | 0.9.2 | 2026-09-18 | Alejandro Espino | Reescritura de la sección 4.7.1, que presentaba un diagrama de clases consolidado con nomenclatura contradictoria respecto de la sección 4.8. Se dividió en **seis diagramas por bounded context**, se corrigieron los nombres (`InspectionItemCatalog` → `InspectionItem`, `Company.ruc` → `Company.taxId`) y se incorporaron las clases `Driver`, `VehicleAssignment` y `OperationalAuthorization`, sin las cuales la Estrategia 2 de la sección 2.1.2 carecía de sustento en el diseño. |
 | 0.9.3 | 2026-09-19 | Rodrigo Aguilar | **Corrección por observación de la entrega.** La sección 3.3 estaba desarticulada de las User Stories de 3.1 y no permitía rastrear los IDs, ni la priorización, ni la asignación a sprints. Se agregó la columna **Epic Id** para trazabilidad con la sección 3.1, se incorporó la priorización **MoSCoW** y se añadió la columna **Sprint**, manteniendo la estimación en serie Fibonacci (1, 2, 3, 5, 8). Se incorporaron los cuadros de resumen de estimación y de distribución por sprint, y se dejó constancia de la inconsistencia detectada entre la velocity declarada en el Sprint Planning 1 y los puntos reales del Sprint 1. |
 | 0.9.4 | 2026-10-08 | Alejandro Espino | **Corrección por cambio de alojamiento.** Las secciones 5.1.1 y 5.1.4 describían la publicación de la Web Application en Vercel, con una variable `API_BASE_URL` que no existe en el proyecto. Se reescribieron para GitHub Pages con GitHub Actions, que es donde está desplegada, y se incorporó la API simulada con json-server en Render, que la Web Application consume hasta el despliegue del Backend RESTful API. |
-| 0.10.0 | 2026-10-08 | Alejandro Espino | Incorporación de la sección 5.2.2 Sprint 2, con la evidencia de desarrollo de los dos repositorios de código, la ejecución de la Web Application desplegada en inglés y español, en escritorio y teléfono, la documentación de los servicios, el despliegue en GitHub Pages y Render, y los analíticos de colaboración. Los datos de la reunión de planificación, la velocity, las estimaciones en horas, el tablero y el video quedan pendientes de completar por el equipo. |
+| 0.10.0 | 2026-10-08 | Alejandro Espino | Incorporación de la sección 5.2.2 Sprint 2, con la evidencia de desarrollo de los dos repositorios de código, la ejecución de la Web Application desplegada en inglés y español, en escritorio y teléfono, la documentación de los servicios, el despliegue en GitHub Pages y Render, y los analíticos de colaboración. Las estimaciones en horas, el tablero y el video quedan pendientes de completar por el equipo. |
 
 <hr>
 
@@ -5223,21 +5223,21 @@ La Landing Page fue desarrollada utilizando HTML5, CSS3 y JavaScript, tecnologí
 <a id="5221-sprint-planning-2"></a>
 #### 5.2.2.1. Sprint Planning 2.
 
-El Sprint 2 tiene como propósito la primera versión desplegada de la Frontend Web Application, exigida para la entrega TB1. En la reunión de planificación, el equipo revisó lo alcanzado en el Sprint 1 y acordó implementar los flujos que sostienen la propuesta de valor de FleetSafe: la inspección preoperacional del conductor, el registro y seguimiento de incidencias, el control de la documentación vehicular y la consulta de la flota.
+El Sprint 2 tiene como propósito la primera versión desplegada de la Frontend Web Application, exigida para la entrega TB1. En la reunión de planificación, realizada por Google Meet, el equipo revisó lo alcanzado en el Sprint 1, identificó lo que faltaba para la entrega y acordó implementar los flujos que sostienen la propuesta de valor de FleetSafe: la inspección preoperacional del conductor, el registro y seguimiento de incidencias, el control de la documentación vehicular y la consulta de la flota. A partir de esa reunión, la coordinación continuó de forma asíncrona: cada integrante tomó un bounded context y la integración se acordó mediante Pull Requests en GitHub.
 
 | Sprint 2 | Sprint 2 |
 |---|---|
 | **Sprint Planning Background** | |
-| **Date** | _Por completar_ |
-| **Time** | _Por completar_ |
-| **Location** | _Por completar_ |
-| **Prepared By** | _Por completar_ |
-| **Attendees (to planning meeting)** | _Por completar_ |
+| **Date** | 2026-10-07 |
+| **Time** | 07:00 PM |
+| **Location** | Reunión virtual por Google Meet |
+| **Prepared By** | Espino Flores, Alejandro |
+| **Attendees (to planning meeting)** | Espino Flores, Alejandro / Palacin Lazo, Gerardo Valentin / Aguilar Untiveros, Rodrigo Fabrizio / Santos Torres, Juan Manuel / Apaza Bocanegra, Elizabeth Noelia |
 | **Sprint 1 Review Summary** | En el Sprint 1 se completaron los capítulos I a IV del informe y se publicó la primera versión del Landing Page en GitHub Pages. La revisión de la entrega señaló que el Product Backlog no permitía rastrear las User Stories ni su asignación a sprints, lo que se corrigió en la versión 0.9.3 del informe. |
 | **Sprint 1 Retrospective Summary** | El equipo identificó como acierto la organización por bounded context, que permitió repartir el trabajo sin bloqueos entre integrantes. Como oportunidad de mejora, cada integrante había resuelto de forma distinta las mismas decisiones técnicas —tipo de identificador, configuración de entornos, simulación de la API y manejo de errores—, lo que impedía integrar las ramas. Se acordó adoptar como referencia común el proyecto `learning-center` del curso y acordar las decisiones compartidas antes de implementar cada contexto. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 2 Goal** | **Our focus is on** que el conductor realice su inspección preoperacional desde la Web Application y que el supervisor de flota registre incidencias y controle el vencimiento de la documentación de sus vehículos. **We believe it delivers** un control preventivo verificable antes de cada salida **to** las empresas de transporte de carga, sus supervisores de flota y sus conductores. **This will be confirmed when** la Web Application esté desplegada y un conductor pueda iniciar una inspección sobre su vehículo asignado y registrar el estado de sus elementos, y un supervisor pueda registrar una incidencia y consultar los documentos próximos a vencer. |
-| **Sprint 2 Velocity** | _Por completar_ |
+| **Sprint 2 Velocity** | 31 |
 | **Sum of Story Points** | 31 |
 
 Las User Stories implementadas en el Sprint 2 son US13, US17, US18, US27, US28, US30, US32, US33 y US34. El Product Backlog de la sección 3.3 asignaba al Sprint 2 los epics de Identity and Access (EP02) y Fleet Management (EP03); el equipo priorizó los contextos del núcleo del dominio y dejó Identity and Access para el siguiente sprint, por lo que la columna *Sprint* de la sección 3.3 debe actualizarse en consecuencia.
