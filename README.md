@@ -1088,10 +1088,10 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 * **Dispositivos y marcas:** Smartphone Apple iPhone 12 (iOS 17), PC Lenovo (Windows 10)
 * **Aplicaciones y herramientas habituales:** WhatsApp Web, Google Drive, Excel y portal de fiscalización de SUTRAN
 * **Fecha y hora:** 20 de septiembre de 2026 — 14:20 h
-* **Duración:** 14 minutos con 50 segundos
-* **URL de la grabación:** _Link pendiente_ (Timestamp: `00:00 - 14:50`)
+* **Duración:** 04 minutos con 30 segundos
+* **URL de la grabación:** https://youtu.be/MmIpEMgCFwY (Timestamp: `00:00 - 04:30`)
 * **Evidencia de la sesión:**
-  <img src="img/interviews/entrevista-5.png" alt="Captura de la entrevista 5 — Carmen Dávila" width="600">
+  <img src="img/chapter2/entrevista-5.png" alt="Captura de la entrevista 5 — Carmen Dávila" width="600">
 
 * **Resumen de respuestas clave:**
   * *Gestión de incidencias:* Cuando un vehículo tiene una falla mecánica leve, se genera una orden manual para el taller mecánico de la empresa, pero no hay seguimiento en tiempo real de si la pieza fue reparada antes de que el camión vuelva a circular.
