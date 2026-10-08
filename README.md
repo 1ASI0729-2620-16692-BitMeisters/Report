@@ -1535,16 +1535,16 @@ A continuación se presenta el cuadro consolidado de Epics y User Stories:
 
 **Impact Map Segmento 1**
 
-![im1](img/impactMapping/Impact%20map%20-%20José%20Ramirez.png)
-
+![im1](img/impactMapping/Impactmap-JoseRamirez.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/i/FwgcL?tagId=nXgEG
 **Impact Map Segmento 2**
 
-![im2](img/impactMapping/Impact%20map%20-%20Alessandra%20Nova.png)
-
+![im2](img/impactMapping/Impactmap-AlessandraNova.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/i/qVjTP?tagId=nXgEG
 **Impact Map Segmento 3**
 
-![im3](img/impactMapping/Impact%20map%20-%20Álvaro%20Toress.png)
-
+![im3](img/impactMapping/Impactmap-AlvaroToress.png)
+Ver en UXpressia: https://uxpressia.com/w/v8FzI/i/P4jiN?tagId=nXgEG
 
 <a id="33-product-backlog"></a>
 ## 3.3. Product Backlog.
