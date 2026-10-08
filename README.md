@@ -1126,7 +1126,7 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 * **Duración:** 16 minutos con 15 segundos
 * **URL de la grabación:** https://shorturl.at/pkaow
 * **Evidencia de la sesión:**
-  <img src="img/charapter2/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
+  <img src="img/chapter2/entrevista-6.png" alt="Captura de la entrevista 6 — Walter Huamán" width="600">
 
 * **Resumen de respuestas clave:**
   * *Verificación de inspección:* Señala que muchos conductores marcan "OK" en todo el checklist de papel en 3 minutos sin bajarse a mirar la quinta rueda ni las luces de frenos.
@@ -1173,7 +1173,7 @@ En esta sección se presenta el registro detallado de las entrevistas semiestruc
 * **Duración:** 14 minutos con 25 segundos
 * **URL de la grabación:** https://shorturl.at/lUVY6
 * **Evidencia de la sesión:**
-  <img src="img/charapter2/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
+  <img src="img/chapter2/entrevista-8.png" alt="Captura de la entrevista 8 — Pedro Morales" width="600">
 
 * **Resumen de respuestas clave:**
   * *Dificultad con la tecnología:* No le gustan los sistemas complicados ni las letras pequeñas porque en patio hay poca luz y suele tener las manos con guantes o polvo.
