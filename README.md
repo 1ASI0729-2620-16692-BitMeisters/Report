@@ -4875,13 +4875,13 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
 |:---------|:--------------------------------|:-------------------|
-| **GitHub Pages** | Publicación del Landing Page como sitio estático a partir de su repositorio. | https://pages.github.com |
-| **Vercel** | Publicación de la Frontend Web Application, con despliegue automático a partir del repositorio de GitHub. | https://vercel.com |
+| **GitHub Pages** | Publicación del Landing Page y de la Frontend Web Application como sitios estáticos a partir de sus repositorios. | https://pages.github.com |
+| **Render** | Publicación temporal de la API simulada con json-server que consume la Web Application mientras el Backend RESTful API no está desplegado. | https://render.com |
 | **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
 | **Azure Database for PostgreSQL** | Instancia gestionada de PostgreSQL que soporta la persistencia de la solución. | https://azure.microsoft.com/products/postgresql |
 | **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
 
-**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page es un sitio estático y se publica en GitHub Pages, que ya forma parte de la misma plataforma donde reside el repositorio. La Web Application requiere un proceso de construcción de Angular y se publica en Vercel, orientado precisamente a ese caso. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y ni GitHub Pages ni Vercel lo admiten, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students.
+**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page y la Web Application son, una vez construidos, sitios estáticos, y se publican en GitHub Pages, que forma parte de la misma plataforma donde residen los repositorios. La Web Application requiere un proceso de construcción de Angular, que ejecuta un flujo de trabajo de GitHub Actions antes de publicarla. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y GitHub Pages no lo admite, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students. Hasta que el Backend RESTful API esté desplegado, la Web Application consume una API simulada con json-server alojada en **Render**, que sirve los mismos recursos bajo el prefijo `/api/v1`.
 
 #### Software Documentation
 
@@ -5025,19 +5025,31 @@ El Landing Page es un sitio estático compuesto por HTML5, CSS3 y JavaScript, po
 3. Confirmar con *Save*. GitHub Pages construye y publica el sitio, y devuelve la URL pública `https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/`.
 4. Cada integración en `main` vuelve a publicar el sitio de forma automática.
 
-#### Frontend Web Application — Vercel
+#### Frontend Web Application — GitHub Pages con GitHub Actions
 
-La Web Application requiere un proceso de construcción previo, que Vercel ejecuta a partir del repositorio.
+La Web Application requiere un proceso de construcción previo. Un flujo de trabajo de GitHub Actions, versionado en el propio repositorio, la construye y la publica en GitHub Pages.
 
-1. Iniciar sesión en Vercel con la cuenta de GitHub y seleccionar **Add New › Project**.
-2. Importar el repositorio `Frontend-Web-Application` de la organización.
-3. Configurar la construcción:
-   - *Framework Preset*: **Angular**
-   - *Build Command*: `ng build --configuration production`
-   - *Output Directory*: `dist/<nombre-del-proyecto>/browser`
-   - *Install Command*: `npm ci`
-4. Registrar la variable de entorno `API_BASE_URL` con la dirección pública del Backend RESTful API.
-5. Establecer `develop` como rama de vista previa y `main` como rama de producción, de modo que cada Pull Request genere un despliegue de vista previa y solo `main` publique la versión estable.
+1. En el repositorio `Frontend-Web-Application`, acceder a **Settings › Pages** y seleccionar como origen **GitHub Actions**. A diferencia del Landing Page, no se publica una rama tal cual, sino el resultado de la construcción.
+2. Versionar el flujo de trabajo `.github/workflows/deploy.yml`, que se ejecuta con cada integración en `main` y también a demanda (`workflow_dispatch`). Consta de dos trabajos:
+   - **build**: prepara Node.js 24 con caché de npm, instala las dependencias con `npm ci`, construye la aplicación con `ng build --base-href /Frontend-Web-Application/` —la aplicación se publica en una subruta del dominio de la organización—, copia `index.html` como `404.html` para que una ruta interna de Angular, como `/inspections/new`, cargue la aplicación al recargar la página, y sube `dist/frontend-web-application/browser` como artefacto de Pages.
+   - **deploy**: publica el artefacto en el entorno `github-pages` mediante `actions/deploy-pages`.
+3. Registrar en `src/environments/environment.ts`, que es el archivo de configuración de producción, la dirección del API en `platformProviderApiBaseUrl`. Cada recurso se configura en el mismo archivo con su ruta, por ejemplo `platformProviderInspectionsEndpointPath: '/inspections'`.
+4. Publicar una versión: integrar la rama `release/*` en `main` mediante un Pull Request. El flujo de trabajo construye y publica la aplicación en `https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/`, y la versión se etiqueta en GitHub con su número de SemVer.
+
+#### API simulada — Render
+
+Mientras el Backend RESTful API no está desplegado, la Web Application consume una API simulada con **json-server**, construida a partir de `server/db.json` y `server/routes.json` del mismo repositorio.
+
+1. Iniciar sesión en Render con la cuenta de GitHub y crear un **Web Service** a partir del repositorio `Frontend-Web-Application`, rama `main`.
+2. Configurar el servicio:
+   - *Runtime*: **Node**
+   - *Build Command*: `npm ci`
+   - *Start Command*: `npx json-server server/db.json --routes server/routes.json --host 0.0.0.0 --port $PORT`
+   - *Instance Type*: **Free**, en la región **Virginia**, la más cercana a Perú entre las disponibles.
+3. Render publica el servicio en `https://fleetsafe-api.onrender.com`, y los recursos quedan disponibles bajo `https://fleetsafe-api.onrender.com/api/v1`. Esa es la dirección registrada en `platformProviderApiBaseUrl`.
+4. `server/routes.json` reescribe el prefijo con la regla `"/api/v1/*": "/$1"`, de modo que `/api/v1/inspections/{id}` llega a la colección `inspections`. Una ruta particular, como `/api/v1/drivers/me/vehicle-assignment`, se declara antes de esa regla general.
+
+La API simulada no persiste los cambios entre reinicios del servicio, y en el plan gratuito se suspende tras quince minutos sin uso, por lo que la primera petición posterior tarda en responder. Ambas limitaciones son aceptables para la demostración de la Web Application y desaparecen al sustituirla por el Backend RESTful API.
 
 #### Web Services — Azure App Service
 
@@ -5066,14 +5078,14 @@ El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publi
    | `SPRING_PROFILES_ACTIVE` | `prod` |
 
 5. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>.azurewebsites.net/swagger-ui.html`.
-6. Registrar la dirección pública resultante en la variable `API_BASE_URL` de la Web Application en Vercel, y habilitar esa dirección en la configuración CORS del servicio.
+6. Registrar la dirección pública resultante en `platformProviderApiBaseUrl` de `src/environments/environment.ts` de la Web Application, en sustitución de la API simulada, y habilitar en la configuración CORS del servicio el origen `https://1asi0729-2620-16692-bitmeisters.github.io`.
 
 **Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito y ofrece crédito suficiente para los planes de nivel gratuito de App Service y de PostgreSQL Flexible Server durante el ciclo.
 
 #### Consideraciones comunes
 
 - **Ningún secreto se versiona.** Las credenciales y cadenas de conexión se registran como variables de entorno en la plataforma de despliegue, y los archivos `.env` figuran en el `.gitignore` de cada repositorio.
-- **Solo `main` publica a producción.** Las ramas `feature/*` y `develop` generan despliegues de vista previa cuando la plataforma lo permite.
+- **Solo `main` publica a producción.** GitHub Pages no ofrece despliegues de vista previa por rama, por lo que el trabajo de `feature/*` y `develop` se verifica en local, contra la API simulada, antes de integrarse.
 - **Cada versión publicada lleva su tag de SemVer**, de modo que una publicación pueda revertirse volviendo al tag anterior.
 
 <a id="52-landing-page-services-applications-implementation"></a>
