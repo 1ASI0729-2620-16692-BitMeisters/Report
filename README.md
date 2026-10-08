@@ -85,6 +85,8 @@
 | 0.9.1 | 2026-09-18 | Alejandro Espino | Ampliación de la sección 4.6.4, que contenía un único diagrama de componentes de los tres containers de software exigidos. Se añadieron los diagramas del Landing Page y de la Web Application, y se reorganizaron los componentes del Backend RESTful API **por bounded context en lugar de por capa técnica**, en coherencia con el diseño orientado al dominio de la sección 4.6. |
 | 0.9.2 | 2026-09-18 | Alejandro Espino | Reescritura de la sección 4.7.1, que presentaba un diagrama de clases consolidado con nomenclatura contradictoria respecto de la sección 4.8. Se dividió en **seis diagramas por bounded context**, se corrigieron los nombres (`InspectionItemCatalog` → `InspectionItem`, `Company.ruc` → `Company.taxId`) y se incorporaron las clases `Driver`, `VehicleAssignment` y `OperationalAuthorization`, sin las cuales la Estrategia 2 de la sección 2.1.2 carecía de sustento en el diseño. |
 | 0.9.3 | 2026-09-19 | Rodrigo Aguilar | **Corrección por observación de la entrega.** La sección 3.3 estaba desarticulada de las User Stories de 3.1 y no permitía rastrear los IDs, ni la priorización, ni la asignación a sprints. Se agregó la columna **Epic Id** para trazabilidad con la sección 3.1, se incorporó la priorización **MoSCoW** y se añadió la columna **Sprint**, manteniendo la estimación en serie Fibonacci (1, 2, 3, 5, 8). Se incorporaron los cuadros de resumen de estimación y de distribución por sprint, y se dejó constancia de la inconsistencia detectada entre la velocity declarada en el Sprint Planning 1 y los puntos reales del Sprint 1. |
+| 0.9.4 | 2026-10-08 | Alejandro Espino | **Corrección por cambio de alojamiento.** Las secciones 5.1.1 y 5.1.4 describían la publicación de la Web Application en Vercel, con una variable `API_BASE_URL` que no existe en el proyecto. Se reescribieron para GitHub Pages con GitHub Actions, que es donde está desplegada, y se incorporó la API simulada con json-server en Render, que la Web Application consume hasta el despliegue del Backend RESTful API. |
+| 0.10.0 | 2026-10-08 | Alejandro Espino | Incorporación de la sección 5.2.2 Sprint 2, con la evidencia de desarrollo de los dos repositorios de código, la ejecución de la Web Application desplegada en inglés y español, en escritorio y teléfono, la documentación de los servicios, el despliegue en GitHub Pages y Render, y los analíticos de colaboración. Los datos de la reunión de planificación, la velocity, las estimaciones en horas, el tablero y el video quedan pendientes de completar por el equipo. |
 
 <hr>
 
@@ -183,6 +185,15 @@
             - <a href="#5216-services-documentation-evidence-for-sprint-review">5.2.1.6. Services Documentation Evidence for Sprint Review.</a>
             - <a href="#5217-software-deployment-evidence-for-sprint-review">5.2.1.7. Software Deployment Evidence for Sprint Review.</a>
             - <a href="#5218-team-colaboration-insights-during-sprint">5.2.1.8. Team Colaboration Insights during Sprint.</a>
+        - <a href="#522-sprint-2">5.2.2. Sprint 2</a>
+            - <a href="#5221-sprint-planning-2">5.2.2.1. Sprint Planning 2.</a>
+            - <a href="#5222-aspect-leaders-and-collaborators">5.2.2.2. Aspect Leaders and Collaborators.</a>
+            - <a href="#5223-sprint-backlog-2">5.2.2.3. Sprint Backlog 2.</a>
+            - <a href="#5224-development-evidence-for-sprint-review">5.2.2.4. Development Evidence for Sprint Review.</a>
+            - <a href="#5225-execution-evidence-for-sprint-review">5.2.2.5. Execution Evidence for Sprint Review.</a>
+            - <a href="#5226-services-documentation-evidence-for-sprint-review">5.2.2.6. Services Documentation Evidence for Sprint Review.</a>
+            - <a href="#5227-software-deployment-evidence-for-sprint-review">5.2.2.7. Software Deployment Evidence for Sprint Review.</a>
+            - <a href="#5228-team-collaboration-insights-during-sprint">5.2.2.8. Team Collaboration Insights during Sprint.</a>
     - <a href="#53-validation-interviews">5.3. Validation Interviews.</a>
         - <a href="#531-diseno-de-entrevistas">5.3.1. Diseño de Entrevistas.</a>
         - <a href="#532-registro-de-entrevistas">5.3.2. Registro de Entrevistas.</a>
@@ -5205,6 +5216,376 @@ La Landing Page fue desarrollada utilizando HTML5, CSS3 y JavaScript, tecnologí
 #### 5.2.1.8. Team Colaboration Insights during Sprint.
 
 ![S1TCI](img/teamCollaborationInsights/sprint1-teamCollaborationInsights.png)
+
+<a id="522-sprint-2"></a>
+### 5.2.2. Sprint 2
+
+<a id="5221-sprint-planning-2"></a>
+#### 5.2.2.1. Sprint Planning 2.
+
+El Sprint 2 tiene como propósito la primera versión desplegada de la Frontend Web Application, exigida para la entrega TB1. En la reunión de planificación, el equipo revisó lo alcanzado en el Sprint 1 y acordó implementar los flujos que sostienen la propuesta de valor de FleetSafe: la inspección preoperacional del conductor, el registro y seguimiento de incidencias, el control de la documentación vehicular y la consulta de la flota.
+
+| Sprint 2 | Sprint 2 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | _Por completar_ |
+| **Time** | _Por completar_ |
+| **Location** | _Por completar_ |
+| **Prepared By** | _Por completar_ |
+| **Attendees (to planning meeting)** | _Por completar_ |
+| **Sprint 1 Review Summary** | En el Sprint 1 se completaron los capítulos I a IV del informe y se publicó la primera versión del Landing Page en GitHub Pages. La revisión de la entrega señaló que el Product Backlog no permitía rastrear las User Stories ni su asignación a sprints, lo que se corrigió en la versión 0.9.3 del informe. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó como acierto la organización por bounded context, que permitió repartir el trabajo sin bloqueos entre integrantes. Como oportunidad de mejora, cada integrante había resuelto de forma distinta las mismas decisiones técnicas —tipo de identificador, configuración de entornos, simulación de la API y manejo de errores—, lo que impedía integrar las ramas. Se acordó adoptar como referencia común el proyecto `learning-center` del curso y acordar las decisiones compartidas antes de implementar cada contexto. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | **Our focus is on** que el conductor realice su inspección preoperacional desde la Web Application y que el supervisor de flota registre incidencias y controle el vencimiento de la documentación de sus vehículos. **We believe it delivers** un control preventivo verificable antes de cada salida **to** las empresas de transporte de carga, sus supervisores de flota y sus conductores. **This will be confirmed when** la Web Application esté desplegada y un conductor pueda iniciar una inspección sobre su vehículo asignado y registrar el estado de sus elementos, y un supervisor pueda registrar una incidencia y consultar los documentos próximos a vencer. |
+| **Sprint 2 Velocity** | _Por completar_ |
+| **Sum of Story Points** | 31 |
+
+Las User Stories implementadas en el Sprint 2 son US13, US17, US18, US27, US28, US30, US32, US33 y US34. El Product Backlog de la sección 3.3 asignaba al Sprint 2 los epics de Identity and Access (EP02) y Fleet Management (EP03); el equipo priorizó los contextos del núcleo del dominio y dejó Identity and Access para el siguiente sprint, por lo que la columna *Sprint* de la sección 3.3 debe actualizarse en consecuencia.
+
+<a id="5222-aspect-leaders-and-collaborators"></a>
+#### 5.2.2.2. Aspect Leaders and Collaborators.
+
+Los aspectos del Sprint 2 corresponden a los bounded contexts implementados en la Web Application, más dos aspectos transversales: la base compartida (`shared`), que todos los contextos utilizan, y el despliegue. Cada contexto tiene un líder responsable de su implementación, y la base compartida se alineó con el proyecto de referencia del curso antes de integrar los contextos.
+
+| Team Member (Last Name, First Name) | GitHub Username | Pre-Operational Inspection Leader (L) / Collaborator (C) | Incident Management Leader (L) / Collaborator (C) | Fleet Management Leader (L) / Collaborator (C) | Vehicle Documentation Leader (L) / Collaborator (C) | Shared y Layout Leader (L) / Collaborator (C) | Deployment Leader (L) / Collaborator (C) |
+|---|---|---|---|---|---|---|---|
+| Espino Flores, Alejandro | CafecitoSKR | L | C | C | C | L | L |
+| Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | C | — | — | — | — | — |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | L | — | — | C | — |
+| Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | L | — | C | — |
+| Santos Torres, Juan Manuel | JuanManuel312 | — | — | — | L | — | — |
+
+<a id="5223-sprint-backlog-2"></a>
+#### 5.2.2.3. Sprint Backlog 2.
+
+El objetivo del Sprint 2 es que la Web Application permita al conductor iniciar y registrar su inspección preoperacional, y al supervisor de flota gestionar incidencias, consultar la documentación vehicular y la flota, todo ello desplegado y accesible por una URL pública. El Sprint Backlog incluye las tareas derivadas de estas User Stories y las que no dependen de ninguna en particular, como la base compartida, la API simulada y el despliegue.
+
+_Captura del tablero del Sprint 2 y URL pública: por completar._
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 2 | — | Base compartida | T01 | Alinear la base compartida con el proyecto de referencia | Implementar `BaseEntity`, `BaseResource`, `BaseAssembler`, `BaseApiEndpoint`, `ErrorHandlingEnabledBaseType` y `BaseApi` según el proyecto `learning-center`. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | — | Base compartida | T02 | Configurar la internacionalización | Cargar las traducciones `en-US` y `es-419` con `@ngx-translate/http-loader` y añadir el selector de idioma. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | — | Base compartida | T03 | Rediseñar el layout con la identidad de marca | Implementar el menú lateral por categoría de bounded context, la barra superior y el pie de página, y adaptarlos a pantallas pequeñas. | _Por completar_ | Rodrigo Aguilar | Done |
+| Sprint 2 | — | API simulada | T04 | Publicar el contrato OpenAPI | Publicar en el repositorio Web Services el contrato de Identity and Access y de Pre-Operational Inspection. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | — | API simulada | T05 | Construir la API simulada con json-server | Definir `server/db.json` y `server/routes.json` con los recursos de los cuatro contextos bajo el prefijo `/api/v1`. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | US13 | Consultar listado de vehículos | T06 | Implementar el dominio y la infraestructura de flota | Implementar las entidades, assemblers y endpoints de empresas, flotas, vehículos, conductores y asignaciones. | _Por completar_ | Gerardo Palacin | Done |
+| Sprint 2 | US13 | Consultar listado de vehículos | T07 | Implementar el resumen de flota y la lista de vehículos | Implementar la vista de resumen de flota y la tabla de vehículos con su estado. | _Por completar_ | Gerardo Palacin | Done |
+| Sprint 2 | US17 | Iniciar inspección preoperacional | T08 | Implementar el dominio y la infraestructura de inspección | Implementar las entidades de inspección, el catálogo de 42 elementos SUTRAN agrupados por sistema y sus endpoints. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | US17 | Iniciar inspección preoperacional | T09 | Cargar el catálogo de elementos de inspección | Construir el catálogo de elementos de inspección y sus textos a partir de la normativa SUTRAN. | _Por completar_ | Elizabeth Apaza | Done |
+| Sprint 2 | US17 | Iniciar inspección preoperacional | T10 | Implementar la vista del vehículo asignado | Mostrar el vehículo asignado al conductor y solicitar el odómetro antes de iniciar la inspección. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | US18 | Registrar estado de elementos de inspección | T11 | Implementar el checklist por sistema | Implementar el recorrido por sistema con el selector Conforme, Observado y Falla, el progreso y el guardado de cada respuesta. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | US27 | Registrar incidencia | T12 | Implementar el dominio y la infraestructura de incidencias | Implementar el aggregate de incidencia, sus comandos y los endpoints de incidencias y tipos de incidencia. | _Por completar_ | Rodrigo Aguilar | Done |
+| Sprint 2 | US27 | Registrar incidencia | T13 | Implementar el formulario de incidencia | Implementar el registro y la edición de una incidencia con su origen, severidad y tipo. | _Por completar_ | Rodrigo Aguilar | Done |
+| Sprint 2 | US28 | Consultar incidencias registradas | T14 | Implementar la lista y el detalle de incidencias | Implementar la tabla paginada de incidencias y la vista de detalle con acciones, reparaciones y seguimientos. | _Por completar_ | Rodrigo Aguilar | Done |
+| Sprint 2 | US30 | Registrar acción correctiva | T15 | Implementar los formularios de seguimiento | Implementar el registro de acciones correctivas, la programación de reparaciones y los seguimientos de una incidencia. | _Por completar_ | Rodrigo Aguilar | Done |
+| Sprint 2 | US32 | Registrar documento vehicular | T16 | Implementar el registro de documentos | Implementar el formulario de registro con validación de fechas y del enlace al documento digital. | _Por completar_ | Juan Manuel Santos | Done |
+| Sprint 2 | US33 | Consultar documentos próximos a vencer | T17 | Implementar el panel de vigencia | Implementar los contadores por estado, los filtros por vehículo y estado, y la lista de documentos próximos a vencer. | _Por completar_ | Juan Manuel Santos | Done |
+| Sprint 2 | US34 | Actualizar documento vehicular | T18 | Implementar la actualización de documentos | Permitir actualizar un documento y recalcular su estado de vigencia. | _Por completar_ | Juan Manuel Santos | Done |
+| Sprint 2 | US32–US34 | Documentación vehicular | T19 | Alinear la documentación vehicular con la base compartida | Reemplazar el servidor propio por los endpoints, assemblers y store de la base compartida. | _Por completar_ | Alejandro Espino | Done |
+| Sprint 2 | — | Despliegue | T20 | Desplegar la Web Application y la API simulada | Configurar GitHub Pages con GitHub Actions y el servicio de Render, y publicar las versiones con su tag. | _Por completar_ | Alejandro Espino | Done |
+
+<a id="5224-development-evidence-for-sprint-review"></a>
+#### 5.2.2.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 2 se implementó la Frontend Web Application con cuatro bounded contexts —Pre-Operational Inspection, Incident Management, Fleet Management y Vehicle Documentation— sobre una base compartida alineada con el proyecto de referencia del curso, y se publicó en el repositorio Web Services el contrato OpenAPI que la Web Application consume. El Landing Page no recibió cambios en este sprint. Cada contexto se desarrolló en su propia rama `feature/*` y se integró en `develop` mediante Pull Request, conservando la autoría de cada commit; las correcciones posteriores al despliegue se integraron como ramas `fix/*` y `hotfix/*`, y cada versión publicada se preparó en una rama `release/*`.
+
+La tabla recoge los commits del sprint, sin los commits de merge, en orden cronológico.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| Frontend-Web-Application | develop | 42fe307 | chore: initialize angular project | — | 2026-09-29 |
+| Frontend-Web-Application | develop | 4567bd1 | build: add angular material | — | 2026-09-29 |
+| Frontend-Web-Application | feature/configuration | da1f405 | build(i18n): add ngx-translate with en-US and es-419 | — | 2026-09-29 |
+| Frontend-Web-Application | feature/vehicle-documentation | 823a046 | chore: rename translation directories. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 2e2ead2 | chore: rename translation directories. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 4ef3fbc | chore: initial commit. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 32dea71 | chore: initial commit. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 2362104 | chore: implement server directory with db and routes.json | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 1eaec14 | chore: implement server directory with db and routes.json | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 2a0fa71 | chore: implement enviroment for developers. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | f6c78ef | chore: implement enviroment for developers. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 156c084 | feat(shared): add base entity with numeric identifier. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 05ae06d | feat(shared): add base entity with numeric identifier. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | f1ba497 | feat(shared): add base response and resource. | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 1437aba | feat(shared): add base response and resource. | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 06f562c | feat(shared): add base assembler | — | 2026-10-04 |
+| Frontend-Web-Application | develop | ad52323 | feat(shared): add base assembler | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 579b7fd | feat(shared): update translations for the web application | — | 2026-10-04 |
+| Frontend-Web-Application | develop | df8ea9e | feat(shared): update translations for the web application | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 83b4d23 | feat(shared): update visual material | — | 2026-10-04 |
+| Frontend-Web-Application | develop | e17d76a | feat(shared): update visual material | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 296f2be | feat(shared): update logic and redundant lines of coding from infrastructure layer | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 18d77f6 | feat(shared): update logic and redundant lines of coding from infrastructure layer | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 103fde3 | feat(shared): correct placement for footer, language switcher and layout | — | 2026-10-04 |
+| Frontend-Web-Application | develop | ce7f530 | feat(shared): correct placement for footer, language switcher and layout | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 76719d9 | chore: update angular version | — | 2026-10-04 |
+| Frontend-Web-Application | develop | e6aa255 | chore: update angular version | — | 2026-10-04 |
+| Frontend-Web-Application | feature/vehicle-documentation | 3418d69 | chore: update files for shared directory new logic | — | 2026-10-04 |
+| Frontend-Web-Application | develop | 55deb36 | chore: update files for shared directory new logic | — | 2026-10-04 |
+| Frontend-Web-Application | feature/incident-management | 7c247b6 | feat(incident): add incident aggregate and value objects | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 9abaf5a | feat(incident): add incident domain commands | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 8ff79d6 | feat(incident): add incident and incident type rest endpoints | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 7fd081e | feat(incident): add corrective action registration endpoint | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | b47f3b1 | feat(incident): add repair scheduling and completion endpoints | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | eb05659 | feat(incident): add follow-up and resolution endpoints | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | d30d945 | feat(incident): add incident endpoints to environment configuration | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | f1b0ded | feat(incident): add signal-based store for incident management | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 54abaad | feat(incident): add incident list, form and detail views | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 9b407fd | feat(incident): add corrective action, repair and follow-up forms with routes | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 9dfd7a1 | feat(i18n): add incident management translations to es and en | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | dbf80c4 | fix(shared): update page-not-found to display current url on navigation | — | 2026-10-05 |
+| Frontend-Web-Application | feature/incident-management | 809450b | feat(app): integrate incident routes, spanish locale and updated bundle budget | — | 2026-10-05 |
+| Frontend-Web-Application | feature/layout-redesign | 028a94f | feat(shared): redesign sidebar, topbar and footer with brand identity | — | 2026-10-05 |
+| Frontend-Web-Application | feature/layout-redesign | 7877f77 | feat(shared): restyle language switcher and add bilingual tagline | — | 2026-10-05 |
+| Frontend-Web-Application | feature/vehicle-documentation | 63fc766 | feat(vehicle-documentation): define document models and date-based validity rules | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 742d8f1 | feat(vehicle-documentation): add REST facade and configurable integration contract | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 52895db | feat(vehicle-documentation): coordinate loading and document registration state | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 5cb9ca3 | feat(vehicle-documentation): implement validated registration and update form | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | b3fddce | feat(vehicle-documentation): add validity dashboard filters and document actions | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | bf23f71 | feat(vehicle-documentation): integrate lazy routes and bilingual interface | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | dc6ce26 | feat(vehicle-documentation): provide persistent isolated demo REST server | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | 5b7d8fd | test(vehicle-documentation): cover validity boundaries and registration requirements | — | 2026-10-06 |
+| Frontend-Web-Application | feature/vehicle-documentation | a5f106c | docs(vehicle-documentation): explain local setup requirements and team integration | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | fabcb66 | feat(shared): update files for shared directory new logic | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | fc8dabf | feat(fleet): update environment rules | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | ae122d1 | feat(fleet): update initial project configuration. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 353ed8b | feat(fleet): add company, driver, fleet, vehicle, vehicle-assignment entities in domain layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | dbc14c2 | feat(fleet): add company response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 5af7735 | feat(fleet): add drivers response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | e096c4b | feat(fleet): add fleets response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 120b908 | feat(fleet): add vehicles response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | c9510fd | feat(fleet): add vehicle assignments response, api endpoint and assembler in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 54c50b0 | feat(fleet): add fleet api to manipulate endpoints in domain infrastructure. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 703588a | feat(fleet): update translations. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | f3c1be8 | feat(fleet): add server files to test. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 94ea3ac | feat(fleet): update entities in domain layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | f8b188c | feat(fleet): add fleet.store to application layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 518c826 | feat(fleet): update content from fleet api, vehicle response and assembler in infrastructure layer. | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 2171ede | refactor(i18n): load translations per bounded context with en-US and es-419 | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 244509d | feat(shared): handle http errors globally and notify through snack bars | — | 2026-10-06 |
+| Frontend-Web-Application | develop | a5a35fe | build: remove the unused ngx-translate http loader | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | dfa79dc | build(i18n): update language switcher following i18n directives. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 6c43fa6 | build: update materials. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | a99d979 | feat(fleet): add driver, fleet, vehicle assignment, vehicle directories for presentation layer | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | d76d74f | feat(fleet): update fleet routes in presentation layer. | — | 2026-10-06 |
+| Frontend-Web-Application | feature/fleet-management | 24aa14a | feat(fleet): integrate bounded context fleet management in app directory. | — | 2026-10-06 |
+| Frontend-Web-Application | develop | a426aee | refactor(shared): identify entities with uuid strings | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 2c5bf74 | build: configure the api base url per environment | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 0c5951a | build: add the contract mock and the stateful mock | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 83fca4b | feat(shared): expose the current user through a port | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 5893ee1 | fix(shared): redirect the empty path to home | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 08a5067 | feat(inspection): model the inspection aggregate and its rules | — | 2026-10-06 |
+| Frontend-Web-Application | develop | 63d21a0 | refactor(shared): model entities and auditable aggregate roots as abstract classes | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 645f954 | refactor(inspection): extend the shared domain base classes | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | e513b08 | refactor(inspection): keep the entities to their state until use cases need behavior | — | 2026-10-06 |
+| Frontend-Web-Application | feature/shared-api-client | 6c42a13 | feat(shared): compose api calls through a client that resolves the base url | — | 2026-10-06 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 016781e | feat(inspection): consume the inspection api needed to start an inspection | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | df3d364 | fix(inspection): remove a stray character from the assigned vehicle assembler | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 10dd34a | feat(inspection): add the inspection store to start an inspection | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 734f80b | fix(inspection): mark the inspection as starting only when the request is sent | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-auth-interceptor | ca8a3d7 | feat(shared): send the access token with every api request | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 6c93479 | feat(shared): provide the material defaults of the application | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 3e68bea | feat(inspection): let the driver start an inspection from the assigned vehicle | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 9ce44fd | fix(inspection): keep the error state icon apart from the start error styles | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-theme | 7872bfa | build: disable angular cli analytics for the project | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-theme | 40ecb76 | feat(shared): theme angular material with the fleetsafe brand | — | 2026-10-07 |
+| Frontend-Web-Application | feature/shared-theme | 97379cf | feat(shared): show notifications as toasts with a severity icon | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | f121f2d | feat(inspection): populate SUTRAN inspection catalog items and mock inspection history | Added inspection items and inspection records to db.json for vehicle safety checks. | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 1c8e683 | feat(inspection): add inspection translation keys to es-419 dictionary | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | b7b4d21 | feat(inspection): add inspection translation keys to en-US dictionary | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 6381317 | refactor(inspection): move the inspection translations to their bounded context | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | fe97ba1 | build(inspection): shape the mock data after the inspection and fleet contracts | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 82ea8e4 | fix(inspection): surface unexpected errors when starting an inspection | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | f598da3 | build: replace json-server and the installed prism with msw and prism on demand | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | ac2c78d | feat(shared): start the mock api in development before the application | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 7e2df57 | feat(inspection): mock the inspection api with the sutran catalog | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 224b971 | feat(inspection): mock registering and correcting checklist results | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | b4b9493 | build(inspection): assign each mock catalog item to its vehicle system | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | ae52f1f | feat(inspection): add the checklist texts and the vehicle system names | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 95d4337 | feat(inspection): let the driver answer each item of the checklist | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | bf690c2 | feat(inspection): walk the checklist one vehicle system at a time | — | 2026-10-07 |
+| Frontend-Web-Application | refactor/shared-learning-center | d093188 | refactor(shared): rename the shared views folder as in the reference | — | 2026-10-07 |
+| Frontend-Web-Application | refactor/shared-learning-center | 16d1879 | refactor(shared): align the shared kernel with the learning center reference | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | a72d449 | build: return to json-server as the mock api of the reference | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 9f6b931 | refactor(inspection): keep the inspection texts in the single dictionary per language | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 2e11fa7 | build: lock the dependencies of the reference mock api | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | b27d269 | refactor(inspection): model the inspection domain with private fields as in the reference | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 1b5ce47 | refactor(inspection): reach the api through reference endpoints and assemblers | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | bd21a2f | refactor(inspection): manage the inspection state as the reference stores do | — | 2026-10-07 |
+| Frontend-Web-Application | feature/pre-operational-inspection | 5af6f59 | refactor(inspection): drive the screens through the reference store and forms | — | 2026-10-07 |
+| Frontend-Web-Application | feature/incident-management | 9dc462d | refactor(incident): identify incidents with string ids as the shared kernel does | — | 2026-10-07 |
+| Frontend-Web-Application | feature/fleet-management | 1ab8f13 | refactor(fleet): reach the fleet api through the shared endpoint without an id type | — | 2026-10-07 |
+| Frontend-Web-Application | release/0.2.0 | a6b895a | chore(release): prepare version 0.2.0 | — | 2026-10-07 |
+| Frontend-Web-Application | feature/deployment | a3217e5 | ci: deploy the web application to github pages | — | 2026-10-08 |
+| Frontend-Web-Application | feature/deployment | 7bb6bf0 | build: point the production environment to the deployed mock api | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.1 | 55160f3 | chore(release): prepare version 0.2.1 | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.2 | d007744 | fix(shared): load the translations without the http interceptors | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.2 | 5d98fbb | chore(release): prepare version 0.2.2 | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.2 | 12f78cd | style(shared): format the translation loader configuration | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 07d6906 | fix(shared): show every sidebar label over the brand color | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 958d407 | fix(shared): show the released version in the sidebar | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 6d82d65 | fix(incident): seed the mock api with incidents and their types | — | 2026-10-08 |
+| Frontend-Web-Application | fix/deployed-screens | 0e3ce44 | refactor(vehicle-documentation): reach the shared mock api through the reference endpoints and store | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.3 | 4e8d7d6 | chore(release): prepare version 0.2.3 | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.4 | 94571b9 | fix(shared): rewrite the mock api paths so requests by id reach their collection | — | 2026-10-08 |
+| Frontend-Web-Application | hotfix/0.2.4 | 075aab6 | chore(release): prepare version 0.2.4 | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | 3a1ad1d | fix(incident): return i18n error keys from store | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | bc0d0fe | fix(incident): translate error message in list view | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | 3ab4c67 | fix(incident): add loadFailed and notFound i18n keys | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | b26dea9 | fix(incident): use origin and severity label keys in form | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | e2e2e8f | fix(incident): use label keys for origin, severity and status in detail view | — | 2026-10-08 |
+| Frontend-Web-Application | fix/incident-i18n-translations | 1bcfaae | fix(incident): add origin, severity and status label i18n keys | — | 2026-10-08 |
+| Frontend-Web-Application | fix/mobile-layout | e16fee3 | fix(shared): collapse the sidebar behind a menu button on small screens | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.5 | 5d86b85 | chore(release): prepare version 0.2.5 | — | 2026-10-08 |
+| Frontend-Web-Application | fix/result-selector-narrow | 463eac8 | fix(inspection): fit the result selector on narrow checklist cards | — | 2026-10-08 |
+| Frontend-Web-Application | release/0.2.6 | fd94877 | chore(release): prepare version 0.2.6 | — | 2026-10-08 |
+| Web-Services | develop | 38aec67 | chore: initialize repository | — | 2026-09-29 |
+| Web-Services | feature/openapi-contracts | 7a49570 | feat(api): add the shared components and the root document of the contract | — | 2026-10-06 |
+| Web-Services | feature/openapi-contracts | 3c0a8b0 | feat(iam): add the identity and access contract | — | 2026-10-06 |
+| Web-Services | feature/openapi-contracts | 5b94c4c | feat(inspection): add the pre-operational inspection contract | — | 2026-10-06 |
+| Web-Services | feature/openapi-contracts | 4289d3e | docs(api): describe the license and the tags of the contract | — | 2026-10-06 |
+| Web-Services | fix/inspection-item-audit | a90bfff | fix(inspection): expose the audit timestamps of inspection items | — | 2026-10-06 |
+| Web-Services | feature/driver-vehicle-assignment | 3c44080 | feat(fleet): expose the active vehicle assignment of the signed-in driver | — | 2026-10-06 |
+
+<a id="5225-execution-evidence-for-sprint-review"></a>
+#### 5.2.2.5. Execution Evidence for Sprint Review.
+
+Al cierre del Sprint 2, la Web Application está desplegada en https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ en su versión 0.2.6. El conductor puede consultar su vehículo asignado, iniciar una inspección preoperacional registrando el odómetro y recorrer el checklist de 42 elementos agrupados en ocho sistemas, marcando cada uno como Conforme, Observado o Falla; la interfaz señala que los elementos no conformes requieren una observación, cuyo registro se implementa en el Sprint 3. El supervisor de flota puede registrar incidencias, consultar su detalle con las acciones correctivas, reparaciones y seguimientos, controlar la vigencia de la documentación vehicular y consultar el resumen de su flota. Toda la interfaz está disponible en inglés y en español, y se adapta a pantallas de escritorio y de teléfono.
+
+**Flujo del conductor — inspección preoperacional (teléfono)**
+
+| Vehículo asignado | Menú de navegación | Checklist al iniciar | Checklist con respuestas |
+|:---:|:---:|:---:|:---:|
+| <img src="img/sprint2/execution-mobile-start-inspection-en.png" width="200" alt="Vista del vehículo asignado en teléfono"> | <img src="img/sprint2/execution-mobile-menu-en.png" width="200" alt="Menú lateral abierto en teléfono"> | <img src="img/sprint2/execution-mobile-checklist-start-en.png" width="200" alt="Checklist de inspección al iniciar"> | <img src="img/sprint2/execution-mobile-checklist-answered-es.png" width="200" alt="Checklist con elementos respondidos, en español"> |
+
+**Flujo del conductor — inspección preoperacional (escritorio)**
+
+![Inicio de la inspección con el odómetro registrado](img/sprint2/execution-start-inspection-filled-en.png)
+
+![Checklist de inspección con elementos respondidos, en español](img/sprint2/execution-inspection-checklist-answered-es.png)
+
+**Incident Management**
+
+![Lista de incidencias registradas](img/sprint2/execution-incidents-en.png)
+
+![Detalle de una incidencia con sus acciones correctivas, reparaciones y seguimientos, en español](img/sprint2/execution-incident-detail-es.png)
+
+**Vehicle Documentation**
+
+![Panel de vigencia de la documentación vehicular](img/sprint2/execution-vehicle-documentation-en.png)
+
+**Fleet Management**
+
+![Resumen de la flota](img/sprint2/execution-fleet-en.png)
+
+![Lista de vehículos de la flota, en español](img/sprint2/execution-fleet-vehicles-es.png)
+
+Video de la navegación lograda: _por completar_.
+
+<a id="5226-services-documentation-evidence-for-sprint-review"></a>
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review.
+
+El Backend RESTful API se implementa a partir del Sprint 3. En este sprint se publicó en el repositorio Web Services el contrato OpenAPI que lo especifica, para los contextos de Identity and Access y Pre-Operational Inspection, y la Web Application consume una API simulada con json-server que sirve los mismos recursos bajo el prefijo `/api/v1`. El contrato se valida con Redocly y puede servirse en local con Prism mediante `npm run mock:contract` en el repositorio de la Web Application.
+
+- Contrato: https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services/blob/develop/openapi/openapi.yaml
+- API simulada desplegada: https://fleetsafe-api.onrender.com/api/v1
+
+| Endpoint | Acciones implementadas | Verbo HTTP | Sintaxis de llamada | Parámetros | Response |
+|---|---|---|---|---|---|
+| `/drivers/me/vehicle-assignment` | Consultar la asignación activa del conductor | GET | `GET /api/v1/drivers/me/vehicle-assignment` | — | `200` con la asignación y el vehículo: `{ "id", "driverId", "assignedFrom", "vehicle": { "id", "plate": "ABC-123", "brand": "Volvo", "model": "FH 460" } }`. `404` si el conductor no tiene vehículo asignado. |
+| `/inspection-items` | Consultar el catálogo de elementos de inspección | GET | `GET /api/v1/inspection-items` | — | `200` con los 42 elementos: `[{ "id", "code": "SAF-01", "name": "Brake system", "system": "BRAKES", "isSafetyComponent": true, "requiresEvidence": true, "displayOrder": 1, "isActive": true }, …]` |
+| `/inspections` | Iniciar una inspección | POST | `POST /api/v1/inspections` | Cuerpo: `id`, `vehicleId`, `driverId`, `status: "IN_PROGRESS"`, `odometer`, `startedAt`, `results: []` | `201` con la inspección creada. |
+| `/inspections/{id}` | Consultar una inspección | GET | `GET /api/v1/inspections/{id}` | `id`: UUID de la inspección | `200` con la inspección y sus resultados; `404` si no existe. |
+| `/inspections/{id}` | Registrar el estado de un elemento | PUT | `PUT /api/v1/inspections/{id}` | `id` y la inspección con el resultado añadido en `results` (`inspectionItemId`, `itemName`, `itemCategory`, `result`: `OK` · `OBSERVED` · `FAIL`) | `200` con la inspección actualizada. |
+| `/incidents` | Registrar y consultar incidencias | GET · POST | `GET /api/v1/incidents` · `POST /api/v1/incidents` | Cuerpo de `POST`: `vehicleId`, `incidentTypeId`, `origin`, `description`, `severity`, `reportedBy` | `200` con la lista de incidencias, cada una con `correctiveActions`, `repairs` y `followUps`; `201` con la incidencia creada. |
+| `/incident-types` | Consultar los tipos de incidencia | GET | `GET /api/v1/incident-types` | — | `200` con `[{ "id", "code": "MECHANICAL", "name": "Mechanical failure", "isActive": true }, …]` |
+| `/vehicle-documents` | Registrar, consultar y actualizar documentos | GET · POST · PUT | `GET /api/v1/vehicle-documents` · `POST /api/v1/vehicle-documents` · `PUT /api/v1/vehicle-documents/{id}` | Cuerpo: `vehicleId`, `documentTypeId`, `number`, `issueDate`, `expirationDate`, `fileUrl` | `200` con la lista; `201` o `200` con el documento registrado o actualizado. |
+| `/document-types` | Consultar los tipos de documento | GET | `GET /api/v1/document-types` | — | `200` con `[{ "id", "code": "SOAT", "name": "SOAT", "isRequired": true }, …]` |
+| `/fleets` · `/vehicles` · `/drivers` | Consultar la flota, sus vehículos y conductores | GET | `GET /api/v1/fleets` · `GET /api/v1/vehicles` · `GET /api/v1/drivers` | — | `200` con la lista de cada recurso. |
+
+Respuesta de la API simulada desplegada al consultar el catálogo de elementos de inspección:
+
+![Respuesta JSON del catálogo de elementos de inspección en la API simulada](img/sprint2/deployment-mock-api-response.png)
+
+Commits del repositorio Web Services relacionados con la documentación de este sprint (https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services):
+
+| Commit Id | Commit Message |
+|---|---|
+| 7a49570 | feat(api): add the shared components and the root document of the contract |
+| 3c0a8b0 | feat(iam): add the identity and access contract |
+| 5b94c4c | feat(inspection): add the pre-operational inspection contract |
+| 4289d3e | docs(api): describe the license and the tags of the contract |
+| a90bfff | fix(inspection): expose the audit timestamps of inspection items |
+| 3c44080 | feat(fleet): expose the active vehicle assignment of the signed-in driver |
+
+<a id="5227-software-deployment-evidence-for-sprint-review"></a>
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review.
+
+En el Sprint 2 se desplegaron la Frontend Web Application y la API simulada que consume, siguiendo la configuración descrita en la sección 5.1.4. El Landing Page continúa publicado en GitHub Pages desde el Sprint 1.
+
+| Producto | Repositorio | Plataforma | Estado | URL |
+|---|---|---|---|---|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado (Sprint 1) | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado, versión 0.2.6 | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
+| API simulada (json-server) | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | Render | Desplegado | https://fleetsafe-api.onrender.com/api/v1 |
+| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure App Service | Contrato publicado; despliegue en el Sprint 3 | — |
+
+**1. Configuración de GitHub Pages.** En el repositorio de la Web Application se seleccionó como origen de publicación GitHub Actions, de modo que lo publicado es el resultado de la construcción de Angular y no el contenido de una rama.
+
+![Configuración de GitHub Pages con origen GitHub Actions](img/sprint2/deployment-github-pages-settings.png)
+
+**2. Automatización del despliegue.** El flujo de trabajo `deploy.yml` se ejecuta con cada integración en `main`. Su trabajo `build` instala las dependencias y construye la aplicación con la subruta del repositorio, y su trabajo `deploy` la publica en el entorno `github-pages`.
+
+![Ejecuciones del flujo de trabajo de despliegue](img/sprint2/deployment-actions-runs.png)
+
+![Detalle de una ejecución con los trabajos build y deploy completados](img/sprint2/deployment-actions-run-detail.png)
+
+**3. Creación del servicio de la API simulada en Render.** Se creó un Web Service a partir del mismo repositorio, en la región de Virginia y con el plan gratuito.
+
+![Servicio fleetsafe-api en Render](img/sprint2/deployment-render-general.png)
+
+**4. Configuración de construcción y arranque.** Render instala las dependencias con `npm ci` desde la rama `main` y arranca json-server con los datos de `server/db.json` y las reglas de `server/routes.json`.
+
+![Configuración de construcción del servicio en Render](img/sprint2/deployment-render-build.png)
+
+![Comando de arranque y despliegue automático del servicio en Render](img/sprint2/deployment-render-deploy.png)
+
+**5. Publicación de versiones.** Cada versión desplegada se preparó en una rama `release/*` o `hotfix/*`, se integró en `main` mediante Pull Request y se publicó como release de GitHub con su tag de Semantic Versioning y sus notas, tomadas del `CHANGELOG.md` del repositorio.
+
+![Releases de la Web Application](img/sprint2/deployment-releases.png)
+
+![Notas de la release v0.2.0](img/sprint2/deployment-release-v0.2.0.png)
+
+| Versión | Contenido |
+|---|---|
+| v0.1.0 | Base de la aplicación previa a la alineación con el proyecto de referencia. |
+| v0.2.0 | Base compartida alineada con `learning-center` e integración de los cuatro bounded contexts. |
+| v0.2.1 | Despliegue de la Web Application en GitHub Pages y de la API simulada en Render. |
+| v0.2.2 | Carga de las traducciones en el entorno desplegado. |
+| v0.2.3 | Menú lateral, versión visible, datos de incidencias y documentación vehicular sobre la API simulada. |
+| v0.2.4 | Reescritura de rutas de la API simulada para las consultas por identificador. |
+| v0.2.5 | Menú lateral en pantallas pequeñas y etiquetas de incidencias. |
+| v0.2.6 | Selector de resultados de inspección en pantallas estrechas. |
+
+<a id="5228-team-collaboration-insights-during-sprint"></a>
+#### 5.2.2.8. Team Collaboration Insights during Sprint.
+
+Cada integrante desarrolló su bounded context en una rama propia a partir de `develop`. Antes de integrar los contextos, la base compartida se alineó con el proyecto de referencia del curso, y cada rama se integró después en `develop` mediante su Pull Request, conservando la autoría de cada commit. Durante el sprint se registraron 153 commits sin contar los de merge: 146 en el repositorio de la Web Application y 7 en el de Web Services.
+
+| Integrante | GitHub Username | Commits en la Web Application | Aporte principal |
+|---|---|---:|---|
+| Espino Flores, Alejandro | CafecitoSKR | 67 | Base compartida, Pre-Operational Inspection, API simulada, despliegue y contrato OpenAPI |
+| Palacin Lazo, Gerardo Valentin | GeraldP03 | 46 | Fleet Management |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | 21 | Incident Management y rediseño del layout |
+| Santos Torres, Juan Manuel | JuanManuel312 | 9 | Vehicle Documentation |
+| Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | 3 | Catálogo de elementos de inspección |
+
+![Contribuidores del repositorio de la Web Application](img/sprint2/collaboration-contributors.png)
+
+![Actividad de commits del repositorio de la Web Application](img/sprint2/collaboration-commit-activity.png)
+
+![Pull Requests integrados durante el sprint](img/sprint2/development-pull-requests.png)
 
 <a id="53-validation-interviews"></a>
 ## 5.3. Validation Interviews.
