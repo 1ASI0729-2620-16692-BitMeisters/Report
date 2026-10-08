@@ -89,6 +89,7 @@
 | 0.10.0 | 2026-10-08 | Alejandro Espino | Incorporación de la sección 5.2.2 Sprint 2, con la evidencia de desarrollo de los dos repositorios de código, la ejecución de la Web Application desplegada en inglés y español, en escritorio y teléfono, la documentación de los servicios, el despliegue en GitHub Pages y Render, y los analíticos de colaboración. El video de navegación queda pendiente de completar por el equipo. |
 | 0.10.1 | 2026-10-08 | Alejandro Espino | Incorporación de las acciones de TB1 de Alejandro Espino en los dos criterios del Student Outcome, y corrección de su fotografía en el perfil del equipo, que apuntaba a un archivo inexistente con el nombre de otra persona. |
 | 0.10.2 | 2026-10-08 | Alejandro Espino | Revisión de las acciones de TB1 de Alejandro Espino en el Student Outcome contra los descriptores de la rúbrica ABET 3: cada acción responde ahora a un descriptor de comunicación oral o escrita, y se incorporó el contrato OpenAPI como comunicación escrita dirigida a quienes desarrollan los servicios. |
+| 0.10.3 | 2026-10-08 | Alejandro Espino | Integración del enlace al video de navegación del Sprint 2 (5.2.2.5) y de las correcciones de entrevistas, needfinding, Big Picture EventStorming, User Stories e Impact Mapping; corrección de una referencia a una imagen del EventStorming que había cambiado de nombre. |
 
 <hr>
 
@@ -3244,7 +3245,7 @@ Proceso del Design-Level event storming
 Paso 1: Partimos del Big Picture Event Storming como base.
 
 <br>**Unstructure Exploration**
-<img src="img/bigPictureEventStorming/open-eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
+<img src="img/bigPictureEventStorming/open_bp_eventstorming.png" alt="Open EventStorming de FleetSafe" width="800">
 
 Paso 2: Ordenamos los domain events
 
