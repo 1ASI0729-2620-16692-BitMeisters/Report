@@ -5493,7 +5493,7 @@ Al cierre del Sprint 2, la Web Application está desplegada en https://1asi0729-
 
 ![Lista de vehículos de la flota, en español](img/sprint2/execution-fleet-vehicles-es.png)
 
-Video de la navegación lograda: _por completar_.
+Video de la navegación lograda: https://youtu.be/xfpyuPoml0A?si=wCobu-tC12ya4j89
 
 <a id="5226-services-documentation-evidence-for-sprint-review"></a>
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review.
