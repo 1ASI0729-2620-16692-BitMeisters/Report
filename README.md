@@ -439,6 +439,9 @@ Para mantener el enfoque definido para FleetSafe, se consideran inicialmente las
 
 ---
 
+<a id="122-lean-ux-process"></a>
+### 1.2.2. Lean UX Process.
+
 <a id="1221-lean-ux-problem-statements"></a>
 #### 1.2.2.1. Lean UX Problem Statements
 
