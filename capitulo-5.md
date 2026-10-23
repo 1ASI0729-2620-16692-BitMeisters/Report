@@ -782,6 +782,46 @@ Cada integrante desarrolló su bounded context en una rama propia a partir de `d
 
 ![Pull Requests integrados durante el sprint](img/sprint2/development-pull-requests.png)
 
+<a id="523-sprint-3"></a>
+### 5.2.3. Sprint 3
+
+<a id="5231-sprint-planning-3"></a>
+#### 5.2.3.1. Sprint Planning 3.
+
+El Sprint 3 tiene como propósito la primera versión del Backend RESTful API de FleetSafe, exigida para la entrega AV2. En la reunión de planificación, realizada por Google Meet, el equipo acordó que cada integrante implemente en el backend el bounded context que desarrolló en la Web Application, sobre una base común construida con los patrones del proyecto de referencia del curso, y que Alejandro Espino se encargue de Identity and Access.
+
+<img src="img/sprint3/planning-meeting.png" width="800" alt="Reunión de planificación del Sprint 3 por Google Meet con cuatro integrantes del equipo">
+
+| Sprint 3 | Sprint 3 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | 2026-10-23 |
+| **Time** | 09:57 AM |
+| **Location** | Reunión virtual por Google Meet |
+| **Prepared By** | Espino Flores, Alejandro |
+| **Attendees (to planning meeting)** | Espino Flores, Alejandro / Apaza Bocanegra, Elizabeth Noelia / Palacin Lazo, Gerardo Valentin / Aguilar Untiveros, Rodrigo Fabrizio |
+| **Sprint 2 Review Summary** | En el Sprint 2 se desplegó la primera versión de la Web Application en GitHub Pages, con los bounded contexts de Pre-Operational Inspection, Incident Management, Fleet Management y Vehicle Documentation, alineados con el proyecto de referencia del curso, y una API simulada en Render. Se reorganizó el código del Landing Page y se documentó el sprint con evidencias de desarrollo, ejecución, servicios, despliegue y colaboración. |
+| **Sprint 2 Retrospective Summary** | Como acierto, el equipo destacó que construir primero una base compartida permitió integrar las ramas de cada bounded context. Como oportunidades de mejora, identificó que cada integrante había resuelto de forma distinta las mismas decisiones técnicas antes de esa base, que los commits se concentraron al final del trabajo y que los Pull Requests se integraron sin revisión de otro integrante. Para el Sprint 3 se acordó partir de la base común del backend antes de implementar cada bounded context, registrar las horas de cada tarea durante el sprint y revisar los Pull Requests antes de integrarlos. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 3 Goal** | **Our focus is on** que la Web Application de FleetSafe deje de depender de una API simulada y trabaje sobre su propio Backend RESTful API. **We believe it delivers** datos persistentes y una autenticación real **to** los supervisores de flota y los conductores de las empresas de transporte de carga. **This will be confirmed when** el Backend RESTful API esté desplegado y documentado con OpenAPI, un usuario pueda iniciar sesión, y las inspecciones, incidencias, vehículos y documentos vehiculares se registren y consulten a través de él. |
+| **Sprint 3 Velocity** | 25 |
+| **Sum of Story Points** | 25 |
+
+Las User Stories del Sprint 3 son las Technical Stories del Backend RESTful API: US38, US40, US41, US43 y US44. La US42 (API de evaluación y habilitación), asignada al Sprint 3 en la sección 3.3, queda pendiente de asignar a un integrante.
+
+<a id="5232-aspect-leaders-and-collaborators"></a>
+#### 5.2.3.2. Aspect Leaders and Collaborators.
+
+Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend RESTful API y su base compartida. Cada integrante lidera en el backend el bounded context que desarrolló en la Web Application, y Alejandro Espino lidera además la base compartida, sobre la que se construyen todos los demás.
+
+| Team Member (Last Name, First Name) | GitHub Username | Identity and Access Leader (L) / Collaborator (C) | Pre-Operational Inspection Leader (L) / Collaborator (C) | Incident Management Leader (L) / Collaborator (C) | Fleet Management Leader (L) / Collaborator (C) | Vehicle Documentation Leader (L) / Collaborator (C) | Base compartida del backend Leader (L) / Collaborator (C) |
+|---|---|---|---|---|---|---|---|
+| Espino Flores, Alejandro | CafecitoSKR | L | C | C | C | C | L |
+| Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | — | L | — | — | — | C |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | — | L | — | — | C |
+| Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | — | L | — | C |
+| Santos Torres, Juan Manuel | JuanManuel312 | — | — | — | — | L | C |
+
 <a id="53-validation-interviews"></a>
 ## 5.3. Validation Interviews.
 

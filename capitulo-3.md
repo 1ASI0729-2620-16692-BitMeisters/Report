@@ -145,13 +145,13 @@ El Product Backlog de FleetSafe ha sido elaborado considerando el valor que cada
 | 9 | US09 | EP02 | Iniciar sesión | Como usuario, deseo iniciar sesión en la plataforma para acceder a las funcionalidades según mi rol. | Must have | 5 | Sprint 2 |
 | 10 | US10 | EP02 | Cerrar sesión | Como usuario, deseo cerrar sesión en la plataforma para proteger el acceso a mi cuenta. | Should have | 1 | Sprint 2 |
 | 11 | US11 | EP02 | Consultar listado de usuarios | Como administrador, deseo consultar el listado de usuarios registrados para gestionar su información y roles. | Should have | 3 | Sprint 2 |
-| 12 | US38 | EP09 | API de autenticación | Como developer, se desea exponer un endpoint de autenticación para que los usuarios puedan iniciar sesión en la plataforma. | Must have | 5 | Sprint 2 |
+| 12 | US38 | EP09 | API de autenticación | Como developer, se desea exponer un endpoint de autenticación para que los usuarios puedan iniciar sesión en la plataforma. | Must have | 5 | Sprint 3 |
 | 13 | US12 | EP03 | Registrar vehículo | Como supervisor de flota, deseo registrar nuevos vehículos en la plataforma para incorporarlos al control preventivo de la flota. | Must have | 5 | Sprint 2 |
 | 14 | US13 | EP03 | Consultar listado de vehículos | Como supervisor de flota, deseo consultar el listado de vehículos de la flota para conocer las unidades disponibles. | Must have | 3 | Sprint 2 |
 | 15 | US14 | EP03 | Consultar detalle de vehículo | Como supervisor de flota, deseo consultar el detalle de un vehículo para conocer su información, estado e historial. | Should have | 3 | Sprint 2 |
 | 16 | US15 | EP03 | Actualizar información de vehículo | Como supervisor de flota, deseo actualizar la información de un vehículo para mantener sus datos vigentes. | Should have | 3 | Sprint 2 |
 | 17 | US16 | EP03 | Asignar vehículo a conductor | Como supervisor de flota, deseo asignar un vehículo a un conductor para que este pueda realizar la inspección preoperacional correspondiente. | Must have | 3 | Sprint 2 |
-| 18 | US40 | EP09 | API de gestión de vehículos | Como developer, se desea exponer endpoints CRUD para la gestión de vehículos. | Must have | 5 | Sprint 2 |
+| 18 | US40 | EP09 | API de gestión de vehículos | Como developer, se desea exponer endpoints CRUD para la gestión de vehículos. | Must have | 5 | Sprint 3 |
 | 19 | US17 | EP04 | Iniciar inspección preoperacional | Como conductor, deseo iniciar una inspección preoperacional de un vehículo asignado para registrar su estado antes de operar. | Must have | 3 | Sprint 3 |
 | 20 | US18 | EP04 | Registrar estado de elementos de inspección | Como conductor, deseo registrar el estado de los elementos de inspección para documentar las condiciones encontradas en el vehículo. | Must have | 5 | Sprint 3 |
 | 21 | US19 | EP04 | Registrar observaciones | Como conductor, deseo registrar observaciones durante la inspección para describir las condiciones detectadas que requieren atención. | Must have | 3 | Sprint 3 |
@@ -169,11 +169,11 @@ El Product Backlog de FleetSafe ha sido elaborado considerando el valor que cada
 | 33 | US29 | EP06 | Actualizar estado de incidencia | Como supervisor de flota, deseo actualizar el estado de una incidencia para reflejar su avance en el proceso de resolución. | Should have | 3 | Sprint 4 |
 | 34 | US30 | EP06 | Registrar acción correctiva | Como supervisor de flota, deseo registrar la acción correctiva aplicada a una incidencia para documentar la solución del problema detectado. | Should have | 3 | Sprint 4 |
 | 35 | US31 | EP06 | Consultar historial de incidencias por vehículo | Como supervisor de flota, deseo consultar el historial de incidencias de un vehículo para conocer los problemas recurrentes y su resolución. | Could have | 3 | Sprint 4 |
-| 36 | US43 | EP09 | API de gestión de incidencias | Como developer, se desea exponer endpoints CRUD para la gestión de incidencias. | Should have | 5 | Sprint 4 |
+| 36 | US43 | EP09 | API de gestión de incidencias | Como developer, se desea exponer endpoints CRUD para la gestión de incidencias. | Should have | 5 | Sprint 3 |
 | 37 | US32 | EP07 | Registrar documento vehicular | Como supervisor de flota, deseo registrar los documentos asociados a un vehículo para mantener actualizada su información documentaria. | Could have | 3 | Sprint 4 |
 | 38 | US33 | EP07 | Consultar documentos próximos a vencer | Como supervisor de flota, deseo consultar los documentos próximos a vencer para tomar acciones preventivas antes de su vencimiento. | Could have | 5 | Sprint 4 |
 | 39 | US34 | EP07 | Actualizar documento vehicular | Como supervisor de flota, deseo actualizar la información de un documento vehicular para mantener su vigencia registrada en la plataforma. | Could have | 3 | Sprint 4 |
-| 40 | US44 | EP09 | API de documentación vehicular | Como developer, se desea exponer endpoints para la gestión de documentos vehiculares. | Could have | 5 | Sprint 4 |
+| 40 | US44 | EP09 | API de documentación vehicular | Como developer, se desea exponer endpoints para la gestión de documentos vehiculares. | Could have | 5 | Sprint 3 |
 | 41 | US35 | EP08 | Consultar historial de inspecciones | Como supervisor de flota, deseo consultar el historial de inspecciones de un vehículo para conocer su evolución en el tiempo. | Should have | 5 | Sprint 4 |
 | 42 | US36 | EP08 | Generar reporte de estado de flota | Como supervisor de flota, deseo generar un reporte del estado de la flota para analizar la condición de los vehículos. | Could have | 5 | Sprint 4 |
 | 43 | US37 | EP08 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | Could have | 3 | Sprint 4 |
@@ -195,9 +195,9 @@ El Product Backlog de FleetSafe ha sido elaborado considerando el valor que cada
 | Sprint | User Stories | Puntos | Enfoque |
 |:---|:---|:---|:---|
 | **Sprint 1** | US01 – US06 | 13 | Landing Page |
-| **Sprint 2** | US07 – US11, US38, US12 – US16, US40 | 43 | Identidad, usuarios y gestión de vehículos |
-| **Sprint 3** | US17 – US25, US41, US23 – US24, US42, US27 | 62 | Núcleo: inspección, evaluación y habilitación |
-| **Sprint 4** | US26, US28 – US37, US43 – US45 | 38 | Incidencias, documentación, historial y reportes |
+| **Sprint 2** | US07 – US16 | 32 | Identidad, usuarios y gestión de vehículos en la Web Application |
+| **Sprint 3** | US17 – US25, US27, US38, US40 – US44 | 74 | Núcleo: inspección, evaluación y habilitación, y el Backend RESTful API de los bounded contexts |
+| **Sprint 4** | US26, US28 – US37, US45 | 46 | Incidencias, documentación, historial y reportes |
 
 > **Nota sobre el Sprint 1.** El Sprint Planning 1 de la sección 5.2.1.1 declara una velocity de 8 y una suma de Story Points de 27. La revisión del backlog muestra que las User Stories efectivamente planificadas para ese sprint (US01 a US06) suman 13 puntos. Se recomienda alinear ambas cifras en la próxima revisión del informe.
 
