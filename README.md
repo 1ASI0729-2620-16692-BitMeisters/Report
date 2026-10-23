@@ -91,6 +91,7 @@
 | 0.10.2 | 2026-10-08 | Alejandro Espino | Revisión de las acciones de TB1 de Alejandro Espino en el Student Outcome contra los descriptores de la rúbrica ABET 3: cada acción responde ahora a un descriptor de comunicación oral o escrita, y se incorporó el contrato OpenAPI como comunicación escrita dirigida a quienes desarrollan los servicios. |
 | 0.10.3 | 2026-10-08 | Alejandro Espino | Integración del enlace al video de navegación del Sprint 2 (5.2.2.5) y de las correcciones de entrevistas, needfinding, Big Picture EventStorming, User Stories e Impact Mapping; corrección de una referencia a una imagen del EventStorming que había cambiado de nombre. |
 | 0.11.0 | 2026-10-23 | Alejandro Espino | **Reorganización del informe en varios archivos**, como admite el enunciado ("organizado en uno o más archivos con extensión .md, siendo el archivo principal README.md"). El archivo único había alcanzado los 513 KB, cerca del límite de 512 KB a partir del cual GitHub deja de mostrar un archivo Markdown. `README.md` conserva la carátula, el registro de versiones, el índice y el Student Outcome, y cada capítulo, las conclusiones, la bibliografía y los anexos pasan a su propio archivo, con enlaces de navegación entre ellos. El contenido no cambia; se eliminó además el relleno de alineación de las tablas, que GitHub no muestra, y se añadió el encabezado de la sección 1.2.2, al que el índice ya enlazaba. |
+| 0.12.0 | 2026-10-23 | Alejandro Espino | Incorporación del Sprint Planning 3 (5.2.3.1), con la evidencia de la reunión de planificación, y de la matriz de líderes y colaboradores del Sprint 3 (5.2.3.2). Se actualizó la columna *Sprint* de la sección 3.3: las Technical Stories US38, US40, US43 y US44 pasan al Sprint 3, en el que cada integrante implementa en el backend el bounded context que desarrolló en la Web Application. |
 
 <hr>
 
@@ -198,6 +199,9 @@
             - <a href="capitulo-5.md#5226-services-documentation-evidence-for-sprint-review">5.2.2.6. Services Documentation Evidence for Sprint Review.</a>
             - <a href="capitulo-5.md#5227-software-deployment-evidence-for-sprint-review">5.2.2.7. Software Deployment Evidence for Sprint Review.</a>
             - <a href="capitulo-5.md#5228-team-collaboration-insights-during-sprint">5.2.2.8. Team Collaboration Insights during Sprint.</a>
+        - <a href="capitulo-5.md#523-sprint-3">5.2.3. Sprint 3</a>
+            - <a href="capitulo-5.md#5231-sprint-planning-3">5.2.3.1. Sprint Planning 3.</a>
+            - <a href="capitulo-5.md#5232-aspect-leaders-and-collaborators">5.2.3.2. Aspect Leaders and Collaborators.</a>
     - <a href="capitulo-5.md#53-validation-interviews">5.3. Validation Interviews.</a>
         - <a href="capitulo-5.md#531-diseno-de-entrevistas">5.3.1. Diseño de Entrevistas.</a>
         - <a href="capitulo-5.md#532-registro-de-entrevistas">5.3.2. Registro de Entrevistas.</a>
