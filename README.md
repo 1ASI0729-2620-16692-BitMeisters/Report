@@ -69,7 +69,7 @@
 # **Registro de Versiones del Informe**
 
 | Versión | Fecha | Autor | Descripción de modificación |
-|:--------|:------|:------|:----------------------------|
+|:---|:---|:---|:---|
 | 0.1.0 | 2026-09-03 | Gerardo Palacin | Estructura inicial del informe a partir de la plantilla del curso: carátula, tabla de contenido de cuatro niveles y encabezados de los cinco capítulos. |
 | 0.2.0 | 2026-09-05 | Gerardo Palacin | Redacción del Capítulo I —Startup Profile, Solution Profile con 5W+2H, Lean UX y segmentos objetivo— y del inicio del Capítulo II. |
 | 0.3.0 | 2026-09-07 | Gerardo Palacin | Incorporación del Ubiquitous Language de la sección 2.5, con treinta términos del dominio agrupados en cinco familias. |
@@ -229,9 +229,9 @@ un rango de audiencias.
 
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.
 
-| Criterio específico | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Conclusiones |
-|:---|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---|
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia** | **Rodrigo Fabrizio, Aguilar Untiveros** — *AV1*<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>**Elizabeth Noelia, Apaza Bocanegra** — *AV1*<br>Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo.<br><br>**Palacin Lazo, Gerardo Valentin** — *AV1*<br>Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint.<br>_TB1_<br> Colaboré en el equipo al acordar los errores asignados a resolver. Por mi parte, compartí la guia para la correcta implementación de artefactos en el entorno de UXpressia y las aclaré las metologías para la construcción correcta de una Big Picture y Design Level event storming. También comparti mi enfoque para construir mi bounded context Fleet Management siguiendo buenas practicas.<br>**Alejandro Espino, Flores** — *AV1*<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Alejandro Espino, Flores** — *TB1*<br>Organicé y conduje la reunión de planificación del Sprint 2 por Google Meet, enfocada en un objetivo concreto: acordar lo que faltaba para la entrega TB1. Expliqué a cada integrante, en los términos de su propio bounded context, qué cambiaba en su rama al alinear la Web Application con el proyecto de referencia del curso —identificadores, traducciones, rutas y API simulada—, y validé que el mensaje había llegado comprobando que cada rama se integrara en `develop` sin perder su autoría. Escuché la forma en que cada compañero había resuelto su contexto antes de emitir un juicio, y concilié las diferencias adaptando su trabajo a la base común en lugar de reemplazarlo.<br><br>**Juan Manuel, Santos Torres** — *AV1*<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requisitos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | *AV1*<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos.<br><br>*TB1*<br>Durante el Sprint 2, el equipo consolidó la comunicación oral y escrita como parte central del proceso de integración de la solución. Las coordinaciones sostenidas permitieron alinear los distintos bounded contexts, resolver observaciones surgidas durante el desarrollo y asegurar que cada integrante comprendiera el impacto de sus cambios en el resto del sistema. La comunicación oral facilitó la planificación conjunta, la resolución de conflictos técnicos y la validación de que los mensajes llegaran efectivamente a cada miembro del equipo. La comunicación escrita, por su parte, permitió documentar de manera estructurada las decisiones, correcciones y avances del Sprint, asegurando la trazabilidad del trabajo realizado y facilitando la revisión del entregable por parte de audiencias técnicas y no técnicas. En conjunto, ambas formas de comunicación contribuyeron a que el equipo mantuviera una visión común de la solución y alcanzara los objetivos planteados para la TB1. |
+| Criterio específico | Acciones realizadas | Conclusiones |
+|:---|:---|:---|
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia** | **Rodrigo Fabrizio, Aguilar Untiveros** — *AV1*<br>Expuse ante el equipo el avance de la propuesta de valor de FleetSafe, sustentando la necesidad de orientar la solución al control preventivo y la habilitación operativa de vehículos. Argumenté la importancia de definir los tres roles principales (Administrador, Supervisor de flota y Conductor) y su impacto en el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Coordiné con los integrantes la distribución de responsabilidades para el desarrollo de la Landing Page, Web Application y Backend RESTful API, y sustenté la priorización de las funcionalidades críticas del sistema.<br><br>**Elizabeth Noelia, Apaza Bocanegra** — *AV1*<br>Participé en las reuniones de coordinación del equipo, comunicando mis aportes relacionados con el análisis y diseño de FleetSafe. Contribuí en la revisión de las funcionalidades y de los segmentos objetivo de la solución, compartiendo observaciones con los integrantes para alinear la propuesta con las necesidades identificadas. Asimismo, participé en la coordinación de los avances de los artefactos de diseño y en la revisión de los resultados obtenidos durante el Sprint, facilitando la toma de decisiones conjunta del equipo.<br><br>**Palacin Lazo, Gerardo Valentin** — *AV1*<br>Participé en la presentación y discusión de los avances de FleetSafe, comunicando al equipo las decisiones relacionadas con la arquitectura y el diseño de la solución. Expuse los avances de los diagramas C4, diagramas de clases y diseño de base de datos, explicando cómo estos artefactos representan la estructura del sistema y su relación con los Bounded Contexts definidos. Asimismo, coordiné con los integrantes la organización y revisión de los artefactos técnicos, contribuyendo a mantener una visión común sobre la solución y a resolver observaciones durante el desarrollo del Sprint.<br>_TB1_<br> Colaboré en el equipo al acordar los errores asignados a resolver. Por mi parte, compartí la guia para la correcta implementación de artefactos en el entorno de UXpressia y las aclaré las metologías para la construcción correcta de una Big Picture y Design Level event storming. También comparti mi enfoque para construir mi bounded context Fleet Management siguiendo buenas practicas.<br>**Alejandro Espino, Flores** — *AV1*<br>Expuse ante el equipo el resultado de la verificación del análisis competitivo y sustenté por qué la ventaja competitiva que habíamos declarado era falsa, proponiendo su reemplazo por una estrategia de enfoque en el marco normativo peruano. Argumenté la decisión de permitir el levantamiento de bloqueo con justificación registrada, contrastando el modelo estadounidense con la práctica actual del sector. Coordiné con los integrantes la resolución de los conflictos de versiones surgidos al trabajar en paralelo sobre las mismas secciones del informe.<br><br>**Alejandro Espino, Flores** — *TB1*<br>Organicé y conduje la reunión de planificación del Sprint 2 por Google Meet, enfocada en un objetivo concreto: acordar lo que faltaba para la entrega TB1. Expliqué a cada integrante, en los términos de su propio bounded context, qué cambiaba en su rama al alinear la Web Application con el proyecto de referencia del curso —identificadores, traducciones, rutas y API simulada—, y validé que el mensaje había llegado comprobando que cada rama se integrara en `develop` sin perder su autoría. Escuché la forma en que cada compañero había resuelto su contexto antes de emitir un juicio, y concilié las diferencias adaptando su trabajo a la base común en lugar de reemplazarlo.<br><br>**Juan Manuel, Santos Torres** — *AV1*<br>Expuse ante el equipo la propuesta de experiencia de usuario y diseño visual de la Landing Page de FleetSafe, sustentando la evolución de la interfaz desde los wireframes de baja fidelidad hasta los mockups finales de alta fidelidad. Argumenté las decisiones de diseño adoptadas en cuanto a la jerarquía visual, distribución de secciones clave (presentación de la solución, control preventivo, beneficios operativos y llamadas a la acción) y su orientación a captar empresas de transporte y gestores de flota. Coordiné con los integrantes la alineación de la identidad gráfica con los requisitos de la futura Web Application y sustenté la estrategia de diseño responsivo y rendimiento adoptada para su implementación y publicación web. | *AV1*<br>El equipo organizó el desarrollo de FleetSafe considerando diferentes responsabilidades relacionadas con la definición de la solución, el análisis del problema y el desarrollo de la plataforma.<br>La propuesta establece una estructura compuesta por Landing Page, Web Application y Backend RESTful API, permitiendo distribuir las actividades necesarias para construir la solución.<br>El equipo mantuvo como objetivo común desarrollar una plataforma orientada al control preventivo y la habilitación operativa de vehículos.<br><br>*TB1*<br>Durante el Sprint 2, el equipo consolidó la comunicación oral y escrita como parte central del proceso de integración de la solución. Las coordinaciones sostenidas permitieron alinear los distintos bounded contexts, resolver observaciones surgidas durante el desarrollo y asegurar que cada integrante comprendiera el impacto de sus cambios en el resto del sistema. La comunicación oral facilitó la planificación conjunta, la resolución de conflictos técnicos y la validación de que los mensajes llegaran efectivamente a cada miembro del equipo. La comunicación escrita, por su parte, permitió documentar de manera estructurada las decisiones, correcciones y avances del Sprint, asegurando la trazabilidad del trabajo realizado y facilitando la revisión del entregable por parte de audiencias técnicas y no técnicas. En conjunto, ambas formas de comunicación contribuyeron a que el equipo mantuviera una visión común de la solución y alcanzara los objetivos planteados para la TB1. |
 | **Comunica por escrito con efectividad a diferentes rangos de audiencia** | **Rodrigo Fabrizio, Aguilar Untiveros** — *AV1*<br>Redacté la definición de la propuesta de valor de FleetSafe y la descripción de los tres roles principales del sistema (Administrador, Supervisor de flota y Conductor), documentando sus responsabilidades dentro del flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento. Elaboré la descripción de la arquitectura general de la solución compuesta por Landing Page, Web Application y Backend RESTful API. Documenté el alcance inicial del proyecto y las funcionalidades priorizadas, asegurando coherencia con el objetivo de control preventivo y habilitación operativa de vehículos.<br><br>**Rodrigo Fabrizio, Aguilar Untiveros** — *TB1*<br>Redacté y documenté por escrito las correcciones aplicadas en mi bounded context de frontend, asegurando que las modificaciones realizadas en la Web Application quedaran claramente descritas y fueran comprensibles para los distintos integrantes del equipo. Actualicé la documentación correspondiente a los cambios en rutas, identificadores, estructura de componentes y organización del código, relacionando cada ajuste con su justificación técnica y con el objetivo de alinear la solución al proyecto de referencia del curso. Registré por escrito las observaciones resueltas durante el Sprint y las decisiones adoptadas, procurando mantener un lenguaje claro y consistente con el resto del informe. Revisé las secciones de mi responsabilidad antes de la entrega, contrastando lo redactado con el estado real de la aplicación, con el fin de que la documentación reflejara fielmente el trabajo realizado y pudiera ser comprendida por audiencias tanto técnicas como no técnicas.<br><br>**Elizabeth Noelia, Apaza Bocanegra** — *AV1*<br>Redacté y documenté los aportes correspondientes al análisis y diseño de FleetSafe, organizando la información relacionada con las funcionalidades y los segmentos objetivo de la solución. Asimismo, contribuí en la elaboración y revisión de la documentación del proyecto, procurando expresar de manera clara las decisiones y avances realizados durante el Sprint para que pudieran ser comprendidos por los diferentes integrantes del equipo.<br><br>**Palacin Lazo, Gerardo Valentin** — *AV1*<br>Redacté y documenté diferentes artefactos técnicos de FleetSafe, incluyendo partes de la arquitectura C4, el diseño de clases y el diseño de base de datos. Organicé la información de manera estructurada para que pudiera ser comprendida y revisada por los integrantes del equipo, relacionando los elementos técnicos con los Bounded Contexts definidos para la solución. Asimismo, participé en la documentación de los avances del proyecto y en la actualización del reporte, comunicando por escrito las decisiones y resultados obtenidos durante el Sprint.<br>_TB1_<br>Me encargue de realizar las correcciones adecuadas en los artefactos de UXpressia siguiendo la guia compartidad en la plataforma educacional al igual que rediseñar los contextos de tiempo en donde se situan los Event storming de manera exitosa.  Ademas de corregir mi layer de presentation de mi bounded context en base al feedback de mi equipo.<br>**Alejandro Espino, Flores** — *AV1*<br>Redacté el análisis competitivo de la sección 2.1 sobre datos verificados en las fuentes oficiales de cada producto, con su bibliografía en formato APA. Elaboré el diseño de base de datos de la sección 4.8 en siete diagramas por bounded context, los diagramas C4 de la sección 4.6 en Structurizr y los diagramas de clases de la sección 4.7. Redacté la sección 5.1 Software Configuration Management completa y el diseño de la Web Application de la sección 4.4. Reconstruí el Registro de Versiones a partir del histórico real del repositorio, de modo que cada fila pueda contrastarse con sus commits.<br><br>**Alejandro Espino, Flores** — *TB1*<br>Preparé la sección 5.2.2 del Sprint 2 conforme a la estructura que el enunciado exige para cada sub-sección, y corregí las secciones 5.1.1 y 5.1.4, que describían una plataforma de publicación distinta de la utilizada. Validé los atributos de calidad del informe antes de entregarlo: contrasté cada afirmación con la aplicación y la API desplegadas, lo que permitió detectar y corregir siete defectos antes de documentarlos, y retiré lo que no podía sostenerse con evidencia. Adapté el lenguaje y los medios a cada público: el informe en español para el docente, con capturas en inglés y en español, en escritorio y en teléfono; el contrato OpenAPI del Backend RESTful API, en inglés y con ejemplos de petición y de respuesta, para quienes desarrollan e integran los servicios; y las notas de versión y el `CHANGELOG.md`, en inglés y con un resumen de cada cambio, para el equipo técnico.<br><br>**Juan Manuel, Santos Torres** — *AV1*<br>Elaboré y documenté la sección de Landing Page Wireframes [sección 4.3.1], definiendo la arquitectura de información inicial, el flujo de navegación del visitante y la disposición funcional de los bloques de contenido. Diseñé y redacté la sección de Landing Page Mock-ups [4.3.2], especificando la guía de estilos visuales, paleta de colores, tipografía y componentes de alta fidelidad en coherencia con la propuesta de valor de FleetSafe. Documenté la implementación y despliegue de la Landing Page, describiendo la estructura del código frontend, los criterios de adaptabilidad multidispositivo (responsive design) y su configuración para el despliegue en producción mediante GitHub Pages. | *AV1*<br>El equipo estableció como eje principal de FleetSafe el flujo de inspección, validación, evaluación, identificación de riesgos, habilitación y seguimiento.<br>La definición de tres roles principales —Administrador, Supervisor de flota y Conductor— permitió organizar las responsabilidades dentro de la aplicación.<br>El enfoque del proyecto permite que el conductor realice la inspección, el sistema evalúe las condiciones, el supervisor controle los resultados y las incidencias sean atendidas.<br><br>*TB1*<br>Durante el Sprint 2, el equipo consolidó la comunicación oral y escrita como parte central del proceso de integración de la solución. Las coordinaciones sostenidas permitieron alinear los distintos bounded contexts, resolver observaciones surgidas durante el desarrollo y asegurar que cada integrante comprendiera el impacto de sus cambios en el resto del sistema. La comunicación oral facilitó la planificación conjunta, la resolución de conflictos técnicos y la validación de que los mensajes llegaran efectivamente a cada miembro del equipo. La comunicación escrita, por su parte, permitió documentar de manera estructurada las decisiones, correcciones y avances del Sprint, asegurando la trazabilidad del trabajo realizado y facilitando la revisión del entregable por parte de audiencias técnicas y no técnicas. En conjunto, ambas formas de comunicación contribuyeron a que el equipo mantuviera una visión común de la solución y alcanzara los objetivos planteados para la TB1. |
 
 <hr>
@@ -295,48 +295,48 @@ FleetSafe no tiene como objetivo principal gestionar rutas, puntos de entrega o 
 
 A continuación se presenta la ficha de cada integrante del equipo, indicando su código de estudiante, la carrera que cursa y un resumen de los principales conocimientos técnicos y habilidades que aporta al equipo.
 
-| **Integrante**            | Palacin Lazo, Gerardo Valentin                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|:--------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20211C201                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Carrera**               | Ingeniería de Software                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Descripción**           | Me interesa mi mucho los avances que las soluciones de software han sido capaces de realizar en varias ramas de la vida. Me considero una persona curiosa que quiere seguir aprendiendo nuevos marcos de trabajo, lenguajes de programación y tecnologías emergentes. Me instrui en practicar C#, JavaScript,  HTML y CSS y aplicar mi conocimiento de base de datos relacionales y no relacionales. Este ciclo aprendo Angular y sus Materials guiandome de las fuentes originales. |
-| **Foto**                  | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140">                                                                                                                                                                                                                                                                                                                                                                              |
+| **Integrante** | Palacin Lazo, Gerardo Valentin |
+|:---|:---|
+| **Código del Estudiante** | U20211C201 |
+| **Carrera** | Ingeniería de Software |
+| **Descripción** | Me interesa mi mucho los avances que las soluciones de software han sido capaces de realizar en varias ramas de la vida. Me considero una persona curiosa que quiere seguir aprendiendo nuevos marcos de trabajo, lenguajes de programación y tecnologías emergentes. Me instrui en practicar C#, JavaScript,  HTML y CSS y aplicar mi conocimiento de base de datos relacionales y no relacionales. Este ciclo aprendo Angular y sus Materials guiandome de las fuentes originales. |
+| **Foto** | <img src="img/team-members/GerardoP.jpg" alt="Fotografía de Gerardo Valentin Palacin Lazo" width="140"> |
 
 ---
 
-| **Integrante**            | Rodrigo Fabrizio Aguilar Untiveros                                                                             |
-|:--------------------------|:---------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U202318309                                                                                                     |
-| **Carrera**               | Ingeniería de Software                                                                                         |
-| **Descripción**           | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. Aporto conocimientos en Java con Spring Boot, C# con .NET, Python, JavaScript y TypeScript, además de bases de datos relacionales con PostgreSQL y MySQL, y no relacionales con MongoDB. Manejo control de versiones con Git y GitFlow, modelado con UML y C4, y contenedores con Docker. Procuro que lo que se afirma se pueda comprobar: verifico el comportamiento real de cada herramienta o producto en sus fuentes oficiales antes de darlo por cierto, y corrijo lo que no coincide con la evidencia. |
-| **Foto**                  | <img src="img/team-members/RodrigoAguilar.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
+| **Integrante** | Rodrigo Fabrizio Aguilar Untiveros |
+|:---|:---|
+| **Código del Estudiante** | U202318309 |
+| **Carrera** | Ingeniería de Software |
+| **Descripción** | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. Aporto conocimientos en Java con Spring Boot, C# con .NET, Python, JavaScript y TypeScript, además de bases de datos relacionales con PostgreSQL y MySQL, y no relacionales con MongoDB. Manejo control de versiones con Git y GitFlow, modelado con UML y C4, y contenedores con Docker. Procuro que lo que se afirma se pueda comprobar: verifico el comportamiento real de cada herramienta o producto en sus fuentes oficiales antes de darlo por cierto, y corrijo lo que no coincide con la evidencia. |
+| **Foto** | <img src="img/team-members/RodrigoAguilar.png" alt="Fotografía de Rodrigo Fabrizio Aguilar Untiveros" width="140"> |
 
 ---
 
-| **Integrante**            | Elizabeth Noelia Apaza Bocanegra                                                                                  |
-|:--------------------------|:------------------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20231c197                                                                                                        |
-| **Carrera**               | Ingeniería de Software                                                                                            |
-| **Descripción**           | Me interesa el desarrollo frontend con frameworks modernos, el diseño centrado en el usuario (UX/UI) y la implementación de arquitecturas limpias orientadas al dominio (DDD). En FleetSafe lideré el análisis, modelado e implementación del Bounded Context de Pre-Operational Inspection, definiendo los modelos de dominio con campos encapsulados, el Store reactivo con Angular Signals y la interfaz móvil responsiva con controles accesibles según pautas WCAG 2.1 AA. Aporto conocimientos sólidos en TypeScript, Angular, Angular Material, internacionalización con ngx-translate, consumo de servicios RESTful y control de versiones con Git y GitFlow bajo Conventional Commits. Procuro que las soluciones sean accesibles, intuitivas y cumplan con rigor normativo técnico. |
-| **Foto**                  | <img src="img/team-members/elizabeth-apaza.jpg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
+| **Integrante** | Elizabeth Noelia Apaza Bocanegra |
+|:---|:---|
+| **Código del Estudiante** | U20231c197 |
+| **Carrera** | Ingeniería de Software |
+| **Descripción** | Me interesa el desarrollo frontend con frameworks modernos, el diseño centrado en el usuario (UX/UI) y la implementación de arquitecturas limpias orientadas al dominio (DDD). En FleetSafe lideré el análisis, modelado e implementación del Bounded Context de Pre-Operational Inspection, definiendo los modelos de dominio con campos encapsulados, el Store reactivo con Angular Signals y la interfaz móvil responsiva con controles accesibles según pautas WCAG 2.1 AA. Aporto conocimientos sólidos en TypeScript, Angular, Angular Material, internacionalización con ngx-translate, consumo de servicios RESTful y control de versiones con Git y GitFlow bajo Conventional Commits. Procuro que las soluciones sean accesibles, intuitivas y cumplan con rigor normativo técnico. |
+| **Foto** | <img src="img/team-members/elizabeth-apaza.jpg" alt="Fotografía de Elizabeth Noelia Apaza Bocanegra" width="140"> |
 
 ---
 
-| **Integrante**            | Alejandro Espino Flores                                                                                  |
-|:--------------------------|:---------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U202122129                                                                                               |
-| **Carrera**               | Ingeniería de Software                                                                                   |
-| **Descripción**           | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. En FleetSafe asumí el modelado del dominio: la división en bounded contexts, el diseño de la base de datos por contexto, los diagramas C4 en Structurizr y los diagramas de clases. Aporto conocimientos en Java con Spring Boot, bases de datos relacionales con PostgreSQL, Git y GitFlow, y modelado con UML y C4. Procuro que lo que el informe afirma se pueda comprobar: durante el análisis competitivo verifiqué el comportamiento real de cada producto en sus fuentes oficiales y corregí una ventaja competitiva que el equipo había dado por cierta y era falsa. |
-| **Foto**                  | <img src="img/team-members/AlejandroEspino.png" alt="Fotografía de Alejandro Espino Flores" width="140"> |
+| **Integrante** | Alejandro Espino Flores |
+|:---|:---|
+| **Código del Estudiante** | U202122129 |
+| **Carrera** | Ingeniería de Software |
+| **Descripción** | Me interesa el diseño de software orientado al dominio y la trazabilidad de las decisiones técnicas. En FleetSafe asumí el modelado del dominio: la división en bounded contexts, el diseño de la base de datos por contexto, los diagramas C4 en Structurizr y los diagramas de clases. Aporto conocimientos en Java con Spring Boot, bases de datos relacionales con PostgreSQL, Git y GitFlow, y modelado con UML y C4. Procuro que lo que el informe afirma se pueda comprobar: durante el análisis competitivo verifiqué el comportamiento real de cada producto en sus fuentes oficiales y corregí una ventaja competitiva que el equipo había dado por cierta y era falsa. |
+| **Foto** | <img src="img/team-members/AlejandroEspino.png" alt="Fotografía de Alejandro Espino Flores" width="140"> |
 
 ---
 
-| **Integrante**            | Juan Manuel Santos Torres                                                                             |
-|:--------------------------|:------------------------------------------------------------------------------------------------------|
-| **Código del Estudiante** | U20221a371                                                                                            |
-| **Carrera**               | Ingeniería de Software                                                                                |
-| **Descripción**           | Me interesa el desarrollo frontend, el diseño de experiencia de usuario (UX/UI) y la construcción de interfaces web intuitivas y de alto rendimiento. En FleetSafe asumí la concepción visual y el desarrollo web inicial de la solución: estructuré el flujo de navegación y la arquitectura de información mediante wireframes de baja fidelidad, diseñé los mockups de alta fidelidad definiendo la identidad visual y guía de componentes, y programé la Landing Page responsiva orientada a la propuesta de valor y captación de clientes del sector transporte. Aporto conocimientos en maquetación y desarrollo web con HTML5 semántico, CSS3, Tailwind CSS y JavaScript, además de lenguajes como Python, C++ y Java, control de versiones con Git/GitFlow y despliegue continuo en GitHub Pages. Procuro que cada interfaz mantenga coherencia estética, accesibilidad y una implementación técnica limpia que asegure una navegación fluida en cualquier dispositivo.                                                         |
-| **Foto**                  | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
+| **Integrante** | Juan Manuel Santos Torres |
+|:---|:---|
+| **Código del Estudiante** | U20221a371 |
+| **Carrera** | Ingeniería de Software |
+| **Descripción** | Me interesa el desarrollo frontend, el diseño de experiencia de usuario (UX/UI) y la construcción de interfaces web intuitivas y de alto rendimiento. En FleetSafe asumí la concepción visual y el desarrollo web inicial de la solución: estructuré el flujo de navegación y la arquitectura de información mediante wireframes de baja fidelidad, diseñé los mockups de alta fidelidad definiendo la identidad visual y guía de componentes, y programé la Landing Page responsiva orientada a la propuesta de valor y captación de clientes del sector transporte. Aporto conocimientos en maquetación y desarrollo web con HTML5 semántico, CSS3, Tailwind CSS y JavaScript, además de lenguajes como Python, C++ y Java, control de versiones con Git/GitFlow y despliegue continuo en GitHub Pages. Procuro que cada interfaz mantenga coherencia estética, accesibilidad y una implementación técnica limpia que asegure una navegación fluida en cualquier dispositivo. |
+| **Foto** | <img src="img/team-members/JuanManuel.png" alt="Fotografía de Juan Manuel Santos Torres" width="140"> |
 
 ---
 
@@ -382,15 +382,15 @@ FleetSafe busca centralizar esta información y permitir la toma de decisiones p
 
 #### Análisis 5W + 2H
 
-| Pregunta                                   | Descripción                                                                                                                                                                                                            |
-|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Who - ¿Quiénes están involucrados?**     | Empresas de transporte de carga, supervisores de flota y conductores de vehículos de carga.                                                                                                                            |
-| **What - ¿Cuál es el problema?**           | Las empresas pueden tener dificultades para controlar de manera centralizada las condiciones de seguridad, documentación, inspecciones e incidencias de sus vehículos.                                                 |
-| **Where - ¿Dónde ocurre?**                 | En el proceso de control preventivo de los vehículos de transporte de carga, principalmente antes de iniciar una operación.                                                                                            |
-| **When - ¿Cuándo ocurre?**                 | Durante las inspecciones preoperacionales y el seguimiento posterior de las condiciones e incidencias de los vehículos.                                                                                                |
-| **Why - ¿Por qué representa un problema?** | Porque el uso de formatos físicos, hojas de cálculo o procesos dispersos dificulta conocer rápidamente el estado preventivo de las unidades y determinar cuáles cumplen las condiciones necesarias para operar.        |
-| **How - ¿Cómo se presenta el problema?**   | Mediante información distribuida entre diferentes formatos o procesos, dificultando la consulta de inspecciones, problemas detectados, riesgos, documentos próximos a vencer e incidencias pendientes.                 |
-| **How Much - ¿Cuál es su impacto?**        | La propuesta inicial no establece una medida cuantitativa del impacto. Sin embargo, identifica dificultades para conocer rápidamente el estado de los vehículos y tomar decisiones preventivas antes de una operación. |
+| Pregunta | Descripción |
+|---|---|
+| **Who - ¿Quiénes están involucrados?** | Empresas de transporte de carga, supervisores de flota y conductores de vehículos de carga. |
+| **What - ¿Cuál es el problema?** | Las empresas pueden tener dificultades para controlar de manera centralizada las condiciones de seguridad, documentación, inspecciones e incidencias de sus vehículos. |
+| **Where - ¿Dónde ocurre?** | En el proceso de control preventivo de los vehículos de transporte de carga, principalmente antes de iniciar una operación. |
+| **When - ¿Cuándo ocurre?** | Durante las inspecciones preoperacionales y el seguimiento posterior de las condiciones e incidencias de los vehículos. |
+| **Why - ¿Por qué representa un problema?** | Porque el uso de formatos físicos, hojas de cálculo o procesos dispersos dificulta conocer rápidamente el estado preventivo de las unidades y determinar cuáles cumplen las condiciones necesarias para operar. |
+| **How - ¿Cómo se presenta el problema?** | Mediante información distribuida entre diferentes formatos o procesos, dificultando la consulta de inspecciones, problemas detectados, riesgos, documentos próximos a vencer e incidencias pendientes. |
+| **How Much - ¿Cuál es su impacto?** | La propuesta inicial no establece una medida cuantitativa del impacto. Sin embargo, identifica dificultades para conocer rápidamente el estado de los vehículos y tomar decisiones preventivas antes de una operación. |
 
 #### Enunciado del problema
 
@@ -630,11 +630,11 @@ Son los usuarios que realizan las inspecciones preoperacionales de los vehículo
 
 A partir de la relación de cada segmento con las funciones principales de FleetSafe, se establece inicialmente la siguiente priorización:
 
-| Segmento                               | Relación con FleetSafe                                                                                                     | Prioridad inicial     |
-|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------------------|
-| **Supervisores de flota**              | Revisan el estado de los vehículos, consultan inspecciones, gestionan incidencias y verifican las unidades habilitadas.    | Muy alta              |
-| **Conductores de vehículos de carga**  | Realizan las inspecciones preoperacionales y registran observaciones o evidencias.                                         | Muy alta              |
-| **Empresas de transporte de carga**    | Utilizan una flota de vehículos y necesitan controlar su condición de seguridad, documentación y mantenimiento preventivo. | Alta                  |
+| Segmento | Relación con FleetSafe | Prioridad inicial |
+|---|---|---|
+| **Supervisores de flota** | Revisan el estado de los vehículos, consultan inspecciones, gestionan incidencias y verifican las unidades habilitadas. | Muy alta |
+| **Conductores de vehículos de carga** | Realizan las inspecciones preoperacionales y registran observaciones o evidencias. | Muy alta |
+| **Empresas de transporte de carga** | Utilizan una flota de vehículos y necesitan controlar su condición de seguridad, documentación y mantenimiento preventivo. | Alta |
 
 Los **supervisores de flota** y los **conductores de vehículos de carga** serán considerados inicialmente los principales usuarios de la aplicación debido a su participación directa en el control preventivo de los vehículos.
 
@@ -664,7 +664,7 @@ Con la finalidad de comprender el entorno competitivo en el cual se desarrollar�
 El análisis del entorno competitivo permitió identificar **tres capas de competencia** con características distintas:
 
 | Capa | Quiénes | Relación con FleetSafe |
-|:-----|:--------|:-----------------------|
+|:---|:---|:---|
 | **Competidores directos** | Fleetio, Whip Around, Vehicheck, Verizon Connect | Digitalizan la inspección de vehículos y, en distintos grados, determinan si la unidad puede operar |
 | **Competidores indirectos** | Proveedores de telemática y gestión de flotas en Perú; plataformas genéricas de formularios digitales | Resuelven problemas adyacentes —rastreo, mantenimiento, digitalización de formatos— sin llegar a la habilitación operativa |
 | **Alternativa vigente** | Formatos físicos, hojas de cálculo y formularios genéricos | Es la práctica actual en la mayoría de empresas y, en la práctica, la opción con la que se compara la adopción de FleetSafe |
@@ -754,7 +754,7 @@ El análisis competitivo tiene como objetivo que BitMeisters conozca mejor a sus
 El análisis competitivo permitió identificar un patrón determinante: **las soluciones existentes se construyen alrededor del marco normativo del país al que se dirigen**, porque de ese marco depende la evidencia que el cliente y el ente fiscalizador exigen.
 
 | Solución | Marco de cumplimiento sobre el que está construida |
-|:---------|:----------------------------------------------------|
+|:---|:---|
 | Fleetio, Whip Around, Verizon Connect | *Driver Vehicle Inspection Report* y normativa federal de los Estados Unidos |
 | Vehicheck | Plan Estratégico de Seguridad Vial (PESV) de Colombia |
 | Proveedores peruanos de telemática | Rastreo y mantenimiento; no abordan la habilitación operativa |
@@ -850,18 +850,18 @@ Las preguntas evitarán presentar inicialmente FleetSafe o sugerir una determina
 
 Estas preguntas se realizarán a todos los participantes y permitirán recopilar información necesaria para la posterior construcción de los User Personas.
 
-| #    | Pregunta                                                                                        |
-|------|-------------------------------------------------------------------------------------------------|
-| 1    | ¿Cuál es su edad?                                                                               |
-| 2    | ¿En qué distrito reside?                                                                        |
-| 3    | ¿Cuál es su ocupación y qué función realiza actualmente?                                        |
-| 4    | ¿Cuánto tiempo lleva realizando esta actividad?                                                 |
-| 5    | ¿Con quiénes suele coordinar durante su jornada de trabajo?                                     |
-| 6    | ¿Qué dispositivos tecnológicos utiliza con mayor frecuencia?                                    |
-| 7    | ¿Qué aplicaciones o servicios digitales utiliza habitualmente para trabajar o comunicarse?      |
-| 8    | ¿Desde qué dispositivo suele acceder a estos servicios: computadora, smartphone, tablet u otro? |
-| 9    | ¿Qué tan cómodo se siente utilizando nuevas aplicaciones o herramientas digitales?              |
-| 10   | ¿Qué es lo que más valora en una herramienta tecnológica utilizada para su trabajo?             |
+| # | Pregunta |
+|---|---|
+| 1 | ¿Cuál es su edad? |
+| 2 | ¿En qué distrito reside? |
+| 3 | ¿Cuál es su ocupación y qué función realiza actualmente? |
+| 4 | ¿Cuánto tiempo lleva realizando esta actividad? |
+| 5 | ¿Con quiénes suele coordinar durante su jornada de trabajo? |
+| 6 | ¿Qué dispositivos tecnológicos utiliza con mayor frecuencia? |
+| 7 | ¿Qué aplicaciones o servicios digitales utiliza habitualmente para trabajar o comunicarse? |
+| 8 | ¿Desde qué dispositivo suele acceder a estos servicios: computadora, smartphone, tablet u otro? |
+| 9 | ¿Qué tan cómodo se siente utilizando nuevas aplicaciones o herramientas digitales? |
+| 10 | ¿Qué es lo que más valora en una herramienta tecnológica utilizada para su trabajo? |
 
 ---
 
@@ -1389,58 +1389,58 @@ Este glosario busca establecer una terminología común entre los miembros del e
 
 **Términos del control de flota**
 
-| Término                                                | Definición                                                                                                                                                                   |
-|:-------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Fleet** (Flota)                                      | Conjunto de vehículos de transporte de carga administrados por una empresa para realizar sus operaciones.                                                                    |
-| **Vehicle** (Vehículo)                                 | Unidad de transporte de carga que forma parte de una flota y cuya condición de seguridad debe ser controlada antes de iniciar una operación.                                 |
-| **Driver** (Conductor)                                 | Persona responsable de operar un vehículo de transporte de carga y realizar las inspecciones preventivas correspondientes antes de iniciar una operación.                    |
-| **Fleet Supervisor** (Supervisor de flota)             | Persona responsable de revisar el estado de los vehículos, consultar las inspecciones, gestionar incidencias y verificar qué unidades se encuentran habilitadas para operar. |
-| **Operating Condition** (Condición operativa)          | Estado en el que se encuentra un vehículo respecto al cumplimiento de las condiciones necesarias para realizar una operación de transporte de forma segura.                  |
-| **Operational Authorization** (Habilitación operativa) | Determinación de que un vehículo cumple las condiciones establecidas y puede iniciar una operación de transporte.                                                            |
+| Término | Definición |
+|:---|:---|
+| **Fleet** (Flota) | Conjunto de vehículos de transporte de carga administrados por una empresa para realizar sus operaciones. |
+| **Vehicle** (Vehículo) | Unidad de transporte de carga que forma parte de una flota y cuya condición de seguridad debe ser controlada antes de iniciar una operación. |
+| **Driver** (Conductor) | Persona responsable de operar un vehículo de transporte de carga y realizar las inspecciones preventivas correspondientes antes de iniciar una operación. |
+| **Fleet Supervisor** (Supervisor de flota) | Persona responsable de revisar el estado de los vehículos, consultar las inspecciones, gestionar incidencias y verificar qué unidades se encuentran habilitadas para operar. |
+| **Operating Condition** (Condición operativa) | Estado en el que se encuentra un vehículo respecto al cumplimiento de las condiciones necesarias para realizar una operación de transporte de forma segura. |
+| **Operational Authorization** (Habilitación operativa) | Determinación de que un vehículo cumple las condiciones establecidas y puede iniciar una operación de transporte. |
 
 **Términos de inspección preventiva**
 
-| Término                                                    | Definición                                                                                                                                                          |
-|:-----------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Pre-Operational Inspection** (Inspección preoperacional) | Revisión realizada antes de iniciar una operación para verificar las condiciones de seguridad y operación de un vehículo.                                           |
-| **Inspection Item** (Elemento de inspección)               | Componente, elemento de seguridad o aspecto de documentación que debe ser revisado durante una inspección.                                                          |
-| **Safety Component** (Elemento de seguridad)               | Elemento del vehículo cuya condición puede afectar directamente la seguridad de la operación y que debe ser verificado durante la inspección.                       |
-| **Inspection Result** (Resultado de inspección)            | Resultado obtenido para cada elemento revisado durante una inspección, indicando la condición encontrada.                                                           |
-| **Inspection** (Inspección)                                | Registro de la revisión realizada a un vehículo, incluyendo los elementos evaluados, sus resultados, observaciones y evidencias cuando corresponda.                 |
-| **Observation** (Observación)                              | Descripción realizada por el conductor o supervisor sobre una condición detectada durante la inspección que requiere ser considerada en la evaluación del vehículo. |
-| **Evidence** (Evidencia)                                   | Registro que permite respaldar una condición detectada durante una inspección, como una fotografía u otra información asociada al problema identificado.            |
+| Término | Definición |
+|:---|:---|
+| **Pre-Operational Inspection** (Inspección preoperacional) | Revisión realizada antes de iniciar una operación para verificar las condiciones de seguridad y operación de un vehículo. |
+| **Inspection Item** (Elemento de inspección) | Componente, elemento de seguridad o aspecto de documentación que debe ser revisado durante una inspección. |
+| **Safety Component** (Elemento de seguridad) | Elemento del vehículo cuya condición puede afectar directamente la seguridad de la operación y que debe ser verificado durante la inspección. |
+| **Inspection Result** (Resultado de inspección) | Resultado obtenido para cada elemento revisado durante una inspección, indicando la condición encontrada. |
+| **Inspection** (Inspección) | Registro de la revisión realizada a un vehículo, incluyendo los elementos evaluados, sus resultados, observaciones y evidencias cuando corresponda. |
+| **Observation** (Observación) | Descripción realizada por el conductor o supervisor sobre una condición detectada durante la inspección que requiere ser considerada en la evaluación del vehículo. |
+| **Evidence** (Evidencia) | Registro que permite respaldar una condición detectada durante una inspección, como una fotografía u otra información asociada al problema identificado. |
 
 **Términos de evaluación y seguridad**
 
-| Término                                       | Definición                                                                                                                                                          |
-|:----------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Safety Condition** (Condición de seguridad) | Estado de un elemento del vehículo respecto al cumplimiento de las condiciones necesarias para operar de manera segura.                                             |
-| **Risk** (Riesgo)                             | Situación o condición detectada en un vehículo que puede afectar la seguridad de la operación.                                                                      |
-| **Evaluation Rule** (Regla de evaluación)     | Criterio establecido para determinar cómo una condición detectada durante una inspección afecta el estado del vehículo.                                             |
-| **Vehicle Status** (Estado del vehículo)      | Clasificación resultante de la evaluación de una inspección, que determina la condición operativa del vehículo.                                                     |
-| **Enabled** (Habilitado)                      | Estado de un vehículo que cumple las condiciones necesarias para realizar una operación.                                                                            |
-| **Observed** (Observado)                      | Estado de un vehículo que presenta condiciones que requieren atención o seguimiento, pero que no necesariamente impiden su operación según las reglas establecidas. |
-| **Not Enabled** (No habilitado)               | Estado de un vehículo que presenta una condición que impide que sea considerado apto para operar.                                                                   |
+| Término | Definición |
+|:---|:---|
+| **Safety Condition** (Condición de seguridad) | Estado de un elemento del vehículo respecto al cumplimiento de las condiciones necesarias para operar de manera segura. |
+| **Risk** (Riesgo) | Situación o condición detectada en un vehículo que puede afectar la seguridad de la operación. |
+| **Evaluation Rule** (Regla de evaluación) | Criterio establecido para determinar cómo una condición detectada durante una inspección afecta el estado del vehículo. |
+| **Vehicle Status** (Estado del vehículo) | Clasificación resultante de la evaluación de una inspección, que determina la condición operativa del vehículo. |
+| **Enabled** (Habilitado) | Estado de un vehículo que cumple las condiciones necesarias para realizar una operación. |
+| **Observed** (Observado) | Estado de un vehículo que presenta condiciones que requieren atención o seguimiento, pero que no necesariamente impiden su operación según las reglas establecidas. |
+| **Not Enabled** (No habilitado) | Estado de un vehículo que presenta una condición que impide que sea considerado apto para operar. |
 
 **Términos de gestión de incidencias**
 
-| Término                                            | Definición                                                                                                                                    |
-|:---------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Incident** (Incidencia)                          | Problema detectado en un vehículo durante una inspección o durante su operación que requiere registro, revisión o seguimiento.                |
-| **Incident Type** (Tipo de incidencia)             | Clasificación utilizada para identificar la naturaleza de una incidencia detectada en un vehículo.                                            |
-| **Corrective Action** (Acción correctiva)          | Acción realizada para solucionar o reducir el efecto de una condición o problema detectado en un vehículo.                                    |
-| **Repair** (Reparación)                            | Trabajo realizado sobre un vehículo para corregir una condición que afecta su seguridad o capacidad de operación.                             |
-| **Incident Status** (Estado de incidencia)         | Estado que indica la situación actual de una incidencia, desde su registro hasta su resolución.                                               |
+| Término | Definición |
+|:---|:---|
+| **Incident** (Incidencia) | Problema detectado en un vehículo durante una inspección o durante su operación que requiere registro, revisión o seguimiento. |
+| **Incident Type** (Tipo de incidencia) | Clasificación utilizada para identificar la naturaleza de una incidencia detectada en un vehículo. |
+| **Corrective Action** (Acción correctiva) | Acción realizada para solucionar o reducir el efecto de una condición o problema detectado en un vehículo. |
+| **Repair** (Reparación) | Trabajo realizado sobre un vehículo para corregir una condición que afecta su seguridad o capacidad de operación. |
+| **Incident Status** (Estado de incidencia) | Estado que indica la situación actual de una incidencia, desde su registro hasta su resolución. |
 | **Incident Follow-up** (Seguimiento de incidencia) | Proceso mediante el cual el supervisor revisa una incidencia, registra las acciones realizadas y verifica si el problema ha sido solucionado. |
-| **Resolution** (Resolución)                        | Resultado final de la gestión de una incidencia, indicando la acción adoptada para solucionar el problema identificado.                       |
+| **Resolution** (Resolución) | Resultado final de la gestión de una incidencia, indicando la acción adoptada para solucionar el problema identificado. |
 
 **Términos de documentación vehicular**
 
-| Término                                            | Definición                                                                                                                                |
-|:---------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-| **Vehicle Document** (Documento vehicular)         | Documento relacionado con un vehículo que debe mantenerse vigente para cumplir las condiciones establecidas para su operación.            |
+| Término | Definición |
+|:---|:---|
+| **Vehicle Document** (Documento vehicular) | Documento relacionado con un vehículo que debe mantenerse vigente para cumplir las condiciones establecidas para su operación. |
 | **Document Expiration** (Vencimiento de documento) | Fecha en la que un documento vehicular deja de encontrarse vigente y puede requerir atención antes de permitir la operación del vehículo. |
-| **Document Status** (Estado del documento)         | Condición que indica si un documento vehicular se encuentra vigente, próximo a vencer o vencido.                                          |
+| **Document Status** (Estado del documento) | Condición que indica si un documento vehicular se encuentra vigente, próximo a vencer o vencido. |
 
 <hr>
 
@@ -1485,62 +1485,62 @@ Servicios RESTful que exponen la lógica de negocio de FleetSafe.
 
 A continuación se presenta el cuadro consolidado de Epics y User Stories:
 
-| Epic / Story ID | Título | Descripción | Criterios de Aceptación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Relacionado con (Epic ID) |
-|:----------------|:-------|:------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------|
-| EP01 | Landing Page | Como visitante, deseo acceder a un sitio web informativo que me permita conocer FleetSafe, sus funcionalidades y beneficios, para evaluar si la solución se ajusta a las necesidades de mi empresa. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US01 | Visualizar página de inicio | Como Visitor, deseo conocer la propuesta de valor de FleetSafe para comprender el propósito de la solución. | **Escenario 1:** Dado que el visitante accede al sitio de FleetSafe, cuando el contenido informativo está disponible, entonces se proporciona información sobre la propuesta de valor de FleetSafe.<br>**Escenario 2:** Dado que el sitio contiene información sobre FleetSafe, cuando el visitante consulta su contenido principal, entonces se proporcionan sus beneficios, funcionalidades y medios de contacto.                                                                                                                                                                                                                                                                                                                                          | EP01 |
-| US02 | Conocer funcionalidades del producto | Como visitante, deseo conocer las funcionalidades principales de FleetSafe para determinar si cubren las necesidades de control preventivo de mi flota. | **Escenario 1:** Dado que el Visitor consulta FleetSafe, cuando solicita información sobre sus funcionalidades, entonces se proporcionan las funcionalidades de inspección preoperacional, evaluación de condiciones, habilitación operativa y gestión de incidencias.<br>**Escenario 2:** Dado que el Visitor consulta una funcionalidad, cuando solicita información sobre ella, entonces se proporciona su propósito y beneficio para el control preventivo de la flota.                                                                                                                                                                                                                                                                                                      | EP01 |
-| US03 | Conocer beneficios por segmento | Como visitante del segmento empresa de transporte de carga, deseo conocer los beneficios de FleetSafe para mi tipo de organización para evaluar su adopción. | **Escenario 1:** Dado que el visitante pertenece a un segmento objetivo, cuando consulta los beneficios de FleetSafe, entonces se proporcionan beneficios relacionados con las necesidades de su segmento.<br>**Escenario 2:** Dado que existen los segmentos Administrator, Fleet Supervisor y Driver, cuando el visitante consulta sus beneficios, entonces se proporciona información diferenciada para cada segmento.                                                                                                                                                                                                                                                                                                                    | EP01 |
-| US04 | Solicitar contacto o demostración | Como visitante, deseo solicitar una demostración o contacto con el equipo de FleetSafe para recibir más información sobre la plataforma. | **Escenario 1:** Dado que el visitante proporciona datos válidos, cuando registra una solicitud de contacto o demostración, entonces la solicitud queda registrada correctamente.<br>**Escenario 2:** Dado que faltan datos obligatorios o contienen valores inválidos, cuando el visitante registra la solicitud, entonces el sistema rechaza el registro.                                                                                                                                                                                                                                                                                                                               | EP01 |
-| US05 | Navegar entre secciones | Como visitante, deseo navegar entre las secciones del sitio web para acceder rápidamente a la información que me interesa. | **Escenario 1:** Dado que existen diferentes contenidos informativos, cuando el visitante solicita una sección determinada, entonces se proporciona el contenido correspondiente.<br>**Escenario 2:** Dado que una sección solicitada no contiene información disponible, cuando el visitante la consulta, entonces el sistema indica que no existe contenido disponible.                                                                                                                                                                                                                                                                                                                                                     | EP01 |
-| US06 | Visualizar información de contacto y redes | Como visitante, deseo visualizar la información de contacto y redes sociales de FleetSafe para comunicarme con la empresa. | **Escenario 1:** Dado que FleetSafe tiene medios de contacto registrados, cuando el visitante solicita esta información, entonces se proporcionan los datos de contacto disponibles.<br>**Escenario 2:** Dado que FleetSafe tiene canales externos registrados, cuando el visitante solicita estos canales, entonces se proporcionan referencias válidas a dichos canales.                                                                                                                                                                                                                                                                                                                                                                                                  | EP01 |
-| EP02 | Gestión de Usuarios y Roles | Como administrador, deseo gestionar los usuarios y roles de la plataforma para controlar el acceso a las funcionalidades de FleetSafe. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US07 | Registrar nuevo usuario | Como administrador, deseo registrar nuevos usuarios en la plataforma para que puedan acceder a las funcionalidades según su rol. | **Escenario 1:** Dado que el administrador ingresa los datos requeridos de un nuevo usuario, cuando confirma el registro, entonces el sistema crea el usuario y le asigna el rol seleccionado.<br>**Escenario 2:** Dado que el administrador intenta registrar un usuario con un correo ya existente, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que el correo ya está registrado.                                                                                                                                                                                                                                                                                                     | EP02 |
-| US08 | Asignar rol a usuario | Como administrador, deseo asignar roles a los usuarios para definir sus permisos dentro de la plataforma. | **Escenario 1:** Dado que el administrador selecciona un usuario existente, cuando le asigna uno de los roles Administrador, Supervisor de flota o Conductor, entonces el sistema actualiza el rol del usuario.<br>**Escenario 2:** Dado que el administrador intenta asignar un rol inválido, cuando confirma la acción, entonces el sistema rechaza la operación y muestra un mensaje de error.                                                                                                                                                                                                                                                                                                                                                | EP02 |
-| US09 | Iniciar sesión | Como usuario, deseo iniciar sesión en la plataforma para acceder a las funcionalidades según mi rol. | **Escenario 1:** Dado que el usuario ingresa credenciales válidas, cuando confirma el inicio de sesión, entonces el sistema le otorga acceso a la plataforma y muestra las funcionalidades correspondientes a su rol.<br>**Escenario 2:** Dado que el usuario ingresa credenciales inválidas, cuando confirma el inicio de sesión, entonces el sistema rechaza el acceso y muestra un mensaje de error.                                                                                                                                                                                                                                                                                                                                          | EP02 |
-| US10 | Cerrar sesión | Como usuario, deseo cerrar sesión en la plataforma para proteger el acceso a mi cuenta. | **Escenario 1:** Dado que el usuario se encuentra autenticado, cuando selecciona la opción de cerrar sesión, entonces el sistema finaliza la sesión y redirige a la pantalla de inicio de sesión.<br>**Escenario 2:** Dado que el usuario cerró sesión, cuando intenta acceder a una funcionalidad protegida, entonces el sistema solicita nuevamente autenticación.                                                                                                                                                                                                                                                                                                                                                                             | EP02 |
-| US11 | Consultar listado de usuarios | Como administrador, deseo consultar el listado de usuarios registrados para gestionar su información y roles. | **Escenario 1:** Dado que el administrador accede al módulo de usuarios, cuando la vista carga, entonces se muestra el listado de usuarios con su información básica y rol asignado.<br>**Escenario 2:** Dado que el administrador aplica un filtro por rol, cuando confirma el filtro, entonces el sistema muestra únicamente los usuarios que cumplen el criterio seleccionado.                                                                                                                                                                                                                                                                                                                                                                | EP02 |
-| EP03 | Gestión de Vehículos y Flota | Como supervisor de flota, deseo gestionar los vehículos de la flota para mantener actualizada la información de las unidades. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US12 | Registrar vehículo | Como supervisor de flota, deseo registrar nuevos vehículos en la plataforma para incorporarlos al control preventivo de la flota. | **Escenario 1:** Dado que el supervisor ingresa los datos requeridos de un vehículo, cuando confirma el registro, entonces el sistema crea el vehículo y lo asocia a la flota.<br>**Escenario 2:** Dado que el supervisor intenta registrar un vehículo con una placa ya existente, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la placa ya está registrada.                                                                                                                                                                                                                                                                                                                        | EP03 |
-| US13 | Consultar listado de vehículos | Como supervisor de flota, deseo consultar el listado de vehículos de la flota para conocer las unidades disponibles. | **Escenario 1:** Dado que el supervisor accede al módulo de vehículos, cuando la vista carga, entonces se muestra el listado de vehículos con su información básica y estado actual.<br>**Escenario 2:** Dado que el supervisor aplica un filtro por estado, cuando confirma el filtro, entonces el sistema muestra únicamente los vehículos que cumplen el criterio seleccionado.                                                                                                                                                                                                                                                                                                                                                               | EP03 |
-| US14 | Consultar detalle de vehículo | Como supervisor de flota, deseo consultar el detalle de un vehículo para conocer su información, estado e historial. | **Escenario 1:** Dado que el supervisor selecciona un vehículo del listado, cuando la vista carga, entonces se muestra la información completa del vehículo, su estado actual y su historial de inspecciones.<br>**Escenario 2:** Dado que el vehículo no tiene inspecciones registradas, cuando el supervisor consulta su detalle, entonces el sistema muestra un mensaje indicando que no existen inspecciones registradas.                                                                                                                                                                                                                                                                                                                    | EP03 |
-| US15 | Actualizar información de vehículo | Como supervisor de flota, deseo actualizar la información de un vehículo para mantener sus datos vigentes. | **Escenario 1:** Dado que el supervisor modifica los datos de un vehículo existente, cuando confirma la actualización, entonces el sistema guarda los cambios realizados.<br>**Escenario 2:** Dado que el supervisor ingresa datos inválidos, cuando confirma la actualización, entonces el sistema rechaza la operación y muestra un mensaje de error.                                                                                                                                                                                                                                                                                                                                                                                          | EP03 |
-| US16 | Asignar vehículo a conductor | Como supervisor de flota, deseo asignar un vehículo a un conductor para que este pueda realizar la inspección preoperacional correspondiente. | **Escenario 1:** Dado que el supervisor selecciona un vehículo y un conductor, cuando confirma la asignación, entonces el sistema registra la asignación y el conductor puede acceder al vehículo asignado.<br>**Escenario 2:** Dado que el supervisor intenta asignar un vehículo no habilitado a un conductor, cuando confirma la asignación, entonces el sistema rechaza la operación y muestra un mensaje indicando que el vehículo no se encuentra habilitado.                                                                                                                                                                                                                                                                              | EP03 |
-| EP04 | Inspección Preoperacional | Como conductor, deseo realizar inspecciones preoperacionales digitales de los vehículos asignados para registrar su estado antes de iniciar una operación. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US17 | Iniciar inspección preoperacional | Como conductor, deseo iniciar una inspección preoperacional de un vehículo asignado para registrar su estado antes de operar. | **Escenario 1:** Dado que el conductor tiene un vehículo asignado y selecciona la opción de iniciar inspección, cuando la inspección se crea, entonces el sistema genera un registro de inspección en estado "en progreso".<br>**Escenario 2:** Dado que el conductor ya tiene una inspección en progreso para el mismo vehículo, cuando intenta iniciar una nueva inspección, entonces el sistema rechaza la operación y muestra un mensaje indicando que existe una inspección en progreso.                                                                                                                                                                                                                                                    | EP04 |
-| US18 | Registrar estado de elementos de inspección | Como conductor, deseo registrar el estado de los elementos de inspección para documentar las condiciones encontradas en el vehículo. | **Escenario 1:** Dado que el conductor se encuentra realizando una inspección, cuando registra el estado de un elemento como conforme, entonces el sistema almacena el resultado asociado a la inspección.<br>**Escenario 2:** Dado que el conductor registra el estado de un elemento como no conforme, cuando confirma el registro, entonces el sistema solicita una observación o evidencia que respalde la condición detectada.                                                                                                                                                                                                                                                                                                              | EP04 |
-| US19 | Registrar observaciones | Como conductor, deseo registrar observaciones durante la inspección para describir las condiciones detectadas que requieren atención. | **Escenario 1:** Dado que el conductor se encuentra realizando una inspección, cuando ingresa una observación y confirma el registro, entonces el sistema almacena la observación asociada a la inspección.<br>**Escenario 2:** Dado que el conductor intenta registrar una observación vacía, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la observación no puede estar vacía.                                                                                                                                                                                                                                                                                                     | EP04 |
-| US20 | Adjuntar evidencia fotográfica | Como conductor, deseo adjuntar evidencia fotográfica durante la inspección para respaldar las condiciones detectadas. | **Escenario 1:** Dado que el conductor se encuentra realizando una inspección, cuando adjunta una imagen válida y confirma el registro, entonces el sistema almacena la evidencia asociada a la inspección.<br>**Escenario 2:** Dado que el conductor intenta adjuntar un archivo con formato no permitido, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando los formatos permitidos.                                                                                                                                                                                                                                                                                                        | EP04 |
-| US21 | Finalizar inspección preoperacional | Como conductor, deseo finalizar la inspección preoperacional para que el sistema evalúe las condiciones del vehículo. | **Escenario 1:** Dado que el conductor completó todos los elementos de inspección, cuando confirma la finalización, entonces el sistema cambia el estado de la inspección a "completada" e inicia la evaluación del vehículo.<br>**Escenario 2:** Dado que el conductor no completó todos los elementos de inspección, cuando intenta finalizar, entonces el sistema rechaza la operación y muestra un mensaje indicando los elementos pendientes.                                                                                                                                                                                                                                                                                               | EP04 |
-| US22 | Consultar inspecciones realizadas | Como conductor, deseo consultar las inspecciones que he realizado para revisar su estado y resultados. | **Escenario 1:** Dado que el conductor accede al listado de sus inspecciones, cuando la vista carga, entonces se muestra el listado de inspecciones realizadas con su fecha, vehículo y estado.<br>**Escenario 2:** Dado que el conductor selecciona una inspección, cuando la vista carga, entonces se muestra el detalle de la inspección con los resultados registrados.                                                                                                                                                                                                                                                                                                                                                                      | EP04 |
-| EP05 | Evaluación y Habilitación Operativa | Como sistema, se desea evaluar los resultados de las inspecciones preoperacionales y determinar la condición operativa del vehículo. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US23 | Evaluar resultados de inspección | Como sistema, se desea evaluar los resultados de una inspección preoperacional de acuerdo con las reglas establecidas para determinar la condición del vehículo. | **Escenario 1:** Dado que una inspección ha sido finalizada, cuando el sistema procesa sus resultados aplicando las reglas de evaluación, entonces determina la condición del vehículo.<br>**Escenario 2:** Dado que la inspección contiene al menos un elemento no conforme asociado a una regla de no habilitación, cuando el sistema evalúa los resultados, entonces determina que el vehículo se encuentra no habilitado.                                                                                                                                                                                                                                                                                                                    | EP05 |
-| US24 | Determinar estado del vehículo | Como sistema, se desea determinar si un vehículo se encuentra habilitado, observado o no habilitado para operar a partir de la evaluación de la inspección. | **Escenario 1:** Dado que la evaluación de la inspección no identificó condiciones de riesgo, cuando el sistema determina el estado, entonces el vehículo se clasifica como habilitado.<br>**Escenario 2:** Dado que la evaluación identificó condiciones que requieren atención pero no impiden la operación, cuando el sistema determina el estado, entonces el vehículo se clasifica como observado.<br>**Escenario 3:** Dado que la evaluación identificó condiciones que impiden la operación, cuando el sistema determina el estado, entonces el vehículo se clasifica como no habilitado.                                                                                                                                                 | EP05 |
-| US25 | Consultar vehículos por estado | Como supervisor de flota, deseo consultar los vehículos según su estado de habilitación para identificar rápidamente las unidades que pueden operar. | **Escenario 1:** Dado que el supervisor accede al módulo de estados, cuando la vista carga, entonces se muestra el listado de vehículos agrupados por estado habilitado, observado y no habilitado.<br>**Escenario 2:** Dado que el supervisor aplica un filtro por estado, cuando confirma el filtro, entonces el sistema muestra únicamente los vehículos que se encuentran en el estado seleccionado.                                                                                                                                                                                                                                                                                                                                         | EP05 |
-| US26 | Reevaluar vehículo tras acción correctiva | Como supervisor de flota, deseo reevaluar un vehículo después de aplicar una acción correctiva para verificar si ha recuperado su condición operativa. | **Escenario 1:** Dado que un vehículo se encuentra no habilitado y se registra una acción correctiva, cuando el supervisor solicita la reevaluación, entonces el sistema actualiza el estado del vehículo según los resultados de la nueva evaluación.<br>**Escenario 2:** Dado que el vehículo aún presenta condiciones que impiden la operación, cuando el sistema reevalúa, entonces el vehículo mantiene el estado no habilitado.                                                                                                                                                                                                                                                                                                            | EP05 |
-| EP06 | Gestión de Incidencias | Como supervisor de flota, deseo gestionar las incidencias detectadas en los vehículos para realizar su seguimiento hasta su resolución. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US27 | Registrar incidencia | Como conductor, deseo registrar una incidencia cuando detecto un problema en el vehículo para que sea atendida por el supervisor. | **Escenario 1:** Dado que el conductor detecta un problema durante la inspección, cuando registra la incidencia con su descripción y tipo, entonces el sistema crea la incidencia asociada al vehículo y a la inspección.<br>**Escenario 2:** Dado que el conductor intenta registrar una incidencia sin descripción, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la descripción es obligatoria.                                                                                                                                                                                                                                                                                    | EP06 |
-| US28 | Consultar incidencias registradas | Como supervisor de flota, deseo consultar las incidencias registradas para conocer los problemas detectados en los vehículos. | **Escenario 1:** Dado que el supervisor accede al módulo de incidencias, cuando la vista carga, entonces se muestra el listado de incidencias con su estado, vehículo asociado y fecha de registro.<br>**Escenario 2:** Dado que el supervisor aplica un filtro por estado o por vehículo, cuando confirma el filtro, entonces el sistema muestra únicamente las incidencias que cumplen el criterio seleccionado.                                                                                                                                                                                                                                                                                                                               | EP06 |
-| US29 | Actualizar estado de incidencia | Como supervisor de flota, deseo actualizar el estado de una incidencia para reflejar su avance en el proceso de resolución. | **Escenario 1:** Dado que el supervisor selecciona una incidencia registrada, cuando actualiza su estado a "en revisión", entonces el sistema guarda el nuevo estado de la incidencia.<br>**Escenario 2:** Dado que el supervisor intenta actualizar una incidencia ya resuelta, cuando confirma la operación, entonces el sistema rechaza la actualización y muestra un mensaje indicando que la incidencia se encuentra cerrada.                                                                                                                                                                                                                                                                                                               | EP06 |
-| US30 | Registrar acción correctiva | Como supervisor de flota, deseo registrar la acción correctiva aplicada a una incidencia para documentar la solución del problema detectado. | **Escenario 1:** Dado que el supervisor selecciona una incidencia en revisión, cuando registra la acción correctiva realizada y confirma, entonces el sistema almacena la acción asociada a la incidencia.<br>**Escenario 2:** Dado que el supervisor registra la acción correctiva, cuando confirma la resolución de la incidencia, entonces el sistema cambia el estado de la incidencia a "resuelta".                                                                                                                                                                                                                                                                                                                                         | EP06 |
-| US31 | Consultar historial de incidencias por vehículo | Como supervisor de flota, deseo consultar el historial de incidencias de un vehículo para conocer los problemas recurrentes y su resolución. | **Escenario 1:** Dado que el supervisor consulta el detalle de un vehículo, cuando accede a la sección de incidencias, entonces se muestra el historial de incidencias asociadas al vehículo con su estado y resolución.<br>**Escenario 2:** Dado que el vehículo no tiene incidencias registradas, cuando el supervisor consulta su historial, entonces el sistema muestra un mensaje indicando que no existen incidencias registradas.                                                                                                                                                                                                                                                                                                         | EP06 |
-| EP07 | Documentación Vehicular | Como supervisor de flota, deseo gestionar la documentación vehicular para controlar la vigencia de los documentos requeridos para operar. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US32 | Registrar documento vehicular | Como supervisor de flota, deseo registrar los documentos asociados a un vehículo para mantener actualizada su información documentaria. | **Escenario 1:** Dado que el supervisor ingresa los datos de un documento vehicular, cuando confirma el registro, entonces el sistema almacena el documento asociado al vehículo.<br>**Escenario 2:** Dado que el supervisor intenta registrar un documento sin fecha de vencimiento, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la fecha es obligatoria.                                                                                                                                                                                                                                                                                                                          | EP07 |
-| US33 | Consultar documentos próximos a vencer | Como supervisor de flota, deseo consultar los documentos próximos a vencer para tomar acciones preventivas antes de su vencimiento. | **Escenario 1:** Dado que el supervisor accede al módulo de documentación, cuando la vista carga, entonces se muestra el listado de documentos con su estado de vigencia.<br>**Escenario 2:** Dado que un documento se encuentra próximo a vencer según el umbral establecido, cuando el supervisor consulta el listado, entonces el documento se muestra resaltado como próximo a vencer.                                                                                                                                                                                                                                                                                                                                                       | EP07 |
-| US34 | Actualizar documento vehicular | Como supervisor de flota, deseo actualizar la información de un documento vehicular para mantener su vigencia registrada en la plataforma. | **Escenario 1:** Dado que el supervisor modifica la fecha de vencimiento de un documento, cuando confirma la actualización, entonces el sistema guarda los cambios y recalcula su estado de vigencia.<br>**Escenario 2:** Dado que el supervisor ingresa una fecha de vencimiento anterior a la fecha actual, cuando confirma la actualización, entonces el sistema marca el documento como vencido.                                                                                                                                                                                                                                                                                                                                             | EP07 |
-| EP08 | Historial y Reportes | Como supervisor de flota, deseo consultar el historial y los reportes de control preventivo para analizar el estado de la flota. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US35 | Consultar historial de inspecciones | Como supervisor de flota, deseo consultar el historial de inspecciones de un vehículo para conocer su evolución en el tiempo. | **Escenario 1:** Dado que el supervisor consulta el detalle de un vehículo, cuando accede a la sección de historial, entonces se muestra el listado de inspecciones realizadas con su fecha y resultado.<br>**Escenario 2:** Dado que el supervisor selecciona una inspección del historial, cuando la vista carga, entonces se muestra el detalle completo de la inspección seleccionada.                                                                                                                                                                                                                                                                                                                                                       | EP08 |
-| US36 | Generar reporte de estado de flota | Como supervisor de flota, deseo generar un reporte del estado de la flota para analizar la condición de los vehículos. | **Escenario 1:** Dado que el supervisor solicita un reporte de estado de flota, cuando el sistema procesa la solicitud, entonces se genera un reporte con la clasificación de vehículos por estado.<br>**Escenario 2:** Dado que el supervisor aplica un rango de fechas al reporte, cuando el sistema procesa la solicitud, entonces el reporte considera únicamente la información del periodo seleccionado.                                                                                                                                                                                                                                                                                                                                   | EP08 |
-| US37 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | **Escenario 1:** Dado que el supervisor consulta el detalle de un vehículo, cuando accede a la sección de historial de estados, entonces se muestra la evolución de su estado a lo largo del tiempo.<br>**Escenario 2:** Dado que el vehículo cambió de estado tras una reevaluación, cuando el supervisor consulta el historial, entonces se muestra el cambio de estado registrado con su fecha.                                                                                                                                                                                                                                                                                                                                               | EP08 |
-| EP09 | Backend RESTful API | Como developer, se desea exponer los servicios RESTful que soportan las funcionalidades de FleetSafe. | No aplica (Epic)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | — |
-| US38 | API de autenticación | Como developer, se desea exponer un endpoint de autenticación para que los usuarios puedan iniciar sesión en la plataforma. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/auth/login` con credenciales válidas, cuando el servidor procesa la solicitud, entonces responde con código 200 y un token de acceso.<br>**Escenario 2:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/auth/login` con credenciales inválidas, cuando el servidor procesa la solicitud, entonces responde con código 401 y un mensaje de error.                                                                                                                                                                                                                                                                                      | EP09 |
-| US39 | API de gestión de usuarios | Como developer, se desea exponer endpoints CRUD para la gestión de usuarios. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/users` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos del usuario creado.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/users`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de usuarios.<br>**Escenario 3:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/users/{id}` con un identificador inexistente, cuando el servidor procesa la solicitud, entonces responde con código 404 y un mensaje de error.                                                                                | EP09 |
-| US40 | API de gestión de vehículos | Como developer, se desea exponer endpoints CRUD para la gestión de vehículos. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/vehicles` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos del vehículo creado.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles?status=NOT_ENABLED`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de vehículos con dicho estado.<br>**Escenario 3:** Dado que el developer envía una solicitud PUT al endpoint `/api/v1/vehicles/{id}` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 200 y los datos actualizados del vehículo.                                | EP09 |
-| US41 | API de inspecciones preoperacionales | Como developer, se desea exponer endpoints para el registro y consulta de inspecciones preoperacionales. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/inspections` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos de la inspección creada.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/inspections/{id}`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el detalle de la inspección.<br>**Escenario 3:** Dado que el developer envía una solicitud PATCH al endpoint `/api/v1/inspections/{id}/complete`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado actualizado de la inspección.                                                  | EP09 |
-| US42 | API de evaluación y habilitación | Como developer, se desea exponer endpoints para la evaluación de inspecciones y la consulta del estado de habilitación de vehículos. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/inspections/{id}/evaluate`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado determinado para el vehículo.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles/{id}/status`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado actual del vehículo.                                                                                                                                                                                                                                                                                    | EP09 |
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+|:---|:---|:---|:---|:---|
+| EP01 | Landing Page | Como visitante, deseo acceder a un sitio web informativo que me permita conocer FleetSafe, sus funcionalidades y beneficios, para evaluar si la solución se ajusta a las necesidades de mi empresa. | No aplica (Epic) | — |
+| US01 | Visualizar página de inicio | Como Visitor, deseo conocer la propuesta de valor de FleetSafe para comprender el propósito de la solución. | **Escenario 1:** Dado que el visitante accede al sitio de FleetSafe, cuando el contenido informativo está disponible, entonces se proporciona información sobre la propuesta de valor de FleetSafe.<br>**Escenario 2:** Dado que el sitio contiene información sobre FleetSafe, cuando el visitante consulta su contenido principal, entonces se proporcionan sus beneficios, funcionalidades y medios de contacto. | EP01 |
+| US02 | Conocer funcionalidades del producto | Como visitante, deseo conocer las funcionalidades principales de FleetSafe para determinar si cubren las necesidades de control preventivo de mi flota. | **Escenario 1:** Dado que el Visitor consulta FleetSafe, cuando solicita información sobre sus funcionalidades, entonces se proporcionan las funcionalidades de inspección preoperacional, evaluación de condiciones, habilitación operativa y gestión de incidencias.<br>**Escenario 2:** Dado que el Visitor consulta una funcionalidad, cuando solicita información sobre ella, entonces se proporciona su propósito y beneficio para el control preventivo de la flota. | EP01 |
+| US03 | Conocer beneficios por segmento | Como visitante del segmento empresa de transporte de carga, deseo conocer los beneficios de FleetSafe para mi tipo de organización para evaluar su adopción. | **Escenario 1:** Dado que el visitante pertenece a un segmento objetivo, cuando consulta los beneficios de FleetSafe, entonces se proporcionan beneficios relacionados con las necesidades de su segmento.<br>**Escenario 2:** Dado que existen los segmentos Administrator, Fleet Supervisor y Driver, cuando el visitante consulta sus beneficios, entonces se proporciona información diferenciada para cada segmento. | EP01 |
+| US04 | Solicitar contacto o demostración | Como visitante, deseo solicitar una demostración o contacto con el equipo de FleetSafe para recibir más información sobre la plataforma. | **Escenario 1:** Dado que el visitante proporciona datos válidos, cuando registra una solicitud de contacto o demostración, entonces la solicitud queda registrada correctamente.<br>**Escenario 2:** Dado que faltan datos obligatorios o contienen valores inválidos, cuando el visitante registra la solicitud, entonces el sistema rechaza el registro. | EP01 |
+| US05 | Navegar entre secciones | Como visitante, deseo navegar entre las secciones del sitio web para acceder rápidamente a la información que me interesa. | **Escenario 1:** Dado que existen diferentes contenidos informativos, cuando el visitante solicita una sección determinada, entonces se proporciona el contenido correspondiente.<br>**Escenario 2:** Dado que una sección solicitada no contiene información disponible, cuando el visitante la consulta, entonces el sistema indica que no existe contenido disponible. | EP01 |
+| US06 | Visualizar información de contacto y redes | Como visitante, deseo visualizar la información de contacto y redes sociales de FleetSafe para comunicarme con la empresa. | **Escenario 1:** Dado que FleetSafe tiene medios de contacto registrados, cuando el visitante solicita esta información, entonces se proporcionan los datos de contacto disponibles.<br>**Escenario 2:** Dado que FleetSafe tiene canales externos registrados, cuando el visitante solicita estos canales, entonces se proporcionan referencias válidas a dichos canales. | EP01 |
+| EP02 | Gestión de Usuarios y Roles | Como administrador, deseo gestionar los usuarios y roles de la plataforma para controlar el acceso a las funcionalidades de FleetSafe. | No aplica (Epic) | — |
+| US07 | Registrar nuevo usuario | Como administrador, deseo registrar nuevos usuarios en la plataforma para que puedan acceder a las funcionalidades según su rol. | **Escenario 1:** Dado que el administrador ingresa los datos requeridos de un nuevo usuario, cuando confirma el registro, entonces el sistema crea el usuario y le asigna el rol seleccionado.<br>**Escenario 2:** Dado que el administrador intenta registrar un usuario con un correo ya existente, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que el correo ya está registrado. | EP02 |
+| US08 | Asignar rol a usuario | Como administrador, deseo asignar roles a los usuarios para definir sus permisos dentro de la plataforma. | **Escenario 1:** Dado que el administrador selecciona un usuario existente, cuando le asigna uno de los roles Administrador, Supervisor de flota o Conductor, entonces el sistema actualiza el rol del usuario.<br>**Escenario 2:** Dado que el administrador intenta asignar un rol inválido, cuando confirma la acción, entonces el sistema rechaza la operación y muestra un mensaje de error. | EP02 |
+| US09 | Iniciar sesión | Como usuario, deseo iniciar sesión en la plataforma para acceder a las funcionalidades según mi rol. | **Escenario 1:** Dado que el usuario ingresa credenciales válidas, cuando confirma el inicio de sesión, entonces el sistema le otorga acceso a la plataforma y muestra las funcionalidades correspondientes a su rol.<br>**Escenario 2:** Dado que el usuario ingresa credenciales inválidas, cuando confirma el inicio de sesión, entonces el sistema rechaza el acceso y muestra un mensaje de error. | EP02 |
+| US10 | Cerrar sesión | Como usuario, deseo cerrar sesión en la plataforma para proteger el acceso a mi cuenta. | **Escenario 1:** Dado que el usuario se encuentra autenticado, cuando selecciona la opción de cerrar sesión, entonces el sistema finaliza la sesión y redirige a la pantalla de inicio de sesión.<br>**Escenario 2:** Dado que el usuario cerró sesión, cuando intenta acceder a una funcionalidad protegida, entonces el sistema solicita nuevamente autenticación. | EP02 |
+| US11 | Consultar listado de usuarios | Como administrador, deseo consultar el listado de usuarios registrados para gestionar su información y roles. | **Escenario 1:** Dado que el administrador accede al módulo de usuarios, cuando la vista carga, entonces se muestra el listado de usuarios con su información básica y rol asignado.<br>**Escenario 2:** Dado que el administrador aplica un filtro por rol, cuando confirma el filtro, entonces el sistema muestra únicamente los usuarios que cumplen el criterio seleccionado. | EP02 |
+| EP03 | Gestión de Vehículos y Flota | Como supervisor de flota, deseo gestionar los vehículos de la flota para mantener actualizada la información de las unidades. | No aplica (Epic) | — |
+| US12 | Registrar vehículo | Como supervisor de flota, deseo registrar nuevos vehículos en la plataforma para incorporarlos al control preventivo de la flota. | **Escenario 1:** Dado que el supervisor ingresa los datos requeridos de un vehículo, cuando confirma el registro, entonces el sistema crea el vehículo y lo asocia a la flota.<br>**Escenario 2:** Dado que el supervisor intenta registrar un vehículo con una placa ya existente, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la placa ya está registrada. | EP03 |
+| US13 | Consultar listado de vehículos | Como supervisor de flota, deseo consultar el listado de vehículos de la flota para conocer las unidades disponibles. | **Escenario 1:** Dado que el supervisor accede al módulo de vehículos, cuando la vista carga, entonces se muestra el listado de vehículos con su información básica y estado actual.<br>**Escenario 2:** Dado que el supervisor aplica un filtro por estado, cuando confirma el filtro, entonces el sistema muestra únicamente los vehículos que cumplen el criterio seleccionado. | EP03 |
+| US14 | Consultar detalle de vehículo | Como supervisor de flota, deseo consultar el detalle de un vehículo para conocer su información, estado e historial. | **Escenario 1:** Dado que el supervisor selecciona un vehículo del listado, cuando la vista carga, entonces se muestra la información completa del vehículo, su estado actual y su historial de inspecciones.<br>**Escenario 2:** Dado que el vehículo no tiene inspecciones registradas, cuando el supervisor consulta su detalle, entonces el sistema muestra un mensaje indicando que no existen inspecciones registradas. | EP03 |
+| US15 | Actualizar información de vehículo | Como supervisor de flota, deseo actualizar la información de un vehículo para mantener sus datos vigentes. | **Escenario 1:** Dado que el supervisor modifica los datos de un vehículo existente, cuando confirma la actualización, entonces el sistema guarda los cambios realizados.<br>**Escenario 2:** Dado que el supervisor ingresa datos inválidos, cuando confirma la actualización, entonces el sistema rechaza la operación y muestra un mensaje de error. | EP03 |
+| US16 | Asignar vehículo a conductor | Como supervisor de flota, deseo asignar un vehículo a un conductor para que este pueda realizar la inspección preoperacional correspondiente. | **Escenario 1:** Dado que el supervisor selecciona un vehículo y un conductor, cuando confirma la asignación, entonces el sistema registra la asignación y el conductor puede acceder al vehículo asignado.<br>**Escenario 2:** Dado que el supervisor intenta asignar un vehículo no habilitado a un conductor, cuando confirma la asignación, entonces el sistema rechaza la operación y muestra un mensaje indicando que el vehículo no se encuentra habilitado. | EP03 |
+| EP04 | Inspección Preoperacional | Como conductor, deseo realizar inspecciones preoperacionales digitales de los vehículos asignados para registrar su estado antes de iniciar una operación. | No aplica (Epic) | — |
+| US17 | Iniciar inspección preoperacional | Como conductor, deseo iniciar una inspección preoperacional de un vehículo asignado para registrar su estado antes de operar. | **Escenario 1:** Dado que el conductor tiene un vehículo asignado y selecciona la opción de iniciar inspección, cuando la inspección se crea, entonces el sistema genera un registro de inspección en estado "en progreso".<br>**Escenario 2:** Dado que el conductor ya tiene una inspección en progreso para el mismo vehículo, cuando intenta iniciar una nueva inspección, entonces el sistema rechaza la operación y muestra un mensaje indicando que existe una inspección en progreso. | EP04 |
+| US18 | Registrar estado de elementos de inspección | Como conductor, deseo registrar el estado de los elementos de inspección para documentar las condiciones encontradas en el vehículo. | **Escenario 1:** Dado que el conductor se encuentra realizando una inspección, cuando registra el estado de un elemento como conforme, entonces el sistema almacena el resultado asociado a la inspección.<br>**Escenario 2:** Dado que el conductor registra el estado de un elemento como no conforme, cuando confirma el registro, entonces el sistema solicita una observación o evidencia que respalde la condición detectada. | EP04 |
+| US19 | Registrar observaciones | Como conductor, deseo registrar observaciones durante la inspección para describir las condiciones detectadas que requieren atención. | **Escenario 1:** Dado que el conductor se encuentra realizando una inspección, cuando ingresa una observación y confirma el registro, entonces el sistema almacena la observación asociada a la inspección.<br>**Escenario 2:** Dado que el conductor intenta registrar una observación vacía, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la observación no puede estar vacía. | EP04 |
+| US20 | Adjuntar evidencia fotográfica | Como conductor, deseo adjuntar evidencia fotográfica durante la inspección para respaldar las condiciones detectadas. | **Escenario 1:** Dado que el conductor se encuentra realizando una inspección, cuando adjunta una imagen válida y confirma el registro, entonces el sistema almacena la evidencia asociada a la inspección.<br>**Escenario 2:** Dado que el conductor intenta adjuntar un archivo con formato no permitido, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando los formatos permitidos. | EP04 |
+| US21 | Finalizar inspección preoperacional | Como conductor, deseo finalizar la inspección preoperacional para que el sistema evalúe las condiciones del vehículo. | **Escenario 1:** Dado que el conductor completó todos los elementos de inspección, cuando confirma la finalización, entonces el sistema cambia el estado de la inspección a "completada" e inicia la evaluación del vehículo.<br>**Escenario 2:** Dado que el conductor no completó todos los elementos de inspección, cuando intenta finalizar, entonces el sistema rechaza la operación y muestra un mensaje indicando los elementos pendientes. | EP04 |
+| US22 | Consultar inspecciones realizadas | Como conductor, deseo consultar las inspecciones que he realizado para revisar su estado y resultados. | **Escenario 1:** Dado que el conductor accede al listado de sus inspecciones, cuando la vista carga, entonces se muestra el listado de inspecciones realizadas con su fecha, vehículo y estado.<br>**Escenario 2:** Dado que el conductor selecciona una inspección, cuando la vista carga, entonces se muestra el detalle de la inspección con los resultados registrados. | EP04 |
+| EP05 | Evaluación y Habilitación Operativa | Como sistema, se desea evaluar los resultados de las inspecciones preoperacionales y determinar la condición operativa del vehículo. | No aplica (Epic) | — |
+| US23 | Evaluar resultados de inspección | Como sistema, se desea evaluar los resultados de una inspección preoperacional de acuerdo con las reglas establecidas para determinar la condición del vehículo. | **Escenario 1:** Dado que una inspección ha sido finalizada, cuando el sistema procesa sus resultados aplicando las reglas de evaluación, entonces determina la condición del vehículo.<br>**Escenario 2:** Dado que la inspección contiene al menos un elemento no conforme asociado a una regla de no habilitación, cuando el sistema evalúa los resultados, entonces determina que el vehículo se encuentra no habilitado. | EP05 |
+| US24 | Determinar estado del vehículo | Como sistema, se desea determinar si un vehículo se encuentra habilitado, observado o no habilitado para operar a partir de la evaluación de la inspección. | **Escenario 1:** Dado que la evaluación de la inspección no identificó condiciones de riesgo, cuando el sistema determina el estado, entonces el vehículo se clasifica como habilitado.<br>**Escenario 2:** Dado que la evaluación identificó condiciones que requieren atención pero no impiden la operación, cuando el sistema determina el estado, entonces el vehículo se clasifica como observado.<br>**Escenario 3:** Dado que la evaluación identificó condiciones que impiden la operación, cuando el sistema determina el estado, entonces el vehículo se clasifica como no habilitado. | EP05 |
+| US25 | Consultar vehículos por estado | Como supervisor de flota, deseo consultar los vehículos según su estado de habilitación para identificar rápidamente las unidades que pueden operar. | **Escenario 1:** Dado que el supervisor accede al módulo de estados, cuando la vista carga, entonces se muestra el listado de vehículos agrupados por estado habilitado, observado y no habilitado.<br>**Escenario 2:** Dado que el supervisor aplica un filtro por estado, cuando confirma el filtro, entonces el sistema muestra únicamente los vehículos que se encuentran en el estado seleccionado. | EP05 |
+| US26 | Reevaluar vehículo tras acción correctiva | Como supervisor de flota, deseo reevaluar un vehículo después de aplicar una acción correctiva para verificar si ha recuperado su condición operativa. | **Escenario 1:** Dado que un vehículo se encuentra no habilitado y se registra una acción correctiva, cuando el supervisor solicita la reevaluación, entonces el sistema actualiza el estado del vehículo según los resultados de la nueva evaluación.<br>**Escenario 2:** Dado que el vehículo aún presenta condiciones que impiden la operación, cuando el sistema reevalúa, entonces el vehículo mantiene el estado no habilitado. | EP05 |
+| EP06 | Gestión de Incidencias | Como supervisor de flota, deseo gestionar las incidencias detectadas en los vehículos para realizar su seguimiento hasta su resolución. | No aplica (Epic) | — |
+| US27 | Registrar incidencia | Como conductor, deseo registrar una incidencia cuando detecto un problema en el vehículo para que sea atendida por el supervisor. | **Escenario 1:** Dado que el conductor detecta un problema durante la inspección, cuando registra la incidencia con su descripción y tipo, entonces el sistema crea la incidencia asociada al vehículo y a la inspección.<br>**Escenario 2:** Dado que el conductor intenta registrar una incidencia sin descripción, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la descripción es obligatoria. | EP06 |
+| US28 | Consultar incidencias registradas | Como supervisor de flota, deseo consultar las incidencias registradas para conocer los problemas detectados en los vehículos. | **Escenario 1:** Dado que el supervisor accede al módulo de incidencias, cuando la vista carga, entonces se muestra el listado de incidencias con su estado, vehículo asociado y fecha de registro.<br>**Escenario 2:** Dado que el supervisor aplica un filtro por estado o por vehículo, cuando confirma el filtro, entonces el sistema muestra únicamente las incidencias que cumplen el criterio seleccionado. | EP06 |
+| US29 | Actualizar estado de incidencia | Como supervisor de flota, deseo actualizar el estado de una incidencia para reflejar su avance en el proceso de resolución. | **Escenario 1:** Dado que el supervisor selecciona una incidencia registrada, cuando actualiza su estado a "en revisión", entonces el sistema guarda el nuevo estado de la incidencia.<br>**Escenario 2:** Dado que el supervisor intenta actualizar una incidencia ya resuelta, cuando confirma la operación, entonces el sistema rechaza la actualización y muestra un mensaje indicando que la incidencia se encuentra cerrada. | EP06 |
+| US30 | Registrar acción correctiva | Como supervisor de flota, deseo registrar la acción correctiva aplicada a una incidencia para documentar la solución del problema detectado. | **Escenario 1:** Dado que el supervisor selecciona una incidencia en revisión, cuando registra la acción correctiva realizada y confirma, entonces el sistema almacena la acción asociada a la incidencia.<br>**Escenario 2:** Dado que el supervisor registra la acción correctiva, cuando confirma la resolución de la incidencia, entonces el sistema cambia el estado de la incidencia a "resuelta". | EP06 |
+| US31 | Consultar historial de incidencias por vehículo | Como supervisor de flota, deseo consultar el historial de incidencias de un vehículo para conocer los problemas recurrentes y su resolución. | **Escenario 1:** Dado que el supervisor consulta el detalle de un vehículo, cuando accede a la sección de incidencias, entonces se muestra el historial de incidencias asociadas al vehículo con su estado y resolución.<br>**Escenario 2:** Dado que el vehículo no tiene incidencias registradas, cuando el supervisor consulta su historial, entonces el sistema muestra un mensaje indicando que no existen incidencias registradas. | EP06 |
+| EP07 | Documentación Vehicular | Como supervisor de flota, deseo gestionar la documentación vehicular para controlar la vigencia de los documentos requeridos para operar. | No aplica (Epic) | — |
+| US32 | Registrar documento vehicular | Como supervisor de flota, deseo registrar los documentos asociados a un vehículo para mantener actualizada su información documentaria. | **Escenario 1:** Dado que el supervisor ingresa los datos de un documento vehicular, cuando confirma el registro, entonces el sistema almacena el documento asociado al vehículo.<br>**Escenario 2:** Dado que el supervisor intenta registrar un documento sin fecha de vencimiento, cuando confirma el registro, entonces el sistema rechaza la operación y muestra un mensaje indicando que la fecha es obligatoria. | EP07 |
+| US33 | Consultar documentos próximos a vencer | Como supervisor de flota, deseo consultar los documentos próximos a vencer para tomar acciones preventivas antes de su vencimiento. | **Escenario 1:** Dado que el supervisor accede al módulo de documentación, cuando la vista carga, entonces se muestra el listado de documentos con su estado de vigencia.<br>**Escenario 2:** Dado que un documento se encuentra próximo a vencer según el umbral establecido, cuando el supervisor consulta el listado, entonces el documento se muestra resaltado como próximo a vencer. | EP07 |
+| US34 | Actualizar documento vehicular | Como supervisor de flota, deseo actualizar la información de un documento vehicular para mantener su vigencia registrada en la plataforma. | **Escenario 1:** Dado que el supervisor modifica la fecha de vencimiento de un documento, cuando confirma la actualización, entonces el sistema guarda los cambios y recalcula su estado de vigencia.<br>**Escenario 2:** Dado que el supervisor ingresa una fecha de vencimiento anterior a la fecha actual, cuando confirma la actualización, entonces el sistema marca el documento como vencido. | EP07 |
+| EP08 | Historial y Reportes | Como supervisor de flota, deseo consultar el historial y los reportes de control preventivo para analizar el estado de la flota. | No aplica (Epic) | — |
+| US35 | Consultar historial de inspecciones | Como supervisor de flota, deseo consultar el historial de inspecciones de un vehículo para conocer su evolución en el tiempo. | **Escenario 1:** Dado que el supervisor consulta el detalle de un vehículo, cuando accede a la sección de historial, entonces se muestra el listado de inspecciones realizadas con su fecha y resultado.<br>**Escenario 2:** Dado que el supervisor selecciona una inspección del historial, cuando la vista carga, entonces se muestra el detalle completo de la inspección seleccionada. | EP08 |
+| US36 | Generar reporte de estado de flota | Como supervisor de flota, deseo generar un reporte del estado de la flota para analizar la condición de los vehículos. | **Escenario 1:** Dado que el supervisor solicita un reporte de estado de flota, cuando el sistema procesa la solicitud, entonces se genera un reporte con la clasificación de vehículos por estado.<br>**Escenario 2:** Dado que el supervisor aplica un rango de fechas al reporte, cuando el sistema procesa la solicitud, entonces el reporte considera únicamente la información del periodo seleccionado. | EP08 |
+| US37 | Consultar historial de estados de vehículo | Como supervisor de flota, deseo consultar el historial de estados de un vehículo para conocer los cambios en su condición operativa. | **Escenario 1:** Dado que el supervisor consulta el detalle de un vehículo, cuando accede a la sección de historial de estados, entonces se muestra la evolución de su estado a lo largo del tiempo.<br>**Escenario 2:** Dado que el vehículo cambió de estado tras una reevaluación, cuando el supervisor consulta el historial, entonces se muestra el cambio de estado registrado con su fecha. | EP08 |
+| EP09 | Backend RESTful API | Como developer, se desea exponer los servicios RESTful que soportan las funcionalidades de FleetSafe. | No aplica (Epic) | — |
+| US38 | API de autenticación | Como developer, se desea exponer un endpoint de autenticación para que los usuarios puedan iniciar sesión en la plataforma. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/auth/login` con credenciales válidas, cuando el servidor procesa la solicitud, entonces responde con código 200 y un token de acceso.<br>**Escenario 2:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/auth/login` con credenciales inválidas, cuando el servidor procesa la solicitud, entonces responde con código 401 y un mensaje de error. | EP09 |
+| US39 | API de gestión de usuarios | Como developer, se desea exponer endpoints CRUD para la gestión de usuarios. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/users` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos del usuario creado.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/users`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de usuarios.<br>**Escenario 3:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/users/{id}` con un identificador inexistente, cuando el servidor procesa la solicitud, entonces responde con código 404 y un mensaje de error. | EP09 |
+| US40 | API de gestión de vehículos | Como developer, se desea exponer endpoints CRUD para la gestión de vehículos. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/vehicles` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos del vehículo creado.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles?status=NOT_ENABLED`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de vehículos con dicho estado.<br>**Escenario 3:** Dado que el developer envía una solicitud PUT al endpoint `/api/v1/vehicles/{id}` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 200 y los datos actualizados del vehículo. | EP09 |
+| US41 | API de inspecciones preoperacionales | Como developer, se desea exponer endpoints para el registro y consulta de inspecciones preoperacionales. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/inspections` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos de la inspección creada.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/inspections/{id}`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el detalle de la inspección.<br>**Escenario 3:** Dado que el developer envía una solicitud PATCH al endpoint `/api/v1/inspections/{id}/complete`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado actualizado de la inspección. | EP09 |
+| US42 | API de evaluación y habilitación | Como developer, se desea exponer endpoints para la evaluación de inspecciones y la consulta del estado de habilitación de vehículos. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/inspections/{id}/evaluate`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado determinado para el vehículo.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles/{id}/status`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado actual del vehículo. | EP09 |
 | US43 | API de gestión de incidencias | Como developer, se desea exponer endpoints CRUD para la gestión de incidencias. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/incidents` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos de la incidencia creada.<br>**Escenario 2:** Dado que el developer envía una solicitud PATCH al endpoint `/api/v1/incidents/{id}/status` con un nuevo estado válido, cuando el servidor procesa la solicitud, entonces responde con código 200 y el estado actualizado de la incidencia.<br>**Escenario 3:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/incidents?vehicleId={id}`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de incidencias del vehículo indicado. | EP09 |
-| US44 | API de documentación vehicular | Como developer, se desea exponer endpoints para la gestión de documentos vehiculares. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/vehicles/{id}/documents` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos del documento creado.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles/{id}/documents`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de documentos del vehículo.<br>**Escenario 3:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/documents/expiring`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de documentos próximos a vencer.                             | EP09 |
-| US45 | API de historial y reportes | Como developer, se desea exponer endpoints para la consulta de historial y generación de reportes. | **Escenario 1:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles/{id}/history`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el historial de inspecciones y estados del vehículo.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/reports/fleet-status` con un rango de fechas, cuando el servidor procesa la solicitud, entonces responde con código 200 y el reporte de estado de la flota en el periodo indicado.                                                                                                                                                                                                                           | EP09 |
+| US44 | API de documentación vehicular | Como developer, se desea exponer endpoints para la gestión de documentos vehiculares. | **Escenario 1:** Dado que el developer envía una solicitud POST al endpoint `/api/v1/vehicles/{id}/documents` con datos válidos, cuando el servidor procesa la solicitud, entonces responde con código 201 y los datos del documento creado.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles/{id}/documents`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de documentos del vehículo.<br>**Escenario 3:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/documents/expiring`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el listado de documentos próximos a vencer. | EP09 |
+| US45 | API de historial y reportes | Como developer, se desea exponer endpoints para la consulta de historial y generación de reportes. | **Escenario 1:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/vehicles/{id}/history`, cuando el servidor procesa la solicitud, entonces responde con código 200 y el historial de inspecciones y estados del vehículo.<br>**Escenario 2:** Dado que el developer envía una solicitud GET al endpoint `/api/v1/reports/fleet-status` con un rango de fechas, cuando el servidor procesa la solicitud, entonces responde con código 200 y el reporte de estado de la flota en el periodo indicado. | EP09 |
 
 ---
 
@@ -1656,7 +1656,7 @@ El Product Backlog se gestiona en **Trello**, conforme a las herramientas indica
 El tablero se organiza en cuatro listas que reflejan el estado de avance de cada User Story:
 
 | Lista | Contenido |
-|:------|:----------|
+|:---|:---|
 | **Product Backlog** | Las 44 User Stories del cuadro anterior, en el mismo orden de priorización |
 | **Sprint Backlog 1** | Las User Stories seleccionadas para el Sprint 1 |
 | **In Progress** | Las User Stories en desarrollo durante el sprint en curso |
@@ -1688,7 +1688,7 @@ Las decisiones que se presentan a continuación se derivan de tres fuentes: el *
 FleetSafe es una plataforma de seguridad y control preventivo vehicular. Su identidad visual debe comunicar **confiabilidad, control y prevención**, y no velocidad, modernidad o innovación tecnológica por sí mismas. El usuario de FleetSafe —un supervisor de flota o un conductor de vehículo de carga— debe percibir que la plataforma es una herramienta de trabajo seria, no un producto experimental.
 
 | Elemento | Definición |
-|:---------|:-----------|
+|:---|:---|
 | **Nombre del producto** | FleetSafe |
 | **Startup** | BitMeisters |
 | **Concepto de marca** | La unión de los conceptos *fleet* (flota) y *safe* (seguro) sintetiza la propuesta de valor: una flota que opera de forma segura porque su condición ha sido verificada antes de operar. |
@@ -1708,7 +1708,7 @@ FleetSafe es una plataforma de seguridad y control preventivo vehicular. Su iden
 El tono de FleetSafe se define a partir de la naturaleza del dominio: se trata de una herramienta de control preventivo cuyas decisiones afectan la seguridad de las personas y la continuidad operativa de una empresa. Esto determina un tono **serio, formal y respetuoso**, pero **no distante ni burocrático**.
 
 | Dimensión | Posición adoptada | Sustento |
-|:----------|:------------------|:---------|
+|:---|:---|:---|
 | Divertido / **Serio** | Serio | La plataforma interviene en decisiones sobre seguridad vehicular. Un tono liviano resultaría inapropiado. |
 | **Formal** / Casual | Formal | El usuario principal es un supervisor de flota que reporta a una empresa y cuyas decisiones pueden ser auditadas. |
 | **Respetuoso** / Irreverente | Respetuoso | El conductor es el usuario que ejecuta la inspección y no debe sentirse fiscalizado por el sistema. |
@@ -1731,7 +1731,7 @@ El tono de FleetSafe se define a partir de la naturaleza del dominio: se trata d
 Se adopta **Inter** como familia tipográfica principal y **JetBrains Mono** como familia secundaria para datos técnicos.
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | **Familia principal** | Inter |
 | **Familia secundaria** | JetBrains Mono, para identificadores, placas vehiculares, códigos y valores numéricos |
 | **Sustento de la elección** | Inter es una familia de código abierto, optimizada para interfaces digitales y con alta legibilidad en tamaños pequeños, lo que resulta determinante porque el conductor realiza la inspección desde el navegador de un teléfono móvil. JetBrains Mono se emplea donde la distinción entre caracteres similares —`0` y `O`, `1` y `l`— es crítica, como en placas vehiculares y códigos de elemento. |
@@ -1740,7 +1740,7 @@ Se adopta **Inter** como familia tipográfica principal y **JetBrains Mono** com
 **Escala tipográfica**
 
 | Token | Tamaño | Altura de línea | Peso | Uso |
-|:------|:-------|:----------------|:-----|:----|
+|:---|:---|:---|:---|:---|
 | `display` | 40 px | 48 px | 700 | Título principal de la Landing Page |
 | `heading-1` | 32 px | 40 px | 700 | Título de sección en la Landing Page |
 | `heading-2` | 24 px | 32 px | 600 | Encabezado de módulo en la Web Application |
@@ -1767,7 +1767,7 @@ La paleta se construye sobre un **azul profundo** como color primario, que comun
 **Colores de marca**
 
 | Token | Valor | Uso |
-|:------|:------|:----|
+|:---|:---|:---|
 | `color-primary-900` | `#0B2545` | Fondo de encabezados, texto de máximo contraste |
 | `color-primary-700` | `#13315C` | Color primario de la marca, botones principales |
 | `color-primary-500` | `#1D4E89` | Estados hover de elementos primarios |
@@ -1777,7 +1777,7 @@ La paleta se construye sobre un **azul profundo** como color primario, que comun
 **Colores de estado del vehículo**
 
 | Estado | Token | Valor | Uso |
-|:-------|:------|:------|:----|
+|:---|:---|:---|:---|
 | **Habilitado** | `color-status-enabled` | `#2A9D8F` | Indicador de vehículo habilitado para operar |
 | **Observado** | `color-status-observed` | `#E9C46A` | Indicador de vehículo que requiere atención o seguimiento |
 | **No habilitado** | `color-status-not-enabled` | `#E76F51` | Indicador de vehículo que no puede operar |
@@ -1785,7 +1785,7 @@ La paleta se construye sobre un **azul profundo** como color primario, que comun
 **Colores de resultado de inspección**
 
 | Resultado | Token | Valor |
-|:----------|:------|:------|
+|:---|:---|:---|
 | Conforme (`OK`) | `color-result-ok` | `#2A9D8F` |
 | Observado (`OBSERVED`) | `color-result-observed` | `#E9C46A` |
 | No conforme (`FAIL`) | `color-result-fail` | `#E76F51` |
@@ -1794,7 +1794,7 @@ La paleta se construye sobre un **azul profundo** como color primario, que comun
 **Colores neutros y semánticos**
 
 | Token | Valor | Uso |
-|:------|:------|:----|
+|:---|:---|:---|
 | `color-neutral-900` | `#1A1A1A` | Texto principal |
 | `color-neutral-700` | `#4A4A4A` | Texto secundario |
 | `color-neutral-400` | `#9E9E9E` | Texto deshabilitado, bordes suaves |
@@ -1819,7 +1819,7 @@ La paleta se construye sobre un **azul profundo** como color primario, que comun
 Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consistente y facilita la adaptación a distintas densidades de pantalla.
 
 | Token | Valor | Uso típico |
-|:------|:------|:-----------|
+|:---|:---|:---|
 | `space-1` | 4 px | Separación entre ícono y etiqueta |
 | `space-2` | 8 px | Separación interna de un componente |
 | `space-3` | 12 px | Separación entre campos de un formulario |
@@ -1840,7 +1840,7 @@ Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consi
 #### Radios, bordes y elevación
 
 | Token | Valor | Uso |
-|:------|:------|:----|
+|:---|:---|:---|
 | `radius-sm` | 4 px | Campos de formulario, etiquetas |
 | `radius-md` | 8 px | Botones, tarjetas |
 | `radius-lg` | 16 px | Paneles y modales |
@@ -1854,7 +1854,7 @@ Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consi
 #### Iconografía
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | **Set seleccionado** | Lucide Icons |
 | **Sustento** | Es un set de código abierto, con trazo uniforme, que mantiene coherencia visual con la familia Inter y no requiere licencia. |
 | **Tamaños** | 16 px (en línea con texto), 20 px (en botones), 24 px (en encabezados) |
@@ -1868,7 +1868,7 @@ Se adopta una **escala base de 4 px**, que permite mantener ritmo vertical consi
 Las decisiones anteriores se complementan con los siguientes criterios mínimos, considerando que la inspección se realiza frecuentemente desde el navegador de un teléfono móvil, en exteriores y bajo luz solar directa.
 
 | Criterio | Definición |
-|:---------|:-----------|
+|:---|:---|
 | **Contraste** | Todo texto debe alcanzar una relación de contraste mínima de 4.5:1 sobre su fondo, conforme al nivel AA de WCAG 2.1. |
 | **Área táctil** | Los elementos interactivos deben tener un área mínima de 44 × 44 px, para su uso con guantes o con una sola mano. |
 | **Foco visible** | Todo elemento interactivo debe presentar un indicador de foco perceptible para la navegación por teclado. |
@@ -1883,7 +1883,7 @@ Las decisiones anteriores se complementan con los siguientes criterios mínimos,
 Los recursos visuales del proyecto se organizan de la siguiente manera dentro del repositorio, en coherencia con la estructura de archivos presentada al inicio de este informe:
 
 | Ruta | Contenido |
-|:-----|:----------|
+|:---|:---|
 | `img/UPC.png` | Logotipo institucional, empleado en la portada del informe |
 | `img/team-members/` | Fotografías de los integrantes del equipo |
 | `img/bigPictureEventStorming/` | Imágenes del Big Picture EventStorming (sección 2.4) |
@@ -1908,7 +1908,7 @@ Esta sección define los estándares visuales y de interacción aplicables a las
 La solución se ejecuta íntegramente en el navegador, sin requerir instalación ni hardware, conforme a la Estrategia 3 planteada en la sección 2.1.2. Esto determina que la interfaz debe adaptarse correctamente a los siguientes contextos de uso:
 
 | Contexto | Producto | Dispositivo típico | Condición de uso |
-|:---------|:---------|:-------------------|:-----------------|
+|:---|:---|:---|:---|
 | Presentación | Landing Page | Computadora de escritorio, laptop, tablet | El visitante evalúa la propuesta de valor en un entorno controlado. |
 | Supervisión | Web Application | Computadora de escritorio, laptop | El supervisor revisa estados, gestiona incidencias y consulta historial. |
 | Inspección | Web Application | Teléfono móvil | El conductor realiza la inspección junto al vehículo, frecuentemente en exteriores y bajo luz solar directa. |
@@ -1922,7 +1922,7 @@ El tercer contexto es el más restrictivo y es el que condiciona las decisiones 
 Se adopta un enfoque **mobile-first** para la Web Application y un enfoque **desktop-first** para la Landing Page, dado que los contextos de uso de cada producto son distintos.
 
 | Token | Rango | Aplicación |
-|:------|:------|:-----------|
+|:---|:---|:---|
 | `bp-mobile` | 320 px – 639 px | Web Application: inspección preoperacional |
 | `bp-tablet` | 640 px – 1023 px | Web Application: supervisión en tablet |
 | `bp-desktop` | 1024 px – 1439 px | Landing Page y Web Application: supervisión |
@@ -1933,7 +1933,7 @@ Se adopta un enfoque **mobile-first** para la Web Application y un enfoque **des
 #### Grilla y layout
 
 | Aspecto | Landing Page | Web Application |
-|:--------|:-------------|:----------------|
+|:---|:---|:---|
 | **Columnas** | 12 columnas | 12 columnas |
 | **Ancho máximo de contenido** | 1200 px | 1440 px |
 | **Gutter** | `space-5` (24 px) | `space-4` (16 px) |
@@ -1953,7 +1953,7 @@ Los componentes que se describen a continuación se emplean de forma consistente
 **Botones**
 
 | Variante | Uso | Ejemplo de aplicación |
-|:---------|:----|:----------------------|
+|:---|:---|:---|
 | `primary` | Acción principal de una vista | Finalizar inspección (US21) |
 | `secondary` | Acción alternativa | Cancelar, volver |
 | `danger` | Acción destructiva o de bloqueo | Marcar vehículo como no habilitado |
@@ -1962,7 +1962,7 @@ Los componentes que se describen a continuación se emplean de forma consistente
 **Campos de formulario**
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | **Altura** | 44 px en móvil, 40 px en escritorio |
 | **Borde** | `1 px solid color-neutral-200`, con `radius-sm` |
 | **Estado de foco** | Borde `color-primary-500` con anillo de foco perceptible |
@@ -1975,7 +1975,7 @@ Los componentes que se describen a continuación se emplean de forma consistente
 El estado del vehículo es la información más relevante de la interfaz, porque responde a la pregunta principal de FleetSafe: *¿este vehículo cumple las condiciones necesarias para operar?* Por ello, todo indicador de estado debe presentarse como una etiqueta que combine color, ícono y texto.
 
 | Estado | Presentación |
-|:-------|:-------------|
+|:---|:---|
 | **Habilitado** | Fondo `color-status-enabled` al 10 %, texto e ícono en `color-status-enabled`, etiqueta "Habilitado" |
 | **Observado** | Fondo `color-status-observed` al 10 %, texto e ícono en `color-status-observed`, etiqueta "Observado" |
 | **No habilitado** | Fondo `color-status-not-enabled` al 10 %, texto e ícono en `color-status-not-enabled`, etiqueta "No habilitado" |
@@ -2000,7 +2000,7 @@ Las vistas de supervisión —listado de vehículos, incidencias e historial— 
 Toda vista que consulte datos debe contemplar los siguientes estados, con el fin de evitar que el usuario interprete una ausencia de información como un error del sistema.
 
 | Estado | Presentación | Ejemplo |
-|:-------|:-------------|:--------|
+|:---|:---|:---|
 | **Carga** | Indicador de progreso o esqueleto de la estructura | Consulta del listado de vehículos (US13) |
 | **Vacío** | Mensaje descriptivo que indica la ausencia de datos y, cuando corresponde, la acción para generarlos | "El vehículo no tiene inspecciones registradas" (US14) |
 | **Error** | Mensaje que describe la causa y ofrece una acción de recuperación | Fallo al cargar el listado de incidencias (US28) |
@@ -2011,7 +2011,7 @@ Toda vista que consulte datos debe contemplar los siguientes estados, con el fin
 #### Interacción y retroalimentación
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | **Transiciones** | Entre 150 ms y 250 ms, con curva de aceleración suave |
 | **Confirmación de acciones destructivas** | Toda acción irreversible requiere confirmación explícita del usuario |
 | **Mensajes de validación** | Se presentan junto al campo que originó el error, no en un bloque global |
@@ -2025,7 +2025,7 @@ El último aspecto es determinante para el conductor: una inspección puede real
 #### Formato de datos
 
 | Tipo de dato | Formato | Ejemplo |
-|:-------------|:--------|:--------|
+|:---|:---|:---|
 | Fecha | `DD/MM/AAAA` | 11/09/2026 |
 | Fecha y hora | `DD/MM/AAAA HH:mm` | 11/09/2026 14:30 |
 | Placa vehicular | Mayúsculas, sin separadores, en `mono-data` | ABC123 |
@@ -2041,7 +2041,7 @@ El formato de fecha `DD/MM/AAAA` se adopta por corresponder a la convención emp
 Además de los criterios establecidos en la sección 4.1.1, se aplican las siguientes consideraciones específicas de la interfaz web.
 
 | Criterio | Definición |
-|:---------|:-----------|
+|:---|:---|
 | **Navegación por teclado** | Toda funcionalidad debe ser accesible mediante teclado, sin excepción |
 | **Orden de tabulación** | Debe seguir el orden lógico de lectura de la interfaz |
 | **Estructura semántica** | Uso correcto de `header`, `nav`, `main`, `section`, `article` y `footer` |
@@ -2054,7 +2054,7 @@ Además de los criterios establecidos en la sección 4.1.1, se aplican las sigui
 #### Convenciones de implementación
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | **Unidades** | `rem` para tipografía y espaciado, `px` para bordes y radios |
 | **Metodología CSS** | BEM (Block, Element, Modifier) para la nomenclatura de clases |
 | **Tokens** | Los valores definidos en la sección 4.1.1 se implementan como variables CSS |
@@ -2083,7 +2083,7 @@ Las decisiones que se presentan en esta sección se derivan de las siguientes fu
 FleetSafe está compuesta por tres productos, cada uno con una arquitectura de información diferenciada:
 
 | Producto | Audiencia | Propósito | Enfoque de arquitectura |
-|:---------|:----------|:----------|:------------------------|
+|:---|:---|:---|:---|
 | **Landing Page** | Visitantes externos | Presentar la propuesta de valor y captar contactos | Secuencial, orientado a la narrativa de presentación |
 | **Web Application** | Usuarios autenticados | Ejecutar las funcionalidades según el rol | Jerárquico, orientado a tareas por rol |
 | **Backend RESTful API** | Desarrolladores | Exponer la lógica de negocio | Recursos RESTful, orientado a endpoints |
@@ -2104,7 +2104,7 @@ Los sistemas de organización determinan cómo se estructura y presenta la infor
 Se emplean los siguientes esquemas, cada uno sustentado en la naturaleza del contenido que organiza y en la tarea que el usuario debe realizar sobre él.
 
 | Esquema | Producto | Contenido al que se aplica | Sustento |
-|:--------|:---------|:---------------------------|:---------|
+|:---|:---|:---|:---|
 | **Jerárquico** | Web Application | Navegación principal por módulos según el rol del usuario | Cada rol accede únicamente a las funcionalidades que le corresponden, conforme a los roles definidos en la sección 1.1.1 y a las User Stories de la sección 3.1. |
 | **Secuencial** | Web Application | Flujo de inspección preoperacional | La inspección es un proceso ordenado que debe completarse paso a paso: iniciar (US17), registrar elementos (US18), registrar observaciones (US19), adjuntar evidencia (US20) y finalizar (US21). |
 | **Secuencial** | Landing Page | Narrativa de presentación | La Landing Page presenta la propuesta de valor en un orden progresivo: inicio (US01), funcionalidades (US02), beneficios por segmento (US03) y contacto (US04). |
@@ -2121,7 +2121,7 @@ Se emplean los siguientes esquemas, cada uno sustentado en la naturaleza del con
 La Web Application organiza su contenido principal según el rol del usuario autenticado. Cada rol accede a un conjunto diferenciado de módulos, conforme a las User Stories definidas en la sección 3.1.
 
 | Rol | Módulos accesibles | User Stories relacionadas |
-|:----|:-------------------|:--------------------------|
+|:---|:---|:---|
 | **Administrador** | Usuarios y roles, configuración del catálogo de inspección, reglas de evaluación | US07, US08, US11 |
 | **Supervisor de flota** | Vehículos y flota, inspecciones, evaluación y habilitación, incidencias, documentación vehicular, historial y reportes | US12–US16, US25, US26, US28–US37 |
 | **Conductor** | Inspección preoperacional, incidencias propias, consulta de sus inspecciones | US17–US22, US27 |
@@ -2138,7 +2138,7 @@ Esta organización jerárquica por rol tiene dos consecuencias directas sobre la
 El flujo de inspección preoperacional constituye el núcleo del dominio de FleetSafe y se organiza de forma estrictamente secuencial, porque cada paso depende del anterior y el sistema no debe permitir que la inspección se finalice sin haber completado todos los elementos.
 
 | Paso | Acción del conductor | User Story | Condición para avanzar |
-|:-----|:---------------------|:-----------|:-----------------------|
+|:---|:---|:---|:---|
 | 1 | Iniciar la inspección del vehículo asignado | US17 | No debe existir otra inspección en progreso para el mismo vehículo |
 | 2 | Registrar el estado de cada elemento del catálogo | US18 | Todos los elementos deben tener un resultado registrado |
 | 3 | Registrar observaciones en los elementos no conformes | US19 | La observación no puede estar vacía |
@@ -2154,7 +2154,7 @@ Al finalizar el paso 5, el sistema inicia automáticamente la evaluación del ve
 La Landing Page organiza su contenido de forma secuencial, siguiendo el recorrido natural de un visitante que evalúa la propuesta de valor de FleetSafe.
 
 | Sección | Contenido | User Story |
-|:--------|:----------|:-----------|
+|:---|:---|:---|
 | 1. Encabezado | Nombre, propuesta de valor y llamada a la acción principal | US01 |
 | 2. Funcionalidades | Inspección preoperacional, evaluación de condiciones, habilitación operativa y gestión de incidencias | US02 |
 | 3. Beneficios por segmento | Beneficios diferenciados para empresas, supervisores y conductores | US03 |
@@ -2168,7 +2168,7 @@ La sección de beneficios se organiza **por audiencia**, dado que cada segmento 
 #### Estructura de navegación por producto
 
 | Producto | Tipo de navegación | Niveles de profundidad | Sustento |
-|:---------|:-------------------|:-----------------------|:---------|
+|:---|:---|:---|:---|
 | **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | 1 nivel | El visitante no requiere autenticación ni recorridos profundos. |
 | **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | 3 niveles: módulo, listado, detalle | El supervisor y el conductor requieren acceder a vistas específicas dentro de cada módulo. |
 
@@ -2189,7 +2189,7 @@ Este esquema coincide con la estructura de User Stories de la sección 3.1, dond
 La organización de la información en la interfaz guarda correspondencia con los sub-dominios y bounded contexts identificados en la sección 4.6, lo que permite mantener coherencia entre el modelo de dominio y la estructura de navegación.
 
 | Módulo de la interfaz | Bounded context asociado (sección 4.8.1) |
-|:----------------------|:-----------------------------------------|
+|:---|:---|
 | Usuarios y roles | Identity and Access |
 | Vehículos y flota | Fleet Management |
 | Inspección preoperacional | Pre-Operational Inspection |
@@ -2211,7 +2211,7 @@ Las etiquetas que se definen en esta sección se derivan directamente del **Ubiq
 #### Principios de etiquetado
 
 | Principio | Definición | Ejemplo |
-|:----------|:-----------|:--------|
+|:---|:---|:---|
 | **Terminología del dominio** | Se emplean los términos del Ubiquitous Language y no sinónimos técnicos. | Se emplea *inspección preoperacional*, no *checklist* ni *formulario*. |
 | **Orientación a la tarea** | Las etiquetas describen lo que el usuario hace, no la estructura interna del sistema. | Se emplea *Registrar vehículo*, no *Crear entidad de vehículo*. |
 | **Consistencia** | Un mismo concepto se nombra siempre con la misma etiqueta en toda la interfaz. | *Habilitado*, *Observado* y *No habilitado* se emplean de forma uniforme en listados, tarjetas y detalles. |
@@ -2226,7 +2226,7 @@ Las etiquetas que se definen en esta sección se derivan directamente del **Ubiq
 La navegación principal de la Web Application se organiza por módulos, en correspondencia con los esquemas jerárquicos definidos en la sección 4.2.1 y con los bounded contexts identificados en la sección 4.8.1.
 
 | Etiqueta en la interfaz | Módulo | Bounded context (sección 4.8.1) | Roles con acceso |
-|:------------------------|:-------|:--------------------------------|:-----------------|
+|:---|:---|:---|:---|
 | **Panel** | Vista inicial con indicadores de estado de la flota | — | Administrador, Supervisor |
 | **Usuarios** | Gestión de usuarios y roles | Identity and Access | Administrador |
 | **Vehículos** | Registro y consulta de vehículos de la flota | Fleet Management | Administrador, Supervisor |
@@ -2245,7 +2245,7 @@ Las etiquetas **Panel** y **Reportes** no corresponden a un bounded context espe
 Los tres estados del vehículo constituyen la información más relevante de la interfaz, porque responden a la pregunta principal de FleetSafe planteada en la sección 1.2: *¿este vehículo cumple las condiciones necesarias para operar?* Por esta razón, sus etiquetas deben ser inequívocas y emplearse de forma uniforme en todas las vistas.
 
 | Etiqueta en la interfaz | Valor en el dominio | Descripción |
-|:------------------------|:--------------------|:------------|
+|:---|:---|:---|
 | **Habilitado** | `ENABLED` | El vehículo cumple las condiciones necesarias para operar. |
 | **Observado** | `OBSERVED` | El vehículo presenta condiciones que requieren atención o seguimiento, pero no impiden necesariamente su operación. |
 | **No habilitado** | `NOT_ENABLED` | El vehículo presenta una condición que impide que sea considerado apto para operar. |
@@ -2257,7 +2257,7 @@ Estas etiquetas se emplean de forma idéntica en listados, tarjetas, vistas de d
 #### Etiquetas de estados de la inspección
 
 | Etiqueta en la interfaz | Valor en el dominio | Descripción |
-|:------------------------|:--------------------|:------------|
+|:---|:---|:---|
 | **En progreso** | `IN_PROGRESS` | La inspección ha sido iniciada y aún no ha sido finalizada. |
 | **Completada** | `COMPLETED` | La inspección ha sido finalizada y el sistema ha iniciado su evaluación. |
 | **Cancelada** | `CANCELLED` | La inspección fue interrumpida y no será considerada en la evaluación. |
@@ -2267,7 +2267,7 @@ Estas etiquetas se emplean de forma idéntica en listados, tarjetas, vistas de d
 #### Etiquetas de resultados de inspección
 
 | Etiqueta en la interfaz | Valor en el dominio | Descripción |
-|:------------------------|:--------------------|:------------|
+|:---|:---|:---|
 | **Conforme** | `OK` | El elemento revisado se encuentra en condiciones adecuadas. |
 | **Observado** | `OBSERVED` | El elemento revisado presenta una condición que requiere atención. |
 | **No conforme** | `FAIL` | El elemento revisado presenta una condición que impide su uso o afecta la seguridad. |
@@ -2280,7 +2280,7 @@ Se emplea **No conforme** en lugar de *Fallido* o *Falla*, porque describe la co
 #### Etiquetas de estados de la incidencia
 
 | Etiqueta en la interfaz | Valor en el dominio | Descripción |
-|:------------------------|:--------------------|:------------|
+|:---|:---|:---|
 | **Registrada** | `REGISTERED` | La incidencia ha sido registrada y aún no ha sido revisada. |
 | **En revisión** | `IN_REVIEW` | El supervisor se encuentra revisando la incidencia. |
 | **Resuelta** | `RESOLVED` | Se ha registrado la acción correctiva que soluciona el problema. |
@@ -2291,7 +2291,7 @@ Se emplea **No conforme** en lugar de *Fallido* o *Falla*, porque describe la co
 #### Etiquetas de estados de la documentación vehicular
 
 | Etiqueta en la interfaz | Valor en el dominio | Descripción |
-|:------------------------|:--------------------|:------------|
+|:---|:---|:---|
 | **Vigente** | `VALID` | El documento se encuentra dentro de su periodo de vigencia. |
 | **Próximo a vencer** | `EXPIRING` | El documento se encuentra dentro del umbral de alerta previo a su vencimiento. |
 | **Vencido** | `EXPIRED` | El documento ha superado su fecha de vencimiento. |
@@ -2303,7 +2303,7 @@ Se emplea **No conforme** en lugar de *Fallido* o *Falla*, porque describe la co
 Las acciones se expresan mediante verbos en infinitivo cuando aparecen en menús o encabezados de vista, y en imperativo cuando constituyen la etiqueta de un botón que el usuario ejecuta en el momento.
 
 | Etiqueta en la interfaz | Acción | User Story |
-|:------------------------|:-------|:-----------|
+|:---|:---|:---|
 | **Iniciar inspección** | Crea una nueva inspección preoperacional en estado en progreso | US17 |
 | **Registrar resultado** | Almacena el resultado de un elemento de inspección | US18 |
 | **Agregar observación** | Registra una observación asociada a un elemento no conforme | US19 |
@@ -2322,7 +2322,7 @@ La etiqueta **Solicitar excepción** se incorpora de forma deliberada y no se de
 #### Etiquetas de campos de formulario
 
 | Etiqueta en la interfaz | Campo del modelo (sección 4.7.1) | Observación |
-|:------------------------|:---------------------------------|:------------|
+|:---|:---|:---|
 | **Placa** | `Vehicle.plate` | Se presenta en mayúsculas y con tipografía `mono-data`. |
 | **Marca** | `Vehicle.brand` | — |
 | **Modelo** | `Vehicle.model` | — |
@@ -2338,7 +2338,7 @@ La etiqueta **Solicitar excepción** se incorpora de forma deliberada y no se de
 #### Etiquetas de la Landing Page
 
 | Etiqueta | Sección | User Story |
-|:---------|:--------|:-----------|
+|:---|:---|:---|
 | **Inicio** | Encabezado con la propuesta de valor | US01 |
 | **Funcionalidades** | Descripción de las capacidades de la plataforma | US02 |
 | **Beneficios** | Beneficios diferenciados por segmento | US03 |
@@ -2353,7 +2353,7 @@ La etiqueta **Solicitar excepción** se incorpora de forma deliberada y no se de
 Con el fin de mantener la coherencia entre el modelo de dominio y la interfaz, se evitan de forma deliberada los siguientes términos.
 
 | Término evitado | Término adoptado | Motivo |
-|:----------------|:-----------------|:-------|
+|:---|:---|:---|
 | Checklist | Inspección preoperacional | Anglicismo ajeno al Ubiquitous Language. |
 | Formulario | Inspección preoperacional | Describe el soporte, no la actividad del dominio. |
 | Activo | Vehículo | Término genérico que diluye el objeto del dominio. |
@@ -2370,7 +2370,7 @@ Con el fin de mantener la coherencia entre el modelo de dominio y la interfaz, s
 El siguiente cuadro permite verificar que cada etiqueta definida en esta sección se corresponde con una funcionalidad efectivamente definida en la sección 3.1.
 
 | Grupo de etiquetas | User Stories relacionadas |
-|:-------------------|:--------------------------|
+|:---|:---|
 | Navegación principal | US07–US37 |
 | Estados del vehículo | US24, US25, US26, US37 |
 | Estados de la inspección | US17, US21, US22 |
@@ -2397,7 +2397,7 @@ Las etiquetas definidas en esta sección se aplican a la **Landing Page**, dado 
 El etiquetado de la Landing Page persigue tres objetivos concretos, en coherencia con los segmentos objetivo definidos en la sección 1.3 y con las estrategias competitivas planteadas en la sección 2.1.2:
 
 | Objetivo | Descripción |
-|:---------|:------------|
+|:---|:---|
 | **Visibilidad ante búsquedas del dominio** | Que la Landing Page aparezca cuando un responsable de flota busque términos relacionados con inspección preoperacional, control preventivo vehicular o habilitación operativa en el contexto peruano. |
 | **Descripción precisa en resultados** | Que el título y la descripción que aparecen en los resultados de búsqueda comuniquen con exactitud qué hace FleetSafe y a quién se dirige. |
 | **Coherencia terminológica** | Que los términos empleados en las etiquetas coincidan con el Ubiquitous Language de la sección 2.5 y con las etiquetas de la sección 4.2.2, evitando sinónimos que diluyan el posicionamiento. |
@@ -2411,7 +2411,7 @@ El tercer objetivo es determinante para la Estrategia 1 planteada en la sección
 Estas etiquetas se incorporan en el `<head>` del documento HTML y se aplican a toda la Landing Page.
 
 | Etiqueta | Valor | Propósito |
-|:---------|:------|:----------|
+|:---|:---|:---|
 | `<title>` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título que aparece en la pestaña del navegador y en los resultados de búsqueda. |
 | `<meta charset="UTF-8">` | `UTF-8` | Codificación de caracteres, necesaria para el correcto uso del español. |
 | `<meta name="viewport">` | `width=device-width, initial-scale=1.0` | Configuración de la vista responsive, conforme a los breakpoints de la sección 4.1.2. |
@@ -2429,7 +2429,7 @@ Estas etiquetas se incorporan en el `<head>` del documento HTML y se aplican a t
 Las Open Graph Tags determinan cómo se presenta la Landing Page cuando se comparte en redes sociales y aplicaciones de mensajería. Su correcta definición es relevante porque los segmentos objetivo —supervisores de flota y responsables de empresas de transporte— reciben recomendaciones por canales informales.
 
 | Etiqueta | Valor | Propósito |
-|:---------|:------|:----------|
+|:---|:---|:---|
 | `<meta property="og:type">` | `website` | Tipo de contenido. |
 | `<meta property="og:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado al compartir el enlace. |
 | `<meta property="og:description">` | `Realice inspecciones preoperacionales digitales y determine si sus vehículos están habilitados para operar.` | Descripción mostrada al compartir el enlace. |
@@ -2446,7 +2446,7 @@ Las Open Graph Tags determinan cómo se presenta la Landing Page cuando se compa
 Complementan las Open Graph Tags para la presentación del enlace en la plataforma X (anteriormente Twitter).
 
 | Etiqueta | Valor | Propósito |
-|:---------|:------|:----------|
+|:---|:---|:---|
 | `<meta name="twitter:card">` | `summary_large_image` | Formato de la tarjeta: imagen grande con título y descripción. |
 | `<meta name="twitter:title">` | `FleetSafe — Control preventivo y habilitación operativa de flotas` | Título mostrado en la tarjeta. |
 | `<meta name="twitter:description">` | `Plataforma web de control preventivo vehicular para empresas de transporte de carga.` | Descripción mostrada en la tarjeta. |
@@ -2460,7 +2460,7 @@ Complementan las Open Graph Tags para la presentación del enlace en la platafor
 La Web Application no debe ser indexada por los motores de búsqueda, dado que su contenido requiere autenticación y expone información operativa de la empresa. Por ello, todas sus vistas incorporan la siguiente directiva:
 
 | Etiqueta | Valor | Propósito |
-|:---------|:------|:----------|
+|:---|:---|:---|
 | `<meta name="robots">` | `noindex, nofollow` | Impide la indexación de las vistas autenticadas y el seguimiento de sus enlaces. |
 
 Adicionalmente, se configura un archivo `robots.txt` en la raíz del dominio que restringe el rastreo de las rutas de la Web Application:
@@ -2481,7 +2481,7 @@ El archivo `sitemap.xml` incluye únicamente las secciones públicas de la Landi
 La Landing Page es un sitio de una sola página con desplazamiento entre secciones. Dado que las secciones no constituyen URLs independientes, se emplean **etiquetas de encabezado semánticas** (`<h1>`, `<h2>`, `<h3>`) y **atributos de anclaje** (`id`) para que los motores de búsqueda identifiquen la estructura del contenido.
 
 | Sección | Encabezado | Anclaje | User Story |
-|:--------|:-----------|:--------|:-----------|
+|:---|:---|:---|:---|
 | Inicio | `<h1>Control preventivo y habilitación operativa de su flota</h1>` | `#inicio` | US01 |
 | Funcionalidades | `<h2>Funcionalidades de FleetSafe</h2>` | `#funcionalidades` | US02 |
 | Beneficios | `<h2>Beneficios para su organización</h2>` | `#beneficios` | US03 |
@@ -2526,7 +2526,7 @@ Se incorpora un bloque de datos estructurados en formato JSON-LD que describe la
 Las palabras clave se seleccionan a partir de los segmentos objetivo definidos en la sección 1.3 y de los términos del Ubiquitous Language de la sección 2.5.
 
 | Segmento | Palabras clave principales |
-|:---------|:---------------------------|
+|:---|:---|
 | **Empresas de transporte de carga** | control preventivo vehicular, seguridad de flota, habilitación operativa, gestión de flotas Perú, cumplimiento normativo transporte |
 | **Supervisores de flota** | inspección preoperacional digital, control de vehículos, estado de flota, gestión de incidencias vehiculares, historial de inspecciones |
 | **Conductores de vehículos de carga** | inspección de vehículo, revisión preoperacional, reporte de fallas, checklist digital de vehículo |
@@ -2538,7 +2538,7 @@ Las palabras clave se seleccionan a partir de los segmentos objetivo definidos e
 El etiquetado definido en esta sección sustenta directamente dos de las estrategias planteadas en la sección 2.1.2:
 
 | Estrategia | Relación con el etiquetado |
-|:-----------|:---------------------------|
+|:---|:---|
 | **Estrategia 1: Especialización en el marco de cumplimiento peruano** | Las palabras clave incorporan la referencia geográfica y las etiquetas mencionan el contexto peruano, lo que permite diferenciar a FleetSafe de soluciones construidas sobre marcos normativos de otros países. |
 | **Estrategia 5: Localización y acompañamiento local** | El idioma declarado es `es-PE`, y la terminología empleada en las etiquetas corresponde al español latinoamericano establecido en la sección 4.1.1. |
 
@@ -2556,7 +2556,7 @@ Las decisiones que se presentan en esta sección se derivan de los esquemas de o
 #### Principios de búsqueda
 
 | Principio | Definición | Sustento |
-|:----------|:-----------|:---------|
+|:---|:---|:---|
 | **Búsqueda contextual** | Los filtros disponibles en cada vista corresponden al tipo de información que esa vista presenta. | Un listado de vehículos no ofrece filtro por tipo de incidencia. |
 | **Filtros sobre búsqueda libre** | Se priorizan filtros estructurados sobre campos de texto libre, porque la mayoría de las consultas del dominio se resuelven por estado, por fecha o por vehículo. | Las User Stories US13, US25 y US28 definen filtros, no búsqueda por texto. |
 | **Combinación de criterios** | Los filtros se pueden combinar entre sí, y el sistema aplica la intersección de los criterios seleccionados. | US13 y US28 establecen filtros acumulables. |
@@ -2570,7 +2570,7 @@ Las decisiones que se presentan en esta sección se derivan de los esquemas de o
 A continuación se detallan los mecanismos disponibles en cada vista de la Web Application, en correspondencia con las User Stories de la sección 3.1.
 
 | Vista | Mecanismo | Criterios disponibles | User Story |
-|:------|:----------|:----------------------|:-----------|
+|:---|:---|:---|:---|
 | **Listado de vehículos** | Filtros estructurados | Estado, flota, marca, año | US13 |
 | **Listado de vehículos por estado** | Filtros estructurados y agrupación | Estado (habilitado, observado, no habilitado) | US25 |
 | **Listado de usuarios** | Filtros estructurados | Rol, estado de la cuenta | US11 |
@@ -2589,7 +2589,7 @@ A continuación se detallan los mecanismos disponibles en cada vista de la Web A
 La búsqueda por texto libre se emplea únicamente donde los criterios estructurados no permiten resolver la consulta, conforme al principio de filtros sobre búsqueda libre. Se aplica en tres casos concretos:
 
 | Vista | Campo de búsqueda | Campos consultados | User Story |
-|:------|:------------------|:-------------------|:-----------|
+|:---|:---|:---|:---|
 | **Listado de incidencias** | Descripción de la incidencia | Descripción, observaciones asociadas | US28 |
 | **Catálogo de elementos de inspección** | Nombre o código del elemento | Nombre, código, descripción | US18 |
 | **Listado de vehículos** | Placa del vehículo | Placa | US13 |
@@ -2608,7 +2608,7 @@ La búsqueda por texto libre se emplea únicamente donde los criterios estructur
 Toda vista que presente un listado ofrece ordenamiento por al menos una columna, con un orden predeterminado que responde a la necesidad más frecuente del usuario.
 
 | Vista | Orden predeterminado | Criterios de ordenamiento disponibles |
-|:------|:---------------------|:--------------------------------------|
+|:---|:---|:---|
 | Listado de vehículos | Placa (ascendente) | Placa, estado, marca, año |
 | Listado de inspecciones | Fecha de realización (descendente) | Fecha, vehículo, estado |
 | Listado de incidencias | Fecha de registro (descendente) | Fecha, severidad, estado |
@@ -2624,7 +2624,7 @@ El orden predeterminado del listado de documentos se establece como fecha de ven
 #### Paginación
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | **Tamaño de página** | 20 elementos en resoluciones de escritorio, 10 en resoluciones móviles |
 | **Navegación** | Anterior, siguiente y número de página |
 | **Indicador** | Se muestra el número total de resultados y el rango visible |
@@ -2637,7 +2637,7 @@ El orden predeterminado del listado de documentos se establece como fecha de ven
 El flujo de inspección preoperacional no requiere búsqueda, dado que el conductor accede directamente al vehículo que tiene asignado, conforme a la Estrategia 4 planteada en la sección 2.1.2. Sin embargo, sí se aplican dos mecanismos de localización dentro de la inspección:
 
 | Mecanismo | Propósito | Sustento |
-|:----------|:----------|:---------|
+|:---|:---|:---|
 | **Orden predefinido del catálogo** | Los elementos de inspección se presentan en el orden establecido por `display_order`, conforme a la sección 4.8.1. | El conductor no necesita buscar; el sistema le presenta los elementos en el orden correcto. |
 | **Filtro por categoría** | El conductor puede filtrar los elementos por categoría (componente, elemento de seguridad, documentación). | Permite concentrarse en un grupo de elementos cuando la inspección se realiza por etapas. |
 
@@ -2650,7 +2650,7 @@ Este diseño responde a la condición de uso del conductor: la inspección se re
 Toda búsqueda o filtro que no arroje resultados debe presentar un mensaje que explique la situación y, cuando corresponda, ofrezca una acción para revertirla, conforme al estado vacío definido en la sección 4.1.2.
 
 | Situación | Mensaje | Acción ofrecida |
-|:----------|:--------|:----------------|
+|:---|:---|:---|
 | Filtro sin coincidencias | "No se encontraron vehículos que cumplan los criterios seleccionados." | Restablecer filtros |
 | Búsqueda por texto sin coincidencias | "No se encontraron incidencias que coincidan con la búsqueda." | Limpiar búsqueda |
 | Historial sin registros | "El vehículo no tiene inspecciones registradas." | Registrar inspección (según rol) |
@@ -2661,7 +2661,7 @@ Toda búsqueda o filtro que no arroje resultados debe presentar un mensaje que e
 #### Correspondencia con las User Stories
 
 | Mecanismo | User Stories relacionadas |
-|:----------|:--------------------------|
+|:---|:---|
 | Filtros por estado | US13, US25, US28, US33, US36 |
 | Filtros por vehículo | US28, US31 |
 | Filtros por tipo | US28, US31, US33 |
@@ -2684,7 +2684,7 @@ Las decisiones que se presentan en esta sección se derivan de la estructura jer
 #### Principios de navegación
 
 | Principio | Definición | Sustento |
-|:----------|:-----------|:---------|
+|:---|:---|:---|
 | **Navegación por rol** | Cada usuario accede únicamente a los módulos que corresponden a su rol. | Sección 4.2.1, organización jerárquica por rol. |
 | **Orientación permanente** | El usuario debe poder reconocer en todo momento en qué módulo y en qué nivel de profundidad se encuentra. | Se emplean migas de pan y resaltado del elemento activo. |
 | **Profundidad acotada** | La navegación no excede los tres niveles: módulo, listado y detalle. | Sección 4.2.1, estructura de navegación. |
@@ -2696,7 +2696,7 @@ Las decisiones que se presentan en esta sección se derivan de la estructura jer
 #### Estructura de navegación por producto
 
 | Producto | Tipo de navegación | Elementos | Niveles de profundidad |
-|:---------|:-------------------|:----------|:-----------------------|
+|:---|:---|:---|:---|
 | **Landing Page** | Navegación de una sola página con desplazamiento entre secciones | Encabezado fijo con menú de anclas y pie de página | 1 nivel |
 | **Web Application** | Navegación jerárquica con barra lateral y rutas anidadas | Barra lateral, migas de pan y barra superior | 3 niveles |
 
@@ -2709,7 +2709,7 @@ La Landing Page es un sitio de una sola página con desplazamiento entre seccion
 **Encabezado fijo**
 
 | Elemento | Posición | Comportamiento |
-|:---------|:---------|:---------------|
+|:---|:---|:---|
 | Logotipo FleetSafe | Extremo izquierdo | Regresa al inicio de la página (`#inicio`) |
 | Menú de anclas | Centro | Desplaza la vista hacia la sección seleccionada |
 | Botón "Solicitar demostración" | Extremo derecho | Desplaza la vista hacia el formulario de contacto (`#contacto`) |
@@ -2717,7 +2717,7 @@ La Landing Page es un sitio de una sola página con desplazamiento entre seccion
 **Menú de anclas**
 
 | Etiqueta | Anclaje | User Story |
-|:---------|:--------|:-----------|
+|:---|:---|:---|
 | Inicio | `#inicio` | US01 |
 | Funcionalidades | `#funcionalidades` | US02 |
 | Beneficios | `#beneficios` | US03 |
@@ -2732,7 +2732,7 @@ La Landing Page es un sitio de una sola página con desplazamiento entre seccion
 **Pie de página**
 
 | Elemento | Contenido |
-|:---------|:----------|
+|:---|:---|
 | Información de contacto | Correo electrónico, teléfono y dirección |
 | Redes sociales | Enlaces a los perfiles oficiales de FleetSafe |
 | Enlaces internos | Anclas a las secciones de la página |
@@ -2751,7 +2751,7 @@ La Web Application emplea una navegación jerárquica de tres niveles, en corres
 El primer nivel corresponde a los módulos funcionales de la aplicación. El usuario accede a ellos mediante la barra lateral de navegación, cuya visibilidad depende del rol autenticado.
 
 | Etiqueta | Ruta | Roles con acceso | User Stories relacionadas |
-|:---------|:-----|:-----------------|:--------------------------|
+|:---|:---|:---|:---|
 | Panel | `/app/dashboard` | Administrador, Supervisor | — |
 | Usuarios | `/app/users` | Administrador | US07, US08, US11 |
 | Vehículos | `/app/vehicles` | Administrador, Supervisor | US12–US16 |
@@ -2766,7 +2766,7 @@ El primer nivel corresponde a los módulos funcionales de la aplicación. El usu
 El segundo nivel corresponde a la vista consolidada de los objetos del módulo. Se accede desde la barra lateral y presenta los mecanismos de búsqueda y ordenamiento definidos en la sección 4.2.4.
 
 | Vista | Ruta | Filtros disponibles | User Story |
-|:------|:-----|:--------------------|:-----------|
+|:---|:---|:---|:---|
 | Listado de usuarios | `/app/users` | Rol, estado de la cuenta | US11 |
 | Listado de vehículos | `/app/vehicles` | Estado, flota, marca, año, placa | US13 |
 | Listado de inspecciones | `/app/inspections` | Vehículo, conductor, estado, rango de fechas | US22, US35 |
@@ -2779,7 +2779,7 @@ El segundo nivel corresponde a la vista consolidada de los objetos del módulo. 
 El tercer nivel corresponde a la vista específica de un objeto. Se accede desde el listado y permite consultar su información completa, su historial y las acciones disponibles.
 
 | Vista | Ruta | Contenido | User Story |
-|:------|:-----|:----------|:-----------|
+|:---|:---|:---|:---|
 | Detalle de vehículo | `/app/vehicles/{id}` | Información, estado actual, historial de inspecciones, incidencias y documentos | US14 |
 | Detalle de inspección | `/app/inspections/{id}` | Resultados por elemento, observaciones y evidencias | US22 |
 | Detalle de incidencia | `/app/incidents/{id}` | Descripción, acciones correctivas, reparaciones y seguimiento | US29, US30, US31 |
@@ -2794,7 +2794,7 @@ El tercer nivel corresponde a la vista específica de un objeto. Se accede desde
 **Barra lateral de navegación**
 
 | Aspecto | Definición |
-|:--------|:-----------|
+|:---|:---|
 | Ancho | 240 px en resoluciones de escritorio |
 | Visibilidad | Permanente en escritorio; colapsable en móvil, conforme a la sección 4.1.2 |
 | Contenido | Logotipo, módulos habilitados según el rol, datos del usuario autenticado |
@@ -2804,7 +2804,7 @@ El tercer nivel corresponde a la vista específica de un objeto. Se accede desde
 **Barra superior**
 
 | Elemento | Posición | Comportamiento |
-|:---------|:---------|:---------------|
+|:---|:---|:---|
 | Botón de menú | Extremo izquierdo, solo en móvil | Abre la barra lateral |
 | Migas de pan | Centro-izquierda | Indica la ubicación actual dentro de la jerarquía |
 | Acciones rápidas | Extremo derecho | Notificaciones y menú del usuario |
@@ -2828,7 +2828,7 @@ Panel > Incidencias > Incidencia #INC-2026-0117
 **Menú de usuario**
 
 | Opción | Comportamiento | User Story |
-|:-------|:---------------|:-----------|
+|:---|:---|:---|
 | Ver perfil | Muestra los datos del usuario autenticado | — |
 | Cerrar sesión | Finaliza la sesión y redirige a la pantalla de inicio de sesión | US10 |
 
@@ -2841,7 +2841,7 @@ El flujo de inspección preoperacional se organiza de forma secuencial, conforme
 **Flujo de navegación del conductor**
 
 | Paso | Vista | Acciones disponibles | Restricción de avance |
-|:-----|:------|:---------------------|:-----------------------|
+|:---|:---|:---|:---|
 | 1 | Selección de vehículo asignado | Iniciar inspección | Debe existir un vehículo asignado y no debe haber otra inspección en progreso |
 | 2 | Registro de elementos de inspección | Registrar resultado, agregar observación, adjuntar evidencia, retroceder | Ninguna, hasta completar el paso 5 |
 | 3 | Revisión previa | Revisar resultados registrados, corregir un elemento, cancelar | Ninguna |
@@ -2861,7 +2861,7 @@ El flujo de inspección preoperacional se organiza de forma secuencial, conforme
 El panel es la vista inicial de la Web Application tras la autenticación. Su función es orientar al usuario hacia la tarea que debe ejecutar, y no reemplazar la navegación principal.
 
 | Elemento del panel | Comportamiento | Rol |
-|:-------------------|:---------------|:----|
+|:---|:---|:---|
 | Indicadores de estado de flota | Enlaza al listado de vehículos filtrado por estado | Supervisor |
 | Inspecciones recientes | Enlaza al detalle de la inspección seleccionada | Supervisor |
 | Incidencias abiertas | Enlaza al listado de incidencias filtrado por estado | Supervisor |
@@ -2873,7 +2873,7 @@ El panel es la vista inicial de la Web Application tras la autenticación. Su fu
 #### Estados de la navegación
 
 | Estado | Comportamiento |
-|:-------|:---------------|
+|:---|:---|
 | Módulo activo | Se resalta en la barra lateral con `color-primary-100` como fondo y `color-primary-700` como texto |
 | Nivel actual | Se refleja en las migas de pan |
 | Ruta protegida | Si el usuario no está autenticado, el sistema redirige a la pantalla de inicio de sesión, conforme a US09 |
@@ -2885,7 +2885,7 @@ El panel es la vista inicial de la Web Application tras la autenticación. Su fu
 #### Correspondencia con las User Stories
 
 | Elemento de navegación | User Stories relacionadas |
-|:-----------------------|:--------------------------|
+|:---|:---|
 | Encabezado fijo de la Landing Page | US05 |
 | Menú de anclas | US05 |
 | Pie de página | US06 |
@@ -3074,7 +3074,7 @@ Se presenta un diagrama por cada User goal, consistente con el wireflow del que 
 **Convención de color.** Cada tipo de nodo tiene un color propio, tomado de los tokens definidos en la sección 4.1.1. El color acompaña siempre al texto del nodo y nunca lo sustituye, de modo que el diagrama se lee igual sin distinguir los colores.
 
 | Color | Tipo de nodo |
-|:------|:-------------|
+|:---|:---|
 | Gris oscuro | Inicio y fin del recorrido |
 | Azul | Acción que ejecuta el usuario |
 | Gris pizarra | Paso que ejecuta el sistema |
@@ -3229,7 +3229,7 @@ Para el diseño de la arquitectura de software de FleetSafe se ha considerado un
 A partir del Ubiquitous Language y del proceso de Big Picture EventStorming, se identificaron los siguientes sub-dominios:
 
 | Sub-dominio | Tipo | Descripción |
-|:------------|:-----|:------------|
+|:---|:---|:---|
 | **Inspección Preoperacional** | Core | Gestión del registro de inspecciones realizadas por los conductores sobre los vehículos asignados, incluyendo elementos de inspección, resultados, observaciones y evidencias. |
 | **Evaluación y Habilitación** | Core | Procesamiento de los resultados de inspección mediante reglas de evaluación para determinar la condición operativa del vehículo (habilitado, observado o no habilitado). |
 | **Gestión de Vehículos y Flota** | Soporte | Administración de la información de los vehículos que conforman la flota, incluyendo sus características y estado. |
@@ -3358,7 +3358,7 @@ El command `ApplyAuthorizationResult` no lo origina un actor humano: lo desencad
 Las *policies* son las reglas que conectan un domain event de un contexto con un command de otro. Son las tres que cruzan fronteras y explican cómo se comunican los contextos sin acoplarse:
 
 | Cuando ocurre | La política establece que | Y ejecuta el command |
-|:--------------|:--------------------------|:---------------------|
+|:---|:---|:---|
 | `InspectionCompleted` | toda inspección completada debe evaluarse de forma automática | `EvaluateInspection` |
 | `InspectionEvaluated` | el resultado de la evaluación determina la habilitación del vehículo | `IssueOperationalAuthorization` |
 | `VehicleNotEnabled` · `VehicleObserved` | la condición operativa resultante debe reflejarse en el vehículo y notificarse al supervisor | `ApplyAuthorizationResult` |
@@ -3425,7 +3425,7 @@ El Container Diagram es el segundo nivel del modelo C4 y muestra los elementos d
 Para FleetSafe se han identificado los siguientes containers:
 
 | Container | Tecnología | Responsabilidad |
-|:----------|:-----------|:----------------|
+|:---|:---|:---|
 | **Landing Page** | HTML5, CSS3, JavaScript | Sitio web estático que presenta la propuesta de valor y dirige a cada segmento objetivo a la vista correspondiente de la Web Application. |
 | **Web Application** | Angular, Angular Material, TypeScript | Aplicación web que permite a cada usuario operar la plataforma según el rol concedido a su cuenta. |
 | **Backend RESTful API** | Spring Boot, Spring Data JPA, Java | API RESTful que expone la lógica de negocio de FleetSafe, documentada con OpenAPI. |
@@ -3520,7 +3520,7 @@ component landing "ComponentsLanding" {
 </details>
 
 | Componente | Tecnología | Responsabilidad |
-|:-----------|:-----------|:----------------|
+|:---|:---|:---|
 | **Navigation Bar** | HTML, CSS | Da acceso a las secciones de contenido y a los puntos de entrada de inicio de sesión y registro. |
 | **Content Sections** | HTML, CSS | Presenta la problemática, la plataforma, el proceso, los perfiles y las preguntas frecuentes. |
 | **Segment Call to Action** | HTML, JavaScript | Dirige a cada segmento objetivo a la vista de la Web Application que corresponde a su rol. |
@@ -3564,7 +3564,7 @@ component webapp "ComponentsWebApp" {
 </details>
 
 | Componente | Tecnología | Responsabilidad | Bounded context |
-|:-----------|:-----------|:----------------|:----------------|
+|:---|:---|:---|:---|
 | **Authentication Feature** | Angular Feature Module | Presenta la vista de inicio de sesión y mantiene la sesión del usuario autenticado. | Identity and Access |
 | **Inspection Feature** | Angular Feature Module | Presenta la inspección preoperacional al conductor y registra el resultado de cada elemento, sus observaciones y sus evidencias. | Pre-Operational Inspection |
 | **Fleet Feature** | Angular Feature Module | Presenta la flota, los vehículos, los conductores y las asignaciones entre ellos. | Fleet Management |
@@ -3649,7 +3649,7 @@ component api "ComponentsApi" {
 </details>
 
 | Bounded context | Componente | Tecnología | Responsabilidad |
-|:----------------|:-----------|:-----------|:----------------|
+|:---|:---|:---|:---|
 | **Identity and Access** | Identity Controller | Spring REST Controller | Expone los endpoints de inicio de sesión, registro y administración de usuarios. |
 | | Authentication Service | Spring Service | Valida las credenciales, emite y verifica el token de autenticación y resuelve el rol del usuario. |
 | | User Repository | Spring Data JPA | Persiste y recupera los usuarios de la plataforma. |
@@ -4257,7 +4257,7 @@ El atributo `inspectionId` admite valor nulo y se acompaña de la enumeración `
 Las referencias que cruzan la frontera de un contexto se implementan como atributos de tipo `UUID` y no como asociaciones entre clases. El cuadro siguiente las recoge:
 
 | Clase | Atributo | Contexto referenciado |
-|:------|:---------|:----------------------|
+|:---|:---|:---|
 | `User` | `companyId` | Fleet Management |
 | `Driver` | `userId` | Identity and Access |
 | `VehicleDocument` | `vehicleId` | Fleet Management |
@@ -4285,7 +4285,7 @@ La base de datos seleccionada es **PostgreSQL**, por su soporte nativo del tipo 
 **Convenciones aplicadas al modelo**
 
 | Convención | Descripción |
-|:-----------|:------------|
+|:---|:---|
 | Nomenclatura | Nombres de tablas y columnas en inglés, en minúsculas y con guion bajo. Los nombres de las tablas provienen del Ubiquitous Language definido en la sección 2.5. |
 | Identificadores | Todas las tablas utilizan `UUID` como clave primaria, generado por la aplicación. |
 | Auditoría | Las tablas que representan entidades con ciclo de vida incluyen `created_at` y `updated_at`. |
@@ -4303,7 +4303,7 @@ En Domain-Driven Design, cada bounded context es responsable de la consistencia 
 A continuación se presentan dos vistas complementarias del diseño de la base de datos. En primer lugar, el **modelo consolidado**, que muestra la totalidad del esquema tal como se persiste en la instancia de PostgreSQL. A continuación, un **diagrama por cada uno de los seis bounded contexts** identificados en la sección 4.6, con la explicación de las tablas que lo componen y de las decisiones de diseño adoptadas.
 
 | Bounded Context | Tipo | Tablas |
-|:----------------|:-----|:-------|
+|:---|:---|:---|
 | Identity and Access | Genérico | `users` |
 | Fleet Management | Soporte | `companies`, `fleets`, `vehicles`, `drivers`, `vehicle_assignments` |
 | Vehicle Documentation | Soporte | `document_types`, `vehicle_documents` |
@@ -4833,7 +4833,7 @@ Este contexto es responsable del registro, seguimiento y resolución de las inci
 El siguiente cuadro concentra las referencias que cruzan la frontera de un bounded context. Todas se implementan como columna de identificador, sin clave foránea, según la convención establecida al inicio de esta sección.
 
 | Tabla origen | Columna | Bounded context destino | Objeto referenciado |
-|:-------------|:--------|:------------------------|:--------------------|
+|:---|:---|:---|:---|
 | `users` | `company_id` | Fleet Management | `companies` |
 | `drivers` | `user_id` | Identity and Access | `users` |
 | `vehicle_documents` | `vehicle_id` | Fleet Management | `vehicles` |
@@ -4884,7 +4884,7 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 #### Project Management
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
-|:---------|:--------------------------------|:-------------------|
+|:---|:---|:---|
 | **Trello** | Gestión del Product Backlog y de los Sprint Backlogs. Cada User Story se registra como una tarjeta con su identificador, descripción y Story Points, y las listas representan el estado de avance dentro de cada sprint. | https://trello.com |
 | **GitHub Projects** | Seguimiento de las tareas de implementación asociadas a cada rama de trabajo. | https://github.com/features/issues |
 | **Discord** | Comunicación diaria del equipo y coordinación de las sesiones de trabajo remoto. | https://discord.com/download |
@@ -4892,21 +4892,21 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 #### Requirements Management
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
-|:---------|:--------------------------------|:-------------------|
+|:---|:---|:---|
 | **UXPressia** | Elaboración de los User Personas, User Journey Maps, Empathy Maps e Impact Mapping de las secciones 2.3 y 3.2. | https://uxpressia.com |
 | **Microsoft Stream** | Alojamiento de los videos de entrevistas de needfinding y de validación, enlazados desde el informe. | https://www.microsoft365.com/launch/stream |
 
 #### Product UX/UI Design
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
-|:---------|:--------------------------------|:-------------------|
+|:---|:---|:---|
 | **Figma** | Elaboración de los wireframes, mock-ups y prototipos navegables del Landing Page y de la Web Application, y definición del design system descrito en la sección 4.1. | https://www.figma.com |
 | **FigJam** | Elaboración de los wireflow diagrams, user flow diagrams y de las sesiones de EventStorming de las secciones 2.4 y 4.6.1. | https://www.figma.com/figjam |
 
 #### Software Development
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia o de descarga |
-|:---------|:--------------------------------|:---------------------------------|
+|:---|:---|:---|
 | **IntelliJ IDEA** | Entorno de desarrollo del Backend RESTful API en Java con Spring Boot. | https://www.jetbrains.com/idea/download |
 | **WebStorm** | Entorno de desarrollo de la Frontend Web Application en Angular y TypeScript. | https://www.jetbrains.com/webstorm/download |
 | **Visual Studio Code** | Edición del Landing Page en HTML5, CSS3 y JavaScript, y del informe en Markdown. | https://code.visualstudio.com/download |
@@ -4921,7 +4921,7 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 #### Software Deployment
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
-|:---------|:--------------------------------|:-------------------|
+|:---|:---|:---|
 | **GitHub Pages** | Publicación del Landing Page y de la Frontend Web Application como sitios estáticos a partir de sus repositorios. | https://pages.github.com |
 | **Render** | Publicación temporal de la API simulada con json-server que consume la Web Application mientras el Backend RESTful API no está desplegado. | https://render.com |
 | **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
@@ -4933,7 +4933,7 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 #### Software Documentation
 
 | Producto | Propósito de uso en el proyecto | Ruta de referencia |
-|:---------|:--------------------------------|:-------------------|
+|:---|:---|:---|
 | **GitHub** | Alojamiento del informe en formato Markdown, que constituye el entregable evaluado, y de los repositorios de los tres productos. | https://github.com |
 | **Structurizr** | Elaboración de los diagramas C4 de la sección 4.6 a partir del archivo `workspace.dsl`. | https://structurizr.com |
 | **Mermaid** | Elaboración de los diagramas de clases de la sección 4.7 y de los diagramas de base de datos de la sección 4.8, versionados junto al informe. | https://mermaid.js.org |
@@ -4949,7 +4949,7 @@ El equipo utiliza **Git** como sistema de control de versiones y **GitHub** como
 #### Repositorios del proyecto
 
 | Producto | Repositorio |
-|:---------|:------------|
+|:---|:---|
 | Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page |
 | Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application |
 | Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services |
@@ -4962,7 +4962,7 @@ El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con
 Se adopta **GitFlow**, según el modelo descrito por Vincent Driessen, con las siguientes ramas:
 
 | Rama | Propósito | Origen | Destino |
-|:-----|:----------|:-------|:--------|
+|:---|:---|:---|:---|
 | `main` | Contiene únicamente versiones publicadas y estables. Cada integración recibe un tag de versión. | — | — |
 | `develop` | Rama de integración del trabajo en curso. Es el punto de partida y de llegada de toda funcionalidad. | `main` | `main` (vía `release`) |
 | `feature/*` | Una rama por cada funcionalidad o sección en desarrollo. | `develop` | `develop` |
@@ -4985,7 +4985,7 @@ hotfix/<descripción-breve>       hotfix/expired-token-handling
 Las versiones publicadas se nombran conforme a **Semantic Versioning 2.0.0**, con el formato `MAJOR.MINOR.PATCH`:
 
 | Componente | Se incrementa cuando |
-|:-----------|:---------------------|
+|:---|:---|
 | `MAJOR` | se introduce un cambio incompatible con la versión anterior |
 | `MINOR` | se añade funcionalidad manteniendo la compatibilidad |
 | `PATCH` | se corrige un defecto sin alterar la funcionalidad |
@@ -4997,7 +4997,7 @@ Cada entrega del curso corresponde a una versión publicada en `main` con su tag
 Los mensajes de commit siguen la especificación **Conventional Commits**, con la estructura `<tipo>(<alcance>): <descripción>`. La descripción se redacta en **inglés**, en modo imperativo, en minúsculas y sin punto final.
 
 | Tipo | Se utiliza para |
-|:-----|:----------------|
+|:---|:---|
 | `feat` | funcionalidad nueva perceptible por el usuario |
 | `fix` | corrección de un defecto |
 | `refactor` | cambio que no altera el comportamiento |
@@ -5023,7 +5023,7 @@ refactor: improve code structure in main files
 El equipo adopta guías de estilo ya establecidas en lugar de definir convenciones propias, de modo que el código resulte familiar para cualquier desarrollador ajeno al equipo y las decisiones de formato no sean objeto de discusión.
 
 | Lenguaje o artefacto | Guía adoptada | Referencia |
-|:---------------------|:--------------|:-----------|
+|:---|:---|:---|
 | HTML | HTML Style Guide and Coding Conventions · Google HTML/CSS Style Guide | https://www.w3schools.com/html/html5_syntax.asp · https://google.github.io/styleguide/htmlcssguide.html |
 | CSS | Google HTML/CSS Style Guide | https://google.github.io/styleguide/htmlcssguide.html |
 | JavaScript | Google JavaScript Style Guide | https://google.github.io/styleguide/jsguide.html |
@@ -5036,7 +5036,7 @@ El equipo adopta guías de estilo ya establecidas en lugar de definir convencion
 **Todo el código se escribe en inglés**: nombres de clases, métodos, variables, archivos, ramas, tablas, columnas y endpoints. Los nombres del dominio proceden del Ubiquitous Language de la sección 2.5, de modo que un mismo concepto se llama igual en la interfaz, en la API y en la base de datos.
 
 | Elemento | Convención | Ejemplo |
-|:---------|:-----------|:--------|
+|:---|:---|:---|
 | Clase Java | `PascalCase`, sustantivo singular | `OperationalAuthorization` |
 | Método Java | `camelCase`, verbo en infinitivo | `evaluateInspection()` |
 | Constante Java | `UPPER_SNAKE_CASE` | `MAX_INSPECTION_ITEMS` |
@@ -5144,20 +5144,20 @@ El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publi
 <a id="5211-sprint-planning-1"></a>
 #### 5.2.1.1. Sprint Planning 1.
 
-| Sprint 1                           | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Sprint Planning Background**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Date**                           | 2026-09-18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Time**                           | 11:00 pm                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Location**                       | Via discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **Prepared By**                    | Palacin Lazo, Gerardo Valentin                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Attendees to planning meeting**  | Palacin Lazo, Gerardo Valentin; Santos Torres, Juan Manuel; Apaza Bocanegra, Elizabeth Noelia; Aguilar Untiveros, Rodrigo Fabrizio; Espino Flores, Alejandro                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Sprint 1 Review Summary**        | Durante este sprint el equipo avanzó en la construcción de la base del producto FleetSafe. Se completó la documentación de arquitectura y diseño, incluyendo los diagramas C4 de contexto, contenedores y componentes, los diagramas de clases organizados por bounded context y los diagramas de base de datos correspondientes a los contextos del dominio. Asimismo, se desarrolló el wireframe y el mock-up de alta fidelidad de la Landing Page, definiendo sus diez secciones en versión Desktop. La Landing Page fue implementada como parte del producto y se documentó su configuración para el despliegue mediante GitHub Pages. |
-| **Sprint 1 Retrospective Summary** | Durante la retrospectiva el equipo identificó que una parte importante del tiempo del sprint se concentró en completar y corregir la documentación técnica y el diseño del producto. A partir de la autocrítica realizada, se corrigieron aspectos del análisis competitivo, del diseño de base de datos, de la arquitectura C4 y del diseño orientado a objetos. También se identificó la necesidad de cerrar previamente el diseño de las funcionalidades antes de iniciar su implementación, así como considerar el esfuerzo de documentación dentro de la estimación del trabajo del sprint.                                           |
-| **Sprint Goal & User Stories**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Sprint 1 Goal**                  | Establecer una base sólida para el desarrollo de FleetSafe mediante la definición de la arquitectura, el diseño orientado a objetos, el diseño de base de datos y la construcción de la Landing Page, dejando preparados los artefactos necesarios para continuar con la implementación de las funcionalidades principales de la plataforma.                                                                                                                                                                                                                                                                                               |
-| **Sprint 1 Velocity**              | 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Sum of Story Points**            | 27                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Sprint 1 | Sprint 1 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | 2026-09-18 |
+| **Time** | 11:00 pm |
+| **Location** | Via discord |
+| **Prepared By** | Palacin Lazo, Gerardo Valentin |
+| **Attendees to planning meeting** | Palacin Lazo, Gerardo Valentin; Santos Torres, Juan Manuel; Apaza Bocanegra, Elizabeth Noelia; Aguilar Untiveros, Rodrigo Fabrizio; Espino Flores, Alejandro |
+| **Sprint 1 Review Summary** | Durante este sprint el equipo avanzó en la construcción de la base del producto FleetSafe. Se completó la documentación de arquitectura y diseño, incluyendo los diagramas C4 de contexto, contenedores y componentes, los diagramas de clases organizados por bounded context y los diagramas de base de datos correspondientes a los contextos del dominio. Asimismo, se desarrolló el wireframe y el mock-up de alta fidelidad de la Landing Page, definiendo sus diez secciones en versión Desktop. La Landing Page fue implementada como parte del producto y se documentó su configuración para el despliegue mediante GitHub Pages. |
+| **Sprint 1 Retrospective Summary** | Durante la retrospectiva el equipo identificó que una parte importante del tiempo del sprint se concentró en completar y corregir la documentación técnica y el diseño del producto. A partir de la autocrítica realizada, se corrigieron aspectos del análisis competitivo, del diseño de base de datos, de la arquitectura C4 y del diseño orientado a objetos. También se identificó la necesidad de cerrar previamente el diseño de las funcionalidades antes de iniciar su implementación, así como considerar el esfuerzo de documentación dentro de la estimación del trabajo del sprint. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 1 Goal** | Establecer una base sólida para el desarrollo de FleetSafe mediante la definición de la arquitectura, el diseño orientado a objetos, el diseño de base de datos y la construcción de la Landing Page, dejando preparados los artefactos necesarios para continuar con la implementación de las funcionalidades principales de la plataforma. |
+| **Sprint 1 Velocity** | 8 |
+| **Sum of Story Points** | 27 |
 
 <a id="5212-aspect-leader-and-colaborators"></a>
 #### 5.2.1.2. Aspect Leader and Colaborators.
@@ -5166,13 +5166,13 @@ Durante este sprint, el equipo BitMeisters se enfocó principalmente en consolid
 
 Con el objetivo de optimizar la organización y la colaboración del equipo, se actualizó la matriz de Liderazgo y Colaboración (LACX), la cual asigna responsabilidades y roles específicos a cada miembro del equipo en relación con los aspectos abordados durante este sprint.
 
-| Team Member (Last Name, First Name) | Github Username  | Resolución de errores de sprints previos Leader (L) / Collaborator (C) | Arquitectura, diseño y optimización de FleetSafe Leader (L) / Collaborator (C) | Refinamiento de funcionalidades y ajustes finales Leader (L) / Collaborator (C) |
-|-------------------------------------|------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| Palacin Lazo, Gerardo Valentin      | GerardoPalacin03 | C                                                                      | C                                                                              | L                                                                               |
-| Santos Torres, Juan Manuel          | JuanManuel312    | L                                                                      | L                                                                              | C                                                                               |
-| Apaza Bocanegra, Elizabeth Noelia   | Elizabeth-Apaza    | C                                                                      | C                                                                              | L                                                                               |
-| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712        | L                                                                      | L                                                                              | C                                                                               |
-| Espino Flores, Alejandro            | CafecitoSKR      | C                                                                      | L                                                                              | C                                                                               |
+| Team Member (Last Name, First Name) | Github Username | Resolución de errores de sprints previos Leader (L) / Collaborator (C) | Arquitectura, diseño y optimización de FleetSafe Leader (L) / Collaborator (C) | Refinamiento de funcionalidades y ajustes finales Leader (L) / Collaborator (C) |
+|---|---|---|---|---|
+| Palacin Lazo, Gerardo Valentin | GerardoPalacin03 | C | C | L |
+| Santos Torres, Juan Manuel | JuanManuel312 | L | L | C |
+| Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | C | C | L |
+| Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | L | L | C |
+| Espino Flores, Alejandro | CafecitoSKR | C | L | C |
 
 
 <a id="5213-sprint-backlog-1"></a>
@@ -5753,7 +5753,7 @@ DataScope. (s. f.). *Digitalización del checklist preoperacional en gestión de
 En este anexo se registran los videos de exposición correspondientes a cada entrega. Cada video presenta a los cinco integrantes ante cámara y tiene una duración máxima de 30 minutos, conforme a lo establecido en el enunciado. Los videos se alojan en Microsoft Stream y se enlazan mediante su dirección completa.
 
 | Entrega | Semana | Fecha | Enlace de Microsoft Stream | Duración |
-|:--------|:-------|:------|:---------------------------|:---------|
+|:---|:---|:---|:---|:---|
 | **AV1** | 4 | | | |
 | **TB1** | 7 | | | |
 | **AV2** | 12 | | | |
@@ -5767,7 +5767,7 @@ Este anexo se amplía en cada entrega con la fila correspondiente.
 Registro de los videos de las entrevistas realizadas a los tres segmentos objetivo, tanto en la fase de needfinding como en la de validación.
 
 | Fase | Segmento | Entrevistados | Enlace de Microsoft Stream | Duración |
-|:-----|:---------|:--------------|:---------------------------|:---------|
+|:---|:---|:---|:---|:---|
 | Needfinding | Empresas de transporte de carga | | | |
 | Needfinding | Supervisores de flota | | | |
 | Needfinding | Conductores de vehículos de carga | | | |
@@ -5779,14 +5779,14 @@ Registro de los videos de las entrevistas realizadas a los tres segmentos objeti
 ## Anexo C — Enlaces de los productos y repositorios
 
 | Producto | Repositorio | Despliegue |
-|:---------|:------------|:-----------|
+|:---|:---|:---|
 | Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | |
 | Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | |
 | Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | |
 | Informe | https://github.com/1ASI0729-2620-16692-BitMeisters/Report | — |
 
 | Artefacto | Enlace |
-|:----------|:-------|
+|:---|:---|
 | Product Backlog en Trello | https://trello.com/b/LnAD1sH3/fleetsafe-product-backlog |
 | Organización de GitHub | https://github.com/1ASI0729-2620-16692-BitMeisters |
 
