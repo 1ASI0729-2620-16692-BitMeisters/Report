@@ -203,6 +203,7 @@
         - <a href="capitulo-5.md#523-sprint-3">5.2.3. Sprint 3</a>
             - <a href="capitulo-5.md#5231-sprint-planning-3">5.2.3.1. Sprint Planning 3.</a>
             - <a href="capitulo-5.md#5232-aspect-leaders-and-collaborators">5.2.3.2. Aspect Leaders and Collaborators.</a>
+            - <a href="capitulo-5.md#5237-software-deployment-evidence-for-sprint-review">5.2.3.7. Software Deployment Evidence for Sprint Review.</a>
     - <a href="capitulo-5.md#53-validation-interviews">5.3. Validation Interviews.</a>
         - <a href="capitulo-5.md#531-diseno-de-entrevistas">5.3.1. Diseño de Entrevistas.</a>
         - <a href="capitulo-5.md#532-registro-de-entrevistas">5.3.2. Registro de Entrevistas.</a>

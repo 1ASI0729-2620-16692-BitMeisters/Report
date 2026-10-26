@@ -832,6 +832,72 @@ Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend R
 | Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | — | — | L | — | C |
 | Santos Torres, Juan Manuel | JuanManuel312 | — | — | — | — | — | L | C |
 
+<a id="5237-software-deployment-evidence-for-sprint-review"></a>
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review.
+
+En el Sprint 3 se desplegó la primera versión del Backend RESTful API en Azure, siguiendo la configuración descrita en la sección 5.1.4. La imagen del servicio se construye y se publica desde el repositorio `Web-Services`, y se ejecuta en Azure Container Apps sobre una base Azure Database for PostgreSQL. El Landing Page y la Web Application continúan publicados en GitHub Pages.
+
+| Producto | Repositorio | Plataforma | Estado | URL |
+|---|---|---|---|---|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
+| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure Container Apps, con la imagen en GitHub Container Registry | Desplegado desde `develop` | https://fleetsafe-api.nicesky-02088f36.chilecentral.azurecontainerapps.io/swagger-ui/index.html |
+| Base de datos | — | Azure Database for PostgreSQL – Flexible Server | Desplegada | `fleet-safe-db.postgres.database.azure.com` |
+
+**1. Registro de los proveedores de recursos.** Antes de crear los recursos se comprobó que la suscripción Azure for Students tiene registrados los proveedores que necesitan: `Microsoft.DBforPostgreSQL` para la base de datos, `Microsoft.App` para Azure Container Apps y `Microsoft.OperationalInsights` para los registros.
+
+![Proveedores de recursos registrados en la suscripción](img/sprint3/deployment-01-subscription-resource-providers.png)
+
+**2. Configuración del servidor de base de datos.** Se creó el servidor `fleet-safe-db` con PostgreSQL 18 en el grupo de recursos `rg-fleetsafe`, región `Chile Central`. Se eligió el nivel *Burstable* `Standard_B1ms` con 32 GiB de almacenamiento, que entran en la capa gratuita, sin alta disponibilidad, y la autenticación con usuario y contraseña de PostgreSQL, que es la que utiliza el servicio.
+
+![Cómputo, almacenamiento y autenticación del servidor PostgreSQL](img/sprint3/deployment-02-postgresql-compute-and-authentication.png)
+
+**3. Configuración de red.** El servidor admite conexiones desde los servicios de Azure, que es como lo alcanza Azure Container Apps, sin abrirlo a cualquier dirección de internet.
+
+![Configuración de red del servidor PostgreSQL](img/sprint3/deployment-03-postgresql-networking.png)
+
+![Despliegue del servidor PostgreSQL completado](img/sprint3/deployment-04-postgresql-deployment-succeeded.png)
+
+**4. Creación de la base de datos.** Sobre el servidor se creó la base `fleetsafe`, cuyas tablas genera Spring Data JPA al arrancar el servicio.
+
+![Base de datos fleetsafe creada en el servidor](img/sprint3/deployment-05-postgresql-fleetsafe-database.png)
+
+**5. Construcción y publicación de la imagen.** El flujo de trabajo `Delivery` de GitHub Actions ejecuta las pruebas del servicio contra una base PostgreSQL 18 temporal en cada Pull Request y, al integrar en `develop`, construye la imagen y la publica en GitHub Container Registry.
+
+![Ejecuciones del flujo de trabajo Delivery](img/sprint3/deployment-06-github-actions-delivery-runs.png)
+
+![Imagen web-services publicada en GitHub Container Registry](img/sprint3/deployment-07-ghcr-package.png)
+
+**6. Visibilidad de la imagen.** El paquete se hizo público para que Azure Container Apps descargue la imagen sin credenciales. La imagen solo contiene el código compilado, que ya es público en el repositorio; las credenciales de la base se entregan como secreto en tiempo de ejecución.
+
+![Visibilidad pública del paquete web-services](img/sprint3/deployment-08-ghcr-package-public.png)
+
+**7. Creación del entorno de Azure Container Apps.** El entorno `cae-fleetsafe` se creó con Azure CLI en la misma región que la base de datos, y generó su espacio de trabajo de Log Analytics para los registros.
+
+![Creación del entorno cae-fleetsafe con Azure CLI](img/sprint3/deployment-09-container-apps-environment.png)
+
+**8. Creación de la aplicación.** La aplicación `fleetsafe-api` se creó con Azure CLI a partir de la imagen `develop`, con ingreso externo al puerto 8080, entre cero y una réplica, y la contraseña de la base como secreto. El primer intento falló porque la variable con la contraseña estaba vacía en la terminal y el secreto no llegó a crearse; tras leerla de nuevo, la aplicación se creó y devolvió su dirección pública.
+
+![Creación de la aplicación fleetsafe-api con Azure CLI](img/sprint3/deployment-10-container-app-created.png)
+
+**9. Verificación del servicio.** La documentación OpenAPI responde en la dirección pública con el nombre, la versión y la descripción del servicio. Todavía no muestra operaciones, porque los controladores REST se incorporan en este mismo sprint.
+
+![Documentación OpenAPI del servicio desplegado](img/sprint3/deployment-11-swagger-deployed.png)
+
+**10. Recursos desplegados.** El grupo de recursos `rg-fleetsafe` reúne el servidor de base de datos, el entorno y la aplicación de Azure Container Apps, y el espacio de trabajo de Log Analytics.
+
+![Recursos del grupo rg-fleetsafe](img/sprint3/deployment-12-resource-group.png)
+
+![Vista general de la aplicación fleetsafe-api en ejecución](img/sprint3/deployment-13-container-app-overview.png)
+
+**11. Configuración de la aplicación.** Las variables `DATABASE_URL` y `DATABASE_USER` se registraron como valores, y `DATABASE_PASSWORD` como referencia al secreto `db-password`, de modo que la contraseña no aparece en la configuración.
+
+![Variables de entorno del contenedor con la contraseña como secreto](img/sprint3/deployment-14-container-app-environment-variables.png)
+
+**12. Registros del arranque.** El registro en tiempo real muestra que el servicio se conectó a la base `fleetsafe`, levantó Tomcat en el puerto 8080 y terminó de arrancar.
+
+![Registros del arranque del servicio en Azure Container Apps](img/sprint3/deployment-15-container-app-log-stream.png)
+
 <a id="53-validation-interviews"></a>
 ## 5.3. Validation Interviews.
 
