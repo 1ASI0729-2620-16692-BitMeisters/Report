@@ -56,11 +56,14 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 |:---|:---|:---|
 | **GitHub Pages** | Publicación del Landing Page y de la Frontend Web Application como sitios estáticos a partir de sus repositorios. | https://pages.github.com |
 | **Render** | Publicación temporal de la API simulada con json-server que consume la Web Application mientras el Backend RESTful API no está desplegado. | https://render.com |
-| **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
+| **Docker** | Empaquetado del Backend RESTful API como imagen de contenedor con su propio entorno de ejecución de Java, y base de datos PostgreSQL local con Docker Compose. | https://www.docker.com/products/docker-desktop |
+| **GitHub Container Registry** | Registro de la imagen del Backend RESTful API, publicada desde el propio repositorio `Web-Services`. | https://docs.github.com/packages |
+| **Azure Container Apps** | Ejecución del Backend RESTful API a partir de su imagen de contenedor, con dirección pública HTTPS. | https://azure.microsoft.com/products/container-apps |
 | **Azure Database for PostgreSQL** | Instancia gestionada de PostgreSQL que soporta la persistencia de la solución. | https://azure.microsoft.com/products/postgresql |
-| **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
+| **Azure CLI** | Creación del entorno y de la aplicación de Azure Container Apps desde la terminal. | https://learn.microsoft.com/cli/azure/install-azure-cli |
+| **GitHub Actions** | Automatización de la construcción, las pruebas y la publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
 
-**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page y la Web Application son, una vez construidos, sitios estáticos, y se publican en GitHub Pages, que forma parte de la misma plataforma donde residen los repositorios. La Web Application requiere un proceso de construcción de Angular, que ejecuta un flujo de trabajo de GitHub Actions antes de publicarla. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y GitHub Pages no lo admite, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students. Hasta que el Backend RESTful API esté desplegado, la Web Application consume una API simulada con json-server alojada en **Render**, que sirve los mismos recursos bajo el prefijo `/api/v1`.
+**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page y la Web Application son, una vez construidos, sitios estáticos, y se publican en GitHub Pages, que forma parte de la misma plataforma donde residen los repositorios. La Web Application requiere un proceso de construcción de Angular, que ejecuta un flujo de trabajo de GitHub Actions antes de publicarla. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y GitHub Pages no lo admite, por lo que se aloja en **Azure**, donde Azure Container Apps y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El backend se publica como imagen de contenedor: la imagen incluye su propio entorno de ejecución de Java, de modo que el despliegue no depende de las versiones de Java que ofrezca la plataforma, y la misma imagen que se prueba en local es la que se ejecuta en Azure. La imagen se construye y se publica en GitHub Container Registry desde el repositorio `Web-Services`, junto al código que la origina. El equipo dispone de acceso mediante Azure for Students. Hasta que el Backend RESTful API esté desplegado, la Web Application consume una API simulada con json-server alojada en **Render**, que sirve los mismos recursos bajo el prefijo `/api/v1`.
 
 #### Software Documentation
 
@@ -230,36 +233,57 @@ Mientras el Backend RESTful API no está desplegado, la Web Application consume 
 
 La API simulada no persiste los cambios entre reinicios del servicio, y en el plan gratuito se suspende tras quince minutos sin uso, por lo que la primera petición posterior tarda en responder. Ambas limitaciones son aceptables para la demostración de la Web Application y desaparecen al sustituirla por el Backend RESTful API.
 
-#### Web Services — Azure App Service
+#### Web Services — Azure Container Apps
 
-El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publica en Azure App Service, con la persistencia en Azure Database for PostgreSQL.
+El Backend RESTful API se empaqueta como una imagen de contenedor, se publica en GitHub Container Registry y se ejecuta en Azure Container Apps, con la persistencia en Azure Database for PostgreSQL. Todos los recursos de Azure se agrupan en el grupo de recursos `rg-fleetsafe`, en la región `Chile Central`, la más cercana a Perú, y llevan las etiquetas `project`, `component`, `environment` y `course` para identificar su coste.
+
+**Preparación de la suscripción**
+
+1. En *Subscription › Resource providers*, comprobar que están registrados `Microsoft.DBforPostgreSQL`, `Microsoft.App` y `Microsoft.OperationalInsights`.
 
 **Preparación de la base de datos**
 
-1. Crear un servidor **Azure Database for PostgreSQL – Flexible Server**, en la región `Brazil South`, que es la más cercana a Perú.
-2. Crear la base de datos `fleetsafe` sobre ese servidor.
-3. En *Networking*, habilitar la regla **Allow public access from any Azure service within Azure**, de modo que App Service pueda alcanzarla, y añadir la dirección IP de cada integrante para poder trabajar en local.
-4. Aplicar el esquema descrito en la sección 4.8. Spring Data JPA lo genera a partir de las entidades; para los entornos publicados se conserva el script de migración en el repositorio.
+1. Crear un servidor **Azure Database for PostgreSQL – Flexible Server** con PostgreSQL 18, la misma versión que la base local, en el nivel *Burstable* `Standard_B1ms` con 32 GiB de almacenamiento, sin alta disponibilidad ni crecimiento automático del almacenamiento.
+2. Elegir la autenticación **PostgreSQL authentication only**, con un usuario administrador y su contraseña.
+3. En *Networking*, habilitar el acceso público y la regla **Allow public access from any Azure service within Azure to this server**, de modo que Azure Container Apps pueda alcanzar la base. No se añade la regla `0.0.0.0 – 255.255.255.255`, que la abriría a cualquier dirección.
+4. Crear la base de datos `fleetsafe` en *Settings › Databases*. El esquema descrito en la sección 4.8 lo genera Spring Data JPA a partir de las entidades al arrancar el servicio.
+
+**Publicación de la imagen**
+
+1. El `Dockerfile` del repositorio compila el proyecto con un JDK 27 y ejecuta el `.jar` sobre un JRE 27 con un usuario sin privilegios, en el puerto 8080.
+2. El flujo de trabajo `delivery.yml` ejecuta las pruebas contra una base PostgreSQL 18 temporal en cada Pull Request y en cada integración en `develop` o `main`. Si las pruebas pasan, construye la imagen y la publica en `ghcr.io/1asi0729-2620-16692-bitmeisters/web-services`, con la etiqueta `develop` para la rama de desarrollo y con la versión de Semantic Versioning para cada release.
+3. Hacer **pública** la visibilidad del paquete, para que Azure Container Apps pueda descargar la imagen sin credenciales. La imagen no contiene secretos: las credenciales de la base se entregan en tiempo de ejecución.
 
 **Publicación del servicio**
 
-1. Construir el artefacto con `mvn clean package -DskipTests=false`, de modo que la publicación solo proceda si las pruebas pasan.
-2. Crear un **App Service** con pila de ejecución **Java 21** y contenedor **Java SE**, en la misma región que la base de datos.
-3. En *Deployment Center*, seleccionar GitHub como origen, el repositorio `Web-Services` y la rama `main`. Azure genera el flujo de trabajo de GitHub Actions que construye y publica en cada integración.
-4. Registrar en *Environment variables* los ajustes de la aplicación:
+1. Crear el entorno de Azure Container Apps, que genera también su espacio de trabajo de Log Analytics para los registros:
+
+   ```bash
+   az containerapp env create --name cae-fleetsafe --resource-group rg-fleetsafe --location chilecentral
+   ```
+
+2. Crear la aplicación a partir de la imagen, con la contraseña de la base registrada como **secreto** y referenciada desde la variable de entorno:
+
+   ```bash
+   az containerapp create --name fleetsafe-api --resource-group rg-fleetsafe --environment cae-fleetsafe \
+     --image ghcr.io/1asi0729-2620-16692-bitmeisters/web-services:develop \
+     --target-port 8080 --ingress external --cpu 0.5 --memory 1.0Gi --min-replicas 0 --max-replicas 1 \
+     --secrets db-password=<contraseña> \
+     --env-vars "DATABASE_URL=jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require" \
+       DATABASE_USER=<usuario> DATABASE_PASSWORD=secretref:db-password
+   ```
 
    | Variable | Valor |
    |:---------|:------|
-   | `SPRING_DATASOURCE_URL` | `jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require` |
-   | `SPRING_DATASOURCE_USERNAME` | usuario administrador del servidor |
-   | `SPRING_DATASOURCE_PASSWORD` | contraseña del servidor |
-   | `JWT_SECRET` | clave de firma del token de autenticación |
-   | `SPRING_PROFILES_ACTIVE` | `prod` |
+   | `DATABASE_URL` | `jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require` |
+   | `DATABASE_USER` | usuario administrador del servidor |
+   | `DATABASE_PASSWORD` | referencia al secreto `db-password` |
+   | `CORS_ALLOWED_ORIGINS` | opcional; por defecto admite `https://1asi0729-2620-16692-bitmeisters.github.io` y `http://localhost:4200` |
 
-5. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>.azurewebsites.net/swagger-ui.html`.
-6. Registrar la dirección pública resultante en `platformProviderApiBaseUrl` de `src/environments/environment.ts` de la Web Application, en sustitución de la API simulada, y habilitar en la configuración CORS del servicio el origen `https://1asi0729-2620-16692-bitmeisters.github.io`.
+3. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>/swagger-ui/index.html`.
+4. Registrar la dirección pública resultante en `platformProviderApiBaseUrl` de `src/environments/environment.ts` de la Web Application, en sustitución de la API simulada.
 
-**Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito y ofrece crédito suficiente para los planes de nivel gratuito de App Service y de PostgreSQL Flexible Server durante el ciclo.
+**Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito. El servidor `Standard_B1ms` con 32 GiB entra en la capa gratuita de PostgreSQL Flexible Server, y la aplicación se configura con un mínimo de cero réplicas, de modo que se detiene cuando no recibe peticiones y no consume crédito mientras tanto. La primera petición después de un periodo sin uso tarda unos segundos más, mientras la réplica arranca.
 
 #### Consideraciones comunes
 
@@ -723,7 +747,7 @@ En el Sprint 2 se desplegaron la Frontend Web Application y la API simulada que 
 | Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado (Sprint 1) | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
 | Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado, versión 0.2.7 | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
 | API simulada (json-server) | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | Render | Desplegado | https://fleetsafe-api.onrender.com/api/v1 |
-| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure App Service | Contrato publicado; despliegue en el Sprint 3 | — |
+| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure Container Apps | Contrato publicado; despliegue en el Sprint 3 | — |
 
 **1. Configuración de GitHub Pages.** En el repositorio de la Web Application se seleccionó como origen de publicación GitHub Actions, de modo que lo publicado es el resultado de la construcción de Angular y no el contenido de una rama.
 
