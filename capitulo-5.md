@@ -89,8 +89,9 @@ El equipo utiliza **Git** como sistema de control de versiones y **GitHub** como
 | Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application |
 | Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services |
 | Informe | https://github.com/1ASI0729-2620-16692-BitMeisters/Report |
+| Curso de Java (trabajo de responsabilidad social) | https://github.com/1ASI0729-2620-16692-BitMeisters/java-fundamentals-course-bitmeisters |
 
-El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con sus archivos de pruebas, tanto unitarias como de integración y aceptación, organizadas bajo `src/test/java` conforme a la estructura estándar de Maven.
+El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con sus pruebas unitarias y de integración, organizadas bajo `src/test/java` conforme a la estructura estándar de Maven. Las pruebas de integración se ejecutan contra una base PostgreSQL real, tanto en local como en el flujo de entrega continua.
 
 #### Implementación de GitFlow
 
@@ -104,16 +105,20 @@ Se adopta **GitFlow**, según el modelo descrito por Vincent Driessen, con las s
 | `release/*` | Preparación de una versión: correcciones finales y actualización de la documentación. | `develop` | `main` y `develop` |
 | `hotfix/*` | Corrección urgente sobre una versión ya publicada. | `main` | `main` y `develop` |
 
-**Convenciones de nombres de rama.** El nombre se compone del tipo, una barra y una descripción breve en inglés, en minúsculas y con guiones como separador:
+**Convenciones de nombres de rama.** El nombre se compone del tipo, una barra y una descripción breve en inglés, en minúsculas y con guiones como separador. Además de `feature/*`, las ramas de trabajo que parten de `develop` usan el mismo tipo que sus commits cuando no añaden funcionalidad: `fix/*`, `refactor/*` y `chore/*`. Ejemplos tomados de los repositorios:
 
 ```
-feature/<descripción-breve>      feature/vehicle-inspection-form
-                                 feature/evaluation-rules-engine
-release/<versión>                release/1.0.0
-hotfix/<descripción-breve>       hotfix/expired-token-handling
+feature/<descripción-breve>      feature/vehicle-documentation
+                                 feature/iam-sign-in
+fix/<descripción-breve>          fix/microsecond-timestamps
+refactor/<descripción-breve>     refactor/evaluation-persistence
+chore/<descripción-breve>        chore/mock-vehicle-uuids
+release/<versión>                release/1.1.0
 ```
 
-**Ninguna funcionalidad se integra directamente en `main`.** Toda rama `feature/*` se incorpora a `develop` mediante un Pull Request, que debe ser revisado por al menos un integrante distinto de su autor antes de aceptarse.
+Las ramas `hotfix/<descripción-breve>` se reservan para corregir una versión ya publicada; hasta ahora no ha hecho falta ninguna.
+
+**Ninguna funcionalidad se integra directamente en `main` ni en `develop`.** Cada repositorio tiene la regla `dev-policy`, que protege ambas ramas: impide borrarlas y reescribir su historia, y exige que todo cambio entre mediante un Pull Request. Una versión se publica con una rama `release/<versión>` que se integra en `main` por Pull Request; sobre ese merge se crea el tag `v<versión>` y su GitHub Release, y un último Pull Request de `main` a `develop` devuelve la versión a la rama de integración.
 
 #### Semantic Versioning
 
@@ -125,7 +130,7 @@ Las versiones publicadas se nombran conforme a **Semantic Versioning 2.0.0**, co
 | `MINOR` | se añade funcionalidad manteniendo la compatibilidad |
 | `PATCH` | se corrige un defecto sin alterar la funcionalidad |
 
-Cada entrega del curso corresponde a una versión publicada en `main` con su tag correspondiente: `v1.0.0` para AV1, `v2.0.0` para TB1, `v3.0.0` para AV2 y `v4.0.0` para TB2, con versiones `MINOR` y `PATCH` intermedias según el trabajo realizado.
+Cada producto lleva su propia versión, porque cada uno cambia a su ritmo. El Landing Page, publicado desde la primera entrega, está en `1.x` (`v1.1.0` incorporó la traducción por claves y las páginas legales); la Web Application y el Backend RESTful API, todavía en construcción, están en `0.x` (`v0.3.0` y `v0.1.0`) y pasarán a `1.0.0` cuando completen sus bounded contexts. El informe registra sus propias versiones en el registro de versiones.
 
 #### Conventional Commits
 
@@ -144,10 +149,12 @@ Los mensajes de commit siguen la especificación **Conventional Commits**, con l
 El alcance identifica el bounded context o el producto afectado —`inspection`, `evaluation`, `fleet`, `landing`— y no la capa técnica. Ejemplos tomados del histórico de los repositorios del proyecto:
 
 ```
-feat: add responsive navbar with brand logo and links
-feat: create hero section with main value proposition and image
-docs(architecture): model the c4 diagrams with structurizr
-refactor: improve code structure in main files
+feat(documentation): register vehicle documents and list the ones about to expire
+feat(iam): sign in with the platform account and protect the routes
+fix(inspection): expose the audit timestamps of inspection items
+refactor(documentation): keep the calendar out of the rest layer and cover the daily recalculation
+docs(openapi): add the vehicle documentation contract
+chore(config): set the vehicle documentation time zone and status recalculation schedule
 ```
 
 ---
