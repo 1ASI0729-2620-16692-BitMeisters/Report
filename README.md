@@ -203,6 +203,7 @@
         - <a href="capitulo-5.md#523-sprint-3">5.2.3. Sprint 3</a>
             - <a href="capitulo-5.md#5231-sprint-planning-3">5.2.3.1. Sprint Planning 3.</a>
             - <a href="capitulo-5.md#5232-aspect-leaders-and-collaborators">5.2.3.2. Aspect Leaders and Collaborators.</a>
+            - <a href="capitulo-5.md#5233-sprint-backlog-3">5.2.3.3. Sprint Backlog 3.</a>
             - <a href="capitulo-5.md#5234-development-evidence-for-sprint-review">5.2.3.4. Development Evidence for Sprint Review.</a>
             - <a href="capitulo-5.md#5236-services-documentation-evidence-for-sprint-review">5.2.3.6. Services Documentation Evidence for Sprint Review.</a>
             - <a href="capitulo-5.md#5237-software-deployment-evidence-for-sprint-review">5.2.3.7. Software Deployment Evidence for Sprint Review.</a>

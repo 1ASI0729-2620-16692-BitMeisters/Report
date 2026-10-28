@@ -861,6 +861,41 @@ Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend R
 | Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | — | — | L | — | — | C |
 | Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | — | — | L | — | C |
 
+<a id="5233-sprint-backlog-3"></a>
+#### 5.2.3.3. Sprint Backlog 3.
+
+El objetivo del Sprint 3 es que la Web Application de FleetSafe deje de depender de una API simulada y trabaje sobre su propio Backend RESTful API, desplegado y documentado. El Sprint Backlog incluye una tarea por cada User Story comprometida en la planificación y la base compartida del backend, sobre la que se construyen los bounded contexts.
+
+Las horas de cada tarea terminada se estimaron con el mismo método del Sprint 2, a partir de la actividad registrada en sus commits: cada sesión de trabajo cuenta su duración más dos horas de trabajo previo a su primer commit, y una pausa de más de noventa minutos entre commits inicia una nueva sesión. Las tareas pendientes registran sus horas al terminar.
+
+Tablero del Sprint 3: https://trello.com/b/6WgfBLcZ/fleetsafe-sprint-3
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 3 | — | Base compartida | T01 | Construir la base compartida del Backend RESTful API | Proyecto Spring Boot sobre PostgreSQL con la estructura del proyecto de referencia del curso: patrón `Result`, nombres de tablas, manejo global de errores traducido, agregados sin dependencias de JPA, imagen Docker y entrega continua a GitHub Container Registry. | 8 | Alejandro Espino | Done |
+| Sprint 3 | US38 | API de autenticación | T02 | Implementar la autenticación y la gestión de usuarios | Login con JWT, Spring Security con roles, administrador sembrado al arrancar y los endpoints `/auth/login` y `/users`. | 2 | Alejandro Espino | Done |
+| Sprint 3 | US09 | Iniciar sesión | T03 | Implementar el inicio de sesión en la Web Application | Pantalla de inicio de sesión, sesión guardada hasta que caduca el token, interceptor que envía el token y guard en las rutas. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US10 | Cerrar sesión | T04 | Implementar el cierre de sesión | Nombre y rol del usuario en la barra superior y botón para cerrar sesión. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US07 | Registrar nuevo usuario | T05 | Implementar el alta de usuarios | Formulario de alta de usuario con su rol, solo para el administrador. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US08 | Asignar rol a usuario | T06 | Implementar el cambio de rol y de estado | Cambio de rol y activación o desactivación de cada usuario desde el listado. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US11 | Consultar listado de usuarios | T07 | Implementar el listado de usuarios | Listado paginado de los usuarios de la empresa con filtro por rol y estado. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US42 | API de evaluación y habilitación | T08 | Implementar la evaluación y la habilitación operativa | Reglas de evaluación, habilitación del vehículo, historial y levantamiento de bloqueos. Falta `POST /inspections/{id}/evaluate`, que depende del backend de inspecciones (US41). | 5 | Alejandro Espino | In-Process |
+| Sprint 3 | US23 | Evaluar resultados de inspección | T09 | Mostrar el resultado de la evaluación de una inspección | Vista del resultado de la evaluación de una inspección completada. | — | Alejandro Espino | To-do |
+| Sprint 3 | US24 | Determinar estado del vehículo | T10 | Mostrar el estado operativo del vehículo | Vista del estado habilitado, observado o no habilitado de cada vehículo. | — | Alejandro Espino | To-do |
+| Sprint 3 | US25 | Consultar vehículos por estado | T11 | Implementar la consulta de vehículos por estado | Listado de vehículos filtrado por su estado operativo. | — | Alejandro Espino | To-do |
+| Sprint 3 | US44 | API de documentación vehicular | T12 | Implementar la documentación vehicular | Tipos de documento, documentos de cada vehículo con su vigencia, documentos próximos a vencer y recálculo diario del estado. | 2 | Alejandro Espino | Done |
+| Sprint 3 | US41 | API de inspecciones preoperacionales | T13 | Implementar las inspecciones preoperacionales | Registro, consulta y cierre de inspecciones preoperacionales. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US19 | Registrar observaciones | T14 | Implementar el registro de observaciones | Registro de observaciones sobre un elemento de la inspección. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US20 | Adjuntar evidencia fotográfica | T15 | Implementar la evidencia fotográfica | Adjuntar una foto como evidencia de una observación. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US21 | Finalizar inspección preoperacional | T16 | Implementar el cierre de la inspección | Finalizar la inspección cuando todos los elementos tienen resultado. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US22 | Consultar inspecciones realizadas | T17 | Implementar el historial de inspecciones | Listado de las inspecciones realizadas. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US40 | API de gestión de vehículos | T18 | Implementar la gestión de vehículos | Registro, consulta y actualización de vehículos, flotas y asignaciones. | — | Gerardo Palacin | To-do |
+| Sprint 3 | US12 | Registrar vehículo | T19 | Implementar el registro de vehículos | Formulario de registro de vehículo. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US14 | Consultar detalle de vehículo | T20 | Implementar el detalle de vehículo | Vista de detalle de un vehículo. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US15 | Actualizar información de vehículo | T21 | Implementar la edición de vehículos | Edición de la información de un vehículo. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US16 | Asignar vehículo a conductor | T22 | Implementar la asignación de vehículos | Asignación de un vehículo a un conductor. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US43 | API de gestión de incidencias | T23 | Implementar la gestión de incidencias | Registro, consulta y seguimiento de incidencias. | — | Rodrigo Aguilar | To-do |
+
 <a id="5234-development-evidence-for-sprint-review"></a>
 #### 5.2.3.4. Development Evidence for Sprint Review.
 
