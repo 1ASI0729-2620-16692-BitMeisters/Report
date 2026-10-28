@@ -928,6 +928,47 @@ La tabla recoge los commits del sprint integrados en los repositorios, sin los c
 | Frontend-Web-Application | feature/iam-users | 807ea00 | feat(iam): let the administrator change the role and status of an account | — | 2026-10-28 |
 | Frontend-Web-Application | chore/mock-vehicle-uuids | a649948 | chore(server): identify the mock vehicles by uuid like the platform backend | — | 2026-10-28 |
 
+<a id="5236-services-documentation-evidence-for-sprint-review"></a>
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review.
+
+En el Sprint 3 el Backend RESTful API deja de ser un contrato y pasa a estar implementado. Springdoc genera su documentación OpenAPI a partir de los controladores y la publica con Swagger UI en el propio servicio desplegado; cada operación indica los roles que la pueden ejecutar y las respuestas de error, que siguen el formato Problem Details y se traducen según la cabecera `Accept-Language`. El contrato escrito a mano del repositorio se amplió con los bounded contexts implementados en este sprint.
+
+- Documentación del servicio desplegado: https://fleetsafe-api.nicesky-02088f36.chilecentral.azurecontainerapps.io/swagger-ui/index.html
+- Contrato: https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services/blob/develop/openapi/openapi.yaml
+
+Todas las rutas cuelgan de `/api/v1`. Salvo `/auth/login`, todas exigen el token de acceso en la cabecera `Authorization: Bearer <token>`: sin él responden `401`, y con un rol que no tiene permiso, `403`.
+
+| Endpoint | Acciones implementadas | Verbo HTTP | Sintaxis de llamada | Parámetros | Response |
+|---|---|---|---|---|---|
+| `/auth/login` | Iniciar sesión | POST | `POST /api/v1/auth/login` | Cuerpo: `email`, `password` | `200` con `accessToken`, `tokenType`, `expiresIn` y el usuario (`id`, `companyId`, `email`, `firstName`, `lastName`, `role`, `isActive`). `401` si el correo o la contraseña no son correctos, o la cuenta está inactiva. |
+| `/users` | Consultar los usuarios de la empresa | GET | `GET /api/v1/users?role=DRIVER&isActive=true&page=0&size=20&sort=lastName,asc` | Opcionales: `role`, `isActive`, `page`, `size` (1–100), `sort` (`lastName`, `email` o `createdAt`) | `200` con `content` (los usuarios) y `page` (`number`, `size`, `totalElements`, `totalPages`). Solo `ADMINISTRATOR`. |
+| `/users` | Registrar un usuario en la empresa del administrador | POST | `POST /api/v1/users` | Cuerpo: `email`, `password` (8–72 caracteres), `firstName`, `lastName`, `role` (`ADMINISTRATOR` · `FLEET_SUPERVISOR` · `DRIVER`) | `201` con el usuario creado; `400` si los datos no son válidos; `409` si el correo ya está registrado. Solo `ADMINISTRATOR`. |
+| `/users/{id}` | Consultar un usuario | GET | `GET /api/v1/users/{id}` | `id`: UUID del usuario | `200` con el usuario; `403` si no es la propia cuenta ni la consulta un administrador; `404` si no existe en la empresa. |
+| `/users/{id}` | Cambiar el nombre, el rol o el estado de un usuario | PATCH | `PATCH /api/v1/users/{id}` | `id`; cuerpo con al menos uno de `firstName`, `lastName`, `role`, `isActive` | `200` con el usuario actualizado; `400` si el cuerpo está vacío o no es válido; `404` si no existe. Solo `ADMINISTRATOR`. |
+| `/evaluation-rules` | Consultar las reglas de evaluación activas | GET | `GET /api/v1/evaluation-rules` | — | `200` con `[{ "id", "inspectionItemId", "name", "foundResult", "resultingImpact", "description", "isActive" }, …]`. `FLEET_SUPERVISOR` y `ADMINISTRATOR`. |
+| `/evaluation-rules` | Definir una regla de evaluación | POST | `POST /api/v1/evaluation-rules` | Cuerpo: `inspectionItemId`, `name`, `foundResult` (`OK` · `OBSERVED` · `FAIL`), `resultingImpact` (`NONE` · `OBSERVED` · `BLOCKING`), `description` | `201` con la regla; `409` si ya hay una regla activa para ese elemento y resultado. Solo `ADMINISTRATOR`. |
+| `/evaluation-rules/{id}` | Consultar una regla | GET | `GET /api/v1/evaluation-rules/{id}` | `id`: UUID de la regla | `200` con la regla; `404` si no existe. |
+| `/evaluation-rules/{id}/deactivation` | Desactivar una regla | POST | `POST /api/v1/evaluation-rules/{id}/deactivation` | `id` | `200` con la regla inactiva; `404` si no existe; `409` si ya estaba inactiva. Solo `ADMINISTRATOR`. |
+| `/vehicles/{id}/status` | Consultar si un vehículo puede operar | GET | `GET /api/v1/vehicles/{id}/status` | `id`: UUID del vehículo | `200` con la habilitación vigente: `status` (`ENABLED` · `OBSERVED` · `NOT_ENABLED`), `isOverride`, `authorizedAt`…; `404` si el vehículo aún no tiene habilitación. |
+| `/vehicles/{id}/authorizations` | Consultar el historial de habilitaciones | GET | `GET /api/v1/vehicles/{id}/authorizations` | `id` | `200` con las habilitaciones del vehículo, de la más reciente a la más antigua. `FLEET_SUPERVISOR` y `ADMINISTRATOR`. |
+| `/vehicles/{id}/block-lifts` | Levantar el bloqueo de un vehículo no habilitado | POST | `POST /api/v1/vehicles/{id}/block-lifts` | `id`; cuerpo: `reason` | `201` con la nueva habilitación, marcada como excepción y con el usuario del token como responsable; `404` si no tiene habilitación; `409` si no está bloqueado. |
+| `/operational-authorizations/overrides` | Consultar los bloqueos levantados en un periodo | GET | `GET /api/v1/operational-authorizations/overrides?from=2026-10-01T00:00:00Z&to=2026-10-31T23:59:59Z` | `from`, `to` en ISO-8601 | `200` con las excepciones del periodo; `400` si el periodo no es válido. |
+| `/document-types` | Consultar y registrar tipos de documento | GET · POST | `GET /api/v1/document-types` · `POST /api/v1/document-types` | Cuerpo de `POST`: `code`, `name`, `description`, `isRequired` | `200` con el catálogo; `201` con el tipo creado; `409` si el código ya existe. `POST` solo `ADMINISTRATOR`. |
+| `/vehicles/{vehicleId}/documents` | Registrar y consultar los documentos de un vehículo | POST · GET | `POST /api/v1/vehicles/{vehicleId}/documents` · `GET /api/v1/vehicles/{vehicleId}/documents` | `vehicleId`; cuerpo de `POST`: `documentTypeId`, `number`, `issueDate`, `expirationDate`, `fileUrl` | `201` con el documento y su `status` (`VALID` · `EXPIRING` · `EXPIRED`), calculado a partir del vencimiento; `200` con los documentos ordenados por vencimiento; `422` si el tipo de documento no existe. |
+| `/vehicles/{vehicleId}/documents/{documentId}` | Actualizar un documento | PUT | `PUT /api/v1/vehicles/{vehicleId}/documents/{documentId}` | `vehicleId`, `documentId`; el mismo cuerpo que al registrar | `200` con el documento y su estado recalculado; `404` si el vehículo no tiene ese documento. |
+| `/documents` | Consultar los documentos de todos los vehículos | GET | `GET /api/v1/documents` | — | `200` con los documentos ordenados por vencimiento. `FLEET_SUPERVISOR` y `ADMINISTRATOR`. |
+| `/documents/expiring` | Consultar los documentos próximos a vencer | GET | `GET /api/v1/documents/expiring?days=30` | Opcional: `days` (0–365, por defecto 30) | `200` con los documentos que vencen entre hoy y ese número de días; `400` si `days` está fuera de rango. |
+
+Commits del repositorio Web Services relacionados con la documentación de este sprint (https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services):
+
+| Commit Id | Commit Message |
+|---|---|
+| 8316cb0 | docs: describe how to run and extend the platform |
+| aed9296 | docs(openapi): add the evaluation and authorization contract |
+| 8bb8ebf | feat(shared): allow the web application origins and describe the api in swagger |
+| fa053fb | docs(openapi): add the vehicle documentation contract |
+| acf69e6 | docs(openapi): drop the days until expiration from the vehicle document |
+
 <a id="5237-software-deployment-evidence-for-sprint-review"></a>
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
 
