@@ -870,6 +870,8 @@ Las horas de cada tarea terminada se estimaron con el mismo método del Sprint 2
 
 Tablero del Sprint 3: https://trello.com/b/6WgfBLcZ/fleetsafe-sprint-3
 
+<img src="img/sprint3/backlog-trello-board.png" width="700" alt="Tablero del Sprint Backlog 3 en Trello con las tareas en To-do, In-Process, To-Review y Done">
+
 | Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
 |---|---|---|---|---|---|---:|---|---|
 | Sprint 3 | — | Base compartida | T01 | Construir la base compartida del Backend RESTful API | Proyecto Spring Boot sobre PostgreSQL con la estructura del proyecto de referencia del curso: patrón `Result`, nombres de tablas, manejo global de errores traducido, agregados sin dependencias de JPA, imagen Docker y entrega continua a GitHub Container Registry. | 8 | Alejandro Espino | Done |
