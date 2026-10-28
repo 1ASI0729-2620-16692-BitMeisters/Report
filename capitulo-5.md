@@ -854,6 +854,80 @@ Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend R
 | Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | — | — | L | — | — | C |
 | Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | — | — | L | — | C |
 
+<a id="5234-development-evidence-for-sprint-review"></a>
+#### 5.2.3.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 3 se construyó la primera versión del Backend RESTful API en el repositorio Web Services: la base compartida alineada con el proyecto de referencia del curso, el bounded context de Identity and Access con autenticación por JWT y gestión de usuarios, el de Evaluation and Authorization con sus reglas, habilitaciones y levantamiento de bloqueos, y el de Vehicle Documentation con el control de vigencia de los documentos, además de la imagen Docker y el flujo de entrega continua que la publica. En la Web Application se completó el bounded context de Fleet Management, se incorporaron el inicio y cierre de sesión contra el backend y la gestión de usuarios, y se enlazaron los términos y la política de privacidad. El Landing Page pasó a traducirse por claves, con inglés por defecto, y se le añadieron las páginas legales.
+
+La tabla recoge los commits del sprint integrados en los repositorios, sin los commits de merge, en orden cronológico. La columna *Branch* indica la rama del Pull Request con el que cada commit se integró en `develop`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| Web-Services | feature/platform-foundation | a06bb5b | build: set up the spring boot platform on postgresql | — | 2026-10-23 |
+| Web-Services | feature/platform-foundation | de152bb | feat(shared): add the result pattern, the table naming strategy and the global exception handler | — | 2026-10-23 |
+| Web-Services | feature/platform-foundation | 8316cb0 | docs: describe how to run and extend the platform | — | 2026-10-23 |
+| Web-Services | feature/platform-foundation | c6548b3 | build: pin lombok to the release that supports java 27 | — | 2026-10-23 |
+| Web-Services | chore/pom-developers | 0f636de | build: list the team members as developers of the platform | — | 2026-10-23 |
+| Web-Services | feature/shared-auditable-base | fe3669f | feat(shared): add the auditable aggregate root and model with uuid identifiers | — | 2026-10-23 |
+| Web-Services | feature/evaluation-rules | 705bef3 | feat(evaluation): define and deactivate the evaluation rules of the company | — | 2026-10-23 |
+| Web-Services | chore/docker-compose | 462a67f | build: run postgresql 18 locally with docker compose | — | 2026-10-23 |
+| Frontend-Web-Application | feature/fleet-management | 0e70c5d | feat(fleet-management): add policies, commands and enum values to domain layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 2e16bf6 | feat(fleet-management): update entities in domain layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 15c6463 | feat(fleet-management): add vehicle inspection, response and assembler in infrastructure layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 0d0f4d2 | feat(fleet-management): update fleet api and vehicle assigment in infrastructure layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | e801796 | feat(fleet-management): update fleet internationalization terms | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 3c6f4f0 | feat(fleet-management): complete the fleet store with vehicle and assignment use cases | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 7a57caf | feat(fleet-management): add the vehicle status badge component | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 04d8004 | feat(fleet-management): show the fleet overview with vehicle counts by status | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 14b5d96 | feat(fleet-management): add search, status filter and pagination to the vehicle list | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 31daf1f | feat(fleet-management): add the vehicle form to register and update vehicles | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 7808b20 | feat(fleet-management): add the vehicle detail with assignment history | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 7945aed | feat(fleet-management): show license status and assigned vehicle in the driver list | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | b7ba5e7 | feat(fleet-management): add the assignment form with history and end action | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 6bf160f | feat(fleet-management): add titles to the fleet routes | — | 2026-10-24 |
+| Web-Services | feature/inspection-evaluation | eee3ddc | feat(evaluation): evaluate inspections and keep the operational status of each vehicle | — | 2026-10-26 |
+| Web-Services | feature/lift-block | 6fbe634 | feat(evaluation): lift the block of a vehicle with a reason and a responsible user | — | 2026-10-26 |
+| Web-Services | feature/evaluation-contract | aed9296 | docs(openapi): add the evaluation and authorization contract | — | 2026-10-26 |
+| Web-Services | feature/missing-message-fallback | 5774c91 | fix(shared): answer with the message key when a translation is missing | — | 2026-10-26 |
+| Web-Services | feature/docker-image | 52465ff | build: package the platform as a java 27 docker image | — | 2026-10-26 |
+| Web-Services | feature/cors-and-openapi-info | 8bb8ebf | feat(shared): allow the web application origins and describe the api in swagger | — | 2026-10-26 |
+| Web-Services | feature/container-delivery | a5614c6 | ci: test the platform and publish its image to the github container registry | — | 2026-10-26 |
+| Web-Services | fix/microsecond-timestamps | 8a39e9b | fix(shared): generate timestamps at the precision postgresql stores | — | 2026-10-26 |
+| Web-Services | feature/iam-users | 63af39d | feat(iam): model the users of the platform | — | 2026-10-26 |
+| Web-Services | feature/iam-users | 6ca58a0 | feat(iam): sign in the users with a json web token | — | 2026-10-26 |
+| Web-Services | feature/iam-users | 7584da5 | test(iam): translate the user errors and verify the user flow against postgresql | — | 2026-10-26 |
+| Web-Services | feature/iam-users | d3bf99b | feat(iam): hash the passwords of the users with bcrypt | — | 2026-10-26 |
+| Web-Services | feature/iam-users | fb7bda9 | feat(iam): persist and manage the users of each company | — | 2026-10-26 |
+| Web-Services | refactor/evaluation-persistence | d40aa80 | refactor(evaluation): keep the evaluation rules free of persistence concerns | — | 2026-10-26 |
+| Web-Services | refactor/evaluation-persistence | 528f656 | refactor(evaluation): keep evaluations and authorizations free of persistence concerns | — | 2026-10-26 |
+| Web-Services | refactor/evaluation-persistence | dbecc1f | refactor(shared): drop the persistence-aware base classes of the domain | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | b016a51 | feat(iam): require a valid bearer token on every protected endpoint | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | f3840a6 | feat(iam): seed the first administrator at startup | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | 7336b6c | feat(iam): sign in through the authentication endpoint | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | 15c5b3d | docs: explain how to sign in and call the protected endpoints | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | 6d454a0 | feat(iam): manage the users of each company through the users endpoint | — | 2026-10-26 |
+| Web-Services | feature/evaluation-endpoints | 065de85 | feat(evaluation): expose the evaluation rules endpoints | — | 2026-10-26 |
+| Web-Services | feature/evaluation-endpoints | d82e805 | feat(evaluation): expose the operational status, history and block lifts of each vehicle | — | 2026-10-26 |
+| Landing-Page | feature/i18n-by-keys | dbf32a8 | feat: translate the landing page by keys with english as the default language | — | 2026-10-26 |
+| Landing-Page | feature/i18n-by-keys | 8e13e3a | feat: link the terms of use and the privacy policy from the footer | — | 2026-10-26 |
+| Landing-Page | feature/i18n-by-keys | 8180446 | fix: darken the orange of buttons and small text to meet wcag aa contrast | — | 2026-10-26 |
+| Frontend-Web-Application | feature/legal-footer-links | d34e227 | feat: link the terms of use and the privacy policy from the footer | — | 2026-10-26 |
+| Frontend-Web-Application | release/0.3.0 | 9ebea94 | chore(release): prepare version 0.3.0 | — | 2026-10-26 |
+| Web-Services | feature/vehicle-documentation | c46be97 | chore(config): set the vehicle documentation time zone and status recalculation schedule | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | dddba3e | feat(documentation): register vehicle documents and list the ones about to expire | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | fa053fb | docs(openapi): add the vehicle documentation contract | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | 6ff56fd | refactor(documentation): keep the calendar out of the rest layer and cover the daily recalculation | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | acf69e6 | docs(openapi): drop the days until expiration from the vehicle document | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-sign-in | de6ffb2 | chore(config): add the url of the platform backend | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-sign-in | 302c1eb | feat(iam): sign in with the platform account and protect the routes | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-sign-in | 35b222f | feat(iam): show the signed-in user and sign out from the top bar | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 6cbdd01 | chore(config): point local development to the backend running on this machine | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 9b159dd | chore(config): add the path of the users endpoint | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | d8e04bb | feat(iam): list the users of the company by role and status | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 7eb02f3 | feat(iam): let the administrator open accounts in the company | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 807ea00 | feat(iam): let the administrator change the role and status of an account | — | 2026-10-28 |
+| Frontend-Web-Application | chore/mock-vehicle-uuids | a649948 | chore(server): identify the mock vehicles by uuid like the platform backend | — | 2026-10-28 |
+
 <a id="5237-software-deployment-evidence-for-sprint-review"></a>
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
 
