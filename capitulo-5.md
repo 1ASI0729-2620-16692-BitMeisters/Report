@@ -56,11 +56,14 @@ A continuación se detallan los productos de software que el equipo utiliza, org
 |:---|:---|:---|
 | **GitHub Pages** | Publicación del Landing Page y de la Frontend Web Application como sitios estáticos a partir de sus repositorios. | https://pages.github.com |
 | **Render** | Publicación temporal de la API simulada con json-server que consume la Web Application mientras el Backend RESTful API no está desplegado. | https://render.com |
-| **Azure App Service** | Publicación del Backend RESTful API como aplicación Java, con despliegue a partir del repositorio de GitHub. | https://azure.microsoft.com/products/app-service |
+| **Docker** | Empaquetado del Backend RESTful API como imagen de contenedor con su propio entorno de ejecución de Java, y base de datos PostgreSQL local con Docker Compose. | https://www.docker.com/products/docker-desktop |
+| **GitHub Container Registry** | Registro de la imagen del Backend RESTful API, publicada desde el propio repositorio `Web-Services`. | https://docs.github.com/packages |
+| **Azure Container Apps** | Ejecución del Backend RESTful API a partir de su imagen de contenedor, con dirección pública HTTPS. | https://azure.microsoft.com/products/container-apps |
 | **Azure Database for PostgreSQL** | Instancia gestionada de PostgreSQL que soporta la persistencia de la solución. | https://azure.microsoft.com/products/postgresql |
-| **GitHub Actions** | Automatización de la construcción y publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
+| **Azure CLI** | Creación del entorno y de la aplicación de Azure Container Apps desde la terminal. | https://learn.microsoft.com/cli/azure/install-azure-cli |
+| **GitHub Actions** | Automatización de la construcción, las pruebas y la publicación de cada producto al integrar cambios en la rama correspondiente. | https://github.com/features/actions |
 
-**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page y la Web Application son, una vez construidos, sitios estáticos, y se publican en GitHub Pages, que forma parte de la misma plataforma donde residen los repositorios. La Web Application requiere un proceso de construcción de Angular, que ejecuta un flujo de trabajo de GitHub Actions antes de publicarla. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y GitHub Pages no lo admite, por lo que se aloja en **Azure**, donde App Service y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El equipo dispone de acceso mediante Azure for Students. Hasta que el Backend RESTful API esté desplegado, la Web Application consume una API simulada con json-server alojada en **Render**, que sirve los mismos recursos bajo el prefijo `/api/v1`.
+**Decisión de diseño: un proveedor por naturaleza de la carga.** El Landing Page y la Web Application son, una vez construidos, sitios estáticos, y se publican en GitHub Pages, que forma parte de la misma plataforma donde residen los repositorios. La Web Application requiere un proceso de construcción de Angular, que ejecuta un flujo de trabajo de GitHub Actions antes de publicarla. El Backend RESTful API es un proceso Java persistente con una base de datos relacional detrás, y GitHub Pages no lo admite, por lo que se aloja en **Azure**, donde Azure Container Apps y Azure Database for PostgreSQL cubren ambas necesidades en la misma suscripción. El backend se publica como imagen de contenedor: la imagen incluye su propio entorno de ejecución de Java, de modo que el despliegue no depende de las versiones de Java que ofrezca la plataforma, y la misma imagen que se prueba en local es la que se ejecuta en Azure. La imagen se construye y se publica en GitHub Container Registry desde el repositorio `Web-Services`, junto al código que la origina. El equipo dispone de acceso mediante Azure for Students. Hasta que el Backend RESTful API esté desplegado, la Web Application consume una API simulada con json-server alojada en **Render**, que sirve los mismos recursos bajo el prefijo `/api/v1`.
 
 #### Software Documentation
 
@@ -86,8 +89,9 @@ El equipo utiliza **Git** como sistema de control de versiones y **GitHub** como
 | Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application |
 | Web Services | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services |
 | Informe | https://github.com/1ASI0729-2620-16692-BitMeisters/Report |
+| Curso de Java (trabajo de responsabilidad social) | https://github.com/1ASI0729-2620-16692-BitMeisters/java-fundamentals-course-bitmeisters |
 
-El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con sus archivos de pruebas, tanto unitarias como de integración y aceptación, organizadas bajo `src/test/java` conforme a la estructura estándar de Maven.
+El repositorio de **Web Services** contiene el proyecto de Spring Boot junto con sus pruebas unitarias y de integración, organizadas bajo `src/test/java` conforme a la estructura estándar de Maven. Las pruebas de integración se ejecutan contra una base PostgreSQL real, tanto en local como en el flujo de entrega continua.
 
 #### Implementación de GitFlow
 
@@ -101,16 +105,20 @@ Se adopta **GitFlow**, según el modelo descrito por Vincent Driessen, con las s
 | `release/*` | Preparación de una versión: correcciones finales y actualización de la documentación. | `develop` | `main` y `develop` |
 | `hotfix/*` | Corrección urgente sobre una versión ya publicada. | `main` | `main` y `develop` |
 
-**Convenciones de nombres de rama.** El nombre se compone del tipo, una barra y una descripción breve en inglés, en minúsculas y con guiones como separador:
+**Convenciones de nombres de rama.** El nombre se compone del tipo, una barra y una descripción breve en inglés, en minúsculas y con guiones como separador. Además de `feature/*`, las ramas de trabajo que parten de `develop` usan el mismo tipo que sus commits cuando no añaden funcionalidad: `fix/*`, `refactor/*` y `chore/*`. Ejemplos tomados de los repositorios:
 
 ```
-feature/<descripción-breve>      feature/vehicle-inspection-form
-                                 feature/evaluation-rules-engine
-release/<versión>                release/1.0.0
-hotfix/<descripción-breve>       hotfix/expired-token-handling
+feature/<descripción-breve>      feature/vehicle-documentation
+                                 feature/iam-sign-in
+fix/<descripción-breve>          fix/microsecond-timestamps
+refactor/<descripción-breve>     refactor/evaluation-persistence
+chore/<descripción-breve>        chore/mock-vehicle-uuids
+release/<versión>                release/1.1.0
 ```
 
-**Ninguna funcionalidad se integra directamente en `main`.** Toda rama `feature/*` se incorpora a `develop` mediante un Pull Request, que debe ser revisado por al menos un integrante distinto de su autor antes de aceptarse.
+Las ramas `hotfix/<descripción-breve>` se reservan para corregir una versión ya publicada; hasta ahora no ha hecho falta ninguna.
+
+**Ninguna funcionalidad se integra directamente en `main` ni en `develop`.** Cada repositorio tiene la regla `dev-policy`, que protege ambas ramas: impide borrarlas y reescribir su historia, y exige que todo cambio entre mediante un Pull Request. Una versión se publica con una rama `release/<versión>` que se integra en `main` por Pull Request; sobre ese merge se crea el tag `v<versión>` y su GitHub Release, y un último Pull Request de `main` a `develop` devuelve la versión a la rama de integración.
 
 #### Semantic Versioning
 
@@ -122,7 +130,7 @@ Las versiones publicadas se nombran conforme a **Semantic Versioning 2.0.0**, co
 | `MINOR` | se añade funcionalidad manteniendo la compatibilidad |
 | `PATCH` | se corrige un defecto sin alterar la funcionalidad |
 
-Cada entrega del curso corresponde a una versión publicada en `main` con su tag correspondiente: `v1.0.0` para AV1, `v2.0.0` para TB1, `v3.0.0` para AV2 y `v4.0.0` para TB2, con versiones `MINOR` y `PATCH` intermedias según el trabajo realizado.
+Cada producto lleva su propia versión, porque cada uno cambia a su ritmo. El Landing Page, publicado desde la primera entrega, está en `1.x` (`v1.1.0` incorporó la traducción por claves y las páginas legales); la Web Application y el Backend RESTful API, todavía en construcción, están en `0.x` (`v0.3.0` y `v0.1.0`) y pasarán a `1.0.0` cuando completen sus bounded contexts. El informe registra sus propias versiones en el registro de versiones.
 
 #### Conventional Commits
 
@@ -141,10 +149,12 @@ Los mensajes de commit siguen la especificación **Conventional Commits**, con l
 El alcance identifica el bounded context o el producto afectado —`inspection`, `evaluation`, `fleet`, `landing`— y no la capa técnica. Ejemplos tomados del histórico de los repositorios del proyecto:
 
 ```
-feat: add responsive navbar with brand logo and links
-feat: create hero section with main value proposition and image
-docs(architecture): model the c4 diagrams with structurizr
-refactor: improve code structure in main files
+feat(documentation): register vehicle documents and list the ones about to expire
+feat(iam): sign in with the platform account and protect the routes
+fix(inspection): expose the audit timestamps of inspection items
+refactor(documentation): keep the calendar out of the rest layer and cover the daily recalculation
+docs(openapi): add the vehicle documentation contract
+chore(config): set the vehicle documentation time zone and status recalculation schedule
 ```
 
 ---
@@ -230,36 +240,57 @@ Mientras el Backend RESTful API no está desplegado, la Web Application consume 
 
 La API simulada no persiste los cambios entre reinicios del servicio, y en el plan gratuito se suspende tras quince minutos sin uso, por lo que la primera petición posterior tarda en responder. Ambas limitaciones son aceptables para la demostración de la Web Application y desaparecen al sustituirla por el Backend RESTful API.
 
-#### Web Services — Azure App Service
+#### Web Services — Azure Container Apps
 
-El Backend RESTful API se empaqueta como un archivo `.jar` ejecutable y se publica en Azure App Service, con la persistencia en Azure Database for PostgreSQL.
+El Backend RESTful API se empaqueta como una imagen de contenedor, se publica en GitHub Container Registry y se ejecuta en Azure Container Apps, con la persistencia en Azure Database for PostgreSQL. Todos los recursos de Azure se agrupan en el grupo de recursos `rg-fleetsafe`, en la región `Chile Central`, la más cercana a Perú, y llevan las etiquetas `project`, `component`, `environment` y `course` para identificar su coste.
+
+**Preparación de la suscripción**
+
+1. En *Subscription › Resource providers*, comprobar que están registrados `Microsoft.DBforPostgreSQL`, `Microsoft.App` y `Microsoft.OperationalInsights`.
 
 **Preparación de la base de datos**
 
-1. Crear un servidor **Azure Database for PostgreSQL – Flexible Server**, en la región `Brazil South`, que es la más cercana a Perú.
-2. Crear la base de datos `fleetsafe` sobre ese servidor.
-3. En *Networking*, habilitar la regla **Allow public access from any Azure service within Azure**, de modo que App Service pueda alcanzarla, y añadir la dirección IP de cada integrante para poder trabajar en local.
-4. Aplicar el esquema descrito en la sección 4.8. Spring Data JPA lo genera a partir de las entidades; para los entornos publicados se conserva el script de migración en el repositorio.
+1. Crear un servidor **Azure Database for PostgreSQL – Flexible Server** con PostgreSQL 18, la misma versión que la base local, en el nivel *Burstable* `Standard_B1ms` con 32 GiB de almacenamiento, sin alta disponibilidad ni crecimiento automático del almacenamiento.
+2. Elegir la autenticación **PostgreSQL authentication only**, con un usuario administrador y su contraseña.
+3. En *Networking*, habilitar el acceso público y la regla **Allow public access from any Azure service within Azure to this server**, de modo que Azure Container Apps pueda alcanzar la base. No se añade la regla `0.0.0.0 – 255.255.255.255`, que la abriría a cualquier dirección.
+4. Crear la base de datos `fleetsafe` en *Settings › Databases*. El esquema descrito en la sección 4.8 lo genera Spring Data JPA a partir de las entidades al arrancar el servicio.
+
+**Publicación de la imagen**
+
+1. El `Dockerfile` del repositorio compila el proyecto con un JDK 27 y ejecuta el `.jar` sobre un JRE 27 con un usuario sin privilegios, en el puerto 8080.
+2. El flujo de trabajo `delivery.yml` ejecuta las pruebas contra una base PostgreSQL 18 temporal en cada Pull Request y en cada integración en `develop` o `main`. Si las pruebas pasan, construye la imagen y la publica en `ghcr.io/1asi0729-2620-16692-bitmeisters/web-services`, con la etiqueta `develop` para la rama de desarrollo y con la versión de Semantic Versioning para cada release.
+3. Hacer **pública** la visibilidad del paquete, para que Azure Container Apps pueda descargar la imagen sin credenciales. La imagen no contiene secretos: las credenciales de la base se entregan en tiempo de ejecución.
 
 **Publicación del servicio**
 
-1. Construir el artefacto con `mvn clean package -DskipTests=false`, de modo que la publicación solo proceda si las pruebas pasan.
-2. Crear un **App Service** con pila de ejecución **Java 21** y contenedor **Java SE**, en la misma región que la base de datos.
-3. En *Deployment Center*, seleccionar GitHub como origen, el repositorio `Web-Services` y la rama `main`. Azure genera el flujo de trabajo de GitHub Actions que construye y publica en cada integración.
-4. Registrar en *Environment variables* los ajustes de la aplicación:
+1. Crear el entorno de Azure Container Apps, que genera también su espacio de trabajo de Log Analytics para los registros:
+
+   ```bash
+   az containerapp env create --name cae-fleetsafe --resource-group rg-fleetsafe --location chilecentral
+   ```
+
+2. Crear la aplicación a partir de la imagen, con la contraseña de la base registrada como **secreto** y referenciada desde la variable de entorno:
+
+   ```bash
+   az containerapp create --name fleetsafe-api --resource-group rg-fleetsafe --environment cae-fleetsafe \
+     --image ghcr.io/1asi0729-2620-16692-bitmeisters/web-services:develop \
+     --target-port 8080 --ingress external --cpu 0.5 --memory 1.0Gi --min-replicas 0 --max-replicas 1 \
+     --secrets db-password=<contraseña> \
+     --env-vars "DATABASE_URL=jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require" \
+       DATABASE_USER=<usuario> DATABASE_PASSWORD=secretref:db-password
+   ```
 
    | Variable | Valor |
    |:---------|:------|
-   | `SPRING_DATASOURCE_URL` | `jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require` |
-   | `SPRING_DATASOURCE_USERNAME` | usuario administrador del servidor |
-   | `SPRING_DATASOURCE_PASSWORD` | contraseña del servidor |
-   | `JWT_SECRET` | clave de firma del token de autenticación |
-   | `SPRING_PROFILES_ACTIVE` | `prod` |
+   | `DATABASE_URL` | `jdbc:postgresql://<servidor>.postgres.database.azure.com:5432/fleetsafe?sslmode=require` |
+   | `DATABASE_USER` | usuario administrador del servidor |
+   | `DATABASE_PASSWORD` | referencia al secreto `db-password` |
+   | `CORS_ALLOWED_ORIGINS` | opcional; por defecto admite `https://1asi0729-2620-16692-bitmeisters.github.io` y `http://localhost:4200` |
 
-5. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>.azurewebsites.net/swagger-ui.html`.
-6. Registrar la dirección pública resultante en `platformProviderApiBaseUrl` de `src/environments/environment.ts` de la Web Application, en sustitución de la API simulada, y habilitar en la configuración CORS del servicio el origen `https://1asi0729-2620-16692-bitmeisters.github.io`.
+3. Verificar que la documentación OpenAPI queda accesible en `https://<aplicación>/swagger-ui/index.html`.
+4. Registrar la dirección pública resultante en `platformProviderApiBaseUrl` de `src/environments/environment.ts` de la Web Application, en sustitución de la API simulada.
 
-**Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito y ofrece crédito suficiente para los planes de nivel gratuito de App Service y de PostgreSQL Flexible Server durante el ciclo.
+**Nota sobre la suscripción.** El despliegue se realiza con **Azure for Students**, que no requiere tarjeta de crédito. El servidor `Standard_B1ms` con 32 GiB entra en la capa gratuita de PostgreSQL Flexible Server, y la aplicación se configura con un mínimo de cero réplicas, de modo que se detiene cuando no recibe peticiones y no consume crédito mientras tanto. La primera petición después de un periodo sin uso tarda unos segundos más, mientras la réplica arranca.
 
 #### Consideraciones comunes
 
@@ -723,7 +754,7 @@ En el Sprint 2 se desplegaron la Frontend Web Application y la API simulada que 
 | Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado (Sprint 1) | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
 | Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado, versión 0.2.7 | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
 | API simulada (json-server) | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | Render | Desplegado | https://fleetsafe-api.onrender.com/api/v1 |
-| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure App Service | Contrato publicado; despliegue en el Sprint 3 | — |
+| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure Container Apps | Contrato publicado; despliegue en el Sprint 3 | — |
 
 **1. Configuración de GitHub Pages.** En el repositorio de la Web Application se seleccionó como origen de publicación GitHub Actions, de modo que lo publicado es el resultado de la construcción de Angular y no el contenido de una rama.
 
@@ -788,7 +819,7 @@ Cada integrante desarrolló su bounded context en una rama propia a partir de `d
 <a id="5231-sprint-planning-3"></a>
 #### 5.2.3.1. Sprint Planning 3.
 
-El Sprint 3 tiene como propósito la primera versión del Backend RESTful API de FleetSafe, exigida para la entrega AV2. En la reunión de planificación, realizada por Google Meet, el equipo acordó que cada integrante implemente en el backend el bounded context que desarrolló en la Web Application, sobre una base común construida con los patrones del proyecto de referencia del curso, y que Alejandro Espino se encargue de Identity and Access.
+El Sprint 3 tiene como propósito la primera versión del Backend RESTful API de FleetSafe, exigida para la entrega AV2. En la reunión de planificación, realizada por Google Meet, el equipo acordó que cada integrante implemente en el backend el bounded context que desarrolló en la Web Application, sobre una base común construida con los patrones del proyecto de referencia del curso, y que Alejandro Espino se encargue de Identity and Access y de Vehicle Documentation.
 
 <img src="img/sprint3/planning-meeting.png" width="800" alt="Reunión de planificación del Sprint 3 por Google Meet con cuatro integrantes del equipo">
 
@@ -811,26 +842,242 @@ El Sprint 3 compromete las Technical Stories del Backend RESTful API de cada bou
 
 | Integrante | Bounded context | Backend RESTful API | Web Application | Story Points |
 |---|---|---|---|---:|
-| Espino Flores, Alejandro | Identity and Access · Evaluation and Authorization | US38, US42 | US07 – US11, US23 – US25 | 46 |
+| Espino Flores, Alejandro | Identity and Access · Evaluation and Authorization · Vehicle Documentation | US38, US42, US44 | US07 – US11, US23 – US25 | 51 |
 | Palacin Lazo, Gerardo Valentin | Fleet Management | US40 | US12, US14 – US16 | 19 |
 | Apaza Bocanegra, Elizabeth Noelia | Pre-Operational Inspection | US41 | US19 – US22 | 17 |
 | Aguilar Untiveros, Rodrigo Fabrizio | Incident Management | US43 | — | 5 |
-| Santos Torres, Juan Manuel | Vehicle Documentation | US44 | — | 5 |
 
 Las User Stories de Incident Management y Vehicle Documentation en la Web Application se entregaron en el Sprint 2, y US12, US14 – US16 de Fleet Management y US07 – US11 de Identity and Access pasan del Sprint 2 a este sprint.
 
 <a id="5232-aspect-leaders-and-collaborators"></a>
 #### 5.2.3.2. Aspect Leaders and Collaborators.
 
-Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend RESTful API y en la Web Application, y la base compartida del backend. Cada integrante lidera en el backend el bounded context que desarrolló en la Web Application, y Alejandro Espino lidera además la base compartida, sobre la que se construyen todos los demás.
+Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend RESTful API y en la Web Application, y la base compartida del backend. Cada integrante lidera en el backend el bounded context que desarrolló en la Web Application, y Alejandro Espino lidera además Vehicle Documentation y la base compartida, sobre la que se construyen todos los demás.
 
 | Team Member (Last Name, First Name) | GitHub Username | Identity and Access Leader (L) / Collaborator (C) | Evaluation and Authorization Leader (L) / Collaborator (C) | Pre-Operational Inspection Leader (L) / Collaborator (C) | Incident Management Leader (L) / Collaborator (C) | Fleet Management Leader (L) / Collaborator (C) | Vehicle Documentation Leader (L) / Collaborator (C) | Base compartida del backend Leader (L) / Collaborator (C) |
 |---|---|---|---|---|---|---|---|---|
-| Espino Flores, Alejandro | CafecitoSKR | L | L | C | C | C | C | L |
+| Espino Flores, Alejandro | CafecitoSKR | L | L | C | C | C | L | L |
 | Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | — | — | L | — | — | — | C |
 | Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | — | — | L | — | — | C |
 | Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | — | — | L | — | C |
-| Santos Torres, Juan Manuel | JuanManuel312 | — | — | — | — | — | L | C |
+
+<a id="5233-sprint-backlog-3"></a>
+#### 5.2.3.3. Sprint Backlog 3.
+
+El objetivo del Sprint 3 es que la Web Application de FleetSafe deje de depender de una API simulada y trabaje sobre su propio Backend RESTful API, desplegado y documentado. El Sprint Backlog incluye una tarea por cada User Story comprometida en la planificación y la base compartida del backend, sobre la que se construyen los bounded contexts.
+
+Las horas de cada tarea terminada se estimaron con el mismo método del Sprint 2, a partir de la actividad registrada en sus commits: cada sesión de trabajo cuenta su duración más dos horas de trabajo previo a su primer commit, y una pausa de más de noventa minutos entre commits inicia una nueva sesión. Las tareas pendientes registran sus horas al terminar.
+
+Tablero del Sprint 3: https://trello.com/b/6WgfBLcZ/fleetsafe-sprint-3
+
+<img src="img/sprint3/backlog-trello-board.png" width="700" alt="Tablero del Sprint Backlog 3 en Trello con las tareas en To-do, In-Process, To-Review y Done">
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status (To-do / In-Process / To-Review / Done) |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 3 | — | Base compartida | T01 | Construir la base compartida del Backend RESTful API | Proyecto Spring Boot sobre PostgreSQL con la estructura del proyecto de referencia del curso: patrón `Result`, nombres de tablas, manejo global de errores traducido, agregados sin dependencias de JPA, imagen Docker y entrega continua a GitHub Container Registry. | 8 | Alejandro Espino | Done |
+| Sprint 3 | US38 | API de autenticación | T02 | Implementar la autenticación y la gestión de usuarios | Login con JWT, Spring Security con roles, administrador sembrado al arrancar y los endpoints `/auth/login` y `/users`. | 2 | Alejandro Espino | Done |
+| Sprint 3 | US09 | Iniciar sesión | T03 | Implementar el inicio de sesión en la Web Application | Pantalla de inicio de sesión, sesión guardada hasta que caduca el token, interceptor que envía el token y guard en las rutas. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US10 | Cerrar sesión | T04 | Implementar el cierre de sesión | Nombre y rol del usuario en la barra superior y botón para cerrar sesión. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US07 | Registrar nuevo usuario | T05 | Implementar el alta de usuarios | Formulario de alta de usuario con su rol, solo para el administrador. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US08 | Asignar rol a usuario | T06 | Implementar el cambio de rol y de estado | Cambio de rol y activación o desactivación de cada usuario desde el listado. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US11 | Consultar listado de usuarios | T07 | Implementar el listado de usuarios | Listado paginado de los usuarios de la empresa con filtro por rol y estado. | 1 | Alejandro Espino | To-Review |
+| Sprint 3 | US42 | API de evaluación y habilitación | T08 | Implementar la evaluación y la habilitación operativa | Reglas de evaluación, habilitación del vehículo, historial y levantamiento de bloqueos. Falta `POST /inspections/{id}/evaluate`, que depende del backend de inspecciones (US41). | 5 | Alejandro Espino | In-Process |
+| Sprint 3 | US23 | Evaluar resultados de inspección | T09 | Mostrar el resultado de la evaluación de una inspección | Vista del resultado de la evaluación de una inspección completada. | — | Alejandro Espino | To-do |
+| Sprint 3 | US24 | Determinar estado del vehículo | T10 | Mostrar el estado operativo del vehículo | Vista del estado habilitado, observado o no habilitado de cada vehículo. | — | Alejandro Espino | To-do |
+| Sprint 3 | US25 | Consultar vehículos por estado | T11 | Implementar la consulta de vehículos por estado | Listado de vehículos filtrado por su estado operativo. | — | Alejandro Espino | To-do |
+| Sprint 3 | US44 | API de documentación vehicular | T12 | Implementar la documentación vehicular | Tipos de documento, documentos de cada vehículo con su vigencia, documentos próximos a vencer y recálculo diario del estado. | 2 | Alejandro Espino | Done |
+| Sprint 3 | US41 | API de inspecciones preoperacionales | T13 | Implementar las inspecciones preoperacionales | Registro, consulta y cierre de inspecciones preoperacionales. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US19 | Registrar observaciones | T14 | Implementar el registro de observaciones | Registro de observaciones sobre un elemento de la inspección. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US20 | Adjuntar evidencia fotográfica | T15 | Implementar la evidencia fotográfica | Adjuntar una foto como evidencia de una observación. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US21 | Finalizar inspección preoperacional | T16 | Implementar el cierre de la inspección | Finalizar la inspección cuando todos los elementos tienen resultado. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US22 | Consultar inspecciones realizadas | T17 | Implementar el historial de inspecciones | Listado de las inspecciones realizadas. | — | Elizabeth Apaza | To-do |
+| Sprint 3 | US40 | API de gestión de vehículos | T18 | Implementar la gestión de vehículos | Registro, consulta y actualización de vehículos, flotas y asignaciones. | — | Gerardo Palacin | To-do |
+| Sprint 3 | US12 | Registrar vehículo | T19 | Implementar el registro de vehículos | Formulario de registro de vehículo. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US14 | Consultar detalle de vehículo | T20 | Implementar el detalle de vehículo | Vista de detalle de un vehículo. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US15 | Actualizar información de vehículo | T21 | Implementar la edición de vehículos | Edición de la información de un vehículo. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US16 | Asignar vehículo a conductor | T22 | Implementar la asignación de vehículos | Asignación de un vehículo a un conductor. | 1 | Gerardo Palacin | Done |
+| Sprint 3 | US43 | API de gestión de incidencias | T23 | Implementar la gestión de incidencias | Registro, consulta y seguimiento de incidencias. | — | Rodrigo Aguilar | To-do |
+
+<a id="5234-development-evidence-for-sprint-review"></a>
+#### 5.2.3.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 3 se construyó la primera versión del Backend RESTful API en el repositorio Web Services: la base compartida alineada con el proyecto de referencia del curso, el bounded context de Identity and Access con autenticación por JWT y gestión de usuarios, el de Evaluation and Authorization con sus reglas, habilitaciones y levantamiento de bloqueos, y el de Vehicle Documentation con el control de vigencia de los documentos, además de la imagen Docker y el flujo de entrega continua que la publica. En la Web Application se completó el bounded context de Fleet Management, se incorporaron el inicio y cierre de sesión contra el backend y la gestión de usuarios, y se enlazaron los términos y la política de privacidad. El Landing Page pasó a traducirse por claves, con inglés por defecto, y se le añadieron las páginas legales.
+
+La tabla recoge los commits del sprint integrados en los repositorios, sin los commits de merge, en orden cronológico. La columna *Branch* indica la rama del Pull Request con el que cada commit se integró en `develop`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+|---|---|---|---|---|---|
+| Web-Services | feature/platform-foundation | a06bb5b | build: set up the spring boot platform on postgresql | — | 2026-10-23 |
+| Web-Services | feature/platform-foundation | de152bb | feat(shared): add the result pattern, the table naming strategy and the global exception handler | — | 2026-10-23 |
+| Web-Services | feature/platform-foundation | 8316cb0 | docs: describe how to run and extend the platform | — | 2026-10-23 |
+| Web-Services | feature/platform-foundation | c6548b3 | build: pin lombok to the release that supports java 27 | — | 2026-10-23 |
+| Web-Services | chore/pom-developers | 0f636de | build: list the team members as developers of the platform | — | 2026-10-23 |
+| Web-Services | feature/shared-auditable-base | fe3669f | feat(shared): add the auditable aggregate root and model with uuid identifiers | — | 2026-10-23 |
+| Web-Services | feature/evaluation-rules | 705bef3 | feat(evaluation): define and deactivate the evaluation rules of the company | — | 2026-10-23 |
+| Web-Services | chore/docker-compose | 462a67f | build: run postgresql 18 locally with docker compose | — | 2026-10-23 |
+| Frontend-Web-Application | feature/fleet-management | 0e70c5d | feat(fleet-management): add policies, commands and enum values to domain layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 2e16bf6 | feat(fleet-management): update entities in domain layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 15c6463 | feat(fleet-management): add vehicle inspection, response and assembler in infrastructure layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 0d0f4d2 | feat(fleet-management): update fleet api and vehicle assigment in infrastructure layer | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | e801796 | feat(fleet-management): update fleet internationalization terms | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 3c6f4f0 | feat(fleet-management): complete the fleet store with vehicle and assignment use cases | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 7a57caf | feat(fleet-management): add the vehicle status badge component | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 04d8004 | feat(fleet-management): show the fleet overview with vehicle counts by status | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 14b5d96 | feat(fleet-management): add search, status filter and pagination to the vehicle list | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 31daf1f | feat(fleet-management): add the vehicle form to register and update vehicles | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 7808b20 | feat(fleet-management): add the vehicle detail with assignment history | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 7945aed | feat(fleet-management): show license status and assigned vehicle in the driver list | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | b7ba5e7 | feat(fleet-management): add the assignment form with history and end action | — | 2026-10-24 |
+| Frontend-Web-Application | feature/fleet-management | 6bf160f | feat(fleet-management): add titles to the fleet routes | — | 2026-10-24 |
+| Web-Services | feature/inspection-evaluation | eee3ddc | feat(evaluation): evaluate inspections and keep the operational status of each vehicle | — | 2026-10-26 |
+| Web-Services | feature/lift-block | 6fbe634 | feat(evaluation): lift the block of a vehicle with a reason and a responsible user | — | 2026-10-26 |
+| Web-Services | feature/evaluation-contract | aed9296 | docs(openapi): add the evaluation and authorization contract | — | 2026-10-26 |
+| Web-Services | feature/missing-message-fallback | 5774c91 | fix(shared): answer with the message key when a translation is missing | — | 2026-10-26 |
+| Web-Services | feature/docker-image | 52465ff | build: package the platform as a java 27 docker image | — | 2026-10-26 |
+| Web-Services | feature/cors-and-openapi-info | 8bb8ebf | feat(shared): allow the web application origins and describe the api in swagger | — | 2026-10-26 |
+| Web-Services | feature/container-delivery | a5614c6 | ci: test the platform and publish its image to the github container registry | — | 2026-10-26 |
+| Web-Services | fix/microsecond-timestamps | 8a39e9b | fix(shared): generate timestamps at the precision postgresql stores | — | 2026-10-26 |
+| Web-Services | feature/iam-users | 63af39d | feat(iam): model the users of the platform | — | 2026-10-26 |
+| Web-Services | feature/iam-users | 6ca58a0 | feat(iam): sign in the users with a json web token | — | 2026-10-26 |
+| Web-Services | feature/iam-users | 7584da5 | test(iam): translate the user errors and verify the user flow against postgresql | — | 2026-10-26 |
+| Web-Services | feature/iam-users | d3bf99b | feat(iam): hash the passwords of the users with bcrypt | — | 2026-10-26 |
+| Web-Services | feature/iam-users | fb7bda9 | feat(iam): persist and manage the users of each company | — | 2026-10-26 |
+| Web-Services | refactor/evaluation-persistence | d40aa80 | refactor(evaluation): keep the evaluation rules free of persistence concerns | — | 2026-10-26 |
+| Web-Services | refactor/evaluation-persistence | 528f656 | refactor(evaluation): keep evaluations and authorizations free of persistence concerns | — | 2026-10-26 |
+| Web-Services | refactor/evaluation-persistence | dbecc1f | refactor(shared): drop the persistence-aware base classes of the domain | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | b016a51 | feat(iam): require a valid bearer token on every protected endpoint | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | f3840a6 | feat(iam): seed the first administrator at startup | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | 7336b6c | feat(iam): sign in through the authentication endpoint | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | 15c5b3d | docs: explain how to sign in and call the protected endpoints | — | 2026-10-26 |
+| Web-Services | feature/iam-endpoints | 6d454a0 | feat(iam): manage the users of each company through the users endpoint | — | 2026-10-26 |
+| Web-Services | feature/evaluation-endpoints | 065de85 | feat(evaluation): expose the evaluation rules endpoints | — | 2026-10-26 |
+| Web-Services | feature/evaluation-endpoints | d82e805 | feat(evaluation): expose the operational status, history and block lifts of each vehicle | — | 2026-10-26 |
+| Landing-Page | feature/i18n-by-keys | dbf32a8 | feat: translate the landing page by keys with english as the default language | — | 2026-10-26 |
+| Landing-Page | feature/i18n-by-keys | 8e13e3a | feat: link the terms of use and the privacy policy from the footer | — | 2026-10-26 |
+| Landing-Page | feature/i18n-by-keys | 8180446 | fix: darken the orange of buttons and small text to meet wcag aa contrast | — | 2026-10-26 |
+| Frontend-Web-Application | feature/legal-footer-links | d34e227 | feat: link the terms of use and the privacy policy from the footer | — | 2026-10-26 |
+| Frontend-Web-Application | release/0.3.0 | 9ebea94 | chore(release): prepare version 0.3.0 | — | 2026-10-26 |
+| Web-Services | feature/vehicle-documentation | c46be97 | chore(config): set the vehicle documentation time zone and status recalculation schedule | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | dddba3e | feat(documentation): register vehicle documents and list the ones about to expire | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | fa053fb | docs(openapi): add the vehicle documentation contract | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | 6ff56fd | refactor(documentation): keep the calendar out of the rest layer and cover the daily recalculation | — | 2026-10-28 |
+| Web-Services | feature/vehicle-documentation | acf69e6 | docs(openapi): drop the days until expiration from the vehicle document | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-sign-in | de6ffb2 | chore(config): add the url of the platform backend | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-sign-in | 302c1eb | feat(iam): sign in with the platform account and protect the routes | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-sign-in | 35b222f | feat(iam): show the signed-in user and sign out from the top bar | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 6cbdd01 | chore(config): point local development to the backend running on this machine | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 9b159dd | chore(config): add the path of the users endpoint | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | d8e04bb | feat(iam): list the users of the company by role and status | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 7eb02f3 | feat(iam): let the administrator open accounts in the company | — | 2026-10-28 |
+| Frontend-Web-Application | feature/iam-users | 807ea00 | feat(iam): let the administrator change the role and status of an account | — | 2026-10-28 |
+| Frontend-Web-Application | chore/mock-vehicle-uuids | a649948 | chore(server): identify the mock vehicles by uuid like the platform backend | — | 2026-10-28 |
+
+<a id="5236-services-documentation-evidence-for-sprint-review"></a>
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review.
+
+En el Sprint 3 el Backend RESTful API deja de ser un contrato y pasa a estar implementado. Springdoc genera su documentación OpenAPI a partir de los controladores y la publica con Swagger UI en el propio servicio desplegado; cada operación indica los roles que la pueden ejecutar y las respuestas de error, que siguen el formato Problem Details y se traducen según la cabecera `Accept-Language`. El contrato escrito a mano del repositorio se amplió con los bounded contexts implementados en este sprint.
+
+- Documentación del servicio desplegado: https://fleetsafe-api.nicesky-02088f36.chilecentral.azurecontainerapps.io/swagger-ui/index.html
+- Contrato: https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services/blob/develop/openapi/openapi.yaml
+
+Todas las rutas cuelgan de `/api/v1`. Salvo `/auth/login`, todas exigen el token de acceso en la cabecera `Authorization: Bearer <token>`: sin él responden `401`, y con un rol que no tiene permiso, `403`.
+
+| Endpoint | Acciones implementadas | Verbo HTTP | Sintaxis de llamada | Parámetros | Response |
+|---|---|---|---|---|---|
+| `/auth/login` | Iniciar sesión | POST | `POST /api/v1/auth/login` | Cuerpo: `email`, `password` | `200` con `accessToken`, `tokenType`, `expiresIn` y el usuario (`id`, `companyId`, `email`, `firstName`, `lastName`, `role`, `isActive`). `401` si el correo o la contraseña no son correctos, o la cuenta está inactiva. |
+| `/users` | Consultar los usuarios de la empresa | GET | `GET /api/v1/users?role=DRIVER&isActive=true&page=0&size=20&sort=lastName,asc` | Opcionales: `role`, `isActive`, `page`, `size` (1–100), `sort` (`lastName`, `email` o `createdAt`) | `200` con `content` (los usuarios) y `page` (`number`, `size`, `totalElements`, `totalPages`). Solo `ADMINISTRATOR`. |
+| `/users` | Registrar un usuario en la empresa del administrador | POST | `POST /api/v1/users` | Cuerpo: `email`, `password` (8–72 caracteres), `firstName`, `lastName`, `role` (`ADMINISTRATOR` · `FLEET_SUPERVISOR` · `DRIVER`) | `201` con el usuario creado; `400` si los datos no son válidos; `409` si el correo ya está registrado. Solo `ADMINISTRATOR`. |
+| `/users/{id}` | Consultar un usuario | GET | `GET /api/v1/users/{id}` | `id`: UUID del usuario | `200` con el usuario; `403` si no es la propia cuenta ni la consulta un administrador; `404` si no existe en la empresa. |
+| `/users/{id}` | Cambiar el nombre, el rol o el estado de un usuario | PATCH | `PATCH /api/v1/users/{id}` | `id`; cuerpo con al menos uno de `firstName`, `lastName`, `role`, `isActive` | `200` con el usuario actualizado; `400` si el cuerpo está vacío o no es válido; `404` si no existe. Solo `ADMINISTRATOR`. |
+| `/evaluation-rules` | Consultar las reglas de evaluación activas | GET | `GET /api/v1/evaluation-rules` | — | `200` con `[{ "id", "inspectionItemId", "name", "foundResult", "resultingImpact", "description", "isActive" }, …]`. `FLEET_SUPERVISOR` y `ADMINISTRATOR`. |
+| `/evaluation-rules` | Definir una regla de evaluación | POST | `POST /api/v1/evaluation-rules` | Cuerpo: `inspectionItemId`, `name`, `foundResult` (`OK` · `OBSERVED` · `FAIL`), `resultingImpact` (`NONE` · `OBSERVED` · `BLOCKING`), `description` | `201` con la regla; `409` si ya hay una regla activa para ese elemento y resultado. Solo `ADMINISTRATOR`. |
+| `/evaluation-rules/{id}` | Consultar una regla | GET | `GET /api/v1/evaluation-rules/{id}` | `id`: UUID de la regla | `200` con la regla; `404` si no existe. |
+| `/evaluation-rules/{id}/deactivation` | Desactivar una regla | POST | `POST /api/v1/evaluation-rules/{id}/deactivation` | `id` | `200` con la regla inactiva; `404` si no existe; `409` si ya estaba inactiva. Solo `ADMINISTRATOR`. |
+| `/vehicles/{id}/status` | Consultar si un vehículo puede operar | GET | `GET /api/v1/vehicles/{id}/status` | `id`: UUID del vehículo | `200` con la habilitación vigente: `status` (`ENABLED` · `OBSERVED` · `NOT_ENABLED`), `isOverride`, `authorizedAt`…; `404` si el vehículo aún no tiene habilitación. |
+| `/vehicles/{id}/authorizations` | Consultar el historial de habilitaciones | GET | `GET /api/v1/vehicles/{id}/authorizations` | `id` | `200` con las habilitaciones del vehículo, de la más reciente a la más antigua. `FLEET_SUPERVISOR` y `ADMINISTRATOR`. |
+| `/vehicles/{id}/block-lifts` | Levantar el bloqueo de un vehículo no habilitado | POST | `POST /api/v1/vehicles/{id}/block-lifts` | `id`; cuerpo: `reason` | `201` con la nueva habilitación, marcada como excepción y con el usuario del token como responsable; `404` si no tiene habilitación; `409` si no está bloqueado. |
+| `/operational-authorizations/overrides` | Consultar los bloqueos levantados en un periodo | GET | `GET /api/v1/operational-authorizations/overrides?from=2026-10-01T00:00:00Z&to=2026-10-31T23:59:59Z` | `from`, `to` en ISO-8601 | `200` con las excepciones del periodo; `400` si el periodo no es válido. |
+| `/document-types` | Consultar y registrar tipos de documento | GET · POST | `GET /api/v1/document-types` · `POST /api/v1/document-types` | Cuerpo de `POST`: `code`, `name`, `description`, `isRequired` | `200` con el catálogo; `201` con el tipo creado; `409` si el código ya existe. `POST` solo `ADMINISTRATOR`. |
+| `/vehicles/{vehicleId}/documents` | Registrar y consultar los documentos de un vehículo | POST · GET | `POST /api/v1/vehicles/{vehicleId}/documents` · `GET /api/v1/vehicles/{vehicleId}/documents` | `vehicleId`; cuerpo de `POST`: `documentTypeId`, `number`, `issueDate`, `expirationDate`, `fileUrl` | `201` con el documento y su `status` (`VALID` · `EXPIRING` · `EXPIRED`), calculado a partir del vencimiento; `200` con los documentos ordenados por vencimiento; `422` si el tipo de documento no existe. |
+| `/vehicles/{vehicleId}/documents/{documentId}` | Actualizar un documento | PUT | `PUT /api/v1/vehicles/{vehicleId}/documents/{documentId}` | `vehicleId`, `documentId`; el mismo cuerpo que al registrar | `200` con el documento y su estado recalculado; `404` si el vehículo no tiene ese documento. |
+| `/documents` | Consultar los documentos de todos los vehículos | GET | `GET /api/v1/documents` | — | `200` con los documentos ordenados por vencimiento. `FLEET_SUPERVISOR` y `ADMINISTRATOR`. |
+| `/documents/expiring` | Consultar los documentos próximos a vencer | GET | `GET /api/v1/documents/expiring?days=30` | Opcional: `days` (0–365, por defecto 30) | `200` con los documentos que vencen entre hoy y ese número de días; `400` si `days` está fuera de rango. |
+
+Commits del repositorio Web Services relacionados con la documentación de este sprint (https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services):
+
+| Commit Id | Commit Message |
+|---|---|
+| 8316cb0 | docs: describe how to run and extend the platform |
+| aed9296 | docs(openapi): add the evaluation and authorization contract |
+| 8bb8ebf | feat(shared): allow the web application origins and describe the api in swagger |
+| fa053fb | docs(openapi): add the vehicle documentation contract |
+| acf69e6 | docs(openapi): drop the days until expiration from the vehicle document |
+
+<a id="5237-software-deployment-evidence-for-sprint-review"></a>
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review.
+
+En el Sprint 3 se desplegó la primera versión del Backend RESTful API en Azure, siguiendo la configuración descrita en la sección 5.1.4. La imagen del servicio se construye y se publica desde el repositorio `Web-Services`, y se ejecuta en Azure Container Apps sobre una base Azure Database for PostgreSQL. El Landing Page y la Web Application continúan publicados en GitHub Pages.
+
+| Producto | Repositorio | Plataforma | Estado | URL |
+|---|---|---|---|---|
+| Landing Page | https://github.com/1ASI0729-2620-16692-BitMeisters/Landing-Page | GitHub Pages | Desplegado | https://1asi0729-2620-16692-bitmeisters.github.io/Landing-Page/ |
+| Frontend Web Application | https://github.com/1ASI0729-2620-16692-BitMeisters/Frontend-Web-Application | GitHub Pages con GitHub Actions | Desplegado | https://1asi0729-2620-16692-bitmeisters.github.io/Frontend-Web-Application/ |
+| Backend RESTful API | https://github.com/1ASI0729-2620-16692-BitMeisters/Web-Services | Azure Container Apps, con la imagen en GitHub Container Registry | Desplegado desde `develop` | https://fleetsafe-api.nicesky-02088f36.chilecentral.azurecontainerapps.io/swagger-ui/index.html |
+| Base de datos | — | Azure Database for PostgreSQL – Flexible Server | Desplegada | `fleet-safe-db.postgres.database.azure.com` |
+
+**1. Registro de los proveedores de recursos.** Antes de crear los recursos se comprobó que la suscripción Azure for Students tiene registrados los proveedores que necesitan: `Microsoft.DBforPostgreSQL` para la base de datos, `Microsoft.App` para Azure Container Apps y `Microsoft.OperationalInsights` para los registros.
+
+![Proveedores de recursos registrados en la suscripción](img/sprint3/deployment-01-subscription-resource-providers.png)
+
+**2. Configuración del servidor de base de datos.** Se creó el servidor `fleet-safe-db` con PostgreSQL 18 en el grupo de recursos `rg-fleetsafe`, región `Chile Central`. Se eligió el nivel *Burstable* `Standard_B1ms` con 32 GiB de almacenamiento, que entran en la capa gratuita, sin alta disponibilidad, y la autenticación con usuario y contraseña de PostgreSQL, que es la que utiliza el servicio.
+
+![Cómputo, almacenamiento y autenticación del servidor PostgreSQL](img/sprint3/deployment-02-postgresql-compute-and-authentication.png)
+
+**3. Configuración de red.** El servidor admite conexiones desde los servicios de Azure, que es como lo alcanza Azure Container Apps, sin abrirlo a cualquier dirección de internet.
+
+![Configuración de red del servidor PostgreSQL](img/sprint3/deployment-03-postgresql-networking.png)
+
+![Despliegue del servidor PostgreSQL completado](img/sprint3/deployment-04-postgresql-deployment-succeeded.png)
+
+**4. Creación de la base de datos.** Sobre el servidor se creó la base `fleetsafe`, cuyas tablas genera Spring Data JPA al arrancar el servicio.
+
+![Base de datos fleetsafe creada en el servidor](img/sprint3/deployment-05-postgresql-fleetsafe-database.png)
+
+**5. Construcción y publicación de la imagen.** El flujo de trabajo `Delivery` de GitHub Actions ejecuta las pruebas del servicio contra una base PostgreSQL 18 temporal en cada Pull Request y, al integrar en `develop`, construye la imagen y la publica en GitHub Container Registry.
+
+![Ejecuciones del flujo de trabajo Delivery](img/sprint3/deployment-06-github-actions-delivery-runs.png)
+
+![Imagen web-services publicada en GitHub Container Registry](img/sprint3/deployment-07-ghcr-package.png)
+
+**6. Visibilidad de la imagen.** El paquete se hizo público para que Azure Container Apps descargue la imagen sin credenciales. La imagen solo contiene el código compilado, que ya es público en el repositorio; las credenciales de la base se entregan como secreto en tiempo de ejecución.
+
+![Visibilidad pública del paquete web-services](img/sprint3/deployment-08-ghcr-package-public.png)
+
+**7. Creación del entorno de Azure Container Apps.** El entorno `cae-fleetsafe` se creó con Azure CLI en la misma región que la base de datos, y generó su espacio de trabajo de Log Analytics para los registros.
+
+![Creación del entorno cae-fleetsafe con Azure CLI](img/sprint3/deployment-09-container-apps-environment.png)
+
+**8. Creación de la aplicación.** La aplicación `fleetsafe-api` se creó con Azure CLI a partir de la imagen `develop`, con ingreso externo al puerto 8080, entre cero y una réplica, y la contraseña de la base como secreto. El primer intento falló porque la variable con la contraseña estaba vacía en la terminal y el secreto no llegó a crearse; tras leerla de nuevo, la aplicación se creó y devolvió su dirección pública.
+
+![Creación de la aplicación fleetsafe-api con Azure CLI](img/sprint3/deployment-10-container-app-created.png)
+
+**9. Verificación del servicio.** La documentación OpenAPI responde en la dirección pública con el nombre, la versión y la descripción del servicio. Todavía no muestra operaciones, porque los controladores REST se incorporan en este mismo sprint.
+
+![Documentación OpenAPI del servicio desplegado](img/sprint3/deployment-11-swagger-deployed.png)
+
+**10. Recursos desplegados.** El grupo de recursos `rg-fleetsafe` reúne el servidor de base de datos, el entorno y la aplicación de Azure Container Apps, y el espacio de trabajo de Log Analytics.
+
+![Recursos del grupo rg-fleetsafe](img/sprint3/deployment-12-resource-group.png)
+
+![Vista general de la aplicación fleetsafe-api en ejecución](img/sprint3/deployment-13-container-app-overview.png)
+
+**11. Configuración de la aplicación.** Las variables `DATABASE_URL` y `DATABASE_USER` se registraron como valores, y `DATABASE_PASSWORD` como referencia al secreto `db-password`, de modo que la contraseña no aparece en la configuración.
+
+![Variables de entorno del contenedor con la contraseña como secreto](img/sprint3/deployment-14-container-app-environment-variables.png)
+
+**12. Registros del arranque.** El registro en tiempo real muestra que el servicio se conectó a la base `fleetsafe`, levantó Tomcat en el puerto 8080 y terminó de arrancar.
+
+![Registros del arranque del servicio en Azure Container Apps](img/sprint3/deployment-15-container-app-log-stream.png)
 
 <a id="53-validation-interviews"></a>
 ## 5.3. Validation Interviews.
