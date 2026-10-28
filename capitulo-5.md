@@ -812,7 +812,7 @@ Cada integrante desarrolló su bounded context en una rama propia a partir de `d
 <a id="5231-sprint-planning-3"></a>
 #### 5.2.3.1. Sprint Planning 3.
 
-El Sprint 3 tiene como propósito la primera versión del Backend RESTful API de FleetSafe, exigida para la entrega AV2. En la reunión de planificación, realizada por Google Meet, el equipo acordó que cada integrante implemente en el backend el bounded context que desarrolló en la Web Application, sobre una base común construida con los patrones del proyecto de referencia del curso, y que Alejandro Espino se encargue de Identity and Access.
+El Sprint 3 tiene como propósito la primera versión del Backend RESTful API de FleetSafe, exigida para la entrega AV2. En la reunión de planificación, realizada por Google Meet, el equipo acordó que cada integrante implemente en el backend el bounded context que desarrolló en la Web Application, sobre una base común construida con los patrones del proyecto de referencia del curso, y que Alejandro Espino se encargue de Identity and Access y de Vehicle Documentation.
 
 <img src="img/sprint3/planning-meeting.png" width="800" alt="Reunión de planificación del Sprint 3 por Google Meet con cuatro integrantes del equipo">
 
@@ -835,26 +835,24 @@ El Sprint 3 compromete las Technical Stories del Backend RESTful API de cada bou
 
 | Integrante | Bounded context | Backend RESTful API | Web Application | Story Points |
 |---|---|---|---|---:|
-| Espino Flores, Alejandro | Identity and Access · Evaluation and Authorization | US38, US42 | US07 – US11, US23 – US25 | 46 |
+| Espino Flores, Alejandro | Identity and Access · Evaluation and Authorization · Vehicle Documentation | US38, US42, US44 | US07 – US11, US23 – US25 | 51 |
 | Palacin Lazo, Gerardo Valentin | Fleet Management | US40 | US12, US14 – US16 | 19 |
 | Apaza Bocanegra, Elizabeth Noelia | Pre-Operational Inspection | US41 | US19 – US22 | 17 |
 | Aguilar Untiveros, Rodrigo Fabrizio | Incident Management | US43 | — | 5 |
-| Santos Torres, Juan Manuel | Vehicle Documentation | US44 | — | 5 |
 
 Las User Stories de Incident Management y Vehicle Documentation en la Web Application se entregaron en el Sprint 2, y US12, US14 – US16 de Fleet Management y US07 – US11 de Identity and Access pasan del Sprint 2 a este sprint.
 
 <a id="5232-aspect-leaders-and-collaborators"></a>
 #### 5.2.3.2. Aspect Leaders and Collaborators.
 
-Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend RESTful API y en la Web Application, y la base compartida del backend. Cada integrante lidera en el backend el bounded context que desarrolló en la Web Application, y Alejandro Espino lidera además la base compartida, sobre la que se construyen todos los demás.
+Los aspectos del Sprint 3 son los bounded contexts implementados en el Backend RESTful API y en la Web Application, y la base compartida del backend. Cada integrante lidera en el backend el bounded context que desarrolló en la Web Application, y Alejandro Espino lidera además Vehicle Documentation y la base compartida, sobre la que se construyen todos los demás.
 
 | Team Member (Last Name, First Name) | GitHub Username | Identity and Access Leader (L) / Collaborator (C) | Evaluation and Authorization Leader (L) / Collaborator (C) | Pre-Operational Inspection Leader (L) / Collaborator (C) | Incident Management Leader (L) / Collaborator (C) | Fleet Management Leader (L) / Collaborator (C) | Vehicle Documentation Leader (L) / Collaborator (C) | Base compartida del backend Leader (L) / Collaborator (C) |
 |---|---|---|---|---|---|---|---|---|
-| Espino Flores, Alejandro | CafecitoSKR | L | L | C | C | C | C | L |
+| Espino Flores, Alejandro | CafecitoSKR | L | L | C | C | C | L | L |
 | Apaza Bocanegra, Elizabeth Noelia | Elizabeth-Apaza | — | — | L | — | — | — | C |
 | Aguilar Untiveros, Rodrigo Fabrizio | Rodri2712 | — | — | — | L | — | — | C |
 | Palacin Lazo, Gerardo Valentin | GeraldP03 | — | — | — | — | L | — | C |
-| Santos Torres, Juan Manuel | JuanManuel312 | — | — | — | — | — | L | C |
 
 <a id="5237-software-deployment-evidence-for-sprint-review"></a>
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
